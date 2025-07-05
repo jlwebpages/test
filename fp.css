@@ -7,13 +7,16 @@
 
 @import "Fonts/fonts.css";
 
+
+/* style="font-size: 12pt; font-weight: normal; color: black; background-color: #F0F0F0; border: 1px solid black; padding: 0px; height: 25px; width: 90px" */
+
+
 .default_button
 {
-   color: black;
-   font-size: 11pt;
-   font-family: Calibri;
-   background-color: #F0F0F0;
-   border: 1px solid black;
+font-family: Calibri; font-size: 11pt; color: black; background-color: #F0F0F0; border: 1px solid black;padding: 0px; padding-left: 5px; padding-right: 5px; height: 22px;
+
+
+
 }
 
 .default_checkbox
