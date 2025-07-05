@@ -5,21 +5,7 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
-@font-face
-{
-  font-family: "Calibri";
-  src: url("calibri.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face
-{
-  font-family: "Calibri";
-  src: url("calibrib.ttf");
-  font-weight: bold;
-  font-style: normal;
-}
+@import "Fonts/fonts.css";
 
 .default_button
 {
@@ -145,17 +131,12 @@
 .upset_pick_color         {color: #AA0000           }
 .white_background         {background-color: white  }
 
-a
-{
-justify-content: center; /* Optional: centers horizontally as well */
-  align-items: center; /* Vertically centers the text */
-  height: 100%; /* Or a specific height */
-  text-decoration: none; color: white;
-}
-
 a.blue_link        {color: #002060            }
 a.blue_link:link   {text-decoration: none     }
 a.blue_link:hover  {text-decoration: underline}
-
+a.white_link       {color: white              }
+a.white_link       {display: block            }
+a.white_link:link  {text-decoration: none     }
+a.white_link:hover {text-decoration: underline}
 
 input {touch-action: none}
