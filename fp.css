@@ -11,7 +11,7 @@
 
 @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
 {
-   .dark_blue_cell  {padding-top: 5px}
+   .dark_blue_cell  {padding-top: 5px; background-color: green;}
    .default_button  {padding-top: 2px}
    .ext_button_cell {padding-top: 15px;}
    .fp_button_cell  {padding-top: 15px;}
