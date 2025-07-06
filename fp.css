@@ -9,7 +9,7 @@
 
 /* CSS specific to iOS devices - start */ 
 
-@supports (-webkit-appearance: none) and (not (mask-image: url()))
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
 {
    .dark_blue_cell  {padding-top: 10px}
    .default_button  {padding-top: 12px}
