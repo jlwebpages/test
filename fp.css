@@ -133,12 +133,20 @@
 .upset_pick_color         {color: #AA0000           }
 .white_background         {background-color: white  }
 
-a.blue_link        {color: #002060            }
-a.blue_link:link   {text-decoration: none     }
+.blue_link
+{
+   color: #002060;
+   display: inline-block;
+}
+a.blue_link:link   {text-decoration: none}
 a.blue_link:hover  {text-decoration: underline}
-a.white_link       {color: white              }
-a.white_link       {display: block            }
-a.white_link:link  {text-decoration: none     }
+
+.white_link
+{
+   color: white;
+   display: inline-block;
+}
+a.white_link:link  {text-decoration: none}
 a.white_link:hover {text-decoration: underline}
 
 input {touch-action: none}
