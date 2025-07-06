@@ -11,10 +11,10 @@
 
 @supports (-webkit-touch-callout: none)
 {
-   .dark_blue_cell  {padding-top: 15px}
-   .default_button  {padding-top: 2px}
-   .ext_button_cell {padding-top: 25px;}
-   .fp_button_cell  {padding-top: 15px;}
+   .dark_blue_cell  {padding-top: 10px}
+   .default_button  {padding-top: 12px}
+   .ext_button_cell {padding-top: 10px;}
+   .fp_button_cell  {padding-top: 10px;}
 }
 
 /* CSS specific to iOS devices - end */ 
@@ -89,7 +89,7 @@
 {
    background-color: #002060;
    border-radius: 30px;
-   box-shadow: 5px 5px 5px gray;                    padding-top: 5px
+   box-shadow: 5px 5px 5px gray;                    padding-top: 10px
 }
 
 .ext_button_cell
