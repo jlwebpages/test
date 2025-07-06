@@ -21,7 +21,7 @@
    border: 1px solid black;
    height: 22px;
    line-height: 20px;
-   padding: 0px 4px 0px 4px;        padding-top: 5px;
+   padding: 0px 4px 0px 4px;        padding-top: 2px;
 }
 
 .default_checkbox
@@ -103,7 +103,7 @@
 {
    font-size: 18pt;
    text-align: center;
-   background-color: blue;
+   background-color: maroon;
    border-radius: 25px;
    padding: 8px;
    width: 20%;
