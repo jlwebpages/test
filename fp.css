@@ -89,7 +89,7 @@
 {
    background-color: #002060;
    border-radius: 30px;
-   box-shadow: 5px 5px 5px gray;                    padding-top: 15px
+   box-shadow: 5px 5px 5px gray;                    padding-top: 5px
 }
 
 .ext_button_cell
@@ -100,7 +100,7 @@
    border-radius: 25px;
    padding: 8px;
    width: 20%;
-   box-shadow: 5px 5px 10px gray;                padding-top: 25px;
+   box-shadow: 5px 5px 10px gray;                padding-top: 10px;
 }
 
 .fp_button_cell
@@ -111,7 +111,7 @@
    border-radius: 25px;
    padding: 8px;
    width: 20%;
-   box-shadow: 5px 5px 10px gray;                  padding-top: 15px;
+   box-shadow: 5px 5px 10px gray;                  padding-top: 10px;
 }
 
 .light_color_cell
