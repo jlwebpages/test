@@ -7,6 +7,18 @@
 
 @import "Fonts/fonts.css";
 
+/* CSS specific to iOS devices - start */ 
+
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
+{
+   .dark_blue_cell  {padding-top: 5px}
+   .default_button  {padding-top: 2px}
+   .ext_button_cell {padding-top: 15px;}
+   .fp_button_cell  {padding-top: 15px;}
+}
+
+/* CSS specific to iOS devices - end */ 
+
 .default_button
 {
    color: black;
@@ -138,7 +150,6 @@
 .blue_link
 {
    color: #002060;
-   display: inline-block;
 }
 a.blue_link:link   {text-decoration: none}
 a.blue_link:hover  {text-decoration: underline}
@@ -146,7 +157,7 @@ a.blue_link:hover  {text-decoration: underline}
 .white_link
 {
    color: white;
-   display: inline-block;
+   display: block;
 }
 a.white_link:link  {text-decoration: none}
 a.white_link:hover {text-decoration: underline}
