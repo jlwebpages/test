@@ -84,6 +84,7 @@
 {
    font-size: 18pt;
    text-align: center;
+   vertical-align: middle;
    background-color: #283E1A;
    border-radius: 25px;
    padding: 8px;
@@ -95,6 +96,7 @@
 {
    font-size: 18pt;
    text-align: center;
+   vertical-align: middle;
    background-color: maroon;
    border-radius: 25px;
    padding: 8px;
