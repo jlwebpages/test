@@ -11,10 +11,10 @@
 
 @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
 {
-   .dark_blue_cell  {padding-top: 10px}
-   .default_button  {padding-top: 12px}
-   .ext_button_cell {padding-top: 10px;}
-   .fp_button_cell  {padding-top: 10px;}
+   .dark_blue_cell  {padding-top: 5px}
+   .default_button  {padding-top: 2px}
+   .ext_button_cell {padding-top: 15px;}
+   .fp_button_cell  {padding-top: 15px;}
 }
 
 /* CSS specific to iOS devices - end */ 
