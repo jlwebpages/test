@@ -5,6 +5,8 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
+@import "Fonts/fonts.css";
+
 .default_button
 {
    color: black;
