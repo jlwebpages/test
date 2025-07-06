@@ -92,7 +92,7 @@
    vertical-align: middle;
    background-color: #002060;
    border-radius: 30px;
-   box-shadow: 5px 5px 5px gray;             padding-top: 5px; background-color: black;
+   box-shadow: 5px 5px 5px gray;             padding-top: 10px; background-color: black;
 }
 
 .ext_button_cell
