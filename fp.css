@@ -5,11 +5,14 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
+/* 
+
 @import "Fonts/fonts.css";
 
-/* CSS specific to iOS devices - start */ 
+CSS specific to iOS devices - start <-- COMMENT
 
-/* @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) */
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
+
 @supports (-webkit-touch-callout: none)
 {
    .dark_blue_cell  {padding-top: 5px; background-color: green;}
@@ -18,7 +21,9 @@
    .fp_button_cell  {padding-top: 10px;}
 }
 
-/* CSS specific to iOS devices - end */ 
+CSS specific to iOS devices - end
+
+*/
 
 .default_button
 {
@@ -135,8 +140,8 @@
 {
    color: #002060;
 }
-a.blue_link:link   {text-decoration: none}
-a.blue_link:hover  {text-decoration: underline}
+a.blue_link:link  {text-decoration: none}
+a.blue_link:hover {text-decoration: underline}
 
 .white_link
 {
@@ -145,8 +150,6 @@ a.blue_link:hover  {text-decoration: underline}
 }
 a.white_link:link  {text-decoration: none}
 a.white_link:hover {text-decoration: underline}
-
-input {touch-action: none}
 
 .background_color         {background-color: #B8C2D0}
 .black_color              {color: black             }
@@ -164,3 +167,5 @@ input {touch-action: none}
 .red_color                {color: maroon            }
 .upset_pick_color         {color: #AA0000           }
 .white_background         {background-color: white  }
+
+input {touch-action: none}

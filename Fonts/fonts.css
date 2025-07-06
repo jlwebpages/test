@@ -1,15 +1,47 @@
 @font-face
 {
-  font-family: "Calibri";
-  src: url("calibri.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+   font-family: "Calibri";
+   src: url("calibri.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
 }
 
 @font-face
 {
-  font-family: "Calibri";
-  src: url("calibrib.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
+   font-family: "Calibri";
+   src: url("calibrib.ttf") format("truetype");
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face
+{
+   font-family: "Calibri";
+   src: url("calibrii.ttf") format("truetype");
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face
+{
+   font-family: "Calibri";
+   src: url("calibril.ttf") format("truetype");
+   font-weight: light;
+   font-style: normal;
+}
+
+@font-face
+{
+   font-family: "Calibri";
+   src: url("calibrili.ttf") format("truetype");
+   font-weight: light;
+   font-style: italic;
+}
+
+@font-face
+{
+   font-family: "Calibri";
+   src: url("calibriz.ttf") format("truetype");
+   font-weight: bold;
+   font-style: italic;
 }
