@@ -73,6 +73,8 @@
 
 .dark_blue_cell
 {
+   text-align: center;
+   vertical-align: middle;
    background-color: #002060;
    border-radius: 30px;
    box-shadow: 5px 5px 5px gray;
