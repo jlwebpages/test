@@ -103,7 +103,7 @@
    padding: 8px;
    width: 20%;
    box-shadow: 5px 5px 10px gray;
-   line-height: 28px;
+   height: 40px;
 }
 
 .light_color_cell
@@ -138,7 +138,7 @@
 a.blue_link        {color: #002060            }
 a.blue_link:link   {text-decoration: none     }
 a.blue_link:hover  {text-decoration: underline}
-a.white_link       {color: lightblue          }
+a.white_link       {color: white;             }
 a.white_link       {display: block            }
 a.white_link:link  {text-decoration: none     }
 a.white_link:hover {text-decoration: underline}
