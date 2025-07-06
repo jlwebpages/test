@@ -7,6 +7,11 @@
 
 @import "Fonts/fonts.css";
 
+@supports (-webkit-touch-callout: none)
+{
+   /* CSS specific to iOS devices */ 
+}
+
 .default_button
 {
    color: black;
@@ -103,7 +108,7 @@
    padding: 8px;
    width: 20%;
    box-shadow: 5px 5px 10px gray;
-   height: 40px;
+   height: 40px; padding-top: 25px;
 }
 
 .light_color_cell
