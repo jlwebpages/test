@@ -5,20 +5,6 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
-@import "Fonts/fonts.css";
-
-/* CSS specific to iOS devices - start */ 
-
-@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
-{
-   .dark_blue_cell  {padding-top: 5px}
-   .default_button  {padding-top: 2px}
-   .ext_button_cell {padding-top: 15px;}
-   .fp_button_cell  {padding-top: 15px;}
-}
-
-/* CSS specific to iOS devices - end */ 
-
 .default_button
 {
    color: black;
