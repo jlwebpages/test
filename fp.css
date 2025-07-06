@@ -10,7 +10,8 @@
 
 /* CSS specific to iOS devices. */
 
-@supports (-webkit-touch-callout: none)
+/* @supports (-webkit-touch-callout: none) */
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none)
 {
    .default_button
    {
@@ -30,7 +31,7 @@
       border-radius: 30px;
       box-shadow: 5px 5px 5px gray;
       padding-top: 5px;
-      background-color: green;
+      background-color: red;
    }
 
    .ext_button_cell
@@ -63,7 +64,8 @@
 
 /* CSS for other than iOS devices. */
 
-@supports not (-webkit-touch-callout: none)
+/* @supports not (-webkit-touch-callout: none) */
+@supports not ( (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) )
 {
    .default_button
    {
