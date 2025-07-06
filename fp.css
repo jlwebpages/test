@@ -12,7 +12,7 @@
 /* @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) */
 @supports (-webkit-touch-callout: none)
 {
-   .dark_blue_cell  {padding-top: 10px; background-color: green;}
+   .dark_blue_cell  {padding-top: 5px; background-color: green;}
    .default_button  {padding-top: 3px}
    .ext_button_cell {padding-top: 10px;}
    .fp_button_cell  {padding-top: 10px;}
@@ -26,7 +26,7 @@
    font-size: 11pt;
    font-family: Calibri;
    background-color: #F0F0F0;
-   border: 1px solid black;                             padding-top: 3px;
+   border: 1px solid black;
 }
 
 .default_checkbox
@@ -92,7 +92,7 @@
    vertical-align: middle;
    background-color: #002060;
    border-radius: 30px;
-   box-shadow: 5px 5px 5px gray;             padding-top: 10px; background-color: black;
+   box-shadow: 5px 5px 5px gray;
 }
 
 .ext_button_cell
@@ -104,7 +104,7 @@
    border-radius: 25px;
    padding: 8px;
    width: 20%;
-   box-shadow: 5px 5px 10px gray;                    padding-top: 10px;
+   box-shadow: 5px 5px 10px gray;
 }
 
 .fp_button_cell
@@ -116,7 +116,7 @@
    border-radius: 25px;
    padding: 8px;
    width: 20%;
-   box-shadow: 5px 5px 10px gray;                    padding-top: 10px;
+   box-shadow: 5px 5px 10px gray;
 }
 
 .light_color_cell
@@ -130,23 +130,6 @@
    border-radius: 25px;
    padding: 10px;
 }
-
-.background_color         {background-color: #B8C2D0}
-.black_color              {color: black             }
-.blue_color               {color: blue              }
-.border_radius            {border-radius: 4px       }
-.dark_blue_color          {color: #002060           }
-.green_color              {color: #283E1A           }
-.header_one_background    {background-color: #C4D79B}
-.header_two_background    {background-color: #DCE6F1}
-.low_score_background     {background-color: #FFFFE1}
-.perfect_score_background {background-color: #B7DEE8}
-.picks_confirm_background {background-color: #C4D79B}
-.picks_copy_background    {background-color: white  }
-.picks_error_background   {background-color: #FFFF99}
-.red_color                {color: maroon            }
-.upset_pick_color         {color: #AA0000           }
-.white_background         {background-color: white  }
 
 .blue_link
 {
@@ -164,3 +147,20 @@ a.white_link:link  {text-decoration: none}
 a.white_link:hover {text-decoration: underline}
 
 input {touch-action: none}
+
+.background_color         {background-color: #B8C2D0}
+.black_color              {color: black             }
+.blue_color               {color: blue              }
+.border_radius            {border-radius: 4px       }
+.dark_blue_color          {color: #002060           }
+.green_color              {color: #283E1A           }
+.header_one_background    {background-color: #C4D79B}
+.header_two_background    {background-color: #DCE6F1}
+.low_score_background     {background-color: #FFFFE1}
+.perfect_score_background {background-color: #B7DEE8}
+.picks_confirm_background {background-color: #C4D79B}
+.picks_copy_background    {background-color: white  }
+.picks_error_background   {background-color: #FFFF99}
+.red_color                {color: maroon            }
+.upset_pick_color         {color: #AA0000           }
+.white_background         {background-color: white  }
