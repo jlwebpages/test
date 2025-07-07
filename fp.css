@@ -73,6 +73,7 @@
 
 .dark_blue_cell
 {
+   letter-spacing: 1px;
    text-align: center;
    vertical-align: middle;
    background-color: #002060;
@@ -83,6 +84,7 @@
 .ext_button_cell
 {
    font-size: 18pt;
+   letter-spacing: 2px;
    text-align: center;
    vertical-align: middle;
    background-color: #283E1A;
@@ -95,6 +97,7 @@
 .fp_button_cell
 {
    font-size: 18pt;
+   letter-spacing: 2px;
    text-align: center;
    vertical-align: middle;
    background-color: maroon;
