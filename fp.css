@@ -5,6 +5,11 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
+@media only screen and (max-width: 480px)
+{
+   .dark_blue_cell {letter-spacing: normal !important}
+}
+
 .default_button
 {
    color: black;
@@ -74,6 +79,7 @@
 .dark_blue_cell
 {
    text-align: center;
+   letter-spacing: 1px;
    vertical-align: middle;
    background-color: #002060;
    border-radius: 30px;
