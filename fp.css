@@ -92,6 +92,7 @@
    letter-spacing: 2px;
    text-align: center;
    vertical-align: middle;
+   white-space: nowrap;
    background-color: #283E1A;
    border-radius: 25px;
    padding: 8px;
@@ -105,6 +106,7 @@
    letter-spacing: 2px;
    text-align: center;
    vertical-align: middle;
+   white-space: nowrap;
    background-color: maroon;
    border-radius: 25px;
    padding: 8px;
