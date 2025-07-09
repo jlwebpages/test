@@ -14,7 +14,7 @@
 {
    color: black;
    font-size: 11pt;
-   font-family: Calibri;
+   font-family: Calibri, sans-serif;
    background-color: #F0F0F0;
    border: 1px solid black;
 }
@@ -29,7 +29,7 @@
 {
    color: black;
    font-size: 11pt;
-   font-family: Calibri;
+   font-family: Calibri, sans-serif;
    background-color: #F0F0F0;
    border: 1px solid black;
 }
@@ -38,7 +38,7 @@
 {
    color: black;
    font-size: 11pt;
-   font-family: Calibri;
+   font-family: Calibri, sans-serif;
    text-align: center;
    background-color: white;
    border: 1px solid lightgray;
@@ -67,7 +67,7 @@
 .table
 {
    color: white;
-   font-family: Calibri;
+   font-family: Calibri, sans-serif;
    text-align: left;
    background-color: #B8C2D0;
    border-spacing: 0px;
