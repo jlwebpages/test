@@ -187,7 +187,7 @@ function build_regular_season_form()
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.');
    d.writeln('              color: black;');
-   d.writeln('        font-family: Calibri;">');
+   d.writeln('        font-family: Calibri, sans-serif;">');
    d.writeln('');
    d.writeln('');
 
@@ -434,7 +434,7 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri; font-size: 11pt\\">";');
+   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 11pt\\">";');
    d.writeln('      picks_message += "\\n<table style=\\"margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
@@ -504,7 +504,7 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("      style=\\"border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.");');
    d.writeln('   wd.writeln("              color: black;");');
    d.writeln('   wd.writeln("          font-size: 13pt;");');
-   d.writeln('   wd.writeln("        font-family: Calibri\\">");');
+   d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<script language=\\"JavaScript\\" type=\\"text/javascript\\">");');
    d.writeln('   wd.writeln("");');
@@ -2963,7 +2963,7 @@ function build_postseason_form()
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.');
    d.writeln('              color: black;');
-   d.writeln('        font-family: Calibri;">');
+   d.writeln('        font-family: Calibri, sans-serif;">');
    d.writeln('');
    d.writeln('');
 
@@ -3230,7 +3230,7 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri; font-size: 11pt; line-height: 1.5\\">";');
+   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 11pt; line-height: 1.5\\">";');
    d.writeln('      picks_message += "\\n<table style=\\"margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
@@ -3280,7 +3280,7 @@ function build_postseason_form()
    d.writeln('   wd.writeln("      style=\\"border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.");');
    d.writeln('   wd.writeln("              color: black;");');
    d.writeln('   wd.writeln("          font-size: 13pt;");');
-   d.writeln('   wd.writeln("        font-family: Calibri\\">");');
+   d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<script language=\\"JavaScript\\" type=\\"text/javascript\\">");');
    d.writeln('   wd.writeln("");');
