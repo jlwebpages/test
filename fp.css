@@ -8,6 +8,8 @@
 @media only screen and (max-width: 480px)
 {
    .dark_blue_cell {letter-spacing: normal !important}
+   #Final_Football_Pool_Standings {display: none}
+   #Final_Football_Pool_Results {display: none}
 }
 
 .default_button
