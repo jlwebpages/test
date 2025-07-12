@@ -5,11 +5,15 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
-@media only screen and (max-width: 480px)
+@media only screen and (min-width: 800px)
 {
-   .dark_blue_cell {letter-spacing: normal !important}
-   #Final_Football_Pool_Standings {display: none}
-   #Final_Football_Pool_Results {display: none}
+   #Final_Standings {display: block !important}
+   #Final_Regular_Season_Scores {display: inline-block !important}
+}
+
+@media only screen and (min-width: 480px)
+{
+   .dark_blue_cell {letter-spacing: 1px !important}
 }
 
 .default_button
@@ -81,7 +85,7 @@
 .dark_blue_cell
 {
    text-align: center;
-   letter-spacing: 1px;
+   letter-spacing: normal;
    vertical-align: middle;
    background-color: #002060;
    border-radius: 30px;
