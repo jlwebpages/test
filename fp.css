@@ -5,7 +5,7 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
-@media only screen and (min-width: 480px)
+@media only screen and (min-width: 600px)
 {
    #Final_Standings             {display: inline-block !important}
    #Final_Regular_Season_Scores {display: inline-block !important}
