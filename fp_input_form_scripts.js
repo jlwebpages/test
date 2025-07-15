@@ -28,7 +28,7 @@ function build_regular_season_form()
       // Write to fp_main_header frame.
 
       top.fp_main_header.document.open();
-      top.fp_main_header.document.write('<html>');
+      top.fp_main_header.document.write('<!DOCTYPE html>');
       top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<head>');
       top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
@@ -111,7 +111,7 @@ function build_regular_season_form()
 
    var d = document;
 
-   d.writeln('<html>');
+   d.writeln('<!DOCTYPE html>');
    d.writeln('');
 
    d.writeln('<head>');
@@ -493,7 +493,7 @@ function build_regular_season_form()
    d.writeln('   wd = dialog_frame.document.open();');
    d.writeln('');
    d.writeln('   wd.writeln("<!DOCTYPE html>");');
-   d.writeln('   wd.writeln("<html>");');
+   d.writeln('   wd.writeln("<!DOCTYPE html>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<head>");');
    d.writeln('   wd.writeln("   <title>NFL Football Pool</title>");');
@@ -2810,7 +2810,7 @@ function build_postseason_form()
       // Write to fp_main_header frame.
 
       top.fp_main_header.document.open();
-      top.fp_main_header.document.write('<html>');
+      top.fp_main_header.document.write('<!DOCTYPE html>');
       top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<head>');
       top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
@@ -2893,7 +2893,7 @@ function build_postseason_form()
 
    var d = document;
 
-   d.writeln('<html>');
+   d.writeln('<!DOCTYPE html>');
    d.writeln('');
 
    d.writeln('<head>');
@@ -3269,7 +3269,7 @@ function build_postseason_form()
    d.writeln('   wd = dialog_frame.document.open();');
    d.writeln('');
    d.writeln('   wd.writeln("<!DOCTYPE html>");');
-   d.writeln('   wd.writeln("<html>");');
+   d.writeln('   wd.writeln("<!DOCTYPE html>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<head>");');
    d.writeln('   wd.writeln("   <title>NFL Football Pool</title>");');
