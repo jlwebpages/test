@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
    <title>NFL Football Pool</title>
+   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="fp.css" rel="stylesheet" type="text/css">
    <script language="JavaScript" src=fp_input_form_scripts.js></script>
 </head>
@@ -15,10 +18,13 @@ if (top.mobile == false)
    // Write to fp_main_header frame.
 
    top.fp_main_header.document.open();
+   top.fp_main_header.document.write('<!DOCTYPE html>');
+   top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<html>');
    top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<head>');
    top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
+   top.fp_main_header.document.write('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    top.fp_main_header.document.write('   <link href="fp.css" rel="stylesheet" type="text/css">');
    top.fp_main_header.document.write('</head>');
    top.fp_main_header.document.write('');
@@ -44,17 +50,17 @@ if (top.mobile == false)
 <table class="table" style="height: auto">
 
    <tr>
-      <td class="light_color_cell" style="font-size: 28px; height: 90px; padding-top: 30px; white-space: normal">Enter Input Form Password:</td>
+      <td class="light_color_cell" style="font-size: 28px; height: 42px; padding-top: 30px; white-space: normal">Enter Input Form Password:</td>
    </tr>
 
    <form name="password_input" onSubmit="return validate_password()" action="javascript:build_input_form()">
 
    <tr>
-      <td class="light_color_cell" style="height: 90px"><input type="password" class="border_radius" name=password size=10 maxlength=10 style="font-size:14pt; height:25px; width:120px; border: 1px solid black"></td>
+      <td class="light_color_cell" style="height: 58px"><input type="password" class="border_radius" name=password size=10 maxlength=10 style="font-size:14pt; height:22px; width:115px; border: 1px solid black"></td>
    </tr>
 
    <tr>
-      <td class="light_color_cell" style="height: 90px"><input type="submit" class="border_radius" value="Submit" style="font-size: 12pt; font-weight: normal; color: black; background-color: #F0F0F0; border: 1px solid black; padding: 0px; height: 25px; width: 90px"></td>
+      <td class="light_color_cell" style="height: 60px"><input type="submit" class="border_radius" value="Submit" style="font-size: 12pt; font-weight: normal; color: black; background-color: #F0F0F0; border: 1px solid black; padding: 0px; height: 25px; width: 90px"></td>
    </tr>
 
    </form>
