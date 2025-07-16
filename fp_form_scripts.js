@@ -785,7 +785,7 @@ function build_postseason_form()
 
    var d = document;
 
-   d.writeln('<!DOCTYPE html>');
+   d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
@@ -2649,7 +2649,7 @@ function build_regular_season_form()
 
    var d = document;
 
-   d.writeln('<!DOCTYPE html>');
+   d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
@@ -4773,7 +4773,7 @@ function build_regular_season_summary()
 
    var d = document;
 
-   d.writeln('<!DOCTYPE html>');
+   d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
