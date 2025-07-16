@@ -3562,10 +3562,13 @@ if (top.mobile == false)
    // Write to fp_main_header frame.
 
    top.fp_main_header.document.open();
+   top.fp_main_header.document.write('<!DOCTYPE html>');
+   top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<html>');
    top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<head>');
    top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
+   top.fp_main_header.document.write('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    top.fp_main_header.document.write('   <link href="fp.css" rel="stylesheet" type="text/css">');
    top.fp_main_header.document.write('</head>');
    top.fp_main_header.document.write('');
@@ -3601,10 +3604,9 @@ if (top.current_input_week == null)
        font-size: 16pt;
      font-weight: bold;
           height: 100%;
-         padding: 10px;
-  vertical-align: top">
-
-<center>
+      text-align: center;
+  vertical-align: top;
+         padding: 10px">
 
 
 <!--START POSTSEASON STANDINGS
@@ -4599,8 +4601,6 @@ END REGULAR SEASON STANDINGS-->
 
 
 
-
-</center>
 
 </td>
 

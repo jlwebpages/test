@@ -1809,10 +1809,13 @@ if (top.mobile == false)
    // Write to fp_main_header frame.
 
    top.fp_main_header.document.open();
+   top.fp_main_header.document.write('<!DOCTYPE html>');
+   top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<html>');
    top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<head>');
    top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
+   top.fp_main_header.document.write('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    top.fp_main_header.document.write('   <link href="fp.css" rel="stylesheet" type="text/css">');
    top.fp_main_header.document.write('</head>');
    top.fp_main_header.document.write('');
