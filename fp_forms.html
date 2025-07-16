@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
    <title>NFL Football Pool</title>
+   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="fp.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -14,10 +17,13 @@ if (top.mobile == false)
    // Write to fp_main_header frame.
 
    top.fp_main_header.document.open();
+   top.fp_main_header.document.write('<!DOCTYPE html>');
+   top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<html>');
    top.fp_main_header.document.write('');
    top.fp_main_header.document.write('<head>');
    top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
+   top.fp_main_header.document.write('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    top.fp_main_header.document.write('   <link href="fp.css" rel="stylesheet" type="text/css">');
    top.fp_main_header.document.write('</head>');
    top.fp_main_header.document.write('');
@@ -105,11 +111,15 @@ function build_forms_page()
 
    var d = document.open("text/html","replace");
 
+   d.writeln('<!DOCTYPE html>');
+   d.writeln('');
+
    d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
    d.writeln('   <title>NFL Football Pool</title>');
+   d.writeln('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    d.writeln('   <link href="fp.css" rel="stylesheet" type="text/css">');
    d.writeln('</head>');
    d.writeln('');
@@ -129,6 +139,8 @@ function build_forms_page()
    d.writeln('');
    d.writeln('      wd = w.document.open();');
    d.writeln('');
+   d.writeln("      wd.writeln('<!DOCTYPE html>');");
+   d.writeln("      wd.writeln('');");
    d.writeln("      wd.writeln('<html>');");
    d.writeln("      wd.writeln('');");
    d.writeln("      wd.writeln('<head>');");
@@ -351,6 +363,8 @@ function build_forms_page()
    d.writeln('');
    d.writeln('      wd = w.document.open();');
    d.writeln('');
+   d.writeln("      wd.writeln('<!DOCTYPE html>');");
+   d.writeln("      wd.writeln('');");
    d.writeln("      wd.writeln('<html>');");
    d.writeln("      wd.writeln('');");
    d.writeln("      wd.writeln('<head>');");
