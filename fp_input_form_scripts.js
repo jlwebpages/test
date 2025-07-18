@@ -2715,7 +2715,7 @@ function build_regular_season_form()
 
    d.writeln('<tr>');
    d.writeln('<td class="bt2_border" style="text-align: right; padding-right: 5px" colspan="4"><font style="font-size: 12pt">Game '+number_of_rs_games+' Total Points:</font></td>');
-   d.writeln('<td class="bt2_border" style="text-align: left;  padding-left:  5px" colspan="1"><input type=text id="mn_points" class="default_text border_radius" style="width: 35px" name="mn_points" size="2" maxlength="2"></td>');
+   d.writeln('<td class="bt2_border" style="text-align: left;  padding-left:  5px" colspan="1"><input type=text id="mn_points" class="default_text border_radius" style="width: 25px" name="mn_points" size="2" maxlength="2"></td>');
    d.writeln('<td class="bt2_border" colspan="1"></td>');
    d.writeln('</tr>');
    d.writeln('');
@@ -4805,7 +4805,7 @@ function build_postseason_form()
 
    d.writeln('<tr>');
    d.writeln('<td class="no_border" style="text-align: right; padding-right: 5px" colspan="4"><font style="font-size: 13pt">Game '+number_of_ps_games+' Total Points:</font></td>');
-   d.writeln('<td class="no_border" style="text-align: left;  padding-left:  5px" colspan="1"><input type=text id="total_points" class="default_text border_radius" style="font-size: 12pt; width: 40px" name="points" size="2" maxlength="2"></td>');
+   d.writeln('<td class="no_border" style="text-align: left;  padding-left:  5px" colspan="1"><input type=text id="total_points" class="default_text border_radius" style="font-size: 12pt; width: 30px" name="points" size="2" maxlength="2"></td>');
    d.writeln('<td class="no_border" colspan="2"></td>');
    d.writeln('</tr>');
    d.writeln('');    
