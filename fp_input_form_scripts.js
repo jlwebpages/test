@@ -28,14 +28,17 @@ function build_regular_season_form()
       // Write to fp_main_header frame.
 
       top.fp_main_header.document.open();
+      top.fp_main_header.document.write('<!DOCTYPE html>');
+      top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<html>');
       top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<head>');
       top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
+      top.fp_main_header.document.write('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
       top.fp_main_header.document.write('   <link href="fp.css" rel="stylesheet" type="text/css">');
       top.fp_main_header.document.write('</head>');
       top.fp_main_header.document.write('');
-      top.fp_main_header.document.write('<body class="background_color" style="margin: 0; margin-left: -3px">');
+      top.fp_main_header.document.write('<body class="background_color" style="margin: 0px; margin-left: -3px">');
       top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<table class="table" style="height: 40px; border-spacing: 10px 0px">');
       top.fp_main_header.document.write('   <tr>');
@@ -111,11 +114,14 @@ function build_regular_season_form()
 
    var d = document;
 
+   d.writeln('<!DOCTYPE html>');
+   d.writeln('');
    d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
    d.writeln('   <title>NFL Football Pool</title>');
+   d.writeln('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    d.writeln('   <link href="fp.css" rel="stylesheet" type="text/css">');
    d.writeln('   <style type="text/css">');
    d.writeln('   <!--');
@@ -187,7 +193,8 @@ function build_regular_season_form()
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.');
    d.writeln('              color: black;');
-   d.writeln('        font-family: Calibri, sans-serif;">');
+   d.writeln('        font-family: Calibri, sans-serif;');
+   d.writeln('      margin-bottom: 15px">');
    d.writeln('');
    d.writeln('');
 
@@ -493,10 +500,12 @@ function build_regular_season_form()
    d.writeln('   wd = dialog_frame.document.open();');
    d.writeln('');
    d.writeln('   wd.writeln("<!DOCTYPE html>");');
+   d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<html>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<head>");');
    d.writeln('   wd.writeln("   <title>NFL Football Pool</title>");');
+   d.writeln('   wd.writeln("   <meta id=\\"viewport\\" name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\">");');
    d.writeln('   wd.writeln("   <link href=\\"fp.css\\" rel=\\"stylesheet\\" type=\\"text/css\\">");');
    d.writeln('   wd.writeln("</head>");');
    d.writeln('   wd.writeln("");');
@@ -2810,14 +2819,17 @@ function build_postseason_form()
       // Write to fp_main_header frame.
 
       top.fp_main_header.document.open();
+      top.fp_main_header.document.write('<!DOCTYPE html>');
+      top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<html>');
       top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<head>');
       top.fp_main_header.document.write('   <title>NFL Football Pool</title>');
+      top.fp_main_header.document.write('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
       top.fp_main_header.document.write('   <link href="fp.css" rel="stylesheet" type="text/css">');
       top.fp_main_header.document.write('</head>');
       top.fp_main_header.document.write('');
-      top.fp_main_header.document.write('<body class="background_color" style="margin: 0; margin-left: -3px">');
+      top.fp_main_header.document.write('<body class="background_color" style="margin: 0px; margin-left: -3px">');
       top.fp_main_header.document.write('');
       top.fp_main_header.document.write('<table class="table" style="height: 40px; border-spacing: 10px 0px">');
       top.fp_main_header.document.write('   <tr>');
@@ -2893,11 +2905,14 @@ function build_postseason_form()
 
    var d = document;
 
+   d.writeln('<!DOCTYPE html>');
+   d.writeln('');
    d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
    d.writeln('   <title>NFL Football Pool</title>');
+   d.writeln('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    d.writeln('   <link href="fp.css" rel="stylesheet" type="text/css">');
    d.writeln('   <style type="text/css">');
    d.writeln('   <!--');
@@ -2963,7 +2978,8 @@ function build_postseason_form()
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.');
    d.writeln('              color: black;');
-   d.writeln('        font-family: Calibri, sans-serif;">');
+   d.writeln('        font-family: Calibri, sans-serif;');
+   d.writeln('      margin-bottom: 15px">');
    d.writeln('');
    d.writeln('');
 
@@ -3269,10 +3285,12 @@ function build_postseason_form()
    d.writeln('   wd = dialog_frame.document.open();');
    d.writeln('');
    d.writeln('   wd.writeln("<!DOCTYPE html>");');
+   d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<html>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<head>");');
    d.writeln('   wd.writeln("   <title>NFL Football Pool</title>");');
+   d.writeln('   wd.writeln("   <meta id=\\"viewport\\" name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\">");');
    d.writeln('   wd.writeln("   <link href=\\"fp.css\\" rel=\\"stylesheet\\" type=\\"text/css\\">");');
    d.writeln('   wd.writeln("</head>");');
    d.writeln('   wd.writeln("");');
