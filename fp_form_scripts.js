@@ -785,11 +785,14 @@ function build_postseason_form()
 
    var d = document;
 
+   d.writeln('<!DOCTYPE html>');
+   d.writeln('');
    d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
    d.writeln('   <title>NFL Football Pool</title>');
+   d.writeln('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    d.writeln('   <style type="text/css">');
    d.writeln('   <!--');
    d.writeln('      TD              {border-style:        solid;');
@@ -2649,11 +2652,14 @@ function build_regular_season_form()
 
    var d = document;
 
+   d.writeln('<!DOCTYPE html>');
+   d.writeln('');
    d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
    d.writeln('   <title>NFL Football Pool</title>');
+   d.writeln('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    d.writeln('   <style type="text/css">');
    d.writeln('   <!--');
    d.writeln('      TD              {border-style:        solid;');
@@ -4773,11 +4779,14 @@ function build_regular_season_summary()
 
    var d = document;
 
+   d.writeln('<!DOCTYPE html>');
+   d.writeln('');
    d.writeln('<html>');
    d.writeln('');
 
    d.writeln('<head>');
    d.writeln('   <title>NFL Football Pool</title>');
+   d.writeln('   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">');
    d.writeln('   <style type="text/css">');
    d.writeln('   <!--');
    d.writeln('      TD              {border-style:        solid;');
