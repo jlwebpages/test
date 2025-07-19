@@ -876,7 +876,7 @@
                     (iPad == false) )
                {
                   var accept_button                       = fp_main.document.getElementById("submit");
-                  var button_font_size                    = 14.8;
+                  var button_font_size                    = 11;
                   var display_odds_checkbox_label         = fp_main.document.getElementById("display_odds_checkbox_label");
                   var display_team_records_checkbox_label = fp_main.document.getElementById("display_team_records_checkbox_label");
                   var home_team_picks_button              = fp_main.document.getElementById("home_team_picks");
@@ -888,15 +888,15 @@
 
                   if (input_form_buttons != null)
                   {
-                     // Set the font size of the input form buttons to 14.8px;
+                     // Set the font size of the input form buttons to 11pt;
 
-                     if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "px";
-                     if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "px";
-                     if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "px";
-                     if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "px";
-                     if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "px";
-                     if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "px";
-                     if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "px";
+                     if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                     if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                     if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                     if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                     if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                     if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                     if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
 
                      if (input_form_buttons.offsetWidth+margin > frame_width)
                      {
@@ -904,17 +904,17 @@
 
                         while (input_form_buttons.offsetWidth+margin > frame_width)
                         {
-                           // Decrease button_font_size by 0.1px.
+                           // Decrease button_font_size by 0.1pt.
 
                            button_font_size = Math.round((button_font_size-0.1)*10)/10;
 
-                           if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "px";
-                           if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "px";
-                           if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "px";
-                           if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "px";
-                           if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "px";
-                           if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "px";
-                           if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "px";
+                           if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                           if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                           if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                           if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                           if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                           if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                           if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
                         }
                      }
                      else if (frame_width > input_form_buttons.offsetWidth+margin)
@@ -923,35 +923,35 @@
 
                         while (frame_width > input_form_buttons.offsetWidth+margin)
                         {
-                           // Increase button_font_size by 0.1px.
+                           // Increase button_font_size by 0.1pt.
 
                            button_font_size = Math.round((button_font_size+0.1)*10)/10;
 
-                           if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "px";
-                           if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "px";
-                           if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "px";
-                           if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "px";
-                           if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "px";
-                           if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "px";
-                           if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "px";
+                           if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                           if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                           if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                           if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                           if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                           if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                           if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
                         }
 
                         // If the previous while loop caused the total width of the buttons row plus margin to be slightly greater
-                        // than the width of the "Input Form" table, then decrease the font size of the "Input Form" buttons by .1px.
+                        // than the width of the "Input Form" table, then decrease the font size of the "Input Form" buttons by .1pt.
 
                         if (input_form_buttons.offsetWidth+margin > frame_width)
                         {
-                           // Decrease button_font_size by 0.1px.
+                           // Decrease button_font_size by 0.1pt.
 
                            button_font_size = Math.round((button_font_size-0.1)*10)/10;
 
-                           if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "px";
-                           if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "px";
-                           if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "px";
-                           if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "px";
-                           if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "px";
-                           if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "px";
-                           if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "px";
+                           if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                           if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                           if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                           if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                           if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                           if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                           if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
                         }
                      }
                   }
