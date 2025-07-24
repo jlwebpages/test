@@ -186,7 +186,7 @@ function display_archive_page()
    d.writeln('      w.gv.ps_players              = "";');
    d.writeln('      w.gv.scores_already_assigned = false;');
    d.writeln('');
-   d.writeln('      w.archive.location.href="fp_forms_'+archive_year+'.html";');
+   d.writeln('      w.archive.location.href="forms_archive/fp_forms_'+archive_year+'.html";');
    d.writeln('');
    d.writeln('      return;');
    d.writeln('   }');
@@ -285,7 +285,7 @@ function display_archive_page()
    d.writeln('      w.gv.selected_week       = 0;');
    d.writeln('      w.gv.visiting_scores     = "";');
    d.writeln('');
-   d.writeln('      w.archive.location.href="fp_forms_'+archive_year+'.html";');
+   d.writeln('      w.archive.location.href="forms_archive/fp_forms_'+archive_year+'.html";');
    d.writeln('');
    d.writeln('      return;');
    d.writeln('   }');
@@ -316,7 +316,7 @@ function display_archive_page()
    d.writeln('   </td></tr>');
    d.writeln('');
    d.writeln('   <tr><td>');
-   d.writeln('      <a class="blue_link" href=javascript:window.open("fp_standings_'+archive_year+'.html","fp_main","");>'+archive_year+' Standings</a>');
+   d.writeln('      <a class="blue_link" href=javascript:window.open("standings_archive/fp_standings_'+archive_year+'.html","fp_main","");>'+archive_year+' Standings</a>');
    d.writeln('   </td></tr>');
    d.writeln('');
    if (archive_year > 2001)

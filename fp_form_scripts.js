@@ -5997,12 +5997,12 @@ function process_nfl_playoff_teams(nfl_playoff_teams,year)
          short_team_name = AFC_team_names[i].split(" ").pop();
          tooltip         = AFC_team_names[i]
 
-         document.getElementById("AFC_"+(i+1)).innerHTML = "<img src=\"Team Logos/"+short_team_name+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+AFC_team_records[i]+"</p>";
+         document.getElementById("AFC_"+(i+1)).innerHTML = "<img src=\"team_logos/"+short_team_name+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+AFC_team_records[i]+"</p>";
 
          short_team_name = NFC_team_names[i].split(" ").pop();
          tooltip         = NFC_team_names[i];
 
-         document.getElementById("NFC_"+(i+1)).innerHTML = "<img src=\"Team Logos/"+short_team_name+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+NFC_team_records[i]+"</p>";
+         document.getElementById("NFC_"+(i+1)).innerHTML = "<img src=\"team_logos/"+short_team_name+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+NFC_team_records[i]+"</p>";
       }
 
       // Make AFC Playoff Teams and NFC Playoff Teams visible.
@@ -6225,7 +6225,7 @@ function process_nfl_playoff_teams(nfl_playoff_teams,year)
          }
       }
 
-      document.getElementById("AFC_"+(i+1)).innerHTML = "<img src=\"Team Logos/"+AFC_teams.standings[i].team.shortDisplayName+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+AFC_teams.standings[i].stats[team_record_index]+"</p>";
+      document.getElementById("AFC_"+(i+1)).innerHTML = "<img src=\"team_logos/"+AFC_teams.standings[i].team.shortDisplayName+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+AFC_teams.standings[i].stats[team_record_index]+"</p>";
 
       if (NFC_teams.standings[i].team.displayName == "Washington")
       {
@@ -6250,7 +6250,7 @@ function process_nfl_playoff_teams(nfl_playoff_teams,year)
          }
       }
 
-      document.getElementById("NFC_"+(i+1)).innerHTML = "<img src=\"Team Logos/"+NFC_teams.standings[i].team.shortDisplayName+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+NFC_teams.standings[i].stats[team_record_index]+"</p>";
+      document.getElementById("NFC_"+(i+1)).innerHTML = "<img src=\"team_logos/"+NFC_teams.standings[i].team.shortDisplayName+".png\" title=\""+tooltip+"\"><p style=\"margin-top: -3px; margin-bottom: 0px\">"+NFC_teams.standings[i].stats[team_record_index]+"</p>";
    }
 
    // Make AFC Playoff Teams and NFC Playoff Teams visible.
