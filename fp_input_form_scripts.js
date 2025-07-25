@@ -191,10 +191,10 @@ function build_regular_season_form()
    d.writeln('');
 
    d.writeln('<body class="background_color"');
-   d.writeln('      style="border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.');
+   d.writeln('      style="border: 0px;');
    d.writeln('              color: black;');
    d.writeln('        font-family: Calibri, sans-serif;');
-   d.writeln('      margin-bottom: 15px">');
+   d.writeln('             margin: 0px 0px 15px 0px">');
    d.writeln('');
    d.writeln('');
 
@@ -508,7 +508,7 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("</head>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<body class=\\"background_color\\"");');
-   d.writeln('   wd.writeln("      style=\\"border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.");');
+   d.writeln('   wd.writeln("      style=\\"border: 0px;");');
    d.writeln('   wd.writeln("              color: black;");');
    d.writeln('   wd.writeln("          font-size: 13pt;");');
    d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');
@@ -2952,10 +2952,10 @@ function build_postseason_form()
    d.writeln('');
 
    d.writeln('<body class="background_color"');
-   d.writeln('      style="border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.');
+   d.writeln('      style="border: 0px;');
    d.writeln('              color: black;');
    d.writeln('        font-family: Calibri, sans-serif;');
-   d.writeln('      margin-bottom: 15px">');
+   d.writeln('             margin: 0px 0px 15px 0px>');
    d.writeln('');
    d.writeln('');
 
@@ -3269,7 +3269,7 @@ function build_postseason_form()
    d.writeln('   wd.writeln("</head>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<body class=\\"background_color\\"");');
-   d.writeln('   wd.writeln("      style=\\"border: 0px solid black;  //JL - Should be 1px, but FireFox has a bug.");');
+   d.writeln('   wd.writeln("      style=\\"border: 0px;");');
    d.writeln('   wd.writeln("              color: black;");');
    d.writeln('   wd.writeln("          font-size: 13pt;");');
    d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');

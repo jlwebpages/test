@@ -851,6 +851,12 @@
          var iPad = false;
 
 
+         document.getElementById("fp_main").style.zIndex              = -1;
+         document.getElementById("fp_picks").style.zIndex             = -1;
+         document.getElementById("fp_loading_indicator").style.zIndex = -1;
+
+         document.getElementById(frame_name).style.zIndex = 1;
+
          if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
          {
             iPad = true;
@@ -858,8 +864,6 @@
 
          if (frame_name == "fp_main")
          {
-            fp_frameset.cols = "*,0,0";
-
             frame_width = fp_main.document.body.scrollWidth;
 
             if (fp_main.document.getElementById("input_form_table") != null)
@@ -958,16 +962,8 @@
                }
             }
          }
-         else if (frame_name == "fp_picks")
-         {
-            fp_frameset.cols = "0,*,0";
-         }
-         else if (frame_name == "fp_loading_indicator")
-         {
-            frame_width = 0;
 
-            fp_frameset.cols = "0,0,*";
-         }
+         if (frame_name == "fp_loading_indicator") frame_width = 0;
 
          set_mobile_viewport_width(frame_width);
 
@@ -1059,18 +1055,26 @@
 
 </head>
 
-<frameset rows="65px,*" border="0">
 
-   <frame class="background_color" src="fp_header_mobile.html" name="fp_header" frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">
+<body class="background_color" style="margin: 0px; padding: 0px">
 
-   <frameset id="fp_frameset" cols="*,0,0" border="0">
+   <div id="fp_header" style="position: fixed; top: 0px; left: 0px; height: 65px; width: 100%;">
+      <iframe name="fp_header" src="fp_header_mobile.html" style="height: 65px; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
 
-      <frame class="background_color" src="fp_main_mobile.html"       name="fp_main"              frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="auto">
-      <frame class="background_color" src="fp_empty.html"             name="fp_picks"             frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="auto">
-      <frame class="background_color" src="fp_loading_indicator.html" name="fp_loading_indicator" frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">
+   <div id="fp_main" style="position: fixed; top: 65px; left: 0px; height: calc(100vh - 65px); width: 100%; z-index: 1">
+      <iframe name="fp_main" src="fp_main_mobile.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
 
-   </frameset>
+   <div id="fp_picks" style="position: fixed; top: 65px; left: 0px; height: calc(100vh - 65px); width: 100%; z-index: -1">
+      <iframe name="fp_picks" src="fp_empty.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
 
-</frameset>
+   <div id="fp_loading_indicator" style="position: fixed; top: 65px; left: 0px; height: calc(100vh - 65px); width: 100%; z-index: -1">
+      <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+</body>
+
 
 </html>
