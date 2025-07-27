@@ -7,109 +7,54 @@
    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="fp.css" rel="stylesheet" type="text/css">
    <base target="_top">
+   <style>
+      .button_span
+      {
+         width: 80%;
+         margin: 0px auto;
+         box-shadow: 5px 5px 10px gray;
+         display: block; 
+      }
+   </style>
 </head>
+
 
 <body class="background_color" style="margin: 0px; padding: 0px">
 
+   <div style="font-family: Calibri, sans-serif; height: 100vh; width:100%; min-height: 550px; margin-top: -10px; display: flex; flex-direction: column; justify-content: space-evenly">
 
-<table style="font-family: Calibri, sans-serif; width:80%; height: 100vh; min-height: 550px; margin: 0px auto">
+      <span class="fp_button_cell button_span">
+         <a class="white_link" href="fp_rules.html" target="fp_main" style="width: 100%">RULES</a>
+      </span>
 
-<tr style="height: 10%">
-   <td style="border-top: 5px solid transparent">
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <a class="white_link" href="fp_rules.html" target="fp_main">RULES</a>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
+      <span class="fp_button_cell button_span">
+         <a class="white_link" href="fp_standings.html" target="fp_main">STANDINGS</a>
+      </span>
 
-<tr style="height: 10%">
-   <td>
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <a class="white_link" href="fp_standings.html" target="fp_main">STANDINGS</a>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
+      <span class="fp_button_cell button_span">
+         <a class="white_link" href="fp_forms.html" target="fp_main">FORMS</a>
+      </span>
 
-<tr style="height: 10%">
-   <td>
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <a class="white_link" href="fp_forms.html" target="fp_main">FORMS</a>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
+      <span class="fp_button_cell button_span">
+         <a class="white_link" href="fp_archive.html" target="fp_main">ARCHIVE</a>
+      </span>
 
-<tr style="height: 10%">
-   <td>
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <a class="white_link" href="fp_archive.html" target="fp_main">ARCHIVE</a>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
+      <span class="fp_button_cell button_span">
+         <a class="white_link" href="fp_help.html" target="fp_main">HELP</a>
+      </span>
 
-<tr style="height: 10%">
-   <td>
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <a class="white_link" href="fp_help.html" target="fp_main">HELP</a>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
+      <span class="fp_button_cell button_span">
+         <a class="white_link" href="https://www.espn.com/nfl/lines" title="ESPN - NFL Daily Lines" style="display: inline-block">NFL</a>
+         <a class="white_link" href="https://www.sportsline.com/nfl/odds" title="SportsLine - NFL Odds and Lines" style="display: inline-block">ODDS</a>
+      </span>
 
-<tr style="height: 10%">
-   <td>
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <table style="width: 100%; border-collapse: collapse">
-                  <tr style="font-size: 18pt">
-                     <td style="width: 48%; text-align: right; padding: 0px; padding-right: 6px">
-                        <a class="white_link" href="https://www.espn.com/nfl/lines" title="ESPN - NFL Daily Lines">NFL</a>
-                     </td>
-                     <td style="width: 52%; text-align: left; padding: 0px; padding-left: 0px">
-                        <a class="white_link" href="https://www.sportsline.com/nfl/odds" title="SportsLine - NFL Odds and Lines">ODDS</a>
-                     </td>
-                  </tr>
-               </table>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
+      <span class="fp_button_cell button_span">
+         <script>document.write('<a class="white_link" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main">PLAYOFF TEAMS</a>');</script>
+      </span>
 
-<tr style="height: 10%">
-   <td style="border-bottom: 15px solid transparent">
-      <table style="width: 100%">
-         <tr>
-            <td class="fp_button_cell" style="border-width: 0px; box-shadow: 5px 5px 10px gray; border: 0px">
-               <script>document.write('<a class="white_link" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main">PLAYOFF TEAMS</a>');</script>
-            </td>
-         </tr>
-      </table>
-   </td>
-</tr>
-
-</table>
-
+   </div>
 
 </body>
+
 
 </html>
