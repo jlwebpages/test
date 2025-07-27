@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html style="height: 100%">
+<html>
 
 <head>
    <title>NFL Football Pool</title>
@@ -8,6 +8,16 @@
    <link href="fp.css" rel="stylesheet" type="text/css">
    <base target="_top">
    <style>
+      .button_container
+      {
+         font-family: Calibri, sans-serif;
+         width:100%;
+         min-height: 550px;
+         margin-top: -10px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+      }
       .button_span
       {
          width: 75%;
@@ -18,10 +28,24 @@
    </style>
 </head>
 
+<script>
 
-<body class="background_color" style="height: 100%; margin: 0px; padding: 0px">
+   var viewport_height_adjust = "0px";
 
-   <div style="font-family: Calibri, sans-serif; height: 100%; width:100%; min-height: 550px; margin-top: -10px; display: flex; flex-direction: column; justify-content: space-evenly">
+
+   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+   {
+      // This is an iPad.
+
+      viewport_height_adjust = "65px";  // 65px is the height of fp_header.
+   }
+
+</script>
+
+
+<body class="background_color" style="margin: 0px; padding: 0px">
+
+   <script>document.writeln('<div class="button_container" style="height: calc(100vh - '+viewport_height_adjust+')">');</script>
 
       <span class="fp_button_cell button_span">
          <a class="white_link" href="fp_rules.html" target="fp_main" style="width: 100%">RULES</a>
