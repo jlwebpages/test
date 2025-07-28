@@ -33,6 +33,8 @@
 
    viewport_height_adjust = window.innerHeight - 65;
 
+   viewport_height_adjust = viewport_height_adjust + "px";
+
   // if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
   // {
       // This is an iPad.
@@ -45,7 +47,7 @@
 
 <body class="background_color" style="margin: 0px; padding: 0px">
 
-   <script>document.write('<div class="button_container" style="height: calc(100vh - '+viewport_height_adjust+'px')">');</script>
+   <script>document.write('<div class="button_container" style="height: '+viewport_height_adjust+'">');</script>
 
       <span class="fp_button_cell button_span">
          <a class="white_link" href="fp_rules.html" target="fp_main" style="width: 100%">RULES</a>
