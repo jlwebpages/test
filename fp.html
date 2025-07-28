@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-
 <html>
 
 <head>
 
    <title>NFL Football Pool</title>
-
-   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link href="fp.css" rel="stylesheet" type="text/css">
 
@@ -21,7 +17,7 @@
 
       // Manually set the Football Pool year at the beginning of the season.
 
-      var fp_year      = 2025;
+      var fp_year      = 2024;
       var archive_year = fp_year-1;
 
       // Update the Football Pool Web Page Title using the Football Pool year.
@@ -30,17 +26,17 @@
 
       // Set season_over to "t" only after the Super Bowl picks have been received.
 
-      var season_over = f;
+      var season_over = t;
 
       // Set these variables each week.
 
-      var games_over         = f;
-      var current_input_week = 1;
+      var games_over         = t;
+      var current_input_week = 23;
 
       // Set the postseason teams each week during the playoffs.
 
-      var postseason_visiting_teams = [];
-      var postseason_home_teams     = [];
+      var postseason_visiting_teams = ["Chiefs"];
+      var postseason_home_teams     = ["Eagles"];
 
       // These variables will be changed by the Java Scripts.
 
@@ -64,721 +60,721 @@
       // Regular Season Schedule - Start
 
       var visiting_teams_1 = [
-      "Cowboys",
-      "Chiefs",
-      "Buccaneers",
-      "Bengals",
-      "Dolphins",
-      "Panthers",
-      "Raiders",
-      "Cardinals",
-      "Steelers",
-      "Giants",
-      "Titans",
-      "49ers",
-      "Lions",
-      "Texans",
       "Ravens",
-      "Vikings"
+      "Packers",
+      "Steelers",
+      "Cardinals",
+      "Titans",
+      "Patriots",
+      "Texans",
+      "Jaguars",
+      "Panthers",
+      "Vikings",
+      "Raiders",
+      "Broncos",
+      "Cowboys",
+      "Commanders",
+      "Rams",
+      "Jets"
       ];
 
       var home_teams_1 = [
+      "Chiefs",
       "Eagles",
-      "Chargers",
       "Falcons",
-      "Browns",
-      "Colts",
-      "Jaguars",
-      "Patriots",
-      "Saints",
-      "Jets",
-      "Commanders",
-      "Broncos",
-      "Seahawks",
-      "Packers",
-      "Rams",
       "Bills",
-      "Bears"
+      "Bears",
+      "Bengals",
+      "Colts",
+      "Dolphins",
+      "Saints",
+      "Giants",
+      "Chargers",
+      "Seahawks",
+      "Browns",
+      "Buccaneers",
+      "Lions",
+      "49ers"
       ];
 
       var open_date_1 = ["None"];
 
       var visiting_teams_2 = [
-      "Commanders",
-      "Browns",
-      "Jaguars",
-      "Giants",
-      "Bears",
-      "Patriots",
-      "49ers",
       "Bills",
-      "Seahawks",
-      "Rams",
-      "Panthers",
-      "Broncos",
-      "Eagles",
-      "Falcons",
+      "Raiders",
+      "Chargers",
+      "Saints",
       "Buccaneers",
-      "Chargers"
+      "Colts",
+      "Browns",
+      "49ers",
+      "Seahawks",
+      "Jets",
+      "Giants",
+      "Rams",
+      "Steelers",
+      "Bengals",
+      "Bears",
+      "Falcons"
       ];
 
       var home_teams_2 = [
-      "Packers",
+      "Dolphins",
       "Ravens",
-      "Bengals",
+      "Panthers",
       "Cowboys",
       "Lions",
-      "Dolphins",
-      "Saints",
-      "Jets",
-      "Steelers",
-      "Titans",
-      "Cardinals",
-      "Colts",
-      "Chiefs",
+      "Packers",
+      "Jaguars",
       "Vikings",
+      "Patriots",
+      "Titans",
+      "Commanders",
+      "Cardinals",
+      "Broncos",
+      "Chiefs",
       "Texans",
-      "Raiders"
+      "Eagles"
       ];
 
       var open_date_2 = ["None"];
 
       var visiting_teams_3 = [
-      "Dolphins",
-      "Falcons",
-      "Packers",
+      "Patriots",
+      "Giants",
+      "Bears",
       "Texans",
-      "Bengals",
-      "Steelers",
-      "Rams",
-      "Jets",
-      "Colts",
-      "Raiders",
+      "Eagles",
+      "Chargers",
       "Broncos",
-      "Saints",
-      "Cowboys",
-      "Cardinals",
+      "Packers",
+      "Panthers",
+      "Dolphins",
+      "Lions",
+      "Ravens",
+      "49ers",
       "Chiefs",
-      "Lions"
+      "Jaguars",
+      "Commanders"
       ];
 
       var home_teams_3 = [
-      "Bills",
-      "Panthers",
+      "Jets",
       "Browns",
-      "Jaguars",
+      "Colts",
       "Vikings",
-      "Patriots",
-      "Eagles",
+      "Saints",
+      "Steelers",
       "Buccaneers",
       "Titans",
-      "Commanders",
-      "Chargers",
+      "Raiders",
       "Seahawks",
-      "Bears",
-      "49ers",
-      "Giants",
-      "Ravens"
+      "Cardinals",
+      "Cowboys",
+      "Rams",
+      "Falcons",
+      "Bills",
+      "Bengals"
       ];
 
       var open_date_3 = ["None"];
 
       var visiting_teams_4 = [
-      "Seahawks",
-      "Vikings",
-      "Commanders",
+      "Cowboys",
       "Saints",
-      "Browns",
-      "Titans",
-      "Panthers",
-      "Chargers",
-      "Eagles",
-      "Colts",
+      "Bengals",
+      "Rams",
+      "Vikings",
       "Jaguars",
-      "Ravens",
-      "Bears",
-      "Packers",
-      "Jets",
-      "Bengals"
+      "Steelers",
+      "Broncos",
+      "Eagles",
+      "Commanders",
+      "Patriots",
+      "Chiefs",
+      "Browns",
+      "Bills",
+      "Titans",
+      "Seahawks"
       ];
 
       var home_teams_4 = [
-      "Cardinals",
-      "Steelers",
-      "Falcons",
-      "Bills",
-      "Lions",
-      "Texans",
-      "Patriots",
       "Giants",
+      "Falcons",
+      "Panthers",
+      "Bears",
+      "Packers",
+      "Texans",
+      "Colts",
+      "Jets",
       "Buccaneers",
-      "Rams",
+      "Cardinals",
       "49ers",
-      "Chiefs",
+      "Chargers",
       "Raiders",
-      "Cowboys",
+      "Ravens",
       "Dolphins",
-      "Broncos"
+      "Lions"
       ];
 
       var open_date_4 = ["None"];
 
       var visiting_teams_5 = [
-      "49ers",
-      "Vikings",
-      "Texans",
+      "Buccaneers",
+      "Jets",
+      "Panthers",
+      "Ravens",
+      "Bills",
+      "Colts",
       "Dolphins",
+      "Browns",
       "Raiders",
+      "Cardinals",
+      "Packers",
       "Giants",
       "Cowboys",
-      "Broncos",
-      "Titans",
-      "Buccaneers",
-      "Lions",
-      "Commanders",
-      "Patriots",
 
 
-      "Chiefs"
+      "Saints"
       ];
 
       var home_teams_5 = [
-      "Rams",
-      "Browns",
-      "Ravens",
-      "Panthers",
-      "Colts",
-      "Saints",
-      "Jets",
-      "Eagles",
-      "Cardinals",
-      "Seahawks",
-      "Bengals",
-      "Chargers",
-      "Bills",
-
-
-      "Jaguars"
-      ];
-
-      var open_date_5 = ["Bears, Falcons, Packers, Steelers"];
-
-      var visiting_teams_6 = [
-      "Eagles",
-      "Broncos",
-      "Rams",
-      "Cowboys",
-      "Cardinals",
-      "Seahawks",
-      "Chargers",
-      "Browns",
-      "49ers",
-      "Titans",
-      "Bengals",
-      "Patriots",
-      "Lions",
-      "Bills",
-
-      "Bears"
-      ];
-
-      var home_teams_6 = [
-      "Giants",
-      "Jets",
-      "Ravens",
-      "Panthers",
-      "Colts",
-      "Jaguars",
-      "Dolphins",
-      "Steelers",
-      "Buccaneers",
-      "Raiders",
-      "Packers",
-      "Saints",
-      "Chiefs",
       "Falcons",
-
-      "Commanders"
-      ];
-
-      var open_date_6 = ["Texans, Vikings"];
-
-      var visiting_teams_7 = [
-      "Steelers",
-      "Rams",
-      "Saints",
-      "Dolphins",
-      "Raiders",
-      "Eagles",
-      "Panthers",
-      "Patriots",
-      "Giants",
-      "Colts",
-      "Packers",
-      "Commanders",
-      "Falcons",
-      "Buccaneers",
-
-      "Texans"
-      ];
-
-      var home_teams_7 = [
-      "Bengals",
-      "Jaguars",
-      "Bears",
-      "Browns",
-      "Chiefs",
       "Vikings",
-      "Jets",
-      "Titans",
-      "Broncos",
-      "Chargers",
-      "Cardinals",
-      "Cowboys",
-      "49ers",
-      "Lions",
-
-      "Seahawks"
-      ];
-
-      var open_date_7 = ["Bills, Ravens"];
-
-      var visiting_teams_8 = [
-      "Vikings",
-      "Dolphins",
       "Bears",
-      "Bills",
-      "Jets",
-      "49ers",
-      "Browns",
-      "Giants",
-      "Buccaneers",
-      "Cowboys",
-      "Titans",
-      "Packers",
-
-
-
-      "Commanders"
-      ];
-
-      var home_teams_8 = [
-      "Chargers",
-      "Falcons",
-      "Ravens",
-      "Panthers",
       "Bengals",
       "Texans",
+      "Jaguars",
       "Patriots",
-      "Eagles",
-      "Saints",
+      "Commanders",
       "Broncos",
-      "Colts",
+      "49ers",
+      "Rams",
+      "Seahawks",
       "Steelers",
-
 
 
       "Chiefs"
       ];
 
-      var open_date_8 = ["Cardinals, Jaguars, Lions, Raiders, Rams, Seahawks"];
+      var open_date_5 = ["Chargers, Eagles, Lions, Titans"];
 
-      var visiting_teams_9 = [
-      "Ravens",
-      "Bears",
-      "Vikings",
-      "Panthers",
-      "Broncos",
-      "Falcons",
+      var visiting_teams_6 = [
       "49ers",
+      "Jaguars",
+      "Commanders",
+      "Cardinals",
+      "Texans",
+      "Buccaneers",
+      "Browns",
       "Colts",
       "Chargers",
+      "Steelers",
+      "Falcons",
+      "Lions",
+      "Bengals",
+
+
+      "Bills"
+      ];
+
+      var home_teams_6 = [
+      "Seahawks",
+      "Bears",
+      "Ravens",
+      "Packers",
+      "Patriots",
+      "Saints",
+      "Eagles",
+      "Titans",
+      "Broncos",
+      "Raiders",
+      "Panthers",
+      "Cowboys",
+      "Giants",
+
+
+      "Jets"
+      ];
+
+      var open_date_6 = ["Chiefs, Dolphins, Rams, Vikings"];
+
+      var visiting_teams_7 = [
+      "Broncos",
+      "Patriots",
+      "Seahawks",
+      "Titans",
+      "Bengals",
+      "Texans",
+      "Dolphins",
+      "Lions",
+      "Eagles",
+      "Raiders",
+      "Panthers",
+      "Chiefs",
+      "Jets",
+      "Ravens",
+
+      "Chargers"
+      ];
+
+      var home_teams_7 = [
       "Saints",
       "Jaguars",
-      "Chiefs",
-      "Seahawks",
-
+      "Falcons",
+      "Bills",
+      "Browns",
+      "Packers",
+      "Colts",
+      "Vikings",
+      "Giants",
+      "Rams",
+      "Commanders",
+      "49ers",
+      "Steelers",
+      "Buccaneers",
 
       "Cardinals"
       ];
 
-      var home_teams_9 = [
-      "Dolphins",
-      "Bengals",
-      "Lions",
-      "Packers",
-      "Texans",
-      "Patriots",
-      "Giants",
-      "Steelers",
+      var open_date_7 = ["Bears, Cowboys"];
+
+      var visiting_teams_8 = [
+      "Vikings",
+      "Ravens",
       "Titans",
-      "Rams",
-      "Raiders",
-      "Bills",
-      "Commanders",
-
-
-      "Cowboys"
-      ];
-
-      var open_date_9 = ["Browns, Buccaneers, Eagles, Jets"];
-
-      var visiting_teams_10 = [
-      "Raiders",
+      "Colts",
+      "Packers",
+      "Cardinals",
+      "Jets",
       "Falcons",
+      "Bears",
       "Saints",
-      "Giants",
-      "Jaguars",
       "Bills",
-      "Ravens",
-      "Browns",
-      "Patriots",
-      "Cardinals",
-      "Rams",
-      "Lions",
-      "Steelers",
-
-
-      "Eagles"
-      ];
-
-      var home_teams_10 = [
-      "Broncos",
-      "Colts",
-      "Panthers",
-      "Bears",
-      "Texans",
-      "Dolphins",
-      "Vikings",
-      "Jets",
-      "Buccaneers",
-      "Seahawks",
-      "49ers",
-      "Commanders",
-      "Chargers",
-
-
-      "Packers"
-      ];
-
-      var open_date_10 = ["Bengals, Chiefs, Cowboys, Titans"];
-
-      var visiting_teams_11 = [
-      "Jets",
-      "Commanders",
-      "Panthers",
-      "Buccaneers",
-      "Chargers",
-      "Bears",
-      "Packers",
-      "Bengals",
-      "Texans",
-      "49ers",
-      "Seahawks",
-      "Ravens",
-      "Chiefs",
-      "Lions",
-
-      "Cowboys"
-      ];
-
-      var home_teams_11 = [
-      "Patriots",
-      "Dolphins",
-      "Falcons",
-      "Bills",
-      "Jaguars",
-      "Vikings",
-      "Giants",
-      "Steelers",
-      "Titans",
-      "Cardinals",
-      "Rams",
-      "Browns",
-      "Broncos",
       "Eagles",
-
-      "Raiders"
-      ];
-
-      var open_date_11 = ["Colts, Saints"];
-
-      var visiting_teams_12 = [
-      "Bills",
-      "Jets",
-      "Steelers",
-      "Patriots",
-      "Giants",
-      "Vikings",
-      "Colts",
-      "Seahawks",
-      "Jaguars",
-      "Browns",
-      "Eagles",
-      "Falcons",
-      "Buccaneers",
-
-
-      "Panthers"
-      ];
-
-      var home_teams_12 = [
-      "Texans",
-      "Ravens",
-      "Bears",
-      "Bengals",
-      "Lions",
-      "Packers",
+      "Panthers",
       "Chiefs",
-      "Titans",
-      "Cardinals",
-      "Raiders",
       "Cowboys",
-      "Saints",
-      "Rams",
-
-
-      "49ers"
-      ];
-
-      var open_date_12 = ["Broncos, Chargers, Commanders, Dolphins"];
-
-      var visiting_teams_13 = [
-      "Packers",
-      "Chiefs",
-      "Bengals",
-      "Bears",
-      "Rams",
-      "49ers",
-      "Texans",
-      "Saints",
-      "Falcons",
-      "Cardinals",
-      "Jaguars",
-      "Vikings",
-      "Raiders",
-      "Bills",
-      "Broncos",
       "Giants"
       ];
 
-      var home_teams_13 = [
-      "Lions",
-      "Cowboys",
-      "Ravens",
-      "Eagles",
-      "Panthers",
+      var home_teams_8 = [
+      "Rams",
       "Browns",
-      "Colts",
+      "Lions",
+      "Texans",
+      "Jaguars",
       "Dolphins",
-      "Jets",
+      "Patriots",
       "Buccaneers",
-      "Titans",
-      "Seahawks",
-      "Chargers",
-      "Steelers",
       "Commanders",
-      "Patriots"
+      "Chargers",
+      "Seahawks",
+      "Bengals",
+      "Broncos",
+      "Raiders",
+      "49ers",
+      "Steelers"
       ];
 
-      var open_date_13 = ["None"];
+      var open_date_8 = ["None"];
 
-      var visiting_teams_14 = [
+      var visiting_teams_9 = [
+      "Texans",
       "Cowboys",
-      "Seahawks",
-      "Steelers",
-      "Titans",
-      "Bears",
-      "Colts",
-      "Commanders",
+      "Broncos",
       "Dolphins",
       "Saints",
-      "Broncos",
+      "Raiders",
+      "Chargers",
+      "Colts",
+      "Commanders",
+      "Patriots",
+      "Bears",
+      "Lions",
       "Rams",
+      "Jaguars",
+
+      "Buccaneers"
+      ];
+
+      var home_teams_9 = [
+      "Jets",
+      "Falcons",
+      "Ravens",
+      "Bills",
+      "Panthers",
       "Bengals",
+      "Browns",
+      "Vikings",
+      "Giants",
+      "Titans",
+      "Cardinals",
+      "Packers",
+      "Seahawks",
+      "Eagles",
+
+      "Chiefs"
+      ];
+
+      var open_date_9 = ["49ers, Steelers"];
+
+      var visiting_teams_10 = [
+      "Bengals",
+      "Giants",
+      "Patriots",
+      "Bills",
+      "Vikings",
+      "Broncos",
+      "Falcons",
+      "49ers",
+      "Steelers",
+      "Titans",
+      "Jets",
+      "Eagles",
+      "Lions",
+
+
+      "Dolphins"
+      ];
+
+      var home_teams_10 = [
+      "Ravens",
+      "Panthers",
+      "Bears",
+      "Colts",
+      "Jaguars",
+      "Chiefs",
+      "Saints",
+      "Buccaneers",
+      "Commanders",
+      "Chargers",
+      "Cardinals",
+      "Cowboys",
       "Texans",
 
 
-      "Eagles"
+      "Rams"
       ];
 
-      var home_teams_14 = [
-      "Lions",
-      "Falcons",
-      "Ravens",
-      "Browns",
+      var open_date_10 = ["Browns, Packers, Raiders, Seahawks"];
+
+      var visiting_teams_11 = [
+      "Commanders",
       "Packers",
       "Jaguars",
-      "Vikings",
-      "Jets",
-      "Buccaneers",
       "Raiders",
-      "Cardinals",
-      "Bills",
+      "Rams",
+      "Browns",
+      "Ravens",
+      "Vikings",
+      "Falcons",
+      "Seahawks",
       "Chiefs",
+      "Bengals",
+      "Colts",
+
+
+      "Texans"
+      ];
+
+      var home_teams_11 = [
+      "Eagles",
+      "Bears",
+      "Lions",
+      "Dolphins",
+      "Patriots",
+      "Saints",
+      "Steelers",
+      "Titans",
+      "Broncos",
+      "49ers",
+      "Bills",
+      "Chargers",
+      "Jets",
+
+
+      "Cowboys"
+      ];
+
+      var open_date_11 = ["Buccaneers, Cardinals, Giants, Panthers"];
+
+      var visiting_teams_12 = [
+      "Steelers",
+      "Chiefs",
+      "Vikings",
+      "Titans",
+      "Lions",
+      "Patriots",
+      "Buccaneers",
+      "Cowboys",
+      "Broncos",
+      "49ers",
+      "Cardinals",
+      "Eagles",
+
+
+
+      "Ravens"
+      ];
+
+      var home_teams_12 = [
+      "Browns",
+      "Panthers",
+      "Bears",
+      "Texans",
+      "Colts",
+      "Dolphins",
+      "Giants",
+      "Commanders",
+      "Raiders",
+      "Packers",
+      "Seahawks",
+      "Rams",
+
 
 
       "Chargers"
       ];
 
-      var open_date_14 = ["49ers, Giants, Panthers, Patriots"];
+      var open_date_12 = ["Bengals, Bills, Falcons, Jaguars, Jets, Saints"];
+
+      var visiting_teams_13 = [
+      "Bears",
+      "Giants",
+      "Dolphins",
+      "Raiders",
+      "Chargers",
+      "Steelers",
+      "Texans",
+      "Cardinals",
+      "Colts",
+      "Seahawks",
+      "Titans",
+      "Buccaneers",
+      "Rams",
+      "Eagles",
+      "49ers",
+      "Browns"
+      ];
+
+      var home_teams_13 = [
+      "Lions",
+      "Cowboys",
+      "Packers",
+      "Chiefs",
+      "Falcons",
+      "Bengals",
+      "Jaguars",
+      "Vikings",
+      "Patriots",
+      "Jets",
+      "Commanders",
+      "Panthers",
+      "Saints",
+      "Ravens",
+      "Bills",
+      "Broncos"
+      ];
+
+      var open_date_13 = ["None"];
+
+      var visiting_teams_14 = [
+      "Packers",
+      "Jets",
+      "Falcons",
+      "Saints",
+      "Panthers",
+      "Browns",
+      "Raiders",
+      "Jaguars",
+      "Seahawks",
+      "Bills",
+      "Bears",
+      "Chargers",
+
+
+
+      "Bengals"
+      ];
+
+      var home_teams_14 = [
+      "Lions",
+      "Dolphins",
+      "Vikings",
+      "Giants",
+      "Eagles",
+      "Steelers",
+      "Buccaneers",
+      "Titans",
+      "Cardinals",
+      "Rams",
+      "49ers",
+      "Chiefs",
+
+
+
+      "Cowboys"
+      ];
+
+      var open_date_14 = ["Broncos, Colts, Commanders, Patriots, Ravens, Texans"];
 
       var visiting_teams_15 = [
-      "Falcons",
-      "Browns",
-      "Ravens",
-      "Cardinals",
+      "Rams",
+      "Cowboys",
+      "Chiefs",
+      "Dolphins",
       "Jets",
-      "Chargers",
-      "Bills",
       "Commanders",
-      "Raiders",
-      "Packers",
-      "Lions",
-      "Panthers",
+      "Ravens",
+      "Bengals",
+      "Patriots",
       "Colts",
-      "Titans",
-      "Vikings",
-      "Dolphins"
+      "Bills",
+      "Buccaneers",
+      "Steelers",
+      "Packers",
+      "Bears",
+      "Falcons"
       ];
 
       var home_teams_15 = [
-      "Buccaneers",
-      "Bears",
-      "Bengals",
+      "49ers",
+      "Panthers",
+      "Browns",
       "Texans",
       "Jaguars",
-      "Chiefs",
-      "Patriots",
-      "Giants",
-      "Eagles",
-      "Broncos",
-      "Rams",
       "Saints",
+      "Giants",
+      "Titans",
+      "Cardinals",
+      "Broncos",
+      "Lions",
+      "Chargers",
+      "Eagles",
       "Seahawks",
-      "49ers",
-      "Cowboys",
-      "Steelers"
+      "Vikings",
+      "Raiders"
       ];
 
       var open_date_15 = ["None"];
 
       var visiting_teams_16 = [
-      "Rams",
-      "Packers",
-      "Eagles",
-      "Patriots",
-      "Buccaneers",
-      "Bills",
-      "Chargers",
-      "Jets",
-      "Vikings",
-      "Chiefs",
-      "Falcons",
-      "Jaguars",
+      "Browns",
+      "Texans",
       "Steelers",
-      "Raiders",
-      "Bengals",
-      "49ers"
+      "Giants",
+      "Patriots",
+      "Cardinals",
+      "Lions",
+      "Titans",
+      "Rams",
+      "Eagles",
+      "Broncos",
+      "Vikings",
+      "Jaguars",
+      "49ers",
+      "Buccaneers",
+      "Saints"
       ];
 
       var home_teams_16 = [
-      "Seahawks",
-      "Bears",
-      "Commanders",
+      "Bengals",
+      "Chiefs",
       "Ravens",
+      "Falcons",
+      "Bills",
       "Panthers",
-      "Browns",
-      "Cowboys",
-      "Saints",
-      "Giants",
-      "Titans",
-      "Cardinals",
-      "Broncos",
-      "Lions",
-      "Texans",
+      "Bears",
+      "Colts",
+      "Jets",
+      "Commanders",
+      "Chargers",
+      "Seahawks",
+      "Raiders",
       "Dolphins",
-      "Colts"
+      "Cowboys",
+      "Packers"
       ];
 
       var open_date_16 = ["None"];
 
       var visiting_teams_17 = [
-      "Cowboys",
-      "Lions",
-      "Broncos",
-      "Seahawks",
-      "Cardinals",
+      "Chiefs",
       "Ravens",
-      "Texans",
-      "Giants",
-      "Steelers",
-      "Jaguars",
-      "Buccaneers",
-      "Patriots",
-      "Saints",
-      "Eagles",
-      "Bears",
-      "Rams"
+      "Seahawks",
+      "Broncos",
+      "Cardinals",
+      "Chargers",
+      "Colts",
+      "Falcons",
+      "Jets",
+      "Titans",
+      "Packers",
+      "Raiders",
+      "Panthers",
+      "Cowboys",
+      "Dolphins",
+      "Lions"
       ];
 
       var home_teams_17 = [
-      "Commanders",
-      "Vikings",
-      "Chiefs",
-      "Panthers",
+      "Steelers",
+      "Texans",
+      "Bears",
       "Bengals",
-      "Packers",
-      "Chargers",
-      "Raiders",
-      "Browns",
-      "Colts",
-      "Dolphins",
-      "Jets",
-      "Titans",
+      "Rams",
+      "Patriots",
+      "Giants",
+      "Commanders",
       "Bills",
-      "49ers",
-      "Falcons"
+      "Jaguars",
+      "Vikings",
+      "Saints",
+      "Buccaneers",
+      "Eagles",
+      "Browns",
+      "49ers"
       ];
 
       var open_date_17 = ["None"];
 
       var visiting_teams_18 = [
-      "Saints",
-      "Jets",
-      "Lions",
-      "Browns",
-      "Chargers",
-      "Colts",
-      "Titans",
-      "Cardinals",
-      "Chiefs",
-      "Packers",
-      "Dolphins",
-      "Cowboys",
-      "Commanders",
-      "Ravens",
-      "Seahawks",
+      "49ers",
       "Panthers",
+      "Browns",
+      "Commanders",
+      "Chiefs",
+      "Vikings",
+      "Bears",
+      "Jaguars",
+      "Seahawks",
+      "Chargers",
+      "Bills",
+      "Dolphins",
+      "Giants",
+      "Bengals",
+      "Saints",
+      "Texans",
       ];
 
       var home_teams_18 = [
+      "Cardinals",
       "Falcons",
-      "Bills",
-      "Bears",
-      "Bengals",
+      "Ravens",
+      "Cowboys",
       "Broncos",
-      "Texans",
-      "Jaguars",
+      "Lions",
+      "Packers",
+      "Colts",
       "Rams",
       "Raiders",
-      "Vikings",
       "Patriots",
-      "Giants",
+      "Jets",
       "Eagles",
       "Steelers",
-      "49ers",
       "Buccaneers",
+      "Titans",
       ];
 
       var open_date_18 = ["None"];
@@ -846,11 +842,18 @@
       {
          // frame_width is only used in fp_mobile.html
 
-         document.getElementById("fp_main").style.zIndex              = -1;
-         document.getElementById("fp_picks").style.zIndex             = -1;
-         document.getElementById("fp_loading_indicator").style.zIndex = -1;
-
-         document.getElementById(frame_name).style.zIndex = 1;
+         if (frame_name == "fp_main")
+         {
+            fp_frameset.rows = "60px,*,0,0";
+         }
+         else if (frame_name == "fp_picks")
+         {
+            fp_frameset.rows = "60px,0,*,0";
+         }
+         else if (frame_name == "fp_loading_indicator")
+         {
+            fp_frameset.rows = "60px,0,0,*";
+         }
       }
 
       function focus_element(element)
@@ -888,32 +891,17 @@
 
 </head>
 
+<frameset rows="75px,*" border="0">
 
-<body class="background_color" style="margin: 0px; padding: 0px">
+   <frame class="background_color" src="fp_header.html" name="fp_header" frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">
 
-   <div id="fp_header" style="position: fixed; top: 0px; left: 0px; height: 75px; width: 100%">
-      <table class="table" style="height: 70px; padding: 5px; margin: 0px auto">
-         <tr><td class="dark_blue_cell" style="font-size: 26pt"><script>if (top.fp_year != null) document.write(top.fp_year + " "); document.write("NFL FOOTBALL POOL");</script></td></tr>
-      </table>
-   </div>
+   <frameset id="fp_frameset" rows="0,*,0,0" border="0">
+      <frame class="background_color" src="fp_empty.html"             name="fp_main_header"       frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">
+      <frame class="background_color" src="fp_main.html"              name="fp_main"              frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="auto">
+      <frame class="background_color" src="fp_empty.html"             name="fp_picks"             frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="auto">
+      <frame class="background_color" src="fp_loading_indicator.html" name="fp_loading_indicator" frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">    
+   </frameset>
 
-   <div id="fp_main_header" style="position: fixed; top: 75px; left: 0px; height: 60px; width: 100%">
-      <!-- Main header content is populated by other files. -->
-   </div>
-
-   <div id="fp_main" style="position: fixed; top: 135px; left: 0px; height: calc(100vh - 135px); width: 100%; z-index: 1">
-      <iframe name="fp_main" src="fp_main.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
-   </div>
-
-   <div id="fp_picks" style="position: fixed; top: 135px; left: 0px; height: calc(100vh - 135px); width: 100%; z-index: -1">
-      <iframe name="fp_picks" src="fp_empty.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
-   </div>
-
-   <div id="fp_loading_indicator" style="position: fixed; top: 135px; left: 0px; height: calc(100vh - 135px); width: 100%; z-index: -1">
-      <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
-   </div>
-
-</body>
-
+</frameset>
 
 </html>

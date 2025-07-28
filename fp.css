@@ -5,23 +5,11 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
-@media only screen and (min-width: 600px)
-{
-   #Final_Standings             {display: inline-block !important}
-   #Final_Regular_Season_Scores {display: inline-block !important}
-   #Final_Postseason_Scores     {display: inline-block !important}
-}
-
-@media only screen and (min-width: 480px)
-{
-   .dark_blue_cell {letter-spacing: 1px !important}
-}
-
 .default_button
 {
    color: black;
    font-size: 11pt;
-   font-family: Calibri, sans-serif;
+   font-family: Calibri;
    background-color: #F0F0F0;
    border: 1px solid black;
 }
@@ -36,7 +24,7 @@
 {
    color: black;
    font-size: 11pt;
-   font-family: Calibri, sans-serif;
+   font-family: Calibri;
    background-color: #F0F0F0;
    border: 1px solid black;
 }
@@ -45,7 +33,7 @@
 {
    color: black;
    font-size: 11pt;
-   font-family: Calibri, sans-serif;
+   font-family: Calibri;
    text-align: center;
    background-color: white;
    border: 1px solid lightgray;
@@ -54,7 +42,7 @@
 .header_one
 {
    color: black;
-   font-size: 16px;
+   font-size: 12pt;
    font-weight: bold;
    text-align: center;
    white-space: nowrap;
@@ -64,7 +52,7 @@
 .header_two
 {
    color: black;
-   font-size: 16px;
+   font-size: 12pt;
    font-weight: bold;
    text-align: center;
    white-space: nowrap;
@@ -74,7 +62,7 @@
 .table
 {
    color: white;
-   font-family: Calibri, sans-serif;
+   font-family: Calibri;
    text-align: left;
    background-color: #B8C2D0;
    border-spacing: 0px;
@@ -85,9 +73,6 @@
 
 .dark_blue_cell
 {
-   text-align: center;
-   letter-spacing: normal;
-   vertical-align: middle;
    background-color: #002060;
    border-radius: 30px;
    box-shadow: 5px 5px 5px gray;
@@ -95,11 +80,8 @@
 
 .ext_button_cell
 {
-   font-size: 24px;
-   letter-spacing: 2px;
+   font-size: 18pt;
    text-align: center;
-   vertical-align: middle;
-   white-space: nowrap;
    background-color: #283E1A;
    border-radius: 25px;
    padding: 8px;
@@ -109,11 +91,8 @@
 
 .fp_button_cell
 {
-   font-size: 24px;
-   letter-spacing: 2px;
+   font-size: 18pt;
    text-align: center;
-   vertical-align: middle;
-   white-space: nowrap;
    background-color: maroon;
    border-radius: 25px;
    padding: 8px;
@@ -124,7 +103,7 @@
 .light_color_cell
 {
    color: maroon;
-   font-size: 24px;
+   font-size: 18pt;
    font-weight: bold;
    text-align: center;
    background-color: #B8C2D0;
@@ -132,21 +111,6 @@
    border-radius: 25px;
    padding: 10px;
 }
-
-.blue_link
-{
-   color: #002060;
-}
-a.blue_link:link  {text-decoration: none}
-a.blue_link:hover {text-decoration: underline}
-
-.white_link
-{
-   color: white;
-   display: block;
-}
-a.white_link:link  {text-decoration: none}
-a.white_link:hover {text-decoration: underline}
 
 .background_color         {background-color: #B8C2D0}
 .black_color              {color: black             }
@@ -164,5 +128,13 @@ a.white_link:hover {text-decoration: underline}
 .red_color                {color: maroon            }
 .upset_pick_color         {color: #AA0000           }
 .white_background         {background-color: white  }
+
+a.blue_link        {color: #002060            }
+a.blue_link:link   {text-decoration: none     }
+a.blue_link:hover  {text-decoration: underline}
+a.white_link       {color: white              }
+a.white_link       {display: block            }
+a.white_link:link  {text-decoration: none     }
+a.white_link:hover {text-decoration: underline}
 
 input {touch-action: none}
