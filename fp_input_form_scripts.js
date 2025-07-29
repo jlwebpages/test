@@ -492,7 +492,7 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("</head>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<body class=\\"background_color\\"");');
-   d.writeln('   wd.writeln("      style=\\"border: 0px;");');
+   d.writeln('   wd.writeln("      style=\\"border: 0px; margin: 0px; padding: 0px");');
    d.writeln('   wd.writeln("              color: black;");');
    d.writeln('   wd.writeln("          font-size: 13pt;");');
    d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');
