@@ -1,0 +1,2444 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>NFL Football Pool</title>
+   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="../fp.css" rel="stylesheet" type="text/css">
+   <script language="JavaScript" src="../fp_form_scripts.js"></script>
+</head>
+
+<body class="background_color"
+      style="border: 0px;
+              color: black;
+        font-family: Calibri, sans-serif"
+     onLoad="check_for_parent_window(); return true;">
+</body>
+
+<script>
+
+   function check_for_parent_window()
+   {
+      if (window.top.gv == null)
+      {
+         alert("This page will not work by itself.  It will now close.");
+
+         window.close();
+
+         return false;
+      }
+   }
+
+   // Regular Season Information
+
+      var visiting_teams_1 = [
+      "Redskins",
+      "Lions",
+      "Bengals",
+      "Seahawks",
+      "Jets",
+      "Chiefs",
+      "Buccaneers",
+      "Rams",
+      "Texans",
+      "Jaguars",
+      "Cowboys",
+      "Panthers",
+      "Cardinals",
+      "Bears",
+      "Vikings",
+      "Broncos"
+      ];
+      
+      var home_teams_1 = [
+      "Giants",
+      "Falcons",
+      "Ravens",
+      "Bills",
+      "Dolphins",
+      "Patriots",
+      "Saints",
+      "Eagles",
+      "Steelers",
+      "Titans",
+      "Browns",
+      "Chargers",
+      "49ers",
+      "Colts",
+      "Packers",
+      "Raiders"
+      ];
+      
+      var open_date_1 = ["None"];
+      
+      var visiting_teams_2 = [
+      "Bears",
+      "Titans",
+      "Packers",
+      "Bills",
+      "Raiders",
+      "Colts",
+      "Giants",
+      "Saints",
+      "49ers",
+      "Falcons",
+      "Dolphins",
+      "Chargers",
+      "Patriots",
+      "Steelers",
+
+      "Eagles"
+      ];
+      
+      var home_teams_2 = [
+      "Panthers",
+      "Bengals",
+      "Lions",
+      "Jaguars",
+      "Chiefs",
+      "Vikings",
+      "Rams",
+      "Redskins",
+      "Seahawks",
+      "Buccaneers",
+      "Cardinals",
+      "Broncos",
+      "Jets",
+      "Browns",
+
+      "Cowboys"
+      ];
+      
+      var open_date_2 = ["Ravens, Texans"];
+      
+      var visiting_teams_3 = [
+      "Chiefs",
+      "Raiders",
+      "Buccaneers",
+      "Panthers",
+      "Dolphins",
+      "Bengals",
+      "Texans",
+      "Cardinals",
+      "Saints",
+      "Lions",
+      "Rams",
+      "Browns",
+      "Jaguars",
+      "Steelers",
+      "Cowboys",
+      "Jets"
+      ];
+      
+      var home_teams_3 = [
+      "Falcons",
+      "Bills",
+      "Bears",
+      "Vikings",
+      "Patriots",
+      "Giants",
+      "Titans",
+      "Redskins",
+      "Broncos",
+      "49ers",
+      "Seahawks",
+      "Ravens",
+      "Colts",
+      "Eagles",
+      "Packers",
+      "Chargers"
+      ];
+      
+      var open_date_3 = ["None"];
+      
+      var visiting_teams_4 = [
+      "Falcons",
+      "Browns",
+      "Texans",
+      "Broncos",
+      "49ers",
+      "Cardinals",
+      "Packers",
+      "Vikings",
+      "Chargers",
+      "Bills",
+      "Redskins",
+      "Eagles",
+
+
+
+      "Ravens"
+      ];
+      
+      var home_teams_4 = [
+      "Panthers",
+      "Bengals",
+      "Jaguars",
+      "Chiefs",
+      "Saints",
+      "Jets",
+      "Buccaneers",
+      "Titans",
+      "Raiders",
+      "Rams",
+      "Cowboys",
+      "Bears",
+
+
+
+      "Steelers"
+      ];
+      
+      var open_date_4 = ["Lions, Colts, Dolphins, Patriots, Giants, Seahawks"];
+      
+      var visiting_teams_5 = [
+      "Titans",
+      "Chiefs",
+      "Bears",
+      "Falcons",
+      "Colts",
+      "Chargers",
+      "Seahawks",
+      "Redskins",
+      "Buccaneers",
+      "Bills",
+      "Bengals",
+      "Patriots",
+      "Steelers",
+
+
+      "Vikings"
+      ];
+      
+      var home_teams_5 = [
+      "Ravens",
+      "Panthers",
+      "Lions",
+      "Packers",
+      "Texans",
+      "Dolphins",
+      "Giants",
+      "Eagles",
+      "Broncos",
+      "Cardinals",
+      "Cowboys",
+      "49ers",
+      "Jaguars",
+
+
+      "Saints"
+      ];
+      
+      var open_date_5 = ["Browns, Jets, Raiders, Rams"];
+      
+      var visiting_teams_6 = [
+      "Bears",
+      "Dolphins",
+      "Ravens",
+      "Lions",
+      "Raiders",
+      "Bengals",
+      "Panthers",
+      "Rams",
+      "Jaguars",
+      "Cowboys",
+      "Eagles",
+      "Packers",
+      "Patriots",
+
+
+      "Giants"
+      ];
+      
+      var home_teams_6 = [
+      "Falcons",
+      "Texans",
+      "Colts",
+      "Vikings",
+      "Saints",
+      "Jets",
+      "Buccaneers",
+      "Redskins",
+      "Broncos",
+      "Cardinals",
+      "49ers",
+      "Seahawks",
+      "Chargers",
+
+
+      "Browns"
+      ];
+      
+      var open_date_6 = ["Bills, Chiefs, Steelers, Titans"];
+      
+      var visiting_teams_7 = [
+      "Chargers",
+      "Saints",
+      "Vikings",
+      "Steelers",
+      "Titans",
+      "Ravens",
+      "49ers",
+      "Cowboys",
+      "Lions",
+      "Colts",
+      "Jets",
+      "Browns",
+      "Seahawks",
+
+
+      "Broncos"
+      ];
+      
+      var home_teams_7 = [
+      "Bills",
+      "Panthers",
+      "Bears",
+      "Bengals",
+      "Chiefs",
+      "Dolphins",
+      "Giants",
+      "Rams",
+      "Texans",
+      "Packers",
+      "Raiders",
+      "Redskins",
+      "Buccaneers",
+
+
+      "Patriots"
+      ];
+      
+      var open_date_7 = ["Cardinals, Falcons, Jaguars, Eagles"];
+
+      var visiting_teams_8 = [
+      "Raiders",
+      "Chiefs",
+      "Falcons",
+      "Cardinals",
+      "Buccaneers",
+      "Redskins",
+      "Bills",
+      "Rams",
+      "Browns",
+      "Bengals",
+      "Giants",
+      "Seahawks",
+      "Chargers",
+
+
+      "Colts"
+      ];
+      
+      var home_teams_8 = [
+      "Ravens",
+      "Jets",
+      "Eagles",
+      "Panthers",
+      "Cowboys",
+      "Lions",
+      "Dolphins",
+      "Patriots",
+      "Jaguars",
+      "Texans",
+      "Steelers",
+      "49ers",
+      "Saints",
+
+
+      "Titans"
+      ];
+      
+      var open_date_8 = ["Bears, Broncos, Packers, Vikings"];
+      
+      var visiting_teams_9 = [
+      "Jets",
+      "Lions",
+      "Jaguars",
+      "Ravens",
+      "Buccaneers",
+      "Texans",
+      "Cardinals",
+      "Packers",
+      "Dolphins",
+      "Cowboys",
+      "Falcons",
+      "Eagles",
+      "Patriots",
+
+
+      "Steelers"
+      ];
+      
+      var home_teams_9 = [
+      "Bills",
+      "Bears",
+      "Bengals",
+      "Browns",
+      "Chiefs",
+      "Vikings",
+      "Rams",
+      "Titans",
+      "Broncos",
+      "Giants",
+      "Raiders",
+      "Seahawks",
+      "Colts",
+
+
+      "Redskins"
+      ];
+      
+      var open_date_9 = ["Panthers, Saints, Chargers, 49ers"];
+      
+      var visiting_teams_10 = [
+      "Broncos",
+      "Saints",
+      "Titans",
+      "Jaguars",
+      "Ravens",
+      "Seahawks",
+      "Packers",
+      "Bills",
+      "Rams",
+      "Panthers",
+      "Colts",
+      "Chiefs",
+      "Giants",
+
+
+      "49ers"
+      ];
+      
+      var home_teams_10 = [
+      "Browns",
+      "Falcons",
+      "Bears",
+      "Lions",
+      "Texans",
+      "Dolphins",
+      "Vikings",
+      "Patriots",
+      "Jets",
+      "Raiders",
+      "Steelers",
+      "Chargers",
+      "Eagles",
+
+
+      "Cardinals"
+      ];
+      
+      var open_date_10 = ["Bengals, Cowboys, Buccaneers, Redskins"];
+      
+      var visiting_teams_11 = [
+      "Jets",
+      "Broncos",
+      "Lions",
+      "Eagles",
+      "Bears",
+      "Texans",
+      "Titans",
+      "Saints",
+      "Raiders",
+      "Ravens",
+      "Vikings",
+      "Rams",
+      "Cardinals",
+      "Chargers",
+      "Cowboys",
+      "Browns"
+      ];
+      
+      var home_teams_11 = [
+      "Patriots",
+      "Falcons",
+      "Panthers",
+      "Bengals",
+      "Packers",
+      "Colts",
+      "Jaguars",
+      "Chiefs",
+      "Dolphins",
+      "Giants",
+      "Buccaneers",
+      "49ers",
+      "Seahawks",
+      "Steelers",
+      "Redskins",
+      "Bills"
+      ];
+      
+      var open_date_11 = ["None"];
+      
+      var visiting_teams_12 = [
+      "Bengals",
+      "Panthers",
+      "Eagles",
+      "Texans",
+      "49ers",
+      "Buccaneers",
+      "Vikings",
+      "Bills",
+      "Patriots",
+      "Bears",
+      "Jets",
+      "Raiders",
+      "Giants",
+      "Redskins",
+      "Colts",
+      "Packers"
+      ];
+      
+      var home_teams_12 = [
+      "Steelers",
+      "Falcons",
+      "Ravens",
+      "Browns",
+      "Cowboys",
+      "Lions",
+      "Jaguars",
+      "Chiefs",
+      "Dolphins",
+      "Rams",
+      "Titans",
+      "Broncos",
+      "Cardinals",
+      "Seahawks",
+      "Chargers",
+      "Saints"
+      ];
+      
+      var open_date_12 = ["None"];
+      
+      var visiting_teams_13 = [
+      "Titans",
+      "Seahawks",
+      "Cardinals",
+      "49ers",
+      "Ravens",
+      "Colts",
+      "Panthers",
+      "Broncos",
+      "Dolphins",
+      "Saints",
+      "Giants",
+      "Falcons",
+      "Steelers",
+      "Chiefs",
+      "Bears",
+      "Jaguars"
+      ];
+      
+      var home_teams_13 = [
+      "Lions",
+      "Cowboys",
+      "Eagles",
+      "Bills",
+      "Bengals",
+      "Browns",
+      "Packers",
+      "Jets",
+      "Rams",
+      "Buccaneers",
+      "Redskins",
+      "Chargers",
+      "Patriots",
+      "Raiders",
+      "Vikings",
+      "Texans"
+      ];
+      
+      var open_date_13 = ["None"];
+      
+      var visiting_teams_14 = [
+      "Raiders",
+      "Redskins",
+      "Jaguars",
+      "Vikings",
+      "Texans",
+      "Bengals",
+      "Falcons",
+      "Eagles",
+      "Browns",
+      "Dolphins",
+      "Chiefs",
+      "Jets",
+      "Rams",
+      "Cowboys",
+      "Patriots",
+      "Buccaneers"
+      ];
+      
+      var home_teams_14 = [
+      "Chargers",
+      "Ravens",
+      "Bears",
+      "Lions",
+      "Packers",
+      "Colts",
+      "Saints",
+      "Giants",
+      "Titans",
+      "Bills",
+      "Broncos",
+      "49ers",
+      "Cardinals",
+      "Steelers",
+      "Seahawks",
+      "Panthers"
+      ];
+      
+      var open_date_14 = ["None"];
+      
+      var visiting_teams_15 = [
+      "Saints",
+      "Buccaneers",
+      "Steelers",
+      "Broncos",
+      "Redskins",
+      "Titans",
+      "Lions",
+      "Packers",
+      "Chargers",
+      "49ers",
+      "Bills",
+      "Seahawks",
+      "Vikings",
+      "Patriots",
+      "Giants",
+      "Browns"
+      ];
+      
+      var home_teams_15 = [
+      "Bears",
+      "Falcons",
+      "Ravens",
+      "Panthers",
+      "Bengals",
+      "Texans",
+      "Colts",
+      "Jaguars",
+      "Chiefs",
+      "Dolphins",
+      "Jets",
+      "Rams",
+      "Cardinals",
+      "Raiders",
+      "Cowboys",
+      "Eagles"
+      ];
+      
+      var open_date_15 = ["None"];
+      
+      var visiting_teams_16 = [
+      "Colts",
+      "Ravens",
+      "Bengals",
+      "Saints",
+      "Dolphins",
+      "Falcons",
+      "Cardinals",
+      "Panthers",
+      "49ers",
+      "Steelers",
+      "Eagles",
+      "Bills",
+      "Texans",
+      "Jets",
+      "Chargers",
+      "Packers"
+      ];
+      
+      var home_teams_16 = [
+      "Jaguars",
+      "Cowboys",
+      "Browns",
+      "Lions",
+      "Chiefs",
+      "Vikings",
+      "Patriots",
+      "Giants",
+      "Rams",
+      "Titans",
+      "Redskins",
+      "Broncos",
+      "Raiders",
+      "Seahawks",
+      "Buccaneers",
+      "Bears"
+      ];
+      
+      var open_date_16 = ["None"];
+      
+      var visiting_teams_17 = [
+      "Rams",
+      "Jaguars",
+      "Patriots",
+      "Chiefs",
+      "Lions",
+      "Bears",
+      "Titans",
+      "Giants",
+      "Panthers",
+      "Dolphins",
+      "Cowboys",
+      "Browns",
+      "Raiders",
+      "Seahawks",
+      "Broncos",
+      "Redskins"
+      ];
+      
+      var home_teams_17 = [
+      "Falcons",
+      "Ravens",
+      "Bills",
+      "Bengals",
+      "Packers",
+      "Texans",
+      "Colts",
+      "Vikings",
+      "Saints",
+      "Jets",
+      "Eagles",
+      "Steelers",
+      "Buccaneers",
+      "Cardinals",
+      "Chargers",
+      "49ers"
+      ];
+      
+      var open_date_17 = ["None"];
+
+      var all_visiting_teams = [visiting_teams_1,
+                                visiting_teams_2,
+                                visiting_teams_3,
+                                visiting_teams_4,
+                                visiting_teams_5,
+                                visiting_teams_6,
+                                visiting_teams_7,
+                                visiting_teams_8,
+                                visiting_teams_9,
+                                visiting_teams_10,
+                                visiting_teams_11,
+                                visiting_teams_12,
+                                visiting_teams_13,
+                                visiting_teams_14,
+                                visiting_teams_15,
+                                visiting_teams_16,
+                                visiting_teams_17];
+
+      var all_home_teams = [home_teams_1,
+                            home_teams_2,
+                            home_teams_3,
+                            home_teams_4,
+                            home_teams_5,
+                            home_teams_6,
+                            home_teams_7,
+                            home_teams_8,
+                            home_teams_9,
+                            home_teams_10,
+                            home_teams_11,
+                            home_teams_12,
+                            home_teams_13,
+                            home_teams_14,
+                            home_teams_15,
+                            home_teams_16,
+                            home_teams_17];
+
+      var all_open_dates = [open_date_1,
+                            open_date_2,
+                            open_date_3,
+                            open_date_4,
+                            open_date_5,
+                            open_date_6,
+                            open_date_7,
+                            open_date_8,
+                            open_date_9,
+                            open_date_10,
+                            open_date_11,
+                            open_date_12,
+                            open_date_13,
+                            open_date_14,
+                            open_date_15,
+                            open_date_16,
+                            open_date_17];
+
+   var w1_p1_picks         = ["H","V","H","V","V","H","H","H","H","H","V","H","V","H","H","V"];
+   var w1_p2_picks         = ["H","V","V","V","V","H","H","H","H","V","V","H","V","H","H","V"];
+   var w1_p3_picks         = ["H","V","V","V","V","H","H","H","H","H","V","H","V","H","H","H"];
+   var w1_p4_picks         = ["H","H","V","H","V","H","H","H","H","V","V","H","V","H","H","V"];
+   var w1_p5_picks         = ["H","H","V","H","V","H","H","H","H","H","V","H","V","H","H","H"];
+   var w1_p6_picks         = ["H","V","H","V","V","H","H","H","H","V","V","H","H","H","H","V"];
+   var w1_p7_picks         = ["V","V","V","V","H","H","H","H","H","V","V","H","V","H","V","V"];
+   var w1_p8_picks         = ["H","V","V","V","V","H","V","H","H","V","V","H","V","H","V","V"];
+   var w1_p9_picks         = ["H","V","V","V","V","H","V","V","H","V","V","H","H","H","H","V"];
+   var w1_p10_picks        = ["H","V","H","H","V","H","H","H","H","V","V","H","V","H","H","V"];
+   var w1_p11_picks        = ["H","V","V","H","V","V","H","H","H","V","V","H","V","H","V","V"];
+   var w1_p12_picks        = ["H","V","H","H","V","H","H","V","H","V","V","H","H","H","V","H"];
+   var w1_p1_weights       = ["6","2","3","11","12","16","8","9","15","4","10","14","1","13","5","7"];
+   var w1_p2_weights       = ["11","4","1","8","7","16","5","13","12","9","6","14","10","15","2","3"];
+   var w1_p3_weights       = ["16","2","3","11","7","15","4","12","9","5","14","13","8","10","6","1"];
+   var w1_p4_weights       = ["11","1","6","2","14","16","9","8","10","4","7","12","5","15","3","13"];
+   var w1_p5_weights       = ["9","3","4","6","5","16","10","11","12","2","13","15","8","14","7","1"];
+   var w1_p6_weights       = ["15","9","5","10","4","16","3","12","13","2","11","8","6","14","7","1"];
+   var w1_p7_weights       = ["1","4","3","10","2","13","7","16","12","8","15","11","6","14","9","5"];
+   var w1_p8_weights       = ["2","1","7","10","12","15","8","11","16","6","13","14","9","5","3","4"];
+   var w1_p9_weights       = ["4","10","6","12","9","16","1","2","15","5","11","13","3","14","7","8"];
+   var w1_p10_weights      = ["5","13","9","15","11","16","8","4","3","7","10","2","12","1","6","14"];
+   var w1_p11_weights      = ["12","6","2","3","5","4","1","11","13","7","14","15","8","16","9","10"];
+   var w1_p12_weights      = ["9","12","8","5","3","16","10","1","13","4","11","14","2","15","7","6"];
+   var w1_winners          = ["H","H","H","H","V","H","H","H","H","H","V","V","V","V","H","V"];
+   var w1_mn_points        = ["38","10","43","38","37","33","45","38","40","82","41","43"];
+   var w1_actual_mn_points = 0;
+
+   var w2_p1_picks         = [];
+   var w2_p2_picks         = ["H","V","V","H","H","V","V","V","H","H","H","H","H","V","H"];
+   var w2_p3_picks         = ["H","V","V","H","H","V","V","H","H","H","H","V","V","V","H"];
+   var w2_p4_picks         = ["H","V","V","H","H","V","V","V","H","H","H","V","H","V","H"];
+   var w2_p5_picks         = ["H","H","V","H","V","V","V","V","H","V","H","H","H","V","H"];
+   var w2_p6_picks         = ["V","H","V","V","V","V","V","V","H","H","H","V","H","V","H"];
+   var w2_p7_picks         = ["H","V","V","H","H","V","V","H","H","V","H","V","H","V","V"];
+   var w2_p8_picks         = ["V","H","H","V","H","V","V","H","H","H","H","H","H","V","H"];
+   var w2_p9_picks         = ["V","V","V","H","H","V","V","V","H","H","H","H","V","V","H"];
+   var w2_p10_picks        = ["H","H","V","H","H","V","V","H","H","H","H","V","H","V","H"];
+   var w2_p11_picks        = ["H","H","V","H","H","H","V","H","H","H","H","H","V","V","H"];
+   var w2_p12_picks        = ["V","H","H","V","H","H","V","V","H","H","H","V","H","V","H"];
+   var w2_p1_weights       = [];
+   var w2_p2_weights       = ["5","12","15","3","6","10","16","14","11","8","9","2","4","13","7"];
+   var w2_p3_weights       = ["14","8","9","10","3","4","16","6","7","13","5","12","11","15","2"];
+   var w2_p4_weights       = ["6","9","14","3","7","15","16","8","12","10","11","5","2","13","4"];
+   var w2_p5_weights       = ["9","6","13","12","2","8","16","10","14","5","11","3","4","15","7"];
+   var w2_p6_weights       = ["8","9","7","10","6","11","16","12","15","5","4","13","3","14","2"];
+   var w2_p7_weights       = ["8","7","11","9","10","6","16","2","12","3","14","13","4","15","5"];
+   var w2_p8_weights       = ["13","8","3","11","6","12","15","2","4","5","10","9","7","16","14"];
+   var w2_p9_weights       = ["3","13","12","2","15","10","14","11","9","4","8","7","5","16","6"];
+   var w2_p10_weights      = ["11","14","10","8","9","13","2","16","5","4","6","15","12","7","3"];
+   var w2_p11_weights      = ["2","9","8","10","15","7","16","3","13","12","6","4","5","11","14"];
+   var w2_p12_weights      = ["7","6","9","4","14","8","11","5","16","10","13","3","2","12","15"];
+   var w2_winners          = ["H","V","V","V","V","V","V","H","V","H","H","H","V","V","H"];
+   var w2_mn_points        = ["","13","38","50","44","38","45","38","58","84","46","44"];
+   var w2_actual_mn_points = 0;
+
+   var w3_p1_picks         = ["H","H","H","H","H","H","H","H","H","H","H","V","H","V","V","H"];
+   var w3_p2_picks         = ["H","H","H","V","H","H","H","V","H","H","H","H","H","V","V","H"];
+   var w3_p3_picks         = ["H","H","H","V","H","H","H","H","H","H","H","H","H","H","H","H"];
+   var w3_p4_picks         = [];
+   var w3_p5_picks         = ["H","V","H","V","H","H","H","V","H","H","H","H","H","H","V","H"];
+   var w3_p6_picks         = ["H","H","H","H","H","H","H","V","V","H","H","H","H","H","H","V"];
+   var w3_p7_picks         = ["H","H","H","V","H","H","H","H","H","H","H","V","H","H","V","H"];
+   var w3_p8_picks         = ["H","H","H","V","H","H","H","V","H","V","H","H","V","V","V","H"];
+   var w3_p9_picks         = ["H","H","H","V","H","H","H","H","H","H","H","H","H","V","V","H"];
+   var w3_p10_picks        = [];
+   var w3_p11_picks        = ["V","H","H","H","H","H","H","H","H","H","H","H","V","V","V","H"];
+   var w3_p12_picks        = ["V","H","H","V","H","H","H","V","H","H","V","V","H","V","H","H"];
+   var w3_p1_weights       = ["1","10","5","6","16","15","12","14","2","7","11","9","8","4","3","13"];
+   var w3_p2_weights       = ["9","14","7","4","15","16","13","5","8","10","11","1","12","3","2","6"];
+   var w3_p3_weights       = ["3","16","9","4","15","13","14","8","12","2","10","6","7","1","5","11"];
+   var w3_p4_weights       = [];
+   var w3_p5_weights       = ["7","1","4","10","16","15","3","8","14","11","13","2","9","5","6","12"];
+   var w3_p6_weights       = ["1","15","7","8","14","12","13","10","11","9","16","4","6","3","2","5"];
+   var w3_p7_weights       = ["1","8","7","6","14","16","12","5","4","3","13","2","9","10","11","15"];
+   var w3_p8_weights       = ["6","15","14","5","12","11","7","4","9","3","2","10","8","16","13","1"];
+   var w3_p9_weights       = ["9","10","4","12","16","15","8","3","7","11","13","2","14","5","1","6"];
+   var w3_p10_weights      = [];
+   var w3_p11_weights      = ["1","12","10","7","15","16","9","6","11","8","14","2","5","3","4","13"];
+   var w3_p12_weights      = ["7","11","8","6","16","15","14","2","12","4","3","10","5","13","1","9"];
+   var w3_winners          = ["H","H","V","H","V","H","H","H","H","H","H","H","V","H","V","H"];
+   var w3_mn_points        = ["44","17","45","","47","38","45","35","43","","44","45"];
+   var w3_actual_mn_points = 0;
+
+   var w4_p1_picks         = ["H","H","H","V","H","H","H","H","V","V","H","V","H"];
+   var w4_p2_picks         = ["H","H","H","V","H","V","V","H","V","V","H","V","H"];
+   var w4_p3_picks         = ["H","H","H","V","H","H","V","H","V","V","H","V","H"];
+   var w4_p4_picks         = ["H","H","H","V","H","H","V","H","V","V","H","V","H"];
+   var w4_p5_picks         = ["H","H","H","V","H","H","V","H","V","V","H","V","V"];
+   var w4_p6_picks         = ["H","H","H","V","H","H","H","H","V","H","H","V","H"];
+   var w4_p7_picks         = ["V","H","H","V","H","V","V","H","V","V","V","V","H"];
+   var w4_p8_picks         = ["V","H","H","V","H","H","H","V","H","V","H","H","H"];
+   var w4_p9_picks         = ["H","H","H","V","H","H","H","H","V","V","H","V","H"];
+   var w4_p10_picks        = [];
+   var w4_p11_picks        = ["H","H","H","H","H","H","H","V","V","V","H","V","H"];
+   var w4_p12_picks        = ["H","H","H","V","H","H","V","H","V","V","H","V","H"];
+   var w4_p1_weights       = ["16","9","15","13","14","7","4","6","10","11","8","5","12"];
+   var w4_p2_weights       = ["13","5","10","15","7","4","6","9","14","16","12","8","11"];
+   var w4_p3_weights       = ["12","9","13","7","8","14","6","15","16","11","5","4","10"];
+   var w4_p4_weights       = ["12","6","10","16","7","5","4","8","15","14","13","11","9"];
+   var w4_p5_weights       = ["10","9","13","15","14","6","7","8","4","12","16","11","5"];
+   var w4_p6_weights       = ["13","4","9","15","14","6","8","7","12","5","16","10","11"];
+   var w4_p7_weights       = ["4","10","13","15","9","6","7","11","16","14","5","12","8"];
+   var w4_p8_weights       = ["6","9","10","15","13","5","11","7","4","14","12","8","16"];
+   var w4_p9_weights       = ["7","6","10","16","9","5","4","12","13","15","11","14","8"];
+   var w4_p10_weights      = [];
+   var w4_p11_weights      = ["11","9","13","4","12","8","6","7","14","15","16","5","10"];
+   var w4_p12_weights      = ["13","4","5","14","12","7","6","8","11","15","16","10","9"];
+   var w4_winners          = ["H","V","H","H","H","H","H","H","V","V","V","H","H"];
+   var w4_mn_points        = ["42","45","38","40","37","38","35","28","38","","36","42"];
+   var w4_actual_mn_points = 0;
+
+   var w5_p1_picks         = ["H","H","V","H","V","V","H","H","H","V","H","V","H","H"];
+   var w5_p2_picks         = ["V","H","V","H","V","V","H","H","H","V","H","V","H","H"];
+   var w5_p3_picks         = ["V","H","V","H","V","V","H","H","H","V","H","V","H","H"];
+   var w5_p4_picks         = ["V","H","V","H","V","V","H","H","H","V","H","V","V","H"];
+   var w5_p5_picks         = ["V","H","V","H","V","V","H","H","H","V","H","V","V","V"];
+   var w5_p6_picks         = ["H","H","V","H","V","V","H","H","H","H","H","V","H","H"];
+   var w5_p7_picks         = ["V","H","V","H","V","V","H","V","H","V","H","V","H","H"];
+   var w5_p8_picks         = ["H","H","V","V","V","H","H","H","H","H","H","H","V","H"];
+   var w5_p9_picks         = ["H","H","V","H","V","V","H","V","H","V","H","V","V","H"];
+   var w5_p10_picks        = [];
+   var w5_p11_picks        = ["H","V","V","H","V","V","H","V","H","V","H","V","H","H"];
+   var w5_p12_picks        = ["H","V","H","H","V","V","H","H","V","V","H","H","V","H"];
+   var w5_p1_weights       = ["3","13","9","11","16","14","8","7","4","10","15","12","5","6"];
+   var w5_p2_weights       = ["12","14","7","11","8","13","15","6","5","4","16","10","3","9"];
+   var w5_p3_weights       = ["6","14","5","13","8","16","10","11","7","9","15","12","4","3"];
+   var w5_p4_weights       = ["4","12","9","11","14","16","7","8","6","10","15","5","3","13"];
+   var w5_p5_weights       = ["12","14","6","3","11","15","10","9","4","13","16","8","5","7"];
+   var w5_p6_weights       = ["7","10","11","12","13","15","6","14","5","4","16","3","8","9"];
+   var w5_p7_weights       = ["9","6","13","5","12","14","15","4","3","11","16","10","8","7"];
+   var w5_p8_weights       = ["9","6","12","5","15","4","13","11","10","7","14","3","16","8"];
+   var w5_p9_weights       = ["4","12","11","13","15","14","9","7","6","8","16","5","3","10"];
+   var w5_p10_weights      = [];
+   var w5_p11_weights      = ["4","3","11","5","6","10","14","13","15","9","16","8","12","7"];
+   var w5_p12_weights      = ["7","3","4","5","12","14","10","13","6","11","16","8","9","15"];
+   var w5_winners          = ["V","H","V","V","V","H","H","V","H","H","H","V","V","V"];
+   var w5_mn_points        = ["43","38","46","40","41","49","45","38","43","","44","35"];
+   var w5_actual_mn_points = 0;
+
+   var w6_p1_picks         = ["V","V","H","H","H","H","H","H","H","V","V","H","H","V"];
+   var w6_p2_picks         = [];
+   var w6_p3_picks         = ["V","V","H","H","H","V","V","H","V","V","V","V","H","V"];
+   var w6_p4_picks         = ["V","V","H","H","H","H","H","H","H","V","V","V","H","V"];
+   var w6_p5_picks         = ["V","V","H","H","V","H","H","H","H","H","V","H","H","V"];
+   var w6_p6_picks         = ["V","H","H","H","H","H","V","H","V","V","H","V","H","H"];
+   var w6_p7_picks         = ["V","V","H","H","H","H","V","H","V","V","V","V","V","V"];
+   var w6_p8_picks         = ["V","V","H","H","H","H","H","H","H","V","V","H","V","V"];
+   var w6_p9_picks         = ["V","V","H","H","H","H","H","H","H","V","V","V","H","V"];
+   var w6_p10_picks        = [];
+   var w6_p11_picks        = ["V","V","H","H","H","H","V","H","V","V","V","H","H","V"];
+   var w6_p12_picks        = ["H","V","H","H","V","V","H","H","V","H","H","V","V","V"];
+   var w6_p1_weights       = ["7","9","8","16","13","10","4","12","3","15","14","5","6","11"];
+   var w6_p2_weights       = [];
+   var w6_p3_weights       = ["11","12","13","14","10","3","9","15","5","8","7","6","4","16"];
+   var w6_p4_weights       = ["9","4","7","14","13","6","12","10","5","11","8","15","3","16"];
+   var w6_p5_weights       = ["7","5","10","14","3","15","6","13","11","4","8","9","12","16"];
+   var w6_p6_weights       = ["9","4","3","15","16","13","8","14","7","12","11","6","5","10"];
+   var w6_p7_weights       = ["9","3","7","13","12","11","8","15","6","10","14","5","4","16"];
+   var w6_p8_weights       = ["16","9","14","6","7","13","11","15","5","4","12","8","3","10"];
+   var w6_p9_weights       = ["10","9","13","12","14","8","5","16","4","7","11","3","6","15"];
+   var w6_p10_weights      = [];
+   var w6_p11_weights      = ["7","4","9","16","13","12","5","15","3","11","10","6","8","14"];
+   var w6_p12_weights      = ["6","5","10","16","3","4","12","15","7","9","11","13","8","14"];
+   var w6_winners          = ["H","H","H","H","H","H","H","V","V","H","V","V","H","H"];
+   var w6_mn_points        = ["38","","48","32","47","42","45","38","44","","42","47"];
+   var w6_actual_mn_points = 0;
+
+   var w7_p1_picks         = ["V","H","V","V","V","H","H","V","H","V","H","H","H","H"];
+   var w7_p2_picks         = ["V","H","H","V","V","H","H","V","H","V","V","H","H","V"];
+   var w7_p3_picks         = ["H","H","H","V","V","H","H","V","H","V","V","H","H","H"];
+   var w7_p4_picks         = [];
+   var w7_p5_picks         = ["V","V","H","V","V","H","H","V","H","H","H","H","H","H"];
+   var w7_p6_picks         = ["V","V","H","V","V","V","H","V","H","V","V","H","H","H"];
+   var w7_p7_picks         = ["H","V","H","V","V","H","H","V","H","V","V","H","H","H"];
+   var w7_p8_picks         = ["H","V","H","V","V","H","H","V","H","V","V","V","H","V"];
+   var w7_p9_picks         = ["V","H","H","V","V","H","H","V","H","V","V","H","H","H"];
+   var w7_p10_picks        = ["H","H","H","V","V","H","H","V","H","V","V","H","H","H"];
+   var w7_p11_picks        = ["H","H","H","V","H","H","H","V","H","H","H","H","H","H"];
+   var w7_p12_picks        = ["H","H","V","V","H","H","H","V","V","H","V","H","H","V"];
+   var w7_p1_weights       = ["11","6","5","16","14","3","15","13","10","7","4","12","8","9"];
+   var w7_p2_weights       = ["7","5","4","15","16","3","14","12","10","6","11","9","13","8"];
+   var w7_p3_weights       = ["7","10","9","11","12","6","13","14","8","15","5","4","16","3"];
+   var w7_p4_weights       = [];
+   var w7_p5_weights       = ["9","8","6","12","13","4","14","11","16","5","3","10","15","7"];
+   var w7_p6_weights       = ["9","4","5","16","15","14","13","12","3","8","7","11","10","6"];
+   var w7_p7_weights       = ["4","7","6","15","10","3","16","13","9","14","8","12","11","5"];
+   var w7_p8_weights       = ["4","14","8","16","6","9","13","10","5","12","11","7","15","3"];
+   var w7_p9_weights       = ["9","3","5","16","13","4","11","15","12","7","14","8","10","6"];
+   var w7_p10_weights      = ["16","12","10","8","9","7","3","6","5","13","11","4","15","14"];
+   var w7_p11_weights      = ["4","6","11","14","3","10","16","9","12","8","5","15","13","7"];
+   var w7_p12_weights      = ["10","9","7","16","3","8","15","14","4","5","13","12","6","11"];
+   var w7_winners          = ["H","H","H","V","V","V","H","H","H","H","H","H","H","H"];
+   var w7_mn_points        = ["45","31","40","","41","32","45","38","45","48","48","43"];
+   var w7_actual_mn_points = 0;
+
+   var w8_p1_picks         = ["H","H","H","H","V","V","V","H","H","H","H","V","H","H"];
+   var w8_p2_picks         = ["H","H","H","H","V","V","V","H","H","H","H","H","V","H"];
+   var w8_p3_picks         = ["H","H","H","H","V","V","V","H","H","H","H","H","V","H"];
+   var w8_p4_picks         = ["H","H","H","H","V","V","V","H","H","H","H","H","H","V"];
+   var w8_p5_picks         = ["V","H","H","H","V","V","V","H","H","H","V","H","V","H"];
+   var w8_p6_picks         = ["H","H","H","H","H","V","V","H","H","H","V","H","H","V"];
+   var w8_p7_picks         = ["H","H","H","H","V","V","V","H","H","H","H","H","V","H"];
+   var w8_p8_picks         = ["H","H","H","V","V","V","V","H","V","V","H","H","V","V"];
+   var w8_p9_picks         = ["H","H","H","H","H","V","V","H","H","H","H","H","V","H"];
+   var w8_p10_picks        = ["H","H","H","H","H","H","H","H","H","H","H","H","V","H"];
+   var w8_p11_picks        = ["H","V","H","H","H","V","V","H","H","H","H","H","H","H"];
+   var w8_p12_picks        = ["H","H","V","H","V","H","V","H","V","H","H","V","H","V"];
+   var w8_p1_weights       = ["11","10","15","16","4","12","8","13","14","9","3","7","5","6"];
+   var w8_p2_weights       = ["10","11","7","5","9","16","15","14","12","8","3","4","6","13"];
+   var w8_p3_weights       = ["9","16","15","14","4","13","7","12","6","11","3","5","8","10"];
+   var w8_p4_weights       = ["10","9","11","12","7","16","8","13","14","15","6","4","3","5"];
+   var w8_p5_weights       = ["9","16","13","12","6","15","10","5","8","14","7","4","11","3"];
+   var w8_p6_weights       = ["16","15","14","8","3","13","12","11","9","10","5","7","4","6"];
+   var w8_p7_weights       = ["12","7","6","11","9","16","10","4","13","14","5","3","8","15"];
+   var w8_p8_weights       = ["6","12","11","8","13","14","7","9","4","5","16","10","15","3"];
+   var w8_p9_weights       = ["12","14","9","6","3","16","8","11","15","13","4","10","5","7"];
+   var w8_p10_weights      = ["6","3","4","11","16","8","14","5","9","7","15","13","10","12"];
+   var w8_p11_weights      = ["12","3","16","14","10","11","6","13","9","15","5","7","4","8"];
+   var w8_p12_weights      = ["4","16","7","9","6","3","12","13","5","14","15","8","11","10"];
+   var w8_winners          = ["H","H","H","H","H","V","H","H","V","H","V","V","H","H"];
+   var w8_mn_points        = ["44","31","34","40","37","49","38","38","41","41","40","36"];
+   var w8_actual_mn_points = 0;
+
+   var w9_p1_picks         = ["H","H","V","H","V","H","H","H","H","H","V","V","H","V"];
+   var w9_p2_picks         = ["H","H","V","V","V","H","V","H","H","H","V","V","V","V"];
+   var w9_p3_picks         = ["H","H","V","H","V","H","H","H","H","H","V","V","H","V"];
+   var w9_p4_picks         = ["V","H","V","V","V","H","V","H","V","H","V","V","H","V"];
+   var w9_p5_picks         = ["H","H","V","H","V","H","V","H","H","H","H","V","V","H"];
+   var w9_p6_picks         = [];
+   var w9_p7_picks         = ["H","H","V","H","V","V","V","H","V","H","V","V","H","H"];
+   var w9_p8_picks         = ["H","H","V","H","V","H","H","V","H","V","H","V","V","V"];
+   var w9_p9_picks         = ["H","H","V","H","V","H","H","H","H","H","V","V","H","H"];
+   var w9_p10_picks        = ["H","H","H","V","H","H","V","H","H","H","H","H","H","V"];
+   var w9_p11_picks        = ["H","H","V","H","H","H","H","H","H","H","V","H","V","V"];
+   var w9_p12_picks        = ["H","H","V","V","H","H","V","V","V","H","H","H","V","H"];
+   var w9_p1_weights       = ["6","16","12","8","13","15","11","9","14","10","7","5","4","3"];
+   var w9_p2_weights       = ["12","15","11","6","16","3","10","13","8","9","7","14","5","4"];
+   var w9_p3_weights       = ["7","16","9","8","15","4","10","14","6","13","11","12","5","3"];
+   var w9_p4_weights       = ["3","14","15","11","16","9","10","7","6","5","12","13","4","8"];
+   var w9_p5_weights       = ["11","14","12","6","15","9","4","10","8","16","3","13","5","7"];
+   var w9_p6_weights       = [];
+   var w9_p7_weights       = ["13","16","11","8","12","7","4","15","3","9","10","14","6","5"];
+   var w9_p8_weights       = ["8","14","10","4","5","11","6","7","13","12","3","15","9","16"];
+   var w9_p9_weights       = ["9","14","13","8","16","7","4","11","6","10","15","12","5","3"];
+   var w9_p10_weights      = ["12","3","8","14","5","11","15","9","7","10","13","4","6","16"];
+   var w9_p11_weights      = ["16","15","6","10","3","14","5","11","8","13","12","4","9","7"];
+   var w9_p12_weights      = ["13","16","15","4","3","14","12","6","8","5","9","7","10","11"];
+   var w9_winners          = ["V","H","H","V","V","H","V","H","V","H","V","V","H","V"];
+   var w9_mn_points        = ["46","35","30","48","37","","45","38","41","36","46","36"];
+   var w9_actual_mn_points = 0;
+
+   var w10_p1_picks         = ["H","V","V","V","H","H","H","H","H","V","H","H","H","H"];
+   var w10_p2_picks         = ["V","H","V","V","V","H","V","H","H","V","H","H","V","H"];
+   var w10_p3_picks         = ["H","H","V","V","V","H","V","H","H","V","H","H","V","H"];
+   var w10_p4_picks         = ["V","V","V","V","V","H","V","H","H","V","H","H","V","H"];
+   var w10_p5_picks         = ["H","V","V","V","V","H","V","H","H","V","H","H","V","H"];
+   var w10_p6_picks         = ["V","V","V","V","V","V","V","H","H","V","H","H","V","H"];
+   var w10_p7_picks         = ["H","H","V","H","H","H","V","H","H","V","H","H","V","H"];
+   var w10_p8_picks         = ["H","V","H","H","V","H","V","H","H","V","H","H","H","H"];
+   var w10_p9_picks         = ["V","H","V","V","V","H","V","H","H","V","H","H","V","H"];
+   var w10_p10_picks        = ["H","H","V","V","H","H","H","H","H","V","V","H","H","H"];
+   var w10_p11_picks        = ["V","H","V","V","H","H","H","H","H","V","H","V","V","H"];
+   var w10_p12_picks        = ["H","V","H","V","H","H","H","V","V","H","H","H","V","H"];
+   var w10_p1_weights       = ["5","14","8","13","7","4","9","10","11","16","6","15","3","12"];
+   var w10_p2_weights       = ["3","7","9","8","12","10","5","4","13","16","14","11","6","15"];
+   var w10_p3_weights       = ["12","3","5","4","6","16","7","8","15","14","9","10","11","13"];
+   var w10_p4_weights       = ["6","11","10","15","13","12","7","5","9","16","4","8","3","14"];
+   var w10_p5_weights       = ["4","12","8","11","3","16","7","9","10","13","5","15","6","14"];
+   var w10_p6_weights       = ["8","9","10","11","7","6","5","4","3","12","13","14","15","16"];
+   var w10_p7_weights       = ["10","6","12","3","4","11","14","9","5","15","7","13","8","16"];
+   var w10_p8_weights       = ["8","13","9","4","12","10","7","6","5","11","16","14","3","15"];
+   var w10_p9_weights       = ["6","3","9","13","12","10","7","11","8","16","5","15","4","14"];
+   var w10_p10_weights      = ["7","3","5","8","4","16","15","14","13","12","6","11","10","9"];
+   var w10_p11_weights      = ["4","5","8","16","9","13","10","6","12","15","7","3","11","14"];
+   var w10_p12_weights      = ["9","7","6","13","10","16","5","11","3","4","15","14","12","8"];
+   var w10_winners          = ["V","H","V","V","V","H","H","H","H","V","v","H","V","H"];
+   var w10_mn_points        = ["46","38","46","47","44","48","45","38","39","46","46","37"];
+   var w10_actual_mn_points = 0;
+
+   var w11_p1_picks         = ["H","H","H","V","H","H","V","V","H","H","V","H","H","H","H","H"];
+   var w11_p2_picks         = ["H","H","H","V","V","H","H","V","H","H","H","H","V","H","H","H"];
+   var w11_p3_picks         = ["H","H","H","V","H","H","V","V","H","H","H","H","V","H","H","H"];
+   var w11_p4_picks         = [];
+   var w11_p5_picks         = ["H","H","H","V","H","H","V","V","H","H","V","V","V","H","V","H"];
+   var w11_p6_picks         = ["H","V","H","V","H","H","H","V","H","H","V","V","V","H","H","H"];
+   var w11_p7_picks         = ["H","H","H","V","V","H","V","V","H","H","H","H","V","H","H","V"];
+   var w11_p8_picks         = ["H","H","H","V","V","H","H","V","H","V","H","H","V","H","V","H"];
+   var w11_p9_picks         = ["H","H","H","V","H","H","V","H","H","H","H","H","V","H","H","H"];
+   var w11_p10_picks        = [];
+   var w11_p11_picks        = ["H","H","H","V","H","H","H","H","H","H","H","H","H","H","H","H"];
+   var w11_p12_picks        = ["H","V","H","V","H","V","V","V","V","V","H","H","V","H","H","H"];
+   var w11_p1_weights       = ["1","12","15","14","7","16","9","11","8","13","4","3","10","6","2","5"];
+   var w11_p2_weights       = ["2","7","16","14","4","10","15","3","12","6","9","1","11","13","8","5"];
+   var w11_p3_weights       = ["11","12","13","2","5","7","8","4","14","6","15","10","3","16","9","1"];
+   var w11_p4_weights       = [];
+   var w11_p5_weights       = ["2","6","16","15","4","14","11","7","5","13","8","3","10","12","1","9"];
+   var w11_p6_weights       = ["5","4","15","16","3","13","2","12","11","14","8","7","6","10","1","9"];
+   var w11_p7_weights       = ["6","12","16","15","9","14","13","7","4","10","3","2","8","11","5","1"];
+   var w11_p8_weights       = ["8","9","7","4","10","11","3","13","14","12","6","5","15","16","2","1"];
+   var w11_p9_weights       = ["10","11","16","13","5","15","8","1","14","4","9","2","12","7","6","3"];
+   var w11_p10_weights      = [];
+   var w11_p11_weights      = ["4","10","16","14","3","13","2","1","15","12","7","11","6","8","5","9"];
+   var w11_p12_weights      = ["8","4","15","16","10","2","11","12","1","5","13","9","7","14","6","3"];
+   var w11_winners          = ["V","V","H","Tie","H","H","V","V","H","H","H","H","V","H","V","V"];
+   var w11_mn_points        = ["58","35","36","","37","44","40","38","42","","44","50"];
+   var w11_actual_mn_points = 0;
+
+   var w12_p1_picks         = ["H","V","H","H","H","V","H","H","V","V","V","H","V","V","H","H"];
+   var w12_p2_picks         = ["H","V","H","H","H","V","V","V","V","V","H","H","V","V","V","V"];
+   var w12_p3_picks         = ["H","V","H","H","H","V","H","V","V","V","H","H","V","V","V","V"];
+   var w12_p4_picks         = ["H","V","V","H","H","V","V","H","V","V","V","H","V","V","V","V"];
+   var w12_p5_picks         = ["H","V","V","H","H","V","V","V","V","V","H","H","V","V","H","V"];
+   var w12_p6_picks         = ["H","V","V","H","H","V","V","H","V","V","H","H","H","V","V","H"];
+   var w12_p7_picks         = ["H","H","H","H","V","V","H","H","H","V","H","H","V","V","V","V"];
+   var w12_p8_picks         = ["H","V","H","H","H","H","H","H","V","V","H","H","H","V","V","H"];
+   var w12_p9_picks         = ["H","V","H","H","H","V","H","H","V","V","H","H","V","V","V","V"];
+   var w12_p10_picks        = ["V","H","H","V","V","V","H","H","V","V","V","H","V","H","V","H"];
+   var w12_p11_picks        = ["H","H","H","H","H","V","H","H","V","V","H","H","V","V","V","H"];
+   var w12_p12_picks        = ["H","V","H","H","H","V","V","H","V","V","V","H","H","V","V","H"];
+   var w12_p1_weights       = ["14","4","7","10","16","15","5","6","9","11","3","12","13","8","2","1"];
+   var w12_p2_weights       = ["16","9","6","1","12","15","2","10","3","8","7","13","5","14","11","4"];
+   var w12_p3_weights       = ["16","1","8","3","15","14","13","9","4","12","10","5","11","2","7","6"];
+   var w12_p4_weights       = ["16","7","10","3","13","12","2","4","8","11","1","15","9","14","6","5"];
+   var w12_p5_weights       = ["16","8","9","11","15","14","4","5","1","13","12","7","10","3","2","6"];
+   var w12_p6_weights       = ["16","7","11","4","15","12","9","1","5","2","8","14","3","13","10","6"];
+   var w12_p7_weights       = ["15","5","12","6","1","8","7","2","3","4","11","16","14","10","13","9"];
+   var w12_p8_weights       = ["16","7","6","12","8","2","11","5","4","13","3","15","9","14","10","1"];
+   var w12_p9_weights       = ["14","2","11","8","12","15","7","1","5","3","6","16","9","13","4","10"];
+   var w12_p10_weights      = ["14","11","3","13","10","12","4","6","7","8","9","15","5","2","1","16"];
+   var w12_p11_weights      = ["15","16","6","5","7","9","8","3","4","13","12","14","11","10","2","1"];
+   var w12_p12_weights      = ["16","13","8","10","7","15","5","1","3","12","2","11","4","14","9","6"];
+   var w12_winners          = ["H","H","H","V","H","V","V","V","V","V","V","V","V","V","V","H"];
+   var w12_mn_points        = ["58","31","60","58","47","38","45","48","44","52","51","50"];
+   var w12_actual_mn_points = 0;
+
+   var w13_p1_picks         = ["V","H","H","H","V","V","H","H","V","V","H","H","V","H","H","H"];
+   var w13_p2_picks         = ["V","V","V","H","V","V","V","H","V","H","V","V","V","H","V","H"];
+   var w13_p3_picks         = ["V","H","H","H","V","V","H","H","V","H","V","H","H","H","H","H"];
+   var w13_p4_picks         = ["V","H","V","H","V","V","H","H","V","H","V","H","V","V","H","H"];
+   var w13_p5_picks         = ["V","H","H","H","V","V","H","H","V","H","V","V","H","H","H","V"];
+   var w13_p6_picks         = ["V","H","V","H","V","V","H","H","V","V","V","H","V","H","V","H"];
+   var w13_p7_picks         = ["V","H","V","H","V","V","H","H","V","H","H","V","H","V","V","H"];
+   var w13_p8_picks         = [];
+   var w13_p9_picks         = ["V","H","V","H","V","V","H","H","V","H","V","H","H","H","H","V"];
+   var w13_p10_picks        = [];
+   var w13_p11_picks        = ["V","H","H","H","V","V","H","H","V","H","V","H","V","V","H","H"];
+   var w13_p12_picks        = ["V","V","V","H","V","V","V","V","V","H","H","V","V","H","H","V"];
+   var w13_p1_weights       = ["16","15","5","12","7","14","6","11","13","3","2","10","1","9","4","8"];
+   var w13_p2_weights       = ["16","15","6","5","13","14","10","12","11","8","7","9","3","4","2","1"];
+   var w13_p3_weights       = ["16","15","1","14","13","12","7","11","10","9","8","6","4","3","5","2"];
+   var w13_p4_weights       = ["16","15","8","12","11","14","4","9","13","2","10","1","3","7","6","5"];
+   var w13_p5_weights       = ["15","16","4","9","12","11","6","14","13","7","8","1","5","10","3","2"];
+   var w13_p6_weights       = ["16","14","3","5","13","15","8","12","7","6","11","2","1","10","4","9"];
+   var w13_p7_weights       = ["16","15","11","10","14","13","7","12","8","9","2","5","3","1","6","4"];
+   var w13_p8_weights       = [];
+   var w13_p9_weights       = ["14","16","13","6","11","12","5","15","10","2","9","3","1","4","8","7"];
+   var w13_p10_weights      = [];
+   var w13_p11_weights      = ["15","16","3","13","12","11","5","14","4","9","8","10","2","1","7","6"];
+   var w13_p12_weights      = ["16","1","6","12","14","10","5","2","15","13","11","9","7","8","4","3"];
+   var w13_winners          = ["V","H","H","V","V","V","V","V","V","H","V","V","V","V","H","H"];
+   var w13_mn_points        = ["52","41","50","52","43","38","45","","42","","46","50"];
+   var w13_actual_mn_points = 0;
+
+   var w14_p1_picks         = [];
+   var w14_p2_picks         = ["H","H","H","V","H","H","V","H","H","V","H","V","H","H","V","V"];
+   var w14_p3_picks         = ["H","H","H","V","H","H","V","H","H","V","H","H","H","H","V","H"];
+   var w14_p4_picks         = ["H","H","H","V","H","H","V","H","H","V","H","V","H","H","V","H"];
+   var w14_p5_picks         = ["H","V","H","V","H","H","H","H","H","V","H","V","H","H","V","V"];
+   var w14_p6_picks         = ["H","H","H","V","H","H","H","H","H","H","H","V","H","H","H","V"];
+   var w14_p7_picks         = ["H","V","H","V","H","H","V","H","H","V","H","H","H","H","V","V"];
+   var w14_p8_picks         = ["H","H","H","V","H","H","V","H","H","V","H","V","H","H","V","V"];
+   var w14_p9_picks         = ["H","H","H","V","H","H","H","H","H","V","H","V","H","H","V","H"];
+   var w14_p10_picks        = [];
+   var w14_p11_picks        = ["H","H","H","V","H","H","H","H","H","H","V","V","H","H","V","H"];
+   var w14_p12_picks        = ["H","V","H","H","V","H","V","H","H","V","H","V","H","H","V","V"];
+   var w14_p1_weights       = [];
+   var w14_p2_weights       = ["5","3","6","11","2","16","8","10","15","4","9","13","14","7","12","1"];
+   var w14_p3_weights       = ["2","16","11","13","10","14","3","12","15","5","6","1","9","8","7","4"];
+   var w14_p4_weights       = ["10","7","6","11","4","16","2","12","14","3","8","9","15","5","13","1"];
+   var w14_p5_weights       = ["8","2","9","10","12","16","3","6","15","1","13","11","14","4","7","5"];
+   var w14_p6_weights       = ["7","2","5","14","15","16","8","13","12","6","11","9","10","4","1","3"];
+   var w14_p7_weights       = ["3","2","11","16","8","12","7","13","15","5","9","1","14","6","10","4"];
+   var w14_p8_weights       = ["8","11","3","4","12","14","2","5","9","10","6","1","13","16","15","7"];
+   var w14_p9_weights       = ["11","10","5","9","7","16","2","13","15","4","8","3","12","6","14","1"];
+   var w14_p10_weights      = [];
+   var w14_p11_weights      = ["13","3","10","8","11","15","7","12","16","2","1","9","14","6","5","4"];
+   var w14_p12_weights      = ["13","7","12","1","4","15","3","14","10","5","8","9","16","6","11","2"];
+   var w14_winners          = ["H","H","H","V","V","H","H","V","H","V","H","H","H","H","V","H"];
+   var w14_mn_points        = ["","42","50","52","37","44","45","48","47","","38","45"];
+   var w14_actual_mn_points = 0;
+
+   var w15_p1_picks         = ["H","V","V","H","H","V","H","H","V","H","H","H","V","V","H","H"];
+   var w15_p2_picks         = [];
+   var w15_p3_picks         = ["H","H","H","H","V","V","H","V","V","H","H","V","H","V","V","H"];
+   var w15_p4_picks         = ["V","V","V","H","V","V","H","V","V","H","H","H","H","V","H","H"];
+   var w15_p5_picks         = ["H","V","V","H","H","V","H","V","H","H","H","H","H","H","V","H"];
+   var w15_p6_picks         = ["V","V","V","H","V","V","H","V","H","H","H","V","V","V","H","H"];
+   var w15_p7_picks         = ["H","H","H","H","V","V","H","V","H","H","H","H","H","V","H","H"];
+   var w15_p8_picks         = ["H","V","V","H","V","V","H","V","V","V","H","V","H","V","H","H"];
+   var w15_p9_picks         = ["H","V","V","H","V","V","H","V","V","H","H","V","H","V","V","H"];
+   var w15_p10_picks        = ["H","H","H","V","V","V","H","V","V","H","H","H","H","H","H","H"];
+   var w15_p11_picks        = ["H","H","V","H","V","V","H","V","H","H","H","H","V","V","H","H"];
+   var w15_p12_picks        = ["H","H","V","V","V","H","H","V","V","V","H","H","H","V","H","V"];
+   var w15_p1_weights       = ["2","3","4","14","9","13","16","5","10","11","8","7","6","15","1","12"];
+   var w15_p2_weights       = [];
+   var w15_p3_weights       = ["10","6","5","12","2","11","16","7","1","15","14","8","9","13","4","3"];
+   var w15_p4_weights       = ["8","3","4","13","6","9","16","5","7","12","11","1","10","14","2","15"];
+   var w15_p5_weights       = ["9","13","15","14","2","10","16","8","3","7","11","4","6","1","5","12"];
+   var w15_p6_weights       = ["10","11","12","13","14","15","16","1","2","3","4","5","6","7","8","9"];
+   var w15_p7_weights       = ["6","3","7","11","4","15","16","9","1","8","12","2","10","13","5","14"];
+   var w15_p8_weights       = ["1","2","16","8","9","5","10","12","13","7","6","3","11","15","4","14"];
+   var w15_p9_weights       = ["3","1","5","11","13","12","16","7","9","4","10","8","6","14","2","15"];
+   var w15_p10_weights      = ["10","13","14","15","4","5","16","8","2","12","9","7","11","1","3","6"];
+   var w15_p11_weights      = ["6","7","2","14","11","8","16","3","1","10","13","4","5","12","9","15"];
+   var w15_p12_weights      = ["7","9","6","2","12","10","16","8","13","1","14","5","11","15","3","4"];
+   var w15_winners          = ["H","H","V","H","H","H","H","H","V","H","H","V","V","V","H","H"];
+   var w15_mn_points        = ["48","","48","50","41","38","45","38","40","38","38","45"];
+   var w15_actual_mn_points = 0;
+
+   var w16_p1_picks         = ["V","H","H","V","V","H","H","H","H","V","V","H","V","V","H","H"];
+   var w16_p2_picks         = ["V","H","V","V","V","V","H","V","V","V","V","H","V","V","H","H"];
+   var w16_p3_picks         = ["V","V","V","V","V","H","H","H","V","V","V","H","V","H","H","H"];
+   var w16_p4_picks         = ["V","H","V","V","V","V","H","V","V","V","V","H","V","V","H","H"];
+   var w16_p5_picks         = ["V","H","H","V","V","V","H","H","V","V","V","H","V","V","H","H"];
+   var w16_p6_picks         = ["H","H","H","V","V","H","H","H","H","H","V","H","H","V","H","V"];
+   var w16_p7_picks         = ["V","H","V","V","V","V","H","V","V","V","V","H","V","V","H","H"];
+   var w16_p8_picks         = ["V","H","V","H","H","V","H","H","V","V","V","H","V","V","H","H"];
+   var w16_p9_picks         = ["V","V","H","V","V","V","H","V","V","V","V","H","V","V","H","H"];
+   var w16_p10_picks        = ["V","H","H","V","V","H","H","H","V","V","V","H","V","V","H","H"];
+   var w16_p11_picks        = ["V","H","H","V","H","H","H","H","V","V","V","H","V","V","H","H"];
+   var w16_p12_picks        = ["V","H","V","V","H","H","V","H","V","H","V","H","V","V","V","H"];
+   var w16_p1_weights       = ["14","3","1","15","9","11","16","12","8","2","7","13","6","10","4","5"];
+   var w16_p2_weights       = ["15","3","1","16","14","4","9","2","8","5","7","6","12","13","11","10"];
+   var w16_p3_weights       = ["16","13","2","14","5","6","15","7","3","9","8","12","11","1","10","4"];
+   var w16_p4_weights       = ["16","4","5","15","11","3","7","1","8","2","10","12","13","14","9","6"];
+   var w16_p5_weights       = ["11","7","2","4","8","6","14","3","1","10","12","13","15","9","5","16"];
+   var w16_p6_weights       = ["16","15","10","14","6","4","13","1","2","3","9","12","5","8","11","7"];
+   var w16_p7_weights       = ["16","9","1","6","7","2","10","3","4","8","12","5","15","13","11","14"];
+   var w16_p8_weights       = ["10","12","2","1","4","5","9","14","6","16","15","11","8","13","7","3"];
+   var w16_p9_weights       = ["12","1","3","9","14","2","13","4","8","11","7","15","16","10","5","6"];
+   var w16_p10_weights      = ["4","2","1","11","15","8","12","3","9","16","13","5","6","14","10","7"];
+   var w16_p11_weights      = ["11","7","5","12","16","6","15","4","8","3","10","14","13","9","2","1"];
+   var w16_p12_weights      = ["7","11","2","16","1","4","5","9","6","8","10","13","15","14","3","12"];
+   var w16_winners          = ["V","V","V","V","V","V","H","H","V","H","H","V","H","H","V","H"];
+   var w16_mn_points        = ["42","38","40","52","37","34","46","38","40","41","42","45"];
+   var w16_actual_mn_points = 0;
+
+   var w17_p1_picks         = ["H","H","V","H","H","H","H","H","H","H","H","H","H","H","H","H"];
+   var w17_p2_picks         = ["H","H","V","H","H","V","V","V","V","V","V","H","H","H","H","V"];
+   var w17_p3_picks         = ["H","H","V","H","H","H","H","V","H","V","H","H","H","H","H","H"];
+   var w17_p4_picks         = ["H","H","V","V","H","H","H","V","V","H","H","H","H","H","H","V"];
+   var w17_p5_picks         = ["H","H","V","H","V","V","H","V","V","V","H","H","H","H","H","V"];
+   var w17_p6_picks         = ["H","H","H","H","H","H","H","H","H","H","H","H","H","H","H","H"];
+   var w17_p7_picks         = ["H","H","V","H","H","V","H","V","V","V","V","H","H","H","H","V"];
+   var w17_p8_picks         = ["H","V","V","V","H","V","H","V","H","V","V","H","H","H","V","H"];
+   var w17_p9_picks         = ["H","H","V","H","H","H","H","H","V","H","V","H","H","H","H","V"];
+   var w17_p10_picks        = ["H","H","V","H","H","H","V","H","V","H","H","H","H","H","H","H"];
+   var w17_p11_picks        = ["H","H","V","V","H","V","V","H","H","H","V","H","H","H","H","H"];
+   var w17_p12_picks        = ["H","H","H","V","H","H","H","V","H","H","V","H","H","H","H","H"];
+   var w17_p1_weights       = ["16","13","10","7","14","6","3","4","2","9","1","12","15","5","11","8"];
+   var w17_p2_weights       = ["15","14","11","1","8","9","2","10","12","6","5","16","13","7","3","4"];
+   var w17_p3_weights       = ["16","15","14","6","7","3","2","1","4","9","8","13","12","10","11","5"];
+   var w17_p4_weights       = ["11","12","16","6","13","4","3","10","5","2","1","15","14","8","7","9"];
+   var w17_p5_weights       = ["13","14","15","2","1","6","10","9","7","3","5","16","11","12","8","4"];
+   var w17_p6_weights       = ["16","15","14","13","12","11","10","9","8","7","6","5","4","3","2","1"];
+   var w17_p7_weights       = ["12","16","11","8","7","5","9","13","15","4","6","14","2","3","10","1"];
+   var w17_p8_weights       = ["2","3","15","9","6","10","12","14","13","8","11","16","7","5","4","1"];
+   var w17_p9_weights       = ["16","14","13","4","12","7","2","3","5","1","6","15","11","10","9","8"];
+   var w17_p10_weights      = ["3","4","16","11","10","2","14","9","5","1","6","13","12","8","7","15"];
+   var w17_p11_weights      = ["13","12","11","5","14","6","8","3","7","1","2","15","16","9","10","4"];
+   var w17_p12_weights      = ["12","11","7","8","16","3","6","5","2","4","10","15","14","13","1","9"];
+   var w17_winners          = ["H","H","V","H","H","H","H","H","V","V","H","H","V","H","H","H"];
+   var w17_mn_points        = ["48","41","37","44","37","34","45","38","41","45","35","45"];
+   var w17_actual_mn_points = 0;
+
+
+   // *************** Constant Arrays ***************
+
+   var w1_picks = [w1_p1_picks,
+                   w1_p2_picks,
+                   w1_p3_picks,
+                   w1_p4_picks,
+                   w1_p5_picks,
+                   w1_p6_picks,
+                   w1_p7_picks,
+                   w1_p8_picks,
+                   w1_p9_picks,
+                   w1_p10_picks,
+                   w1_p11_picks,
+                   w1_p12_picks];
+
+   var w1_weights = [w1_p1_weights,
+                     w1_p2_weights,
+                     w1_p3_weights,
+                     w1_p4_weights,
+                     w1_p5_weights,
+                     w1_p6_weights,
+                     w1_p7_weights,
+                     w1_p8_weights,
+                     w1_p9_weights,
+                     w1_p10_weights,
+                     w1_p11_weights,
+                     w1_p12_weights];
+
+   var w2_picks = [w2_p1_picks,
+                   w2_p2_picks,
+                   w2_p3_picks,
+                   w2_p4_picks,
+                   w2_p5_picks,
+                   w2_p6_picks,
+                   w2_p7_picks,
+                   w2_p8_picks,
+                   w2_p9_picks,
+                   w2_p10_picks,
+                   w2_p11_picks,
+                   w2_p12_picks];
+
+   var w2_weights = [w2_p1_weights,
+                     w2_p2_weights,
+                     w2_p3_weights,
+                     w2_p4_weights,
+                     w2_p5_weights,
+                     w2_p6_weights,
+                     w2_p7_weights,
+                     w2_p8_weights,
+                     w2_p9_weights,
+                     w2_p10_weights,
+                     w2_p11_weights,
+                     w2_p12_weights];
+
+   var w3_picks = [w3_p1_picks,
+                   w3_p2_picks,
+                   w3_p3_picks,
+                   w3_p4_picks,
+                   w3_p5_picks,
+                   w3_p6_picks,
+                   w3_p7_picks,
+                   w3_p8_picks,
+                   w3_p9_picks,
+                   w3_p10_picks,
+                   w3_p11_picks,
+                   w3_p12_picks];
+
+   var w3_weights = [w3_p1_weights,
+                     w3_p2_weights,
+                     w3_p3_weights,
+                     w3_p4_weights,
+                     w3_p5_weights,
+                     w3_p6_weights,
+                     w3_p7_weights,
+                     w3_p8_weights,
+                     w3_p9_weights,
+                     w3_p10_weights,
+                     w3_p11_weights,
+                     w3_p12_weights];
+
+   var w4_picks = [w4_p1_picks,
+                   w4_p2_picks,
+                   w4_p3_picks,
+                   w4_p4_picks,
+                   w4_p5_picks,
+                   w4_p6_picks,
+                   w4_p7_picks,
+                   w4_p8_picks,
+                   w4_p9_picks,
+                   w4_p10_picks,
+                   w4_p11_picks,
+                   w4_p12_picks];
+
+   var w4_weights = [w4_p1_weights,
+                     w4_p2_weights,
+                     w4_p3_weights,
+                     w4_p4_weights,
+                     w4_p5_weights,
+                     w4_p6_weights,
+                     w4_p7_weights,
+                     w4_p8_weights,
+                     w4_p9_weights,
+                     w4_p10_weights,
+                     w4_p11_weights,
+                     w4_p12_weights];
+
+   var w5_picks = [w5_p1_picks,
+                   w5_p2_picks,
+                   w5_p3_picks,
+                   w5_p4_picks,
+                   w5_p5_picks,
+                   w5_p6_picks,
+                   w5_p7_picks,
+                   w5_p8_picks,
+                   w5_p9_picks,
+                   w5_p10_picks,
+                   w5_p11_picks,
+                   w5_p12_picks];
+
+   var w5_weights = [w5_p1_weights,
+                     w5_p2_weights,
+                     w5_p3_weights,
+                     w5_p4_weights,
+                     w5_p5_weights,
+                     w5_p6_weights,
+                     w5_p7_weights,
+                     w5_p8_weights,
+                     w5_p9_weights,
+                     w5_p10_weights,
+                     w5_p11_weights,
+                     w5_p12_weights];
+
+   var w6_picks = [w6_p1_picks,
+                   w6_p2_picks,
+                   w6_p3_picks,
+                   w6_p4_picks,
+                   w6_p5_picks,
+                   w6_p6_picks,
+                   w6_p7_picks,
+                   w6_p8_picks,
+                   w6_p9_picks,
+                   w6_p10_picks,
+                   w6_p11_picks,
+                   w6_p12_picks];
+
+   var w6_weights = [w6_p1_weights,
+                     w6_p2_weights,
+                     w6_p3_weights,
+                     w6_p4_weights,
+                     w6_p5_weights,
+                     w6_p6_weights,
+                     w6_p7_weights,
+                     w6_p8_weights,
+                     w6_p9_weights,
+                     w6_p10_weights,
+                     w6_p11_weights,
+                     w6_p12_weights];
+
+   var w7_picks = [w7_p1_picks,
+                   w7_p2_picks,
+                   w7_p3_picks,
+                   w7_p4_picks,
+                   w7_p5_picks,
+                   w7_p6_picks,
+                   w7_p7_picks,
+                   w7_p8_picks,
+                   w7_p9_picks,
+                   w7_p10_picks,
+                   w7_p11_picks,
+                   w7_p12_picks];
+
+   var w7_weights = [w7_p1_weights,
+                     w7_p2_weights,
+                     w7_p3_weights,
+                     w7_p4_weights,
+                     w7_p5_weights,
+                     w7_p6_weights,
+                     w7_p7_weights,
+                     w7_p8_weights,
+                     w7_p9_weights,
+                     w7_p10_weights,
+                     w7_p11_weights,
+                     w7_p12_weights];
+
+   var w8_picks = [w8_p1_picks,
+                   w8_p2_picks,
+                   w8_p3_picks,
+                   w8_p4_picks,
+                   w8_p5_picks,
+                   w8_p6_picks,
+                   w8_p7_picks,
+                   w8_p8_picks,
+                   w8_p9_picks,
+                   w8_p10_picks,
+                   w8_p11_picks,
+                   w8_p12_picks];
+
+   var w8_weights = [w8_p1_weights,
+                     w8_p2_weights,
+                     w8_p3_weights,
+                     w8_p4_weights,
+                     w8_p5_weights,
+                     w8_p6_weights,
+                     w8_p7_weights,
+                     w8_p8_weights,
+                     w8_p9_weights,
+                     w8_p10_weights,
+                     w8_p11_weights,
+                     w8_p12_weights];
+
+   var w9_picks = [w9_p1_picks,
+                   w9_p2_picks,
+                   w9_p3_picks,
+                   w9_p4_picks,
+                   w9_p5_picks,
+                   w9_p6_picks,
+                   w9_p7_picks,
+                   w9_p8_picks,
+                   w9_p9_picks,
+                   w9_p10_picks,
+                   w9_p11_picks,
+                   w9_p12_picks];
+
+   var w9_weights = [w9_p1_weights,
+                     w9_p2_weights,
+                     w9_p3_weights,
+                     w9_p4_weights,
+                     w9_p5_weights,
+                     w9_p6_weights,
+                     w9_p7_weights,
+                     w9_p8_weights,
+                     w9_p9_weights,
+                     w9_p10_weights,
+                     w9_p11_weights,
+                     w9_p12_weights];
+
+   var w10_picks = [w10_p1_picks,
+                    w10_p2_picks,
+                    w10_p3_picks,
+                    w10_p4_picks,
+                    w10_p5_picks,
+                    w10_p6_picks,
+                    w10_p7_picks,
+                    w10_p8_picks,
+                    w10_p9_picks,
+                    w10_p10_picks,
+                    w10_p11_picks,
+                    w10_p12_picks];
+
+   var w10_weights = [w10_p1_weights,
+                      w10_p2_weights,
+                      w10_p3_weights,
+                      w10_p4_weights,
+                      w10_p5_weights,
+                      w10_p6_weights,
+                      w10_p7_weights,
+                      w10_p8_weights,
+                      w10_p9_weights,
+                      w10_p10_weights,
+                      w10_p11_weights,
+                      w10_p12_weights];
+
+   var w11_picks = [w11_p1_picks,
+                    w11_p2_picks,
+                    w11_p3_picks,
+                    w11_p4_picks,
+                    w11_p5_picks,
+                    w11_p6_picks,
+                    w11_p7_picks,
+                    w11_p8_picks,
+                    w11_p9_picks,
+                    w11_p10_picks,
+                    w11_p11_picks,
+                    w11_p12_picks];
+
+   var w11_weights = [w11_p1_weights,
+                      w11_p2_weights,
+                      w11_p3_weights,
+                      w11_p4_weights,
+                      w11_p5_weights,
+                      w11_p6_weights,
+                      w11_p7_weights,
+                      w11_p8_weights,
+                      w11_p9_weights,
+                      w11_p10_weights,
+                      w11_p11_weights,
+                      w11_p12_weights];
+
+   var w12_picks = [w12_p1_picks,
+                    w12_p2_picks,
+                    w12_p3_picks,
+                    w12_p4_picks,
+                    w12_p5_picks,
+                    w12_p6_picks,
+                    w12_p7_picks,
+                    w12_p8_picks,
+                    w12_p9_picks,
+                    w12_p10_picks,
+                    w12_p11_picks,
+                    w12_p12_picks];
+
+   var w12_weights = [w12_p1_weights,
+                      w12_p2_weights,
+                      w12_p3_weights,
+                      w12_p4_weights,
+                      w12_p5_weights,
+                      w12_p6_weights,
+                      w12_p7_weights,
+                      w12_p8_weights,
+                      w12_p9_weights,
+                      w12_p10_weights,
+                      w12_p11_weights,
+                      w12_p12_weights];
+
+   var w13_picks = [w13_p1_picks,
+                    w13_p2_picks,
+                    w13_p3_picks,
+                    w13_p4_picks,
+                    w13_p5_picks,
+                    w13_p6_picks,
+                    w13_p7_picks,
+                    w13_p8_picks,
+                    w13_p9_picks,
+                    w13_p10_picks,
+                    w13_p11_picks,
+                    w13_p12_picks];
+
+   var w13_weights = [w13_p1_weights,
+                      w13_p2_weights,
+                      w13_p3_weights,
+                      w13_p4_weights,
+                      w13_p5_weights,
+                      w13_p6_weights,
+                      w13_p7_weights,
+                      w13_p8_weights,
+                      w13_p9_weights,
+                      w13_p10_weights,
+                      w13_p11_weights,
+                      w13_p12_weights];
+
+   var w14_picks = [w14_p1_picks,
+                    w14_p2_picks,
+                    w14_p3_picks,
+                    w14_p4_picks,
+                    w14_p5_picks,
+                    w14_p6_picks,
+                    w14_p7_picks,
+                    w14_p8_picks,
+                    w14_p9_picks,
+                    w14_p10_picks,
+                    w14_p11_picks,
+                    w14_p12_picks];
+
+   var w14_weights = [w14_p1_weights,
+                      w14_p2_weights,
+                      w14_p3_weights,
+                      w14_p4_weights,
+                      w14_p5_weights,
+                      w14_p6_weights,
+                      w14_p7_weights,
+                      w14_p8_weights,
+                      w14_p9_weights,
+                      w14_p10_weights,
+                      w14_p11_weights,
+                      w14_p12_weights];
+
+   var w15_picks = [w15_p1_picks,
+                    w15_p2_picks,
+                    w15_p3_picks,
+                    w15_p4_picks,
+                    w15_p5_picks,
+                    w15_p6_picks,
+                    w15_p7_picks,
+                    w15_p8_picks,
+                    w15_p9_picks,
+                    w15_p10_picks,
+                    w15_p11_picks,
+                    w15_p12_picks];
+
+   var w15_weights = [w15_p1_weights,
+                      w15_p2_weights,
+                      w15_p3_weights,
+                      w15_p4_weights,
+                      w15_p5_weights,
+                      w15_p6_weights,
+                      w15_p7_weights,
+                      w15_p8_weights,
+                      w15_p9_weights,
+                      w15_p10_weights,
+                      w15_p11_weights,
+                      w15_p12_weights];
+
+   var w16_picks = [w16_p1_picks,
+                    w16_p2_picks,
+                    w16_p3_picks,
+                    w16_p4_picks,
+                    w16_p5_picks,
+                    w16_p6_picks,
+                    w16_p7_picks,
+                    w16_p8_picks,
+                    w16_p9_picks,
+                    w16_p10_picks,
+                    w16_p11_picks,
+                    w16_p12_picks];
+
+   var w16_weights = [w16_p1_weights,
+                      w16_p2_weights,
+                      w16_p3_weights,
+                      w16_p4_weights,
+                      w16_p5_weights,
+                      w16_p6_weights,
+                      w16_p7_weights,
+                      w16_p8_weights,
+                      w16_p9_weights,
+                      w16_p10_weights,
+                      w16_p11_weights,
+                      w16_p12_weights];
+
+   var w17_picks = [w17_p1_picks,
+                    w17_p2_picks,
+                    w17_p3_picks,
+                    w17_p4_picks,
+                    w17_p5_picks,
+                    w17_p6_picks,
+                    w17_p7_picks,
+                    w17_p8_picks,
+                    w17_p9_picks,
+                    w17_p10_picks,
+                    w17_p11_picks,
+                    w17_p12_picks];
+
+   var w17_weights = [w17_p1_weights,
+                      w17_p2_weights,
+                      w17_p3_weights,
+                      w17_p4_weights,
+                      w17_p5_weights,
+                      w17_p6_weights,
+                      w17_p7_weights,
+                      w17_p8_weights,
+                      w17_p9_weights,
+                      w17_p10_weights,
+                      w17_p11_weights,
+                      w17_p12_weights];
+
+   var all_picks = [w1_picks,
+                    w2_picks,
+                    w3_picks,
+                    w4_picks,
+                    w5_picks,
+                    w6_picks,
+                    w7_picks,
+                    w8_picks,
+                    w9_picks,
+                    w10_picks,
+                    w11_picks,
+                    w12_picks,
+                    w13_picks,
+                    w14_picks,
+                    w15_picks,
+                    w16_picks,
+                    w17_picks];
+
+   var all_weights = [w1_weights,
+                      w2_weights,
+                      w3_weights,
+                      w4_weights,
+                      w5_weights,
+                      w6_weights,
+                      w7_weights,
+                      w8_weights,
+                      w9_weights,
+                      w10_weights,
+                      w11_weights,
+                      w12_weights,
+                      w13_weights,
+                      w14_weights,
+                      w15_weights,
+                      w16_weights,
+                      w17_weights];
+
+   var all_winners = [w1_winners,
+                      w2_winners,
+                      w3_winners,
+                      w4_winners,
+                      w5_winners,
+                      w6_winners,
+                      w7_winners,
+                      w8_winners,
+                      w9_winners,
+                      w10_winners,
+                      w11_winners,
+                      w12_winners,
+                      w13_winners,
+                      w14_winners,
+                      w15_winners,
+                      w16_winners,
+                      w17_winners];
+
+   var all_mn_points = [w1_mn_points,
+                        w2_mn_points,
+                        w3_mn_points,
+                        w4_mn_points,
+                        w5_mn_points,
+                        w6_mn_points,
+                        w7_mn_points,
+                        w8_mn_points,
+                        w9_mn_points,
+                        w10_mn_points,
+                        w11_mn_points,
+                        w12_mn_points,
+                        w13_mn_points,
+                        w14_mn_points,
+                        w15_mn_points,
+                        w16_mn_points,
+                        w17_mn_points];
+
+   var all_actual_mn_points = [w1_actual_mn_points,
+                               w2_actual_mn_points,
+                               w3_actual_mn_points,
+                               w4_actual_mn_points,
+                               w5_actual_mn_points,
+                               w6_actual_mn_points,
+                               w7_actual_mn_points,
+                               w8_actual_mn_points,
+                               w9_actual_mn_points,
+                               w10_actual_mn_points,
+                               w11_actual_mn_points,
+                               w12_actual_mn_points,
+                               w13_actual_mn_points,
+                               w14_actual_mn_points,
+                               w15_actual_mn_points,
+                               w16_actual_mn_points,
+                               w17_actual_mn_points];
+
+   // Postseason Information
+
+   var player1_picks = [
+   "V",
+   "H",
+   "V",
+   "V",
+   "H",
+   "H",
+   "V",
+   "H",
+   "V",
+   "H",
+   ""
+   ];
+
+   var player1_spreads = [
+   "17",
+   "1",
+   "9",
+   "3",
+   "8",
+   "13",
+   "7",
+   "3",
+   "9",
+   "6",
+   ""
+   ];
+
+   var player2_picks = [
+   "V",
+   "V",
+   "V",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "V",
+   "H",
+   "V"
+   ];
+
+   var player2_spreads = [
+   "7",
+   "10",
+   "10",
+   "7",
+   "7",
+   "13",
+   "10",
+   "13",
+   "7",
+   "7",
+   "7"
+   ];
+
+   var player3_picks = [
+   "V",
+   "V",
+   "V",
+   "H",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H"
+   ];
+
+   var player3_spreads = [
+   "4",
+   "13",
+   "10",
+   "3",
+   "3",
+   "21",
+   "6",
+   "3",
+   "7",
+   "8",
+   "9"
+   ];
+
+   var player4_picks = [
+   "V",
+   "V",
+   "V",
+   "V",
+   "V",
+   "H",
+   "H",
+   "H",
+   "V",
+   "H",
+   "V"
+   ];
+
+   var player4_spreads = [
+   "7",
+   "7",
+   "5",
+   "10",
+   "3",
+   "7",
+   "3",
+   "5",
+   "7",
+   "5",
+   "10"
+   ];
+
+   var player5_picks = [
+   "V",
+   "H",
+   "H",
+   "V",
+   "H",
+   "H",
+   "V",
+   "H",
+   "V",
+   "H",
+   "H"
+   ];
+
+   var player5_spreads = [
+   "7",
+   "3",
+   "3",
+   "14",
+   "3",
+   "10",
+   "6",
+   "10",
+   "10",
+   "10",
+   "10"
+   ];
+
+   var player6_picks = [
+   "V",
+   "V",
+   "H",
+   "V",
+   "H",
+   "H",
+   "H",
+   "V",
+   "H",
+   "H",
+   "H"
+   ];
+
+   var player6_spreads = [
+   "11",
+   "9",
+   "1",
+   "7",
+   "14",
+   "17",
+   "17",
+   "3",
+   "17",
+   "13",
+   "2"
+   ];
+
+   var player7_picks = [
+   "V",
+   "V",
+   "V",
+   "V",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H"
+   ];
+
+   var player7_spreads = [
+   "7",
+   "10",
+   "10",
+   "17",
+   "9",
+   "6",
+   "9",
+   "3",
+   "14",
+   "3",
+   "3"
+   ];
+
+   var player8_picks = [
+   "H",
+   "V",
+   "H",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "V"
+   ];
+
+   var player8_spreads = [
+   "3",
+   "7",
+   "3",
+   "7",
+   "7",
+   "7",
+   "3",
+   "7",
+   "7",
+   "7",
+   "14"
+   ];
+
+   var player9_picks = [
+   "V",
+   "V",
+   "V",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "V"
+   ];
+
+   var player9_spreads = [
+   "3",
+   "6",
+   "10",
+   "3",
+   "3",
+   "6",
+   "3",
+   "1",
+   "7",
+   "3",
+   "2"
+   ];
+
+   var player10_picks = [
+   "V",
+   "H",
+   "H",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "V",
+   "H",
+   "V"
+   ];
+
+   var player10_spreads = [
+   "7",
+   "7",
+   "7",
+   "7",
+   "7",
+   "7",
+   "7",
+   "7",
+   "3",
+   "3",
+   "7"
+   ];
+
+   var player11_picks = [
+   "V",
+   "V",
+   "V",
+   "H",
+   "H",
+   "H",
+   "H",
+   "H",
+   "V",
+   "H",
+   "H"
+   ];
+
+   var player11_spreads = [
+   "10",
+   "7",
+   "3",
+   "7",
+   "3",
+   "14",
+   "7",
+   "10",
+   "3",
+   "10",
+   "10"
+   ];
+
+   var player12_picks = [
+   "H",
+   "H",
+   "V",
+   "V",
+   "H",
+   "V",
+   "H",
+   "V",
+   "H",
+   "H",
+   "H"
+   ];
+
+   var player12_spreads = [
+   "10",
+   "10",
+   "5",
+   "12",
+   "13",
+   "3",
+   "6",
+   "9",
+   "16",
+   "16",
+   "10"
+   ];
+
+   var visiting_teams = [
+   "Falcons",
+   "Colts",
+   "Ravens",
+   "Eagles",
+   "Ravens",
+   "Cardinals",
+   "Eagles",
+   "Chargers",
+   "Eagles",
+   "Ravens",
+   "Steelers"
+   ];
+
+   var home_teams = [
+   "Cardinals",
+   "Chargers",
+   "Dolphins",
+   "Vikings",
+   "Titans",
+   "Panthers",
+   "Giants",
+   "Steelers",
+   "Cardinals",
+   "Steelers",
+   "Cardinals"
+   ];
+
+   var excel_visitor_scores = [
+   "24",
+   "17",
+   "27",
+   "26",
+   "13",
+   "33",
+   "23",
+   "24",
+   "25",
+   "14",
+   "27"
+   ];
+
+   var excel_home_scores = [
+   "30",
+   "23",
+   "9",
+   "14",
+   "10",
+   "13",
+   "11",
+   "35",
+   "32",
+   "23",
+   "23"
+   ];
+
+   var wrong_pick_penalty = 7;
+   var week_1_score_multiplier = 1;
+   var week_2_score_multiplier = 1;
+   var week_3_score_multiplier = 2;
+   var week_4_score_multiplier = 4;
+
+
+   // *************** Global Variables ***************
+
+   var player1_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player2_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player3_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player4_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player5_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player6_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player7_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player8_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player9_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player10_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player11_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player12_scores = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var postseason_winners = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var winner_spreads = [
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>",
+   "<br>"
+   ];
+
+   var player_picks = [player1_picks,
+                       player2_picks,
+                       player3_picks,
+                       player4_picks,
+                       player5_picks,
+                       player6_picks,
+                       player7_picks,
+                       player8_picks,
+                       player9_picks,
+                       player10_picks,
+                       player11_picks,
+                       player12_picks];
+
+   var player_spreads = [player1_spreads,
+                         player2_spreads,
+                         player3_spreads,
+                         player4_spreads,
+                         player5_spreads,
+                         player6_spreads,
+                         player7_spreads,
+                         player8_spreads,
+                         player9_spreads,
+                         player10_spreads,
+                         player11_spreads,
+                         player12_spreads];
+
+   var player_scores = [player1_scores,
+                        player2_scores,
+                        player3_scores,
+                        player4_scores,
+                        player5_scores,
+                        player6_scores,
+                        player7_scores,
+                        player8_scores,
+                        player9_scores,
+                        player10_scores,
+                        player11_scores,
+                        player12_scores];
+
+
+   // Bring this window forward
+
+   self.focus();
+
+
+   // Build the document for display
+
+   if (window.top.gv.archive_mode == "regular_season")
+   {
+      window.top.gv.all_visiting_teams = all_visiting_teams;
+      window.top.gv.all_home_teams     = all_home_teams;
+      window.top.gv.all_open_dates     = all_open_dates;
+      window.top.gv.rs_players         = ["BK","CB","CK","CP","CR","DC","GP","JG","JL","KC","KK","RC"];
+
+      build_regular_season_form();
+   }
+   else  // window.top.gv.archive_mode == "postseason"
+   {
+      window.top.gv.ps_players = ["BK","CB","CK","CP","CR","DC","GP","JG","JL","KC","KK","RC"];
+
+      build_postseason_form();
+   }
+
+</script>
+
+</html>

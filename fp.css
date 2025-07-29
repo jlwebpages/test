@@ -54,7 +54,7 @@
 .header_one
 {
    color: black;
-   font-size: 12pt;
+   font-size: 16px;
    font-weight: bold;
    text-align: center;
    white-space: nowrap;
@@ -64,7 +64,7 @@
 .header_two
 {
    color: black;
-   font-size: 12pt;
+   font-size: 16px;
    font-weight: bold;
    text-align: center;
    white-space: nowrap;
@@ -95,7 +95,7 @@
 
 .ext_button_cell
 {
-   font-size: 18pt;
+   font-size: 24px;
    letter-spacing: 2px;
    text-align: center;
    vertical-align: middle;
@@ -109,7 +109,7 @@
 
 .fp_button_cell
 {
-   font-size: 18pt;
+   font-size: 24px;
    letter-spacing: 2px;
    text-align: center;
    vertical-align: middle;
@@ -124,7 +124,7 @@
 .light_color_cell
 {
    color: maroon;
-   font-size: 18pt;
+   font-size: 24px;
    font-weight: bold;
    text-align: center;
    background-color: #B8C2D0;

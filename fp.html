@@ -1,8 +1,12 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
 
    <title>NFL Football Pool</title>
+
+   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link href="fp.css" rel="stylesheet" type="text/css">
 
@@ -842,18 +846,11 @@
       {
          // frame_width is only used in fp_mobile.html
 
-         if (frame_name == "fp_main")
-         {
-            fp_frameset.rows = "60px,*,0,0";
-         }
-         else if (frame_name == "fp_picks")
-         {
-            fp_frameset.rows = "60px,0,*,0";
-         }
-         else if (frame_name == "fp_loading_indicator")
-         {
-            fp_frameset.rows = "60px,0,0,*";
-         }
+         document.getElementById("fp_main").style.zIndex              = -1;
+         document.getElementById("fp_picks").style.zIndex             = -1;
+         document.getElementById("fp_loading_indicator").style.zIndex = -1;
+
+         document.getElementById(frame_name).style.zIndex = 1;
       }
 
       function focus_element(element)
@@ -891,17 +888,32 @@
 
 </head>
 
-<frameset rows="75px,*" border="0">
 
-   <frame class="background_color" src="fp_header.html" name="fp_header" frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">
+<body class="background_color" style="margin: 0px; padding: 0px">
 
-   <frameset id="fp_frameset" rows="0,*,0,0" border="0">
-      <frame class="background_color" src="fp_empty.html"             name="fp_main_header"       frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">
-      <frame class="background_color" src="fp_main.html"              name="fp_main"              frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="auto">
-      <frame class="background_color" src="fp_empty.html"             name="fp_picks"             frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="auto">
-      <frame class="background_color" src="fp_loading_indicator.html" name="fp_loading_indicator" frameborder="0" marginwidth="0" marginheight="0" noresize="noresize" scrolling="no">    
-   </frameset>
+   <div id="fp_header" style="position: fixed; top: 0px; left: 0px; height: 75px; width: 100%">
+      <table class="table" style="height: 70px; padding: 5px; margin: 0px auto">
+         <tr><td class="dark_blue_cell" style="font-size: 26pt"><script>if (top.fp_year != null) document.write(top.fp_year + " "); document.write("NFL FOOTBALL POOL");</script></td></tr>
+      </table>
+   </div>
 
-</frameset>
+   <div id="fp_main_header" style="position: fixed; top: 75px; left: 0px; height: 60px; width: 100%">
+      <!-- Main header content is populated by other files. -->
+   </div>
+
+   <div id="fp_main" style="position: fixed; top: 135px; left: 0px; height: calc(100vh - 135px); width: 100%; z-index: 1">
+      <iframe name="fp_main" src="fp_main.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+   <div id="fp_picks" style="position: fixed; top: 135px; left: 0px; height: calc(100vh - 135px); width: 100%; z-index: -1">
+      <iframe name="fp_picks" src="fp_empty.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+   <div id="fp_loading_indicator" style="position: fixed; top: 135px; left: 0px; height: calc(100vh - 135px); width: 100%; z-index: -1">
+      <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: calc(100vh - 135px); width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+</body>
+
 
 </html>
