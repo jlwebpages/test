@@ -1053,25 +1053,108 @@
 
    </script>
 
+   <style>
+      .mobile_menu_icon
+      {
+         font-size: 32px;
+         cursor: pointer;
+      }
+      .mobile_menu
+      {
+         position: absolute;
+         top: 0px;
+         right: 0px;
+         background-color: #CAD1DC;
+         border-radius: 0px 0px 0px 10px;
+         border: 0px;
+         margin: 0px;
+         padding: 0px;
+         display: none;
+      }
+
+
+
+   .mobile_menu a
+   {
+      font-family: Calibri, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      display: block;
+      padding: 5px 10px 5px 10px;
+      text-decoration: none;
+      color: white;
+      background-color: maroon;
+      margin: 0px 10px 10px 10px;
+      border-radius: 40px;
+      vertical-align: middle;
+      text-align: center;
+   }
+
+  .mobile_menu-icon.active + .menu {
+    display: block;
+  }
+.close_button
+{
+  font-size: 44px; font-weight: bold; padding: 0px ;color: #002060; margin: 0px 10px 0px 0px; 
+  vertical-align: top; text-align: right; background-color: #CAD1DC; display: block;               cursor: pointer;   border-radius: 0px 0px 0px 0px;
+}
+
+  </style>
+
+
+
 </head>
 
 
 <body class="background_color" style="height: 100%; margin: 0px; padding: 0px">
 
-   <div id="fp_header" style="position: fixed; top: 0px; left: 0px; height: 65px; width: 100%">
+
+<script> 
+
+   function toggle_mobile_menu()
+   {
+      if (document.getElementById("mobile_menu_id").style.display != "block")
+      {
+         document.getElementById("mobile_menu_id").style.display = "block";
+      }
+      else
+      {
+         document.getElementById("mobile_menu_id").style.display = "none";
+      }
+   }
+
+</script>
+
+
+   <div id="fp_header" style="position: fixed; top: 0px; left: 0px; height: 65px; width: 100%; z-index: 100">
 
       <table class="table" style="height: 60px; padding: 5px; margin: 0px auto">
 
          <tr>
-            <td class="dark_blue_cell" style="border-radius: 25px 0px 0px 25px; width: 50px; border-right: 0px; padding: 5px 0px 0px 5px; margin: 0px">
-               <a href="http://www.nfl.com" target="_top"><img src="nfl_logo.png" height="40px" width="29.6px"></a>
+            <td class="dark_blue_cell" style="border-radius: 25px 0px 0px 25px; width: 50px; border-right: 0px; margin: 0px">
+               <a href="fp_mobile.html" target="_top"><img src="home_icon.png" height="35px" width="35px"></a>
             </td>
             <td class="dark_blue_cell" style="border-radius: 0px; font-size: 24px; border-left: 0px; border-right: 0px; padding: 0px; margin: 0px">
                <script>if (top.fp_year != null) document.write(top.fp_year + " "); document.write("FOOTBALL POOL");</script>
             </td>
-            <td class="dark_blue_cell" style="border-radius: 0px 25px 25px 0px; width: 50px; border-left: 0px; padding: 2px 5px 0px 0px; margin: 0px">
-               <a href="fp_mobile.html" target="_top"><img src="home_icon.png" height="35px" width="35px"></a>
+            <td class="dark_blue_cell mobile_menu_icon" 
+                style="border-radius: 0px 25px 25px 0px; width: 50px; border-left: 0px; margin: 0px; padding-bottom: 3px"
+              onclick="toggle_mobile_menu()">
+               &#9776;
             </td>
+            <div id="mobile_menu_id" class="mobile_menu">
+               <span class="close_button" href="#" onclick="toggle_mobile_menu()">&times;</span>
+               <a href="#">RULES</a>
+               <a href="#">STANDINGS</a>
+               <a href="#">FORMS</a>
+               <a href="#">ARCHIVE</a>
+               <a href="#">HELP</a>
+               <a href="#" style="background-color: #283E1A">NFL.COM</a>
+               <a href="#" style="background-color: #283E1A">NFL ON ESPN</a>
+               <a href="#" style="background-color: #283E1A">NFL ODDS</a>
+               <a href="#" style="background-color: #283E1A">PLAYOFF TEAMS</a>
+               <a href="#" style="background-color: #283E1A">PLAYOFF MACHINE</a>
+            </div>
          </tr>
 
       </table>
