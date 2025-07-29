@@ -176,6 +176,8 @@ function build_regular_season_form()
 
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px;');
+   d.writeln('             margin: 0px;');
+   d.writeln('            padding: 0px;');
    d.writeln('              color: black;');
    d.writeln('        font-family: Calibri, sans-serif;');
    d.writeln('             margin: 0px 0px 15px 0px">');
@@ -492,10 +494,12 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("</head>");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<body class=\\"background_color\\"");');
-   d.writeln('   wd.writeln("      style=\\"border: 0px; margin: 0px; padding: 0px");');
-   d.writeln('   wd.writeln("              color: black;");');
-   d.writeln('   wd.writeln("          font-size: 13pt;");');
-   d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');
+   d.writeln('   wd.writeln("      style=\\"border: 0px;");');
+   d.writeln('   wd.writeln("               margin: 0px;");');
+   d.writeln('   wd.writeln("              padding: 0px;");');
+   d.writeln('   wd.writeln("                color: black;");');
+   d.writeln('   wd.writeln("            font-size: 13pt;");');
+   d.writeln('   wd.writeln("          font-family: Calibri, sans-serif\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<script language=\\"JavaScript\\" type=\\"text/javascript\\">");');
    d.writeln('   wd.writeln("");');
@@ -2921,6 +2925,8 @@ function build_postseason_form()
 
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px;');
+   d.writeln('             margin: 0px;');
+   d.writeln('            padding: 0px;');
    d.writeln('              color: black;');
    d.writeln('        font-family: Calibri, sans-serif;');
    d.writeln('             margin: 0px 0px 15px 0px>');
@@ -3238,9 +3244,11 @@ function build_postseason_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<body class=\\"background_color\\"");');
    d.writeln('   wd.writeln("      style=\\"border: 0px;");');
-   d.writeln('   wd.writeln("              color: black;");');
-   d.writeln('   wd.writeln("          font-size: 13pt;");');
-   d.writeln('   wd.writeln("        font-family: Calibri, sans-serif\\">");');
+   d.writeln('   wd.writeln("               margin: 0px;");');
+   d.writeln('   wd.writeln("              padding: 0px;");');
+   d.writeln('   wd.writeln("                color: black;");');
+   d.writeln('   wd.writeln("            font-size: 13pt;");');
+   d.writeln('   wd.writeln("          font-family: Calibri, sans-serif\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<script language=\\"JavaScript\\" type=\\"text/javascript\\">");');
    d.writeln('   wd.writeln("");');
