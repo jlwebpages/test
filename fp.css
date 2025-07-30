@@ -153,6 +153,7 @@ a.white_link:hover {text-decoration: underline}
 .blue_color               {color: blue              }
 .border_radius            {border-radius: 4px       }
 .dark_blue_color          {color: #002060           }
+.green_background         {background-color: #283E1A}
 .green_color              {color: #283E1A           }
 .header_one_background    {background-color: #C4D79B}
 .header_two_background    {background-color: #DCE6F1}
@@ -161,8 +162,61 @@ a.white_link:hover {text-decoration: underline}
 .picks_confirm_background {background-color: #C4D79B}
 .picks_copy_background    {background-color: white  }
 .picks_error_background   {background-color: #FFFF99}
+.red_background           {background-color: maroon }
 .red_color                {color: maroon            }
 .upset_pick_color         {color: #AA0000           }
 .white_background         {background-color: white  }
 
 input {touch-action: none}
+
+
+
+      .mobile_menu_icon
+      {
+         cursor: pointer;
+         font-size: 32px;
+         color: white;
+         border-radius: 0px 25px 25px 0px;
+         border-left: 0px;
+         margin: 0px;
+         padding-bottom: 3px;
+         width: 50px; 
+      }
+      .mobile_menu
+      {
+         position: absolute;
+         top: 0px;
+         right: 0px;
+         background-color: #CAD1DC;
+         border-radius: 0px 0px 0px 10px;
+         border: 0px;
+         margin: 0px;
+         padding: 0px;
+         display: none;
+         z-index: 1;
+      }
+
+
+
+   .mobile_menu a
+   {
+      font-family: Calibri, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: white;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 40px;
+      margin: 0px 10px 10px 10px;
+      padding: 5px 10px 5px 10px;
+      display: block;
+   }
+
+
+
+.mobile_menu_close_button
+{
+  font-size: 44px; font-weight: bold; padding: 0px ;color: #002060; margin: 0px 10px 0px 0px; 
+  vertical-align: top; text-align: right; background-color: #CAD1DC; display: block;               cursor: pointer;   border-radius: 0px 0px 0px 0px;
+}
