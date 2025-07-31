@@ -10,7 +10,9 @@
 
    <link href="fp.css" rel="stylesheet" type="text/css">
 
-   <script language="JavaScript">
+   <script language="JavaScript" src=fp_form_scripts.js></script>
+
+   <script>
 
       var t = true;
       var f = false;
@@ -1060,18 +1062,6 @@
 
    <script>
 
-      function toggle_mobile_menu()
-      {
-         if (document.getElementById("mobile_menu_id").style.display != "block")
-         {
-            document.getElementById("mobile_menu_id").style.display = "block";
-         }
-         else
-         {
-            document.getElementById("mobile_menu_id").style.display = "none";
-         }
-      }
-
       // Check to see if this is a mobile device and not an older iPad.
 
       if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
@@ -1099,7 +1089,7 @@
             <td class="dark_blue_cell" style="border-radius: 0px; font-size: 24px; border-left: 0px; border-right: 0px; padding: 0px; margin: 0px">
                <script>if (top.fp_year != null) document.write(top.fp_year + " "); document.write("FOOTBALL POOL");</script>
             </td>
-            <td class="dark_blue_cell mobile_menu_icon" onclick="toggle_mobile_menu()">
+            <td class="dark_blue_cell mobile_menu_icon" onclick="open_mobile_menu()">
                &#9776;
             </td>
          </tr>
@@ -1120,18 +1110,24 @@
       <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
    </div>
 
-   <div id="mobile_menu_id" class="mobile_menu">
-      <span class="mobile_menu_close_button" onclick="toggle_mobile_menu()">&times;</span>
-      <a class="white_link red_background"   href="fp_rules.html"     target="fp_main" onclick="toggle_mobile_menu()">RULES</a>
-      <a class="white_link red_background"   href="fp_standings.html" target="fp_main" onclick="toggle_mobile_menu()">STANDINGS</a>
-      <a class="white_link red_background"   href="fp_forms.html"     target="fp_main" onclick="toggle_mobile_menu()">FORMS</a>
-      <a class="white_link red_background"   href="fp_archive.html"   target="fp_main" onclick="toggle_mobile_menu()">ARCHIVE</a>
-      <a class="white_link red_background"   href="fp_help.html"      target="fp_main" onclick="toggle_mobile_menu()">HELP</a>
-      <a class="white_link green_background" href="http://www.nfl.com" target="_top" onclick="toggle_mobile_menu()">NFL.COM</a>
-      <a class="white_link green_background" href="http://www.espn.com/nfl" target="_top" onclick="toggle_mobile_menu()">NFL ON ESPN</a>
-      <a class="white_link green_background" href="#" onclick="toggle_mobile_menu()">NFL ODDS</a>
-      <script>document.write('<a class="white_link green_background" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main" onclick="toggle_mobile_menu()">PLAYOFF TEAMS</a>');</script>
-      <a class="white_link green_background" href="http://www.espn.com/nfl/playoffs/machine" target="_top" onclick="toggle_mobile_menu()">PLAYOFF MACHINE</a>
+   <div id="mobile_menu" class="mobile_menu">
+
+      <span class="mobile_menu_close_button" onclick="close_mobile_menu()">&times;</span>
+
+      <a class="white_link red_background"   href="fp_rules.html"     target="fp_main" onclick="close_mobile_menu()">RULES</a>
+      <a class="white_link red_background"   href="fp_standings.html" target="fp_main" onclick="close_mobile_menu()">STANDINGS</a>
+      <a class="white_link red_background"   href="fp_forms.html"     target="fp_main" onclick="close_mobile_menu()">FORMS</a>
+      <a class="white_link red_background"   href="fp_archive.html"   target="fp_main" onclick="close_mobile_menu()">ARCHIVE</a>
+      <a class="white_link red_background"   href="fp_help.html"      target="fp_main" onclick="close_mobile_menu()">HELP</a>
+
+      <a class="white_link green_background" href="http://www.nfl.com"                       target="_top" onclick="close_mobile_menu()">NFL.COM</a>
+      <a class="white_link green_background" href="http://www.espn.com/nfl"                  target="_top" onclick="close_mobile_menu()">NFL ON ESPN</a>
+      <a class="white_link green_background" href="https://www.espn.com/nfl/lines"           target="_top" onclick="close_mobile_menu()">NFL ODDS</a>
+      <script>
+         document.write('<a class="white_link green_background" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main" onclick="close_mobile_menu()">PLAYOFF TEAMS</a>');
+      </script>
+      <a class="white_link green_background" href="http://www.espn.com/nfl/playoffs/machine" target="_top" onclick="close_mobile_menu()">PLAYOFF MACHINE</a>
+
    </div>
 
 </body>

@@ -6277,3 +6277,16 @@ function validate_team_name(team_name)
 
    return false;
 }
+
+
+function close_mobile_menu()
+{
+  document.getElementById("mobile_menu").style.display = "none";
+  document.getElementById("fp_main").style.pointerEvents = "auto";
+}
+
+function open_mobile_menu()
+{
+  document.getElementById("mobile_menu").style.display = "block";
+  document.getElementById("fp_main").style.pointerEvents = "none";
+}
