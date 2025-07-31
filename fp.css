@@ -209,15 +209,11 @@ input {touch-action: none}
 
 .mobile_menu_close_button
 {
+   position: absolute;
+   top: 0px;
+   right: 10px;
    cursor: pointer;
    font-size: 44px;
    font-weight: bold;
    color: #002060;
-   vertical-align: top;
-   text-align: right;
-   background-color: #CAD1DC;
-   border-radius: 0px 0px 0px 0px;
-   margin: 0px 10px 0px 0px;
-   padding: 0px;
-   display: block;
 }
