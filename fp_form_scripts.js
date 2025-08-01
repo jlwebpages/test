@@ -6281,12 +6281,13 @@ function validate_team_name(team_name)
 
 function close_mobile_menu()
 {
-  document.getElementById("mobile_menu").style.display = "none";
+  document.getElementById("mobile_menu").style.width = "0px";
   document.getElementById("fp_main").style.pointerEvents = "auto";
 }
 
+
 function open_mobile_menu()
 {
-  document.getElementById("mobile_menu").style.display = "block";
+  document.getElementById("mobile_menu").style.width = "200px";
   document.getElementById("fp_main").style.pointerEvents = "none";
 }
