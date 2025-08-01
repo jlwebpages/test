@@ -6288,6 +6288,6 @@ function close_mobile_menu()
 
 function open_mobile_menu()
 {
-  document.getElementById("mobile_menu").style.width = "200px";
+  document.getElementById("mobile_menu").style.width = "220px";
   document.getElementById("fp_main").style.pointerEvents = "none";
 }
