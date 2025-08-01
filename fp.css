@@ -173,7 +173,7 @@ input {touch-action: none}
 .mobile_menu_icon
 {
    cursor: pointer;
-   font-size: 32px;
+   font-size: 28px;
    color: white;
    border-radius: 0px 25px 25px 0px;
    border-left: 0px;
@@ -204,7 +204,7 @@ input {touch-action: none}
    top: 0px;
    right: 10px;
    cursor: pointer;
-   font-size: 44px;
+   font-size: 40px;
    font-weight: bold;
    color: #002060;
 }
