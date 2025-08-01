@@ -184,7 +184,7 @@ input {touch-action: none}
 
 .mobile_menu
 {
-   position: fixed;
+   position: absolute;
    top: 0px;
    right: 0px;
    background-color: #CAD1DC;
