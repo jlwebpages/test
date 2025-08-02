@@ -967,7 +967,7 @@
 
          if (frame_name == "fp_loading_indicator") frame_width = 0;
 
-         set_mobile_viewport_width(frame_width);
+         set_mobile_viewport_width(frame_width,frame_name);
 
          if (frame_name == "fp_picks") fp_picks.document.getElementById("picks_table").scrollIntoView();
 
@@ -1017,7 +1017,7 @@
          return true;
       }
 
-      function set_mobile_viewport_width(viewport_width)
+      function set_mobile_viewport_width(viewport_width,frame_name)
       {
          var iPad             = false;
          var viewport_content = "width=device-width, initial-scale=1.0";
@@ -1030,24 +1030,42 @@
 
          // Don't try to adjust the viewport width if an HTML <meta> tag viewport element doesn't exist.
 
-         if (document.getElementById("viewport") == null) return;
+         //if (document.getElementById("viewport") == null) return;
 
          // Don't adjust the viewport width if the mobile device is in landscape mode.
 
-         if (window.screen.width > window.screen.height) return;
+         //JLif (window.screen.width > window.screen.height) return;
 
          // Don't adjust the viewport width if the mobile device is an iPad.
 
-         if (iPad == true) return;
+         //if (iPad == true) return;
 
          if (viewport_width > 0)
-         {
-            saved_viewport_content = document.getElementById("viewport").content;
+         {            
+            //saved_viewport_content = document.getElementById("viewport").content;
 
-            viewport_scale   = window.screen.width/viewport_width;
-            viewport_content = "width=" + viewport_width + "px, initial-scale=" + viewport_scale;
+            //viewport_scale   = window.screen.width/viewport_width;
+            //viewport_content = "width=" + viewport_width + "px, initial-scale=" + viewport_scale;
 
-            document.getElementById("viewport").setAttribute("content",viewport_content);
+            //document.getElementById("viewport").setAttribute("content",viewport_content);
+alert(viewport_width);
+            var scale        = 1;
+            var vertical_gap = 0;
+
+frame_document = window.frames[frame_name].document;
+
+            if (frame_document.body.scrollWidth > window.innerWidth)
+            {
+               scale = window.innerWidth/frame_document.body.scrollWidth;
+alert(scale);
+               vertical_gap = ( (1-scale) * 100 ) + "%";
+
+               frame_document.documentElement.style.height = "calc(100% - "+vertical_gap+")";
+
+               frame_document.body.style.transform       = "scale("+scale+")";
+               frame_document.body.style.transformOrigin = "top left";
+               frame_document.body.style.height          = "calc(100% - "+vertical_gap+")";
+            }
          }
 
          return true;
