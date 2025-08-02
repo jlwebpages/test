@@ -937,7 +937,7 @@
       {
          var force_scale        = false;
          var iPad               = false;
-         var mobile__device     = false;
+         var mobile_device      = false;
          var target_frame_width = 0;
 
 
@@ -960,7 +960,7 @@
          {
             target_frame_width = fp_main.document.body.scrollWidth;
 
-            if ( (fp_main.document.getElementById("input_form_table") != null) && (window.matchMedia("(orientation: portrait)").matches == true) && (mobile__device == true) && (iPad == false) )
+            if ( (fp_main.document.getElementById("input_form_table") != null) && (window.matchMedia("(orientation: portrait)").matches == true) && (mobile_device == true) && (iPad == false) )
             {
                target_frame_width = fp_main.document.getElementById("input_form_table").offsetWidth;
 
@@ -972,7 +972,7 @@
 
          if (frame_name == "fp_picks")
          {
-            if ( (window.matchMedia("(orientation: portrait)").matches == true) && (mobile__device == true) && (iPad == false) )
+            if ( (window.matchMedia("(orientation: portrait)").matches == true) && (mobile_device == true) && (iPad == false) )
             {
                target_frame_width = received_frame_width;
 
