@@ -1035,11 +1035,7 @@
 
          if ( (target_frame_width > window.innerWidth) || (force_scale == true) )
          {
-            scale = window.innerWidth/target_frame_width;
-
-
-scale_string = scale.toFixed(4);
-scale = parseFloat(scale_string);
+            scale = window.innerWidth/target_frame_width + .01;
 
 
 
