@@ -1036,7 +1036,7 @@
          if ( (target_frame_width > window.innerWidth) || (force_scale == true) )
          {
             scale = window.innerWidth/target_frame_width;
-if (scale>1) scale = scale + .02;
+if (scale>1) scale = scale + .01;
             height_style = (scale * 100) + "%";
 
             frame_document.documentElement.style.height = height_style;
@@ -1044,7 +1044,7 @@ if (scale>1) scale = scale + .02;
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
 
-alert("JP"+"  "+target_frame_width+"  "+window.innerWidth+"  "+height_style);
+alert("JQ"+"  "+target_frame_width+"  "+window.innerWidth+"  "+height_style);
 
          }
 
