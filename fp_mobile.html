@@ -1037,12 +1037,13 @@
 
             height_style = (scale * 100) + "%";
 
-alert("JM"+height_style);
+alert("JO"+height_style);
             frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
-                        frame_document.body.style.marginBottom            = "50px";
+              frame_document.body.style.marginBottom            = "50px";
+               frame_document.documentElement.style.marginBottom = "50px";
          }
 
          return true;
