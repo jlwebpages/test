@@ -1037,11 +1037,12 @@
 
             height_style = (scale * 100) + "%";
 
-alert("JK"+height_style);
+alert("JM"+height_style);
             frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
+                        frame_document.body.style.marginBottom            = "50px";
          }
 
          return true;
