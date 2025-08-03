@@ -421,7 +421,7 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n<table style=\\"font-family: Calibri, sans-serif; margin-right: auto; margin-left: auto\\">";');
+   d.writeln('      picks_message  = "\\n<table style=\\"font-family: Calibri, sans-serif; font-size: .9em; margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Copy the following into the subject line:</b></td></tr>"');
@@ -585,7 +585,7 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<" + "/script>");');
    d.writeln('   wd.writeln("");');
-   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px 40px 10px 40px; margin: 10px auto 0px auto\\">");');
+   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px 30px 10px 30px; margin: 10px auto 0px auto\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<tr>");');
    d.writeln('   wd.writeln("");');
@@ -3302,7 +3302,7 @@ function build_postseason_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<" + "/script>");');
    d.writeln('   wd.writeln("");');
-   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px 20px 10px 20px; margin: 10px auto 0px auto\\">");');
+   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px 30px 10px 30px; margin: 10px auto 0px auto\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<tr>");');
    d.writeln('   wd.writeln("");');
