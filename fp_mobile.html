@@ -1027,8 +1027,7 @@
 
       function scale_frame(frame_name, target_frame_width, force_scale)
       {
-         var height_style = "";
-         var scale        = 1;
+         var scale = 1;
 
 
          frame_document = window.frames[frame_name].document;
@@ -1037,21 +1036,16 @@
          {
             scale = window.innerWidth/target_frame_width;
 
-            //if (scale>1) scale = scale - .02;
-
-            height_style = (scale * 100) + "%";
-
-            frame_document.documentElement.style.height = height_style;
+            frame_document.documentElement.style.height = (scale * 100) + "%";
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
-            frame_document.body.style.height            = height_style;
+            frame_document.body.style.height            = (scale * 100) + "%";
 
             if (scale > 1)
             {
                frame_document.documentElement.style.width = target_frame_width + "px";
-               frame_document.body.style.width = target_frame_width + "px";
+               frame_document.body.style.width            = target_frame_width + "px";
             }
-            alert("B");
          }
 
          return true;
