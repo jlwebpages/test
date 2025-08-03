@@ -1046,9 +1046,12 @@
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
 
-            frame_document.documentElement.style.width = target_frame_width + "px";
-            frame_document.body.style.width = target_frame_width + "px";
-            alert("A");
+            if (scale > 1)
+            {
+               frame_document.documentElement.style.width = target_frame_width + "px";
+               frame_document.body.style.width = target_frame_width + "px";
+            }
+            alert("B");
          }
 
          return true;
