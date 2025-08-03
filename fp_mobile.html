@@ -968,8 +968,6 @@
                force_scale = true;
 
                adjust_size_of_input_form_buttons(target_frame_width);
-
-               if (fp_main.document.getElementById("accept_reset_buttons") != null) fp_main.document.getElementById("accept_reset_buttons").style.paddingBottom = "15px";
             }
          }
 
@@ -1033,7 +1031,7 @@
 
          frame_document = window.frames[frame_name].document;
 
-         if ( (target_frame_width > window.innerWidth) || (force_scale == 3) )
+         if ( (target_frame_width > window.innerWidth) || (force_scale == true) )
          {
             scale = window.innerWidth/target_frame_width;
 
