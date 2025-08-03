@@ -1039,6 +1039,11 @@
 
             height_style = (scale * 100) + "%";
 
+
+alert(target_frame_width+"  "+window.innerWidth+"  "+height_style);
+
+
+
             frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";

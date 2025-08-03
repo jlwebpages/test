@@ -2579,7 +2579,7 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('');
 
-   d.writeln('<form name="fp_inputs">');
+   d.writeln('<form name="fp_inputs" style="margin: 0px; padding: 0px">');
    d.writeln('');
 
    d.writeln('<table style="border-spacing: 0px; margin: 0px auto" cellpadding=0>');
