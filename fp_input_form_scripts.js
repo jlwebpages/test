@@ -177,10 +177,9 @@ function build_regular_season_form()
    d.writeln('<body class="background_color"');
    d.writeln('      style="border: 0px;');
    d.writeln('             margin: 0px;');
-   d.writeln('            padding: 0px;');
+   d.writeln('            padding: 0px 0px 15px 0px;');
    d.writeln('              color: black;');
-   d.writeln('        font-family: Calibri, sans-serif;');
-   d.writeln('             margin: 0px 0px 15px 0px">');
+   d.writeln('        font-family: Calibri, sans-serif">');
    d.writeln('');
    d.writeln('');
 
@@ -2579,10 +2578,10 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('');
 
-   d.writeln('<center><form name="fp_inputs" style="margin: 0px auto">');
+   d.writeln('<form name="fp_inputs">');
    d.writeln('');
 
-   d.writeln('<table style="border-spacing: 0px; margin: 0px" cellpadding="0px">');
+   d.writeln('<table style="border-spacing: 0px; margin: 0px auto" cellpadding=0>');
    d.writeln('<tr style="vertical-align: middle; text-align: center">');
    d.writeln('<td id="input_form_week" class="no_border" style="font-size: 16pt; font-weight: bold; padding-top: 5px; padding-bottom: 10px; white-space: nowrap">Input Form - Week');
    d.writeln('   <select class="default_select background_color border_radius" style="vertical-align: top; font-size: 14pt; font-weight: bold; border: 1px solid gray; margin-left: 1px" name="selected_week_menu" size=1 onChange="change_week(document)">');
@@ -2603,7 +2602,7 @@ function build_regular_season_form()
    d.writeln('</table>');
    d.writeln('');
 
-   d.writeln('<table id="input_form_table" class="b3_border" style="background-color: white; border-spacing: 0px; margin: 0px" cellpadding="3px">');
+   d.writeln('<table id="input_form_table" class="b3_border" style="background-color: white; border-spacing: 0px; margin: 0px auto" cellpadding="3px">');
    d.writeln('');
 
    d.writeln('<tr class="header_one">');
@@ -2695,7 +2694,7 @@ function build_regular_season_form()
    d.writeln('</table>');
    d.writeln('');
 
-   d.writeln('<table style="margin: 0px">');
+   d.writeln('<table style="margin: 0px auto">');
    d.writeln('');
 
    d.writeln('<tr id="input_form_buttons">');
@@ -2732,7 +2731,7 @@ function build_regular_season_form()
    d.writeln('</table>');
    d.writeln('');
 
-   d.writeln('</form></center>');
+   d.writeln('</form>');
    d.writeln('');
 
    d.writeln('<script language="JavaScript" type="text/javascript">');

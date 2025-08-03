@@ -1033,18 +1033,19 @@
 
          frame_document = window.frames[frame_name].document;
 
-         if ( (target_frame_width > window.innerWidth) || (force_scale == true) )
+         if ( (target_frame_width > window.innerWidth) || (force_scale == 3) )
          {
             scale = window.innerWidth/target_frame_width;
 
             height_style = (scale * 100) + "%";
 
-alert(target_frame_width+"  "+window.innerWidth+"  "+height_style);
-
             frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
+
+alert("JL"+"  "+target_frame_width+"  "+window.innerWidth+"  "+height_style);
+
          }
 
          return true;
