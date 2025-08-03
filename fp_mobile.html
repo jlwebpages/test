@@ -1046,10 +1046,10 @@
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
          }
-alert("J3");
+
          return true;
       }
-
+alert("JL5");
    </script>
 
 </head>
@@ -1095,15 +1095,15 @@ alert("J3");
 
    </div>
 
-   <div id="fp_main" style="position: absolute; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: 1">
+   <div id="fp_main" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: 1; overflow-y: auto">
       <iframe name="fp_main" src="fp_main_mobile.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
    </div>
 
-   <div id="fp_picks" style="position: absolute; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1">
+   <div id="fp_picks" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1; overflow-y: auto">
       <iframe name="fp_picks" src="fp_empty.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
    </div>
 
-   <div id="fp_loading_indicator" style="position: absolute; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1">
+   <div id="fp_loading_indicator" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1; overflow-y: auto">
       <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
    </div>
 
