@@ -967,7 +967,9 @@
 
                force_scale = true;
 
-               adjust_size_of_input_form_buttons(target_frame_width);  
+               adjust_size_of_input_form_buttons(target_frame_width);
+
+               if (fp_main.document.getElementById("accept_reset_buttons") != null) fp_main.document.getElementById("accept_reset_buttons").style.paddingBottom = "10px";
             }
          }
 
@@ -1037,13 +1039,10 @@
 
             height_style = (scale * 100) + "%";
 
-alert("JO"+height_style);
             frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
-              frame_document.body.style.marginBottom            = "50px";
-               frame_document.documentElement.style.marginBottom = "50px";
          }
 
          return true;
