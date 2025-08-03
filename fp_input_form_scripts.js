@@ -421,8 +421,7 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 11pt\\">";');
-   d.writeln('      picks_message += "\\n<table style=\\"margin-right: auto; margin-left: auto\\">";');
+   d.writeln('      picks_message  = "\\n<table style=\\"font-family: Calibri, sans-serif; margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Copy the following into the subject line:</b></td></tr>"');
@@ -461,8 +460,7 @@ function build_regular_season_form()
    d.writeln('      }');
    d.writeln('');
    d.writeln('      picks_message += "\\n</td></tr>";');
-   d.writeln('      picks_message += "\\n</table>";');
-   d.writeln('      picks_message += "\\n</span>\\n\\n";');
+   d.writeln('      picks_message += "\\n</table>\\n\\n";');
    d.writeln('   }');
    d.writeln('   else if (message_mode == "one_duplicate_weight")');
    d.writeln('   {');
@@ -587,7 +585,7 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<" + "/script>");');
    d.writeln('   wd.writeln("");');
-   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px; margin: 10px auto 0px auto\\">");');
+   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px 40px 10px 40px; margin: 10px auto 0px auto\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<tr>");');
    d.writeln('   wd.writeln("");');
@@ -3186,8 +3184,7 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 11pt; line-height: 1.5\\">";');
-   d.writeln('      picks_message += "\\n<table style=\\"margin-right: auto; margin-left: auto\\">";');
+   d.writeln('      picks_message  = "\\n<table style=\\"font-family: Calibri, sans-serif; line-height: 1.5; margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Copy the following into the subject line:</b></td></tr>"');
@@ -3216,8 +3213,7 @@ function build_postseason_form()
    d.writeln('      }');
    d.writeln('');
    d.writeln('      picks_message += "\\n</td></tr>";');
-   d.writeln('      picks_message += "\\n</table>";');
-   d.writeln('      picks_message += "\\n</span>\\n\\n";');
+   d.writeln('      picks_message += "\\n</table>\\n\\n";');
    d.writeln('   }');
    d.writeln('');
    d.writeln('   dialog_frame = window.open("","fp_picks","");');
@@ -3306,7 +3302,7 @@ function build_postseason_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<" + "/script>");');
    d.writeln('   wd.writeln("");');
-   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px; margin: 10px auto 0px auto\\">");');
+   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px 20px 10px 20px; margin: 10px auto 0px auto\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<tr>");');
    d.writeln('   wd.writeln("");');
