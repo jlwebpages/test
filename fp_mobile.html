@@ -861,6 +861,7 @@
             var random_picks_button                 = fp_main.document.getElementById("random_picks");
             var reset_button                        = fp_main.document.getElementById("reset_button");
 
+
             if (input_form_buttons != null)
             {
                // Set the font size of the input form buttons to 11pt;
@@ -1024,8 +1025,8 @@
 
       function scale_frame(frame_name, target_frame_width, force_scale)
       {
+         var height_style = "";
          var scale        = 1;
-         var vertical_gap = 0;
 
 
          frame_document = window.frames[frame_name].document;
@@ -1034,12 +1035,19 @@
          {
             scale = window.innerWidth/target_frame_width;
 
-            vertical_gap = ( (1-scale) * 100 ) + "%";
-
-            frame_document.documentElement.style.height = "calc(100% - "+vertical_gap+")";
+            if (scale <= 1)
+            {
+               height_style = "calc(100% - " + ( (1-scale) * 100 ) + "%)";
+            }
+            else
+            {
+               height_style = "calc(100% + " + ( (scale - 1) * 100 ) + "%)";
+            }
+alert(height_style);
+            frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
-            frame_document.body.style.height            = "calc(100% - "+vertical_gap+")";
+            frame_document.body.style.height            = height_style;
          }
 
          return true;
