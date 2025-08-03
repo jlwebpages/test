@@ -1045,9 +1045,6 @@
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
-
-alert("LA"+"  "+target_frame_width+"  "+window.innerWidth+"  "+height_style);
-
          }
 
          return true;
@@ -1099,15 +1096,15 @@ alert("LA"+"  "+target_frame_width+"  "+window.innerWidth+"  "+height_style);
    </div>
 
    <div id="fp_main" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: 1">
-      <iframe name="fp_main" src="fp_main_mobile.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+      <iframe name="fp_main" src="fp_main_mobile.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px; overflow-y: scroll"></iframe>
    </div>
 
    <div id="fp_picks" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1">
-      <iframe name="fp_picks" src="fp_empty.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+      <iframe name="fp_picks" src="fp_empty.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px; overflow-y: scroll"></iframe>
    </div>
 
    <div id="fp_loading_indicator" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1">
-      <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+      <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px; overflow-y: scroll"></iframe>
    </div>
 
    <div id="mobile_menu" class="mobile_menu">
