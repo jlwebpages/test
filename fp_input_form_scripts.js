@@ -398,10 +398,7 @@ function build_regular_season_form()
    d.writeln('   var button_2         = "";');
    d.writeln('   var button_3         = "";');
    d.writeln('   var dialog_frame     = null;');
-   d.writeln('   var min_width_style  = "min-width: 0px;";');
    d.writeln('');
-   d.writeln('');
-   d.writeln('   if (top.mobile == true) min_width_style = "min-width: " + top.fp_header_width + "px;";');
    d.writeln('');
    d.writeln('   if (picks_message.indexOf(upset_style) == -1)');
    d.writeln('   {');
@@ -590,7 +587,7 @@ function build_regular_season_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<" + "/script>");');
    d.writeln('   wd.writeln("");');
-   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px; margin: 10px auto 0px auto; "+ min_width_style +"\\">");');
+   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px; margin: 10px auto 0px auto\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<tr>");');
    d.writeln('   wd.writeln("");');
@@ -3170,10 +3167,7 @@ function build_postseason_form()
    d.writeln('   var button_2         = "Submit via E-Mail";');
    d.writeln('   var button_3         = "Copy to E-Mail";');
    d.writeln('   var dialog_frame     = null;');
-   d.writeln('   var min_width_style  = "min-width: 0px;";');
    d.writeln('');
-   d.writeln('');
-   d.writeln('   if (top.mobile == true) min_width_style = "min-width: " + top.fp_header_width + "px;";');
    d.writeln('');
    d.writeln('   if (picks_message.indexOf(upset_style) == -1)');
    d.writeln('   {');
@@ -3312,7 +3306,7 @@ function build_postseason_form()
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<" + "/script>");');
    d.writeln('   wd.writeln("");');
-   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px; margin: 10px auto 0px auto; "+ min_width_style +"\\">");');
+   d.writeln('   wd.writeln("<table id=\\"picks_table\\" class=\\""+background_class+"\\" style=\\"border: 3px solid black; text-align: left; padding: 10px; margin: 10px auto 0px auto\\">");');
    d.writeln('   wd.writeln("");');
    d.writeln('   wd.writeln("<tr>");');
    d.writeln('   wd.writeln("");');
