@@ -1035,16 +1035,10 @@
          {
             scale = window.innerWidth/target_frame_width;
 
-            if (scale <= 1)
-            {
-               height_style = "calc(100% - " + ( (1-scale) * 100 ) + "%)";
-            }
-            else
-            {
-               height_style = "calc(100% + " + ( (scale - 1) * 100 ) + "%)";
-            }
-alert("JJ"+height_style);
-            frame_document.documentElement.style.minHeight = height_style;
+            height_style = (scale * 100) + "%";
+
+alert("JK"+height_style);
+            frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
             frame_document.body.style.transformOrigin   = "top left";
             frame_document.body.style.height            = height_style;
