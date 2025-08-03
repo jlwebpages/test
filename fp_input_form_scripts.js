@@ -421,7 +421,7 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 15px\\">";');
+   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 11pt\\">";');
    d.writeln('      picks_message += "\\n<table style=\\"margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
@@ -3186,7 +3186,7 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('      // Format picks for display.');
    d.writeln('');
-   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 15px; line-height: 1.5\\">";');
+   d.writeln('      picks_message  = "\\n\\n<span style=\\"font-family: Calibri, sans-serif; font-size: 11pt; line-height: 1.5\\">";');
    d.writeln('      picks_message += "\\n<table style=\\"margin-right: auto; margin-left: auto\\">";');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px\\"><b>Create an e-mail message and send it to:</b></td></tr>"');
    d.writeln('      picks_message += "\\n<tr><td nowrap style=\\"padding-bottom: 5px; padding-left: 10px\\">fp@socal.rr.com</td></tr>"');
