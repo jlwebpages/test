@@ -1035,17 +1035,11 @@
 
          if ( (target_frame_width > window.innerWidth) || (force_scale == true) )
          {
-            scale = window.innerWidth/target_frame_width + .01;
-
-
-
+            scale = window.innerWidth/target_frame_width;
 
             height_style = (scale * 100) + "%";
 
-
 alert(target_frame_width+"  "+window.innerWidth+"  "+height_style);
-
-
 
             frame_document.documentElement.style.height = height_style;
             frame_document.body.style.transform         = "scale("+scale+")";
