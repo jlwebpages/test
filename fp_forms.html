@@ -130,10 +130,17 @@ function build_forms_page()
    d.writeln("      wd.writeln('   <meta id=\"viewport\" name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">');");
    d.writeln("      wd.writeln('</head>');");
    d.writeln("      wd.writeln('');");
-   d.writeln("      wd.writeln('<frameset rows=\"0,*\" border=\"0\" frameborder=\"0\" framespacing=\"0\">');");
-   d.writeln("      wd.writeln('   <frame noresize src=\"fp_empty.html\" name=\"gv\" scrolling=\"no\">');");
-   d.writeln("      wd.writeln('   <frame noresize src=\"fp_empty.html\" name=\"form\" marginheight=\"0px\" marginwidth=\"0px\">');");
-   d.writeln("      wd.writeln('</frameset>');");
+
+
+   d.writeln("      wd.writeln('<div style=\"position: fixed; top: 0px; left: 0px; height: 0px; width: 0px\">');");
+   d.writeln("      wd.writeln('   <iframe name=\"gv\" src=\"fp_empty.html\"></iframe>');");
+   d.writeln("      wd.writeln('</div>');");
+   d.writeln('');
+   d.writeln("      wd.writeln('<div>');");
+   d.writeln("      wd.writeln('   <iframe name=\"form\" src=\"fp_empty.html\"></iframe>');");
+   d.writeln("      wd.writeln('</div>');");
+
+
    d.writeln("      wd.writeln('');");
    d.writeln("      wd.writeln('</html>');");
    d.writeln('');
@@ -354,10 +361,19 @@ function build_forms_page()
    d.writeln("      wd.writeln('   <meta id=\"viewport\" name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">');");
    d.writeln("      wd.writeln('</head>');");
    d.writeln("      wd.writeln('');");
-   d.writeln("      wd.writeln('<frameset rows=\"0,*\" border=\"0\" frameborder=\"0\" framespacing=\"0\">');");
-   d.writeln("      wd.writeln('   <frame noresize src=\"fp_empty.html\" name=\"gv\" scrolling=\"no\">');");
-   d.writeln("      wd.writeln('   <frame noresize src=\"fp_empty.html\" name=\"form\" marginheight=\"0px\" marginwidth=\"0px\">');");
-   d.writeln("      wd.writeln('</frameset>');");
+
+
+   d.writeln("      wd.writeln('<body>');");
+   d.writeln("      wd.writeln('   <div style=\"position: fixed; top: 0px; left: 0px; height: 0px; width: 0px\">');");
+   d.writeln("      wd.writeln('      <iframe name=\"gv\" src=\"fp_empty.html\"></iframe>');");
+   d.writeln("      wd.writeln('   </div>');");
+   d.writeln('');
+   d.writeln("      wd.writeln('   <div>');");
+   d.writeln("      wd.writeln('      <iframe name=\"form\" src=\"fp_empty.html\"></iframe>');");
+   d.writeln("      wd.writeln('   </div>');");
+   d.writeln("      wd.writeln('</body>');");
+
+
    d.writeln("      wd.writeln('');");
    d.writeln("      wd.writeln('</html>');");
    d.writeln('');
