@@ -2922,7 +2922,7 @@ function build_postseason_form()
    d.writeln('             margin: 0px;');
    d.writeln('            padding: 0px 0px 15px 0px;');
    d.writeln('              color: black;');
-   d.writeln('        font-family: Calibri, sans-serif"');
+   d.writeln('        font-family: Calibri, sans-serif">');
    d.writeln('');
    d.writeln('');
 
