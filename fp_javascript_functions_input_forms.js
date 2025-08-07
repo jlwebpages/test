@@ -2601,8 +2601,8 @@ function build_regular_season_form()
    d.writeln('');
 
    d.writeln('<tr class="header_one">');
-   d.writeln('<td align=right class="bb2_border" colspan=2><font style="font-size: 13pt">Name:</font></td>');
-   d.writeln('<td align=left class="bb2_border" colspan=4>');
+   d.writeln('<td class="bb2_border" style="text-align: center; white-space: nowrap" colspan=6>');
+   d.writeln('<span style="font-size: 13pt">Name:&nbsp</span>');
    d.writeln('<select class="default_select header_one_background border_radius" style="font-size: 12pt; border: 1px solid gray" name="player_name_menu" size=1 onChange="get_player_index_from_form(document)">');
    for (var i = 0; i <= top.rs_players.length; i++)
    {
@@ -4664,8 +4664,8 @@ function build_postseason_form()
    d.writeln('');
 
    d.writeln('<tr class="header_one">');
-   d.writeln('<td align=right class="bb2_border" colspan=2><font style="font-size: 14pt">Name:</font></td>');
-   d.writeln('<td align=left class="bb2_border" colspan=5>');
+   d.writeln('<td class="bb2_border" style="text-align: center; white-space: nowrap" colspan=7>');
+   d.writeln('<span style="font-size: 14pt">Name:&nbsp</span>');
    d.writeln('<select class="default_select header_one_background border_radius" style="font-size: 13pt; border: 1px solid gray" name="player_name_menu" size=1 onChange="get_player_index_from_form(document)">');
    for (var i = 0; i <= top.ps_players.length; i++)
    {
