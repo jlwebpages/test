@@ -4854,7 +4854,7 @@ function input_form_global_variables()
    {
       alert("This page cannot be displayed in a separate window.");
 
-      top.location.href = "fp_empty.html";
+      top.location.href = "about:blank";
       top.close();
 
       return false;
