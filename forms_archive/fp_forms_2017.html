@@ -10,23 +10,12 @@
 </head>
 
 <body class="background_color"
-      style="font-family: Calibri, sans-serif; color: black; border: 0px; margin: 0px; padding: 0px"
-     onload="check_for_parent_window();">
+      style="font-family: Calibri, sans-serif; color: black; border: 0px; margin: 0px; padding: 0px">
 </body>
 
 <script>
 
-   function check_for_parent_window()
-   {
-      if (window.top.gv == null)
-      {
-         alert("This page will not work by itself.  It will now close.");
-
-         window.close();
-
-         return false;
-      }
-   }
+   check_for_global_variables();
 
 
    // Regular Season Information

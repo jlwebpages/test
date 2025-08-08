@@ -32,12 +32,8 @@ function adjust_mobile_viewport_height(document,form)
 
 function build_postseason_form()
 {
-   if (check_for_opener() == false)
-   {
-      window.top.close();
+   check_for_global_variables();
 
-      return false;
-   }
 
    var bullet_color                  = "";
    var color_black                   = "black";
@@ -64,6 +60,7 @@ function build_postseason_form()
    var w3_end             = window.top.gv.w3_end;
    var w4_start           = window.top.gv.w4_start;
    var w4_end             = window.top.gv.w4_end;
+
 
    if (mode == "picks")
    {
@@ -887,13 +884,6 @@ function build_postseason_form()
 
    d.writeln('function calculate_postseason_scores(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   var error_message  = "Invalid input.\\n\\nEnter a number between 0 and 99 for the ";');
@@ -986,13 +976,6 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('function change_order(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   var order_by_menu = document.fp_scores.order_by_menu;');
    d.writeln('   var menu_index    = order_by_menu.selectedIndex;');
    d.writeln('');
@@ -1025,13 +1008,6 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('function change_view(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   if (window.top.gv.form_view == "expanded")');
    d.writeln('   {');
    d.writeln('      window.top.gv.form_view = "compact";');
@@ -1067,13 +1043,6 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('function clear_get_scores_data()');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   // Clear information set by "Get NFL Scores".');
    d.writeln('');
    d.writeln('   for (var i = 0; i < '+number_of_ps_games+'; i++)');
@@ -1091,13 +1060,6 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('function clear_scores(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   window.top.gv.scores_already_assigned = false;');
@@ -1116,13 +1078,6 @@ function build_postseason_form()
    d.writeln('   var request_url    = "https://www.scrappintwins.com/cors/" + nfl_scores_url + "?" + (new Date()).getTime();'); // scrappintwins.com provided by Dan M.
    d.writeln('   var user_message   = "\\"Get NFL Scores\\" failed.";');
    d.writeln('');
-   d.writeln('');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
    d.writeln('');
    d.writeln('   if (window.top.gv.get_scores_state == "on") user_message += "  \\"Auto Refresh\\" will be stopped."');
    d.writeln('');
@@ -1178,13 +1133,6 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('function get_scores_auto_refresh(document,command)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   if (command == "start")');
@@ -1209,13 +1157,6 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('function process_nfl_scores(document,display_dialog,command,nfl_scores)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   window.top.gv.refresh_scores = true;');
@@ -2320,12 +2261,8 @@ function build_postseason_form()
 
 function build_regular_season_form()
 {
-   if (check_for_opener() == false)
-   {
-      window.top.close();
+   check_for_global_variables();
 
-      return false;
-   }
 
    var best_mn_points_delta          = 1000;
    var best_outcome_tooltip          = "&quot;Best Outcome&quot; will figure out the best possible outcome for the selected Player.  Look under &quot;FORMS:  Picks&quot; on the Help page for more information.";
@@ -2354,6 +2291,7 @@ function build_regular_season_form()
    var visiting_team_possession_flag = "";
    var week                          = window.top.gv.current_input_week;
    var winners                       = "";
+
 
    if ( (mode == "summary") || (mode == "summary_archive") )
    {
@@ -2780,13 +2718,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function calculate_prelim_scores(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   get_selected_winners(document);');
@@ -2799,13 +2730,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function change_order(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   if (window.top.gv.order_by == "players")');
    d.writeln('   {');
    d.writeln('      window.top.gv.order_by = "scores";');
@@ -2841,13 +2765,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function change_view(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   if (window.top.gv.form_view == "expanded")');
    d.writeln('   {');
    d.writeln('      window.top.gv.form_view = "compact";');
@@ -2883,13 +2800,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function change_week(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   var results             = document.fp_results;');
    d.writeln('   var selected_week_index = 0;');
    d.writeln('   var selected_week       = 0;');
@@ -2920,13 +2830,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function clear_get_scores_data()');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   // Clear information set by "Get NFL Scores".');
    d.writeln('');
    d.writeln('   for (var i = 0; i < '+number_of_rs_games+'; i++)');
@@ -2945,13 +2848,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function clear_winners(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   for (var i = 0; i < '+number_of_rs_games+'; i++)');
@@ -2967,17 +2863,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function determine_best_outcome(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      // Make sure cursor is not set to "wait".');
-   d.writeln('');
-   d.writeln('      document.body.style.cursor = "auto";');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   var abort                   = false;');
    d.writeln('   var all_winners_specified   = true;');
    d.writeln('   var binary_winners          = "";');
@@ -3215,13 +3100,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function get_mn_points(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   var results   = document.fp_results;');
    d.writeln('   var mn_points = results.mn_points;');
    d.writeln('');
@@ -3258,13 +3136,6 @@ function build_regular_season_form()
    d.writeln('   var request_url    = "https://www.scrappintwins.com/cors/" + nfl_scores_url + "?" + (new Date()).getTime();'); // scrappintwins.com provided by Dan M.
    d.writeln('   var user_message   = "\\"Get NFL Scores\\" failed.";');
    d.writeln('');
-   d.writeln('');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
    d.writeln('');
    d.writeln('   if (window.top.gv.get_scores_state == "on") user_message += "  \\"Auto Refresh\\" will be stopped."');
    d.writeln('');
@@ -3320,13 +3191,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function get_scores_auto_refresh(document,command)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   if (command == "start")');
@@ -3371,13 +3235,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function get_selected_winners(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   var results        = document.fp_results;');
    d.writeln('   var winner_index   = 0;');
    d.writeln('   var winners_select = 0;');
@@ -3402,13 +3259,6 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('function process_nfl_scores(document,display_dialog,command,nfl_scores)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   clear_get_scores_data();');
    d.writeln('');
    d.writeln('   window.top.gv.refresh_scores = true;');
@@ -4391,12 +4241,8 @@ function build_regular_season_form()
 
 function build_regular_season_summary()
 {
-   if (check_for_opener() == false)
-   {
-      window.top.close();
+   check_for_global_variables();
 
-      return false;
-   }
 
    var rs_players           = window.top.gv.rs_players;
    var number_of_rs_players = rs_players.length;
@@ -4873,13 +4719,6 @@ function build_regular_season_summary()
    d.writeln('');
    d.writeln('function change_order(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   if (window.top.gv.order_by == "players")');
    d.writeln('   {');
    d.writeln('      window.top.gv.order_by = "scores";');
@@ -4904,13 +4743,6 @@ function build_regular_season_summary()
    d.writeln('');
    d.writeln('function change_view(document)');
    d.writeln('{');
-   d.writeln('   if (check_for_opener() == false)');
-   d.writeln('   {');
-   d.writeln('      window.top.close();');
-   d.writeln('');
-   d.writeln('      return false;');
-   d.writeln('   }');
-   d.writeln('');
    d.writeln('   if (window.top.gv.form_view == "expanded")');
    d.writeln('   {');
    d.writeln('      window.top.gv.form_view = "compact";');
@@ -5653,17 +5485,42 @@ function calculate_score(picks,weights,winners,number_of_rs_games)
 }
 
 
-function check_for_opener()
+function check_for_global_variables()
 {
-   var undefined;
-
-   if ( (!window.top.gv) || window.top.gv == null || window.top.gv == undefined)
+   if (top.gv == undefined)
    {
-      alert("This page will only work if it is opened from the Football Pool 'FORMS' page.\n" +
-            "You will now be redirected to the Football Pool home page.  Once you're\n" +
-            "there, click on 'FORMS', and then click on the desired link.");
+      var file_name = "";
+      var URL_path  = "";
 
-      window.open("fp.html");
+
+      URL_path  = window.location.pathname;
+      file_name = URL_path.substring(URL_path.lastIndexOf('/')+1);
+
+      alert(file_name+":\n\nGlobal variables needed for this webpage were not found.");
+
+      top.close();
+
+      return false;
+   }
+
+   return true;
+}
+
+
+function check_for_top_variables()
+{
+   if (top.fp_year == undefined)
+   {
+      var file_name = "";
+      var URL_path  = "";
+
+
+      URL_path  = window.location.pathname;
+      file_name = URL_path.substring(URL_path.lastIndexOf('/')+1);
+
+      alert(file_name+":\n\nTop window variables needed for this webpage were not found.");
+
+      top.close();
 
       return false;
    }

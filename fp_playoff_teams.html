@@ -27,7 +27,14 @@ if ( (year == null || mode == null) || (isNaN(year) == true) || (year < 2003 || 
 {
    alert("Error:  Invalid parameters passed to fp_playoff_teams.html");
 
-   history.back();
+   if (history.length > 1)
+   {
+      history.back();
+   }
+   else
+   {
+      window.close();
+   }
 }
 else
 {

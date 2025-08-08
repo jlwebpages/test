@@ -18,10 +18,7 @@ function build_input_form()
 
 function build_regular_season_form()
 {
-   if (input_form_global_variables() == false)
-   {
-      return false;
-   }
+   check_for_top_variables();
 
    if (top.document.getElementById("fp_main_header") != null)
    {
@@ -2772,6 +2769,8 @@ function build_regular_season_form()
 
 function build_postseason_form()
 {
+   check_for_top_variables();
+
    if (top.document.getElementById("fp_main_header") != null)
    {
       var fp_main_header_content = '';
@@ -4848,13 +4847,19 @@ function build_player_name(player_menu_index)
 }
 
 
-function input_form_global_variables()
+function check_for_top_variables()
 {
-   if (top.current_input_week == null)
+   if (top.fp_year == undefined)
    {
-      alert("This page cannot be displayed in a separate window.");
+      var file_name = "";
+      var URL_path  = "";
 
-      top.location.href = "about:blank";
+
+      URL_path  = window.location.pathname;
+      file_name = URL_path.substring(URL_path.lastIndexOf('/')+1);
+
+      alert(file_name+":\n\nTop window variables needed for this webpage were not found.");
+
       top.close();
 
       return false;
