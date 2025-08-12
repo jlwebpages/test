@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>Darlene Laguna Art - Works On Paper</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script language="JavaScript" src=scripts.js></script>
+</head>
+
+<body class="body" onLoad="load_data_from_file('works_on_paper/works_on_paper.txt','text',true); load_images_into_gallery('works_on_paper'); scroll_to_top();" oncontextmenu="return false;">
+
+
+<script>
+   write_header();
+   document.getElementById("works_on_paper_link").className = "clicked_link";
+</script>
+
+
+<table id="text_table" class="black_table border_radius">
+
+   <tr>
+      <td id="mobile" style="text-align: center; padding: 25px 25px 0px 25px; display: none">
+         <img src="works_on_paper/works_on_paper.jpg" class="border_radius" style="width: 100%">
+      </td>
+   </tr>
+
+   <tr>
+      <td id="text" class="text">
+         <!-- Load text from file. -->
+      </td>
+      <td id="desktop" style="text-align: right; vertical-align: top; padding: 50px">
+         <img src="works_on_paper/works_on_paper.jpg" class="border_radius" style="width: 300px">
+      </td>
+   </tr>
+
+</table>
+
+<div id="art_gallery" style="column-count: 3" class="art_gallery">
+   <!-- Load images into gallery. -->
+</div>
+
+<script>write_copyright();</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>Darlene Laguna Art</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <script language="JavaScript" src=scripts.js></script>
+</head>
+
+<body class="body" oncontextmenu="return false;">
+
+
+<script>
+
+   var adjusted_image_height = 0;
+   var adjusted_image_width  = 0;
+   var height_ratio          = 1;
+   var image                 = "";
+   var image_file_name       = "";
+   var image_height          = 0;
+   var image_width           = 0;
+   var image_style           = "";
+   var width_ratio           = 1;
+   var URL_string            = window.location.search;
+   var URL_parameters        = new URLSearchParams(URL_string);
+
+
+   image_file_name = URL_parameters.get("image_file_name");
+
+   if ( (image_file_name == null) || (image_file_name == "") )
+   {
+      alert("Error:  Invalid parameter passed to display_image.html");
+
+      history.back();
+   }
+
+   image     = new Image();
+   image.src = image_file_name;
+
+   image.onload = function()
+   {
+      image_width  = this.width;
+      image_height = this.height;
+
+      if (window.innerWidth >= window.innerHeight)
+      {
+         if (image_height >= image_width)
+         {
+            image_style = "width: auto; height: calc(100vh - 6px)";
+         }
+         else
+         {
+            width_ratio = image_width / window.innerWidth;
+
+            adjusted_image_height = image_height / width_ratio;
+
+            if (adjusted_image_height > window.innerHeight)
+            {
+               image_style = "width: auto; height: calc(100vh - 6px)";      
+            }
+            else
+            {
+               image_style = "width: 100%; height: auto";
+            }
+         }
+      }
+      else
+      {
+         if (image_width >= image_height)
+         {
+            image_style = "width: 100%; height: auto";
+         }
+         else
+         {
+            height_ratio = image_height / window.innerHeight;
+
+            adjusted_image_width = image_width / height_ratio;
+
+            if (adjusted_image_width > window.innerWidth)
+            {
+               image_style = "width: 100%; height: auto";
+            }
+            else
+            {
+               image_style = "width: auto; height: calc(100vh - 6px)";
+            }
+         }
+      }
+
+      document.open();
+
+      var d = document;
+
+      d.writeln('<!DOCTYPE html>');
+      d.writeln('');
+      d.writeln('<html>');
+      d.writeln('');
+      d.writeln('<head>');
+      d.writeln('   <title>Darlene Laguna Art</title>');
+      d.writeln('   <meta name="viewport" content="width=device-width, initial-scale=1">');
+      d.writeln('   <link href="styles.css" rel="stylesheet" type="text/css">');
+      d.writeln('   <script language="JavaScript" src=scripts.js><\/script>');
+      d.writeln('</head>');
+      d.writeln('');
+      d.writeln('<body class="body" oncontextmenu="return false;">');
+      d.writeln('');
+      d.writeln('');
+      d.writeln('<table class="black_table" style="text-align: center; width: 100%; height: calc(100vh)">');
+      d.writeln('   <tr>');
+      d.writeln('     <td>');
+      d.writeln('         <div style="display: inline-block; position: relative">');
+      d.writeln('            <img src="'+image_file_name+'" style="'+image_style+'">');
+      d.writeln('            <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
+      d.writeln('         </div>');
+      d.writeln('      </td>');
+      d.writeln('   </tr>');
+      d.writeln('</table>');
+      d.writeln('');
+      d.writeln('');
+      d.writeln('</body>');
+      d.writeln('');
+      d.writeln('</html>');
+
+      d.close();
+   }
+
+</script>
+
+
+</body>
+
+</html>

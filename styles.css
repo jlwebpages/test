@@ -1,0 +1,252 @@
+/* General rules for non-desktop devices */
+
+@media only screen and (max-width: 1024px)
+{
+   #menu        {visibility:     visible         !important}
+   #title       {font-size:      38px            !important}
+   #title       {letter-spacing: 2px             !important}
+   #links       {display:        none            !important}
+   #sub_title   {font-size:      30px            !important}
+   #sub_title   {padding-bottom: 15px            !important}
+   #text        {padding:        25px            !important}
+   #desktop     {display:        none            !important}
+   #mobile      {display:        block           !important}
+   #art_gallery {column-count:   1               !important}
+   #back_button {font-size:      20px            !important}
+   #back_button {padding:        0px 6px 0px 6px !important}
+}
+
+/* Additional rules for iPads in portrait orientation */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+{
+   #text_table  {width:        80%                !important}
+   #mobile      {padding:      50px 50px 0px 50px !important}
+   #text        {padding:      50px               !important}
+   #art_gallery {width:        80%                !important}
+   #art_gallery {column-count: 2                  !important}
+}
+
+/* Additional rules for mobile devices in landscape orientation */
+
+@media only screen and (max-width: 1024px) and (orientation: landscape)
+{
+   #text_table  {width:        80%                !important}
+   #mobile      {padding:      50px 50px 0px 50px !important}
+   #text        {padding:      50px               !important}
+   #art_gallery {width:        80%                !important}
+   #art_gallery {column-count: 2                  !important}
+}
+
+.body
+{
+   background-color: white;
+   color: black;
+   padding: 0px;
+   margin: 0px;
+}
+
+.title
+{
+   font-family: Arial;
+   font-weight: bold;
+   color: black;
+   font-size: 52px;
+   letter-spacing: 4px;
+}
+
+.sub_title
+{
+   font-family: Arial;
+   color: white;
+   font-size: 40px;
+   text-align: left;
+   padding-bottom: 40px;
+   display:block; 
+}
+
+.text
+{
+   font-family: Arial;
+   font-size: 19px; 
+   color: silver;
+   vertical-align: top;
+   text-align: left;
+   line-height: 30px;
+   padding: 50px;
+}
+
+.link
+{
+   font-family: Arial;
+   font-size: 16px;
+   color: darkslategray;
+   letter-spacing: 2px;
+   text-decoration: none;
+}
+
+a.link:hover
+{
+   font-weight: bold;
+   color: #BE0000;
+}
+
+.clicked_link
+{
+   font-family: Arial;
+   font-size: 16px;
+   font-weight: bold;
+   color: #BE0000;
+   letter-spacing: 2px;
+   text-decoration: none;
+}
+
+.border_radius
+{
+   border-radius: 8px;
+}
+
+.e-mail
+{
+   color: #BE0000;
+   text-decoration: none;
+}
+
+.copyright
+{
+   font-family: Arial;
+   font-size: 14px;
+   color: darkslategray;
+   text-align: center;
+   line-height: 20px;
+   padding-top: 75px;
+   padding-bottom: 50px;
+}
+
+.black_table
+{
+   background-color: #0D0D0D;
+   color: white;
+   text-align: left;
+   border-spacing: 0px;
+   padding: 0px;
+   margin: 0 auto;
+   width: 95%;
+}
+
+.white_table
+{
+   background-color: white;
+   color: black;
+   text-align: center;
+   border-spacing: 0px;
+   padding: 0px;
+   margin: 0 auto;
+   width: 95%;
+}
+
+.menu
+{
+   height: 250px;
+   width: 0%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: white;
+   overflow-x: hidden;
+   padding-top: 60px;
+}
+
+.menu a
+{
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-family: Arial;
+   font-size: 16px;
+   letter-spacing: 2px;
+   color: darkslategray;
+   display: block;
+}
+
+.menu a:hover
+{
+   font-weight: bold;
+   color: #BE0000;
+}
+
+.menu .close_button
+{
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+}
+
+.art_gallery
+{
+   column-count: 2;
+   column-gap: 50px;
+   text-align: center;
+   margin-top: 25px;
+   margin: 0 auto;
+   width: 95%;
+}
+
+.art_image
+{
+   margin-top: 25px;
+   margin-bottom: 25px;
+   display: inline-block;
+}
+
+.art_image img
+{
+   width: 100%;
+   height: auto;
+}
+
+.art_caption
+{
+   font-family: Arial;
+   font-size: 16px;
+   color: darkslategray;
+   text-align: left;
+   margin: 0px;
+}
+
+.art_title
+{
+   font-weight: bold;
+   text-decoration: underline;
+   font-size: 18px;
+   padding-top: 5px;
+   display: inline-block;
+}
+
+.art_dimensions
+{
+   font-style: italic;
+   padding-top: 10px;
+   display: inline-block;
+}
+
+.art_paragraph
+{
+   padding-top: 10px;
+   display: inline-block;
+}
+
+.back_button
+{
+   background-color: black;
+   font-family: Arial;
+   font-size: 27px;
+   color: silver;
+   border-width: 0px;
+   border-radius: 20%;
+   padding: 0px 8px 0px 8px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+}
