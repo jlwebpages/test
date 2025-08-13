@@ -115,7 +115,7 @@ function scroll_to_top()
 
 function write_copyright()
 {
-   document.writeln('<div class="copyright">Copyright &copy 2024 Darlene Laguna Art<br>All Rights Reserved.</div>');
+   document.writeln('<div class="copyright" style="font-size: 12px">Copyright &copy 2025 Darlene Laguna Art<br>All Rights Reserved.</div>');
 
    return true;
 }
@@ -139,14 +139,14 @@ function write_header()
    d.writeln('   <a href="how_to_purchase.html">HOW TO PURCHASE</a>');
    d.writeln('</div>');
    d.writeln('');
-   d.writeln('<table class="white_table">');
+   d.writeln('<table class="header_table">');
    d.writeln('   <tr>');
    d.writeln('      <td id="title" class="title" style="padding-top: 0px; padding-bottom: 25px">DARLENE LAGUNA ART</td>');
    d.writeln('   </tr>');
    d.writeln('');
    d.writeln('</table>');
    d.writeln('');
-   d.writeln('<table id="links" class="white_table" style="padding-bottom: 50px; width: 80%; white-space: nowrap">');
+   d.writeln('<table id="links" class="header_table" style="padding-bottom: 50px; width: 80%; white-space: nowrap">');
    d.writeln('   <tr>');
    d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="featured_work_link"   class="link" href="featured_work.html"  >FEATURED WORK</a></td>');
    d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="photo_art_link"       class="link" href="photo_art.html"      >PHOTO ART</a></td>');

@@ -58,8 +58,8 @@
 .sub_title
 {
    font-family: Arial;
-   color: white;
-   font-size: 40px;
+   color: darkslategray;
+   font-size: 34px;
    text-align: left;
    padding-bottom: 40px;
    display:block; 
@@ -68,8 +68,8 @@
 .text
 {
    font-family: Arial;
-   font-size: 19px; 
-   color: silver;
+   font-size: 14px; 
+   color: darkslategray;
    vertical-align: top;
    text-align: left;
    line-height: 30px;
@@ -123,9 +123,9 @@ a.link:hover
    padding-bottom: 50px;
 }
 
-.black_table
+.general_table
 {
-   background-color: #0D0D0D;
+   background-color: white;
    color: white;
    text-align: left;
    border-spacing: 0px;
@@ -134,7 +134,7 @@ a.link:hover
    width: 95%;
 }
 
-.white_table
+.header_table
 {
    background-color: white;
    color: black;
