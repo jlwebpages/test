@@ -129,7 +129,6 @@ a.link:hover
 
 .general_table
 {
-   background-color: white;
    text-align: left;
    border-spacing: 0px;
    padding: 0px;
@@ -139,7 +138,6 @@ a.link:hover
 
 .header_table
 {
-   background-color: white;
    color: black;
    text-align: center;
    border-spacing: 0px;
@@ -158,6 +156,7 @@ a.link:hover
    background-color: white;
    overflow-x: hidden;
    padding-top: 60px;
+   border-radius: 0px 0px 8px 0px;
 }
 
 .menu a
