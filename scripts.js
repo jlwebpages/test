@@ -136,7 +136,6 @@ function write_header()
    d.writeln('   <a href="photo_art.html"      >PHOTO ART</a>');
    d.writeln('   <a href="works_on_paper.html" >WORKS ON PAPER</a>');
    d.writeln('   <a href="about.html"          >ABOUT</a>');
-   d.writeln('   <a href="how_to_purchase.html">HOW TO PURCHASE</a>');
    d.writeln('</div>');
    d.writeln('');
    d.writeln('<table class="header_table">');
@@ -146,13 +145,12 @@ function write_header()
    d.writeln('');
    d.writeln('</table>');
    d.writeln('');
-   d.writeln('<table id="links" class="header_table" style="padding-bottom: 50px; width: 80%; white-space: nowrap">');
+   d.writeln('<table id="links" class="header_table" style="padding-bottom: 50px; width: 60%; white-space: nowrap">');
    d.writeln('   <tr>');
    d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="featured_work_link"   class="link" href="featured_work.html"  >FEATURED WORK</a></td>');
    d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="photo_art_link"       class="link" href="photo_art.html"      >PHOTO ART</a></td>');
    d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="works_on_paper_link"  class="link" href="works_on_paper.html" >WORKS ON PAPER</a></td>')
    d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="about_link"           class="link" href="about.html"          >ABOUT</a></td>');
-   d.writeln('      <td style="padding-left: 10px; padding-right: 10px"><a id="how_to_purchase_link" class="link" href="how_to_purchase.html">HOW TO PURCHASE</a></td>');
    d.writeln('   </tr>');
    d.writeln('</table>');
    d.writeln('');

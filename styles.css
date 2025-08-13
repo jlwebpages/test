@@ -126,11 +126,10 @@ a.link:hover
 .general_table
 {
    background-color: white;
-   color: white;
    text-align: left;
    border-spacing: 0px;
    padding: 0px;
-   margin: 0 auto;
+   margin: 0px auto;
    width: 95%;
 }
 
@@ -141,13 +140,13 @@ a.link:hover
    text-align: center;
    border-spacing: 0px;
    padding: 0px;
-   margin: 0 auto;
+   margin: 0px auto;
    width: 95%;
 }
 
 .menu
 {
-   height: 200px;
+   height: 160px;
    width: 0%;
    position: fixed;
    top: 0;
@@ -189,7 +188,7 @@ a.link:hover
    column-gap: 50px;
    text-align: center;
    margin-top: 25px;
-   margin: 0 auto;
+   margin: 0px auto;
    width: 95%;
 }
 
