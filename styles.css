@@ -83,6 +83,8 @@
    color: darkslategray;
    letter-spacing: 2px;
    text-decoration: none;
+   margin: 0px;
+   padding: 0px 50px 0px 50px;
 }
 
 a.link:hover
@@ -99,6 +101,8 @@ a.link:hover
    color: #BE0000;
    letter-spacing: 2px;
    text-decoration: none;
+   margin: 0px;
+   padding: 0px 50px 0px 50px;
 }
 
 .border_radius
@@ -177,7 +181,7 @@ a.link:hover
 {
    position: absolute;
    top: 0;
-   right: 25px;
+   right: 10px;
    font-size: 36px;
    margin-left: 50px;
 }
