@@ -16,6 +16,24 @@
    #mobile      {display:        block           !important}
 }
 
+/* Rules for mobile devices in landscape orientation */
+
+@media only screen and (max-width: 768px) and (orientation: landscape)
+{
+   .menu_button {visibility:     visible             !important}
+   .title       {font-size:      38px                !important}
+   .title       {letter-spacing: 2px                 !important}
+   .links       {display:        none                !important}
+   .sub_title   {font-size:      30px                !important}
+   .sub_title   {padding-bottom: 15px                !important}
+   .text        {padding:        50px 15px 25px 20px !important}
+   .art_gallery {column-count:   2                   !important}
+   #desktop     {padding:        50px 20px 50px 15px !important}
+   #desktop     {width:        250px !important}
+   .back_button {font-size:      20px                !important}
+   .back_button {padding:        0px 6px 0px 6px     !important}
+}
+
 /* Rules for iPads in portrait orientation */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
@@ -34,29 +52,6 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
 {
    .links {width: 75% !important}
-}
-
-@media only screen and (max-width: 768px) and (orientation: landscape)
-{
-   .menu_button {visibility:     visible         !important}
-   .title       {font-size:      38px            !important}
-   .title       {letter-spacing: 2px             !important}
-   .links       {display:        none            !important}
-   .sub_title   {font-size:      30px            !important}
-   .sub_title   {padding-bottom: 15px            !important}
-   .text        {padding:        25px            !important}
-   .art_gallery {column-count:   2               !important}
-   .back_button {font-size:      20px            !important}
-   .back_button {padding:        0px 6px 0px 6px !important}
-
-
-
-
-
-   .links       {width:          95%                 !important}
-
-   #desktop     {padding:        25px !important}
-      #desktop     {width: 200px !important}
 }
 
 .body
