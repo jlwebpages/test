@@ -128,33 +128,24 @@ function write_header()
 
    d.writeln('');
    d.writeln('');
-   d.writeln('<span id="menu" style="font-size: 30px; cursor: pointer; visibility: hidden; padding-left: 5px" onclick="display_menu();" onPress="display_menu();">&#9776;</span>');
+   d.writeln('<span id="menu" class="menu_button" onclick="display_menu();">&#9776;</span>');
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu">');
-   d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();" onPress="close_menu();">&times;</a>');
+   d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
    d.writeln('   <a href="featured_work.html"  >FEATURED WORK</a>');
    d.writeln('   <a href="photo_art.html"      >PHOTO ART</a>');
    d.writeln('   <a href="works_on_paper.html" >WORKS ON PAPER</a>');
    d.writeln('   <a href="about.html"          >ABOUT</a>');
    d.writeln('</div>');
    d.writeln('');
-   d.writeln('<table class="header_table">');
-   d.writeln('   <tr>');
-   d.writeln('      <td id="title" class="title" style="padding-top: 0px; padding-bottom: 25px">DARLENE LAGUNA ART</td>');
-   d.writeln('   </tr>');
+   d.writeln('<div id="title" class="title">DARLENE LAGUNA ART</div>');
    d.writeln('');
-   d.writeln('</table>');
-   d.writeln('');
-   d.writeln('<table id="links" class="header_table" style="padding-bottom: 50px; white-space: nowrap">');
-   d.writeln('   <tr>');
-   d.writeln('      <td>');
-   d.writeln('         <a id="featured_work_link"  class="link" href="featured_work.html" >FEATURED WORK</a>');
-   d.writeln('         <a id="photo_art_link"      class="link" href="photo_art.html"     >PHOTO ART</a>');
-   d.writeln('         <a id="works_on_paper_link" class="link" href="works_on_paper.html">WORKS ON PAPER</a>')
-   d.writeln('         <a id="about_link"          class="link" href="about.html"         >ABOUT</a>');
-   d.writeln('      <td>');
-   d.writeln('   </tr>');
-   d.writeln('</table>');
+   d.writeln('<div id="links" class="links">');
+   d.writeln('   <a id="featured_work_link"  class="link" href="featured_work.html" >FEATURED WORK</a>');
+   d.writeln('   <a id="photo_art_link"      class="link" href="photo_art.html"     >PHOTO ART</a>');
+   d.writeln('   <a id="works_on_paper_link" class="link" href="works_on_paper.html">WORKS ON PAPER</a>')
+   d.writeln('   <a id="about_link"          class="link" href="about.html"         >ABOUT</a>');
+   d.writeln('</div>');
    d.writeln('');
    d.writeln('');
 
