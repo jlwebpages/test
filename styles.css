@@ -2,48 +2,48 @@
 
 @media only screen and (max-width: 600px)
 {
-   .menu_button {visibility:     visible         !important}
-   .title       {font-size:      38px            !important}
-   .title       {letter-spacing: 2px             !important}
-   .links       {display:        none            !important}
-   .sub_title   {font-size:      30px            !important}
-   .sub_title   {padding-bottom: 15px            !important}
-   .text        {padding:        25px            !important}
-   .art_gallery {column-count:   1               !important}
-   .back_button {font-size:      20px            !important}
-   .back_button {padding:        0px 6px 0px 6px !important}
-   #desktop     {display:        none            !important}
-   #mobile      {display:        block           !important}
+   .menu_button   {visibility:     visible         !important}
+   .title         {font-size:      38px            !important}
+   .title         {letter-spacing: 2px             !important}
+   .links         {display:        none            !important}
+   .sub_title     {font-size:      30px            !important}
+   .sub_title     {padding-bottom: 15px            !important}
+   .text          {padding:        25px            !important}
+   .art_gallery   {column-count:   1               !important}
+   .back_button   {font-size:      20px            !important}
+   .back_button   {padding:        0px 6px 0px 6px !important}
+   #desktop_image {display:        none            !important}
+   #mobile_image  {display:        block           !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
 
 @media only screen and (max-width: 768px) and (orientation: landscape)
 {
-   .menu_button {visibility:     visible             !important}
-   .title       {font-size:      38px                !important}
-   .title       {letter-spacing: 2px                 !important}
-   .links       {display:        none                !important}
-   .sub_title   {font-size:      30px                !important}
-   .sub_title   {padding-bottom: 15px                !important}
-   .text        {padding:        50px 15px 25px 20px !important}
-   .art_gallery {column-count:   2                   !important}
-   .back_button {font-size:      20px                !important}
-   .back_button {padding:        0px 6px 0px 6px     !important}
-   #desktop     {padding:        50px 20px 50px 15px !important}
+   .menu_button   {visibility:     visible             !important}
+   .title         {font-size:      38px                !important}
+   .title         {letter-spacing: 2px                 !important}
+   .links         {display:        none                !important}
+   .sub_title     {font-size:      30px                !important}
+   .sub_title     {padding-bottom: 15px                !important}
+   .text          {padding:        25px 15px 25px 20px !important}
+   .art_gallery   {column-count:   2                   !important}
+   .back_button   {font-size:      20px                !important}
+   .back_button   {padding:        0px 6px 0px 6px     !important}
+   #desktop_image {padding:        25px 20px 25px 15px !important}
 }
 
 /* Rules for iPads in portrait orientation */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
-   .title       {font-size:      46px                !important}
-   .title       {letter-spacing: 2px                 !important}
-   .links       {width:          85%                 !important}
-   .sub_title   {padding-bottom: 15px                !important}
-   .text        {padding:        50px 15px 25px 20px !important}
-   .art_gallery {column-count:   2                   !important}
-   #desktop     {padding:        50px 20px 50px 15px !important}
+   .title         {font-size:      46px                !important}
+   .title         {letter-spacing: 2px                 !important}
+   .links         {width:          85%                 !important}
+   .sub_title     {padding-bottom: 15px                !important}
+   .text          {padding:        50px 15px 25px 20px !important}
+   .art_gallery   {column-count:   2                   !important}
+   #desktop_image {padding:        50px 20px 50px 15px !important}
 }
 
 /* Rules for iPads in landscape orientation */
@@ -57,8 +57,8 @@
 {
    background-color: white;
    color: black;
-   padding: 0px;
    margin: 0px;
+   padding: 0px;
 }
 
 .title
@@ -89,7 +89,7 @@
    width: 60%;
    margin: 0px auto;
    padding: 25px;
-   white-space: nowrap
+   white-space: nowrap;
 }
 
 .link
@@ -119,12 +119,12 @@ a.link:hover
    margin: 0px;
 }
 
-.general_table
+.table
 {
    text-align: left;
    border-spacing: 0px;
-   padding: 0px;
    margin: 0px auto;
+   padding: 0px;
    width: 95%;
 }
 
