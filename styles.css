@@ -38,11 +38,7 @@
 
 @media only screen and (max-width: 1024px) and (orientation: landscape)
 {
-   #text_table  {width:        80%                !important}
-   #mobile      {padding:      50px 50px 0px 50px !important}
-   #text        {padding:      50px               !important}
-   #art_gallery {width:        80%                !important}
-   #art_gallery {column-count: 2                  !important}
+
 }
 
 .body
