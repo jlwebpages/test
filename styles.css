@@ -28,10 +28,9 @@
    .sub_title   {padding-bottom: 15px                !important}
    .text        {padding:        50px 15px 25px 20px !important}
    .art_gallery {column-count:   2                   !important}
-   #desktop     {padding:        50px 20px 50px 15px !important}
-   #desktop     {width:        250px !important}
    .back_button {font-size:      20px                !important}
    .back_button {padding:        0px 6px 0px 6px     !important}
+   #desktop     {padding:        50px 20px 50px 15px !important}
 }
 
 /* Rules for iPads in portrait orientation */

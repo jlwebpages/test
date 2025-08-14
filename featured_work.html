@@ -10,7 +10,7 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" onLoad="load_data_from_file('featured_work/featured_work.txt','text',true); load_images_into_gallery('featured_work'); scroll_to_top();">
+<body class="body" onLoad="load_data_from_file('featured_work/featured_work.txt','text',true); load_images_into_gallery('featured_work'); scroll_to_top();" oncontextmenu="return false;">
 
 
 <script>
@@ -31,8 +31,8 @@
       <td id="text" class="text">
          <!-- Load data from file. -->
       </td>
-      <td style="text-align: right; vertical-align: top">
-         <img id="desktop" src="featured_work/featured_work.jpg" class="border_radius" style="padding: 50px; width: 300px">
+      <td id="desktop" style="text-align: right; vertical-align: top; padding: 50px">
+         <img src="featured_work/featured_work.jpg" class="border_radius" style="width: 300px">
       </td>
    </tr>
 
