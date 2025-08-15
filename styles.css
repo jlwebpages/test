@@ -39,18 +39,10 @@
 {
    .title         {font-size:      46px                !important}
    .title         {letter-spacing: 2px                 !important}
-   .links         {width:          85%                 !important}
    .sub_title     {padding-bottom: 15px                !important}
    .text          {padding:        50px 15px 25px 20px !important}
    .art_gallery   {column-count:   2                   !important}
    #desktop_image {padding:        50px 20px 50px 15px !important}
-}
-
-/* Rules for iPads in landscape orientation */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-{
-   .links {width: 75% !important}
 }
 
 .body
@@ -78,18 +70,20 @@
    color: darkslategray;
    font-size: 34px;
    text-align: left;
+   white-space: nowrap;
    padding-bottom: 40px;
-   display:block; 
+   display: block;
 }
 
 .links
 {
    display: flex;
-   justify-content: space-between;
-   width: 60%;
-   margin: 0px auto;
-   padding: 25px;
+   justify-content: space-evenly;
    white-space: nowrap;
+   width: 95%;
+   max-width: 1200px;
+   margin: 0px auto;
+   padding: 25px 0px 25px 0px;
 }
 
 .link
