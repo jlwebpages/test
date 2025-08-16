@@ -6,11 +6,23 @@
    <title>Darlene Laguna Art</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="styles.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" oncontextmenu="return false;">
+<body class="body">
 
+
+<script>
+
+function load_image_caption()
+{
+   load_data_from_file(file_path_prefix+"_title.txt","image_title",true);
+   load_data_from_file(file_path_prefix+"_dimensions.txt","image_dimensions",true);
+   load_data_from_file(file_path_prefix+"_paragraph.txt","image_paragraph",true);
+}
+
+</script>
 
 <script>
 
@@ -36,6 +48,8 @@
       history.back();
    }
 
+   file_path_prefix = image_file_name.split('.')[0];
+
    image     = new Image();
    image.src = image_file_name;
 
@@ -48,7 +62,7 @@
       {
          if (image_height >= image_width)
          {
-            image_style = "width: auto; height: calc(100vh - 6px)";
+            image_style = "width: auto; height: 100vh";
          }
          else
          {
@@ -58,7 +72,7 @@
 
             if (adjusted_image_height > window.innerHeight)
             {
-               image_style = "width: auto; height: calc(100vh - 6px)";      
+               image_style = "width: auto; height: 100vh";      
             }
             else
             {
@@ -84,7 +98,7 @@
             }
             else
             {
-               image_style = "width: auto; height: calc(100vh - 6px)";
+               image_style = "width: auto; height: 100vh";
             }
          }
       }
@@ -104,19 +118,22 @@
       d.writeln('   <script language="JavaScript" src=scripts.js><\/script>');
       d.writeln('</head>');
       d.writeln('');
-      d.writeln('<body class="body" oncontextmenu="return false;">');
+      d.writeln('<body class="body" onload="load_image_caption()">');
       d.writeln('');
       d.writeln('');
-      d.writeln('<table class="table" style="text-align: center; width: 100%; height: calc(100vh)">');
-      d.writeln('   <tr>');
-      d.writeln('     <td>');
-      d.writeln('         <div style="display: inline-block; position: relative">');
-      d.writeln('            <img src="'+image_file_name+'" style="'+image_style+'">');
-      d.writeln('            <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
-      d.writeln('         </div>');
-      d.writeln('      </td>');
-      d.writeln('   </tr>');
-      d.writeln('</table>');
+      d.writeln('<div style="display: grid; align-items: start; width: 100%; height: 100vh">');
+      d.writeln('   <div style="display: inline-block; position: relative">');
+      d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
+      d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
+      //d.writeln('   </div>');
+
+      d.writeln('   <p class="art_caption" style="vertical-align: top; padding: 0px 10px 10px 10px">');
+      d.writeln('      <span id="image_title" class="art_title"></span><br>');
+      d.writeln('      <span id="image_dimensions" class="art_dimensions"></span><br>');
+      d.writeln('      <span id="image_paragraph" class="art_paragraph"></span>');
+      d.writeln('   </p>');
+      d.writeln('</div>');
+
       d.writeln('');
       d.writeln('');
       d.writeln('</body>');
