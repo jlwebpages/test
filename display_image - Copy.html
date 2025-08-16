@@ -28,15 +28,12 @@ function load_image_caption()
 
    var adjusted_image_height = 0;
    var adjusted_image_width  = 0;
-   var container_style       = "";
-   var container_style_mode  = 1;
    var height_ratio          = 1;
    var image                 = "";
    var image_file_name       = "";
    var image_height          = 0;
    var image_width           = 0;
    var image_style           = "";
-
    var width_ratio           = 1;
    var URL_string            = window.location.search;
    var URL_parameters        = new URLSearchParams(URL_string);
@@ -66,8 +63,6 @@ function load_image_caption()
          if (image_height >= image_width)
          {
             image_style = "width: auto; height: 100vh";
-
-            container_style_mode = 1;
          }
          else
          {
@@ -77,15 +72,11 @@ function load_image_caption()
 
             if (adjusted_image_height > window.innerHeight)
             {
-               image_style = "width: auto; height: 100vh";
-
-               container_style_mode = 1;
+               image_style = "width: auto; height: 100vh";      
             }
             else
             {
                image_style = "width: 100%; height: auto";
-
-               container_style_mode = 2;
             }
          }
       }
@@ -94,8 +85,6 @@ function load_image_caption()
          if (image_width >= image_height)
          {
             image_style = "width: 100%; height: auto";
-
-            container_style_mode = 2;
          }
          else
          {
@@ -106,29 +95,12 @@ function load_image_caption()
             if (adjusted_image_width > window.innerWidth)
             {
                image_style = "width: 100%; height: auto";
-
-               container_style_mode = 2;
             }
             else
             {
                image_style = "width: auto; height: 100vh";
-
-               container_style_mode = 1;
             }
          }
-      }
-
-      if (container_style_mode == 1)
-      {
-         // Image height equals viewport height
-
-         container_style = "\"background-color: black; display: grid; grid-template-columns: auto auto; justify-content: center; gap: 0px; height: 100vh; margin: 0px auto; overflow-y: hidden\"";
-      }
-      else
-      {
-         // Image width equals viewport width
-
-         container_style = "\"background-color: white; display: grid; grid-template-columns: 1fr; place-items: center; place-content: start; width: 100%; height: 100vh\"";
       }
 
       document.open();
@@ -149,19 +121,18 @@ function load_image_caption()
       d.writeln('<body class="body" onload="load_image_caption()">');
       d.writeln('');
       d.writeln('');
-      d.writeln('<div style='+container_style+'>');
-      d.writeln('');
+      d.writeln('<div style="display: grid; place-items: center; place-content: start; width: 100%; height: 100vh">');
       d.writeln('   <div style="display: inline-block; position: relative">');
       d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
       d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
       d.writeln('   </div>');
-      d.writeln('');
-      d.writeln('   <div class="art_caption" style="background-color: white; justify-self: start; align-self: start; height: 100%; max-width: 500px; padding: 0px 10px 10px 10px">');
+
+      d.writeln('   <p class="art_caption" style="justify-self: start; padding: 0px 10px 10px 10px">');
       d.writeln('      <span id="image_title" class="art_title"></span><br>');
       d.writeln('      <span id="image_dimensions" class="art_dimensions"></span><br>');
       d.writeln('      <span id="image_paragraph" class="art_paragraph"></span>');
-      d.writeln('   </div>');
-      d.writeln('');
+      d.writeln('   </p>');
+
       d.writeln('</div>');
       d.writeln('');
       d.writeln('');

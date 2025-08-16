@@ -74,18 +74,9 @@ function load_image(gallery_name,image_number,max_number_of_images)
 
    image_html  = '<div class="art_image">';
    image_html += '   <a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="border_radius"></a>';
-   //image_html += '   <p class="art_caption">';
-   //image_html += '      <span id="'+file_name_prefix+'_title" class="art_title"></span><br>';
-   //image_html += '      <span id="'+file_name_prefix+'_dimensions" class="art_dimensions"></span><br>';
-   //image_html += '      <span id="'+file_name_prefix+'_paragraph" class="art_paragraph"></span>';
-   //image_html += '   </p>';
    image_html += '</div>';
 
    art_gallery_div.insertAdjacentHTML("beforeend",image_html);
-
-   //load_data_from_file(file_path_prefix+"_title.txt",file_name_prefix+"_title",false);
-   //load_data_from_file(file_path_prefix+"_dimensions.txt",file_name_prefix+"_dimensions",false);
-   //load_data_from_file(file_path_prefix+"_paragraph.txt",file_name_prefix+"_paragraph",false);
 
    if (image_number < max_number_of_images) check_if_image_exists(gallery_name,image_number+1,max_number_of_images)
 
