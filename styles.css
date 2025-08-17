@@ -243,6 +243,7 @@ a.link:hover
    min-width: 200px;
    margin: 0px;
    padding: 0px 10px 10px 10px;
+   overflow-y: scroll;
 }
 
 .art_title
