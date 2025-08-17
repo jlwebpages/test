@@ -150,11 +150,9 @@ function load_image_caption()
 
          if ( (adjusted_image_width+200) > (window.innerWidth) )
          {
-            image_style = "width: 100%; height: auto";
-
             container_class = "image_container_one_column";
 
-            art_caption_style = "style=\"width: " + (window.innerWidth-20) + "px; margin: 0px auto\"";
+            art_caption_style = "style=\"width: " + adjusted_image_width + "px; margin: 0px auto\"";
          }
       }
       else
