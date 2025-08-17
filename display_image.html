@@ -43,7 +43,6 @@ function load_image_caption()
    var URL_string            = window.location.search;
    var URL_parameters        = new URLSearchParams(URL_string);
 
-if (CSS.supports('height', '100dvh')) alert("100dvh");
 
    image_file_name = URL_parameters.get("image_file_name");
 
@@ -66,7 +65,14 @@ if (CSS.supports('height', '100dvh')) alert("100dvh");
       {
          if (image_height >= image_width)
          {
-            image_style = "width: auto; height: 100dvh";
+            if (CSS.supports('height', '100dvh'))
+            {
+               image_style = "width: auto; height: 100dvh";
+            }
+            else
+            {
+               image_style = "width: auto; height: 100vh";
+            }
 
             container_style_mode = 1;
          }
@@ -78,7 +84,14 @@ if (CSS.supports('height', '100dvh')) alert("100dvh");
 
             if (adjusted_image_height > window.innerHeight)
             {
-               image_style = "width: auto; height: 100dvh";
+               if (CSS.supports('height', '100dvh'))
+               {
+                  image_style = "width: auto; height: 100dvh";
+               }
+               else
+               {
+                  image_style = "width: auto; height: 100vh";
+               }
 
                container_style_mode = 1;
             }
@@ -112,7 +125,14 @@ if (CSS.supports('height', '100dvh')) alert("100dvh");
             }
             else
             {
-               image_style = "width: auto; height: 100dvh";
+               if (CSS.supports('height', '100dvh'))
+               {
+                  image_style = "width: auto; height: 100dvh";
+               }
+               else
+               {
+                  image_style = "width: auto; height: 100vh";
+               }
 
                container_style_mode = 1;
             }
