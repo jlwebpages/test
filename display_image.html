@@ -122,13 +122,13 @@ function load_image_caption()
       {
          // Image height equals viewport height
 
-         container_style = "\"background-color: black; display: grid; grid-template-columns: auto auto; justify-content: center; gap: 0px; height: 100dvh; margin: 0px auto; overflow-y: hidden\"";
+         container_class = "image_container_two_column";
       }
       else
       {
          // Image width equals viewport width
 
-         container_style = "\"background-color: white; display: grid; grid-template-columns: 1fr; place-items: center; place-content: start; width: 100%; height: 100dvh\"";
+         container_class = "image_container_one_column";
       }
 
       document.open();
@@ -149,7 +149,7 @@ function load_image_caption()
       d.writeln('<body class="body" onload="load_image_caption();" oncontextmenu="return false;">');
       d.writeln('');
       d.writeln('');
-      d.writeln('<div style='+container_style+'>');
+      d.writeln('<div class='+container_class+'>');
       d.writeln('');
       d.writeln('   <div style="display: inline-block; position: relative">');
       d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');

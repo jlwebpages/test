@@ -45,6 +45,12 @@
    #desktop_image {padding:        50px 20px 50px 15px !important}
 }
 
+@supports (height: 100dvh)
+{
+   .image_container_one_column {height: 100dvh !important}
+   .image_container_two_column {height: 100dvh !important}
+}
+
 .body
 {
    background-color: white;
@@ -268,4 +274,27 @@ a.link:hover
    position: absolute;
    top: 5px;
    right: 5px;
+}
+
+.image_container_one_column
+{
+   background-color: white;
+   display: grid;
+   grid-template-columns: 1fr;
+   place-items: center;
+   place-content: start;
+   width: 100%;
+   height: 100vh;
+}
+
+.image_container_two_column
+{
+   background-color: black;
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: center;
+   gap: 0px;
+   height: 100vh;
+   margin: 0px auto;
+   overflow-y: hidden;
 }
