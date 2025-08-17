@@ -43,6 +43,7 @@ function load_image_caption()
    var URL_string            = window.location.search;
    var URL_parameters        = new URLSearchParams(URL_string);
 
+if (CSS.supports('height', '100dvh')) alert("100dvh");
 
    image_file_name = URL_parameters.get("image_file_name");
 
