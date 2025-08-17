@@ -38,7 +38,6 @@ function display_menu()
 
 function load_data_from_file(file_name,element_id,display_error)
 {
-   //alert(file_name+"   "+element_id);
    $.ajax
    (
    {
