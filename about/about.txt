@@ -10,3 +10,5 @@ If you are in the Orange, CA area, you can view or purchase in person - just <a 
 <p>
 Thank you,<br>
 Darlene Laguna
+<p>
+<a style="display: inline-block; padding-top: 25px" href="https://www.instagram.com/dklaguna_art/"><img src="instagram.png" width="50px"></a>

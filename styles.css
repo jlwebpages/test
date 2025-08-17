@@ -152,8 +152,7 @@ a.link:hover
    color: darkslategray;
    text-align: center;
    line-height: 20px;
-   padding-top: 75px;
-   padding-bottom: 50px;
+   padding: 25px;
 }
 
 .border_radius
