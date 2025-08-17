@@ -122,13 +122,13 @@ function load_image_caption()
       {
          // Image height equals viewport height
 
-         container_style = "\"background-color: black; display: grid; grid-template-columns: auto auto; justify-content: center; gap: 0px; height: 100vh; margin: 0px auto; overflow-y: hidden\"";
+         container_style = "\"background-color: black; display: grid; grid-template-columns: auto auto; justify-content: center; gap: 0px; height: 100%; margin: 0px auto; overflow-y: hidden\"";
       }
       else
       {
          // Image width equals viewport width
 
-         container_style = "\"background-color: white; display: grid; grid-template-columns: 1fr; place-items: center; place-content: start; width: 100%; height: 100vh\"";
+         container_style = "\"background-color: white; display: grid; grid-template-columns: 1fr; place-items: center; place-content: start; width: 100%; height: 100%\"";
       }
 
       document.open();
@@ -137,7 +137,7 @@ function load_image_caption()
 
       d.writeln('<!DOCTYPE html>');
       d.writeln('');
-      d.writeln('<html>');
+      d.writeln('<html style="height: 100%; margin: 0px; padding: 0px">');
       d.writeln('');
       d.writeln('<head>');
       d.writeln('   <title>Darlene Laguna Art</title>');
@@ -146,7 +146,7 @@ function load_image_caption()
       d.writeln('   <script language="JavaScript" src=scripts.js><\/script>');
       d.writeln('</head>');
       d.writeln('');
-      d.writeln('<body class="body" onload="load_image_caption();" oncontextmenu="return false;">');
+      d.writeln('<body class="body" style="height: 100%" onload="load_image_caption();" oncontextmenu="return false;">');
       d.writeln('');
       d.writeln('');
       d.writeln('<div style='+container_style+'>');
