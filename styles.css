@@ -232,11 +232,17 @@ a.link:hover
 
 .art_caption
 {
+   background-color: white;
    font-family: Arial;
    font-size: 16px;
    color: darkslategray;
    text-align: left;
+   justify-self: start;
+   align-self: start;
+   height: 100%;
+   min-width: 200px;
    margin: 0px;
+   padding: 0px 10px 10px 10px;
 }
 
 .art_title

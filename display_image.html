@@ -31,14 +31,17 @@ function load_image_caption()
 
    var adjusted_image_height = 0;
    var adjusted_image_width  = 0;
-   var container_style       = "";
-   var container_style_mode  = 1;
+   var art_caption_style     = "";
+   var container_class       = "image_container_two_column";
+   var container_style       = 2;
    var height_ratio          = 1;
    var image                 = "";
    var image_file_name       = "";
    var image_height          = 0;
    var image_width           = 0;
    var image_style           = "";
+   var one_column_container  = 1;
+   var two_column_container  = 2;
    var width_ratio           = 1;
    var URL_string            = window.location.search;
    var URL_parameters        = new URLSearchParams(URL_string);
@@ -61,6 +64,12 @@ function load_image_caption()
       image_width  = this.width;
       image_height = this.height;
 
+      width_ratio  = image_width/window.innerWidth;
+      height_ratio = image_height/window.innerHeight;
+
+      adjusted_image_width  = image_width/height_ratio;
+      adjusted_image_height = image_height/width_ratio;
+
       if (window.innerWidth >= window.innerHeight)
       {
          if (image_height >= image_width)
@@ -74,14 +83,10 @@ function load_image_caption()
                image_style = "width: auto; height: 100vh";
             }
 
-            container_style_mode = 1;
+            container_style = two_column_container;
          }
          else
          {
-            width_ratio = image_width / window.innerWidth;
-
-            adjusted_image_height = image_height / width_ratio;
-
             if (adjusted_image_height > window.innerHeight)
             {
                if (CSS.supports('height', '100dvh'))
@@ -93,13 +98,13 @@ function load_image_caption()
                   image_style = "width: auto; height: 100vh";
                }
 
-               container_style_mode = 1;
+               container_style = two_column_container;
             }
             else
             {
                image_style = "width: 100%; height: auto";
 
-               container_style_mode = 2;
+               container_style = one_column_container;
             }
          }
       }
@@ -109,19 +114,15 @@ function load_image_caption()
          {
             image_style = "width: 100%; height: auto";
 
-            container_style_mode = 2;
+            container_style = one_column_container;
          }
          else
          {
-            height_ratio = image_height / window.innerHeight;
-
-            adjusted_image_width = image_width / height_ratio;
-
             if (adjusted_image_width > window.innerWidth)
             {
                image_style = "width: 100%; height: auto";
 
-               container_style_mode = 2;
+               container_style = one_column_container;
             }
             else
             {
@@ -134,16 +135,25 @@ function load_image_caption()
                   image_style = "width: auto; height: 100vh";
                }
 
-               container_style_mode = 1;
+               container_style = two_column_container;
             }
          }
       }
 
-      if (container_style_mode == 1)
+      if (container_style == two_column_container)
       {
          // Image height equals viewport height
 
          container_class = "image_container_two_column";
+
+         art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
+
+         if ( (adjusted_image_width+200) > (window.innerWidth) )
+         {
+            container_class = "image_container_one_column";
+
+            art_caption_style = "style=\"width: " + adjusted_image_width + "px; margin: 0px auto\"";
+         }
       }
       else
       {
@@ -177,7 +187,7 @@ function load_image_caption()
       d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
       d.writeln('   </div>');
       d.writeln('');
-      d.writeln('   <div class="art_caption" style="background-color: white; justify-self: start; align-self: start; height: 100%; max-width: 500px; padding: 0px 10px 10px 10px">');
+      d.writeln('   <div class="art_caption" '+art_caption_style+'>');
       d.writeln('      <span id="image_title" class="art_title"></span><br>');
       d.writeln('      <span id="image_dimensions" class="art_dimensions"></span><br>');
       d.writeln('      <span id="image_paragraph" class="art_paragraph"></span>');
