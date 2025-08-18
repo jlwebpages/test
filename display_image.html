@@ -65,12 +65,12 @@ function load_image_caption()
       image_height = this.height;
 
       width_ratio  = image_width/window.innerWidth;
-      height_ratio = image_height/document.documentElement.clientHeight;
+      height_ratio = image_height/window.innerHeight;
 
       adjusted_image_width  = image_width/height_ratio;
       adjusted_image_height = image_height/width_ratio;
 
-      if (window.innerWidth >= document.documentElement.clientHeight)
+      if (window.innerWidth >= window.innerHeight)
       {
          if (image_height >= image_width)
          {
@@ -87,7 +87,7 @@ function load_image_caption()
          }
          else
          {
-            if (adjusted_image_height > document.documentElement.clientHeight)
+            if (adjusted_image_height > window.innerHeight)
             {
                if (CSS.supports('height', '100dvh'))
                {
