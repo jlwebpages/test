@@ -265,6 +265,7 @@ a.link:hover
 .art_paragraph
 {
    padding-top: 10px;
+   padding-bottom: 10px;
    display: inline-block;
 }
 
