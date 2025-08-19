@@ -40,6 +40,7 @@ function load_image_caption()
    var image_height          = 0;
    var image_width           = 0;
    var image_style           = "";
+   var minimum_caption_width = 200;
    var one_column_container  = 1;
    var two_column_container  = 2;
    var width_ratio           = 1;
@@ -74,36 +75,16 @@ function load_image_caption()
       {
          if (image_height >= image_width)
          {
-            if (CSS.supports('height', '100dvh'))
-            {
-               image_style = "width: auto; height: 100dvh";
-            }
-            else
-            {
-               image_style = "width: auto; height: 100vh";
-            }
-
             container_style = two_column_container;
          }
          else
          {
             if (adjusted_image_height > window.innerHeight)
             {
-               if (CSS.supports('height', '100dvh'))
-               {
-                  image_style = "width: auto; height: 100dvh";
-               }
-               else
-               {
-                  image_style = "width: auto; height: 100vh";
-               }
-
                container_style = two_column_container;
             }
             else
             {
-               image_style = "width: 100%; height: auto";
-
                container_style = one_column_container;
             }
          }
@@ -112,29 +93,16 @@ function load_image_caption()
       {
          if (image_width >= image_height)
          {
-            image_style = "width: 100%; height: auto";
-
             container_style = one_column_container;
          }
          else
          {
             if (adjusted_image_width > window.innerWidth)
             {
-               image_style = "width: 100%; height: auto";
-
                container_style = one_column_container;
             }
             else
             {
-               if (CSS.supports('height', '100dvh'))
-               {
-                  image_style = "width: auto; height: 100dvh";
-               }
-               else
-               {
-                  image_style = "width: auto; height: 100vh";
-               }
-
                container_style = two_column_container;
             }
          }
@@ -144,22 +112,33 @@ function load_image_caption()
       {
          // Image height equals viewport height
 
+         if (CSS.supports('height', '100dvh'))
+         {
+            image_style = "width: auto; height: 100dvh";
+         }
+         else
+         {
+            image_style = "width: auto; height: 100vh";
+         }
+
          container_class = "image_container_two_column";
 
          art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
 
-         if ( (adjusted_image_width + 200) > (window.innerWidth) )
+         if ( (adjusted_image_width + minimum_caption_width) > (window.innerWidth) )
          {
             image_style = "width: 100%; height: auto";
 
             container_class = "image_container_one_column";
 
-            art_caption_style = "style=\"width: " + (window.innerWidth - 20) + "px; height: auto; margin: 0px auto\"";
+            art_caption_style = "style=\"height: auto; padding-left: 10px\"";
          }
       }
       else
       {
          // Image width equals viewport width
+
+         image_style = "width: 100%; height: auto";
 
          container_class = "image_container_one_column";
 
