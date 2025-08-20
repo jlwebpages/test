@@ -125,6 +125,8 @@ function load_image_caption()
 
          art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
 
+         nav_button_height = (window.innerHeight / 2) + "px";
+
          if ( (adjusted_image_width + minimum_caption_width) > (window.innerWidth) )
          {
             image_style = "width: 100%; height: auto";
@@ -132,6 +134,8 @@ function load_image_caption()
             container_class = "image_container_one_column";
 
             art_caption_style = "style=\"height: auto; padding-left: 10px\"";
+
+            nav_button_height = ( ( image_height * (window.innerWidth/image_width) ) / 2 ) + "px";
          }
       }
       else
@@ -143,6 +147,8 @@ function load_image_caption()
          container_class = "image_container_one_column";
 
          art_caption_style = "style=\"height: auto\"";
+
+         nav_button_height = ( ( image_height * (window.innerWidth/image_width) ) / 2 ) + "px";
       }
 
       document.open();
@@ -168,6 +174,8 @@ function load_image_caption()
       d.writeln('   <div style="display: inline-block; position: relative">');
       d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
       d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
+      d.writeln('      <button id="nav_left" class="nav_button" style="left: 5px; top: '+nav_button_height+'" onclick="update(\"prev\");">&#9664;</button>');
+      d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_height+'" onclick="update(\"next\");">&#9654;</button>');
       d.writeln('   </div>');
       d.writeln('');
       d.writeln('   <div class="art_caption" '+art_caption_style+'>');
