@@ -221,14 +221,18 @@ function update_image(direction)
 {
    if (direction == "left")
    {
-      check_if_file_exists(gallery_name,image_number-1,"left");
+      if (check_if_file_exists(gallery_name,image_number-1,"left") == false)
+      {
+         alert(false);
+      }
    }
    else
    {
-      check_if_file_exists(gallery_name,image_number+1,"right");
+      if (check_if_file_exists(gallery_name,image_number+1,"right") == false)
+      {
+         alert(false);
+      }
    }
-
-   //alert("The end.");
 }
 
 </script>
