@@ -1,50 +1,22 @@
 /* Rules for mobile devices */
 
-
-.nav_button
+@media only screen and (max-width: 750px)
 {
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   font-size: 9px;
-   font-weight: bold;
-   color: white;
-   display: grid;
-   place-items: center;
-   height: 52px;
-   width: 15px;
-   background-color: #333333;
-   border-radius: 4px;
-   border: 0px;
-   margin: 0px;
-   padding: 0px;
-   z-index: 1;
-}
-
-
-
-
-
-@media only screen and (max-width: 600px)
-{
-   .menu_button   {visibility:     visible         !important}
-   .title         {font-size:      38px            !important}
-   .title         {letter-spacing: 2px             !important}
-   .links         {display:        none            !important}
-
-   .nav_button    {font-size:      8px             !important}
-   .nav_button    {height:         20px            !important}
-   .nav_button    {width:          11px             !important}
-   #nav_left    {left:          1px             !important}
-   #nav_right    {right:          1px             !important}
-
-   .sub_title     {font-size:      30px            !important}
-   .sub_title     {padding-bottom: 15px            !important}
-   .text          {padding:        25px            !important}
-   .art_gallery   {column-count:   1               !important}
-   #desktop_image {display:        none            !important}
-   #mobile_image  {display:        block           !important}
+   .menu_button   {visibility:     visible !important}
+   .title         {font-size:      38px    !important}
+   .title         {letter-spacing: 2px     !important}
+   .links         {display:        none    !important}
+   .nav_button    {font-size:      8px     !important}
+   .nav_button    {height:         20px    !important}
+   .nav_button    {width:          12px    !important}
+   #nav_left      {left:           1px     !important}
+   #nav_right     {right:          1px     !important}
+   .sub_title     {font-size:      30px    !important}
+   .sub_title     {padding-bottom: 15px    !important}
+   .text          {padding:        25px    !important}
+   .art_gallery   {column-count:   1       !important}
+   #desktop_image {display:        none    !important}
+   #mobile_image  {display:        block   !important}
 }
 
 /* Rules for mobile devices in landscape orientation */

@@ -25,27 +25,33 @@ function load_image_caption()
    load_data_from_file(file_path_prefix+"_paragraph.txt","image_paragraph",false);
 }
 
+function update_image(direction)
+{
+   window.location.href="display_image.html?image_file_name=photo_art/photo_art_2.jpg";
+}
+
 </script>
 
 <script>
 
-   var adjusted_image_height = 0;
-   var adjusted_image_width  = 0;
-   var art_caption_style     = "";
-   var container_class       = "image_container_two_column";
-   var container_style       = 2;
-   var height_ratio          = 1;
-   var image                 = "";
-   var image_file_name       = "";
-   var image_height          = 0;
-   var image_width           = 0;
-   var image_style           = "";
-   var minimum_caption_width = 200;
-   var one_column_container  = 1;
-   var two_column_container  = 2;
-   var width_ratio           = 1;
-   var URL_string            = window.location.search;
-   var URL_parameters        = new URLSearchParams(URL_string);
+   var adjusted_image_height        = 0;
+   var adjusted_image_width         = 0;
+   var art_caption_style            = "";
+   var container_class              = "image_container_two_column";
+   var container_style              = 2;
+   var height_ratio                 = 1;
+   var image                        = "";
+   var image_file_name              = "";
+   var image_height                 = 0;
+   var image_width                  = 0;
+   var image_style                  = "";
+   var minimum_caption_width        = 200;
+   var nav_button_vertical_position = 0;
+   var one_column_container         = 1;
+   var two_column_container         = 2;
+   var width_ratio                  = 1;
+   var URL_string                   = window.location.search;
+   var URL_parameters               = new URLSearchParams(URL_string);
 
 
    image_file_name = URL_parameters.get("image_file_name");
@@ -112,6 +118,12 @@ function load_image_caption()
       {
          // Image height equals viewport height
 
+         container_class = "image_container_two_column";
+
+         nav_button_vertical_position = (window.innerHeight / 2) + "px";
+
+         art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
+
          if (CSS.supports('height', '100dvh'))
          {
             image_style = "width: auto; height: 100dvh";
@@ -121,34 +133,28 @@ function load_image_caption()
             image_style = "width: auto; height: 100vh";
          }
 
-         container_class = "image_container_two_column";
-
-         art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
-
-         nav_button_height = (window.innerHeight / 2) + "px";
-
          if ( (adjusted_image_width + minimum_caption_width) > (window.innerWidth) )
          {
-            image_style = "width: 100%; height: auto";
-
             container_class = "image_container_one_column";
+
+            nav_button_vertical_position = (image_height * window.innerWidth/image_width/2) + "px";
 
             art_caption_style = "style=\"height: auto; padding-left: 10px\"";
 
-            nav_button_height = ( ( image_height * (window.innerWidth/image_width) ) / 2 ) + "px";
+            image_style = "width: 100%; height: auto";
          }
       }
       else
       {
          // Image width equals viewport width
 
-         image_style = "width: 100%; height: auto";
-
          container_class = "image_container_one_column";
+
+         nav_button_vertical_position = (image_height * window.innerWidth/image_width/2) + "px";
 
          art_caption_style = "style=\"height: auto\"";
 
-         nav_button_height = ( ( image_height * (window.innerWidth/image_width) ) / 2 ) + "px";
+         image_style = "width: 100%; height: auto";
       }
 
       document.open();
@@ -174,8 +180,8 @@ function load_image_caption()
       d.writeln('   <div style="display: inline-block; position: relative">');
       d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
       d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
-      d.writeln('      <button id="nav_left" class="nav_button" style="left: 5px; top: '+nav_button_height+'" onclick="update(\"prev\");">&#9664;</button>');
-      d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_height+'" onclick="update(\"next\");">&#9654;</button>');
+      d.writeln('      <button id="nav_left"  class="nav_button" style="left:  5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');">&#9664;</button>');
+      d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
       d.writeln('   </div>');
       d.writeln('');
       d.writeln('   <div class="art_caption" '+art_caption_style+'>');
