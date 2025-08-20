@@ -1,3 +1,49 @@
+function check_if_file_exists(gallery_name,image_number,direction)
+{
+   $.ajax
+   (
+   {
+      url: gallery_name+"/"+gallery_name+"_"+image_number+".jpg",
+
+      type: "HEAD",
+
+      success: function()
+      {
+         window.location.href="display_image.html?image_file_name="+gallery_name+"/"+gallery_name+"_"+image_number+".jpg";
+      },
+
+      error: function()
+      {
+         if (direction == "left")
+         {
+            if (image_number-1 >= 1)
+            {
+               check_if_file_exists(gallery_name,image_number-1);
+            }
+            else
+            {
+               return false;
+            }
+         }
+         else
+         {
+            if (image_number+1 <= 100)
+            {
+               check_if_file_exists(gallery_name,image_number+1);
+            }
+            else
+            {
+               return false;
+            } 
+         }
+
+      },
+   }
+   );
+
+   return false;
+}
+
 function check_if_image_exists(gallery_name,image_number,max_number_of_images)
 {
    $.ajax
