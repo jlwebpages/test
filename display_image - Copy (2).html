@@ -142,8 +142,6 @@ image.onload = function()
 
       if ( (adjusted_image_width + minimum_caption_width) > (window.innerWidth) )
       {
-         container_style = one_column_container;
-
          container_class = "image_container_one_column";
 
          nav_button_vertical_position = (image_height * window.innerWidth/image_width/2) + "px";
@@ -181,7 +179,7 @@ image.onload = function()
    d.writeln('   <script language="JavaScript" src=scripts.js><\/script>');
    d.writeln('</head>');
    d.writeln('');
-   d.writeln('<body class="body" onload="load_image_caption();" oncontextmenu="return false;">');
+   d.writeln('<body class="body" onload="load_image_caption();">');
    d.writeln('');
    d.writeln('');
    d.writeln('<div class='+container_class+'>');
@@ -189,19 +187,11 @@ image.onload = function()
    d.writeln('   <div style="display: inline-block; position: relative">');
    d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
    d.writeln('      <button id="nav_left"  class="nav_button" style="left:  5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');">&#9664;</button>');
-   if (container_style == one_column_container)
-   {
-      d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
-      d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
-   }
    d.writeln('   </div>');
    d.writeln('');
    d.writeln('   <div class="art_caption" '+art_caption_style+'>');
-   if (container_style == two_column_container)
-   {
-      d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
-      d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
-   }
+   d.writeln('      <button id="back_button" class="back_button" onclick="history.back()">&times;</button>');
+   d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
    d.writeln('      <span id="image_title" class="art_title"></span><br>');
    d.writeln('      <span id="image_dimensions" class="art_dimensions"></span><br>');
    d.writeln('      <span id="image_paragraph" class="art_paragraph"></span>');

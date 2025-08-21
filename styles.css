@@ -6,9 +6,9 @@
    .title         {font-size:      38px    !important}
    .title         {letter-spacing: 2px     !important}
    .links         {display:        none    !important}
-   .nav_button    {font-size:      8px     !important}
-   .nav_button    {height:         20px    !important}
-   .nav_button    {width:          12px    !important}
+   .nav_button    {font-size:      10px    !important}
+   .nav_button    {height:         24px    !important}
+   .nav_button    {width:          14px    !important}
    #nav_left      {left:           1px     !important}
    #nav_right     {right:          1px     !important}
    .sub_title     {font-size:      30px    !important}
@@ -233,6 +233,7 @@ a.link:hover
 
 .art_caption
 {
+   position: relative;
    background-color: white;
    font-family: Arial;
    font-size: 16px;
@@ -243,7 +244,7 @@ a.link:hover
    height: 100%;
    min-width: 200px;
    margin: 0px;
-   padding: 0px 10px 10px 10px;
+   padding: 0px 20px 10px 10px;
    overflow-y: auto;
 }
 
@@ -290,13 +291,13 @@ a.link:hover
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
-   font-size: 9px;
+   font-size: 12px;
    font-weight: bold;
    color: white;
    display: grid;
    place-items: center;
    height: 52px;
-   width: 15px;
+   width: 18px;
    background-color: #333333;
    border-radius: 4px;
    border: 0px;
