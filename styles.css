@@ -1,6 +1,6 @@
 /* Rules for mobile devices */
 
-@media only screen and (max-width: 650px)
+@media only screen and (max-width: 600px)
 {
    .menu_button   {visibility:     visible !important}
    .title         {font-size:      38px    !important}
@@ -27,6 +27,11 @@
    .title         {font-size:      38px                !important}
    .title         {letter-spacing: 2px                 !important}
    .links         {display:        none                !important}
+   .nav_button    {font-size:      10px                !important}
+   .nav_button    {height:         24px                !important}
+   .nav_button    {width:          14px                !important}
+   #nav_left      {left:           1px                 !important}
+   #nav_right     {right:          1px                 !important}
    .sub_title     {font-size:      30px                !important}
    .sub_title     {padding-bottom: 15px                !important}
    .text          {padding:        25px 15px 25px 20px !important}
