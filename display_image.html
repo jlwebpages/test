@@ -28,6 +28,7 @@ var image_height                 = 0;
 var image_width                  = 0;
 var image_style                  = "";
 var index                        = -1;
+var max_number_of_images         = 50;
 var minimum_caption_width        = 200;
 var nav_button_vertical_position = 0;
 var one_column_container         = 1;
@@ -243,14 +244,14 @@ function check_if_file_exists(gallery_name,image_number,direction)
             }
             else
             {
-               check_if_file_exists(gallery_name,100,"left");
+               check_if_file_exists(gallery_name,max_number_of_images,"left");
             }
 
             return false;
          }
          else
          {
-            if (image_number+1 <= 100)
+            if (image_number+1 <= max_number_of_images)
             {
                check_if_file_exists(gallery_name,image_number+1,"right");
             }

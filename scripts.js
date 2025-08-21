@@ -85,7 +85,7 @@ function load_image(gallery_name,image_number,max_number_of_images)
 function load_images_into_gallery(gallery_name)
 {
    var image_number         = 1;
-   var max_number_of_images = 100;
+   var max_number_of_images = 50;
 
 
    check_if_image_exists(gallery_name,image_number,max_number_of_images);
