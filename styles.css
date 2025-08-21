@@ -1,13 +1,5 @@
 /* Rules for mobile devices */
 
-
-/*
-      <td id="mobile_image" style="text-align: center; padding: 25px 25px 0px 25px; display: none">
-         <img src="about/about.jpg" class="border_radius" style="width: 100%">
-      </td>
-*/
-
-
 @media only screen and (max-width: 600px)
 {
    .menu_button   {visibility:     visible !important}
@@ -24,8 +16,6 @@
    .text          {padding:        25px    !important}
    .text_image    {width:          100%    !important}
    .art_gallery   {column-count:   1       !important}
-   #desktop_image {display:        none    !important}
-   #mobile_image  {display:        block   !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
