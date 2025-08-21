@@ -229,6 +229,8 @@ function check_if_file_exists(gallery_name,image_number,direction)
       success: function()
       {
          window.location.href="display_image.html?image_file_name="+gallery_name+"/"+gallery_name+"_"+image_number+".jpg";
+
+         return true;
       },
 
       error: function()
@@ -291,8 +293,6 @@ function update_image(direction)
    {
       check_if_file_exists(gallery_name,image_number+1,"right");
    }
-
-   //alert("The end.");
 }
 
 </script>
