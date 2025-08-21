@@ -10,29 +10,21 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" onLoad="load_data_from_file('works_on_paper/works_on_paper.txt','text',true); load_images_into_gallery('works_on_paper'); scroll_to_top();" oncontextmenu="return false;">
+<body class="body" onLoad="scroll_to_top();" oncontextmenu="return false;">
 
 
 <script>
    write_header();
+   load_data_from_file('works_on_paper/works_on_paper.txt','works_on_paper',true);
+   load_images_into_gallery('works_on_paper'); 
    document.getElementById("works_on_paper_link").className = "clicked_link";
 </script>
-
 
 <table id="text_table" class="table border_radius">
 
    <tr>
-      <td id="mobile_image" style="text-align: center; padding: 25px 25px 0px 25px; display: none">
-         <img src="works_on_paper/works_on_paper.jpg" class="border_radius" style="width: 100%">
-      </td>
-   </tr>
-
-   <tr>
-      <td id="text" class="text">
+      <td id="works_on_paper" class="text">
          <!-- Load text from file. -->
-      </td>
-      <td id="desktop_image" style="text-align: right; vertical-align: top; padding: 50px">
-         <img src="works_on_paper/works_on_paper.jpg" class="border_radius" style="width: 300px">
       </td>
    </tr>
 
