@@ -241,8 +241,10 @@ function check_if_file_exists(gallery_name,image_number,direction)
             }
             else
             {
-               check_if_file_exists(gallery_name,100,"left");    
+               check_if_file_exists(gallery_name,100,"left");
             }
+
+            return false;
          }
          else
          {
@@ -252,10 +254,11 @@ function check_if_file_exists(gallery_name,image_number,direction)
             }
             else
             {
-               check_if_file_exists(gallery_name,1,"right"); 
-            } 
-         }
+               check_if_file_exists(gallery_name,1,"right");
+            }
 
+            return false;
+         }
       },
    }
    );
