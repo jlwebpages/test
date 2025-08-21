@@ -10,11 +10,13 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" onLoad="load_data_from_file('about/about.txt','text',true); scroll_to_top();" oncontextmenu="return false;">
+<body class="body" onLoad="scroll_to_top();">
 
 
 <script>
    write_header();
+   load_data_from_file('about/about.txt','about',true); 
+   load_data_from_file('about/exhibitions.txt','exhibitions',true); 
    document.getElementById("about_link").className = "clicked_link";
 </script>
 
@@ -22,17 +24,14 @@
 <table id="text_table" class="table border_radius">
 
    <tr>
-      <td id="mobile_image" style="text-align: center; padding: 25px 25px 0px 25px; display: none">
-         <img src="about/about.jpg" class="border_radius" style="width: 100%">
+      <td id="about" class="text">
+         <!-- Load data from file. -->
       </td>
    </tr>
 
    <tr>
-      <td id="text" class="text">
+      <td id="exhibitions" class="text" style="padding-top: 0px">
          <!-- Load data from file. -->
-      </td>
-      <td id="desktop_image" style="text-align: right; vertical-align: top; padding: 50px">
-         <img src="about/about.jpg" class="border_radius" style="width: 300px">
       </td>
    </tr>
 
