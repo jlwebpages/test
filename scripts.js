@@ -31,7 +31,9 @@ function close_menu()
 
 function display_menu()
 {
-   document.getElementById("menu_list").style.width = "240px";
+   document.getElementById("menu_list").style.width = "auto";
+   document.getElementById("menu_list").style.paddingRight = "20px";
+
 
    return true;
 }
