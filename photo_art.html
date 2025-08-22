@@ -10,29 +10,22 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" onLoad="load_data_from_file('photo_art/photo_art.txt','text',true); load_images_into_gallery('photo_art'); scroll_to_top();" oncontextmenu="return false;">
+<body class="body" onLoad="scroll_to_top();" oncontextmenu="return false;">
 
 
 <script>
    write_header();
+   load_data_from_file('photo_art/photo_art.txt','photo_art_text',true);
+   load_images_into_gallery('photo_art'); 
    document.getElementById("photo_art_link").className = "clicked_link";
 </script>
-
 
 <table id="text_table" class="table border_radius">
 
    <tr>
-      <td id="mobile_image" style="text-align: center; padding: 25px 25px 0px 25px; display: none">
-         <img src="photo_art/photo_art.jpg" class="border_radius" style="width: 100%">
-      </td>
-   </tr>
-
-   <tr>
-      <td id="text" class="text">
+      <td id="photo_art_text" class="text">
+         <img src="photo_art/photo_art.jpg" class="text_image border_radius">
          <!-- Load data from file. -->
-      </td>
-      <td id="desktop_image" style="text-align: right; vertical-align: top; padding: 50px">
-         <img src="photo_art/photo_art.jpg" class="border_radius" style="width: 300px">
       </td>
    </tr>
 

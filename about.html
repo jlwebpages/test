@@ -15,21 +15,22 @@
 
 <script>
    write_header();
-   load_data_from_file('about/about.txt','about',true); 
-   load_data_from_file('about/exhibitions.txt','exhibitions',true); 
+   load_data_from_file('about/about.txt','about_text',true); 
+   //load_data_from_file('about/exhibitions.txt','exhibitions_text',true); 
    document.getElementById("about_link").className = "clicked_link";
 </script>
 
 <table id="text_table" class="table border_radius">
 
    <tr>
-      <td id="about" class="text">
+      <td id="about_text" class="text">
+         <img src="about/about.jpg" class="text_image border_radius">
          <!-- Load data from file. -->
       </td>
    </tr>
 
    <tr>
-      <td id="exhibitions" class="text" style="padding-top: 0px">
+      <td id="exhibitions_text" class="text" style="padding-top: 0px">
          <!-- Load data from file. -->
       </td>
    </tr>
