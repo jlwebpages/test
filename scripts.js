@@ -47,7 +47,7 @@ function load_data_from_file(file_name,element_id,display_error)
 
       success: function(data)
       {
-         $("#"+element_id).html(data);
+         document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
       },
 
       error: function()

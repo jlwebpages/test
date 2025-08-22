@@ -2,21 +2,21 @@
 
 @media only screen and (max-width: 600px)
 {
-   .menu_button   {visibility:     visible          !important}
-   .title         {font-size:      38px             !important}
-   .title         {letter-spacing: 2px              !important}
-   .links         {display:        none             !important}
-   .nav_button    {font-size:      10px             !important}
-   .nav_button    {height:         24px             !important}
-   .nav_button    {width:          14px             !important}
-   #nav_left      {left:           1px              !important}
-   #nav_right     {right:          1px              !important}
-   .sub_title     {font-size:      30px             !important}
-   .sub_title     {padding-bottom: 15px             !important}
-   .text          {padding:        25px             !important}
-   .text_image    {width:          100%             !important}
-   .text_image    {margin:         0px 0px 25px 0px !important}
-   .art_gallery   {column-count:   1                !important}
+   .menu_button   {visibility:     visible            !important}
+   .title         {font-size:      38px               !important}
+   .title         {letter-spacing: 2px                !important}
+   .links         {display:        none               !important}
+   .nav_button    {font-size:      10px               !important}
+   .nav_button    {height:         24px               !important}
+   .nav_button    {width:          14px               !important}
+   #nav_left      {left:           1px                !important}
+   #nav_right     {right:          1px                !important}
+   .sub_title     {font-size:      30px               !important}
+   .sub_title     {padding-bottom: 15px               !important}
+   .text          {padding:        25px 25px 0px 25px !important}
+   .text_image    {width:          100%               !important}
+   .text_image    {margin:         0px 0px 25px 0px   !important}
+   .art_gallery   {column-count:   1                  !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
@@ -34,7 +34,7 @@
    #nav_right     {right:          1px                 !important}
    .sub_title     {font-size:      30px                !important}
    .sub_title     {padding-bottom: 15px                !important}
-   .text          {padding:        25px 20px 25px 20px !important}
+   .text          {padding:        40px 10px 15px 10px !important}
    .text_image    {margin:         0px 0px 25px 25px   !important}
    .art_gallery   {column-count:   2                   !important}
 }
@@ -47,6 +47,7 @@
    .title         {letter-spacing: 2px                 !important}
    .sub_title     {padding-bottom: 15px                !important}
    .text          {padding:        50px 20px 25px 20px !important}
+   .text_image    {margin:         0px 0px 25px 25px   !important}
    .art_gallery   {column-count:   2                   !important}
 }
 
@@ -141,7 +142,7 @@ a.link:hover
    vertical-align: top;
    text-align: left;
    line-height: 30px;
-   padding: 50px;
+   padding:  50px 50px 25px 50px;
 }
 
 .text_image
@@ -224,7 +225,6 @@ a.link:hover
    column-count: 2;
    column-gap: 50px;
    text-align: center;
-   margin-top: 25px;
    margin: 0px auto;
    width: 95%;
 }

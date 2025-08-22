@@ -10,12 +10,12 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" onLoad="scroll_to_top();" oncontextmenu="return false;">
+<body class="body" onLoad="scroll_to_top();">
 
 
 <script>
    write_header();
-   load_data_from_file('featured_work/featured_work.txt','featured_work',true);
+   load_data_from_file('featured_work/featured_work.txt','featured_work_text',true);
    load_images_into_gallery('featured_work'); 
    document.getElementById("featured_work_link").className = "clicked_link";
 </script>
@@ -23,7 +23,8 @@
 <table id="text_table" class="table border_radius">
 
    <tr>
-      <td id="featured_work" class="text">
+      <td id="featured_work_text" class="text">
+         <img src="featured_work/featured_work.jpg" class="text_image border_radius">
          <!-- Load data from file. -->
       </td>
    </tr>
