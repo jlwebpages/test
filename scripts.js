@@ -25,6 +25,7 @@ function check_if_image_exists(gallery_name,image_number,max_number_of_images)
 function close_menu()
 {
    document.getElementById("menu_list").style.width = "0";
+   document.getElementById("menu_list").style.paddingRight = "0px";
 
    return true;
 }
@@ -33,7 +34,6 @@ function display_menu()
 {
    document.getElementById("menu_list").style.width = "auto";
    document.getElementById("menu_list").style.paddingRight = "20px";
-
 
    return true;
 }
