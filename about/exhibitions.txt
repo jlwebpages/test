@@ -1,4 +1,4 @@
-<span class="sub_title"style="display: block">EXHIBITIONS</span>
+<span class="sub_title" style="display: block; padding-bottom: 25px !important">EXHIBITIONS</span>
 
 <span style="font-size: 16px; font-weight: bold">F/8 Photo Show</span><br>
 The Language Mobilization Factory Gallery + Darkroom<br>
@@ -27,7 +27,7 @@ July and August 2024<br>
 <span style="font-size: 16px; font-weight: bold">Featured Artist</span><br>
 Linden Twig Boutique<br>
 Tustin, CA<br>
-Feb 2024 - January 2025<br>
+February 2024 - January 2025<br>
 <br>
 
 <span style="font-size: 16px; font-weight: bold">Featured Artist</span><br>
@@ -46,5 +46,3 @@ October 2023<br>
 Old Orange County Courthouse<br>
 Santa Ana, CA<br>
 2018
-<br>
-<a style="display: inline-block; padding-top: 25px" href="https://www.instagram.com/dklaguna_art/"><img src="instagram.png" width="50px"></a>
