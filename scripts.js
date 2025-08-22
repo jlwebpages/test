@@ -108,7 +108,7 @@ function write_header()
 
    d.writeln('');
    d.writeln('');
-   d.writeln('<span id="menu" class="menu_button" onclick="display_menu();">&#9776;</span>');
+   d.writeln('<span class="menu_button" onclick="display_menu();">&#9776;</span>');
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu">');
    d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
@@ -118,9 +118,9 @@ function write_header()
    d.writeln('   <a href="about.html"          >ABOUT</a>');
    d.writeln('</div>');
    d.writeln('');
-   d.writeln('<div id="title" class="title">DARLENE LAGUNA ART</div>');
+   d.writeln('<div class="title">DARLENE LAGUNA ART</div>');
    d.writeln('');
-   d.writeln('<div id="links" class="links">');
+   d.writeln('<div class="links">');
    d.writeln('   <a id="featured_work_link"  class="link" href="featured_work.html" >FEATURED WORK</a>');
    d.writeln('   <a id="photo_art_link"      class="link" href="photo_art.html"     >PHOTO ART</a>');
    d.writeln('   <a id="works_on_paper_link" class="link" href="works_on_paper.html">WORKS ON PAPER</a>')
