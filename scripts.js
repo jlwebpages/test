@@ -32,7 +32,7 @@ function close_menu()
 
 function display_menu()
 {
-   document.getElementById("menu_list").style.width = "180px";
+   document.getElementById("menu_list").style.width = "175px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
