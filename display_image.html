@@ -128,7 +128,7 @@ image.onload = function()
 
       container_class = "image_container_two_column";
 
-      nav_button_vertical_position = (window.innerHeight / 2) + "px";
+      nav_button_vertical_position = window.innerHeight / 2;
 
       art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
 
@@ -147,7 +147,7 @@ image.onload = function()
 
          container_class = "image_container_one_column";
 
-         nav_button_vertical_position = (image_height * window.innerWidth/image_width/2) + "px";
+         nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
 
          art_caption_style = "style=\"height: auto; padding-left: 10px\"";
 
@@ -160,12 +160,19 @@ image.onload = function()
 
       container_class = "image_container_one_column";
 
-      nav_button_vertical_position = (image_height * window.innerWidth/image_width/2) + "px";
+      nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
 
       art_caption_style = "style=\"height: auto\"";
 
       image_style = "width: 100%; height: auto";
    }
+
+   if (nav_button_vertical_position > window.innerHeight / 2)
+   {
+      nav_button_vertical_position = window.innerHeight / 2;
+   }
+
+   nav_button_vertical_position += "px";
 
    document.open();
 
