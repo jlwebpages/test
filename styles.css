@@ -183,25 +183,28 @@ a.link:hover
 
 .menu
 {
-   width: 0%;
    position: fixed;
-   top: 0;
-   left: 0;
+   top: 0px;
+   left: 0px;
    background-color: white;
-   overflow-x: hidden;
-   padding-top: 60px;
-   padding-bottom: 20px;
    border-radius: 0px 0px 8px 0px;
+   margin: 0px;
+   padding: 50px 0px 15px 0px;
+   width: 0px;
+   overflow: auto;
+   transition: 0.5s;
+   z-index: 1;
 }
 
 .menu a
 {
-   padding: 8px 8px 8px 32px;
-   text-decoration: none;
    font-family: Arial;
    font-size: 16px;
-   letter-spacing: 2px;
    color: darkslategray;
+   letter-spacing: 2px;
+   text-decoration: none;
+   white-space: nowrap;
+   padding: 10px;
    display: block;
 }
 
@@ -214,10 +217,12 @@ a.link:hover
 .menu .close_button
 {
    position: absolute;
-   top: 0;
+   top: 0px;
    right: 10px;
    font-size: 36px;
-   margin-left: 50px;
+   border: 0px;
+   margin: 0px;
+   padding: 0px;
 }
 
 .art_gallery
