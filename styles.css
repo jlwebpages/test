@@ -9,8 +9,8 @@
    .nav_button    {font-size:      10px               !important}
    .nav_button    {height:         24px               !important}
    .nav_button    {width:          14px               !important}
-   #nav_left      {left:           1px                !important}
-   #nav_right     {right:          1px                !important}
+   .nav_left      {left:           1px                !important}
+   .nav_right     {right:          1px                !important}
    .sub_title     {font-size:      30px               !important}
    .sub_title     {padding-bottom: 15px               !important}
    .text          {padding:        25px 25px 0px 25px !important}
@@ -30,8 +30,8 @@
    .nav_button    {font-size:      10px                !important}
    .nav_button    {height:         24px                !important}
    .nav_button    {width:          14px                !important}
-   #nav_left      {left:           1px                 !important}
-   #nav_right     {right:          1px                 !important}
+   .nav_left      {left:           1px                 !important}
+   .nav_right     {right:          1px                 !important}
    .sub_title     {font-size:      30px                !important}
    .sub_title     {padding-bottom: 15px                !important}
    .text          {padding:        40px 10px 15px 10px !important}
@@ -319,6 +319,16 @@ a.link:hover
    margin: 0px;
    padding: 0px;
    z-index: 1;
+}
+
+.nav_left
+{
+   left: 5px;
+}
+
+.nav_right
+{
+   right: 5px;
 }
 
 .image_container_one_column

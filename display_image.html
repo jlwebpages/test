@@ -196,10 +196,10 @@ image.onload = function()
    d.writeln('');
    d.writeln('   <div style="display: inline-block; position: relative">');
    d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
-   d.writeln('      <button id="nav_left"  class="nav_button" style="left:  5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');">&#9664;</button>');
+   d.writeln('      <button class="nav_button nav_left" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');">&#9664;</button>');
    if (container_style == one_column_container)
    {
-   d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
+   d.writeln('      <button class="nav_button nav_right" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
    d.writeln('      <button class="back_button" onclick="display_gallery_page();">&times;</button>');
    }
    d.writeln('   </div>');
@@ -207,7 +207,7 @@ image.onload = function()
    d.writeln('   <div class="art_caption" '+art_caption_style+'>');
    if (container_style == two_column_container)
    {
-   d.writeln('      <button id="nav_right" class="nav_button" style="right: 5px; top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
+   d.writeln('      <button class="nav_button nav_right" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
    d.writeln('      <button class="back_button" onclick="display_gallery_page();">&times;</button>');
    }
    d.writeln('      <span id="image_title" class="art_title"></span><br>');
