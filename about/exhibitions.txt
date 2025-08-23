@@ -1,4 +1,4 @@
-<span class="sub_title" style="display: block; padding-bottom: 25px !important">EXHIBITIONS</span>
+<span class="sub_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
 <span style="font-size: 16px; font-weight: bold">F/8 Photo Show</span><br>
 The Language Mobilization Factory Gallery + Darkroom<br>
