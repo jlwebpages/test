@@ -1,8 +1,7 @@
 Summer, Fall, Winter, Spring - our daily horizons may be consistent, yet they do take on different personalities as the days flow through the year. Sometimes, the ordinary is not so ordinary. 
 
-</span><br>
+<span class="art_paragraph" style="padding-top: 20px"><b>December Dusk</b> (left)</span>
 
-<span class="art_paragraph"><b>December Dusk</b> (left)</span><br>
+<span class="art_paragraph" style="padding-top: 0px"><b>Horizons</b> (middle)</span>
 
-<span class="art_paragraph"><b>Horizons</b> (middle)</span><br>
-<span class="art_paragraph"><b>Rainbow Hills</b> (right)
+<span class="art_paragraph" style="padding-top: 0px"><b>Rainbow Hills</b> (right)</span>

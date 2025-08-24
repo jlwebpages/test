@@ -1,7 +1,5 @@
 There is something about autumn lighting that brings out the gold in the hills!
 
-</span><br>
+<span class="art_paragraph" style="padding-top: 20px"><b>Golden Hour 1</b> (left)</span>
 
-<span class="art_paragraph"><b>Golden Hour 1</b> (left)</span><br>
-
-<span class="art_paragraph"><b>Golden Hour 2</b> (right)
+<span class="art_paragraph" style="padding-top: 0px"><b>Golden Hour 2</b> (right)</span>

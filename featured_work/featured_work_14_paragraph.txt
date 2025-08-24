@@ -1,7 +1,5 @@
 Summer is the perfect time of year for looking up and daydreaming.
 
-</span><br>
+<span class="art_paragraph" style="padding-top: 20px"><b>Many Moons</b> (left)</span>
 
-<span class="art_paragraph"><b>Many Moons</b> (left)</span><br>
-
-<span class="art_paragraph"><b>Fireworks</b> (right)
+<span class="art_paragraph" style="padding-top: 0px"><b>Fireworks</b> (right)</span>
