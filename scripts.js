@@ -50,6 +50,25 @@ function load_data_from_file(file_name,element_id,display_error)
       success: function(data)
       {
          document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
+
+         if (element_id == "image_title")
+         {
+            file_name  = file_name.replace("title","dimensions");
+            element_id = element_id.replace("title","dimensions");
+
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_dimensions")
+         {
+            file_name  = file_name.replace("dimensions","paragraph");
+            element_id = element_id.replace("dimensions","paragraph");
+
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_paragraph")
+         {
+            update_button_positions();
+         }
       },
 
       error: function()
@@ -57,6 +76,25 @@ function load_data_from_file(file_name,element_id,display_error)
          if (display_error == true) alert("Failed to load data from file:  "+file_name);
 
          $("#"+element_id).hide();
+
+         if (element_id == "image_title")
+         {
+            file_name  = file_name.replace("title","dimensions");
+            element_id = element_id.replace("title","dimensions");
+
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_dimensions")
+         {
+            file_name  = file_name.replace("dimensions","paragraph");
+            element_id = element_id.replace("dimensions","paragraph");
+
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_paragraph")
+         {
+            update_button_positions();
+         }
       },
    }
    );
@@ -93,6 +131,31 @@ function load_images_into_gallery(gallery_name)
    check_if_image_exists(gallery_name,image_number,max_number_of_images);
 
    return true;
+}
+
+function update_button_positions()
+{
+   var div_width    = 0;
+   var extra_width  = 0;
+   var right_offset = 0;
+
+
+   if (document.getElementById("image_div")        == null) return false;
+   if (document.getElementById("caption_div")      == null) return false;
+   if (document.getElementById("back_button")      == null) return false;
+   if (document.getElementById("nav_right_button") == null) return false;
+
+   div_width   = document.getElementById("image_div").offsetWidth + document.getElementById("caption_div").offsetWidth;
+   extra_width = window.innerWidth - div_width;
+
+   if (extra_width > 0)
+   {
+      right_offset  = (extra_width / 2) + 5;
+      right_offset += "px";
+
+      document.getElementById("back_button").style.right      = right_offset;
+      document.getElementById("nav_right_button").style.right = right_offset;      
+   }
 }
 
 function write_copyright()
