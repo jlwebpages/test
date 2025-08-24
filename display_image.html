@@ -192,11 +192,11 @@ image.onload = function()
    d.writeln('<body class="body" onload="load_image_caption();" oncontextmenu="return false;">');
    d.writeln('');
    d.writeln('');
-   d.writeln('<div style="class='+container_class+'>');
+   d.writeln('<div class='+container_class+'>');
    d.writeln('');
    d.writeln('   <div style="display: inline-block; position: relative">');
    d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
-   d.writeln('      <button class="nav_button nav_left arrow-button" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');"><span style="background-color: rgba(0, 0, 0, 50%)">&#9664;</span></button>');
+   d.writeln('      <button class="nav_button nav_left" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');">&#9664;</button>');
    if (container_style == one_column_container)
    {
    d.writeln('      <button class="nav_button nav_right" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'right\');">&#9654;</button>');
