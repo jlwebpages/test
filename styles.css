@@ -258,7 +258,6 @@ a.link:hover
    justify-self: start;
    align-self: start;
    height: 100%;
-   min-width: 200px;
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
