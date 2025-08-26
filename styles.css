@@ -326,6 +326,22 @@ a.link:hover
    right: 5px;
 }
 
+.left_pointing_triangle
+{
+   width: 9.8px;
+   height: 9.8px;
+   background-color: white;
+   clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+}
+
+.right_pointing_triangle
+{
+  width: 9.8px;
+  height: 9.8px;
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
 .image_container_one_column
 {
    background-color: white;
