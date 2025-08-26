@@ -318,6 +318,9 @@ a.link:hover
    margin: 0px;
    padding: 0px;
    z-index: 1;
+
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .nav_left
