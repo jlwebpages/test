@@ -299,6 +299,19 @@ a.link:hover
    right: 5px;
 }
 
+
+.left-triangle {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;      /* Half the height of the triangle */
+  border-bottom: 5px solid transparent;   /* Half the height of the triangle */
+  border-left: 10px solid white;         /* The base of the triangle */
+  /* Remove other padding or margin if needed */
+  margin: 0;
+  padding: 10;
+
+}
+
 .nav_button
 {
    cursor: pointer;
