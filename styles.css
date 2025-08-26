@@ -308,7 +308,7 @@ a.link:hover
   border-left: 10px solid white;         /* The base of the triangle */
   /* Remove other padding or margin if needed */
   margin: 0;
-  padding: 10;
+  padding: 0;
 
 }
 
