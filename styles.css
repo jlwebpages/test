@@ -326,6 +326,18 @@ a.link:hover
    right: 5px;
 }
 
+.left-triangle
+{
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;      /* Half the height of the triangle */
+  border-bottom: 10px solid transparent;   /* Half the height of the triangle */
+  border-right: 20px solid red;         /* The base of the triangle */
+  /* Remove other padding or margin if needed */
+  margin: 0;
+  padding: 0;
+}
+
 .left_pointing_triangle
 {
    width: 9.8px;
@@ -336,8 +348,8 @@ a.link:hover
 
 .right_pointing_triangle
 {
-  width: 9.8px;
-  height: 9.8px;
+  width: 7.8px;
+  height: 7.8px;
   background-color: white;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
