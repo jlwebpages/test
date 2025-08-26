@@ -261,6 +261,7 @@ a.link:hover
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
+   min-width: 200px;
 }
 
 .art_title
