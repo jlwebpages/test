@@ -283,16 +283,23 @@ a.link:hover
 
 .back_button
 {
-   background-color: rgba(0, 0, 0, 50%);
-   font-family: Arial, sans-serif;
-   font-size: 20px;
-   color: white;
-   border-width: 0px;
-   border-radius: 20%;
-   padding: 0px 5px 0px 5px;
+   cursor: pointer;
    position: fixed;
    top: 5px;
    right: 5px;
+   font-family: Arial, sans-serif;
+   font-size: 20px;
+   color: white;
+   background-color: rgba(0, 0, 0, 50%);
+   border-radius: 20%;
+   border-width: 0px;
+   padding: 0px 5px 0px 5px;
+   z-index: 1;
+}
+
+.back_button:hover
+{
+   background-color: rgba(0, 0, 0, 75%);
 }
 
 .nav_button
@@ -316,6 +323,11 @@ a.link:hover
    z-index: 1;
 }
 
+.nav_button:hover
+{
+   background-color: rgba(0, 0, 0, 75%);
+}
+
 .nav_left
 {
    left: 5px;
@@ -324,34 +336,6 @@ a.link:hover
 .nav_right
 {
    right: 5px;
-}
-
-.left-triangle
-{
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;      /* Half the height of the triangle */
-  border-bottom: 5px solid transparent;   /* Half the height of the triangle */
-  border-left: 9px solid white;         /* The base of the triangle */
-  /* Remove other padding or margin if needed */
-  margin: 0;
-  padding: 0;
-}
-
-.left_pointing_triangle
-{
-   width: 9.8px;
-   height: 9.8px;
-   background-color: white;
-   clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
-}
-
-.right_pointing_triangle
-{
-  width: 7.8px;
-  height: 7.8px;
-  background-color: white;
-  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 
 .image_container_one_column
