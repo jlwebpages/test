@@ -6,9 +6,10 @@
    .title         {font-size:      38px               !important}
    .title         {letter-spacing: 2px                !important}
    .links         {display:        none               !important}
-   .nav_button    {font-size:      10px               !important}
    .nav_button    {height:         24px               !important}
    .nav_button    {width:          14px               !important}
+   .nav_left_shape{transform:      scale(.8) !important}
+      .nav_right_shape{transform:      scale(.8) !important}
    .sub_title     {font-size:      30px               !important}
    .sub_title     {padding-bottom: 15px               !important}
    .text          {padding:        25px 25px 0px 25px !important}
@@ -25,9 +26,10 @@
    .title         {font-size:      38px                !important}
    .title         {letter-spacing: 2px                 !important}
    .links         {display:        none                !important}
-   .nav_button    {font-size:      10px                !important}
-   .nav_button    {height:         24px                !important}
-   .nav_button    {width:          14px                !important}
+   .nav_button    {height:         24px               !important}
+   .nav_button    {width:          14px               !important}
+   .nav_left_shape{transform:      scale(.8) !important}
+      .nav_right_shape{transform:      scale(.8) !important}
    .sub_title     {font-size:      30px                !important}
    .sub_title     {padding-bottom: 15px                !important}
    .text          {padding:        40px 10px 15px 10px !important}
@@ -308,7 +310,6 @@ a.link:hover
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
-   font-size: 12px;
    font-weight: bold;
    color: white;
    display: grid;
@@ -344,7 +345,7 @@ a.link:hover
    height: 0;
    border-top: 6px solid transparent;
    border-bottom: 6px solid transparent;
-   border-right: 10.5px solid blue;
+   border-right: 10.5px solid white;
    margin: 0px auto;
    transform: scale(1);
 }
