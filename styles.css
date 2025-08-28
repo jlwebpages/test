@@ -245,6 +245,11 @@ a.link:hover
    height: auto;
 }
 
+.art_image img:hover
+{
+   transform: scale(1.05);
+}
+
 .art_caption
 {
    position: relative;
