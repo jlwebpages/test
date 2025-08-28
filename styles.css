@@ -49,10 +49,22 @@
    .art_gallery   {column-count:   2                   !important}
 }
 
+/*  */
+
 @supports (height: 100dvh)
 {
    .image_container_one_column {height: 100dvh !important}
    .image_container_two_column {height: 100dvh !important}
+}
+
+/*  */
+
+@media (hover: hover)
+{
+   .art_image img:hover
+   {
+      transform: scale(1.05);
+   }
 }
 
 .body
@@ -243,11 +255,6 @@ a.link:hover
 {
    width: 100%;
    height: auto;
-}
-
-.art_image img:hover
-{
-   transform: scale(1.05);
 }
 
 .art_caption
