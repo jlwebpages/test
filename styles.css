@@ -249,7 +249,7 @@ a.link:hover
 
 @media (hover: hover)
 {
-   /* The following will only be applied to non-touch screen devices */
+   /* The following should only be applied if devices support hovering */
 
    .art_image img:hover
    {
