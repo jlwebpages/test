@@ -304,8 +304,6 @@ a.link:hover
 
 .nav_button
 {
-   display: flex; 
-   justify-content: space-evenly;
    cursor: pointer;
    position: absolute;
    top: 50%;
@@ -346,7 +344,8 @@ a.link:hover
    height: 0;
    border-top: 6px solid transparent;
    border-bottom: 6px solid transparent;
-   border-right: 10.5px solid green;
+   border-right: 10.5px solid blue;
+   margin: 0px auto;
    transform: scale(1);
 }
 
@@ -357,6 +356,7 @@ a.link:hover
    border-top: 6px solid transparent;
    border-bottom: 6px solid transparent;
    border-left: 10.5px solid white;
+   margin: 0px auto;
    transform: scale(1);
 }
 
