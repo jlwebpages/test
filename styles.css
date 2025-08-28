@@ -304,6 +304,9 @@ a.link:hover
 
 .nav_button
 {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
    cursor: pointer;
    position: absolute;
    top: 50%;
@@ -328,14 +331,34 @@ a.link:hover
    background-color: rgba(0, 0, 0, 75%);
 }
 
-.nav_left
+.nav_left_offset
 {
    left: 5px;
 }
 
-.nav_right
+.nav_right_offset
 {
    right: 5px;
+}
+
+.nav_left_shape
+{
+   width: 0;
+   height: 0;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   border-right: 10.5px solid white;
+   transform: scale(1);
+}
+
+.nav_right_shape
+{
+   width: 0;
+   height: 0;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   border-left: 10.5px solid white;
+   transform: scale(1);
 }
 
 .image_container_one_column
