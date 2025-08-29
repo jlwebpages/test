@@ -45,7 +45,7 @@ function load_data_from_file(file_name,element_id,display_error)
    {
       url: file_name,
 
-      dataType: "html",
+      dataType: "text",
 
       success: function(data)
       {
