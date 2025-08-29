@@ -69,7 +69,7 @@ function load_data_from_file(file_name,element_id,display_error)
          {
             update_button_positions();
 
-            document.getElementById("image_container").style.visibility = "visible";
+            document.getElementById("caption_div").style.visibility = "visible";
          }
       },
 
@@ -77,7 +77,7 @@ function load_data_from_file(file_name,element_id,display_error)
       {
          if (display_error == true) alert("Failed to load data from file:  "+file_name);
 
-         $("#"+element_id).hide();
+         document.getElementById(element_id).style.display = "none";
 
          if (element_id == "image_title")
          {
@@ -97,7 +97,7 @@ function load_data_from_file(file_name,element_id,display_error)
          {
             update_button_positions();
 
-            document.getElementById("image_container").style.visibility = "visible";
+            document.getElementById("caption_div").style.visibility = "visible";
          }
       },
    }
