@@ -191,11 +191,11 @@ image.onload = function()
    d.writeln('');
    if (container_style == one_column_container)
    {
-   d.writeln('<body class="body" onload="load_image_caption();">');
+   d.writeln('<body class="body" onload="load_image_caption();" oncontextmenu="return false;">');
    }
    else
    {
-   d.writeln('<body class="body" style="background-color: black" onload="load_image_caption();">');
+   d.writeln('<body class="body" style="background-color: black" onload="load_image_caption();" oncontextmenu="return false;">');
    }
    d.writeln('');
    d.writeln('');
