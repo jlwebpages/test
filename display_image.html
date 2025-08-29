@@ -76,8 +76,8 @@ image.src = image_file_name;
 
 image.onload = function()
 {
-   image_width  = this.width;
-   image_height = this.height;
+   image_width  = this.naturalWidth;
+   image_height = this.naturalHeight;
 
    width_ratio  = image_width/window.innerWidth;
    height_ratio = image_height/window.innerHeight;

@@ -68,8 +68,8 @@ function load_data_from_file(file_name,element_id,display_error)
          else if (element_id == "image_paragraph")
          {
             update_button_positions();
-            
-   document.getElementById("image_container").style.visibility = "visible";
+
+            document.getElementById("image_container").style.visibility = "visible";
          }
       },
 
@@ -96,6 +96,8 @@ function load_data_from_file(file_name,element_id,display_error)
          else if (element_id == "image_paragraph")
          {
             update_button_positions();
+
+            document.getElementById("image_container").style.visibility = "visible";
          }
       },
    }
