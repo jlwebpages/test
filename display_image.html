@@ -189,7 +189,14 @@ image.onload = function()
    d.writeln('   <script language="JavaScript" src=scripts.js><\/script>');
    d.writeln('</head>');
    d.writeln('');
+   if (container_style == one_column_container)
+   {
    d.writeln('<body class="body" onload="load_image_caption();">');
+   }
+   else
+   {
+   d.writeln('<body class="body" style="background-color: black" onload="load_image_caption();">');
+   }
    d.writeln('');
    d.writeln('');
    d.writeln('<div id="image_container" class='+container_class+'>');
