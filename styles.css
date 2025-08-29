@@ -395,5 +395,5 @@ a.link:hover
    height: 100vh;
    margin: 0px auto;
    overflow-y: hidden;
-   visibility: hidden;
+   visibility: visible;
 }
