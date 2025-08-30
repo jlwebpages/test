@@ -72,7 +72,7 @@ if (Number.isInteger(image_number) == false)
 }
 
 image     = new Image();
-image.src = image_file_name;
+
 
 image.onload = function()
 {
@@ -135,10 +135,13 @@ image.onload = function()
       if (CSS.supports('height', '100dvh'))
       {
          image_style = "width: auto; height: 100dvh";
+
       }
       else
       {
          image_style = "width: auto; height: 100vh";
+
+
       }
 
       if ( (adjusted_image_width + minimum_caption_width) > (window.innerWidth) )
@@ -152,6 +155,8 @@ image.onload = function()
          art_caption_style = "style=\"height: auto; padding-left: 10px\"";
 
          image_style = "width: 100%; height: auto";
+
+
       }
    }
    else
@@ -165,6 +170,8 @@ image.onload = function()
       art_caption_style = "style=\"height: auto\"";
 
       image_style = "width: 100%; height: auto";
+
+
    }
 
    if (nav_button_vertical_position > window.innerHeight / 2)
@@ -189,13 +196,13 @@ image.onload = function()
    d.writeln('   <script language="JavaScript" src=scripts.js><\/script>');
    d.writeln('</head>');
    d.writeln('');
-   d.writeln('<body class="body" style="background-color: black" onload="load_image_caption();" oncontextmenu="return false;">');
+   d.writeln('<body class="body" style="background-color: black" onload="load_image_caption();">');
    d.writeln('');
    d.writeln('');
    d.writeln('<div id="art_container" class='+container_class+'>');
    d.writeln('');
    d.writeln('   <div id="image_div" style="display: inline-block; position: relative">');
-   d.writeln('      <img src="'+image_file_name+'" style="'+image_style+'">');
+   d.writeln('      <img src="'+image.src+'" style="'+image_style+'">');
    d.writeln('      <button class="nav_button nav_left_offset" style="top: '+nav_button_vertical_position+'" onclick="update_image(\'left\');"><div class="nav_left_shape"></div></button>');
    if (container_style == one_column_container)
    {
@@ -224,6 +231,8 @@ image.onload = function()
 
    d.close();
 }
+
+image.src = image_file_name;
 
 function check_if_file_exists(gallery_name,image_number,direction)
 {
