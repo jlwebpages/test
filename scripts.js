@@ -141,7 +141,7 @@ function update_button_positions()
 {
    var div_width    = 0;
    var extra_width  = 0;
-   var right_offset = 0;
+   var right_offset = 5;
 
 
    if (document.getElementById("image_div")        == null) return false;
@@ -149,16 +149,26 @@ function update_button_positions()
    if (document.getElementById("back_button")      == null) return false;
    if (document.getElementById("nav_right_button") == null) return false;
 
-   div_width   = document.getElementById("image_div").offsetWidth + document.getElementById("caption_div").offsetWidth;
-   extra_width = window.innerWidth - div_width;
-
-   if (extra_width > 0)
+   if (document.getElementById("art_container").classList[0] == "image_container_one_column")
    {
-      right_offset  = (extra_width / 2) + 5;
+      right_offset = right_offset + (document.getElementById("art_container").offsetWidth - document.getElementById("art_container").clientWidth);
       right_offset += "px";
 
-      document.getElementById("back_button").style.right      = right_offset;
-      document.getElementById("nav_right_button").style.right = right_offset;      
+      document.getElementById("back_button").style.right = right_offset;
+   }
+   else if (document.getElementById("art_container").classList[0] == "image_container_two_column")
+   {
+      div_width   = document.getElementById("image_div").offsetWidth + document.getElementById("caption_div").offsetWidth;
+      extra_width = window.innerWidth - div_width;
+
+      if (extra_width > 0)
+      {
+         right_offset  = (extra_width / 2) + right_offset;
+         right_offset += "px";
+
+         document.getElementById("back_button").style.right      = right_offset;
+         document.getElementById("nav_right_button").style.right = right_offset;      
+      }
    }
 }
 
