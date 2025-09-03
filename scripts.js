@@ -215,9 +215,6 @@ function write_header()
 
 function display_image_with_caption(image_file_name,gallery_name,image_number)
 {
-
-   alert(image_file_name+"  "+gallery_name+"  "+image_number);
-
    var image = new Image();
 
 
