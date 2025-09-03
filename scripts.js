@@ -1,4 +1,4 @@
-function check_if_image_exists(gallery_name,image_number,max_number_of_images)
+function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
 {
    $.ajax
    (
@@ -14,7 +14,7 @@ function check_if_image_exists(gallery_name,image_number,max_number_of_images)
 
       error: function()
       {
-         if (image_number < max_number_of_images) check_if_image_exists(gallery_name,image_number+1,max_number_of_images);
+         if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images);
       },
    }
    );
@@ -121,7 +121,7 @@ function load_image(gallery_name,image_number,max_number_of_images)
 
    art_gallery_div.insertAdjacentHTML("beforeend",image_html);
 
-   if (image_number < max_number_of_images) check_if_image_exists(gallery_name,image_number+1,max_number_of_images)
+   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images)
 
    return true;
 }
@@ -132,7 +132,7 @@ function load_images_into_gallery(gallery_name)
    var max_number_of_images = 40;
 
 
-   check_if_image_exists(gallery_name,image_number,max_number_of_images);
+   load_image_into_gallery(gallery_name,image_number,max_number_of_images);
 
    return true;
 }
@@ -211,4 +211,291 @@ function write_header()
    d.close();
 
    return true;
+}
+
+function display_image_with_caption(image_file_name,gallery_name,image_number)
+{
+
+   alert(image_file_name+"  "+gallery_name+"  "+image_number);
+
+   var image = new Image();
+
+
+   image.onload = function()
+   {
+      var adjusted_image_height        = 0;
+      var adjusted_image_width         = 0;
+      var art_caption_style            = "";
+      var container_class              = "image_container_two_column";
+      var container_style              = 2;
+      var height_ratio                 = 1;
+      var html_string                  = "";
+      var image_height                 = 0;
+      var image_width                  = 0;
+      var image_style                  = "";
+      var max_number_of_images         = 40;
+      var minimum_caption_width        = 285;
+      var nav_button_vertical_position = 0;
+      var one_column_container         = 1;
+      var two_column_container         = 2;
+      var width_ratio                  = 1;
+
+
+      image_width  = this.naturalWidth;
+      image_height = this.naturalHeight;
+
+      width_ratio  = image_width/window.innerWidth;
+      height_ratio = image_height/window.innerHeight;
+
+      adjusted_image_width  = image_width/height_ratio;
+      adjusted_image_height = image_height/width_ratio;
+
+      if (window.innerWidth >= window.innerHeight)
+      {
+         if (image_height >= image_width)
+         {
+            container_style = two_column_container;
+         }
+         else
+         {
+            if (adjusted_image_height > window.innerHeight)
+            {
+               container_style = two_column_container;
+            }
+            else
+            {
+               container_style = one_column_container;
+            }
+         }
+      }
+      else
+      {
+         if (image_width >= image_height)
+         {
+            container_style = one_column_container;
+         }
+         else
+         {
+            if (adjusted_image_width > window.innerWidth)
+            {
+               container_style = one_column_container;
+            }
+            else
+            {
+               container_style = two_column_container;
+            }
+         }
+      }
+
+      if (container_style == two_column_container)
+      {
+         // Image height equals viewport height
+
+         container_class = "image_container_two_column";
+
+         nav_button_vertical_position = window.innerHeight / 2;
+
+         art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
+
+         if (CSS.supports('height', '100dvh'))
+         {
+            image_style = "width: auto; height: 100dvh";
+         }
+         else
+         {
+            image_style = "width: auto; height: 100vh";
+         }
+
+         if ( (adjusted_image_width + minimum_caption_width) > (window.innerWidth) )
+         {
+            container_style = one_column_container;
+
+            container_class = "image_container_one_column";
+
+            nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
+
+            art_caption_style = "style=\"height: auto; padding-left: 10px\"";
+
+            image_style = "width: 100%; height: auto";
+         }
+      }
+      else
+      {
+         // Image width equals viewport width
+
+         container_class = "image_container_one_column";
+
+         nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
+
+         art_caption_style = "style=\"height: auto\"";
+
+         image_style = "width: 100%; height: auto";
+      }
+
+      if (nav_button_vertical_position > window.innerHeight / 2)
+      {
+         nav_button_vertical_position = window.innerHeight / 2;
+      }
+
+      nav_button_vertical_position += "px";
+
+      html_string += '';
+      html_string += '';
+      html_string += '<div id="art_container" class='+container_class+'>';
+      html_string += '';
+      html_string += '   <div id="image_div" style="display: inline-block; position: relative">';
+      html_string += '      <img src="'+this.src+'" style="'+image_style+'">';
+      html_string += '      <button class="nav_button nav_left_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
+
+      if (container_style == one_column_container)
+      {
+         html_string += '      <button id="nav_right_button" class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
+         html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+      }
+
+      html_string += '   </div>';
+      html_string += '';
+      html_string += '   <div id="caption_div" class="art_caption" '+art_caption_style+'>';
+
+      if (container_style == two_column_container)
+      {
+         html_string += '      <button id="nav_right_button" class="nav_button nav_right_offset" style="position: fixed; top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
+         html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+      }
+
+      html_string += '      <span id="image_title" class="art_title"></span>';
+      html_string += '      <span id="image_dimensions" class="art_dimensions"></span>';
+      html_string += '      <span id="image_paragraph" class="art_paragraph"></span>';
+      html_string += '   </div>';
+      html_string += '';
+      html_string += '</div>';
+      html_string += '';
+      html_string += '';
+
+      document.body.innerHTML = html_string;
+
+      load_image_caption(image_file_name);
+   }
+
+   image.src = image_file_name;
+}
+
+function check_if_image_exists(gallery_name,image_number,max_number_of_images,direction)
+{
+   $.ajax
+   (
+   {
+      url: gallery_name+"/"+gallery_name+"_"+image_number+".jpg",
+
+      type: "HEAD",
+
+      success: function()
+      {
+         display_image_with_caption(gallery_name+"/"+gallery_name+"_"+image_number+".jpg",gallery_name,image_number);
+
+         return true;
+      },
+
+      error: function()
+      {
+         if (direction == "left")
+         {
+            if (image_number-1 >= 1)
+            {
+               check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
+            }
+            else
+            {
+               check_if_image_exists(gallery_name,max_number_of_images,max_number_of_images,"left");
+            }
+
+            return false;
+         }
+         else
+         {
+            if (image_number+1 <= max_number_of_images)
+            {
+               check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
+            }
+            else
+            {
+               check_if_image_exists(gallery_name,1,max_number_of_images,"right");
+            }
+
+            return false;
+         }
+      },
+   }
+   );
+
+   return false;
+}
+
+function display_gallery_page(gallery_name)
+{
+   window.location.href = gallery_name+".html";
+}
+
+function load_image_caption(image_file_name)
+{
+   load_data_from_file(image_file_name.split('.')[0]+"_title.txt","image_title",false);
+}
+
+function navigate_to_next_image(gallery_name,image_number,max_number_of_images,direction)
+{
+   image_number = parseInt(image_number);
+
+   if (direction == "left")
+   {
+      check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
+   }
+   else
+   {
+      check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
+   }
+}
+
+function validate_received_image_name()
+{
+   var gallery_name    = "";
+   var image_file_name = "";
+   var image_number    = "";
+   var index           = -1;
+   var URL_string      = window.location.search;
+   var URL_parameters  = new URLSearchParams(URL_string);
+
+
+   image_file_name = URL_parameters.get("image_file_name");
+
+   if ( (image_file_name == null) || (image_file_name == "") )
+   {
+      alert("Error:  Invalid image file name");
+
+      history.back();
+   }
+
+   index = image_file_name.indexOf("/");
+
+   if (index != -1)
+   {
+      gallery_name = image_file_name.slice(0, index);
+   }
+
+   if (gallery_name == "")
+   {
+      alert("Error:  Invalid gallery name");
+
+      history.back();
+   }
+
+   image_number = parseInt(image_file_name.replace(/\D/g, ''));
+
+   if (Number.isInteger(image_number) == false)
+   {
+      alert("Error:  Invalid image number");
+
+      history.back();
+   }
+
+   display_image_with_caption(image_file_name,gallery_name,image_number);
 }
