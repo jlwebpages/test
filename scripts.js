@@ -316,7 +316,7 @@ function load_image(gallery_name,image_number,max_number_of_images)
 
 
    image_html  = '<div class="art_image">';
-   image_html += '   <a href="display_image_with_caption.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="border_radius"></a>';
+   image_html += '   <a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="border_radius"></a>';
    image_html += '</div>';
 
    art_gallery_div.insertAdjacentHTML("beforeend",image_html);
