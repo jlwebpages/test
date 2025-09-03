@@ -26,8 +26,6 @@ function check_if_image_exists(gallery_name,image_number,max_number_of_images,di
             {
                check_if_image_exists(gallery_name,max_number_of_images,max_number_of_images,"left");
             }
-
-            return false;
          }
          else
          {
@@ -39,8 +37,6 @@ function check_if_image_exists(gallery_name,image_number,max_number_of_images,di
             {
                check_if_image_exists(gallery_name,1,max_number_of_images,"right");
             }
-
-            return false;
          }
       },
    }
@@ -60,6 +56,8 @@ function close_menu()
 function display_gallery_page(gallery_name)
 {
    window.location.href = gallery_name+".html";
+
+   return true;
 }
 
 function display_image_with_caption(image_file_name,gallery_name,image_number)
@@ -225,9 +223,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       // Update the browser address field
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name);
+
+      return true;
    }
 
    image.src = image_file_name;
+
+   return true;
 }
 
 function display_menu()
@@ -329,6 +331,8 @@ function load_image(gallery_name,image_number,max_number_of_images)
 function load_image_caption(image_file_name)
 {
    load_data_from_file(image_file_name.split('.')[0]+"_title.txt","image_title",false);
+
+   return true;
 }
 
 function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
@@ -378,6 +382,8 @@ function navigate_to_next_image(gallery_name,image_number,max_number_of_images,d
    {
       check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
    }
+
+   return true;
 }
 
 function update_button_positions()
@@ -413,6 +419,8 @@ function update_button_positions()
          document.getElementById("nav_right_button").style.right = right_offset;      
       }
    }
+
+   return true;
 }
 
 function validate_received_image_name()
@@ -463,6 +471,8 @@ function validate_received_image_name()
    }
 
    display_image_with_caption(image_file_name,gallery_name,image_number);
+
+   return true;
 }
 
 function write_copyright()
