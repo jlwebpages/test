@@ -1,25 +1,52 @@
-function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
+function check_if_image_exists(gallery_name,image_number,max_number_of_images,direction)
 {
    $.ajax
    (
    {
-      url: gallery_name + "/" + gallery_name + "_" + image_number + ".jpg",
+      url: gallery_name+"/"+gallery_name+"_"+image_number+".jpg",
 
       type: "HEAD",
 
       success: function()
       {
-         load_image(gallery_name,image_number,max_number_of_images);
+         display_image_with_caption(gallery_name+"/"+gallery_name+"_"+image_number+".jpg",gallery_name,image_number);
+
+         return true;
       },
 
       error: function()
       {
-         if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images);
+         if (direction == "left")
+         {
+            if (image_number-1 >= 1)
+            {
+               check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
+            }
+            else
+            {
+               check_if_image_exists(gallery_name,max_number_of_images,max_number_of_images,"left");
+            }
+
+            return false;
+         }
+         else
+         {
+            if (image_number+1 <= max_number_of_images)
+            {
+               check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
+            }
+            else
+            {
+               check_if_image_exists(gallery_name,1,max_number_of_images,"right");
+            }
+
+            return false;
+         }
       },
    }
    );
 
-   return true;
+   return false;
 }
 
 function close_menu()
@@ -30,187 +57,9 @@ function close_menu()
    return true;
 }
 
-function display_menu()
+function display_gallery_page(gallery_name)
 {
-   document.getElementById("menu_list").style.width = "170px";
-   document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
-
-   return true;
-}
-
-function load_data_from_file(file_name,element_id,display_error)
-{
-   $.ajax
-   (
-   {
-      url: file_name,
-
-      dataType: "html",
-
-      success: function(data)
-      {
-         document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
-
-         if (element_id == "image_title")
-         {
-            file_name  = file_name.replace("title","dimensions");
-            element_id = element_id.replace("title","dimensions");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_dimensions")
-         {
-            file_name  = file_name.replace("dimensions","paragraph");
-            element_id = element_id.replace("dimensions","paragraph");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_paragraph")
-         {
-            update_button_positions();
-
-            document.getElementById("art_container").style.visibility = "visible";
-         }
-      },
-
-      error: function()
-      {
-         if (display_error == true) alert("Failed to load data from file:  "+file_name);
-
-         document.getElementById(element_id).style.display = "none";
-
-         if (element_id == "image_title")
-         {
-            file_name  = file_name.replace("title","dimensions");
-            element_id = element_id.replace("title","dimensions");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_dimensions")
-         {
-            file_name  = file_name.replace("dimensions","paragraph");
-            element_id = element_id.replace("dimensions","paragraph");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_paragraph")
-         {
-            update_button_positions();
-
-            document.getElementById("art_container").style.visibility = "visible";
-         }
-      },
-   }
-   );
-
-   return true;
-}
-
-function load_image(gallery_name,image_number,max_number_of_images)
-{
-   var art_gallery_div  = document.getElementById("art_gallery");
-   var file_name_prefix = gallery_name + "_" + image_number;
-   var file_path_prefix = gallery_name + "/" + file_name_prefix;
-   var image_html       = "";
-   var image_path       = file_path_prefix + ".jpg";
-
-
-   image_html  = '<div class="art_image">';
-   image_html += '   <a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="border_radius"></a>';
-   image_html += '</div>';
-
-   art_gallery_div.insertAdjacentHTML("beforeend",image_html);
-
-   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images)
-
-   return true;
-}
-
-function load_images_into_gallery(gallery_name)
-{
-   var image_number         = 1;
-   var max_number_of_images = 40;
-
-
-   load_image_into_gallery(gallery_name,image_number,max_number_of_images);
-
-   return true;
-}
-
-function update_button_positions()
-{
-   var div_width    = 0;
-   var extra_width  = 0;
-   var right_offset = 5;
-
-
-   if (document.getElementById("image_div")        == null) return false;
-   if (document.getElementById("caption_div")      == null) return false;
-   if (document.getElementById("back_button")      == null) return false;
-   if (document.getElementById("nav_right_button") == null) return false;
-
-   if (document.getElementById("art_container").classList[0] == "image_container_one_column")
-   {
-      right_offset = right_offset + (document.getElementById("art_container").offsetWidth - document.getElementById("art_container").clientWidth);
-      right_offset += "px";
-
-      document.getElementById("back_button").style.right = right_offset;
-   }
-   else if (document.getElementById("art_container").classList[0] == "image_container_two_column")
-   {
-      div_width   = document.getElementById("image_div").offsetWidth + document.getElementById("caption_div").offsetWidth;
-      extra_width = window.innerWidth - div_width;
-
-      if (extra_width > 0)
-      {
-         right_offset  = (extra_width / 2) + right_offset;
-         right_offset += "px";
-
-         document.getElementById("back_button").style.right      = right_offset;
-         document.getElementById("nav_right_button").style.right = right_offset;      
-      }
-   }
-}
-
-function write_copyright()
-{
-   document.writeln('<div class="copyright" style="font-size: 12px">Copyright &copy 2025 Darlene Laguna Art<br>All Rights Reserved.</div>');
-
-   return true;
-}
-
-function write_header()
-{
-   document.open();
-
-   var d = document;
-
-   d.writeln('');
-   d.writeln('');
-   d.writeln('<span class="menu_button" onclick="display_menu();">&#9776;</span>');
-   d.writeln('');
-   d.writeln('<div id="menu_list" class="menu">');
-   d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
-   d.writeln('   <a href="featured_work.html"  >FEATURED WORK</a>');
-   d.writeln('   <a href="photo_art.html"      >PHOTO ART</a>');
-   d.writeln('   <a href="works_on_paper.html" >WORKS ON PAPER</a>');
-   d.writeln('   <a href="about.html"          >ABOUT</a>');
-   d.writeln('</div>');
-   d.writeln('');
-   d.writeln('<div class="title">DARLENE LAGUNA ART</div>');
-   d.writeln('');
-   d.writeln('<div class="links">');
-   d.writeln('   <a id="featured_work_link"  class="link" href="featured_work.html" >FEATURED WORK</a>');
-   d.writeln('   <a id="photo_art_link"      class="link" href="photo_art.html"     >PHOTO ART</a>');
-   d.writeln('   <a id="works_on_paper_link" class="link" href="works_on_paper.html">WORKS ON PAPER</a>')
-   d.writeln('   <a id="about_link"          class="link" href="about.html"         >ABOUT</a>');
-   d.writeln('</div>');
-   d.writeln('');
-   d.writeln('');
-
-   d.close();
-
-   return true;
+   window.location.href = gallery_name+".html";
 }
 
 function display_image_with_caption(image_file_name,gallery_name,image_number)
@@ -372,70 +221,149 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       document.body.innerHTML = html_string;
 
       load_image_caption(image_file_name);
+
+      // Update the browser address field
+
+      window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name);
    }
 
    image.src = image_file_name;
 }
 
-function check_if_image_exists(gallery_name,image_number,max_number_of_images,direction)
+function display_menu()
+{
+   document.getElementById("menu_list").style.width = "170px";
+   document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
+
+   return true;
+}
+
+function load_data_from_file(file_name,element_id,display_error)
 {
    $.ajax
    (
    {
-      url: gallery_name+"/"+gallery_name+"_"+image_number+".jpg",
+      url: file_name,
 
-      type: "HEAD",
+      dataType: "html",
 
-      success: function()
+      success: function(data)
       {
-         display_image_with_caption(gallery_name+"/"+gallery_name+"_"+image_number+".jpg",gallery_name,image_number);
+         document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
 
-         return true;
+         if (element_id == "image_title")
+         {
+            file_name  = file_name.replace("title","dimensions");
+            element_id = element_id.replace("title","dimensions");
+
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_dimensions")
+         {
+            file_name  = file_name.replace("dimensions","paragraph");
+            element_id = element_id.replace("dimensions","paragraph");
+
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_paragraph")
+         {
+            update_button_positions();
+
+            document.getElementById("art_container").style.visibility = "visible";
+         }
       },
 
       error: function()
       {
-         if (direction == "left")
-         {
-            if (image_number-1 >= 1)
-            {
-               check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
-            }
-            else
-            {
-               check_if_image_exists(gallery_name,max_number_of_images,max_number_of_images,"left");
-            }
+         if (display_error == true) alert("Failed to load data from file:  "+file_name);
 
-            return false;
+         document.getElementById(element_id).style.display = "none";
+
+         if (element_id == "image_title")
+         {
+            file_name  = file_name.replace("title","dimensions");
+            element_id = element_id.replace("title","dimensions");
+
+            load_data_from_file(file_name,element_id,false);
          }
-         else
+         else if (element_id == "image_dimensions")
          {
-            if (image_number+1 <= max_number_of_images)
-            {
-               check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
-            }
-            else
-            {
-               check_if_image_exists(gallery_name,1,max_number_of_images,"right");
-            }
+            file_name  = file_name.replace("dimensions","paragraph");
+            element_id = element_id.replace("dimensions","paragraph");
 
-            return false;
+            load_data_from_file(file_name,element_id,false);
+         }
+         else if (element_id == "image_paragraph")
+         {
+            update_button_positions();
+
+            document.getElementById("art_container").style.visibility = "visible";
          }
       },
    }
    );
 
-   return false;
+   return true;
 }
 
-function display_gallery_page(gallery_name)
+function load_image(gallery_name,image_number,max_number_of_images)
 {
-   window.location.href = gallery_name+".html";
+   var art_gallery_div  = document.getElementById("art_gallery");
+   var file_name_prefix = gallery_name + "_" + image_number;
+   var file_path_prefix = gallery_name + "/" + file_name_prefix;
+   var image_html       = "";
+   var image_path       = file_path_prefix + ".jpg";
+
+
+   image_html  = '<div class="art_image">';
+   image_html += '   <a href="display_image_with_caption.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="border_radius"></a>';
+   image_html += '</div>';
+
+   art_gallery_div.insertAdjacentHTML("beforeend",image_html);
+
+   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images)
+
+   return true;
 }
 
 function load_image_caption(image_file_name)
 {
    load_data_from_file(image_file_name.split('.')[0]+"_title.txt","image_title",false);
+}
+
+function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
+{
+   $.ajax
+   (
+   {
+      url: gallery_name + "/" + gallery_name + "_" + image_number + ".jpg",
+
+      type: "HEAD",
+
+      success: function()
+      {
+         load_image(gallery_name,image_number,max_number_of_images);
+      },
+
+      error: function()
+      {
+         if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images);
+      },
+   }
+   );
+
+   return true;
+}
+
+function load_images_into_gallery(gallery_name)
+{
+   var image_number         = 1;
+   var max_number_of_images = 40;
+
+
+   load_image_into_gallery(gallery_name,image_number,max_number_of_images);
+
+   return true;
 }
 
 function navigate_to_next_image(gallery_name,image_number,max_number_of_images,direction)
@@ -452,21 +380,61 @@ function navigate_to_next_image(gallery_name,image_number,max_number_of_images,d
    }
 }
 
+function update_button_positions()
+{
+   var div_width    = 0;
+   var extra_width  = 0;
+   var right_offset = 5;
+
+
+   if (document.getElementById("image_div")        == null) return false;
+   if (document.getElementById("caption_div")      == null) return false;
+   if (document.getElementById("back_button")      == null) return false;
+   if (document.getElementById("nav_right_button") == null) return false;
+
+   if (document.getElementById("art_container").classList[0] == "image_container_one_column")
+   {
+      right_offset = right_offset + (document.getElementById("art_container").offsetWidth - document.getElementById("art_container").clientWidth);
+      right_offset += "px";
+
+      document.getElementById("back_button").style.right = right_offset;
+   }
+   else if (document.getElementById("art_container").classList[0] == "image_container_two_column")
+   {
+      div_width   = document.getElementById("image_div").offsetWidth + document.getElementById("caption_div").offsetWidth;
+      extra_width = window.innerWidth - div_width;
+
+      if (extra_width > 0)
+      {
+         right_offset  = (extra_width / 2) + right_offset;
+         right_offset += "px";
+
+         document.getElementById("back_button").style.right      = right_offset;
+         document.getElementById("nav_right_button").style.right = right_offset;      
+      }
+   }
+}
+
 function validate_received_image_name()
 {
-   var gallery_name    = "";
-   var image_file_name = "";
-   var image_number    = "";
-   var index           = -1;
-   var URL_string      = window.location.search;
-   var URL_parameters  = new URLSearchParams(URL_string);
+   var gallery_name       = "";
+   var html_name          = "";
+   var html_path_segments = "";
+   var image_file_name    = "";
+   var image_number       = "";
+   var index              = -1;
+   var URL_string         = window.location.search;
+   var URL_parameters     = new URLSearchParams(URL_string);
 
+
+   html_path_segments = window.location.pathname.split('/');
+   html_name = html_path_segments[html_path_segments.length - 1];
 
    image_file_name = URL_parameters.get("image_file_name");
 
    if ( (image_file_name == null) || (image_file_name == "") )
    {
-      alert("Error:  Invalid image file name");
+      alert("Error:\n\nInvalid Image File Name passed to " + html_name);
 
       history.back();
    }
@@ -480,7 +448,7 @@ function validate_received_image_name()
 
    if (gallery_name == "")
    {
-      alert("Error:  Invalid gallery name");
+      alert("Error:\n\nInvalid Gallery Name passed to " + html_name);
 
       history.back();
    }
@@ -489,10 +457,51 @@ function validate_received_image_name()
 
    if (Number.isInteger(image_number) == false)
    {
-      alert("Error:  Invalid image number");
+      alert("Error:\n\nInvalid Image Number passed to " + html_name);
 
       history.back();
    }
 
    display_image_with_caption(image_file_name,gallery_name,image_number);
+}
+
+function write_copyright()
+{
+   document.writeln('<div class="copyright" style="font-size: 12px">Copyright &copy 2025 Darlene Laguna Art<br>All Rights Reserved.</div>');
+
+   return true;
+}
+
+function write_header()
+{
+   document.open();
+
+   var d = document;
+
+   d.writeln('');
+   d.writeln('');
+   d.writeln('<span class="menu_button" onclick="display_menu();">&#9776;</span>');
+   d.writeln('');
+   d.writeln('<div id="menu_list" class="menu">');
+   d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
+   d.writeln('   <a href="featured_work.html"  >FEATURED WORK</a>');
+   d.writeln('   <a href="photo_art.html"      >PHOTO ART</a>');
+   d.writeln('   <a href="works_on_paper.html" >WORKS ON PAPER</a>');
+   d.writeln('   <a href="about.html"          >ABOUT</a>');
+   d.writeln('</div>');
+   d.writeln('');
+   d.writeln('<div class="title">DARLENE LAGUNA ART</div>');
+   d.writeln('');
+   d.writeln('<div class="links">');
+   d.writeln('   <a id="featured_work_link"  class="link" href="featured_work.html" >FEATURED WORK</a>');
+   d.writeln('   <a id="photo_art_link"      class="link" href="photo_art.html"     >PHOTO ART</a>');
+   d.writeln('   <a id="works_on_paper_link" class="link" href="works_on_paper.html">WORKS ON PAPER</a>')
+   d.writeln('   <a id="about_link"          class="link" href="about.html"         >ABOUT</a>');
+   d.writeln('</div>');
+   d.writeln('');
+   d.writeln('');
+
+   d.close();
+
+   return true;
 }
