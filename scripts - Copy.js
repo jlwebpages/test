@@ -310,40 +310,13 @@ function load_data_from_file(file_name,element_id,display_error)
 
 function load_images_from_gallery_image_list(gallery_image_list,max_number_of_images)
 {
-   var column_count       = 3;
-   var column_item_number = 100;
-   var column_number      = 1;
-   var image_html         = "";
+   var image_html = "";
 
-alert(column_count);
-   for (i = 0; i < max_number_of_images; i++)
-   {
-      if (gallery_image_list[i] != "")
-      {
-         gallery_image_list[i] = "X" + column_number + column_item_number + "_" + gallery_image_list[i];
-
-         //alert(gallery_image_list[i]);
-
-         if (column_number < column_count)
-         {
-            column_number++;
-         }
-         else
-         {
-            column_number = 1;
-            column_item_number++;
-         }
-      }
-   }
-
-   gallery_image_list.sort();
 
    for (i = 0; i < max_number_of_images; i++)
    {
       if (gallery_image_list[i] != "")
       {
-         gallery_image_list[i] = gallery_image_list[i].slice(gallery_image_list[i].indexOf('_') + 1);
-
          image_html  = '<div class="art_image">';
          image_html += '   <a href="display_image.html?image_file_name='+gallery_image_list[i]+'" target="_self"><img src="'+gallery_image_list[i]+'" class="border_radius"></a>';
          image_html += '</div>';
