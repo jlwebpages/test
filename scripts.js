@@ -308,42 +308,22 @@ function load_data_from_file(file_name,element_id,display_error)
    return true;
 }
 
+function load_image_caption(image_file_name)
+{
+   load_data_from_file(image_file_name.split('.')[0]+"_title.txt","image_title",false);
+
+   return true;
+}
+
 function load_images_from_gallery_image_list(gallery_image_list,max_number_of_images)
 {
-   var column_count       = 3;
-   var column_item_number = 100;
-   var column_number      = 1;
-   var image_html         = "";
+   var image_html = "";
 
-alert(column_count);
-   for (i = 0; i < max_number_of_images; i++)
-   {
-      if (gallery_image_list[i] != "")
-      {
-         gallery_image_list[i] = "X" + column_number + column_item_number + "_" + gallery_image_list[i];
-
-         //alert(gallery_image_list[i]);
-
-         if (column_number < column_count)
-         {
-            column_number++;
-         }
-         else
-         {
-            column_number = 1;
-            column_item_number++;
-         }
-      }
-   }
-
-   gallery_image_list.sort();
 
    for (i = 0; i < max_number_of_images; i++)
    {
       if (gallery_image_list[i] != "")
       {
-         gallery_image_list[i] = gallery_image_list[i].slice(gallery_image_list[i].indexOf('_') + 1);
-
          image_html  = '<div class="art_image">';
          image_html += '   <a href="display_image.html?image_file_name='+gallery_image_list[i]+'" target="_self"><img src="'+gallery_image_list[i]+'" class="border_radius"></a>';
          image_html += '</div>';
@@ -355,9 +335,30 @@ alert(column_count);
    return true;
 }
 
-function load_image_caption(image_file_name)
+function load_images_into_gallery(gallery_name)
 {
-   load_data_from_file(image_file_name.split('.')[0]+"_title.txt","image_title",false);
+   var image_number         = 1;
+   var max_number_of_images = 40;
+   var gallery_image_list   = Array(max_number_of_images).fill("");
+
+
+   populate_gallery_image_list_and_load_images(gallery_image_list,gallery_name,image_number,max_number_of_images);
+
+   return true;
+}
+
+function navigate_to_next_image(gallery_name,image_number,max_number_of_images,direction)
+{
+   image_number = parseInt(image_number);
+
+   if (direction == "left")
+   {
+      check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
+   }
+   else
+   {
+      check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
+   }
 
    return true;
 }
@@ -398,34 +399,6 @@ function populate_gallery_image_list_and_load_images(gallery_image_list,gallery_
       },
    }
    );
-
-   return true;
-}
-
-function load_images_into_gallery(gallery_name)
-{
-   var image_number         = 1;
-   var max_number_of_images = 40;
-   var gallery_image_list   = Array(max_number_of_images).fill("");
-
-
-   populate_gallery_image_list_and_load_images(gallery_image_list,gallery_name,image_number,max_number_of_images);
-
-   return true;
-}
-
-function navigate_to_next_image(gallery_name,image_number,max_number_of_images,direction)
-{
-   image_number = parseInt(image_number);
-
-   if (direction == "left")
-   {
-      check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
-   }
-   else
-   {
-      check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
-   }
 
    return true;
 }
