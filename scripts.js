@@ -322,15 +322,11 @@ function load_images_from_gallery_image_list(gallery_image_list,gallery_name,ima
       if (gallery_image_list[i] != "")
       {
          image_html  = '<div class="art_image">';
-         image_html += '   <a href="display_image.html?image_file_name='+gallery_image_list[i]+'" target="_self"><img src="'+gallery_image_list[i]+'" class="border_radius"></a>';
+         image_html += '   <a href="display_image.html?image_file_name='+gallery_image_list[i]+'" target="_self"><img src="'+gallery_image_list[i]+'" loading="lazy" class="border_radius"></a>';
          image_html += '</div>';
 
          art_gallery_div.insertAdjacentHTML("beforeend",image_html);
       }
-
-      //if (image_number < max_number_of_images) populate_gallery_image_list_and_load_images(gallery_name,image_number+1,max_number_of_images)
-
-
    }
 
    return true;
@@ -388,6 +384,7 @@ function load_images_into_gallery(gallery_name)
    var image_number         = 1;
    var max_number_of_images = 40;
    var gallery_image_list   = Array(max_number_of_images).fill("");
+
 
    populate_gallery_image_list_and_load_images(gallery_image_list,gallery_name,image_number,max_number_of_images);
 
