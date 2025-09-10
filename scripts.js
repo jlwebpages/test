@@ -308,22 +308,57 @@ function load_data_from_file(file_name,element_id,display_error)
    return true;
 }
 
-function load_image(gallery_name,image_number,max_number_of_images)
+function load_image(gallery_name,image_number,max_number_of_images,image_count)
 {
-   var art_gallery_div  = document.getElementById("art_gallery");
+   var column_count     = document.getElementById("art_gallery").style.columnCount;
    var file_name_prefix = gallery_name + "_" + image_number;
    var file_path_prefix = gallery_name + "/" + file_name_prefix;
    var image_html       = "";
    var image_path       = file_path_prefix + ".jpg";
 
 
-   image_html  = '<div class="art_image">';
+   if (column_count == 1)
+   {
+      document.getElementById("one_column_1").style.display = "inline-block";
+   }
+   else if (column_count == 2)
+   {
+      document.getElementById("two_column_1").style.display = "inline-block";
+      document.getElementById("two_column_2").style.display = "inline-block";
+
+   }
+   else if (column_count == 3)
+   {
+      document.getElementById("three_column_1").style.display = "inline-block";
+      document.getElementById("three_column_2").style.display = "inline-block";
+      document.getElementById("three_column_3").style.display = "inline-block";
+   }
+
+   image_html += '<div class="art_image">';
    image_html += '   <a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="border_radius"></a>';
    image_html += '</div>';
 
-   art_gallery_div.insertAdjacentHTML("beforeend",image_html);
+   document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
-   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images)
+   if (image_count % 2 != 0)
+   {
+      document.getElementById("two_column_1").insertAdjacentHTML("beforeend", image_html);  
+   }
+   else
+   {
+      document.getElementById("two_column_2").insertAdjacentHTML("beforeend", image_html);  
+   }
+
+   if (image_count % 3 == 0)
+   {
+      document.getElementById("three_column_3").insertAdjacentHTML("beforeend", image_html);
+   }
+   else
+   {
+      document.getElementById("three_column_"+(image_count % 3)).insertAdjacentHTML("beforeend", image_html);
+   }
+
+   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images,image_count)
 
    return true;
 }
@@ -335,7 +370,7 @@ function load_image_caption(image_file_name)
    return true;
 }
 
-function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
+function load_image_into_gallery(gallery_name,image_number,max_number_of_images,image_count)
 {
    $.ajax
    (
@@ -346,12 +381,12 @@ function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
 
       success: function()
       {
-         load_image(gallery_name,image_number,max_number_of_images);
+         load_image(gallery_name,image_number,max_number_of_images,image_count+1);
       },
 
       error: function()
       {
-         if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images);
+         if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images,image_count);
       },
    }
    );
@@ -361,11 +396,12 @@ function load_image_into_gallery(gallery_name,image_number,max_number_of_images)
 
 function load_images_into_gallery(gallery_name)
 {
+   var image_count          = 0;
    var image_number         = 1;
    var max_number_of_images = 40;
 
 
-   load_image_into_gallery(gallery_name,image_number,max_number_of_images);
+   load_image_into_gallery(gallery_name,image_number,max_number_of_images,image_count);
 
    return true;
 }

@@ -227,11 +227,21 @@ a.link:hover
 
 .art_gallery
 {
-   column-count: 2;
+   column-count: 3;
    column-gap: 50px;
    text-align: center;
    margin: 0px auto;
    width: 95%;
+}
+
+.art_gallery_column
+{
+   column-count: 1;
+
+   border: 0px;
+   margin: 0px;
+   padding: 0px;
+   display: none;
 }
 
 .art_image
