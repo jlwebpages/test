@@ -319,19 +319,19 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
 
    if (column_count == 1)
    {
-      document.getElementById("one_column_1").style.display = "inline-block";
+      document.getElementById("one_column_1").style.display = "block";
    }
    else if (column_count == 2)
    {
-      document.getElementById("two_column_1").style.display = "inline-block";
-      document.getElementById("two_column_2").style.display = "inline-block";
+      document.getElementById("two_column_1").style.display = "block";
+      document.getElementById("two_column_2").style.display = "block";
 
    }
    else if (column_count == 3)
    {
-      document.getElementById("three_column_1").style.display = "inline-block";
-      document.getElementById("three_column_2").style.display = "inline-block";
-      document.getElementById("three_column_3").style.display = "inline-block";
+      document.getElementById("three_column_1").style.display = "block";
+      document.getElementById("three_column_2").style.display = "block";
+      document.getElementById("three_column_3").style.display = "block";
    }
 
    image_html += '<div class="art_image">';
