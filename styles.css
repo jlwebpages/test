@@ -16,6 +16,12 @@
    .text_image      {width:          100%               !important}
    .text_image      {margin:         0px 0px 25px 0px   !important}
    .art_gallery     {column-count:   1                  !important}
+   #one_column_1    {display:        inline-block       !important}
+   #two_column_1    {display:        none               !important}
+   #two_column_2    {display:        none               !important}
+   #three_column_1  {display:        none               !important}
+   #three_column_2  {display:        none               !important}
+   #three_column_3  {display:        none               !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
@@ -35,18 +41,30 @@
    .text            {padding:        40px 10px 15px 10px !important}
    .text_image      {margin:         0px 0px 25px 25px   !important}
    .art_gallery     {column-count:   2                   !important}
+   #one_column_1    {display:        none                !important}
+   #two_column_1    {display:        inline-block        !important}
+   #two_column_2    {display:        inline-block        !important}
+   #three_column_1  {display:        none                !important}
+   #three_column_2  {display:        none                !important}
+   #three_column_3  {display:        none                !important}
 }
 
 /* Rules for iPads in portrait orientation */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
-   .title         {font-size:      46px                !important}
-   .title         {letter-spacing: 2px                 !important}
-   .sub_title     {padding-bottom: 15px                !important}
-   .text          {padding:        50px 20px 25px 20px !important}
-   .text_image    {margin:         0px 0px 25px 25px   !important}
-   .art_gallery   {column-count:   2                   !important}
+   .title          {font-size:      46px                !important}
+   .title          {letter-spacing: 2px                 !important}
+   .sub_title      {padding-bottom: 15px                !important}
+   .text           {padding:        50px 20px 25px 20px !important}
+   .text_image     {margin:         0px 0px 25px 25px   !important}
+   .art_gallery    {column-count:   2                   !important}
+   #one_column_1   {display:        none                !important}
+   #two_column_1   {display:        inline-block        !important}
+   #two_column_2   {display:        inline-block        !important}
+   #three_column_1 {display:        none                !important}
+   #three_column_2 {display:        none                !important}
+   #three_column_3 {display:        none                !important}
 }
 
 /* Replace vh with dvh on devices that support dvh */
@@ -237,7 +255,6 @@ a.link:hover
 .art_gallery_column
 {
    column-count: 1;
-
    border: 0px;
    margin: 0px;
    padding: 0px;
