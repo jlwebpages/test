@@ -16,7 +16,7 @@
    .text_image      {width:          100%               !important}
    .text_image      {margin:         0px 0px 25px 0px   !important}
    .art_gallery     {column-count:   1                  !important}
-   #one_column_1    {display:        inline-block       !important}
+   #one_column_1    {display:        block              !important}
    #two_column_1    {display:        none               !important}
    #two_column_2    {display:        none               !important}
    #three_column_1  {display:        none               !important}
@@ -42,8 +42,8 @@
    .text_image      {margin:         0px 0px 25px 25px   !important}
    .art_gallery     {column-count:   2                   !important}
    #one_column_1    {display:        none                !important}
-   #two_column_1    {display:        inline-block        !important}
-   #two_column_2    {display:        inline-block        !important}
+   #two_column_1    {display:        block               !important}
+   #two_column_2    {display:        block               !important}
    #three_column_1  {display:        none                !important}
    #three_column_2  {display:        none                !important}
    #three_column_3  {display:        none                !important}
@@ -60,8 +60,8 @@
    .text_image     {margin:         0px 0px 25px 25px   !important}
    .art_gallery    {column-count:   2                   !important}
    #one_column_1   {display:        none                !important}
-   #two_column_1   {display:        inline-block        !important}
-   #two_column_2   {display:        inline-block        !important}
+   #two_column_1   {display:        block               !important}
+   #two_column_2   {display:        block               !important}
    #three_column_1 {display:        none                !important}
    #three_column_2 {display:        none                !important}
    #three_column_3 {display:        none                !important}
