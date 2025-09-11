@@ -310,7 +310,7 @@ function load_data_from_file(file_name,element_id,display_error)
 
 function load_image(gallery_name,image_number,max_number_of_images,image_count)
 {
-   var column_count     = document.getElementById("art_gallery").style.columnCount;
+   var column_count     = window.getComputedStyle(document.getElementById("art_gallery")).columnCount;
    var file_name_prefix = gallery_name + "_" + image_number;
    var file_path_prefix = gallery_name + "/" + file_name_prefix;
    var image_html       = "";
@@ -342,15 +342,21 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
 
    if (image_count % 2 != 0)
    {
-      document.getElementById("two_column_1").insertAdjacentHTML("beforeend", image_html);  
+      // image_count is odd
+
+      document.getElementById("two_column_1").insertAdjacentHTML("beforeend", image_html);
    }
    else
    {
-      document.getElementById("two_column_2").insertAdjacentHTML("beforeend", image_html);  
+      // image_count is even
+
+      document.getElementById("two_column_2").insertAdjacentHTML("beforeend", image_html);
    }
 
    if (image_count % 3 == 0)
    {
+      // image_count is a multiple of 3
+
       document.getElementById("three_column_3").insertAdjacentHTML("beforeend", image_html);
    }
    else
@@ -358,7 +364,7 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
       document.getElementById("three_column_"+(image_count % 3)).insertAdjacentHTML("beforeend", image_html);
    }
 
-   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images,image_count)
+   if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images,image_count);
 
    return true;
 }

@@ -15,9 +15,8 @@
 
 <script>
    write_header();
-   load_data_from_file('works_on_paper/works_on_paper.txt','works_on_paper_text',true);
-   load_images_into_gallery('works_on_paper'); 
    document.getElementById("works_on_paper_link").className = "clicked_link";
+   load_data_from_file('works_on_paper/works_on_paper.txt','works_on_paper_text',true);
 </script>
 
 <table class="table border_radius">
@@ -31,7 +30,7 @@
 
 </table>
 
-<div id="art_gallery" class="art_gallery" style="column-count: 3">
+<div id="art_gallery" class="art_gallery">
 
    <div id="one_column_1" class="art_gallery_column"></div>
 
@@ -47,7 +46,10 @@
 
 </div>
 
-<script>write_copyright();</script>
+<script>
+   load_images_into_gallery('works_on_paper');
+   write_copyright();
+</script>
 
 
 </body>
