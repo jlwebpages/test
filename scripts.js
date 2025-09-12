@@ -335,7 +335,7 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
    }
 
    image_html += '<div class="art_image">';
-   image_html += '   <a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" loading="eager" class="border_radius"></a>';
+   image_html += '   <a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" loading="lazy" class="border_radius"></a>';
    image_html += '</div>';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
