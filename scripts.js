@@ -544,11 +544,11 @@ function write_header()
    d.writeln('');
    d.writeln('<div class="title">DARLENE LAGUNA ART</div>');
    d.writeln('');
-   d.writeln('<div class="links">');
-   d.writeln('   <a id="featured_work_link"  class="link" href="featured_work.html" >FEATURED WORK</a>');
-   d.writeln('   <a id="photo_art_link"      class="link" href="photo_art.html"     >PHOTO ART</a>');
-   d.writeln('   <a id="works_on_paper_link" class="link" href="works_on_paper.html">WORKS ON PAPER</a>')
-   d.writeln('   <a id="about_link"          class="link" href="about.html"         >ABOUT</a>');
+   d.writeln('<div class="header_links">');
+   d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >FEATURED WORK</a>');
+   d.writeln('   <a id="photo_art_link"      class="header_link" href="photo_art.html"     >PHOTO ART</a>');
+   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">WORKS ON PAPER</a>')
+   d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >ABOUT</a>');
    d.writeln('</div>');
    d.writeln('');
    d.writeln('');

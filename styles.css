@@ -5,7 +5,7 @@
    .menu_button     {visibility:     visible            !important}
    .title           {font-size:      38px               !important}
    .title           {letter-spacing: 2px                !important}
-   .links           {display:        none               !important}
+   .header_links    {display:        none               !important}
    .nav_button      {height:         24px               !important}
    .nav_button      {width:          14px               !important}
    .nav_left_shape  {transform:      scale(80%)         !important}
@@ -31,7 +31,7 @@
    .menu_button     {visibility:     visible             !important}
    .title           {font-size:      38px                !important}
    .title           {letter-spacing: 2px                 !important}
-   .links           {display:        none                !important}
+   .header_links    {display:        none                !important}
    .nav_button      {height:         24px                !important}
    .nav_button      {width:          14px                !important}
    .nav_left_shape  {transform:      scale(80%)          !important}
@@ -105,7 +105,7 @@
    display: inline-block;
 }
 
-.links
+.header_links
 {
    display: flex;
    justify-content: space-evenly;
@@ -116,7 +116,7 @@
    padding: 25px 0px 25px 0px;
 }
 
-.link
+.header_link
 {
    font-family: Arial, sans-serif;
    font-size: 16px;
@@ -126,13 +126,13 @@
    margin: 0px;
 }
 
-a.link:hover
+a.header_link:hover
 {
    font-weight: bold;
    color: #BE0000;
 }
 
-.clicked_link
+.clicked_header_link
 {
    font-family: Arial, sans-serif;
    font-size: 16px;
@@ -170,7 +170,7 @@ a.link:hover
    float: right;
 }
 
-.e-mail
+.general_link
 {
    color: #BE0000;
    text-decoration: none;
@@ -259,7 +259,6 @@ a.link:hover
    border: 0px;
    margin: 0px;
    padding: 0px;
-   width: 300px;
    display: none;
 }
 
@@ -274,6 +273,7 @@ a.link:hover
 {
    width: 100%;
    height: auto;
+   transition: transform .5s;
 }
 
 @media (hover: hover)
