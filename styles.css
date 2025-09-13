@@ -273,7 +273,7 @@ a.header_link:hover
 
 .art_image img
 {
-
+   border-radius: 8px;
    width: 100%;
    height: auto;
 }
