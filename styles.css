@@ -264,26 +264,23 @@ a.header_link:hover
 
 .art_image
 {
-   border-radius: 8px;
    margin-top: 25px;
    margin-bottom: 25px;
    display: inline-block;
-   overflow: hidden;
-   transition: transform .5s;
 }
 
 .art_image img
 {
    width: 100%;
    height: auto;
-   dislay: block;
+   transition: transform .5s;
 }
 
 @media (hover: hover)
 {
    /* The following should only be applied if devices support hovering */
 
-   .art_image:hover
+   .art_image:hover img
    {
       transform: scale(1.05);
    }
