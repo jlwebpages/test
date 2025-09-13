@@ -268,6 +268,7 @@ a.header_link:hover
    margin-top: 25px;
    margin-bottom: 25px;
    display: inline-block;
+   overflow: hidden;
    transition: transform .5s;
 }
 
