@@ -2,27 +2,27 @@
 
 @media only screen and (max-width: 655px)
 {
-   .menu_button     {visibility:     visible            !important}
-   .title           {font-size:      38px               !important}
-   .title           {letter-spacing: 2px                !important}
-   .header_links    {display:        none               !important}
-   .nav_button      {height:         24px               !important}
-   .nav_button      {width:          14px               !important}
-   .nav_left_shape  {transform:      scale(80%)         !important}
-   .nav_right_shape {transform:      scale(80%)         !important}
-   .sub_title       {font-size:      30px               !important}
-   .sub_title       {padding-bottom: 15px               !important}
-   .text            {padding:        25px 25px 0px 25px !important}
-   .text_image      {width:          100%               !important}
-   .text_image      {margin:         0px 0px 25px 0px   !important}
-   .art_gallery     {column-count:   1                  !important}
-   .art_image       {margin-top:     0px                !important}
-   #one_column_1    {display:        block              !important}
-   #two_column_1    {display:        none               !important}
-   #two_column_2    {display:        none               !important}
-   #three_column_1  {display:        none               !important}
-   #three_column_2  {display:        none               !important}
-   #three_column_3  {display:        none               !important}
+   .menu_button     {visibility:     visible             !important}
+   .title           {font-size:      38px                !important}
+   .title           {letter-spacing: 2px                 !important}
+   .header_links    {display:        none                !important}
+   .nav_button      {height:         24px                !important}
+   .nav_button      {width:          14px                !important}
+   .nav_left_shape  {transform:      scale(80%)          !important}
+   .nav_right_shape {transform:      scale(80%)          !important}
+   .sub_title       {font-size:      30px                !important}
+   .sub_title       {padding-bottom: 15px                !important}
+   .text            {padding:        25px 25px 15px 25px !important}
+   .text_image      {width:          100%                !important}
+   .text_image      {margin:         0px 0px 25px 0px    !important}
+   .art_gallery     {column-count:   1                   !important}
+   .art_image       {margin-top:     0px                 !important}
+   #one_column_1    {display:        block               !important}
+   #two_column_1    {display:        none                !important}
+   #two_column_2    {display:        none                !important}
+   #three_column_1  {display:        none                !important}
+   #three_column_2  {display:        none                !important}
+   #three_column_3  {display:        none                !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
