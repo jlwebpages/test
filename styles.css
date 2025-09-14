@@ -1,6 +1,6 @@
-/* Rules for mobile devices */
+/* Rules for mobile devices in portrait orientation */
 
-@media only screen and (max-width: 655px)
+@media only screen and (max-width: 480px) and (orientation: portrait)
 {
    .menu_button     {visibility:     visible             !important}
    .title           {font-size:      38px                !important}
@@ -25,9 +25,30 @@
    #three_column_3  {display:        none                !important}
 }
 
+/* Rules for iPads in portrait orientation */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+{
+   .title          {font-size:      46px                !important}
+   .title          {letter-spacing: 2px                 !important}
+   .sub_title      {padding-bottom: 15px                !important}
+   .text           {padding:        50px 20px 10px 20px !important}
+   .text_image     {margin:         0px 0px 25px 25px   !important}
+   .art_gallery    {column-count:   2                   !important}
+   .art_gallery    {column-gap:     35px                !important}
+   .art_image      {margin-top:     15px                !important}
+   .art_image      {margin-bottom:  15px                !important}
+   #one_column_1   {display:        none                !important}
+   #two_column_1   {display:        block               !important}
+   #two_column_2   {display:        block               !important}
+   #three_column_1 {display:        none                !important}
+   #three_column_2 {display:        none                !important}
+   #three_column_3 {display:        none                !important}
+}
+
 /* Rules for mobile devices in landscape orientation */
 
-@media only screen and (max-width: 768px) and (orientation: landscape)
+@media only screen and (max-width: 767px) and (orientation: landscape)
 {
    .menu_button     {visibility:     visible             !important}
    .title           {font-size:      38px                !important}
@@ -51,27 +72,6 @@
    #three_column_1  {display:        none                !important}
    #three_column_2  {display:        none                !important}
    #three_column_3  {display:        none                !important}
-}
-
-/* Rules for iPads in portrait orientation */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
-{
-   .title          {font-size:      46px                !important}
-   .title          {letter-spacing: 2px                 !important}
-   .sub_title      {padding-bottom: 15px                !important}
-   .text           {padding:        50px 20px 10px 20px !important}
-   .text_image     {margin:         0px 0px 25px 25px   !important}
-   .art_gallery    {column-count:   2                   !important}
-   .art_gallery    {column-gap:     35px                !important}
-   .art_image      {margin-top:     15px                !important}
-   .art_image      {margin-bottom:  15px                !important}
-   #one_column_1   {display:        none                !important}
-   #two_column_1   {display:        block               !important}
-   #two_column_2   {display:        block               !important}
-   #three_column_1 {display:        none                !important}
-   #three_column_2 {display:        none                !important}
-   #three_column_3 {display:        none                !important}
 }
 
 /* Rules for iPads in landscape orientation */
