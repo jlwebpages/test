@@ -87,7 +87,7 @@
    #two_column_2   {display:        none                !important}
    #three_column_1 {display:        block               !important}
    #three_column_2 {display:        block               !important}
-   #three_column_3 {display:        blcok               !important}
+   #three_column_3 {display:        block               !important}
 }
 
 /* Replace vh with dvh on devices that support dvh */
