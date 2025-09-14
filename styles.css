@@ -266,13 +266,12 @@ a.header_link:hover
 {
    margin-top: 25px;
    margin-bottom: 25px;
-   width: auto;
-   display: block;
+   display: inline-block;
 }
 
 .art_image img
 {
-   max-width: 100%;
+   width: 100%;
    height: auto;
    transition: transform .5s;
 }
@@ -284,6 +283,7 @@ a.header_link:hover
    .art_image:hover img
    {
       transform: scale(1.05);
+      z-index: 100;
    }
 }
 
