@@ -280,7 +280,7 @@ a.header_link:hover
 {
    /* The following should only be applied if devices support hovering */
 
-   .art_image img:hover
+   .art_image:hover img
    {
       transform: scale(1.05);
    }
