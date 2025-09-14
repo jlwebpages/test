@@ -266,6 +266,7 @@ a.header_link:hover
 {
    margin-top: 25px;
    margin-bottom: 25px;
+   width: 90%;
    display: inline-block;
 }
 
@@ -283,7 +284,6 @@ a.header_link:hover
    .art_image:hover img
    {
       transform: scale(1.05);
-      z-index: 100;
    }
 }
 
