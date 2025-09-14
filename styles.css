@@ -16,6 +16,7 @@
    .text_image      {width:          100%               !important}
    .text_image      {margin:         0px 0px 25px 0px   !important}
    .art_gallery     {column-count:   1                  !important}
+   .art_image       {margin-top:     0px                !important}
    #one_column_1    {display:        block              !important}
    #two_column_1    {display:        none               !important}
    #two_column_2    {display:        none               !important}
