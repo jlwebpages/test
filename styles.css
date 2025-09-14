@@ -278,10 +278,9 @@ a.header_link:hover
 
    .art_image:hover
    {
-      transform-origin: center center;
       transform: scale(1.05);
+      transform-origin: center center;
       will-change: transform;
-      filter: brightness(100%);
    }
 }
 
