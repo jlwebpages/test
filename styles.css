@@ -281,6 +281,7 @@ a.header_link:hover
       transform-origin: center center;
       transform: scale(1.05);
       will-change: transform;
+      filter: brightness(100%);
    }
 }
 
