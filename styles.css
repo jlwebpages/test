@@ -269,7 +269,7 @@ a.header_link:hover
    width: 100%;
    height: auto;
    display: inline-block;
-   transition: transform .5s; overflow: visible;
+   transition: transform .5s;
 }
 
 @media (hover: hover)
@@ -279,6 +279,9 @@ a.header_link:hover
    .art_image:hover
    {
       transform: scale(1.05);
+      transform-origin: center center; /* Ensures scaling from the center */
+      /* Optional: Force hardware acceleration to potentially resolve rendering issues */
+      will-change: transform; 
    }
 }
 
