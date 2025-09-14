@@ -266,7 +266,6 @@ a.header_link:hover
 {
    margin-top: 25px;
    margin-bottom: 25px;
-   width: 90%;
    display: inline-block;
 }
 
@@ -275,6 +274,7 @@ a.header_link:hover
    width: 100%;
    height: auto;
    transition: transform .5s;
+   z-index: 100;
 }
 
 @media (hover: hover)
