@@ -1,6 +1,6 @@
 /* Rules for mobile devices in portrait orientation */
 
-@media only screen and (max-width:480px) and (orientation: portrait)
+@media only screen and (max-width: 655px) and (orientation: portrait)
 {
    .menu_button     {visibility:     visible             !important}
    .title           {font-size:      38px                !important}
