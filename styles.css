@@ -270,7 +270,6 @@ a.header_link:hover
    height: auto;
    display: inline-block;
    transition: transform .5s;
-   will-change: transform;
 }
 
 @media (hover: hover)
@@ -281,6 +280,7 @@ a.header_link:hover
    {
       transform-origin: center center;
       transform: scale(1.05);
+      will-change: transform;
    }
 }
 
