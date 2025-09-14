@@ -42,6 +42,9 @@
    .text            {padding:        40px 10px 15px 10px !important}
    .text_image      {margin:         0px 0px 25px 25px   !important}
    .art_gallery     {column-count:   2                   !important}
+   .art_gallery     {column-gap:     30px                !important}
+   .art_image       {margin-top:     15px                !important}
+   .art_image       {margin-bottom:  15px                !important}
    #one_column_1    {display:        none                !important}
    #two_column_1    {display:        block               !important}
    #two_column_2    {display:        block               !important}
@@ -57,9 +60,12 @@
    .title          {font-size:      46px                !important}
    .title          {letter-spacing: 2px                 !important}
    .sub_title      {padding-bottom: 15px                !important}
-   .text           {padding:        50px 20px 25px 20px !important}
+   .text           {padding:        50px 20px 10px 20px !important}
    .text_image     {margin:         0px 0px 25px 25px   !important}
    .art_gallery    {column-count:   2                   !important}
+   .art_gallery    {column-gap:     30px                !important}
+   .art_image      {margin-top:     15px                !important}
+   .art_image      {margin-bottom:  15px                !important}
    #one_column_1   {display:        none                !important}
    #two_column_1   {display:        block               !important}
    #two_column_2   {display:        block               !important}
