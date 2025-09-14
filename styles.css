@@ -267,6 +267,7 @@ a.header_link:hover
    border-radius: 8px;
    margin-top: 25px;
    margin-bottom: 25px;
+   width: auto;
    display: inline-block;
    transition: transform .5s;
 }
