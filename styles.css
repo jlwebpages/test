@@ -188,7 +188,7 @@ a.header_link:hover
 
 .border_radius
 {
-   border-radius: 8px;
+   clip-path: inset(0 round 8px);
 }
 
 .menu_button
@@ -264,26 +264,23 @@ a.header_link:hover
 
 .art_image
 {
-   border-radius: 8px;
    margin-top: 25px;
    margin-bottom: 25px;
    display: inline-block;
-   overflow-y: hidden;
-   transition: transform .5s;
 }
 
 .art_image img
 {
-   border-radius: 8px;
    width: 100%;
    height: auto;
+   transition: transform .5s;
 }
 
 @media (hover: hover)
 {
    /* The following should only be applied if devices support hovering */
 
-   .art_image:hover
+   .art_image img:hover
    {
       transform: scale(1.05);
    }
@@ -337,7 +334,7 @@ a.header_link:hover
    font-size: 20px;
    color: white;
    background-color: rgba(0, 0, 0, 50%);
-   border-radius: 4px;
+   clip-path: inset(0 round 4px);
    border-width: 0px;
    padding: 0px 5px 0px 5px;
    z-index: 1;
@@ -361,7 +358,7 @@ a.header_link:hover
    height: 52px;
    width: 18px;
    background-color: rgba(0, 0, 0, 50%);
-   border-radius: 4px;
+   clip-path: inset(0 round 4px);
    border: 0px;
    margin: 0px;
    padding: 0px;
