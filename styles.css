@@ -78,16 +78,16 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
 {
-   .art_gallery    {column-count:   3                   !important}
-   .art_gallery    {column-gap:     40px                !important}
-   .art_image      {margin-top:     20px                !important}
-   .art_image      {margin-bottom:  20px                !important}
-   #one_column_1   {display:        none                !important}
-   #two_column_1   {display:        none                !important}
-   #two_column_2   {display:        none                !important}
-   #three_column_1 {display:        block               !important}
-   #three_column_2 {display:        block               !important}
-   #three_column_3 {display:        block               !important}
+   .art_gallery    {column-count:  3     !important}
+   .art_gallery    {column-gap:    40px  !important}
+   .art_image      {margin-top:    20px  !important}
+   .art_image      {margin-bottom: 20px  !important}
+   #one_column_1   {display:       none  !important}
+   #two_column_1   {display:       none  !important}
+   #two_column_2   {display:       none  !important}
+   #three_column_1 {display:       block !important}
+   #three_column_2 {display:       block !important}
+   #three_column_3 {display:       block !important}
 }
 
 /* Replace vh with dvh on devices that support dvh */
