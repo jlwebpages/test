@@ -303,7 +303,6 @@ a.header_link:hover
    {
       transform: scale(1.05);
       transform-origin: center center;
-      will-change: transform;
    }
 }
 
