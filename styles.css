@@ -301,9 +301,8 @@ a.header_link:hover
 
    .art_image:hover
    {
-      transform: scale(1.05);
+      transform: scale(1.05) translateZ(0);
       transform-origin: center center;
-      will-change: transform;
    }
 }
 
