@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+
+<html style="height: 100%; margin: 0px; padding: 0px">
+
+<head>
+
+   <title>NFL Football Pool</title>
+
+   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link href="fp.css" rel="stylesheet" type="text/css">
+
+   <script language="JavaScript" src=fp_javascript_functions_general.js></script>
+
+   <script>
+
+      var t = true;
+      var f = false;
+
+      // Define mobile device flags.
+
+      var fp_header_width        = 0;
+      var mobile                 = t;
+
+      // Manually set the Football Pool year at the beginning of the season.
+
+      var fp_year      = 2025;
+      var archive_year = fp_year-1;
+
+      // Update the Football Pool Web Page Title using the Football Pool year.
+
+      document.title = fp_year + " " + document.title;
+
+      // Set season_over to "t" only after the Super Bowl picks have been received.
+
+      var season_over = f;
+
+      // Set these variables each week.
+
+      var games_over         = f;
+      var current_input_week = 5;
+
+      // Set the postseason teams each week during the playoffs.
+
+      var postseason_visiting_teams = [];
+      var postseason_home_teams     = [];
+
+      // These variables will be changed by the Java Scripts.
+
+      var global_week = 0;
+      var postseason  = false;
+
+      // Define this year's regular season players.
+
+      var rs_players             = ["BM",  "CK",   "CP",  "DC",  "DH",  "JG",   "JL",   "KC",  "KK",  "MB",  "RR",     "TB"   ];
+      var rs_players_description = ["Bill","Chris","Cory","Doug","Dave","Julio","Jerry","King","Kris","Mike","Roberto","Trent"];
+
+      // Define this year's postseason players.
+
+      var ps_players             = ["BM",  "CK",   "CP",  "DC",  "DH",  "JG",   "JL",   "KC",  "KK",  "MB",  "RR",     "TB"   ];
+      var ps_players_description = ["Bill","Chris","Cory","Doug","Dave","Julio","Jerry","King","Kris","Mike","Roberto","Trent"];
+
+      // Define variable for remembering the selected player.
+
+      var player_index = 0;
+
+      // Regular Season Schedule - Start
+
+      var visiting_teams_1 = [
+      "Cowboys",
+      "Chiefs",
+      "Buccaneers",
+      "Bengals",
+      "Dolphins",
+      "Panthers",
+      "Raiders",
+      "Cardinals",
+      "Steelers",
+      "Giants",
+      "Titans",
+      "49ers",
+      "Lions",
+      "Texans",
+      "Ravens",
+      "Vikings"
+      ];
+
+      var home_teams_1 = [
+      "Eagles",
+      "Chargers",
+      "Falcons",
+      "Browns",
+      "Colts",
+      "Jaguars",
+      "Patriots",
+      "Saints",
+      "Jets",
+      "Commanders",
+      "Broncos",
+      "Seahawks",
+      "Packers",
+      "Rams",
+      "Bills",
+      "Bears"
+      ];
+
+      var open_date_1 = ["None"];
+
+      var visiting_teams_2 = [
+      "Commanders",
+      "Browns",
+      "Jaguars",
+      "Giants",
+      "Bears",
+      "Patriots",
+      "49ers",
+      "Bills",
+      "Seahawks",
+      "Rams",
+      "Panthers",
+      "Broncos",
+      "Eagles",
+      "Falcons",
+      "Buccaneers",
+      "Chargers"
+      ];
+
+      var home_teams_2 = [
+      "Packers",
+      "Ravens",
+      "Bengals",
+      "Cowboys",
+      "Lions",
+      "Dolphins",
+      "Saints",
+      "Jets",
+      "Steelers",
+      "Titans",
+      "Cardinals",
+      "Colts",
+      "Chiefs",
+      "Vikings",
+      "Texans",
+      "Raiders"
+      ];
+
+      var open_date_2 = ["None"];
+
+      var visiting_teams_3 = [
+      "Dolphins",
+      "Falcons",
+      "Packers",
+      "Texans",
+      "Bengals",
+      "Steelers",
+      "Rams",
+      "Jets",
+      "Colts",
+      "Raiders",
+      "Broncos",
+      "Saints",
+      "Cowboys",
+      "Cardinals",
+      "Chiefs",
+      "Lions"
+      ];
+
+      var home_teams_3 = [
+      "Bills",
+      "Panthers",
+      "Browns",
+      "Jaguars",
+      "Vikings",
+      "Patriots",
+      "Eagles",
+      "Buccaneers",
+      "Titans",
+      "Commanders",
+      "Chargers",
+      "Seahawks",
+      "Bears",
+      "49ers",
+      "Giants",
+      "Ravens"
+      ];
+
+      var open_date_3 = ["None"];
+
+      var visiting_teams_4 = [
+      "Seahawks",
+      "Vikings",
+      "Commanders",
+      "Saints",
+      "Browns",
+      "Titans",
+      "Panthers",
+      "Chargers",
+      "Eagles",
+      "Colts",
+      "Jaguars",
+      "Ravens",
+      "Bears",
+      "Packers",
+      "Jets",
+      "Bengals"
+      ];
+
+      var home_teams_4 = [
+      "Cardinals",
+      "Steelers",
+      "Falcons",
+      "Bills",
+      "Lions",
+      "Texans",
+      "Patriots",
+      "Giants",
+      "Buccaneers",
+      "Rams",
+      "49ers",
+      "Chiefs",
+      "Raiders",
+      "Cowboys",
+      "Dolphins",
+      "Broncos"
+      ];
+
+      var open_date_4 = ["None"];
+
+      var visiting_teams_5 = [
+      "49ers",
+      "Vikings",
+      "Texans",
+      "Dolphins",
+      "Raiders",
+      "Giants",
+      "Cowboys",
+      "Broncos",
+      "Titans",
+      "Buccaneers",
+      "Lions",
+      "Commanders",
+      "Patriots",
+
+
+      "Chiefs"
+      ];
+
+      var home_teams_5 = [
+      "Rams",
+      "Browns",
+      "Ravens",
+      "Panthers",
+      "Colts",
+      "Saints",
+      "Jets",
+      "Eagles",
+      "Cardinals",
+      "Seahawks",
+      "Bengals",
+      "Chargers",
+      "Bills",
+
+
+      "Jaguars"
+      ];
+
+      var open_date_5 = ["Bears, Falcons, Packers, Steelers"];
+
+      var visiting_teams_6 = [
+      "Eagles",
+      "Broncos",
+      "Rams",
+      "Cowboys",
+      "Cardinals",
+      "Seahawks",
+      "Chargers",
+      "Browns",
+      "49ers",
+      "Titans",
+      "Bengals",
+      "Patriots",
+      "Lions",
+      "Bills",
+
+      "Bears"
+      ];
+
+      var home_teams_6 = [
+      "Giants",
+      "Jets",
+      "Ravens",
+      "Panthers",
+      "Colts",
+      "Jaguars",
+      "Dolphins",
+      "Steelers",
+      "Buccaneers",
+      "Raiders",
+      "Packers",
+      "Saints",
+      "Chiefs",
+      "Falcons",
+
+      "Commanders"
+      ];
+
+      var open_date_6 = ["Texans, Vikings"];
+
+      var visiting_teams_7 = [
+      "Steelers",
+      "Rams",
+      "Saints",
+      "Dolphins",
+      "Raiders",
+      "Eagles",
+      "Panthers",
+      "Patriots",
+      "Giants",
+      "Colts",
+      "Packers",
+      "Commanders",
+      "Falcons",
+      "Buccaneers",
+
+      "Texans"
+      ];
+
+      var home_teams_7 = [
+      "Bengals",
+      "Jaguars",
+      "Bears",
+      "Browns",
+      "Chiefs",
+      "Vikings",
+      "Jets",
+      "Titans",
+      "Broncos",
+      "Chargers",
+      "Cardinals",
+      "Cowboys",
+      "49ers",
+      "Lions",
+
+      "Seahawks"
+      ];
+
+      var open_date_7 = ["Bills, Ravens"];
+
+      var visiting_teams_8 = [
+      "Vikings",
+      "Dolphins",
+      "Bears",
+      "Bills",
+      "Jets",
+      "49ers",
+      "Browns",
+      "Giants",
+      "Buccaneers",
+      "Cowboys",
+      "Titans",
+      "Packers",
+
+
+
+      "Commanders"
+      ];
+
+      var home_teams_8 = [
+      "Chargers",
+      "Falcons",
+      "Ravens",
+      "Panthers",
+      "Bengals",
+      "Texans",
+      "Patriots",
+      "Eagles",
+      "Saints",
+      "Broncos",
+      "Colts",
+      "Steelers",
+
+
+
+      "Chiefs"
+      ];
+
+      var open_date_8 = ["Cardinals, Jaguars, Lions, Raiders, Rams, Seahawks"];
+
+      var visiting_teams_9 = [
+      "Ravens",
+      "Bears",
+      "Vikings",
+      "Panthers",
+      "Broncos",
+      "Falcons",
+      "49ers",
+      "Colts",
+      "Chargers",
+      "Saints",
+      "Jaguars",
+      "Chiefs",
+      "Seahawks",
+
+
+      "Cardinals"
+      ];
+
+      var home_teams_9 = [
+      "Dolphins",
+      "Bengals",
+      "Lions",
+      "Packers",
+      "Texans",
+      "Patriots",
+      "Giants",
+      "Steelers",
+      "Titans",
+      "Rams",
+      "Raiders",
+      "Bills",
+      "Commanders",
+
+
+      "Cowboys"
+      ];
+
+      var open_date_9 = ["Browns, Buccaneers, Eagles, Jets"];
+
+      var visiting_teams_10 = [
+      "Raiders",
+      "Falcons",
+      "Saints",
+      "Giants",
+      "Jaguars",
+      "Bills",
+      "Ravens",
+      "Browns",
+      "Patriots",
+      "Cardinals",
+      "Rams",
+      "Lions",
+      "Steelers",
+
+
+      "Eagles"
+      ];
+
+      var home_teams_10 = [
+      "Broncos",
+      "Colts",
+      "Panthers",
+      "Bears",
+      "Texans",
+      "Dolphins",
+      "Vikings",
+      "Jets",
+      "Buccaneers",
+      "Seahawks",
+      "49ers",
+      "Commanders",
+      "Chargers",
+
+
+      "Packers"
+      ];
+
+      var open_date_10 = ["Bengals, Chiefs, Cowboys, Titans"];
+
+      var visiting_teams_11 = [
+      "Jets",
+      "Commanders",
+      "Panthers",
+      "Buccaneers",
+      "Chargers",
+      "Bears",
+      "Packers",
+      "Bengals",
+      "Texans",
+      "49ers",
+      "Seahawks",
+      "Ravens",
+      "Chiefs",
+      "Lions",
+
+      "Cowboys"
+      ];
+
+      var home_teams_11 = [
+      "Patriots",
+      "Dolphins",
+      "Falcons",
+      "Bills",
+      "Jaguars",
+      "Vikings",
+      "Giants",
+      "Steelers",
+      "Titans",
+      "Cardinals",
+      "Rams",
+      "Browns",
+      "Broncos",
+      "Eagles",
+
+      "Raiders"
+      ];
+
+      var open_date_11 = ["Colts, Saints"];
+
+      var visiting_teams_12 = [
+      "Bills",
+      "Jets",
+      "Steelers",
+      "Patriots",
+      "Giants",
+      "Vikings",
+      "Colts",
+      "Seahawks",
+      "Jaguars",
+      "Browns",
+      "Eagles",
+      "Falcons",
+      "Buccaneers",
+
+
+      "Panthers"
+      ];
+
+      var home_teams_12 = [
+      "Texans",
+      "Ravens",
+      "Bears",
+      "Bengals",
+      "Lions",
+      "Packers",
+      "Chiefs",
+      "Titans",
+      "Cardinals",
+      "Raiders",
+      "Cowboys",
+      "Saints",
+      "Rams",
+
+
+      "49ers"
+      ];
+
+      var open_date_12 = ["Broncos, Chargers, Commanders, Dolphins"];
+
+      var visiting_teams_13 = [
+      "Packers",
+      "Chiefs",
+      "Bengals",
+      "Bears",
+      "Rams",
+      "49ers",
+      "Texans",
+      "Saints",
+      "Falcons",
+      "Cardinals",
+      "Jaguars",
+      "Vikings",
+      "Raiders",
+      "Bills",
+      "Broncos",
+      "Giants"
+      ];
+
+      var home_teams_13 = [
+      "Lions",
+      "Cowboys",
+      "Ravens",
+      "Eagles",
+      "Panthers",
+      "Browns",
+      "Colts",
+      "Dolphins",
+      "Jets",
+      "Buccaneers",
+      "Titans",
+      "Seahawks",
+      "Chargers",
+      "Steelers",
+      "Commanders",
+      "Patriots"
+      ];
+
+      var open_date_13 = ["None"];
+
+      var visiting_teams_14 = [
+      "Cowboys",
+      "Seahawks",
+      "Steelers",
+      "Titans",
+      "Bears",
+      "Colts",
+      "Commanders",
+      "Dolphins",
+      "Saints",
+      "Broncos",
+      "Rams",
+      "Bengals",
+      "Texans",
+
+
+      "Eagles"
+      ];
+
+      var home_teams_14 = [
+      "Lions",
+      "Falcons",
+      "Ravens",
+      "Browns",
+      "Packers",
+      "Jaguars",
+      "Vikings",
+      "Jets",
+      "Buccaneers",
+      "Raiders",
+      "Cardinals",
+      "Bills",
+      "Chiefs",
+
+
+      "Chargers"
+      ];
+
+      var open_date_14 = ["49ers, Giants, Panthers, Patriots"];
+
+      var visiting_teams_15 = [
+      "Falcons",
+      "Browns",
+      "Ravens",
+      "Cardinals",
+      "Jets",
+      "Chargers",
+      "Bills",
+      "Commanders",
+      "Raiders",
+      "Packers",
+      "Lions",
+      "Panthers",
+      "Colts",
+      "Titans",
+      "Vikings",
+      "Dolphins"
+      ];
+
+      var home_teams_15 = [
+      "Buccaneers",
+      "Bears",
+      "Bengals",
+      "Texans",
+      "Jaguars",
+      "Chiefs",
+      "Patriots",
+      "Giants",
+      "Eagles",
+      "Broncos",
+      "Rams",
+      "Saints",
+      "Seahawks",
+      "49ers",
+      "Cowboys",
+      "Steelers"
+      ];
+
+      var open_date_15 = ["None"];
+
+      var visiting_teams_16 = [
+      "Rams",
+      "Packers",
+      "Eagles",
+      "Patriots",
+      "Buccaneers",
+      "Bills",
+      "Chargers",
+      "Jets",
+      "Vikings",
+      "Chiefs",
+      "Falcons",
+      "Jaguars",
+      "Steelers",
+      "Raiders",
+      "Bengals",
+      "49ers"
+      ];
+
+      var home_teams_16 = [
+      "Seahawks",
+      "Bears",
+      "Commanders",
+      "Ravens",
+      "Panthers",
+      "Browns",
+      "Cowboys",
+      "Saints",
+      "Giants",
+      "Titans",
+      "Cardinals",
+      "Broncos",
+      "Lions",
+      "Texans",
+      "Dolphins",
+      "Colts"
+      ];
+
+      var open_date_16 = ["None"];
+
+      var visiting_teams_17 = [
+      "Cowboys",
+      "Lions",
+      "Broncos",
+      "Seahawks",
+      "Cardinals",
+      "Ravens",
+      "Texans",
+      "Giants",
+      "Steelers",
+      "Jaguars",
+      "Buccaneers",
+      "Patriots",
+      "Saints",
+      "Eagles",
+      "Bears",
+      "Rams"
+      ];
+
+      var home_teams_17 = [
+      "Commanders",
+      "Vikings",
+      "Chiefs",
+      "Panthers",
+      "Bengals",
+      "Packers",
+      "Chargers",
+      "Raiders",
+      "Browns",
+      "Colts",
+      "Dolphins",
+      "Jets",
+      "Titans",
+      "Bills",
+      "49ers",
+      "Falcons"
+      ];
+
+      var open_date_17 = ["None"];
+
+      var visiting_teams_18 = [
+      "Saints",
+      "Jets",
+      "Lions",
+      "Browns",
+      "Chargers",
+      "Colts",
+      "Titans",
+      "Cardinals",
+      "Chiefs",
+      "Packers",
+      "Dolphins",
+      "Cowboys",
+      "Commanders",
+      "Ravens",
+      "Seahawks",
+      "Panthers",
+      ];
+
+      var home_teams_18 = [
+      "Falcons",
+      "Bills",
+      "Bears",
+      "Bengals",
+      "Broncos",
+      "Texans",
+      "Jaguars",
+      "Rams",
+      "Raiders",
+      "Vikings",
+      "Patriots",
+      "Giants",
+      "Eagles",
+      "Steelers",
+      "49ers",
+      "Buccaneers",
+      ];
+
+      var open_date_18 = ["None"];
+
+      var all_visiting_teams = [visiting_teams_1,
+                                visiting_teams_2,
+                                visiting_teams_3,
+                                visiting_teams_4,
+                                visiting_teams_5,
+                                visiting_teams_6,
+                                visiting_teams_7,
+                                visiting_teams_8,
+                                visiting_teams_9,
+                                visiting_teams_10,
+                                visiting_teams_11,
+                                visiting_teams_12,
+                                visiting_teams_13,
+                                visiting_teams_14,
+                                visiting_teams_15,
+                                visiting_teams_16,
+                                visiting_teams_17,
+                                visiting_teams_18];
+
+      var all_home_teams = [home_teams_1,
+                            home_teams_2,
+                            home_teams_3,
+                            home_teams_4,
+                            home_teams_5,
+                            home_teams_6,
+                            home_teams_7,
+                            home_teams_8,
+                            home_teams_9,
+                            home_teams_10,
+                            home_teams_11,
+                            home_teams_12,
+                            home_teams_13,
+                            home_teams_14,
+                            home_teams_15,
+                            home_teams_16,
+                            home_teams_17,
+                            home_teams_18];
+
+      var all_open_dates = [open_date_1,
+                            open_date_2,
+                            open_date_3,
+                            open_date_4,
+                            open_date_5,
+                            open_date_6,
+                            open_date_7,
+                            open_date_8,
+                            open_date_9,
+                            open_date_10,
+                            open_date_11,
+                            open_date_12,
+                            open_date_13,
+                            open_date_14,
+                            open_date_15,
+                            open_date_16,
+                            open_date_17,
+                            open_date_18];
+
+      // Regular Season Schedule - End
+
+      function adjust_size_of_input_form_buttons(frame_width)
+      {
+         if ( (fp_main.document.getElementById("picks_from_odds_button") != null) && (fp_main.document.getElementById("picks_from_odds_button").style.display == "")  )
+         {
+            var accept_button                       = fp_main.document.getElementById("submit");
+            var button_font_size                    = 11;
+            var display_odds_checkbox_label         = fp_main.document.getElementById("display_odds_checkbox_label");
+            var display_team_records_checkbox_label = fp_main.document.getElementById("display_team_records_checkbox_label");
+            var home_team_picks_button              = fp_main.document.getElementById("home_team_picks");
+            var input_form_buttons                  = fp_main.document.getElementById("input_form_buttons");
+            var margin                              = 5;
+            var picks_from_odds_button              = fp_main.document.getElementById("picks_from_odds");
+            var random_picks_button                 = fp_main.document.getElementById("random_picks");
+            var reset_button                        = fp_main.document.getElementById("reset_button");
+
+
+            if (input_form_buttons != null)
+            {
+               // Set the font size of the input form buttons to 11pt;
+
+               if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+               if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+               if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+               if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+               if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+               if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+               if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
+
+               if (input_form_buttons.offsetWidth+margin > frame_width)
+               {
+                  // Decrease the font size of the "Input Form" buttons until the total width of the buttons row plus margin is equal to the width of the "Input Form" table.
+
+                  while (input_form_buttons.offsetWidth+margin > frame_width)
+                  {
+                     // Decrease button_font_size by 0.1pt.
+
+                     button_font_size = Math.round((button_font_size-0.1)*10)/10;
+
+                     if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                     if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                     if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                     if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                     if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                     if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                     if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
+                  }
+               }
+               else if (frame_width > input_form_buttons.offsetWidth+margin)
+               {
+                  // Increase the font size of the "Input Form" buttons until total width of the buttons row plus margin is equal to the width of the "Input Form" table.
+
+                  while (frame_width > input_form_buttons.offsetWidth+margin)
+                  {
+                     // Increase button_font_size by 0.1pt.
+
+                     button_font_size = Math.round((button_font_size+0.1)*10)/10;
+
+                     if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                     if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                     if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                     if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                     if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                     if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                     if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
+                  }
+
+                  // If the previous while loop caused the total width of the buttons row plus margin to be slightly greater
+                  // than the width of the "Input Form" table, then decrease the font size of the "Input Form" buttons by .1pt.
+
+                  if (input_form_buttons.offsetWidth+margin > frame_width)
+                  {
+                     // Decrease button_font_size by 0.1pt.
+
+                     button_font_size = Math.round((button_font_size-0.1)*10)/10;
+
+                     if (accept_button != null)                       accept_button.style.fontSize                       = button_font_size + "pt";
+                     if (display_odds_checkbox_label != null)         display_odds_checkbox_label.style.fontSize         = button_font_size + "pt";
+                     if (display_team_records_checkbox_label != null) display_team_records_checkbox_label.style.fontSize = button_font_size + "pt";
+                     if (home_team_picks_button != null)              home_team_picks_button.style.fontSize              = button_font_size + "pt";
+                     if (picks_from_odds_button != null)              picks_from_odds_button.style.fontSize              = button_font_size + "pt";
+                     if (random_picks_button != null)                 random_picks_button.style.fontSize                 = button_font_size + "pt";
+                     if (reset_button != null)                        reset_button.style.fontSize                        = button_font_size + "pt";
+                  }
+               }
+            }
+         }
+      }
+
+      function display_frame(frame_name, received_frame_width)
+      {
+         var force_scale        = false;
+         var iPad               = false;
+         var mobile_device      = false;
+         var target_frame_width = 0;
+
+
+         document.getElementById("fp_main").style.zIndex              = -1;
+         document.getElementById("fp_picks").style.zIndex             = -1;
+         document.getElementById("fp_loading_indicator").style.zIndex = -1;
+         document.getElementById(frame_name).style.zIndex             = 1;
+
+         if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+         {
+            iPad = true;
+         }
+
+         if (navigator.userAgent.toLowerCase().indexOf("mobile") != -1)
+         {
+            mobile_device = true;
+         }
+
+         if (frame_name == "fp_main")
+         {
+            target_frame_width = fp_main.document.body.scrollWidth;
+
+            if ( (fp_main.document.getElementById("input_form_table") != null) && (window.matchMedia("(orientation: portrait)").matches == true) && (mobile_device == true) && (iPad == false) )
+            {
+               target_frame_width = fp_main.document.getElementById("input_form_table").offsetWidth;
+
+               force_scale = true;
+
+               adjust_size_of_input_form_buttons(target_frame_width);
+
+               if (fp_main.document.getElementById("accept_reset_buttons") != null) fp_main.document.getElementById("accept_reset_buttons").style.paddingBottom = "15px";
+            }
+         }
+
+         if (frame_name == "fp_picks")
+         {
+            if ( (window.matchMedia("(orientation: portrait)").matches == true) && (mobile_device == true) && (iPad == false) )
+            {
+               target_frame_width = received_frame_width;
+
+               force_scale = true;
+            }
+            else
+            {
+               target_frame_width = fp_picks.document.body.scrollWidth;
+            }
+
+            fp_picks.document.getElementById("picks_table").scrollIntoView();
+         }
+
+         if (frame_name != "fp_loading_indicator") scale_frame(frame_name, target_frame_width, force_scale);
+
+         return true;
+      }
+
+      function focus_element(element)
+      {
+         // If we're running on an iPhone then return.
+
+         if (navigator.platform.toLowerCase().indexOf("iphone") != -1)
+         {
+            return;
+         }
+
+         // If we're running on an iPad then return.
+
+         if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+         {
+            return;
+         }
+
+         // If we're running in the Chrome browser on a mobile device and the element type is "text" then return.
+
+         if ( (navigator.userAgent.toLowerCase().indexOf("mobile")  != -1) &&
+              (navigator.userAgent.toLowerCase().indexOf("chrome")  != -1) &&
+              (navigator.userAgent.toLowerCase().indexOf("samsung") == -1) &&
+              (element.type == "text")                                        )
+         {
+            return;
+         }
+
+         element.readOnly = true;
+         element.focus({focusVisible: true, preventScroll: true});
+         element.readOnly = false;
+      }
+
+      function scale_frame(frame_name, target_frame_width, force_scale)
+      {
+         var scale = 1;
+
+
+         frame_document = window.frames[frame_name].document;
+
+         if ( (target_frame_width > window.innerWidth) || (force_scale == true) )
+         {
+            scale = window.innerWidth/target_frame_width;
+
+            frame_document.documentElement.style.height = (scale * 100) + "%";
+            frame_document.body.style.transform         = "scale("+scale+")";
+            frame_document.body.style.transformOrigin   = "top left";
+            frame_document.body.style.height            = (scale * 100) + "%";
+
+            if (scale > 1)
+            {
+               frame_document.documentElement.style.width = target_frame_width + "px";
+               frame_document.body.style.width            = target_frame_width + "px";
+            }
+         }
+
+         return true;
+      }
+
+   </script>
+
+</head>
+
+
+<body class="background_color" style="height: 100%; margin: 0px; padding: 0px">
+
+   <script>
+
+      // Check to see if this is a mobile device and not an older iPad.
+
+      if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
+      {
+         if ( (isNaN(window.innerWidth) == false) && (window.innerWidth > 0) )
+         {
+            top.fp_header_width = window.innerWidth;
+         }
+         else
+         {
+            top.fp_header_width = 360;
+         }
+      }
+
+   </script>
+
+   <div id="fp_header" style="position: fixed; top: 0px; left: 0px; height: 65px; width: 100%">
+
+      <table class="table" style="height: 60px; padding: 5px; margin: 0px auto">
+
+         <tr>
+            <td class="dark_blue_cell" style="border-radius: 25px 0px 0px 25px; width: 50px; border-right: 0px; padding: 5px 0px 0px 5px; margin: 0px">
+               <a href="http://www.nfl.com" target="_top"><img src="nfl_logo.png" height="40px" width="29.6px"></a>
+            </td>
+            <td class="dark_blue_cell" style="border-radius: 0px; font-size: 24px; border-left: 0px; border-right: 0px; padding: 0px; margin: 0px">
+               <script>if (top.fp_year != null) document.write(top.fp_year + " "); document.write("FOOTBALL POOL");</script>
+            </td>
+            <td class="dark_blue_cell mobile_menu_icon" onclick="open_mobile_menu();">
+               &#9776;
+            </td>
+         </tr>
+
+      </table>
+
+   </div>
+
+   <div id="fp_main" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: 1; overflow-y: auto; -webkit-overflow-scrolling: touch">
+      <iframe name="fp_main" src="fp_main_mobile.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+   <div id="fp_picks" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1; overflow-y: auto; -webkit-overflow-scrolling: touch">
+      <iframe name="fp_picks" src="about:blank" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+   <div id="fp_loading_indicator" style="position: fixed; top: 65px; left: 0px; height: calc(100% - 65px); width: 100%; z-index: -1; overflow-y: auto; -webkit-overflow-scrolling: touch">
+      <iframe name="fp_loading_indicator" src="fp_loading_indicator.html" style="height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px"></iframe>
+   </div>
+
+   <div id="mobile_menu" class="mobile_menu">
+
+      <span class="mobile_menu_close_button" onclick="close_mobile_menu();">&times;</span>
+
+      <a class="white_link dark_blue_background" style="margin-top: 50px" href="fp_mobile.html"                     onclick="close_mobile_menu();">HOME</a>
+      <a class="white_link red_background"                                href="fp_rules.html"     target="fp_main" onclick="close_mobile_menu();">RULES</a>
+      <a class="white_link red_background"                                href="fp_standings.html" target="fp_main" onclick="close_mobile_menu();">STANDINGS</a>
+      <a class="white_link red_background"                                href="fp_forms.html"     target="fp_main" onclick="close_mobile_menu();">FORMS</a>
+      <a class="white_link red_background"                                href="fp_archive.html"   target="fp_main" onclick="close_mobile_menu();">ARCHIVE</a>
+      <a class="white_link red_background"                                href="fp_help.html"      target="fp_main" onclick="close_mobile_menu();">HELP</a>
+
+      <a class="white_link green_background" href="http://www.nfl.com"                       target="_top" onclick="close_mobile_menu();">NFL.COM</a>
+      <a class="white_link green_background" href="http://www.espn.com/nfl"                  target="_top" onclick="close_mobile_menu();">NFL ON ESPN</a>
+      <span class="green_background" style="height: 29px; border-radius: 40px; margin: 0px 10px 10px 10px; display: block">
+         <a class="white_link" href="https://www.espn.com/nfl/lines" title="ESPN - NFL Daily Lines" style="margin-left: 50px; margin-right: 0px; padding-right: 0px; display: inline-block">NFL</a>
+         <a class="white_link" href="https://www.sportsline.com/nfl/odds" title="SportsLine - NFL Odds and Lines" style="margin-left: 0px; padding-left: 0px; display: inline-block">ODDS</a>
+      </span>
+      <script>
+         document.write('<a class="white_link green_background" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main" onclick="close_mobile_menu();">PLAYOFF TEAMS</a>');
+      </script>
+      <a class="white_link green_background" href="http://www.espn.com/nfl/playoffs/machine" target="_top" onclick="close_mobile_menu();">PLAYOFF MACHINE</a>
+
+   </div>
+
+</body>
+
+
+</html>
