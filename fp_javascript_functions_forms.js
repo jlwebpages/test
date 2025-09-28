@@ -13,7 +13,7 @@ function adjust_mobile_viewport_height(document,form)
    {
       if ( (window.screen.height > window.screen.width) && (top.document.getElementById("viewport") != null) )
       {
-         var pad = 10;
+         var pad = 0;
 
          var document_height = document.body.scrollHeight + pad;
 
