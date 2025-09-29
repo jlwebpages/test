@@ -4194,8 +4194,6 @@ function build_regular_season_form()
       d.writeln('');
    }
 
-   d.writeln('<tr><td class="no_border" style="font-size: 2pt">&nbsp;</td></tr>');
-   d.writeln('');
    d.writeln('</table>');
    d.writeln('');
 
@@ -4206,6 +4204,9 @@ function build_regular_season_form()
    {
       d.writeln('<div style="font-family: Calibri, sans-serif; font-size: 12pt; text-align: center; margin: 20px 5px 5px 5px; display: block"><b>Open Date:</b>&nbsp;&nbsp;'+open_date+'</div>');
    }
+
+   d.writeln('');
+   d.writeln('<span style="border: 0px; margin: 0px; padding: 0px; font-size: 2pt">&nbsp;</span>');
 
    if (mode == "picks")
    {
