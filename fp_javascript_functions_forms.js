@@ -4194,11 +4194,8 @@ function build_regular_season_form()
       d.writeln('');
    }
 
-   if (number_of_rs_games == max_number_of_rs_games)
-   {
-      d.writeln('<tr><td class="no_border" style="font-size: 2pt">&nbsp;</td></tr>');
-      d.writeln('');
-   }
+   d.writeln('<tr><td class="no_border" style="font-size: 2pt">&nbsp;</td></tr>');
+   d.writeln('');
    d.writeln('</table>');
    d.writeln('');
 
@@ -4207,7 +4204,7 @@ function build_regular_season_form()
 
    if (number_of_rs_games < max_number_of_rs_games)
    {
-      d.writeln('<div style="font-family: Calibri, sans-serif; font-size: 12pt; text-align: center; margin: 20px 5px 15px 5px; display: block"><b>Open Date:</b>&nbsp;&nbsp;'+open_date+'</div>');
+      d.writeln('<div style="font-family: Calibri, sans-serif; font-size: 12pt; text-align: center; margin: 13px 5px 25px 5px; display: block"><b>Open Date:</b>&nbsp;&nbsp;'+open_date+'</div>');
    }
 
    if (mode == "picks")
