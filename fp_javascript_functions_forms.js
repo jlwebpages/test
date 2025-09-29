@@ -4206,7 +4206,7 @@ function build_regular_season_form()
    }
 
    d.writeln('');
-   d.writeln('<div style="border: 0px; margin: 0px; padding: 0px; font-size: 2pt">&nbsp;</div>');
+   d.writeln('<div style="line-height: 1px">&nbsp;</div>');
 
    if (mode == "picks")
    {
