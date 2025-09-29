@@ -4206,7 +4206,7 @@ function build_regular_season_form()
    }
 
    d.writeln('');
-   d.writeln('<span style="border: 0px; margin: 0px; padding: 0px; font-size: 2pt">&nbsp;</span>');
+   d.writeln('<div style="border: 0px; margin: 0px; padding: 0px; font-size: 2pt">&nbsp;</div>');
 
    if (mode == "picks")
    {
