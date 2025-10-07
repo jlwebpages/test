@@ -18,7 +18,7 @@ function adjust_mobile_viewport_height(document,form)
          if ( (form == "postseason") && (document_height < 600) ) document_height = 600;
 
          var viewport_scale   = window.screen.height/document_height;
-         var viewport_content = "height=" + document_height + "px, initial-scale=" + viewport_scale;
+         var viewport_content = "width=device-width, height=" + document_height + "px, initial-scale=" + viewport_scale;
 
          top.document.getElementById("viewport").setAttribute("content",viewport_content);
       }
