@@ -22,8 +22,8 @@ function adjust_mobile_viewport_height(document,form)
 
          alert(window.screen.height+"  "+document_height+"  "+"scale(" + viewport_scale + ")");
 
-         document.documentElement.style.transform = "scale(" + viewport_scale + ")";
-         document.documentElement.style.transformOrigin = 'top left'; 
+         document.body.style.transform = "scale(" + viewport_scale + ")";
+         document.body.style.transformOrigin = 'top left'; 
 
          //var viewport_content = "height=" + document_height + "px, initial-scale=" + viewport_scale;
 
