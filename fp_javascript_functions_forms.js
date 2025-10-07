@@ -17,9 +17,9 @@ function adjust_mobile_viewport_height(document,form)
 
          if ( (form == "postseason") && (document_height < 600) ) document_height = 600;
 
-         var viewport_scale   = window.screen.height/document_height;
-
-         document.documentElement.style.transform = "scale(viewport_scale)";
+         var viewport_scale = window.screen.height/document_height;
+ 
+         document.documentElement.style.transform = "scale(" + viewport_scale + ")";
 
          //var viewport_content = "height=" + document_height + "px, initial-scale=" + viewport_scale;
 
@@ -4239,8 +4239,6 @@ function build_regular_season_form()
    adjust_mobile_viewport_height(d,"regular_season");
 
    d.close();
-
-   adjust_mobile_viewport_height(d,"regular_season");
 
    return true;
 }
