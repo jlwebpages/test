@@ -11,23 +11,16 @@ function adjust_mobile_viewport_height(document,form)
 
    if ( (top.gv.mobile == true) && (iPad == false) )
    {
-      if (window.screen.height > window.screen.width)
+      if ( (window.screen.height > window.screen.width) && (top.document.getElementById("viewport") != null) )
       {
          var document_height = document.body.scrollHeight;
 
          if ( (form == "postseason") && (document_height < 600) ) document_height = 600;
 
-         //var viewport_scale = window.screen.height/document_height;
-         var viewport_scale = window.screen.height/document_height;
-viewport_scale = 1.0;
-         alert(window.screen.height+"  "+window.screen.width+"  "+document_height+"  "+"scale(" + viewport_scale + ")");
+         var viewport_scale   = window.screen.height/document_height;
+         var viewport_content = "height=" + document_height + "px, initial-scale=" + viewport_scale;
 
-         document.body.style.transform = "scale(" + viewport_scale + ")";
-         document.body.style.transformOrigin = 'top left'; 
-
-         //var viewport_content = "height=" + document_height + "px, initial-scale=" + viewport_scale;
-
-         //top.document.getElementById("viewport").setAttribute("content",viewport_content);
+         top.document.getElementById("viewport").setAttribute("content",viewport_content);
       }
    }
 
