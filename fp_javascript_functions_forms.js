@@ -4233,8 +4233,8 @@ function build_regular_season_form()
 
    d.getElementById("regular_season_table").scrollIntoView({block: "start", inline: "start"});
 
-   adjust_mobile_viewport_height(d,"regular_season");
-   adjust_mobile_viewport_height(d,"regular_season");
+   adjust_mobile_viewport_height(d,"regular_season");  // If there are "open date" teams displayed and they wrap, the wrap height might not be included when calling document.body.scrollHeight.
+   adjust_mobile_viewport_height(d,"regular_season");  // Calling adjust_mobile_viewport_height again will resolve the potential issue stated above.
 
    d.close();
 
