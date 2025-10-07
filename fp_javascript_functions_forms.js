@@ -13,7 +13,7 @@ function adjust_mobile_viewport_height(document,form)
    {
       if ( (window.screen.height > window.screen.width) && (top.document.getElementById("viewport") != null) )
       {
-         var document_height = document.body.scrollHeight;
+         var document_height = document.body.scrollHeight + 5;
 
          if ( (form == "postseason") && (document_height < 600) ) document_height = 600;
 
