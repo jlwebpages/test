@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>Darlene Laguna Art - Works On Paper</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script language="JavaScript" src=scripts.js></script>
+</head>
+
+<body class="body" oncontextmenu="return false;">
+
+
+<script>
+   write_header();
+   document.getElementById("works_on_paper_link").className = "clicked_header_link";
+   load_data_from_file('works_on_paper/works_on_paper.txt','works_on_paper_text',true);
+</script>
+
+<table class="table border_radius">
+
+   <tr>
+      <td id="works_on_paper_text" class="text">
+         <img src="works_on_paper/works_on_paper.jpg" class="text_image border_radius">
+         <!-- Load text from file. -->
+      </td>
+   </tr>
+
+</table>
+
+<div id="art_gallery" class="art_gallery">
+
+   <div id="one_column_1" class="art_gallery_column"></div>
+
+   <div id="two_column_1" class="art_gallery_column"></div>
+
+   <div id="two_column_2" class="art_gallery_column"></div>
+
+   <div id="three_column_1" class="art_gallery_column"></div>
+
+   <div id="three_column_2" class="art_gallery_column"></div>
+
+   <div id="three_column_3" class="art_gallery_column"></div>
+
+</div>
+
+<script>
+   load_images_into_gallery('works_on_paper');
+   write_copyright();
+</script>
+
+
+</body>
+
+</html>
