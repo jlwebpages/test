@@ -1,4 +1,4 @@
-<span class="sub_title" style="padding-bottom: 25px !important">UPCOMING EXHIBITION</span><br>
+<span class="sub_title" style="padding-bottom: 25px !important">UPCOMING EXHIBITIONS</span><br>
 
 <span style="font-size: 16px; font-weight: bold">Specimens and Perceptions</span><br>
 <span style="font-style: italic">Two-person show with Marinés Adrianza</span><br>
