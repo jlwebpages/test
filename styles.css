@@ -2,78 +2,89 @@
 
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
-   .menu_button     {visibility:     visible             !important}
-   .title           {font-size:      38px                !important}
-   .title           {letter-spacing: 2px                 !important}
-   .title           {padding-bottom: 25px                !important}
-   .header_links    {display:        none                !important}
-   .nav_button      {height:         24px                !important}
-   .nav_button      {width:          14px                !important}
-   .nav_left_shape  {transform:      scale(80%)          !important}
-   .nav_right_shape {transform:      scale(80%)          !important}
-   .sub_title       {font-size:      25px                !important}
-   .sub_title       {padding-bottom: 15px                !important}
-   .text            {padding:        25px 25px 15px 25px !important}
-   .text_image      {width:          100%                !important}
-   .text_image      {margin:         0px 0px 25px 0px    !important}
-   .art_gallery     {column-count:   1                   !important}
-   .art_image       {margin-top:     0px                 !important}
-   #one_column_1    {display:        block               !important}
-   #two_column_1    {display:        none                !important}
-   #two_column_2    {display:        none                !important}
-   #three_column_1  {display:        none                !important}
-   #three_column_2  {display:        none                !important}
-   #three_column_3  {display:        none                !important}
+   .menu_button          {visibility:     visible            !important}
+   .landing_title        {font-size:      38px               !important}
+   .landing_title        {letter-spacing: 2px                !important}
+   .landing_sub_title    {font-size:      25px               !important}
+   .landing_enter_button {font-size:      16px               !important}
+   .title                {font-size:      38px               !important}
+   .title                {letter-spacing: 2px                !important}
+   .title                {padding-bottom: 25px               !important}
+   .header_links         {display:        none               !important}
+   .nav_button           {height:         24px               !important}
+   .nav_button           {width:          14px               !important}
+   .nav_left_shape       {transform:      scale(80%)         !important}
+   .nav_right_shape      {transform:      scale(80%)         !important}
+   .sub_title            {font-size:      25px               !important}
+   .sub_title            {padding-bottom: 15px               !important}
+   .text                 {padding:        0px 25px 15px 25px !important}
+   .text_image           {width:          100%               !important}
+   .text_image           {margin:         0px 0px 25px 0px   !important}
+   .art_gallery          {column-count:   1                  !important}
+   .art_image            {margin-top:     0px                !important}
+   #one_column_1         {display:        block              !important}
+   #two_column_1         {display:        none               !important}
+   #two_column_2         {display:        none               !important}
+   #three_column_1       {display:        none               !important}
+   #three_column_2       {display:        none               !important}
+   #three_column_3       {display:        none               !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
 
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
-   .menu_button     {visibility:     visible             !important}
-   .title           {font-size:      38px                !important}
-   .title           {letter-spacing: 2px                 !important}
-   .title           {padding-bottom: 25px                !important}
-   .header_links    {display:        none                !important}
-   .nav_button      {height:         24px                !important}
-   .nav_button      {width:          14px                !important}
-   .nav_left_shape  {transform:      scale(80%)          !important}
-   .nav_right_shape {transform:      scale(80%)          !important}
-   .sub_title       {font-size:      25px                !important}
-   .sub_title       {padding-bottom: 15px                !important}
-   .text            {padding:        40px 10px 15px 10px !important}
-   .text_image      {margin:         0px 0px 25px 25px   !important}
-   .art_gallery     {column-count:   2                   !important}
-   .art_gallery     {column-gap:     35px                !important}
-   .art_image       {margin-top:     15px                !important}
-   .art_image       {margin-bottom:  15px                !important}
-   #one_column_1    {display:        none                !important}
-   #two_column_1    {display:        block               !important}
-   #two_column_2    {display:        block               !important}
-   #three_column_1  {display:        none                !important}
-   #three_column_2  {display:        none                !important}
-   #three_column_3  {display:        none                !important}
+   .menu_button          {visibility:     visible             !important}
+   .landing_title        {font-size:      38px                !important}
+   .landing_title        {letter-spacing: 2px                 !important}
+   .landing_sub_title    {font-size:      25px                !important}
+   .landing_enter_button {font-size:      16px                !important}
+   .title                {font-size:      38px                !important}
+   .title                {letter-spacing: 2px                 !important}
+   .title                {padding-bottom: 25px                !important}
+   .header_links         {display:        none                !important}
+   .nav_button           {height:         24px                !important}
+   .nav_button           {width:          14px                !important}
+   .nav_left_shape       {transform:      scale(80%)          !important}
+   .nav_right_shape      {transform:      scale(80%)          !important}
+   .sub_title            {font-size:      25px                !important}
+   .sub_title            {padding-bottom: 15px                !important}
+   .text                 {padding:        15px 10px 15px 10px !important}
+   .text_image           {margin:         0px 0px 25px 25px   !important}
+   .art_gallery          {column-count:   2                   !important}
+   .art_gallery          {column-gap:     35px                !important}
+   .art_image            {margin-top:     15px                !important}
+   .art_image            {margin-bottom:  15px                !important}
+   #one_column_1         {display:        none                !important}
+   #two_column_1         {display:        block               !important}
+   #two_column_2         {display:        block               !important}
+   #three_column_1       {display:        none                !important}
+   #three_column_2       {display:        none                !important}
+   #three_column_3       {display:        none                !important}
 }
 
 /* Rules for iPads in portrait orientation */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
-   .title          {font-size:      46px                !important}
-   .title          {letter-spacing: 2px                 !important}
-   .sub_title      {padding-bottom: 15px                !important}
-   .text           {padding:        50px 20px 10px 20px !important}
-   .text_image     {margin:         0px 0px 25px 25px   !important}
-   .art_gallery    {column-count:   2                   !important}
-   .art_gallery    {column-gap:     35px                !important}
-   .art_image      {margin-top:     15px                !important}
-   .art_image      {margin-bottom:  15px                !important}
-   #one_column_1   {display:        none                !important}
-   #two_column_1   {display:        block               !important}
-   #two_column_2   {display:        block               !important}
-   #three_column_1 {display:        none                !important}
-   #three_column_2 {display:        none                !important}
-   #three_column_3 {display:        none                !important}
+   .landing_title        {font-size:      46px                !important}
+   .landing_title        {letter-spacing: 2px                 !important}
+   .landing_enter_button {font-size:      16px                !important}
+   .title                {font-size:      46px                !important}
+   .title                {letter-spacing: 2px                 !important}
+   .sub_title            {padding-bottom: 15px                !important}
+   .text                 {padding:        25px 20px 10px 20px !important}
+   .text_image           {margin:         0px 0px 25px 25px   !important}
+   .art_gallery          {column-count:   2                   !important}
+   .art_gallery          {column-gap:     35px                !important}
+   .art_image            {margin-top:     15px                !important}
+   .art_image            {margin-bottom:  15px                !important}
+   #one_column_1         {display:        none                !important}
+   #two_column_1         {display:        block               !important}
+   #two_column_2         {display:        block               !important}
+   #three_column_1       {display:        none                !important}
+   #three_column_2       {display:        none                !important}
+   #three_column_3       {display:        none                !important}
 }
 
 /* Rules for iPads and tablets in landscape orientation */
@@ -100,6 +111,52 @@
    .image_container_two_column {height: 100dvh !important}
 }
 
+.landing_body
+{
+   background-image: url('landing_background.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   color: white;
+   margin: 0px;
+   padding: 0px;
+}
+
+.landing_title
+{
+   font-family: Arial, sans-serif;
+   font-size: 52px;
+   color: black;
+   text-align: center;
+   letter-spacing: 4px;
+   padding: 20vh 10px 0px 10px;
+}
+
+.landing_sub_title
+{
+   font-family: Arial, sans-serif;
+   font-size: 34px;
+   color: black;
+   text-align: center;
+   letter-spacing: 4px;
+   padding: 35px 10px 45px 10px;
+}
+
+.landing_enter_button
+{
+   cursor: pointer;
+   font-family: Arial, sans-serif;
+   font-size: 18px;
+   color: white;
+   letter-spacing: 4px;
+   background-color: rgba(0, 0, 0, 40%);
+   border-radius: 25px;
+   border: 0px;
+   margin: 0px auto;
+   padding: 8px 7px 7px 10px;
+   display: block;
+}
+
 .body
 {
    background-color: white;
@@ -112,7 +169,6 @@
 {
    font-family: Arial, sans-serif;
    font-size: 52px;
-   font-weight: normal;
    color: black;
    text-align: center;
    letter-spacing: 4px;
@@ -122,8 +178,8 @@
 .sub_title
 {
    font-family: Arial, sans-serif;
-   color: darkslategray;
    font-size: 34px;
+   color: darkslategray;
    text-align: left;
    white-space: nowrap;
    padding-bottom: 40px;
@@ -185,7 +241,7 @@ a.header_link:hover
    vertical-align: top;
    text-align: left;
    line-height: 30px;
-   padding:  50px 50px 25px 50px;
+   padding: 25px 50px 25px 50px;
 }
 
 .text_image

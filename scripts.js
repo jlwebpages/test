@@ -540,7 +540,7 @@ function write_header()
    d.writeln('   <a href="about.html"          >About</a>');
    d.writeln('</div>');
    d.writeln('');
-   d.writeln('<div class="title">DARLENE LAGUNA ART</div>');
+   d.writeln('<div class="title">DARLENE LAGUNA</div>');
    d.writeln('');
    d.writeln('<div class="header_links">');
    d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >Featured Work</a>');
