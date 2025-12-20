@@ -5,6 +5,7 @@
    .menu_button     {visibility:     visible             !important}
    .title           {font-size:      38px                !important}
    .title           {letter-spacing: 2px                 !important}
+   .title           {padding-bottom: 25px                !important}
    .header_links    {display:        none                !important}
    .nav_button      {height:         24px                !important}
    .nav_button      {width:          14px                !important}
@@ -32,6 +33,7 @@
    .menu_button     {visibility:     visible             !important}
    .title           {font-size:      38px                !important}
    .title           {letter-spacing: 2px                 !important}
+   .title           {padding-bottom: 25px                !important}
    .header_links    {display:        none                !important}
    .nav_button      {height:         24px                !important}
    .nav_button      {width:          14px                !important}
@@ -211,7 +213,7 @@ a.header_link:hover
 
 .border_radius
 {
-   border-radius: 8px;
+   border-radius: 0px;
 }
 
 .menu_button
