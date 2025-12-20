@@ -112,7 +112,7 @@
 {
    font-family: Arial, sans-serif;
    font-size: 52px;
-   font-weight: bold;
+   font-weight: normal;
    color: black;
    text-align: center;
    letter-spacing: 4px;
@@ -144,7 +144,7 @@
 .header_link
 {
    font-family: Arial, sans-serif;
-   font-size: 16px;
+   font-size: 18px;
    color: darkslategray;
    letter-spacing: 2px;
    text-decoration: none;
@@ -160,7 +160,7 @@ a.header_link:hover
 .clicked_header_link
 {
    font-family: Arial, sans-serif;
-   font-size: 16px;
+   font-size: 18px;
    font-weight: bold;
    color: #BE0000;
    letter-spacing: 2px;
