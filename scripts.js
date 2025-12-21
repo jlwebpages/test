@@ -515,9 +515,14 @@ function validate_received_image_name()
    return true;
 }
 
-function write_copyright()
+function write_footer()
 {
-   document.writeln('<div class="copyright" style="font-size: 12px">Copyright &copy 2025 Darlene Laguna Art<br>All Rights Reserved.</div>');
+   document.writeln('<div style="text-align: center; padding: 25px 0px 0px 0px">');
+   document.writeln('   <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art"><img src="email_icon.png"     height="15px" style="padding: 0px 20px 0px 20px; vertical-align: middle"></a>');
+   document.writeln('   <a href="https://www.instagram.com/dklaguna_art">               <img src="instagram_icon.png" height="16px" style="padding: 0px 20px 0px 20px; vertical-align: middle"></a>');
+   document.writeln('</div>');
+   document.writeln('');
+   document.writeln('<div class="copyright">Copyright &copy 2025 Darlene Laguna Art<br>All Rights Reserved.</div>');
 
    return true;
 }
