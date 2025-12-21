@@ -544,7 +544,7 @@ function write_header()
    d.writeln('   <a href="works_on_paper.html" >Paper</a>');
    d.writeln('   <a href="about.html"          >About</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px">');
-   d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 10px 0px 0px -10px"></a>');
+   d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                style="display: inline-block"><img src="instagram_icon.png" height="16px" ></a>');
    d.writeln('   </div>');
    d.writeln('</div>');
