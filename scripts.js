@@ -405,6 +405,8 @@ function load_images_into_gallery(gallery_name)
    var max_number_of_images = 40;
 
 
+   write_gallery_header(gallery_name);
+
    load_image_into_gallery(gallery_name,image_number,max_number_of_images,image_count);
 
    return true;
@@ -530,6 +532,17 @@ function write_footer()
    return true;
 }
 
+function write_gallery_header(gallery_name)
+{
+   if (gallery_name == "featured_work")  gallery_name = "Featured Work";
+   if (gallery_name == "photo_art")      gallery_name = "Photo Art";
+   if (gallery_name == "works_on_paper") gallery_name = "Paper";
+
+   document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; display: none'>"+gallery_name+"</div>");
+
+   return true;
+}
+
 function write_header()
 {
    document.open();
@@ -557,7 +570,7 @@ function write_header()
    d.writeln('<div class="header_links">');
    d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >Featured Work</a>');
    d.writeln('   <a id="photo_art_link"      class="header_link" href="photo_art.html"     >Photo Art</a>');
-   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Paper</a>')
+   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Paper</a>');
    d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
    d.writeln('</div>');
    d.writeln('');
