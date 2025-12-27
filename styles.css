@@ -40,10 +40,11 @@
    .menu_button               {visibility:     visible             !important}
    .landing_title             {font-size:      38px                !important}
    .landing_title             {letter-spacing: 2px                 !important}
-   .landing_title             {padding-top:    10vh                !important}
+   .landing_title             {padding-top:    5vh                 !important}
    .landing_sub_title         {font-size:      26px                !important}
+   .landing_sub_title         {padding:        25px 10px 35px 10px !important}
    .landing_exhibition_button {font-size:      14px                !important}
-   .landing_enter_button {font-size:      16px                !important}
+   .landing_enter_button      {font-size:      16px                !important}
    .title                     {font-size:      38px                !important}
    .title                     {letter-spacing: 2px                 !important}
    .title                     {padding-bottom: 15px                !important}
