@@ -42,7 +42,7 @@
    .landing_title             {letter-spacing: 2px                 !important}
    .landing_title             {padding-top:    5vh                 !important}
    .landing_sub_title         {font-size:      26px                !important}
-   .landing_sub_title         {padding:        25px 10px 35px 10px !important}
+   .landing_sub_title         {padding:        10px 10px 20px 10px !important}
    .landing_exhibition_button {font-size:      14px                !important}
    .landing_enter_button      {font-size:      16px                !important}
    .title                     {font-size:      38px                !important}
@@ -146,7 +146,7 @@
 {
    font-family: Arial, sans-serif;
    font-size: 34px;
-   color: black;
+   color: blue;
    text-align: center;
    letter-spacing: 4px;
    padding: 35px 10px 45px 10px;
