@@ -240,7 +240,7 @@ function display_menu()
    return true;
 }
 
-function load_data_from_file(file_name,element_id,display_error)
+function load_data_from_file(file_name,element_id,display_error,scroll_to_element)
 {
    $.ajax
    (
@@ -272,6 +272,11 @@ function load_data_from_file(file_name,element_id,display_error)
             update_button_positions();
 
             document.getElementById("art_container").style.visibility = "visible";
+         }
+
+         if (scroll_to_element == true)
+         {
+            document.getElementById(element_id).scrollIntoView(true);
          }
       },
 

@@ -2,68 +2,72 @@
 
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
-   .menu_button          {visibility:     visible            !important}
-   .landing_title        {font-size:      38px               !important}
-   .landing_title        {letter-spacing: 2px                !important}
-   .landing_sub_title    {font-size:      25px               !important}
-   .landing_enter_button {font-size:      16px               !important}
-   .title                {font-size:      38px               !important}
-   .title                {letter-spacing: 2px                !important}
-   .title                {padding-bottom: 15px               !important}
-   .header_links         {display:        none               !important}
-   .nav_button           {height:         24px               !important}
-   .nav_button           {width:          14px               !important}
-   .nav_left_shape       {transform:      scale(80%)         !important}
-   .nav_right_shape      {transform:      scale(80%)         !important}
-   .sub_title            {font-size:      25px               !important}
-   .sub_title            {padding-bottom: 15px               !important}
-   .text                 {padding:        0px 25px 15px 25px !important}
-   .text_image           {width:          100%               !important}
-   .text_image           {margin:         10px 0px 25px 0px  !important}
-   .art_gallery          {column-count:   1                  !important}
-   .art_image            {margin-top:     0px                !important}
-   #gallery_header       {display:        block              !important}
-   #one_column_1         {display:        block              !important}
-   #two_column_1         {display:        none               !important}
-   #two_column_2         {display:        none               !important}
-   #three_column_1       {display:        none               !important}
-   #three_column_2       {display:        none               !important}
-   #three_column_3       {display:        none               !important}
+   .menu_button               {visibility:     visible            !important}
+   .landing_title             {font-size:      38px               !important}
+   .landing_title             {letter-spacing: 2px                !important}
+   .landing_title             {padding-top:    10vh               !important}
+   .landing_sub_title         {font-size:      26px               !important}
+   .landing_exhibition_button {font-size:      14px               !important}
+   .landing_enter_button      {font-size:      16px               !important}
+   .title                     {font-size:      38px               !important}
+   .title                     {letter-spacing: 2px                !important}
+   .title                     {padding-bottom: 15px               !important}
+   .header_links              {display:        none               !important}
+   .nav_button                {height:         24px               !important}
+   .nav_button                {width:          14px               !important}
+   .nav_left_shape            {transform:      scale(80%)         !important}
+   .nav_right_shape           {transform:      scale(80%)         !important}
+   .sub_title                 {font-size:      25px               !important}
+   .sub_title                 {padding-bottom: 15px               !important}
+   .text                      {padding:        0px 25px 15px 25px !important}
+   .text_image                {width:          100%               !important}
+   .text_image                {margin:         10px 0px 25px 0px  !important}
+   .art_gallery               {column-count:   1                  !important}
+   .art_image                 {margin-top:     0px                !important}
+   #gallery_header            {display:        block              !important}
+   #one_column_1              {display:        block              !important}
+   #two_column_1              {display:        none               !important}
+   #two_column_2              {display:        none               !important}
+   #three_column_1            {display:        none               !important}
+   #three_column_2            {display:        none               !important}
+   #three_column_3            {display:        none               !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
 
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
-   .menu_button          {visibility:     visible             !important}
-   .landing_title        {font-size:      38px                !important}
-   .landing_title        {letter-spacing: 2px                 !important}
-   .landing_sub_title    {font-size:      25px                !important}
+   .menu_button               {visibility:     visible             !important}
+   .landing_title             {font-size:      38px                !important}
+   .landing_title             {letter-spacing: 2px                 !important}
+   .landing_title             {padding-top:    10vh                !important}
+   .landing_sub_title         {font-size:      26px                !important}
+   .landing_exhibition_button {font-size:      14px                !important}
    .landing_enter_button {font-size:      16px                !important}
-   .title                {font-size:      38px                !important}
-   .title                {letter-spacing: 2px                 !important}
-   .title                {padding-bottom: 15px                !important}
-   .header_links         {display:        none                !important}
-   .nav_button           {height:         24px                !important}
-   .nav_button           {width:          14px                !important}
-   .nav_left_shape       {transform:      scale(80%)          !important}
-   .nav_right_shape      {transform:      scale(80%)          !important}
-   .sub_title            {font-size:      25px                !important}
-   .sub_title            {padding-bottom: 15px                !important}
-   .text                 {padding:        15px 10px 15px 10px !important}
-   .text_image           {width:          300px               !important}
-   .text_image           {margin:         10px 0px 25px 25px  !important}
-   .art_gallery          {column-count:   2                   !important}
-   .art_gallery          {column-gap:     35px                !important}
-   .art_image            {margin-top:     15px                !important}
-   .art_image            {margin-bottom:  15px                !important}
-   #gallery_header       {display:        block               !important}
-   #one_column_1         {display:        none                !important}
-   #two_column_1         {display:        block               !important}
-   #two_column_2         {display:        block               !important}
-   #three_column_1       {display:        none                !important}
-   #three_column_2       {display:        none                !important}
-   #three_column_3       {display:        none                !important}
+   .title                     {font-size:      38px                !important}
+   .title                     {letter-spacing: 2px                 !important}
+   .title                     {padding-bottom: 15px                !important}
+   .header_links              {display:        none                !important}
+   .nav_button                {height:         24px                !important}
+   .nav_button                {width:          14px                !important}
+   .nav_left_shape            {transform:      scale(80%)          !important}
+   .nav_right_shape           {transform:      scale(80%)          !important}
+   .sub_title                 {font-size:      25px                !important}
+   .sub_title                 {padding-bottom: 15px                !important}
+   .text                      {padding:        15px 10px 15px 10px !important}
+   .text_image                {width:          300px               !important}
+   .text_image                {margin:         10px 0px 25px 25px  !important}
+   .art_gallery               {column-count:   2                   !important}
+   .art_gallery               {column-gap:     35px                !important}
+   .art_image                 {margin-top:     15px                !important}
+   .art_image                 {margin-bottom:  15px                !important}
+   #gallery_header            {display:        block               !important}
+   #one_column_1              {display:        none                !important}
+   #two_column_1              {display:        block               !important}
+   #two_column_2              {display:        block               !important}
+   #three_column_1            {display:        none                !important}
+   #three_column_2            {display:        none                !important}
+   #three_column_3            {display:        none                !important}
 }
 
 /* Rules for iPads in portrait orientation */
@@ -147,6 +151,22 @@
    padding: 35px 10px 45px 10px;
 }
 
+.landing_exhibition_button
+{
+   cursor: pointer;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   color: white;
+   letter-spacing: 2px;
+   line-height: 22px;
+   background-color: rgba(0, 0, 0, 50%);
+   border-radius: 10px;
+   border: 0px;
+   margin: 0px auto 50px auto;
+   padding: 8px;
+   display: block;
+}
+
 .landing_enter_button
 {
    cursor: pointer;
@@ -160,6 +180,11 @@
    margin: 0px auto;
    padding: 8px 7px 7px 10px;
    display: block;
+}
+
+.landing_exhibition_button:hover
+{
+   background-color: rgba(0, 0, 0, 75%);
 }
 
 .landing_enter_button:hover
