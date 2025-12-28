@@ -3,9 +3,11 @@
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
    .menu_button               {visibility:     visible            !important}
+   .landing_container         {padding-top:    10vh               !important}
+   .landing_container         {padding-bottom: 50vh               !important}
+   .landing_container         {height:         40vh               !important}
    .landing_title             {font-size:      38px               !important}
    .landing_title             {letter-spacing: 2px                !important}
-   .landing_title             {padding-top:    10vh               !important}  /* Comment out if landing_exhibition_button in landing_page.html is commented out. */
    .landing_sub_title         {font-size:      26px               !important}
    .landing_exhibition_button {font-size:      14px               !important}
    .landing_enter_button      {font-size:      16px               !important}
@@ -38,13 +40,13 @@
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
    .menu_button               {visibility:     visible             !important}
+   .landing_container         {padding-top:    10vh                !important}
+   .landing_container         {padding-bottom: 10vh                !important}
+   .landing_container         {height:         80vh                !important}
    .landing_title             {font-size:      38px                !important}
    .landing_title             {letter-spacing: 2px                 !important}
-   .landing_title             {padding-top:    5vh                 !important}  /* Comment out if landing_exhibition_button in landing_page.html is commented out. */
    .landing_sub_title         {font-size:      26px                !important}
-   .landing_sub_title         {padding:        10px 10px 20px 10px !important}  /* Comment out if landing_exhibition_button in landing_page.html is commented out. */
    .landing_exhibition_button {font-size:      14px                !important}
-   .landing_exhibition_button {margin:         0px auto 30px auto  !important}
    .landing_enter_button      {font-size:      16px                !important}
    .title                     {font-size:      38px                !important}
    .title                     {letter-spacing: 2px                 !important}
@@ -76,6 +78,9 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
+   .landing_container    {padding-top:    20vh                !important}
+   .landing_container    {padding-bottom: 45vh                !important}
+   .landing_container    {height:         35vh                !important}
    .landing_title        {font-size:      46px                !important}
    .landing_title        {letter-spacing: 2px                 !important}
    .landing_enter_button {font-size:      16px                !important}
@@ -101,17 +106,20 @@
 
 @media only screen and (min-width: 768px) and (orientation: landscape)
 {
-   .text_image     {width:         400px !important}
-   .art_gallery    {column-count:  3     !important}
-   .art_gallery    {column-gap:    40px  !important}
-   .art_image      {margin-top:    20px  !important}
-   .art_image      {margin-bottom: 20px  !important}
-   #one_column_1   {display:       none  !important}
-   #two_column_1   {display:       none  !important}
-   #two_column_2   {display:       none  !important}
-   #three_column_1 {display:       block !important}
-   #three_column_2 {display:       block !important}
-   #three_column_3 {display:       block !important}
+   .landing_container {padding-top:    20vh !important}
+   .landing_container {padding-bottom: 35vh !important}
+   .landing_container {height:         45vh !important}
+   .text_image        {width:          400px !important}
+   .art_gallery       {column-count:   3     !important}
+   .art_gallery       {column-gap:     40px  !important}
+   .art_image         {margin-top:     20px  !important}
+   .art_image         {margin-bottom:  20px  !important}
+   #one_column_1      {display:        none  !important}
+   #two_column_1      {display:        none  !important}
+   #two_column_2      {display:        none  !important}
+   #three_column_1    {display:        block !important}
+   #three_column_2    {display:        block !important}
+   #three_column_3    {display:        block !important}
 }
 
 /* Replace vh with dvh on devices that support dvh */
@@ -129,8 +137,18 @@
    background-position: center;
    height: 100vh;
    color: white;
+   border: 0px;
    margin: 0px;
    padding: 0px;
+}
+.landing_container
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding-top: 20vh;
+   padding-bottom: 30vh;
+   height: 50vh;
 }
 
 .landing_title
@@ -140,7 +158,9 @@
    color: black;
    text-align: center;
    letter-spacing: 4px;
-   padding: 20vh 10px 0px 10px;
+   border: 0px;
+   margin: 0px 10px 0px 10px;
+   padding: 0px;
 }
 
 .landing_sub_title
@@ -150,7 +170,9 @@
    color: black;
    text-align: center;
    letter-spacing: 4px;
-   padding: 35px 10px 45px 10px;
+   border: 0px;
+   margin: 0px 10px 0px 10px;
+   padding: 0px;
 }
 
 .landing_exhibition_button
@@ -164,9 +186,8 @@
    background-color: rgba(0, 0, 0, 50%);
    border-radius: 10px;
    border: 0px;
-   margin: 0px auto 50px auto;
+   margin: 10px auto 10px auto;
    padding: 8px;
-   display: block;
 }
 
 .landing_enter_button
@@ -179,9 +200,8 @@
    background-color: rgba(0, 0, 0, 50%);
    border-radius: 25px;
    border: 0px;
-   margin: 0px auto;
-   padding: 8px 7px 7px 10px;
-   display: block;
+   margin: 10px auto 10px auto;
+   padding: 8px;
 }
 
 .landing_exhibition_button:hover
