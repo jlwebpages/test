@@ -10,21 +10,32 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="landing_body" oncontextmenu="return false;">
+<body class="landing_body">
 
 
-<div class="landing_container">
+<div id="landing_container" class="landing_container">
 
    <div class="landing_title">DARLENE LAGUNA</div>
 
    <div class="landing_sub_title">MIXED MEDIA</div>
 
-   <button class="landing_exhibition_button" onclick="location.href='about.html?mode=upcoming_exhibition'">At the LMF Gallery + Darkroom<br>Opening Jan 10<sup>th</sup></a></button>
+   <button id="landing_exhibition_button" class="landing_exhibition_button" onclick="location.href='about.html?mode=upcoming_exhibition'">At the LMF Gallery + Darkroom<br>Opening Jan 10<sup>th</sup></button>
 
    <button class="landing_enter_button" onclick="location.href='featured_work.html'">enter</button>
 
 </div>
 
+<script>
+
+   if (navigator.userAgent.toLowerCase().indexOf("mobile") != -1)  // This is a mobile device.
+   {
+      if (document.getElementById("landing_exhibition_button") !== null)
+      {
+         document.getElementById("landing_container").style.paddingTop = "10vh";
+      }
+   }
+
+</script>
 
 </body>
 

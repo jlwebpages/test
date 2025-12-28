@@ -3,9 +3,6 @@
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
    .menu_button               {visibility:     visible            !important}
-   .landing_container         {padding-top:    10vh               !important}
-   .landing_container         {padding-bottom: 40vh               !important}
-   .landing_container         {height:         50vh               !important}
    .landing_title             {font-size:      38px               !important}
    .landing_title             {letter-spacing: 2px                !important}
    .landing_sub_title         {font-size:      26px               !important}
@@ -40,9 +37,6 @@
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
    .menu_button               {visibility:     visible             !important}
-   .landing_container         {padding-top:    5vh                 !important}
-   .landing_container         {padding-bottom: 5vh                 !important}
-   .landing_container         {height:         90vh                !important}
    .landing_title             {font-size:      38px                !important}
    .landing_title             {letter-spacing: 2px                 !important}
    .landing_sub_title         {font-size:      26px                !important}
@@ -78,9 +72,6 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
-   .landing_container    {padding-top:    20vh                !important}
-   .landing_container    {padding-bottom: 45vh                !important}
-   .landing_container    {height:         35vh                !important}
    .landing_title        {font-size:      46px                !important}
    .landing_title        {letter-spacing: 2px                 !important}
    .landing_enter_button {font-size:      16px                !important}
@@ -106,9 +97,6 @@
 
 @media only screen and (min-width: 768px) and (orientation: landscape)
 {
-   .landing_container {padding-top:    20vh !important}
-   .landing_container {padding-bottom: 35vh !important}
-   .landing_container {height:         45vh !important}
    .text_image        {width:          400px !important}
    .art_gallery       {column-count:   3     !important}
    .art_gallery       {column-gap:     40px  !important}
@@ -143,12 +131,11 @@
 }
 .landing_container
 {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 1fr;
+   align-items: center;
+   gap: 35px;
    padding-top: 20vh;
-   padding-bottom: 30vh;
-   height: 50vh;
 }
 
 .landing_title
