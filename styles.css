@@ -4,8 +4,8 @@
 {
    .menu_button               {visibility:     visible            !important}
    .landing_container         {padding-top:    10vh               !important}
-   .landing_container         {padding-bottom: 50vh               !important}
-   .landing_container         {height:         40vh               !important}
+   .landing_container         {padding-bottom: 45vh               !important}
+   .landing_container         {height:         45vh               !important}
    .landing_title             {font-size:      38px               !important}
    .landing_title             {letter-spacing: 2px                !important}
    .landing_sub_title         {font-size:      26px               !important}
@@ -40,8 +40,8 @@
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
    .menu_button               {visibility:     visible             !important}
-   .landing_container         {padding-top:    10vh                !important}
-   .landing_container         {padding-bottom: 10vh                !important}
+   .landing_container         {padding-top:    5vh                 !important}
+   .landing_container         {padding-bottom: 5vh                 !important}
    .landing_container         {height:         80vh                !important}
    .landing_title             {font-size:      38px                !important}
    .landing_title             {letter-spacing: 2px                 !important}
