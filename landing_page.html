@@ -34,26 +34,30 @@
          document.getElementById("landing_container").style.paddingTop = "10vh";
       }
 
-      window.matchMedia("(orientation: portrait)").addEventListener
-      ("change", ev =>
+      // Reset landing_container padding-top style if the user switches to portrait orientation from landscape orientation.
+
+      mediaQuery = window.matchMedia("(orientation: portrait)");
+
+      function respond_to_portrait_orientation(event)
       {
-         if (e.matches)
+         if (event.matches)
          {
             alert("Portrait");
+
+            if (document.getElementById("landing_exhibition_button") != null)
+            {
+               document.getElementById("landing_container").style.paddingTop = "10vh";
+            }
+            else
+            {
+               document.getElementById("landing_container").style.paddingTop = "20vh";
+            }
          }
-      }
-      );
+      } 
+
+      mediaQuery.addEventListener("change", respond_to_portrait_orientation);
    }
 
-      window.matchMedia("(orientation: portrait)").addEventListener
-      ("change", ev =>
-      {
-         if (e.matches)
-         {
-            alert("Portrait");
-         }
-      }
-      );
 </script>
 
 </body>
