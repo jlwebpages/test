@@ -29,19 +29,20 @@
 
    if (navigator.userAgent.toLowerCase().indexOf("mobile") != -1)  // This is a mobile device.
    {
+      alert("mobile device");
       if (window.innerWidth > window.innerHeight)  // Mobile device is in landscape orientation.
       {
          document.getElementById("landing_container").style.paddingTop = "5vh";
-         document.getElementById("landing_container").style.gap = "15px";
+         document.getElementById("landing_container").style.gap = "10px";
       }
       else  // Mobile device is in portrait orientation.
       {
-         if (document.getElementById("landing_exhibition_button") !== null)
+         if (document.getElementById("landing_exhibition_button") != null)
          {
             document.getElementById("landing_container").style.paddingTop = "10vh";
          }
       }
-  }
+   }
 
 </script>
 
