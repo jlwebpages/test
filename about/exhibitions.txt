@@ -1,11 +1,20 @@
 <span class="sub_title" style="padding-bottom: 25px !important">UPCOMING EXHIBITION</span><br>
 
 <span style="line-height: 1.25">
-<span style="font-size: 16px; font-weight: bold">Specimens & Perceptions</span><br>
-<span style="font-style: italic">Two-person show with Marinés Adrianza<br>January 10 to February 7, 2026</span><br>
+
+<span style="font-size: 16px; font-weight: bold; margin-bottom: 5px; display: inline-block">
+Specimens & Perceptions
+</span><br>
+
+<span style="font-style: italic; display: inline-block; margin-bottom: 5px">
+Two-person show with Marinés Adrianza<br>
+January 10 to February 7, 2026<br>
+Opening Reception January 10<sup>th</sup> from 6 to 9 PM
+</span><br>
+
 Gallery: <a class="general_link" href="https://www.thelmfla.org">The Language Mobilization Factory Gallery + Darkroom</a><br>
 Location: <a class="general_link" href="https://www.google.com/maps/place/55+North+Baldwin+Avenue,+Sierra+Madre,+CA+91024">55 North Baldwin Avenue, Sierra Madre, CA 91024</a><br>
-Opening Reception:  January 10<sup>th</sup> from 6 to 9 PM
+
 </span>
 
 <br>
