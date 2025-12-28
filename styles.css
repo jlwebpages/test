@@ -4,8 +4,8 @@
 {
    .menu_button               {visibility:     visible            !important}
    .landing_container         {padding-top:    10vh               !important}
-   .landing_container         {padding-bottom: 45vh               !important}
-   .landing_container         {height:         45vh               !important}
+   .landing_container         {padding-bottom: 40vh               !important}
+   .landing_container         {height:         50vh               !important}
    .landing_title             {font-size:      38px               !important}
    .landing_title             {letter-spacing: 2px                !important}
    .landing_sub_title         {font-size:      26px               !important}
@@ -42,7 +42,7 @@
    .menu_button               {visibility:     visible             !important}
    .landing_container         {padding-top:    5vh                 !important}
    .landing_container         {padding-bottom: 5vh                 !important}
-   .landing_container         {height:         80vh                !important}
+   .landing_container         {height:         90vh                !important}
    .landing_title             {font-size:      38px                !important}
    .landing_title             {letter-spacing: 2px                 !important}
    .landing_sub_title         {font-size:      26px                !important}
