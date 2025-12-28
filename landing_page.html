@@ -10,7 +10,7 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="landing_body">
+<body class="landing_body" oncontextmenu="return false;">
 
 
 <div id="landing_container" class="landing_container">
@@ -32,7 +32,7 @@
       if (window.innerWidth > window.innerHeight)  // Mobile device is in landscape orientation.
       {
          document.getElementById("landing_container").style.paddingTop = "5vh";
-         document.getElementById("landing_container").style.gap = "25px";
+         document.getElementById("landing_container").style.gap = "15px";
       }
       else  // Mobile device is in portrait orientation.
       {
