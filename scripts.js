@@ -240,7 +240,7 @@ function display_menu()
    return true;
 }
 
-function load_data_from_file(file_name,element_id,display_error,scroll_to_element)
+function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibitions)
 {
    $.ajax
    (
@@ -253,7 +253,18 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_elemen
       {
          document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
 
-         if (element_id == "image_title")
+         if (element_id == "about_text")
+         {
+            file_name  = file_name.replace("about.txt","exhibitions.txt");
+            element_id = element_id.replace("about_text","exhibitions_text");
+
+            load_data_from_file(file_name,element_id,false,scroll_to_exhibitions);
+         }
+         else if (element_id == "exhibitions_text")
+         {
+            if (scroll_to_exhibitions == true) document.getElementById(element_id).scrollIntoView(true);
+         }
+         else if (element_id == "image_title")
          {
             file_name  = file_name.replace("title","dimensions");
             element_id = element_id.replace("title","dimensions");
@@ -272,11 +283,6 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_elemen
             update_button_positions();
 
             document.getElementById("art_container").style.visibility = "visible";
-         }
-
-         if (scroll_to_element == true)
-         {
-            document.getElementById(element_id).scrollIntoView(true);
          }
       },
 
