@@ -262,7 +262,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          }
          else if (element_id == "exhibitions_text")
          {
-            if (scroll_to_exhibitions == true) document.getElementById(element_id).scrollIntoView(true);
+            if (scroll_to_exhibitions == true) document.getElementById(element_id).scrollIntoView({behavior: "smooth"});
          }
          else if (element_id == "image_title")
          {
