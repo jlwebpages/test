@@ -258,7 +258,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
             file_name  = file_name.replace("about.txt","exhibitions.txt");
             element_id = element_id.replace("about_text","exhibitions_text");
 
-            load_data_from_file(file_name,element_id,false,scroll_to_exhibitions);
+            load_data_from_file(file_name,element_id,display_error,scroll_to_exhibitions);
          }
          else if (element_id == "exhibitions_text")
          {
