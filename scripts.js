@@ -220,7 +220,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       load_image_caption(image_file_name);
 
-      document.getElementById("caption_div").style.visibility = "visible";
+
 
       // Update the browser address field
 
@@ -283,8 +283,8 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          else if (element_id == "image_paragraph")
          {
             update_button_positions();
-
-            document.getElementById("art_container").style.visibility = "visible";
+      document.getElementById("caption_div").style.visibility = "visible";
+            //document.getElementById("art_container").style.visibility = "visible";
          }
       },
 
@@ -311,8 +311,8 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          else if (element_id == "image_paragraph")
          {
             update_button_positions();
-
-            document.getElementById("art_container").style.visibility = "visible";
+      document.getElementById("caption_div").style.visibility = "visible";
+            //document.getElementById("art_container").style.visibility = "visible";
          }
       },
    }

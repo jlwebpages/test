@@ -560,7 +560,6 @@ a.header_link:hover
    width: 100%;
    height: 100vh;
    overflow-y: auto;
-   visibility: hidden;
 }
 
 .image_container_two_column
@@ -573,5 +572,4 @@ a.header_link:hover
    height: 100vh;
    margin: 0px auto;
    overflow-y: hidden;
-   visibility: hidden;
 }
