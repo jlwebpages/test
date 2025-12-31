@@ -425,6 +425,29 @@ a.header_link:hover
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
+   visibility: hidden;
+   animation: fade-in 0.5s forwards; 
+}
+
+@keyframes fade-in
+{
+   from
+   {
+      opacity: 0;
+      visibility: hidden;
+   }
+   to
+   {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+.art_caption.is-visible
+{
+   opacity: 1;
+   transition: opacity 0.5s ease-in-out;
+   visibility: visible;
 }
 
 .art_title

@@ -220,6 +220,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       load_image_caption(image_file_name);
 
+      document.getElementById("caption_div").style.visibility = "visible";
+
       // Update the browser address field
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name);
