@@ -280,9 +280,9 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          }
          else if (element_id == "image_paragraph")
          {
-            document.getElementById("art_gallery").style.visibility = "visible";
-
             update_button_positions();
+
+            document.getElementById("art_container").style.visibility = "visible";
          }
       },
 
@@ -308,9 +308,9 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          }
          else if (element_id == "image_paragraph")
          {
-            document.getElementById("art_container").style.visibility = "visible";
-
             update_button_positions();
+
+            document.getElementById("art_container").style.visibility = "visible";
          }
       },
    }
