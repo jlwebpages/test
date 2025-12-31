@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 Land Escape
 
@@ -9,7 +9,7 @@ Land Escape
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 12.5 x 12.5 inch wood panel set in a maple floater frame
 
@@ -18,7 +18,7 @@ Land Escape
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 Vacation is a great time to explore new land - and recently I visited the comfortably cool central coast of CA and took a hike along the coast. To my right was the Pacific Ocean, and to my left was a vast field of surprisingly colorful coastal scrub brush, with a few trees and low mountains in the distance.
 

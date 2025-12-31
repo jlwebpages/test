@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 Breathing Space
 
@@ -9,7 +9,7 @@ Breathing Space
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 Each is 6 x 12 inches on 1.5-inch cradled wood panel
 
@@ -18,7 +18,7 @@ Each is 6 x 12 inches on 1.5-inch cradled wood panel
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 Sometimes it’s nice to just “be” in nature - focusing and unfocusing for a moment - not trying to make sense out of what’s out there - but just taking it in and letting it go.
 

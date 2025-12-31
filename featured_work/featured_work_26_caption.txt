@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 Lines
 
@@ -9,7 +9,7 @@ Lines
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 The hexagon piece is 11 x 12 inches on 1.25-inch cradled wood panel.  The three square pieces are 12 x 12 inch wood panels set in maple floater frames.
 
@@ -18,7 +18,7 @@ The hexagon piece is 11 x 12 inches on 1.25-inch cradled wood panel.  The three 
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 When I look out at the hills, I see areas meet and connect, reveal and hide. Colors, textures, spaces are juxtaposed -  sometimes in surprising ways.
 

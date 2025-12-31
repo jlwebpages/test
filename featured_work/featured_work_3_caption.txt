@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 Obstructions aka Opportunities
 
@@ -9,7 +9,7 @@ Obstructions aka Opportunities
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 12 x 12 inch cradled wood panel set in a maple floater frame
 
@@ -18,7 +18,7 @@ Obstructions aka Opportunities
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 A direct path to success, big or small, can seem ideal, but often it pays off to greet the challenges, staying open to unforeseen possibilities.
 

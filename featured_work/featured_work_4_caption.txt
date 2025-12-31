@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 Falling
 
@@ -9,7 +9,7 @@ Falling
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 Both are 47.5 x 10 inches on 1.5-inch cradled wood panel
 
@@ -18,7 +18,7 @@ Both are 47.5 x 10 inches on 1.5-inch cradled wood panel
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 Don't let anyone tell you there are no seasons in California! The California sycamore outside my window had quite an autumn this year.
 

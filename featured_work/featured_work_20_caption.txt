@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 September
 
@@ -9,7 +9,7 @@ September
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 These two 24 x 20 inch pieces are on 3/4-inch stretched canvas and set in maple floater frames
 
@@ -18,7 +18,7 @@ These two 24 x 20 inch pieces are on 3/4-inch stretched canvas and set in maple 
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 Every day I view the hills and the sky above. They are an ongoing source of joy and inspiration as they change in color throughout the year.
 

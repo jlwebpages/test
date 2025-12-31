@@ -1,6 +1,6 @@
 <!-- Title -->
 
-<span id="image_title" class="art_title">
+<span class="art_title">
 
 Greenspiration
 
@@ -9,7 +9,7 @@ Greenspiration
 
 <!-- Dimensions -->
 
-<span id="image_dimensions" class="art_dimensions">
+<span class="art_dimensions">
 
 8 x 8 inch cradled wood panels set in maple floater frames
 
@@ -18,7 +18,7 @@ Greenspiration
 
 <!-- Paragraph -->
 
-<span id="image_paragraph" class="art_paragraph">
+<span class="art_paragraph">
 
 I took a hike one damp morning in the spring and found myself in a misty wonderland of wild, saturated flora.
 
