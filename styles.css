@@ -544,7 +544,7 @@ a.header_link:hover
    height: 100vh;
    overflow-y: auto;
    visibility: hidden;
-   animation: fade-in 1.0s forwards;
+   animation: fade-in 1.5s forwards;
 }
 
 .image_container_two_column
@@ -558,5 +558,5 @@ a.header_link:hover
    margin: 0px auto;
    overflow-y: hidden;
    visibility: hidden;
-   animation: fade-in 1.0s forwards;
+   animation: fade-in 1.5s forwards;
 }
