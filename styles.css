@@ -443,13 +443,6 @@ a.header_link:hover
    }
 }
 
-.art_caption.is-visible
-{
-   opacity: 1;
-   transition: opacity 0.5s ease-in-out;
-   visibility: visible;
-}
-
 .art_title
 {
    font-weight: bold;

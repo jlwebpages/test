@@ -220,8 +220,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       load_image_caption(image_file_name);
 
-
-
       // Update the browser address field
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name);
@@ -282,9 +280,9 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          }
          else if (element_id == "image_paragraph")
          {
+            document.getElementById("caption_div").style.visibility = "visible";
+
             update_button_positions();
-      document.getElementById("caption_div").style.visibility = "visible";
-            //document.getElementById("art_container").style.visibility = "visible";
          }
       },
 
@@ -310,9 +308,9 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          }
          else if (element_id == "image_paragraph")
          {
+            document.getElementById("caption_div").style.visibility = "visible";
+
             update_button_positions();
-      document.getElementById("caption_div").style.visibility = "visible";
-            //document.getElementById("art_container").style.visibility = "visible";
          }
       },
    }
