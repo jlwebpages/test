@@ -265,8 +265,6 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          else if (element_id == "image_caption")
          {
             update_button_positions();
-
-            document.getElementById("art_container").style.visibility = "visible";
          }
       },
 
@@ -279,8 +277,6 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          if (element_id == "image_caption")
          {
             update_button_positions();
-
-            document.getElementById("art_container").style.visibility = "visible";
          }
       },
    }
@@ -350,7 +346,7 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
 
 function load_image_caption(image_file_name)
 {
-   load_data_from_file(image_file_name.split('.')[0]+"_caption.txt","image_caption",false);
+   load_data_from_file(image_file_name.split('.')[0]+"_caption.txt","image_caption",true);
 
    return true;
 }
