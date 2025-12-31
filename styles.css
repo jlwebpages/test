@@ -120,6 +120,12 @@
    .image_container_two_column {height: 100dvh !important}
 }
 
+@keyframes fade-in
+{
+   from {opacity: 0; visibility: hidden }
+   to   {opacity: 1; visibility: visible}
+}
+
 .landing_body
 {
    background-image: url('landing_background.jpg');
@@ -538,6 +544,7 @@ a.header_link:hover
    height: 100vh;
    overflow-y: auto;
    visibility: hidden;
+   animation: fade-in 1.0s forwards;
 }
 
 .image_container_two_column
@@ -551,4 +558,5 @@ a.header_link:hover
    margin: 0px auto;
    overflow-y: hidden;
    visibility: hidden;
+   animation: fade-in 1.0s forwards;
 }
