@@ -207,9 +207,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       }
 
-      html_string += '      <span id="image_title" class="art_title"></span>';
-      html_string += '      <span id="image_dimensions" class="art_dimensions"></span>';
-      html_string += '      <span id="image_paragraph" class="art_paragraph"></span>';
+      html_string += '      <div id="image_caption"></div>';
       html_string += '   </div>';
       html_string += '';
       html_string += '</div>';
@@ -264,21 +262,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
          {
             if (scroll_to_exhibitions == true) document.getElementById(element_id).scrollIntoView({behavior: "smooth"});
          }
-         else if (element_id == "image_title")
-         {
-            file_name  = file_name.replace("title","dimensions");
-            element_id = element_id.replace("title","dimensions");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_dimensions")
-         {
-            file_name  = file_name.replace("dimensions","paragraph");
-            element_id = element_id.replace("dimensions","paragraph");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_paragraph")
+         else if (element_id == "image_caption")
          {
             update_button_positions();
 
@@ -292,21 +276,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
 
          document.getElementById(element_id).style.display = "none";
 
-         if (element_id == "image_title")
-         {
-            file_name  = file_name.replace("title","dimensions");
-            element_id = element_id.replace("title","dimensions");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_dimensions")
-         {
-            file_name  = file_name.replace("dimensions","paragraph");
-            element_id = element_id.replace("dimensions","paragraph");
-
-            load_data_from_file(file_name,element_id,false);
-         }
-         else if (element_id == "image_paragraph")
+         if (element_id == "image_caption")
          {
             update_button_positions();
 
@@ -380,7 +350,7 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
 
 function load_image_caption(image_file_name)
 {
-   load_data_from_file(image_file_name.split('.')[0]+"_title.txt","image_title",false);
+   load_data_from_file(image_file_name.split('.')[0]+"_caption.txt","image_caption",false);
 
    return true;
 }
