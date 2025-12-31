@@ -425,7 +425,7 @@ a.header_link:hover
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
-   visibility: hidden;
+   display: none;
 }
 
 .art_title
