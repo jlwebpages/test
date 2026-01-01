@@ -187,7 +187,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
       html_string += '<div id="art_container" class="'+container_class+' fade_in">';
       html_string += '';
-      html_string += '   <div id="image_div" class="fade_in" style="display: inline-block; position: relative">';
+      html_string += '   <div id="image_div" style="display: inline-block; position: relative">';
       html_string += '      <img src="'+this.src+'" style="'+image_style+'">';
       html_string += '      <button class="nav_button nav_left_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
 
@@ -199,7 +199,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       html_string += '   </div>';
       html_string += '';
-      html_string += '   <div id="caption_div" class="art_caption fade_in" '+art_caption_style+'>';
+      html_string += '   <div id="caption_div" class="art_caption" '+art_caption_style+'>';
 
       if (container_style == two_column_container)
       {
