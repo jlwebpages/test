@@ -129,7 +129,7 @@
 .fade_in
 {
    visibility: hidden;
-   animation: fade-in 0.5s forwards;
+   animation: fade-in 1.0s forwards;
 }
 
 .landing_body
