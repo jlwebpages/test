@@ -185,7 +185,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       html_string += '';
       html_string += '';
-      html_string += '<div id="art_container" class='+container_class+'>';
+      html_string += '<div id="art_container" class="'+container_class+' fade_in">';
       html_string += '';
       html_string += '   <div id="image_div" class="fade_in" style="display: inline-block; position: relative">';
       html_string += '      <img src="'+this.src+'" style="'+image_style+'">';
