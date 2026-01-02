@@ -22,10 +22,10 @@ Each is 6 x 12 inches on 1.5-inch cradled wood panel
 
 Sometimes it’s nice to just “be” in nature - focusing and unfocusing for a moment - not trying to make sense out of what’s out there - but just taking it in and letting it go.
 
-<span class="art_paragraph" style="padding-top: 20px"><b>Pause</b> (top)</span>
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>Pause</b> (top)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Sanctuary</b> (middle)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Breathing Space</b> (bottom)</span>
-
-</span>

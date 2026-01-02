@@ -22,8 +22,8 @@ Golden Hour
 
 There is something about autumn lighting that brings out the gold in the hills!
 
-<span class="art_paragraph" style="padding-top: 20px"><b>Golden Hour 1</b> (left)</span>
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>Golden Hour 1</b> (left)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Golden Hour 2</b> (right)</span>
-
-</span>

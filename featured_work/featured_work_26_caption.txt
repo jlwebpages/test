@@ -22,12 +22,12 @@ The hexagon piece is 11 x 12 inches on 1.25-inch cradled wood panel.  The three 
 
 When I look out at the hills, I see areas meet and connect, reveal and hide. Colors, textures, spaces are juxtaposed -  sometimes in surprising ways.
 
-<span class="art_paragraph" style="padding-top: 20px"><b>Viewfinder</b> (top left)</span>
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>Viewfinder</b> (top left)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Another Rainy Monday</b> (top right)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Moonlight</b> (bottom left)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Saturated</b> (bottom right)</span>
-
-</span>

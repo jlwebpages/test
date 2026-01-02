@@ -22,8 +22,8 @@ Both are 47.5 x 10 inches on 1.5-inch cradled wood panel
 
 Don't let anyone tell you there are no seasons in California! The California sycamore outside my window had quite an autumn this year.
 
-<span class="art_paragraph" style="padding-top: 20px"><b>I’m Falling for You</b> (left)</span>
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>I’m Falling for You</b> (left)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Please Don't Leave!</b> (right)</span>
-
-</span>

@@ -22,8 +22,8 @@ Walking Meditations
 
 I often hike along the edge of an immense arroyo with a large open sky overhead. After rains, the arroyo fills and the water runs quickly. The ravens keep me company and remind me to keep my eye on the big picture.
 
-<span class="art_paragraph" style="padding-top: 20px"><b>The Big Picture</b> (left)</span>
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>The Big Picture</b> (left)</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>On the Fence</b> (right)</span>
-
-</span>
