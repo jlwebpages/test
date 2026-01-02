@@ -188,6 +188,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
       html_string += '</div></center>';
       html_string += '';
+      html_string += '';
 
       document.body.innerHTML = html_string;
 
