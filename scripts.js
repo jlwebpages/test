@@ -72,7 +72,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var art_container_class           = "image_container_two_column";
       var art_container_padding         = 35;
       var art_container_style           = "";
-      var back_button_vertical_position = 0;
+      var back_button_vertical_position = 5;
       var caption_div_style             = "";
       var height_ratio                  = 1;
       var html_string                   = "";
@@ -144,7 +144,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          // Image width equals viewport width
 
-         back_button_vertical_position = 5;
          nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
 
          caption_div_style = "style=\"height: auto\"";
