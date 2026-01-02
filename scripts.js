@@ -70,7 +70,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var adjusted_image_height        = 0;
       var adjusted_image_width         = 0;
       var art_container_class          = "image_container_two_column";
-      var art_container_margin         = 35;
+      var art_container_padding        = 35;
       var art_container_style          = "";
       var caption_div_style            = "";
       var height_ratio                 = 1;
@@ -105,16 +105,16 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if (art_container_class == "image_container_two_column")
       {
-         art_container_style = "style=\"padding-left: "+art_container_margin+"px; padding-right: "+art_container_margin+"px\"";
+         art_container_style = "style=\"padding-left: "+art_container_padding+"px; padding-right: "+art_container_padding+"px\"";
          caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
 
          nav_button_vertical_position = window.innerHeight / 2;
 
-         if ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) > (window.innerWidth) )
+         if ( (adjusted_image_width + minimum_caption_width + art_container_padding*2) > (window.innerWidth) )
          {
             // Reduce the image width to make room for the image caption.
 
-            adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window.innerWidth) );
+            adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_padding*2) - (window.innerWidth) );
             adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;
 
             image_style       = "style=\"width: "+adjusted_image_width+"px";
@@ -155,14 +155,18 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
 
       html_string += '      <button class="nav_button nav_left_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
+
+         html_string += '      <button class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
+         html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+
       html_string += '';
       html_string += '   <div id="image_div" class="fade_in" style="display: inline-block; position: relative">';
       html_string += '      <img src="'+this.src+'" '+image_style+'">';
 
       if (art_container_class == "image_container_one_column")
       {
-         html_string += '      <button id="nav_right_button" class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
-         html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+         //html_string += '      <button class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
+         //html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       }
 
       html_string += '   </div>';
@@ -171,8 +175,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if (art_container_class == "image_container_two_column")
       {
-         html_string += '      <button id="nav_right_button" class="nav_button nav_right_offset" style="position: fixed; top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
-         html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+         //html_string += '      <button class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
+         //html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       }
 
       html_string += '      <div id="image_caption"></div>';
