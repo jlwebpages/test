@@ -121,16 +121,12 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             if (adjusted_image_width > 655) adjusted_image_width = 655;
 
             art_container_style = "style=\"width: "+adjusted_image_width+"px; margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px\"";
-
             image_style         = "style=\"width: "+adjusted_image_width+"px; height: auto";
 
-            nav_button_vertical_position = image_height * 655/image_width / 2;
-         }
-
-         if (nav_button_vertical_position > window_inner_height / 2)
-         {
             nav_button_vertical_position = window_inner_height / 2;
          }
+
+         if (nav_button_vertical_position > window_inner_height / 2) nav_button_vertical_position = window_inner_height / 2;
       }
       else
       {
