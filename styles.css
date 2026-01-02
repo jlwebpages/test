@@ -465,6 +465,7 @@ a.header_link:hover
 {
    cursor: pointer;
    position: fixed;
+   transform: translate3d(0,0,0);
    top: 5px;
    right: 5px;
    font-family: Arial, sans-serif;
@@ -488,6 +489,7 @@ a.header_link:hover
 {
    cursor: pointer;
    position: fixed;
+   transform: translate3d(0,0,0);
    top: 50%;
    transform: translateY(-50%);
    font-weight: bold;
