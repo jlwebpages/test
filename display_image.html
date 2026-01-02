@@ -12,7 +12,40 @@
 
 <body class="body" style="background-color: black" onload="validate_received_image_name();">
 
-   <!-- Load HTML from display_image_with_caption function. -->
+ 
+ <!-- Load HTML from display_image_with_caption function. -->
+
+
+<script>
+
+   // Reset landing_container padding-top style if the user switches to portrait orientation from landscape orientation.
+
+   mediaQuery_portrait = window.matchMedia("(orientation: portrait)");
+
+   function respond_to_portrait_orientation(event)
+   {
+      if (event.matches)
+      {
+         window.location.reload();
+      }
+   } 
+
+   mediaQuery_portrait.addEventListener("change", respond_to_portrait_orientation);
+
+   mediaQuery_landscape = window.matchMedia("(orientation: landscape)");
+
+   function respond_to_landscape_orientation(event)
+   {
+      if (event.matches)
+      {
+         window.location.reload();
+      }
+   } 
+
+   mediaQuery_landscape.addEventListener("change", respond_to_landscape_orientation);
+
+</script>
+
 
 </body>
 
