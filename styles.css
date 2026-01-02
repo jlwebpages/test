@@ -544,7 +544,7 @@ a.header_link:hover
    background-color: white;
    display: grid;
    grid-template-columns: 1fr;
-   place-items: start;
+   place-items: center;
    place-content: start;
    width: 100%;
    height: 100vh;
