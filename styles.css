@@ -464,7 +464,7 @@ a.header_link:hover
 .back_button
 {
    cursor: pointer;
-   position: absolute;
+   position: fixed;
    top: 5px;
    right: 5px;
    font-family: Arial, sans-serif;
@@ -486,7 +486,7 @@ a.header_link:hover
 .nav_button
 {
    cursor: pointer;
-   position: absolute;
+   position: fixed;
    top: 50%;
    transform: translateY(-50%);
    font-weight: bold;
