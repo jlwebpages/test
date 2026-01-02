@@ -105,7 +105,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if (art_container_class == "image_container_two_column")
       {
-         art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px\"";
+         art_container_style = "style=\"padding-left: "+art_container_margin+"px; padding-right: "+art_container_margin+"px\"";
          caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
 
          nav_button_vertical_position = window.innerHeight / 2;
