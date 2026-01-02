@@ -117,19 +117,18 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window.innerWidth) );
             adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;
 
-            image_style = "style=\"width: "+adjusted_image_width+"px";
-
+            image_style       = "style=\"width: "+adjusted_image_width+"px";
             caption_div_style = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
          }
          else   
          {
             if (CSS.supports('height', '100dvh'))
             {
-               image_style = "style=\"width: auto; height: 100dvh; margin-top: 0px";
+               image_style = "style=\"width: auto; height: 100dvh";
             }
            else
             {
-               image_style = "style=\"width: auto; height: 100vh; margin-top: 0px";
+               image_style = "style=\"width: auto; height: 100vh";
             }
          }
       }

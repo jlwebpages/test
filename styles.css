@@ -490,7 +490,6 @@ a.header_link:hover
    top: 50%;
    transform: translateY(-50%);
    font-weight: bold;
-   color: white;
    display: grid;
    place-items: center;
    height: 52px;
@@ -524,7 +523,7 @@ a.header_link:hover
    height: 0;
    border-top: 6px solid transparent;
    border-bottom: 6px solid transparent;
-   border-right: 10.5px solid black;
+   border-right: 10.5px solid red;
    margin: 0px auto;
    transform: scale(1);
 }
