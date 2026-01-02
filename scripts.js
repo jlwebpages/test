@@ -98,7 +98,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       // If running on a mobile device in portrait orientation, set up a one column container instead of two.
 
-      if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
+      //if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
       {
          if (window_inner_height >= window_inner_width)
          {
