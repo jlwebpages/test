@@ -425,16 +425,18 @@ a.header_link:hover
 
 .art_caption
 {
+   position: relative;
    background-color: white;
    font-family: Arial, sans-serif;
    font-size: 16px;
    color: darkslategray;
    text-align: left;
+   justify-self: start;
+   align-self: start;
    height: 100%;
-   border: 0px;
    margin: 0px;
    padding: 0px 25px 10px 10px;
-   overflow-y: hidden;
+   overflow-y: auto;
 }
 
 .art_title

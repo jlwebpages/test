@@ -69,9 +69,10 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
    {
       var adjusted_image_height        = 0;
       var adjusted_image_width         = 0;
-      var art_caption_style            = "";
-      var container_class              = "";
-      var container_style              = 2;
+      var art_container_class          = "image_container_two_column";
+      var art_container_margin         = 35;
+      var art_container_style          = "";
+      var caption_div_style            = "";
       var height_ratio                 = 1;
       var html_string                  = "";
       var image_height                 = 0;
@@ -80,8 +81,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var max_number_of_images         = 40;
       var minimum_caption_width        = 285;
       var nav_button_vertical_position = 0;
-      var one_column_container         = 1;
-      var two_column_container         = 2;
       var width_ratio                  = 1;
 
 
@@ -94,52 +93,43 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       adjusted_image_width  = image_width/height_ratio;
       adjusted_image_height = image_height/width_ratio;
 
-      container_class = "image_container_two_column";
-      container_style = two_column_container;
+      // If running on a mobile device in portrait orientation, set up a one column container.
 
       if (window.innerWidth < window.innerHeight)
       {
-         // We're in portrait orientation.
-
          if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
          {
-            // This is a mobile device.
-
-            container_class = "image_container_one_column";
-            container_style = one_column_container;
+            art_container_class = "image_container_one_column";
          }
       }
 
-      if (container_style == two_column_container)
+      if (art_container_class == "image_container_two_column")
       {
+         art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px\"";
+         caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
+
          nav_button_vertical_position = window.innerHeight / 2;
 
-         art_caption_style = "style=\"max-width: 500px; padding-top: 5px\"";
-
-         if ( (adjusted_image_width + 70 + minimum_caption_width) > (window.innerWidth) )
+         if ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) > (window.innerWidth) )
          {
-            // Reduce the size of the image to make room for the image caption.
+            // Reduce the image width to make room for the image caption.
 
-            reduced_width_by = (adjusted_image_width + 70 + minimum_caption_width) - (window.innerWidth);
+            adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window.innerWidth) );
+            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;
 
-            adjusted_image_width  = adjusted_image_width  - reduced_width_by;
-            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 16;
+            image_style = "style=\"width: "+adjusted_image_width+"px";
 
-            //alert (image_width+" "+adjusted_image_width+" "+image_height);
-
-            image_style = "width: "+adjusted_image_width+"px;";
-
-            art_caption_style = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
+            caption_div_style = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
          }
          else   
          {
             if (CSS.supports('height', '100dvh'))
             {
-               image_style = "width: auto; height: 100dvh";
+               image_style = "style=\"width: auto; height: 100dvh; margin-top: 0px";
             }
            else
             {
-               image_style = "width: auto; height: 100vh";
+               image_style = "style=\"width: auto; height: 100vh; margin-top: 0px";
             }
          }
       }
@@ -149,9 +139,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
 
-         art_caption_style = "style=\"height: auto\"";
+         caption_div_style = "style=\"height: auto\"";
 
-         image_style = "width: 100%; height: auto";
+         image_style = "style=\"width: 100%; height: auto";
       }
 
       if (nav_button_vertical_position > window.innerHeight / 2)
@@ -163,14 +153,14 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       html_string += '';
       html_string += '';
-      html_string += '<div id="art_container" class="'+container_class+' fade_in" style="margin-left: 35px; margin-right: 35px">';
+      html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
 
       html_string += '      <button class="nav_button nav_left_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
       html_string += '';
       html_string += '   <div id="image_div" class="fade_in" style="display: inline-block; position: relative">';
-      html_string += '      <img src="'+this.src+'" style="'+image_style+'">';
+      html_string += '      <img src="'+this.src+'" '+image_style+'">';
 
-      if (container_style == one_column_container)
+      if (art_container_class == "image_container_one_column")
       {
          html_string += '      <button id="nav_right_button" class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
          html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
@@ -178,9 +168,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       html_string += '   </div>';
       html_string += '';
-      html_string += '   <div id="caption_div" class="art_caption fade_in" '+art_caption_style+'>';
+      html_string += '   <div id="caption_div" class="art_caption fade_in" '+caption_div_style+'>';
 
-      if (container_style == two_column_container)
+      if (art_container_class == "image_container_two_column")
       {
          html_string += '      <button id="nav_right_button" class="nav_button nav_right_offset" style="position: fixed; top: '+nav_button_vertical_position+'" onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
          html_string += '      <button id="back_button" class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
