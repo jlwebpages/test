@@ -148,11 +148,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          {
             if (CSS.supports('height', '100dvh'))
             {
-               image_style = "style=\"width: auto; height: 100dvh";
+               image_style = "style=\"width: auto; height: 100dvh\"";
             }
             else
             {
-               image_style = "style=\"width: auto; height: 100vh";
+               image_style = "style=\"width: auto; height: 100vh\"";
             }
 
             caption_div_style = "style=\"max-width: 500px; padding-top: 5px\"";
