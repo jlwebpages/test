@@ -83,13 +83,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var minimum_caption_width         = 285;
       var nav_button_vertical_position  = 0;
       var width_ratio                   = 1;
+      var window_inner_height           = window.innerHeight;
+      var window_inner_width            = window.innerWidth;
 
 
       image_width  = this.naturalWidth;
       image_height = this.naturalHeight;
 
-      width_ratio  = image_width/window.innerWidth;
-      height_ratio = image_height/window.innerHeight;
+      width_ratio  = image_width/window_inner_width;
+      height_ratio = image_height/window_inner_height;
 
       adjusted_image_width  = image_width/height_ratio;
       adjusted_image_height = image_height/width_ratio;
@@ -98,25 +100,27 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
       {
-         if (window.innerHeight >= window.innerWidth)
+         if (window_inner_height >= window_inner_width)
          {
             art_container_class = "image_container_one_column";
+
+            if (window_inner_width > 655) art_container_style = "style=\"width: 655px\"";
          }
       }
 
       if (art_container_class == "image_container_two_column")
       {
-         if ( (adjusted_image_width + minimum_caption_width + art_container_padding*2) > (window.innerWidth) )
+         if ( (adjusted_image_width + minimum_caption_width + art_container_padding*2) > (window_inner_width) )
          {
             // Reduce the image width to make room for the image caption.
 
-            adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_padding*2) - (window.innerWidth) );
+            adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_padding*2) - (window_inner_width) );
             adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;  // Not exactly sure why -15
 
             image_style       = "style=\"width: "+adjusted_image_width+"px";
             caption_div_style = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
 
-            back_button_vertical_position = ( (window.innerHeight-adjusted_image_height) / 2 ) -10;
+            back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) -10;
          }
          else   
          {
@@ -134,7 +138,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          art_container_style = "style=\"padding-left: "+art_container_padding+"px; padding-right: "+art_container_padding+"px\"";
 
-         nav_button_vertical_position = window.innerHeight / 2;
+         nav_button_vertical_position = window_inner_height / 2;
       }
       else
       {
@@ -142,12 +146,12 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          caption_div_style = "style=\"height: auto\"";
 
-         nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
+         nav_button_vertical_position = image_height * window_inner_width/image_width / 2;
       }
 
-      if (nav_button_vertical_position > window.innerHeight / 2)
+      if (nav_button_vertical_position > window_inner_height / 2)
       {
-         //nav_button_vertical_position = window.innerHeight / 2;
+         //nav_button_vertical_position = window_inner_height / 2;
       }
 
       back_button_vertical_position += "px";

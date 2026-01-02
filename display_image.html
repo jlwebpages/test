@@ -10,38 +10,21 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" style="background-color: black" onload="validate_received_image_name();">
+<body class="body" style="background-color: black" onload="validate_received_image_name();" oncontextmenu="return false;">
 
  
- <!-- Load HTML from display_image_with_caption function. -->
+ <!-- HTML will be loaded via the onload="validate_received_image_name();" function. -->
 
 <script>
 
-   // Reset landing_container padding-top style if the user switches to portrait orientation from landscape orientation.
+   // Perform a hard reload when the device window size or orientation changes.
 
-   mediaQuery_portrait = window.matchMedia("(orientation: portrait)");
-
-   function respond_to_portrait_orientation(event)
+   window.addEventListener
+   ("resize", function()
    {
-      if (event.matches)
-      {
-         location.href = self.location.href;
-      }
-   } 
-
-   mediaQuery_portrait.addEventListener("change", respond_to_portrait_orientation);
-
-   mediaQuery_landscape = window.matchMedia("(orientation: landscape)");
-
-   function respond_to_landscape_orientation(event)
-   {
-      if (event.matches)
-      {
-         location.href = self.location.href;
-      }
-   } 
-
-   mediaQuery_landscape.addEventListener("change", respond_to_landscape_orientation);
+      location.href = self.location.href;
+   }
+   );
 
 </script>
 
