@@ -140,6 +140,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          image_style = "style=\"width: 100%; height: auto";
 
+         caption_div_style = "style=\"height: auto\"";
+
          nav_button_vertical_position = image_height * window.innerWidth/image_width / 2;
       }
 
