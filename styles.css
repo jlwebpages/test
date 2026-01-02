@@ -548,11 +548,11 @@ a.header_link:hover
    background-color: white;
    display: grid;
    grid-template-columns: 1fr;
-   place-items: center;
+   place-items: start;
    place-content: start;
    width: 100%;
    height: 100vh;
-   overflow-y: auto;
+   overflow-y: scroll;
 }
 
 .image_container_two_column
