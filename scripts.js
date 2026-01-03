@@ -69,7 +69,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
    {
       var adjusted_image_height         = 0;
       var adjusted_image_width          = 0;
-      var art_container_class           = "image_container_two_column";
+      var art_container_class           = "";
       var art_container_margin          = 35;
       var art_container_style           = "";
       var back_button_vertical_position = 5;
@@ -81,7 +81,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var image_style                   = "";
       var max_number_of_images          = 40;
       var minimum_caption_width         = 285;
-      var nav_button_vertical_position  = 0;
+      var nav_button_vertical_position  = 5;
       var width_ratio                   = 1;
       var window_inner_height           = window.innerHeight;
       var window_inner_width            = window.innerWidth;
@@ -114,7 +114,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          nav_button_vertical_position = image_height * window_inner_width/image_width / 2;
 
-         if (window_inner_width > 655)  // 655 is consistent with "@media only screen and (max-width: 655px) and (orientation: portrait)" in styles.cxx.
+         if (window_inner_width > 655)  // 655 is consistent with "@media only screen and (max-width: 655px) and (orientation: portrait)" in styles.css.
          {
             adjusted_image_width = window_inner_width - art_container_margin*2;
 
@@ -137,13 +137,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             // Reduce the image width to make room for the image caption.
 
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
-            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;  // Not exactly sure why -15
+            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;  // Not exactly sure why -15.  Maybe to account for caption_div top and/or bottom margins.
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
             image_style         = "style=\"width: "+adjusted_image_width+"px\"";
             caption_div_style   = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
 
-            back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) -10;
+            back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) - 10;  // Not exactly sure why -10.
          }
          else   
          {
@@ -170,7 +170,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       html_string += '';
       html_string += '';
-      html_string += '<center><div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
+      html_string += '<center><div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';  // Not sure why I can't find another why to center besides <center>.
       html_string += '';
       html_string += '   <button class="nav_button nav_left_offset"   style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
       html_string += '   <button class="nav_button nav_right_offset"  style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';

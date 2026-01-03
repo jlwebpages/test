@@ -542,9 +542,9 @@ a.header_link:hover
 .image_container_one_column
 {
    background-color: white;
-   display: block;
    width: 100%;
    height: 100vh;
+   display: block;
 }
 
 .image_container_two_column
