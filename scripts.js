@@ -166,6 +166,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
       {
          alert("Old iPad");
+         back_button_vertical_position += 15;
+         nav_button_vertical_position  += 15;
       }
 
       back_button_vertical_position += "px";
