@@ -145,14 +145,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
             back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) - 10;  // Not exactly sure why -10.
 
+            if (back_button_vertical_position < 5) back_button_vertical_position = 5;
+
             if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
             {
                // Make vertical button position adjustments for older iPads.
 
-               alert("Old iPad Dude");
                if (back_button_vertical_position > 5) back_button_vertical_position += 13;
 
-               nav_button_vertical_position  += 13;
+               nav_button_vertical_position += 13;
             }
          }
          else   
