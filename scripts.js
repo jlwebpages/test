@@ -139,8 +139,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
             adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;  // Not exactly sure why -15
 
-            image_style       = "style=\"width: "+adjusted_image_width+"px\"";
-            caption_div_style = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
+            art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
+            image_style         = "style=\"width: "+adjusted_image_width+"px\"";
+            caption_div_style   = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
 
             back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) -10;
          }
@@ -155,10 +156,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
                image_style = "style=\"width: auto; height: 100vh\"";
             }
 
-            caption_div_style = "style=\"max-width: 500px; padding-top: 5px\"";
+            art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px\"";
+            caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
          }
-
-         art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px\"";
 
          nav_button_vertical_position = window_inner_height / 2;
       }
