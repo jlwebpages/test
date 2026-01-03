@@ -144,6 +144,16 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             caption_div_style   = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
 
             back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) - 10;  // Not exactly sure why -10.
+
+            if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
+            {
+               // Make vertical button position adjustments for older iPads.
+
+               alert("Old iPad Dude");
+               if (back_button_vertical_position > 5) back_button_vertical_position += 13;
+
+               nav_button_vertical_position  += 13;
+            }
          }
          else   
          {
@@ -161,13 +171,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
 
          nav_button_vertical_position = window_inner_height / 2;
-      }
-
-      if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
-      {
-         alert("Old iPad Man");
-         back_button_vertical_position += 13;
-         nav_button_vertical_position  += 13;
       }
 
       back_button_vertical_position += "px";
