@@ -89,7 +89,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       image_width  = this.naturalWidth;
       image_height = this.naturalHeight;
-alert("W: "+image_width+"  H:"+image_height);
+alert("Width: "+image_width+"  Height:"+image_height);
       width_ratio  = image_width/window_inner_width;
       height_ratio = image_height/window_inner_height;
 
