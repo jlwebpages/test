@@ -163,7 +163,10 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          nav_button_vertical_position = window_inner_height / 2;
       }
 
-      // Is old iPad?  if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
+      if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
+      {
+         alert("Old iPad");
+      }
 
       back_button_vertical_position += "px";
       nav_button_vertical_position  += "px";
@@ -184,11 +187,10 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
       html_string += '</div></center>';
       html_string += '';
+      html_string += '<button class="nav_button nav_left_offset"  style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
+      html_string += '<button class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
+      html_string += '<button class="back_button"                 style="top: '+back_button_vertical_position+'" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       html_string += '';
-
-      html_string += '   <button class="nav_button nav_left_offset"   style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'left\');"><div class="nav_left_shape"></div></button>';
-      html_string += '   <button class="nav_button nav_right_offset"  style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\''+max_number_of_images+'\',\'right\');"><div class="nav_right_shape"></div></button>';
-      html_string += '   <button class="back_button"                  style="top: '+back_button_vertical_position+'" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       html_string += '';
 
       document.body.innerHTML = html_string;
