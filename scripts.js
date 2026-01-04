@@ -287,7 +287,7 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
       document.getElementById("three_column_3").style.display = "block";
    }
 
-   image_html = '<a href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
+   image_html = '<a class="art_image_link" href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
