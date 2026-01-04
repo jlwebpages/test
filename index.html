@@ -2,21 +2,6 @@
 
 <html>
 
-<script>
-
-if (navigator.userAgent.toLowerCase().indexOf("mobile") != -1)  // This is a mobile device.
-{
-   document.writeln('<meta http-equiv="Refresh" content="0; URL=fp_mobile.html">');
-}
-else if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )  // This is an iPad.
-{
-   document.writeln('<meta http-equiv="Refresh" content="0; URL=fp_mobile.html">');
-}
-else
-{
-   document.writeln('<meta http-equiv="Refresh" content="0; URL=fp.html">');
-}
-
-</script>
+<script>document.writeln('<meta http-equiv="Refresh" content="0; landing_page.html">');</script>
 
 </html>

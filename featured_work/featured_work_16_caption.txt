@@ -1,0 +1,25 @@
+<!-- Title -->
+
+<span class="art_title">
+
+This Land Is Your Land
+
+</span>
+
+
+<!-- Dimensions -->
+
+<span class="art_dimensions">
+
+Each panel is 36 x 24 inches on 1.5-inch cradled wood panel
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+After I finished this diptych, this song by Woodie Guthrie popped into my head. As I looked at the random drips, I thought about how our environment has been impacted by our presence and the difficult state our country is in. I hope we all think carefully about what we want to do with our land.
+
+</span>

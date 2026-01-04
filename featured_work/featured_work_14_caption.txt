@@ -1,0 +1,29 @@
+<!-- Title -->
+
+<span class="art_title">
+
+Summer Skies
+
+</span>
+
+
+<!-- Dimensions -->
+
+<span class="art_dimensions">
+
+10 x 10 inch cradled wood panels
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+Summer is the perfect time of year for looking up and daydreaming.
+
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>Many Moons</b> (left)</span>
+
+<span class="art_paragraph" style="padding-top: 0px"><b>Fireworks</b> (right)</span>
