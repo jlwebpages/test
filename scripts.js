@@ -234,6 +234,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
 
       success: function(data)
       {
+         document.getElementById(element_id).textContent = "";
          document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
 
          if (element_id == "about_text")
