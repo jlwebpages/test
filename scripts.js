@@ -1,3 +1,8 @@
+var max_featured_work_image_number  = 0;
+var max_photo_art_image_number      = 0;
+var max_works_on_paper_image_number = 0;
+
+
 function check_if_image_exists(gallery_name,image_number,max_number_of_images,direction)
 {
    $.ajax
@@ -288,7 +293,7 @@ function load_image(gallery_name,image_number,max_number_of_images,image_count)
       document.getElementById("three_column_3").style.display = "block";
    }
 
-   image_html = '<a class="art_image_link" href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
+   image_html = '<a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&max_number_of_images=0" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
@@ -339,12 +344,21 @@ function load_image_into_gallery(gallery_name,image_number,max_number_of_images,
 
       success: function()
       {
+         set_max_image_number(gallery_name,image_number);
+
          load_image(gallery_name,image_number,max_number_of_images,image_count+1);
       },
 
       error: function()
       {
-         if (image_number < max_number_of_images) load_image_into_gallery(gallery_name,image_number+1,max_number_of_images,image_count);
+         if (image_number < max_number_of_images)
+         {
+            load_image_into_gallery(gallery_name,image_number+1,max_number_of_images,image_count);
+         }
+         else
+         {
+            update_image_links_with_max_image_number(gallery_name);
+         }
       },
    }
    );
@@ -380,6 +394,54 @@ function navigate_to_next_image(gallery_name,image_number,max_number_of_images,d
    }
 
    return true;
+}
+
+function set_max_image_number(gallery_name,image_number)
+{
+   switch(gallery_name)
+   {
+      case "featured_work":
+         max_featured_work_image_number = image_number;
+         break;
+
+      case "photo_art":
+         max_photo_art_image_number = image_number;
+         break;
+
+      case "works_on_paper":
+         max_works_on_paper_image_number = image_number;
+         break;
+
+      default:
+         break;
+   }
+}
+
+function update_image_links_with_max_image_number(gallery_name)
+{
+   links = document.querySelectorAll("a");
+
+   links.forEach(link =>
+   {
+      switch(gallery_name)
+      {
+         case "featured_work":
+                  link.href = link.href.replace("max_number_of_images=0", "max_number_of_images="+max_featured_work_image_number);
+            break;
+
+         case "photo_art":
+                  link.href = link.href.replace("max_number_of_images=0", "max_number_of_images="+max_photo_art_image_number);
+            break;
+
+         case "works_on_paper":
+                  link.href = link.href.replace("max_number_of_images=0", "max_number_of_images="+max_works_on_paper_image_number);
+            break;
+
+         default:
+            break;
+      }
+   }
+   );
 }
 
 function validate_received_image_name()
