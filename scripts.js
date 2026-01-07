@@ -357,7 +357,13 @@ function load_image_into_gallery(gallery_name,image_number,image_count)
          }
          else
          {
-            update_image_links_with_max_image_number();
+            links = document.querySelectorAll("a");
+
+            links.forEach(link =>
+            {
+               link.href = link.href.replace("max_image_number="+max_number_of_images,"max_image_number="+max_image_number);
+            }
+            );
          }
       },
    }
