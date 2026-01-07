@@ -4,7 +4,7 @@ var   max_image_number     = 0;
 const max_number_of_images = 35;
 
 
-function check_if_image_exists(gallery_name,image_number,max_number_of_images,direction)
+function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
 {
    $.ajax
    (
@@ -26,22 +26,22 @@ function check_if_image_exists(gallery_name,image_number,max_number_of_images,di
          {
             if (image_number-1 >= 1)
             {
-               check_if_image_exists(gallery_name,image_number-1,max_number_of_images,"left");
+               check_if_image_exists(gallery_name,image_number-1,max_image_number,"left");
             }
             else
             {
-               check_if_image_exists(gallery_name,max_number_of_images,max_number_of_images,"left");
+               check_if_image_exists(gallery_name,max_image_number,max_image_number,"left");
             }
          }
          else
          {
-            if (image_number+1 <= max_number_of_images)
+            if (image_number+1 <= max_image_number)
             {
-               check_if_image_exists(gallery_name,image_number+1,max_number_of_images,"right");
+               check_if_image_exists(gallery_name,image_number+1,max_image_number,"right");
             }
             else
             {
-               check_if_image_exists(gallery_name,1,max_number_of_images,"right");
+               check_if_image_exists(gallery_name,1,max_image_number,"right");
             }
          }
       },
