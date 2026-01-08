@@ -1,9 +1,9 @@
 // Global variables.
 
 var   max_image_number                = 0;
-const max_featured_work_image_number  = 100;
-const max_photo_art_image_number      = 100;
-const max_works_on_paper_image_number = 100;
+const max_featured_work_image_number  = 32;
+const max_photo_art_image_number      = 28;
+const max_works_on_paper_image_number = 9;
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
