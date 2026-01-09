@@ -1,6 +1,9 @@
 // Global variables.
 
-var   max_image_number                = 0;
+var max_image_number = 0;
+
+// Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
+
 const max_featured_work_image_number  = 32;
 const max_photo_art_image_number      = 28;
 const max_works_on_paper_image_number = 9;
@@ -17,25 +20,28 @@ function check_if_image_exists(gallery_name,image_number,max_image_number,direct
 
       success: function()
       {
-         display_image_with_caption(gallery_name+"/"+gallery_name+"_"+image_number+".jpg",gallery_name,image_number);
+         if (direction == "right")
+         {
+            if (image_number <= max_image_number)
+            {
+               display_image_with_caption(gallery_name+"/"+gallery_name+"_"+image_number+".jpg",gallery_name,image_number);
+            }
+            else
+            {
+               check_if_image_exists(gallery_name,1,max_image_number,"right");
+            }
+         }
+         else
+         {
+            display_image_with_caption(gallery_name+"/"+gallery_name+"_"+image_number+".jpg",gallery_name,image_number);
+         }
 
          return true;
       },
 
       error: function()
       {
-         if (direction == "left")
-         {
-            if (image_number-1 >= 1)
-            {
-               check_if_image_exists(gallery_name,image_number-1,max_image_number,"left");
-            }
-            else
-            {
-               check_if_image_exists(gallery_name,max_image_number,max_image_number,"left");
-            }
-         }
-         else
+         if (direction == "right")
          {
             if (image_number+1 <= max_image_number)
             {
@@ -44,6 +50,17 @@ function check_if_image_exists(gallery_name,image_number,max_image_number,direct
             else
             {
                check_if_image_exists(gallery_name,1,max_image_number,"right");
+            }
+         }
+         else
+         {
+            if (image_number-1 >= 1)
+            {
+               check_if_image_exists(gallery_name,image_number-1,max_image_number,"left");
+            }
+            else
+            {
+               check_if_image_exists(gallery_name,max_image_number,max_image_number,"left");
             }
          }
       },
@@ -380,13 +397,14 @@ function navigate_to_next_image(gallery_name,image_number,direction)
 {
    image_number = parseInt(image_number);
 
-   if (direction == "left")
+   if (direction == "right")
    {
-      check_if_image_exists(gallery_name,image_number-1,max_image_number,"left");
+      check_if_image_exists(gallery_name,image_number+1,max_image_number,"right");
+
    }
    else
    {
-      check_if_image_exists(gallery_name,image_number+1,max_image_number,"right");
+      check_if_image_exists(gallery_name,image_number-1,max_image_number,"left");
    }
 
    return true;
