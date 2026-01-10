@@ -1,4 +1,4 @@
-<span class="sub_title" style="padding-bottom: 25px !important">UPCOMING EXHIBITION</span><br>
+<span class="sub_title" style="padding-bottom: 25px !important">CURRENT EXHIBITION</span><br>
 
 <span style="line-height: 1.25">
 
