@@ -23,9 +23,9 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 </video>
 -->
 
-<iframe allowfullscreen style="padding-top: 10px; padding-bottom: 15px; margin: 0px; border: 0px" width="320" height="180"
+<iframe allowfullscreen style="padding-top: 10px; padding-bottom: 15px; margin: 0px; border: 0px; width: 25%; min-width: 320px; aspect-ratio: 16 / 9"
 
-src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&loop=1&playlist=BxngEykgEIE"></iframe>
+src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&loop=1&playlist=BxngEykgEIE&rel=0"></iframe>
 
 <!--
 autoplay=1: Automatically starts playback.
