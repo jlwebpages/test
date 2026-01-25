@@ -17,33 +17,8 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 </span>
 
-<!--
-<video style="width: 25vw; min-width: 300px; margin-top: 10px; margin-bottom: 15px" controls autoplay loop muted>
-	<source src="https://youtu.be/BxngEykgEIE">
-</video>
--->
-
-<iframe allowfullscreen style="padding-top: 10px; padding-bottom: 15px; margin: 0px; border: 0px; width: 25%; min-width: 320px; aspect-ratio: 16 / 9"
-
-src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&loop=1&playlist=BxngEykgEIE&rel=0"></iframe>
-
-
-<iframe style="width: 25%; min-width: 320px; aspect-ratio: 16 / 9" src="https://www.youtube.com/embed/BxngEykgEIE?si=9n9MDU787dMN83nQ" title="YouTube video player" frameborder="0" allow="accelerometer; 
-autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<!--
-autoplay=1: Automatically starts playback.
-mute=1: Mutes the video (required for many browsers to allow autoplay).
-controls=0: Hides the video player controls.
-loop=1: Enables looping (requires playlist parameter with video ID to work).
-start=seconds: Begins video at a specific time.
-cc_load_policy=1: Enables closed captions by default.
-modestbranding=1: Removes the YouTube logo from the control bar.
-rel=0: Shows related videos from the same channel only.
-enablejsapi=1: Enables the IFrame Player API for JavaScript control. 
--->
-
-
+<iframe allowfullscreen style="border: 0px; margin: 0px; padding: 10px 0px; 15px; 0px; width: 25%; min-width: 320px; aspect-ratio: 16 / 9"
+                        src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&loop=1&rel=0"></iframe>
 
 <br>
 
