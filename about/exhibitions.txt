@@ -27,6 +27,10 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&loop=1&playlist=BxngEykgEIE&rel=0"></iframe>
 
+
+<iframe style="width: 25%; min-width: 320px; aspect-ratio: 16 / 9" src="https://www.youtube.com/embed/BxngEykgEIE?si=9n9MDU787dMN83nQ" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <!--
 autoplay=1: Automatically starts playback.
 mute=1: Mutes the video (required for many browsers to allow autoplay).
