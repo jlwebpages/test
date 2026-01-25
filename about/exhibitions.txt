@@ -17,9 +17,14 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 </span>
 
+<!--
 <video style="width: 25vw; min-width: 300px; margin-top: 10px; margin-bottom: 15px" controls autoplay loop muted>
-	<source src="about/specimens_and_perceptions.mov">
+	<source src="https://youtu.be/BxngEykgEIE">
 </video>
+-->
+
+<iframe width="320" height="180" src="https://www.youtube.com/embed/BxngEykgEIE"></iframe>
+
 
 <br>
 
