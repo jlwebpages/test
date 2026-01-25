@@ -23,7 +23,7 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 </video>
 -->
 
-<iframe width="320" height="180" src="https://www.youtube.com/embed/BxngEykgEIE"></iframe>
+<iframe style="padding-top: 10px; padding-bottom: 15px; margin: 0px; border: 0px" autoplay=1 loop=1 muted=1 width="320" height="180" src="https://www.youtube-nocookie.com/embed/BxngEykgEIE"></iframe>
 
 
 <br>
