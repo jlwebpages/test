@@ -3,7 +3,7 @@
 <span style="line-height: 1.25">
 
 <span style="font-size: 16px; font-weight: bold; margin-bottom: 5px; display: inline-block">
-Specimens & Perceptions
+Specimens + Perceptions
 </span><br>
 
 <span style="font-style: italic; margin-bottom: 5px; display: inline-block">
@@ -17,9 +17,9 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 </span>
 
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                        style="border: 0px; margin: 0px; padding: 10px 0px; 15px; 0px; width: 25%; min-width: 300px; aspect-ratio: 16 / 9"
-                        src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&playlist=BxngEykgEIE&loop=1&rel=0"></iframe>
+<iframe	allowfullscreen style="border: 0px; margin: 0px; padding: 10px 0px; 15px; 0px; width: 25%; min-width: 300px; aspect-ratio: 16 / 9"
+    src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&playlist=BxngEykgEIE&loop=1&rel=0">
+</iframe>
 
 <br>
 

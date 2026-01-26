@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Malibu
+Malibu <span style="color: red; font-weight: normal; font-style: italic">sold</span>
 
 </span>
 

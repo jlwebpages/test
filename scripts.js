@@ -241,7 +241,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
 function display_menu()
 {
-   document.getElementById("menu_list").style.width = "150px";
+   document.getElementById("menu_list").style.width = "175px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
@@ -488,7 +488,7 @@ function write_gallery_header(gallery_name)
 {
    if (gallery_name == "featured_work")  gallery_name = "Featured Work";
    if (gallery_name == "photo_art")      gallery_name = "Photo Art";
-   if (gallery_name == "works_on_paper") gallery_name = "Paper";
+   if (gallery_name == "works_on_paper") gallery_name = "Works on Paper";
 
    document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+gallery_name+"</div>");
 
@@ -509,7 +509,7 @@ function write_header()
    d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
    d.writeln('   <a href="featured_work.html"  >Featured Work</a>');
    d.writeln('   <a href="photo_art.html"      >Photo Art</a>');
-   d.writeln('   <a href="works_on_paper.html" >Paper</a>');
+   d.writeln('   <a href="works_on_paper.html" >Works on Paper</a>');
    d.writeln('   <a href="about.html"          >About</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
@@ -522,7 +522,7 @@ function write_header()
    d.writeln('<div class="header_links">');
    d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >Featured Work</a>');
    d.writeln('   <a id="photo_art_link"      class="header_link" href="photo_art.html"     >Photo Art</a>');
-   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Paper</a>');
+   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Works on Paper</a>');
    d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
    d.writeln('</div>');
    d.writeln('');
