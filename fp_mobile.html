@@ -941,10 +941,10 @@
          var target_frame_width = 0;
 
 
-         document.getElementById("fp_main").style.zIndex              = -1;
-         document.getElementById("fp_picks").style.zIndex             = -2;
-         document.getElementById("fp_loading_indicator").style.zIndex = -3;
-         document.getElementById(frame_name).style.zIndex             = 1;
+         document.getElementById("fp_main").style.width               = "0px";
+         document.getElementById("fp_picks").style.width             = "0px";
+         document.getElementById("fp_loading_indicator").style.width = "0px";
+         document.getElementById(frame_name).style.width             = "100%";
 
          if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
          {
