@@ -1834,7 +1834,7 @@ if (top.document.getElementById("fp_main_header") != null)
 
 // Perform a hard reload when the device window size or orientation changes.
 
-window.addEventListener("resize", function(){location.href = self.location.href;});
+window.addEventListener("orientationchange", function(){location.href = self.location.href;});
 
 </script>
 
