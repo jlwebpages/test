@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>Darlene Laguna Art</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script language="JavaScript" src=scripts.js></script>
+</head>
+
+<body class="body" style="background-color: black" onload="validate_received_image_name();" oncontextmenu="return false;">
+
+ 
+ <!-- HTML will be loaded via the onload="validate_received_image_name();" function. -->
+
+<script>
+
+   // Perform a hard reload when the device window size or orientation changes.
+
+   window.addEventListener("resize", function() {location.href = self.location.href;});
+
+   // Connect keyboard keys to navigation buttons.
+
+   document.addEventListener("keydown",(event) => {if (event.key == "Backspace")  document.getElementById("nav_back" ).click();});
+   document.addEventListener("keydown",(event) => {if (event.key == "ArrowLeft")  document.getElementById("nav_left" ).click();});
+   document.addEventListener("keydown",(event) => {if (event.key == "ArrowRight") document.getElementById("nav_right").click();});
+
+</script>
+
+
+</body>
+
+</html>

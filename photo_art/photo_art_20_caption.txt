@@ -1,0 +1,31 @@
+<!-- Title -->
+
+<span class="art_title">
+
+Echoes
+
+</span>
+
+
+<!-- Dimensions -->
+
+<span class="art_dimensions">
+
+Acrylic and mixed media photo collage on wood panel
+
+</span>
+
+<span class="art_dimensions">
+
+24 x 24 inches
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+
+
+</span>
