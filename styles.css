@@ -409,7 +409,6 @@ a.header_link:hover
    width: 100%;
    height: auto;
    display: block;
-   transition: transform .5s ease;
 }
 
 .art_image_link
@@ -420,11 +419,18 @@ a.header_link:hover
    display: inline-block;
 }
 
+.art_image_link_container
+{
+   position: relative;
+   display: inline-block;
+   transition: transform .5s ease;
+}
+
 @media (hover: hover)
 {
    /* The following should only be applied if devices support hovering */
 
-   .art_image:hover
+   .art_image_link_container:hover
    {
       transform: scale(1.05);
       transform-origin: center center;
@@ -567,4 +573,22 @@ a.header_link:hover
    height: 100vh;
    margin: 0px auto;
    overflow-y: hidden;
+}
+
+.sold_tag
+{
+   position: absolute;
+   top: 20px;
+   left: 0px;
+   font-family: Arial, sans-serif;
+   font-size: 12px;
+   font-weight: bold;
+   color: white;
+   letter-spacing: 2px;
+   background-color: rgba(255, 0, 0, 75%);
+   height: 16px;
+   width: 50px;
+   display: grid;
+   align-items: center;
+   z-index: 1;
 }
