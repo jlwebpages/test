@@ -7,7 +7,6 @@ var max_image_number = 0;
 const max_featured_work_image_number  = 32;
 const max_photo_art_image_number      = 28;
 const max_works_on_paper_image_number = 9;
-const max_sold_art_image_number       = 10;
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
@@ -386,7 +385,6 @@ function load_images_into_gallery(gallery_name)
    if (gallery_name == "featured_work")  max_image_number = max_featured_work_image_number;
    if (gallery_name == "photo_art")      max_image_number = max_photo_art_image_number;
    if (gallery_name == "works_on_paper") max_image_number = max_works_on_paper_image_number;
-   if (gallery_name == "sold_art")       max_image_number = max_sold_art_image_number;
 
    write_gallery_header(gallery_name);
 
@@ -491,7 +489,6 @@ function write_gallery_header(gallery_name)
    if (gallery_name == "featured_work")  gallery_name = "Featured Work";
    if (gallery_name == "photo_art")      gallery_name = "Photo Art";
    if (gallery_name == "works_on_paper") gallery_name = "Works on Paper";
-   if (gallery_name == "sold_art")       gallery_name = "Sold Art";
 
    document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+gallery_name+"</div>");
 
@@ -513,7 +510,6 @@ function write_header()
    d.writeln('   <a href="featured_work.html"  >Featured Work</a>');
    d.writeln('   <a href="photo_art.html"      >Photo Art</a>');
    d.writeln('   <a href="works_on_paper.html" >Works on Paper</a>');
-   d.writeln('   <a href="sold_art.html"       >Sold Art</a>');
    d.writeln('   <a href="about.html"          >About</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
@@ -527,7 +523,6 @@ function write_header()
    d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >Featured Work</a>');
    d.writeln('   <a id="photo_art_link"      class="header_link" href="photo_art.html"     >Photo Art</a>');
    d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Works on Paper</a>');
-   d.writeln('   <a id="sold_art_link"       class="header_link" href="sold_art.html"      >Sold Art</a>');
    d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
    d.writeln('</div>');
    d.writeln('');
