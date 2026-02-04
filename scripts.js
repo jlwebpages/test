@@ -83,7 +83,7 @@ function check_if_image_sold(gallery_name,image_number,max_image_number,image_co
       {
          image_sold = false;
 
-         if (data.includes("sold_text") == true) image_sold = true;
+         if (data.includes(">sold<") == true) image_sold = true;
 
          load_image(gallery_name,image_number,image_count+1,image_sold);
       },
@@ -340,12 +340,10 @@ function load_image(gallery_name,image_number,image_count,image_sold)
       document.getElementById("three_column_3").style.display = "block";
    }
 
-   //image_html  = '<div class="art_image_link_container">';
+   image_html  = '<div id="image_div" class="art_image_link_container">';
    image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
-
    if (image_sold == true) image_html += '   <div id="solld_tag" class="sold_tag">SOLD</div>';
-
-   //image_html += '</div>';
+   image_html += '</div>';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
