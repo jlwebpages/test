@@ -83,7 +83,7 @@ function check_if_image_sold(gallery_name,image_number,max_image_number,image_co
       {
          image_sold = false;
 
-         if (data.includes(">sold<") == true) image_sold = true;
+         if (data.includes("sold_text") == true) image_sold = true;
 
          load_image(gallery_name,image_number,image_count+1,image_sold);
       },
