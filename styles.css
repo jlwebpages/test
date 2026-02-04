@@ -430,6 +430,7 @@ a.header_link:hover
    margin: 25px 0px 25px 0px;
    padding: 0px;
    display: inline-block;
+   opacity: 1;
    transition: transform .5s ease;
 }
 
@@ -590,7 +591,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
-   color: white;
+   color: blue;
    letter-spacing: 2px;
    background-color: rgba(255, 0, 0, 75%);
    height: 16px;
