@@ -426,10 +426,21 @@ a.header_link:hover
    margin: 25px 0px 25px 0px;
    padding: 0px;
    display: inline-block;
+   transform: translateZ(0) scale(1.0);
    transition: transform .5s ease;
 }
 
+@media (hover: hover)
+{
+   /* The following should only be applied if devices support hovering */
 
+   .art_image_link_container:hover
+   {
+       transform: scale(1.05);
+       transform-origin: center center;
+       will-change: transform;
+   }
+}
 
 .art_caption
 {
@@ -576,7 +587,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
-   color: black;
+   color: white;
    letter-spacing: 2px;
    background-color: rgba(255, 0, 0, 75%);
    height: 16px;
