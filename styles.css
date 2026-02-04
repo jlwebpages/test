@@ -415,6 +415,8 @@ a.header_link:hover
 {
    cursor: pointer !important;
    pointer-events: auto;
+   -webkit-backface-visibility: hidden; /* Fixes safari flickering */
+   backface-visibility: hidden;
    border: 0px;
    margin: 0px;
    padding: 0px;
@@ -588,7 +590,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
-   color: black;
+   color: white;
    letter-spacing: 2px;
    background-color: rgba(255, 0, 0, 75%);
    height: 16px;
