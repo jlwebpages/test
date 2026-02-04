@@ -3,7 +3,7 @@
 <span style="line-height: 1.25">
 
 <span style="font-size: 16px; font-weight: bold; margin-bottom: 5px; display: inline-block">
-Specimens & Perceptions
+Specimens + Perceptions
 </span><br>
 
 <span style="font-style: italic; margin-bottom: 5px; display: inline-block">
@@ -16,6 +16,10 @@ Gallery: <a class="general_link" href="https://www.thelmfla.org">The Language Mo
 Location: <a class="general_link" href="https://www.google.com/maps/place/The+LMF+Gallery+and+Darkroom/@34.1629416,-118.0528678,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2dd8ddf586b09:0xf700ae5a325e54a5!8m2!3d34.1629416!4d-118.0528678!16s%252Fg%252F11lvg9c24c">55 North Baldwin Avenue, Sierra Madre, CA 91024</a><br>
 
 </span>
+
+<iframe	allowfullscreen allow="autoplay" style="border: 0px; margin: 0px; padding: 10px 0px; 15px; 0px; width: 25%; min-width: 300px; aspect-ratio: 16 / 9"
+    src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&playlist=BxngEykgEIE&loop=1&rel=0">
+</iframe>
 
 <br>
 

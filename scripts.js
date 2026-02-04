@@ -70,6 +70,34 @@ function check_if_image_exists(gallery_name,image_number,max_image_number,direct
    return false;
 }
 
+function check_if_image_sold(gallery_name,image_number,max_image_number,image_count)
+{
+   $.ajax
+   (
+   {
+      url: gallery_name+"/"+gallery_name+"_"+image_number+"_caption.txt",
+
+      dataType: "html",
+
+      success: function(data)
+      {
+         image_sold = false;
+
+         if (data.includes("sold_text") == true) image_sold = true;
+
+         load_image(gallery_name,image_number,image_count+1,image_sold);
+      },
+
+      error: function()
+      {
+         load_image(gallery_name,image_number,image_count+1,false);
+      },
+   }
+   );
+
+   return false;
+}
+
 function close_menu()
 {
    document.getElementById("menu_list").style.width = "0px";
@@ -241,7 +269,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
 function display_menu()
 {
-   document.getElementById("menu_list").style.width = "150px";
+   document.getElementById("menu_list").style.width = "160px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
@@ -286,7 +314,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
    return true;
 }
 
-function load_image(gallery_name,image_number,image_count)
+function load_image(gallery_name,image_number,image_count,image_sold)
 {
    var column_count     = window.getComputedStyle(document.getElementById("art_gallery")).columnCount;
    var file_name_prefix = gallery_name + "_" + image_number;
@@ -312,7 +340,10 @@ function load_image(gallery_name,image_number,image_count)
       document.getElementById("three_column_3").style.display = "block";
    }
 
-   image_html = '<a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
+   image_html  = '<div class="art_image_link_container">';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
+   if (image_sold == true) image_html += '   <div id="solld_tag" class="sold_tag">SOLD</div>';
+   image_html += '</div>';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
@@ -363,7 +394,7 @@ function load_image_into_gallery(gallery_name,image_number,max_image_number,imag
 
       success: function()
       {
-         load_image(gallery_name,image_number,image_count+1);
+         check_if_image_sold(gallery_name,image_number,max_image_number,image_count);
       },
 
       error: function()
@@ -488,7 +519,7 @@ function write_gallery_header(gallery_name)
 {
    if (gallery_name == "featured_work")  gallery_name = "Featured Work";
    if (gallery_name == "photo_art")      gallery_name = "Photo Art";
-   if (gallery_name == "works_on_paper") gallery_name = "Paper";
+   if (gallery_name == "works_on_paper") gallery_name = "Works on Paper";
 
    document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+gallery_name+"</div>");
 
@@ -509,7 +540,7 @@ function write_header()
    d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
    d.writeln('   <a href="featured_work.html"  >Featured Work</a>');
    d.writeln('   <a href="photo_art.html"      >Photo Art</a>');
-   d.writeln('   <a href="works_on_paper.html" >Paper</a>');
+   d.writeln('   <a href="works_on_paper.html" >Works on Paper</a>');
    d.writeln('   <a href="about.html"          >About</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
@@ -522,7 +553,7 @@ function write_header()
    d.writeln('<div class="header_links">');
    d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >Featured Work</a>');
    d.writeln('   <a id="photo_art_link"      class="header_link" href="photo_art.html"     >Photo Art</a>');
-   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Paper</a>');
+   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Works on Paper</a>');
    d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
    d.writeln('</div>');
    d.writeln('');
