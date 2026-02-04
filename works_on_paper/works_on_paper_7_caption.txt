@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Tulips <span class="sold_text">sold</span>
+Tulips
 
 </span>
 
