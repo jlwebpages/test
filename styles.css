@@ -409,6 +409,7 @@ a.header_link:hover
    width: 100%;
    height: auto;
    display: block;
+   transition: transform .5s ease;
 }
 
 .art_image_link
@@ -426,14 +427,14 @@ a.header_link:hover
    margin: 25px 0px 25px 0px;
    padding: 0px;
    display: inline-block;
-   transition: transform .5s ease;
+   transform: translateZ(0) scale(1.0);
 }
 
 @media (hover: hover)
 {
    /* The following should only be applied if devices support hovering */
 
-   .art_image_link_container:hover
+   .art_image:hover
    {
        transform: scale(1.05);
        transform-origin: center center;
@@ -586,7 +587,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
-   color: blue;
+   color: white;
    letter-spacing: 2px;
    background-color: rgba(255, 0, 0, 75%);
    height: 16px;
