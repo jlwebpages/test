@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Vision Quest <span style="color: red; font-weight: normal; font-style: italic">sold</span>
+Vision Quest <span class="sold_text">sold</span>
 
 </span>
 

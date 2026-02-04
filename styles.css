@@ -413,6 +413,8 @@ a.header_link:hover
 
 .art_image_link
 {
+   cursor: pointer !important;
+   pointer-events: auto;
    border: 0px;
    margin: 0px;
    padding: 0px;
@@ -586,7 +588,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
-   color: white;
+   color: black;
    letter-spacing: 2px;
    background-color: rgba(255, 0, 0, 75%);
    height: 16px;
@@ -594,4 +596,11 @@ a.header_link:hover
    display: grid;
    align-items: center;
    z-index: 1;
+}
+
+.sold_text
+{
+   color: red;
+   font-weight: bold;
+   font-style: italic;
 }
