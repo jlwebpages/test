@@ -453,6 +453,7 @@ a.header_link:hover
 
       transform-origin: center center;
       will-change: transform;
+   }
 }
 
 .art_caption
@@ -600,7 +601,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
-   color: green;
+   color: white;
    letter-spacing: 2px;
    background-color: rgba(255, 0, 0, 75%);
    height: 16px;
