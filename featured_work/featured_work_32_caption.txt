@@ -24,6 +24,6 @@ Lines carry my eyes across the horizon, through the ever-changing hills, and alo
 
 </span>
 
-<span class="art_paragraph" style="padding-top: 10px"><b>Lines</b> (top)</span>
+<span class="art_paragraph" style="padding-top: 10px"><b>Lines</b> (top) <span class="sold_text">sold</span>
 
 <span class="art_paragraph" style="padding-top: 0px"><b>Distinguishing Characteristics</b> (bottom)</span>

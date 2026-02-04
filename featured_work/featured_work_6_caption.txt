@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Breathing Space
+Breathing Space <span class="sold_text">sold</span>
 
 </span>
 

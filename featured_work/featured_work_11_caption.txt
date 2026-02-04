@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Land Escape
+Land Escape <span class="sold_text">sold</span>
 
 </span>
 
