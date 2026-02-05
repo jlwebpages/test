@@ -398,7 +398,7 @@ a.header_link:hover
    border: 0px;
    margin: 0px;
    padding: 0px;
-   display: none;
+   display: none; transform: scale(1.0);
 }
 
 .art_image
