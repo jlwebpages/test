@@ -1,0 +1,25 @@
+<!-- Title -->
+
+<span class="art_title">
+
+Note to Self
+
+</span>
+
+
+<!-- Dimensions -->
+
+<span class="art_dimensions">
+
+48 x 36 inches on 1.5-inch stretched canvas
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+With 2025 off to a rocky start, I let my freedom ring with my tools and paint on a large canvas I started in 2024. I turned it on its side and voiced my thoughts on current events.
+
+</span>
