@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Vision Quest
+Vision Quest <span class="sold_text">sold</span>
 
 </span>
 

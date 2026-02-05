@@ -70,6 +70,34 @@ function check_if_image_exists(gallery_name,image_number,max_image_number,direct
    return false;
 }
 
+function check_if_image_sold(gallery_name,image_number,max_image_number,image_count)
+{
+   $.ajax
+   (
+   {
+      url: gallery_name+"/"+gallery_name+"_"+image_number+"_caption.txt",
+
+      dataType: "html",
+
+      success: function(data)
+      {
+         image_sold = false;
+
+         if (data.includes("sold_text") == true) image_sold = true;
+
+         load_image(gallery_name,image_number,image_count+1,image_sold);
+      },
+
+      error: function()
+      {
+         load_image(gallery_name,image_number,image_count+1,false);
+      },
+   }
+   );
+
+   return false;
+}
+
 function close_menu()
 {
    document.getElementById("menu_list").style.width = "0px";
@@ -286,7 +314,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
    return true;
 }
 
-function load_image(gallery_name,image_number,image_count)
+function load_image(gallery_name,image_number,image_count,image_sold)
 {
    var column_count     = window.getComputedStyle(document.getElementById("art_gallery")).columnCount;
    var file_name_prefix = gallery_name + "_" + image_number;
@@ -312,7 +340,10 @@ function load_image(gallery_name,image_number,image_count)
       document.getElementById("three_column_3").style.display = "block";
    }
 
-   image_html = '<a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>';
+   if (true)               image_html += '<div class="art_image_link_container">\n';
+   if (true)               image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>\n';
+   if (image_sold == true) image_html += '   <div id="solld_tag" class="sold_tag">SOLD</div>\n';
+   if (true)               image_html += '</div>\n';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
@@ -363,7 +394,7 @@ function load_image_into_gallery(gallery_name,image_number,max_image_number,imag
 
       success: function()
       {
-         load_image(gallery_name,image_number,image_count+1);
+         check_if_image_sold(gallery_name,image_number,max_image_number,image_count);
       },
 
       error: function()

@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-September
+September <span class="sold_text">sold</span>
 
 </span>
 
