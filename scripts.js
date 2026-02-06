@@ -283,6 +283,64 @@ function display_menu()
    return true;
 }
 
+function get_gallery_index_url_parameter()
+{
+   var error_flag         = false;
+   var gallery_index      = null;
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var URL_parameters     = new URLSearchParams(window.location.search);
+
+
+   gallery_index      = URL_parameters.get("gallery_index");
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name     = html_path_segments[html_path_segments.length - 1];
+
+   if (gallery_index == null)
+   {
+      alert("Error:\n\nGallery Index not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if ( gallery_index != gallery_index.replace(/\D/g, "") )
+   {
+      alert("Error:\n\nInvalid Gallery Index passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if ( (gallery_index < 0) || (gallery_index > galleries.length-1) )
+   {
+      alert("Error:\n\nGallery Index out-of-range passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   return gallery_index;
+}
+
 function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibitions)
 {
    $.ajax

@@ -15,62 +15,12 @@
 
 <script>
 
-   var error_flag         = false;
-   var gallery_index      = null;
-   var html_file_name     = "";
-   var html_path_segments = "";
-   var URL_parameters     = new URLSearchParams(window.location.search);
+   var gallery_index = get_gallery_index_url_parameter();
 
-
-   gallery_index      = URL_parameters.get("gallery_index");
-   html_path_segments = window.location.pathname.split('/');
-   html_file_name     = html_path_segments[html_path_segments.length - 1];
-
-   if (gallery_index == null)
-   {
-      alert("Error:\n\nGallery Index not passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
-   }
-
-   if ( gallery_index != gallery_index.replace(/\D/g, "") )
-   {
-      alert("Error:\n\nInvalid Gallery Index passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
-   }
-
-   if ( (gallery_index < 0) || (gallery_index > galleries.length-1) )
-   {
-      alert("Error:\n\nGallery Index out-of-range passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
-   }
-
-   document.title = "Darlene Laguna - " + galleries[gallery_index]["title"];
 
    write_header();
+
+   document.title = "Darlene Laguna - " + galleries[gallery_index]["title"];
 
    document.getElementById(galleries[gallery_index]["name"]+"_link").className = "clicked_header_link";
 
