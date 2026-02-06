@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>Darlene Laguna</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script language="JavaScript" src=scripts.js></script>
+</head>
+
+<body class="body" oncontextmenu="return false;">
+
+
+<script>
+
+   var error_flag         = false;
+   var gallery_index      = null;
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var URL_parameters     = new URLSearchParams(window.location.search);
+
+
+   gallery_index      = URL_parameters.get("gallery_index");
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name     = html_path_segments[html_path_segments.length - 1];
+
+   if (gallery_index == null)
+   {
+      alert("Error:\n\nGallery Index not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if ( gallery_index != gallery_index.replace(/\D/g, "") )
+   {
+      alert("Error:\n\nInvalid Gallery Index passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if ( (gallery_index < 0) || (gallery_index > galleries.length-1) )
+   {
+      alert("Error:\n\nGallery Index out-of-range passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   document.title = "Darlene Laguna - " + galleries[gallery_index]["display"];
+
+   write_header();
+
+   document.getElementById(galleries[gallery_index]["name"]+"_link").className = "clicked_header_link";
+
+</script>
+
+<div id="art_gallery" class="art_gallery">
+
+   <div id="one_column_1"   class="art_gallery_column" style="width: calc(100% / 1)"></div>
+
+   <div id="two_column_1"   class="art_gallery_column" style="width: calc(100% / 2)"></div>
+
+   <div id="two_column_2"   class="art_gallery_column" style="width: calc(100% / 2)"></div>
+
+   <div id="three_column_1" class="art_gallery_column" style="width: calc(100% / 3)"></div>
+
+   <div id="three_column_2" class="art_gallery_column" style="width: calc(100% / 3)"></div>
+
+   <div id="three_column_3" class="art_gallery_column" style="width: calc(100% / 3)"></div>
+
+</div>
+
+<script>
+
+   load_images_into_gallery(gallery_index);
+
+   write_footer();
+
+</script>
+
+
+</body>
+
+</html>

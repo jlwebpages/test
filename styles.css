@@ -389,6 +389,8 @@ a.header_link:hover
    text-align: center;
    margin: 0px auto;
    width: 95%;
+   display: flex;
+   justify-content: space-between;
 }
 
 .art_gallery_column

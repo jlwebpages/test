@@ -4,9 +4,9 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const max_featured_work_image_number  = 32;
-const max_photo_art_image_number      = 28;
-const max_works_on_paper_image_number = 9;
+const galleries = [{name: "featured_work",  title: "Featured Work",  max_image_number: 32},
+                   {name: "photo_art",      title: "Photo Art",      max_image_number: 28},
+                   {name: "works_on_paper", title: "Works on Paper", max_image_number:  9}];
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
@@ -108,7 +108,15 @@ function close_menu()
 
 function display_gallery_page(gallery_name)
 {
-   window.location.href = gallery_name+".html";
+   for (i = 0; i < galleries.length; i++)
+   {
+      if (gallery_name == galleries[i]["name"])
+      {
+         window.location.href = "art_gallery.html?gallery_index="+i;
+
+         break;
+      }
+   }
 
    return true;
 }
@@ -407,19 +415,17 @@ function load_image_into_gallery(gallery_name,image_number,max_image_number,imag
    return true;
 }
 
-function load_images_into_gallery(gallery_name)
+function load_images_into_gallery(gallery_index)
 {
    var image_count  = 0;
    var image_number = 1;
 
 
-   if (gallery_name == "featured_work")  max_image_number = max_featured_work_image_number;
-   if (gallery_name == "photo_art")      max_image_number = max_photo_art_image_number;
-   if (gallery_name == "works_on_paper") max_image_number = max_works_on_paper_image_number;
+   max_image_number = galleries[gallery_index]["max_image_number"];
 
-   write_gallery_header(gallery_name);
+   document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+galleries[gallery_index]["title"]+"</div>");
 
-   load_image_into_gallery(gallery_name,image_number,max_image_number,image_count);
+   load_image_into_gallery(galleries[gallery_index]["name"],image_number,max_image_number,image_count);
 
    return true;
 }
@@ -515,17 +521,6 @@ function write_footer()
    return true;
 }
 
-function write_gallery_header(gallery_name)
-{
-   if (gallery_name == "featured_work")  gallery_name = "Featured Work";
-   if (gallery_name == "photo_art")      gallery_name = "Photo Art";
-   if (gallery_name == "works_on_paper") gallery_name = "Works on Paper";
-
-   document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+gallery_name+"</div>");
-
-   return true;
-}
-
 function write_header()
 {
    document.open();
@@ -538,9 +533,10 @@ function write_header()
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu">');
    d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
-   d.writeln('   <a href="featured_work.html"  >Featured Work</a>');
-   d.writeln('   <a href="photo_art.html"      >Photo Art</a>');
-   d.writeln('   <a href="works_on_paper.html" >Works on Paper</a>');
+   for (i = 0; i < galleries.length; i++)
+   {
+      d.writeln('   <a href="art_gallery.html?gallery_index='+i+'">'+galleries[i]["title"]+'</a>');
+   }
    d.writeln('   <a href="about.html"          >About</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
@@ -551,9 +547,10 @@ function write_header()
    d.writeln('<div class="title">DARLENE LAGUNA</div>');
    d.writeln('');
    d.writeln('<div class="header_links">');
-   d.writeln('   <a id="featured_work_link"  class="header_link" href="featured_work.html" >Featured Work</a>');
-   d.writeln('   <a id="photo_art_link"      class="header_link" href="photo_art.html"     >Photo Art</a>');
-   d.writeln('   <a id="works_on_paper_link" class="header_link" href="works_on_paper.html">Works on Paper</a>');
+   for (i = 0; i < galleries.length; i++)
+   {
+      d.writeln('   <a id="'+galleries[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+galleries[i]["title"]+'</a>');
+   }
    d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
    d.writeln('</div>');
    d.writeln('');
