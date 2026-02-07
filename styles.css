@@ -332,10 +332,10 @@ a.header_link:hover
 
 .menu_button
 {
-   font-size: 30px;
    cursor: pointer;
-   visibility: hidden;
+   font-size: 30px;
    padding-left: 5px;
+   visibility: hidden;
 }
 
 .menu
@@ -374,6 +374,7 @@ a.header_link:hover
 .menu .close_button
 {
    position: absolute;
+   cursor: pointer;
    top: 0px;
    right: 10px;
    font-size: 36px;

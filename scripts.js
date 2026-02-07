@@ -6,7 +6,8 @@ var max_image_number = 0;
 
 const galleries = [{name: "featured_work",  title: "Featured Work",  max_image_number: 32},
                    {name: "photo_art",      title: "Photo Art",      max_image_number: 28},
-                   {name: "works_on_paper", title: "Works on Paper", max_image_number:  9}];
+                   {name: "works_on_paper", title: "Works on Paper", max_image_number:  9},
+                   {name: "sold_art",       title: "Sold Art",       max_image_number:  7}];
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
@@ -588,7 +589,7 @@ function write_header()
    d.writeln('<span class="menu_button" onclick="display_menu();">&#9776;</span>');
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu">');
-   d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
+   d.writeln('   <span class="close_button" onclick="close_menu();">&times;</span>');
    for (i = 0; i < galleries.length; i++)
    {
       d.writeln('   <a href="art_gallery.html?gallery_index='+i+'">'+galleries[i]["title"]+'</a>');
