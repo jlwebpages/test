@@ -10,12 +10,14 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" style="background-color: black" onload="validate_received_image_name();" oncontextmenu="return false;">
+<body class="body" style="background-color: black" oncontextmenu="return false;">
 
- 
- <!-- HTML will be loaded via the onload="validate_received_image_name();" function. -->
 
 <script>
+
+   const {image_file_name,gallery_name,image_number} = get_image_url_parameters(); 
+
+   display_image_with_caption(image_file_name,gallery_name,image_number);
 
    // Perform a hard reload when the device window size or orientation changes.
 

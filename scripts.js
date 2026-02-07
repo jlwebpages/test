@@ -341,6 +341,63 @@ function get_gallery_index_url_parameter()
    return gallery_index;
 }
 
+function get_image_url_parameters()
+{
+   var gallery_name       = "";
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var image_file_name    = "";
+   var image_number       = "";
+   var index              = -1;
+   var URL_parameters     = new URLSearchParams(window.location.search);
+
+
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name = html_path_segments[html_path_segments.length - 1];
+
+   image_file_name = URL_parameters.get("image_file_name");
+   max_image_number = URL_parameters.get("max_image_number");  // Assign global variable;
+
+   if ( (image_file_name == null) || (image_file_name == "") )
+   {
+      alert("Error:\n\nInvalid Image File Name passed to " + html_file_name);
+
+      history.back();
+   }
+
+   if ( (max_image_number == null) || (max_image_number == "") )
+   {
+      alert("Error:\n\nInvalid Max Image Number passed to " + html_file_name);
+
+      history.back();
+   }
+
+   index = image_file_name.indexOf("/");
+
+   if (index != -1)
+   {
+      gallery_name = image_file_name.slice(0, index);
+   }
+
+   if (gallery_name == "")
+   {
+      alert("Error:\n\nInvalid Gallery Name passed to " + html_file_name);
+
+      history.back();
+   }
+
+   image_number = parseInt(image_file_name.replace(/\D/g, ''));
+
+   if (Number.isInteger(image_number) == false)
+   {
+      alert("Error:\n\nInvalid Image Number passed to " + html_file_name);
+
+      history.back();
+   }
+
+   return {image_file_name,gallery_name,image_number}; 
+}
+
 function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibitions)
 {
    $.ajax
@@ -501,65 +558,6 @@ function navigate_to_next_image(gallery_name,image_number,direction)
    {
       check_if_image_exists(gallery_name,image_number-1,max_image_number,"left");
    }
-
-   return true;
-}
-
-function validate_received_image_name()
-{
-   var gallery_name       = "";
-   var html_file_name     = "";
-   var html_path_segments = "";
-   var image_file_name    = "";
-   var image_number       = "";
-   var index              = -1;
-   var URL_parameters     = new URLSearchParams(window.location.search);
-
-
-   html_path_segments = window.location.pathname.split('/');
-   html_file_name = html_path_segments[html_path_segments.length - 1];
-
-   image_file_name = URL_parameters.get("image_file_name");
-   max_image_number = URL_parameters.get("max_image_number");  // Assign global variable;
-
-   if ( (image_file_name == null) || (image_file_name == "") )
-   {
-      alert("Error:\n\nInvalid Image File Name passed to " + html_file_name);
-
-      history.back();
-   }
-
-   if ( (max_image_number == null) || (max_image_number == "") )
-   {
-      alert("Error:\n\nInvalid Max Image Number passed to " + html_file_name);
-
-      history.back();
-   }
-
-   index = image_file_name.indexOf("/");
-
-   if (index != -1)
-   {
-      gallery_name = image_file_name.slice(0, index);
-   }
-
-   if (gallery_name == "")
-   {
-      alert("Error:\n\nInvalid Gallery Name passed to " + html_file_name);
-
-      history.back();
-   }
-
-   image_number = parseInt(image_file_name.replace(/\D/g, ''));
-
-   if (Number.isInteger(image_number) == false)
-   {
-      alert("Error:\n\nInvalid Image Number passed to " + html_file_name);
-
-      history.back();
-   }
-
-   display_image_with_caption(image_file_name,gallery_name,image_number);
 
    return true;
 }
