@@ -348,7 +348,7 @@ a.header_link:hover
    margin: 0px;
    padding: 50px 0px 15px 0px;
    width: 0px;
-   height: 260px;  max-height: 75vh;
+   height: 260px;  max-height: 75dvh;
    overflow: auto;
    transition: 0.5s ease;
    z-index: 1;
