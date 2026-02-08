@@ -392,8 +392,17 @@ a.header_link:hover
    text-align: center;
    margin: 0px auto;
    width: 95%;
-   display: flex;
-   justify-content: space-between;
+
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    /* Older WebKit pack */
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+
 }
 
 .art_gallery_column
