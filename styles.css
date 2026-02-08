@@ -387,11 +387,12 @@ a.header_link:hover
 
 .art_gallery
 {
-   column-count: 3;
    column-gap: 50px;
    text-align: center;
    margin: 0px auto;
    width: 95%;
+     display: flex;
+  justify-content: space-between;
 }
 
 .art_gallery_column
@@ -402,7 +403,7 @@ a.header_link:hover
    margin: 0px;
    padding: 0px;
    display: none;
-   transform: scale(1.0);
+   transform: scale(1.0);   flex: 1;
 }
 
 .art_image
