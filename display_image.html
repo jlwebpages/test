@@ -10,7 +10,7 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" style="background-color: black" oncontextmenu="return false;">
+<body class="body" style="background-color: black" onload="add_window_resize_event_listener();" oncontextmenu="return false;">
 
 
 <script>
@@ -19,15 +19,18 @@
 
    display_image_with_caption(image_file_name,gallery_name,image_number);
 
-   // Perform a hard reload when the device window size or orientation changes.
-
-   window.addEventListener("resize", function() {location.href = self.location.href;});
-
    // Connect keyboard keys to navigation buttons.
 
    document.addEventListener("keydown",(event) => {if (event.key == "Backspace")  document.getElementById("nav_back" ).click();});
    document.addEventListener("keydown",(event) => {if (event.key == "ArrowLeft")  document.getElementById("nav_left" ).click();});
    document.addEventListener("keydown",(event) => {if (event.key == "ArrowRight") document.getElementById("nav_right").click();});
+
+   function add_window_resize_event_listener()
+   {
+      // Perform a hard reload when the device window size or orientation changes.
+
+      window.addEventListener("resize", function() {location.href = self.location.href;});
+   }
 
 </script>
 
