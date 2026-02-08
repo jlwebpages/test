@@ -19,9 +19,18 @@
 
    display_image_with_caption(image_file_name,gallery_name,image_number);
 
-   // Perform a hard reload when the device window size or orientation changes.
+   if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )  // This is a mobile device.
+   {
+      // Perform a hard reload when the device window orientation changes.
 
-   window.addEventListener("resize", function() {location.href = self.location.href;});
+      window.addEventListener("orientationchange", function() {location.href = self.location.href;});
+   }
+   else
+   {
+      // Perform a hard reload when the device window size or orientation changes.
+
+      window.addEventListener("resize", function() {location.href = self.location.href;});
+   }
 
    // Connect keyboard keys to navigation buttons.
 
