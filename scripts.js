@@ -6,8 +6,7 @@ var max_image_number = 0;
 
 const galleries = [{name: "featured_work",  title: "Featured Work",  max_image_number: 32},
                    {name: "photo_art",      title: "Photo Art",      max_image_number: 28},
-                   {name: "works_on_paper", title: "Works on Paper", max_image_number:  9},
-                   {name: "sold_art",       title: "Sold Art",       max_image_number:  7}];
+                   {name: "works_on_paper", title: "Works on Paper", max_image_number:  9}];
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
@@ -101,7 +100,7 @@ function check_if_image_sold(gallery_name,image_number,max_image_number,image_co
 
 function close_menu()
 {
-   document.getElementById("menu_list").style.width = "0px";
+   document.getElementById("menu_list").style.width   = "0px";
    document.getElementById("menu_list").style.padding = "50px 0px 15px 0px";
 
    return true;
@@ -278,7 +277,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
 function display_menu()
 {
-   document.getElementById("menu_list").style.width = "160px";
+   document.getElementById("menu_list").style.width   = "160px";
+   document.getElementById("menu_list").style.height  = 105 + (galleries.length * 40) + "px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
