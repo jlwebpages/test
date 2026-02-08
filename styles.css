@@ -349,7 +349,8 @@ a.header_link:hover
    padding: 50px 0px 15px 0px;
    width: 0px;
    max-height: 75vh;
-   overflow: auto;
+   overflow-y: auto;
+   overflow-x: hidden;
    transition: 0.5s ease;
    z-index: 1;
 }
