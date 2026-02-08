@@ -21,7 +21,7 @@
    .text                      {padding:        0px 25px 15px 25px !important}
    .text_image                {width:          100%               !important}
    .text_image                {margin:         10px 0px 25px 0px  !important}
-   .art_gallery               {column-count:   1                  !important}
+   .art_gallery               {grid-template-columns: 1fr;                  !important}
    .art_image_link_container  {margin-top:     0px                !important}
    #gallery_header            {display:        block              !important}
    #one_column_1              {display:        block              !important}
@@ -57,7 +57,7 @@
    .text                      {padding:        15px 10px 15px 10px !important}
    .text_image                {width:          300px               !important}
    .text_image                {margin:         10px 0px 25px 25px  !important}
-   .art_gallery               {column-count:   2                   !important}
+   .art_gallery               {grid-template-columns: 1fr 1fr;                 !important}
    .art_gallery               {column-gap:     35px                !important}
    .art_image_link_container  {margin-top:     15px                !important}
    .art_image_link_container  {margin-bottom:  15px                !important}
@@ -83,7 +83,7 @@
    .text                     {padding:        25px 20px 10px 20px !important}
    .text_image               {width:          350px               !important}
    .text_image               {margin:         10px 0px 25px 25px  !important}
-   .art_gallery              {column-count:   2                   !important}
+   .art_gallery              {grid-template-columns: 1fr 1fr;                 !important}
    .art_gallery              {column-gap:     35px                !important}
    .art_image_link_container {margin-top:     15px                !important}
    .art_image_link_container {margin-bottom:  15px                !important}
@@ -100,7 +100,7 @@
 @media only screen and (min-width: 768px) and (orientation: landscape)
 {
    .text_image               {width:          400px !important}
-   .art_gallery              {column-count:   3     !important}
+   .art_gallery              {grid-template-columns: 1fr 1fr 1fr;     !important}
    .art_gallery              {column-gap:     40px  !important}
    .art_image_link_container {margin-top:     20px  !important}
    .art_image_link_container {margin-bottom:  20px  !important}
@@ -387,6 +387,7 @@ a.header_link:hover
 
 .art_gallery
 {
+grid-template-columns: 1fr 1fr 1fr;
    column-gap: 50px;
    text-align: center;
    margin: 0px auto;
