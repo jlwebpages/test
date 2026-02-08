@@ -394,6 +394,7 @@ a.header_link:hover
    width: 95%;
    display: flex;
    justify-content: space-between;
+   -webkit-justify-content: space-between;  /* For older iPads. */
 }
 
 .art_gallery_column
