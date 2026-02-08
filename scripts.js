@@ -100,7 +100,7 @@ function check_if_image_sold(gallery_name,image_number,max_image_number,image_co
 
 function close_menu()
 {
-   document.getElementById("menu_list").style.width = "0px";
+   document.getElementById("menu_list").style.width   = "0px";
    document.getElementById("menu_list").style.padding = "50px 0px 15px 0px";
 
    return true;
@@ -277,7 +277,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
 function display_menu()
 {
-   document.getElementById("menu_list").style.width = "160px";
+   document.getElementById("menu_list").style.width   = "160px";
+   document.getElementById("menu_list").style.height  = 110 + (galleries.length * 40) + "px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
@@ -588,13 +589,13 @@ function write_header()
    d.writeln('<span class="menu_button" onclick="display_menu();">&#9776;</span>');
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu">');
-   d.writeln('   <a href="javascript:void(0)" class="close_button" onclick="close_menu();">&times;</a>');
+   d.writeln('   <span class="close_button" onclick="close_menu();">&times;</span>');
    for (i = 0; i < galleries.length; i++)
    {
       d.writeln('   <a href="art_gallery.html?gallery_index='+i+'">'+galleries[i]["title"]+'</a>');
    }
    d.writeln('   <a href="about.html"          >About</a>');
-   d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px">');
+   d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block"><img src="instagram_icon.png" height="16px"                                   ></a>');
    d.writeln('   </div>');
