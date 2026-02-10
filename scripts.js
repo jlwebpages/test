@@ -586,18 +586,18 @@ function write_header()
 
    d.writeln('');
    d.writeln('');
-   d.writeln('<span class="menu_button" onclick="display_menu();">&#9776;</span>');
+   d.writeln('<span class="menu_button" onclick="display_menu();" tabindex="-1">&#9776;</span>');
    d.writeln('');
-   d.writeln('<div id="menu_list" class="menu">');
-   d.writeln('   <span class="close_button" onclick="close_menu();">&times;</span>');
+   d.writeln('<div id="menu_list" class="menu" tabindex="-1">');
+   d.writeln('   <span class="close_button" onclick="close_menu();" tabindex="-1">&times;</span>');
    for (i = 0; i < galleries.length; i++)
    {
-      d.writeln('   <a href="art_gallery.html?gallery_index='+i+'">'+galleries[i]["title"]+'</a>');
+      d.writeln('   <a href="art_gallery.html?gallery_index='+i+'" tabindex="-1">'+galleries[i]["title"]+'</a>');
    }
-   d.writeln('   <a href="about.html"          >About</a>');
-   d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap">');
-   d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
-   d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block"><img src="instagram_icon.png" height="16px"                                   ></a>');
+   d.writeln('   <a href="about.html" tabindex="-1">About</a>');
+   d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
+   d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block" tabindex="-1"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
+   d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block" tabindex="-1"><img src="instagram_icon.png" height="16px"                                   ></a>');
    d.writeln('   </div>');
    d.writeln('</div>');
    d.writeln('');
