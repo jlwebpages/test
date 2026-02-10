@@ -36,63 +36,63 @@
 
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
-   .landing_container         {gap:            10px                !important}
-   .landing_container         {padding-top:    5vh                 !important}
-   .menu_button               {visibility:     visible             !important}
-   .landing_title             {font-size:      38px                !important}
-   .landing_title             {letter-spacing: 2px                 !important}
-   .landing_sub_title         {font-size:      26px                !important}
-   .landing_exhibition_button {font-size:      14px                !important}
-   .landing_enter_button      {font-size:      16px                !important}
-   .title                     {font-size:      38px                !important}
-   .title                     {letter-spacing: 2px                 !important}
-   .title                     {padding-bottom: 15px                !important}
-   .header_links              {display:        none                !important}
-   .nav_button                {height:         24px                !important}
-   .nav_button                {width:          14px                !important}
-   .nav_left_shape            {transform:      scale(80%)          !important}
-   .nav_right_shape           {transform:      scale(80%)          !important}
-   .sub_title                 {font-size:      25px                !important}
-   .sub_title                 {padding-bottom: 15px                !important}
-   .text                      {padding:        15px 10px 15px 10px !important}
-   .text_image                {width:          300px               !important}
-   .text_image                {margin:         10px 0px 25px 25px  !important}
-   .art_gallery               {grid-template-columns: 1fr 1fr      !important}
-   .art_gallery               {gap:            35px                !important}
-   .art_image_link_container  {margin-top:     15px                !important}
-   .art_image_link_container  {margin-bottom:  15px                !important}
-   #gallery_header            {display:        block               !important}
-   #one_column_1              {display:        none                !important}
-   #two_column_1              {display:        block               !important}
-   #two_column_2              {display:        block               !important}
-   #three_column_1            {display:        none                !important}
-   #three_column_2            {display:        none                !important}
-   #three_column_3            {display:        none                !important}
+   .landing_container         {gap:                   10px                !important}
+   .landing_container         {padding-top:           5vh                 !important}
+   .menu_button               {visibility:            visible             !important}
+   .landing_title             {font-size:             38px                !important}
+   .landing_title             {letter-spacing:        2px                 !important}
+   .landing_sub_title         {font-size:             26px                !important}
+   .landing_exhibition_button {font-size:             14px                !important}
+   .landing_enter_button      {font-size:             16px                !important}
+   .title                     {font-size:             38px                !important}
+   .title                     {letter-spacing:        2px                 !important}
+   .title                     {padding-bottom:        15px                !important}
+   .header_links              {display:               none                !important}
+   .nav_button                {height:                24px                !important}
+   .nav_button                {width:                 14px                !important}
+   .nav_left_shape            {transform:             scale(80%)          !important}
+   .nav_right_shape           {transform:             scale(80%)          !important}
+   .sub_title                 {font-size:             25px                !important}
+   .sub_title                 {padding-bottom:        15px                !important}
+   .text                      {padding:               15px 10px 15px 10px !important}
+   .text_image                {width:                 300px               !important}
+   .text_image                {margin:                10px 0px 25px 25px  !important}
+   .art_gallery               {grid-template-columns: 1fr 1fr             !important}
+   .art_gallery               {gap:                   35px                !important}
+   .art_image_link_container  {margin-top:            15px                !important}
+   .art_image_link_container  {margin-bottom:         15px                !important}
+   #gallery_header            {display:               block               !important}
+   #one_column_1              {display:               none                !important}
+   #two_column_1              {display:               block               !important}
+   #two_column_2              {display:               block               !important}
+   #three_column_1            {display:               none                !important}
+   #three_column_2            {display:               none                !important}
+   #three_column_3            {display:               none                !important}
 }
 
 /* Rules for iPads in portrait orientation */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
-   .landing_title            {font-size:      46px                !important}
-   .landing_title            {letter-spacing: 2px                 !important}
-   .landing_enter_button     {font-size:      16px                !important}
-   .title                    {font-size:      46px                !important}
-   .title                    {letter-spacing: 2px                 !important}
-   .sub_title                {padding-bottom: 15px                !important}
-   .text                     {padding:        25px 20px 10px 20px !important}
-   .text_image               {width:          350px               !important}
-   .text_image               {margin:         10px 0px 25px 25px  !important}
-   .art_gallery              {grid-template-columns: 1fr 1fr      !important}
-   .art_gallery              {gap:            35px                !important}
-   .art_image_link_container {margin-top:     15px                !important}
-   .art_image_link_container {margin-bottom:  15px                !important}
-   #one_column_1             {display:        none                !important}
-   #two_column_1             {display:        block               !important}
-   #two_column_2             {display:        block               !important}
-   #three_column_1           {display:        none                !important}
-   #three_column_2           {display:        none                !important}
-   #three_column_3           {display:        none                !important}
+   .landing_title            {font-size:             46px                !important}
+   .landing_title            {letter-spacing:        2px                 !important}
+   .landing_enter_button     {font-size:             16px                !important}
+   .title                    {font-size:             46px                !important}
+   .title                    {letter-spacing:        2px                 !important}
+   .sub_title                {padding-bottom:        15px                !important}
+   .text                     {padding:               25px 20px 10px 20px !important}
+   .text_image               {width:                 350px               !important}
+   .text_image               {margin:                10px 0px 25px 25px  !important}
+   .art_gallery              {grid-template-columns: 1fr 1fr             !important}
+   .art_gallery              {gap:                   35px                !important}
+   .art_image_link_container {margin-top:            15px                !important}
+   .art_image_link_container {margin-bottom:         15px                !important}
+   #one_column_1             {display:               none                !important}
+   #two_column_1             {display:               block               !important}
+   #two_column_2             {display:               block               !important}
+   #three_column_1           {display:               none                !important}
+   #three_column_2           {display:               none                !important}
+   #three_column_3           {display:               none                !important}
 }
 
 /* Rules for iPads and tablets in landscape orientation */
