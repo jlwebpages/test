@@ -397,8 +397,6 @@ a.header_link:hover
 
 .art_gallery_column
 {
-   column-count: 1;
-   break-inside: avoid;
    border: 0px;
    margin: 0px;
    padding: 0px;
