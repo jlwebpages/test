@@ -4,9 +4,9 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const galleries = [{name: "featured_work",  title: "Featured Work",  max_image_number: 32},
-                   {name: "photo_art",      title: "Photo Art",      max_image_number: 28},
-                   {name: "works_on_paper", title: "Works on Paper", max_image_number:  9}];
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  max_image_number: 32},
+                      {name: "photo_art",      title: "Photo Art",      max_image_number: 28},
+                      {name: "works_on_paper", title: "Works on Paper", max_image_number:  9}];
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)
@@ -108,9 +108,9 @@ function close_menu()
 
 function display_gallery_page(gallery_name)
 {
-   for (i = 0; i < galleries.length; i++)
+   for (i = 0; i < gallery_list.length; i++)
    {
-      if (gallery_name == galleries[i]["name"])
+      if (gallery_name == gallery_list[i]["name"])
       {
          window.location.href = "art_gallery.html?gallery_index="+i;
 
@@ -278,7 +278,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 function display_menu()
 {
    document.getElementById("menu_list").style.width   = "160px";
-   document.getElementById("menu_list").style.height  = 110 + (galleries.length * 40) + "px";
+   document.getElementById("menu_list").style.height  = 110 + (gallery_list.length * 40) + "px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
@@ -325,7 +325,7 @@ function get_gallery_index_url_parameter()
       }
    }
 
-   if ( (gallery_index < 0) || (gallery_index > galleries.length-1) )
+   if ( (gallery_index < 0) || (gallery_index > gallery_list.length-1) )
    {
       alert("Error:\n\nGallery Index out-of-range passed to " + html_file_name);
 
@@ -537,11 +537,11 @@ function load_images_into_gallery(gallery_index)
    var image_number = 1;
 
 
-   max_image_number = galleries[gallery_index]["max_image_number"];
+   max_image_number = gallery_list[gallery_index]["max_image_number"];
 
-   document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+galleries[gallery_index]["title"]+"</div>");
+   document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+gallery_list[gallery_index]["title"]+"</div>");
 
-   load_image_into_gallery(galleries[gallery_index]["name"],image_number,max_image_number,image_count);
+   load_image_into_gallery(gallery_list[gallery_index]["name"],image_number,max_image_number,image_count);
 
    return true;
 }
@@ -590,9 +590,9 @@ function write_header()
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu" tabindex="-1">');
    d.writeln('   <span class="close_button" onclick="close_menu();" tabindex="-1">&times;</span>');
-   for (i = 0; i < galleries.length; i++)
+   for (i = 0; i < gallery_list.length; i++)
    {
-      d.writeln('   <a href="art_gallery.html?gallery_index='+i+'" tabindex="-1">'+galleries[i]["title"]+'</a>');
+      d.writeln('   <a href="art_gallery.html?gallery_index='+i+'" tabindex="-1">'+gallery_list[i]["title"]+'</a>');
    }
    d.writeln('   <a href="about.html" tabindex="-1">About</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
@@ -604,9 +604,9 @@ function write_header()
    d.writeln('<div class="title">DARLENE LAGUNA</div>');
    d.writeln('');
    d.writeln('<div class="header_links">');
-   for (i = 0; i < galleries.length; i++)
+   for (i = 0; i < gallery_list.length; i++)
    {
-      d.writeln('   <a id="'+galleries[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+galleries[i]["title"]+'</a>');
+      d.writeln('   <a id="'+gallery_list[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+gallery_list[i]["title"]+'</a>');
    }
    d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
    d.writeln('</div>');
