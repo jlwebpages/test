@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-September <span class="sold_text">sold</span>
+Horizons
 
 </span>
 
@@ -11,7 +11,7 @@ September <span class="sold_text">sold</span>
 
 <span class="art_dimensions">
 
-These two 24 x 20 inch pieces are on 3/4-inch stretched canvas and set in maple floater frames
+12 x 12 inch wood panel, 23 x 23 inches on 1.75-inch cradled wood panel, 8 x 8 inch cradled wood panel
 
 </span>
 
@@ -20,6 +20,12 @@ These two 24 x 20 inch pieces are on 3/4-inch stretched canvas and set in maple 
 
 <span class="art_paragraph">
 
-Every day I view the hills and the sky above. They are an ongoing source of joy and inspiration as they change in color throughout the year.
+Summer, Fall, Winter, Spring - our daily horizons may be consistent, yet they do take on different personalities as the days flow through the year. Sometimes, the ordinary is not so ordinary. 
 
 </span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>December Dusk</b> (left)</span>
+
+<span class="art_paragraph" style="padding-top: 0px"><b>Horizons</b> (center)</span>
+
+<span class="art_paragraph" style="padding-top: 0px"><b>Rainbow Hills</b> (right)</span>

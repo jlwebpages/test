@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Tulips <span class="sold_text">sold</span>
+Resting Place
 
 </span>
 
@@ -11,7 +11,7 @@ Tulips <span class="sold_text">sold</span>
 
 <span class="art_dimensions">
 
-Acrylic on heavy paper
+Mixed media collage
 
 </span>
 

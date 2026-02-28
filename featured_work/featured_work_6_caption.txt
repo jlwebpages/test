@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Breathing Space <span class="sold_text">sold</span>
+Terra Firma
 
 </span>
 
@@ -11,7 +11,7 @@ Breathing Space <span class="sold_text">sold</span>
 
 <span class="art_dimensions">
 
-Each is 6 x 12 inches on 1.5-inch cradled wood panel
+20 x 20 inches on 1.5-inch cradled wood panel
 
 </span>
 
@@ -20,12 +20,6 @@ Each is 6 x 12 inches on 1.5-inch cradled wood panel
 
 <span class="art_paragraph">
 
-Sometimes it’s nice to just “be” in nature - focusing and unfocusing for a moment - not trying to make sense out of what’s out there - but just taking it in and letting it go.
+Although the current world feels topsy turvy a good amount of the time, putting my feet on the hard ground and visiting dependable rocks and boulders on the trail always brings some welcome peace of mind.
 
 </span>
-
-<span class="art_paragraph" style="padding-top: 10px"><b>Pause</b> (top)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Sanctuary</b> (middle)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Breathing Space</b> (bottom)</span>

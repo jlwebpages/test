@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Forecast
+Canyon View
 
 </span>
 
@@ -11,7 +11,7 @@ Forecast
 
 <span class="art_dimensions">
 
-12.5 x 12.5 inch wood panel set in a maple floater frame
+16 x 16 inches on 1-inch cradled wood panel
 
 </span>
 
@@ -20,6 +20,6 @@ Forecast
 
 <span class="art_paragraph">
 
-The local foothills and the skies above are always full of surprises.
+I often take a 2-mile round trip hike up Canyon View Avenue and down to the corner at the base of the hill. It's a steep climb, a good cardio walk, and the view from the top is always the reward - whether it's clear or cloudy, early or late.
 
 </span>

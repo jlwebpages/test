@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Summer Skies
+Forecast
 
 </span>
 
@@ -11,7 +11,7 @@ Summer Skies
 
 <span class="art_dimensions">
 
-10 x 10 inch cradled wood panels
+12.5 x 12.5 inch wood panel set in a maple floater frame
 
 </span>
 
@@ -20,10 +20,6 @@ Summer Skies
 
 <span class="art_paragraph">
 
-Summer is the perfect time of year for looking up and daydreaming.
+The local foothills and the skies above are always full of surprises.
 
 </span>
-
-<span class="art_paragraph" style="padding-top: 10px"><b>Many Moons</b> (left)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Fireworks</b> (right)</span>
