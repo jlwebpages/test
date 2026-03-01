@@ -7,7 +7,7 @@ var max_image_number = 0;
 const gallery_list = [{name: "featured_work",  title: "Featured Work",  max_image_number: 20},
                       {name: "photo_art",      title: "Photo Art",      max_image_number: 19},
                       {name: "works_on_paper", title: "Works on Paper", max_image_number: 13},
-                      {name: "sold",           title: "Sold",           max_image_number: 12}];
+                      {name: "sold",           title: "Sold",           max_image_number: 30}];
 
 
 function check_if_image_exists(gallery_name,image_number,max_image_number,direction)

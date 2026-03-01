@@ -14,12 +14,3 @@ Vision Quest <span class="sold_text">sold</span>
 16 x 16 inches on 1-inch cradled wood panel
 
 </span>
-
-
-<!-- Paragraph -->
-
-<span class="art_paragraph">
-
-I hike this trail frequently, and each time it feels fresh and gives my thoughts many directions to travel.
-
-</span>
