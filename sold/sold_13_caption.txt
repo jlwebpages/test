@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Dreamland
+Tulips <span class="sold_text">sold</span>
 
 </span>
 
@@ -11,21 +11,12 @@ Dreamland
 
 <span class="art_dimensions">
 
-Acrylic and mixed media photo collage on wood panel
+Acrylic on heavy paper
 
 </span>
 
 <span class="art_dimensions">
 
-12 x 12 inches
-
-</span>
-
-
-<!-- Paragraph -->
-
-<span class="art_paragraph">
-
-
+8 x 8 inches, matted to 12 x 12 inches
 
 </span>
