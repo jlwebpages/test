@@ -457,10 +457,15 @@ function load_image(gallery_name,image_number,image_count)
       document.getElementById("three_column_3").style.display = "block";
    }
 
-   if (true)                                  image_html += '<div class="art_image_link_container">\n';
-   if (true)                                  image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>\n';
-   if (gallery_name.includes("sold") == true) image_html += '   <div id="solld_tag" class="sold_tag">SOLD</div>\n';
-   if (true)                                  image_html += '</div>\n';
+   image_html += '<div class="art_image_link_container">\n';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>\n';
+
+   if (gallery_name.toLowerCase().includes("sold") == true)
+   {
+      image_html += '   <div id="solld_tag" class="sold_tag">SOLD</div>\n';
+   }
+
+   image_html += '</div>\n';
 
    document.getElementById("one_column_1").insertAdjacentHTML("beforeend",image_html);
 
