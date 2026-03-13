@@ -1,0 +1,16 @@
+<!-- Title -->
+
+<span class="art_title">
+
+Stretch Your eyes <span class="sold_text">sold</span>
+
+</span>
+
+
+<!-- Dimensions -->
+
+<span class="art_dimensions">
+
+23 x 23 inches on 1.75-inch cradled wood panel
+
+</span>

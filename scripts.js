@@ -5,10 +5,10 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 6, max_image_number: 20},
-                      {name: "photo_art",      title: "Photo Art",      min_image_number: 6, max_image_number: 18},
-                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 6, max_image_number: 13},
-                      {name: "sold",           title: "Sold",           min_image_number: 6, max_image_number: 13}];
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 1, max_image_number: 40},
+                      {name: "photo_art",      title: "Photo Art",      min_image_number: 1, max_image_number: 40},
+                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 1, max_image_number: 40},
+                      {name: "sold",           title: "Sold",           min_image_number: 1, max_image_number: 40}];
 
 
 function check_if_image_exists(gallery_name,image_number,min_image_number,max_image_number,direction)
