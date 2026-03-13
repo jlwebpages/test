@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Into the Fields
+Into the Fields <span class="new_text">new</span>
 
 </span>
 

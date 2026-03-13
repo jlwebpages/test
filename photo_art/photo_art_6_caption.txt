@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Center of Gravity
+Center of Gravity <span class="new_text">new</span>
 
 </span>
 

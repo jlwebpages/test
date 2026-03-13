@@ -581,6 +581,31 @@ a.header_link:hover
    overflow-y: hidden;
 }
 
+.new_tag
+{
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   font-family: Arial, sans-serif;
+   font-size: 12px;
+   font-weight: bold;
+   color: white;
+   letter-spacing: 2px;
+   background-color: rgba(0, 150, 0, 75%);
+   height: 16px;
+   width: 50px;
+   display: grid;
+   align-items: center;
+   z-index: 1;
+}
+
+.new_text
+{
+   color: rgba(0, 150, 0);
+   font-weight: bold;
+   font-style: italic;
+}
+
 .sold_tag
 {
    position: absolute;

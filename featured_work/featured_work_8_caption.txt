@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Floating
+Floating <span class="new_text">new</span>
 
 </span>
 

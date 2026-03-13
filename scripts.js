@@ -5,10 +5,10 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 6, max_image_number: 22},
-                      {name: "photo_art",      title: "Photo Art",      min_image_number: 6, max_image_number: 19},
-                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 6, max_image_number: 13},
-                      {name: "sold",           title: "Sold",           min_image_number: 6, max_image_number: 18}];
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 6, max_image_number: 22, new_list: [6,7,8]},
+                      {name: "photo_art",      title: "Photo Art",      min_image_number: 6, max_image_number: 19, new_list: [6    ]},
+                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 6, max_image_number: 13, new_list: [0    ]},
+                      {name: "sold",           title: "Sold",           min_image_number: 6, max_image_number: 18, new_list: [0    ]}]
 
 
 function check_if_image_exists(gallery_name,image_number,min_image_number,max_image_number,direction)
@@ -459,6 +459,14 @@ function load_image(gallery_name,image_number,image_count)
 
    image_html += '<div class="art_image_link_container">\n';
    image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>\n';
+
+   for (i = 0; i < gallery_list[gallery_index]["new_list"].length; i++)
+   {
+      if (image_number == gallery_list[gallery_index]["new_list"][i])
+      {
+         image_html += '   <div id="solld_tag" class="new_tag">NEW</div>\n';
+      }
+   }
 
    if (gallery_name.toLowerCase().includes("sold") == true)
    {
