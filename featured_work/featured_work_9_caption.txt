@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Falling
+Terra Firma
 
 </span>
 
@@ -11,7 +11,7 @@ Falling
 
 <span class="art_dimensions">
 
-Both are 47.5 x 10 inches on 1.5-inch cradled wood panel
+20 x 20 inches on 1.5-inch cradled wood panel
 
 </span>
 
@@ -20,10 +20,6 @@ Both are 47.5 x 10 inches on 1.5-inch cradled wood panel
 
 <span class="art_paragraph">
 
-Don't let anyone tell you there are no seasons in California! The California sycamore outside my window had quite an autumn this year.
+Although the current world feels topsy turvy a good amount of the time, putting my feet on the hard ground and visiting dependable rocks and boulders on the trail always brings some welcome peace of mind.
 
 </span>
-
-<span class="art_paragraph" style="padding-top: 10px"><b>I’m Falling for You</b> (left)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Please Don't Leave!</b> (right)</span>

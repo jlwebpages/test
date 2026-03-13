@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Leaf Collection
+Distracted
 
 </span>
 
@@ -11,13 +11,13 @@ Leaf Collection
 
 <span class="art_dimensions">
 
-Acrylic and mixed media photo collage on cradled wood panel
+Acrylic and mixed media photo collage on wood panel
 
 </span>
 
 <span class="art_dimensions">
 
-10 x 10 inches
+12 x 12 inches
 
 </span>
 
@@ -26,6 +26,8 @@ Acrylic and mixed media photo collage on cradled wood panel
 
 <span class="art_paragraph">
 
-
+<span style="font-style: italic">
+Currently available through <a class="general_link" href="https://thelmfla.org/products/distracted-by-darlene-laguna">The LMF Gallery + Darkroom</a>, Sierra Madre, CA.
+</span>
 
 </span>

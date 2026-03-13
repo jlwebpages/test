@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Reveries
+Obstructions aka Opportunities
 
 </span>
 
@@ -11,7 +11,7 @@ Reveries
 
 <span class="art_dimensions">
 
-8 x 8 inch cradled wood panels set in maple floater frames
+12 x 12 inch cradled wood panel set in a maple floater frame
 
 </span>
 
@@ -20,12 +20,6 @@ Reveries
 
 <span class="art_paragraph">
 
-Autumn on the trail - images and thoughts melt together in the heat of the afternoon.
+A direct path to success, big or small, can seem ideal, but often it pays off to greet the challenges, staying open to unforeseen possibilities.
 
 </span>
-
-<span class="art_paragraph" style="padding-top: 10px"><b>Earthquake Weather</b> (left)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Atmospheric River</b> (center)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Reverie</b> (right)</span>

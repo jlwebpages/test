@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-This Land Is Your Land
+Golden Hour
 
 </span>
 
@@ -11,7 +11,7 @@ This Land Is Your Land
 
 <span class="art_dimensions">
 
-Each panel is 36 x 24 inches on 1.5-inch cradled wood panel
+8 x 8 inch cradled wood panels set in maple floater frames
 
 </span>
 
@@ -20,6 +20,10 @@ Each panel is 36 x 24 inches on 1.5-inch cradled wood panel
 
 <span class="art_paragraph">
 
-After I finished this diptych, this song by Woodie Guthrie popped into my head. As I looked at the random drips, I thought about how our environment has been impacted by our presence and the difficult state our country is in. I hope we all think carefully about what we want to do with our land.
+There is something about autumn lighting that brings out the gold in the hills!
 
 </span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>Golden Hour 1</b> (left)</span>
+
+<span class="art_paragraph" style="padding-top: 0px"><b>Golden Hour 2</b> (right)</span>
