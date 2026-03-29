@@ -1,0 +1,31 @@
+<!-- Title -->
+
+<span class="art_title">
+
+Trail Times <span class="new_text">new</span>
+
+</span>
+
+
+<!-- Dimensions -->
+
+<span class="art_dimensions">
+
+12.5 x 12.5 inch wood panels set in maple floater frames
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+Autumn on the trail - images and thoughts melt together in the heat of the afternoon.
+
+</span>
+
+<span class="art_paragraph" style="padding-top: 10px"><b>Momentum</b> (left)</span>
+
+<span class="art_paragraph" style="padding-top: 0px"><b>Impulse</b> (center)</span>
+
+<span class="art_paragraph" style="padding-top: 0px"><b>Tempo</b> (right)</span>
