@@ -7,7 +7,13 @@ Canyon View
 </span>
 
 
-<!-- Dimensions -->
+<!-- Medium and Dimensions -->
+
+<span class="art_dimensions">
+
+Acrylic
+
+</span>
 
 <span class="art_dimensions">
 
