@@ -7,7 +7,7 @@ Tulips <span class="sold_text">sold</span>
 </span>
 
 
-<!-- Dimensions -->
+<!-- Medium and Dimensions -->
 
 <span class="art_dimensions">
 

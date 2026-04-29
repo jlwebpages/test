@@ -7,7 +7,7 @@ Dreamland
 </span>
 
 
-<!-- Dimensions -->
+<!-- Medium and Dimensions -->
 
 <span class="art_dimensions">
 
