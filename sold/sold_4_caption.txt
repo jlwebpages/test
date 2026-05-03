@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Echoes
+Wildflower <span class="sold_text">sold</span>
 
 </span>
 
@@ -11,13 +11,13 @@ Echoes
 
 <span class="art_dimensions">
 
-Acrylic and mixed media photo collage on wood panel
+Mixed media collage
 
 </span>
 
 <span class="art_dimensions">
 
-24 x 24 inches
+10 x 8 inches, matted to 14 x 11 inches
 
 </span>
 
