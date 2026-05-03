@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Trail Times <span class="new_text">new</span>
+Trail Times
 
 </span>
 

@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Sometimes, Tumbleweeds <span class="sold_text">sold</span>
+Sometimes, Tumbleweeds
 
 </span>
 

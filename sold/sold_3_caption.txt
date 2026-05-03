@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Midnight Hike <span class="sold_text">sold</span>
+Midnight Hike
 
 </span>
 

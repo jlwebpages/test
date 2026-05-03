@@ -242,9 +242,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       document.body.innerHTML = html_string;
 
-      load_image_caption(image_file_name);
+      load_image_caption(gallery_name,image_number);
 
-      // Update the browser address field
+      // Update the browser address field.
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name+"&min_image_number="+min_image_number+"&max_image_number="+max_image_number);
 
@@ -338,8 +338,8 @@ function get_image_url_parameters()
    html_file_name = html_path_segments[html_path_segments.length - 1];
 
    image_file_name = URL_parameters.get("image_file_name");
-   min_image_number = URL_parameters.get("min_image_number");  // Assign global variable;
-   max_image_number = URL_parameters.get("max_image_number");  // Assign global variable;
+   min_image_number = URL_parameters.get("min_image_number");  // Assign global variable.
+   max_image_number = URL_parameters.get("max_image_number");  // Assign global variable.
 
    if ( (image_file_name == null) || (image_file_name == "") )
    {
@@ -392,7 +392,7 @@ function get_image_url_parameters()
    return {image_file_name,gallery_name,image_number}; 
 }
 
-function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibitions)
+function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhibitions,display_error)
 {
    $.ajax
    (
@@ -403,6 +403,13 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
 
       success: function(data)
       {
+         if (element_id == "image_caption")
+         {
+            // Add title  extension to image caption data.
+
+            data = data.replace("</span>",title_extension+"</span>")
+         }
+
          document.getElementById(element_id).textContent = "";
          document.getElementById(element_id).insertAdjacentHTML("beforeend",data);
 
@@ -411,7 +418,7 @@ function load_data_from_file(file_name,element_id,display_error,scroll_to_exhibi
             file_name  = file_name.replace("about.txt","exhibitions.txt");
             element_id = element_id.replace("about_text","exhibitions_text");
 
-            load_data_from_file(file_name,element_id,display_error,scroll_to_exhibitions);
+            load_data_from_file(file_name,element_id,title_extension,scroll_to_exhibitions,display_error);
          }
          else if (element_id == "exhibitions_text")
          {
@@ -479,20 +486,20 @@ function load_image(gallery_name,image_number,image_count)
 
    if (image_count % 2 != 0)
    {
-      // image_count is odd
+      // image_count is odd.
 
       document.getElementById("two_column_1").insertAdjacentHTML("beforeend", image_html);
    }
    else
    {
-      // image_count is even
+      // image_count is even.
 
       document.getElementById("two_column_2").insertAdjacentHTML("beforeend", image_html);
    }
 
    if (image_count % 3 == 0)
    {
-      // image_count is a multiple of 3
+      // image_count is a multiple of 3.
 
       document.getElementById("three_column_3").insertAdjacentHTML("beforeend", image_html);
    }
@@ -506,9 +513,38 @@ function load_image(gallery_name,image_number,image_count)
    return true;
 }
 
-function load_image_caption(image_file_name)
+function load_image_caption(gallery_name,image_number)
 {
-   load_data_from_file(image_file_name.split('.')[0]+"_caption.txt","image_caption",true);
+   var image_file_name = "./"+gallery_name+"/"+gallery_name+"_"+image_number+"_caption.txt"
+   var title_extension = "";
+
+
+   // Add "new" to end of art title if item is new.
+
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (gallery_name == gallery_list[i]["name"])
+      {
+         for (j = 0; j < gallery_list[i]["new_list"].length; j++)
+         {
+            if (image_number == gallery_list[i]["new_list"][j])
+            {
+               title_extension = '<span class="new_text"> new</span>';
+
+               break;
+            }
+         }
+      }
+   }
+
+   // Add "sold" to end of art title if item is sold.
+
+   if (gallery_name == "sold")
+   {
+      title_extension = '<span class="sold_text"> sold</span>';
+   }
+
+   load_data_from_file(image_file_name,"image_caption",title_extension,false,true);
 
    return true;
 }

@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Brighter Days <span class="sold_text">sold</span>
+Brighter Days
 
 </span>
 

@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Wildflower <span class="sold_text">sold</span>
+Wildflower
 
 </span>
 

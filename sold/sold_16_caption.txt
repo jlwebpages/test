@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-A Day at the Park <span class="sold_text">sold</span>
+A Day at the Park
 
 </span>
 

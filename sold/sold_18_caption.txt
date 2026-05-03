@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Ode to Autumn <span class="sold_text">sold</span>
+Ode to Autumn
 
 </span>
 

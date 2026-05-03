@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Treeline <span class="sold_text">sold</span>
+Treeline
 
 </span>
 
