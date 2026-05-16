@@ -405,7 +405,7 @@ function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhi
       {
          if (element_id == "image_caption")
          {
-            // Add title  extension to image caption data.
+            // Add title extension to image caption data.
 
             data = data.replace("</span>",title_extension+"</span>")
          }
