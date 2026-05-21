@@ -259,7 +259,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 function display_menu()
 {
    document.getElementById("menu_list").style.width   = "160px";
-   document.getElementById("menu_list").style.height  = 140 + (gallery_list.length * 40) + "px";
+   document.getElementById("menu_list").style.height  = 150 + (gallery_list.length * 40) + "px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
