@@ -392,7 +392,7 @@ function get_image_url_parameters()
    return {image_file_name,gallery_name,image_number}; 
 }
 
-function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhibitions,display_error)
+function load_data_from_file(gallery_name,file_name,element_id,title_extension,scroll_to_exhibitions,display_error)
 {
    $.ajax
    (
@@ -403,13 +403,16 @@ function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhi
 
       success: function(data)
       {
-         data = data + "<br><br><a href='contact.html'>Contact</a>";
-
          if (element_id == "image_caption")
          {
             // Add title extension to image caption data.
 
             data = data.replace("</span>",title_extension+"</span>")
+
+            if (gallery_name != "sold")
+            {
+               data += "<br><br><a href='contact.html'>Contact</a>";
+            }
          }
 
          document.getElementById(element_id).textContent = "";
@@ -420,7 +423,7 @@ function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhi
             file_name  = file_name.replace("about.txt","exhibitions.txt");
             element_id = element_id.replace("about_text","exhibitions_text");
 
-            load_data_from_file(file_name,element_id,title_extension,scroll_to_exhibitions,display_error);
+            load_data_from_file(gallery_name,file_name,element_id,title_extension,scroll_to_exhibitions,display_error);
          }
          else if (element_id == "exhibitions_text")
          {
@@ -546,7 +549,7 @@ function load_image_caption(gallery_name,image_number)
       title_extension = '<span class="sold_text"> sold</span>';
    }
 
-   load_data_from_file(image_file_name,"image_caption",title_extension,false,true);
+   load_data_from_file(gallery_name,image_file_name,"image_caption",title_extension,false,true);
 
    return true;
 }
