@@ -259,7 +259,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 function display_menu()
 {
    document.getElementById("menu_list").style.width   = "160px";
-   document.getElementById("menu_list").style.height  = 110 + (gallery_list.length * 40) + "px";
+   document.getElementById("menu_list").style.height  = 140 + (gallery_list.length * 40) + "px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
@@ -403,6 +403,8 @@ function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhi
 
       success: function(data)
       {
+         data = data + "<br><br><a href='contact.html'>Contact</a>";
+
          if (element_id == "image_caption")
          {
             // Add title extension to image caption data.
@@ -637,21 +639,23 @@ function write_header()
    {
       d.writeln('   <a href="art_gallery.html?gallery_index='+i+'" tabindex="-1">'+gallery_list[i]["title"]+'</a>');
    }
-   d.writeln('   <a href="about.html" tabindex="-1">About</a>');
+   d.writeln('   <a href="contact.html" tabindex="-1">Contact</a>');
+   d.writeln('   <a href="about.html"   tabindex="-1">About  </a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block" tabindex="-1"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block" tabindex="-1"><img src="instagram_icon.png" height="16px"                                   ></a>');
    d.writeln('   </div>');
    d.writeln('</div>');
    d.writeln('');
-   d.writeln('<div class="title">DARLENE LAGUNA</div>');
+   d.writeln('<div class="title"><a class="title_link" href="index.html">DARLENE LAGUNA</a></div>');
    d.writeln('');
    d.writeln('<div class="header_links">');
    for (i = 0; i < gallery_list.length; i++)
    {
       d.writeln('   <a id="'+gallery_list[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+gallery_list[i]["title"]+'</a>');
    }
-   d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
+   d.writeln('   <a id="contact_link" class="header_link" href="contact.html">Contact</a>');
+   d.writeln('   <a id="about_link"   class="header_link" href="about.html"  >About</a>');
    d.writeln('</div>');
    d.writeln('');
    d.writeln('');
