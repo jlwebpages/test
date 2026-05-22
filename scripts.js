@@ -411,7 +411,7 @@ function load_data_from_file(gallery_name,file_name,element_id,title_extension,s
 
             if (gallery_name != "sold")
             {
-               data += "<br><br><a href='contact.html'>Contact</a>";
+               data += '<div style="text-align: center; font-size: 14px; margin-top: 15px; font-weight: bold"><a class="general_link" href="contact.html">Inquire about this piece</a></div>';
             }
          }
 
