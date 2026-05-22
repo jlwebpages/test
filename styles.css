@@ -233,6 +233,12 @@
    padding: 0px 25px 0px 25px;
 }
 
+.title_link
+{
+   color: inherit;
+   text-decoration: none;
+}
+
 .sub_title
 {
    font-family: Arial, sans-serif;

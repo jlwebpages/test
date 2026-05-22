@@ -644,7 +644,7 @@ function write_header()
    d.writeln('   </div>');
    d.writeln('</div>');
    d.writeln('');
-   d.writeln('<div class="title">DARLENE LAGUNA</div>');
+   d.writeln('<div class="title"><a class="title_link" href="index.html">DARLENE LAGUNA</a></div>');
    d.writeln('');
    d.writeln('<div class="header_links">');
    for (i = 0; i < gallery_list.length; i++)

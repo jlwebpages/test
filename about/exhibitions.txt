@@ -31,12 +31,18 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 <span class="sub_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
+<a class="general_link" href="http://www.galleryofhermosa.com/colors-of-the-coast"><span style="font-size: 16px; font-weight: bold">Colors of the Coast Group Exhibit</span></a><br>
+Gallery of Hermosa<br>
+Hermosa Beach, CA<br>
+May 23 to June 14 2026<br>
+<br>
+
 <span style="font-size: 16px; font-weight: bold">Specimens + Perceptions</span><br>
 The Language Mobilization Factory Gallery + Darkroom<br>
 Sierra Madre, CA<br>
 January 2026<br>
 <iframe allowfullscreen allow="autoplay" style="border: 0px; margin: 0px; padding: 5px 0px; 0px; 0px; width: 25%; min-width: 300px; aspect-ratio: 16 / 9"
-    src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&playlist=BxngEykgEIE&loop=1&rel=0">
+    src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=0&mute=1&playlist=BxngEykgEIE&loop=1&rel=0">
 </iframe><br>
 <br>
 
