@@ -491,7 +491,8 @@ a.header_link:hover
    text-align: left;
    justify-self: start;
    align-self: start;
-   height: 100%;
+ /*  height: 100%;*/
+   height: 100vh;
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
@@ -624,8 +625,7 @@ a.header_link:hover
    gap: 0px;
    height: 100vh;
    margin: 0px auto;
-  /* overflow-y: hidden;*/
-     overflow-y: auto;
+   overflow-y: hidden;
 }
 
 .contact_container
