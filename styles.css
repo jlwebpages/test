@@ -523,7 +523,7 @@ a.header_link:hover
 {
    font-family: Arial, sans-serif;
    font-size: 14px;
-   height: 50px;
+   line-height: 50px;
    font-weight: bold;
    font-style: italic;
 }
@@ -666,7 +666,7 @@ a.header_link:hover
 {
    text-align: left;
    font-weight: bold;
-   height: 30px;
+   line-height: 30px;
    display: block;
 }
 
