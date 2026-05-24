@@ -10,7 +10,7 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body">
+<body class="body" onload="adjust_contact_email_message_width();">
 
 
 <script>
@@ -76,31 +76,42 @@
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
-   document.writeln('      <span class="contact_email_subject">'+email_subject+'</span>');
+   document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
    document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="Type your message here..."></textarea>');
    document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">SEND E-MAIL</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
 
-   // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
+   write_footer();
 
-   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+   function adjust_contact_email_message_width()
    {
-      // We're running on an iPad.
+      var scale = 0;
 
-      if (window.innerHeight >= window.innerWidth)
+
+      // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
+
+      if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
       {
-         // We're in portrait mode.
+         // We're running on an iPad.
 
-         document.getElementById("contact_email_message").style.width = document.getElementById("contact_image").width + "px";
+         if (window.innerHeight >= window.innerWidth)
+         {
+            // We're in portrait mode.
+
+            contact_image = document.querySelector("#contact_image");
+            scale         = contact_image.height / contact_image.naturalHeight;
+            new_width     = scale * contact_image.naturalWidth;
+
+            document.getElementById("contact_email_subject").style.minWidth = "425px";
+            document.getElementById("contact_email_subject").style.width = new_width + "px";
+
+            document.getElementById("contact_email_message").style.minWidth = "425px";
+            document.getElementById("contact_email_message").style.width = new_width + "px";
+         }
       }
    }
-
-         alert(document.getElementById("contact_image").width);
-         alert(document.getElementById("contact_email_message").style.width);
-
-   write_footer();
 
 </script>
 

@@ -660,16 +660,17 @@ a.header_link:hover
 .contact_email_container
 {
    text-align: center;
-   width: 50%;
    padding: 25px;
+   width: 50%;
 }
 
 .contact_email_subject
 {
-   text-align: left;
    font-weight: bold;
-   line-height: 30px;
-   display: block;
+   text-align: left;
+   margin: 0px auto;
+   padding-bottom: 10px;
+   display: block; 
 }
 
 .contact_email_message
@@ -679,10 +680,11 @@ a.header_link:hover
    color: inherit;
    width: 100%;
    height: calc(100% - 55px);
+   margin: 0px auto;
    padding: 0px;
    border: 1px solid darkslategray;
    outline: none;
-   resize: vertical; margin: 0px auto;
+   resize: vertical; 
 }
 
 .new_tag
