@@ -93,10 +93,13 @@
       {
          // We're in portrait mode.
 
-         document.getElementById("contact_email_message").width = '"' + document.getElementById("contact_image").width + '"';
+         document.getElementById("contact_email_message").style.width = document.getElementById("contact_image").width + "px";
       }
    }
-         alert(document.getElementById("contact_image").style.width);
+
+         alert(document.getElementById("contact_image").width);
+         alert(document.getElementById("contact_email_message").style.width);
+
    write_footer();
 
 </script>

@@ -526,7 +526,7 @@ a.header_link:hover
    font-size: 14px;
    font-weight: bold;
    font-style: italic;
-
+   padding-bottom: 10px;
    display: inline-block;
 }
 
