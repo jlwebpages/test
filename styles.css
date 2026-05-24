@@ -3,6 +3,7 @@
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
    .menu_button               {visibility:            visible            !important}
+   .header_links              {display:               none               !important}
    .landing_title             {font-size:             38px               !important}
    .landing_title             {letter-spacing:        2px                !important}
    .landing_sub_title         {font-size:             26px               !important}
@@ -11,7 +12,6 @@
    .title                     {font-size:             32px               !important}
    .title                     {letter-spacing:        2px                !important}
    .title                     {padding-bottom:        15px               !important}
-   .header_links              {display:               none               !important}
    .nav_button                {height:                24px               !important}
    .nav_button                {width:                 14px               !important}
    .nav_left_shape            {transform:             scale(80%)         !important}
@@ -42,9 +42,10 @@
 
 @media only screen and (max-width: 767px) and (orientation: landscape)
 {
+   .menu_button               {visibility:            visible             !important}
+   .header_links              {display:               none                !important}
    .landing_container         {gap:                   10px                !important}
    .landing_container         {padding-top:           5vh                 !important}
-   .menu_button               {visibility:            visible             !important}
    .landing_title             {font-size:             38px                !important}
    .landing_title             {letter-spacing:        2px                 !important}
    .landing_sub_title         {font-size:             26px                !important}
@@ -53,7 +54,6 @@
    .title                     {font-size:             38px                !important}
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
-   .header_links              {display:               none                !important}
    .nav_button                {height:                24px                !important}
    .nav_button                {width:                 14px                !important}
    .nav_left_shape            {transform:             scale(80%)          !important}
@@ -67,16 +67,8 @@
    .art_gallery               {gap:                   35px                !important}
    .art_image_link_container  {margin-top:            15px                !important}
    .art_image_link_container  {margin-bottom:         15px                !important}
-   
-
- /*  .inquire_link              {padding-bottom:        30px                !important}  */
-
-
    .contact_image_container   {padding:               10px                !important}
-
    .contact_image             {max-width:             500px               !important}
-
-
    .contact_email_container   {padding:               10px                !important}
    .contact_email_container   {width:                 75%                 !important}
    #gallery_header            {display:               block               !important}
@@ -92,6 +84,8 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
+   .menu_button               {visibility:            visible            !important}
+   .header_links              {display:               none               !important}
    .landing_title            {font-size:             46px                !important}
    .landing_title            {letter-spacing:        2px                 !important}
    .landing_enter_button     {font-size:             16px                !important}
@@ -105,20 +99,18 @@
    .art_gallery              {gap:                   35px                !important}
    .art_image_link_container {margin-top:            15px                !important}
    .art_image_link_container {margin-bottom:         15px                !important}
+   .contact_container        {flex-direction:        column              !important}
+   .contact_container        {justify-content:       flex-start          !important}
+   .contact_image_container  {padding-bottom:        10px                !important}
+   .contact_email_container  {width:                 auto                !important}
+   .contact_email_container  {padding-top:           10px                !important}
+   .contact_email_message    {height:                300px               !important}
    #one_column_1             {display:               none                !important}
    #two_column_1             {display:               block               !important}
    #two_column_2             {display:               block               !important}
    #three_column_1           {display:               none                !important}
    #three_column_2           {display:               none                !important}
    #three_column_3           {display:               none                !important}
-
-
-   .menu_button               {visibility:            visible            !important}
-   .header_links              {display:               none               !important}
-   .contact_container         {flex-direction:        column             !important}
-   .contact_container         {justify-content:       flex-start         !important}
-   .contact_email_container   {width:                 auto               !important}
-   .contact_email_message     {height:                300px              !important}
 }
 
 /* Rules for iPads and tablets in landscape orientation */
@@ -130,11 +122,7 @@
    .art_gallery              {gap:                   40px        !important}
    .art_image_link_container {margin-top:            20px        !important}
    .art_image_link_container {margin-bottom:         20px        !important}
-
-
-   .contact_image             {max-width:             600px               !important}
-
-
+   .contact_image            {max-width:             600px       !important}
    #one_column_1             {display:               none        !important}
    #two_column_1             {display:               none        !important}
    #two_column_2             {display:               none        !important}
@@ -491,8 +479,7 @@ a.header_link:hover
    text-align: left;
    justify-self: start;
    align-self: start;
- /*  height: 100%;*/
-   height: 100vh;
+   height: 100%;
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
