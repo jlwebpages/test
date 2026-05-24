@@ -681,11 +681,11 @@ a.header_link:hover
    font-size: 12px;
    font-weight: bold;
    color: white;
-   letter-spacing: 1px;
+   letter-spacing: .5px;
    line-height: 12px;
    background-color: black;
    opacity: 65%;
-   border-radius: 15px;
+   border-radius: 4px;
    border: 0px;
    margin: 10px auto 10px auto;
    padding: 8px;
