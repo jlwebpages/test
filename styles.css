@@ -67,6 +67,7 @@
    .art_gallery               {gap:                   35px                !important}
    .art_image_link_container  {margin-top:            15px                !important}
    .art_image_link_container  {margin-bottom:         15px                !important}
+   .inquire_link              {padding-bottom:        10px                !important}
    .contact_image_container   {padding:               10px                !important}
    .contact_email_container   {padding:               10px                !important}
    .contact_email_container   {width:                 75%                 !important}
@@ -649,14 +650,10 @@ a.header_link:hover
 
 .contact_email_subject
 {
-   font-family: inherit;
-   font-size: inherit;
+   text-align: left;
    font-weight: bold;
-   color: inherit;
-   width: 100%;
-   padding: 0px;
-   border: none;
-   outline: none;
+   height: 30px;
+   display: block;
 }
 
 .contact_email_message
@@ -666,7 +663,6 @@ a.header_link:hover
    color: inherit;
    width: 100%;
    height: calc(100% - 55px);
-   margin-top: 15px;
    padding: 0px;
    border: 1px solid darkslategray;
    outline: none;

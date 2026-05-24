@@ -15,7 +15,7 @@
 
 <script>
 
-   var email_subject      = "Subject:  ";
+   var email_subject      = "Subject:&nbsp;&nbsp;";
    var html_file_name     = "";
    var html_path_segments = "";
    var image_file_name    = "";
@@ -76,7 +76,7 @@
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
-   document.writeln('      <input class="contact_email_subject" type="text" value="'+email_subject+'" readonly></input>');
+   document.writeln('      <span class="contact_email_subject">'+email_subject+'</span>');
    document.writeln('      <textarea class="contact_email_message" placeholder="Type your message here..."></textarea>');
    document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">SEND E-MAIL</span>');
    document.writeln('   </div>');
