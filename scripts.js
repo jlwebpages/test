@@ -424,7 +424,7 @@ function load_data_from_file(gallery_name,file_name,element_id,title_extension,s
             {
                var image_file_name = file_name.replace("_caption.txt",".jpg");
 
-               data += '<br><div style="padding-top: 15px"><a class="general_link inquire_link" href="contact.html?image_file_name='+image_file_name+'&image_title='+image_title+'">Inquire about price</a></div>';
+               data += '<br><a class="general_link inquire_link" href="contact.html?image_file_name='+image_file_name+'&image_title='+image_title+'">Inquire about price</a>';
             }
          }
 

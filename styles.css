@@ -524,9 +524,10 @@ a.header_link:hover
 {
    font-family: Arial, sans-serif;
    font-size: 14px;
-   line-height: 50px;
    font-weight: bold;
    font-style: italic;
+
+   display: inline-block;
 }
 
 .back_button
