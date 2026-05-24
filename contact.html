@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>Darlene Laguna Art - Contact</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script language="JavaScript" src=scripts.js></script>
+</head>
+
+<body class="body">
+
+
+<script>
+   var html_path_segments = "";
+   var image_file_name    = "";
+   var image_title        = "";
+   var URL_parameters     = new URLSearchParams(window.location.search);
+
+
+   image_file_name    = URL_parameters.get("image_file_name");
+   image_title        = URL_parameters.get("image_title");
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name     = html_path_segments[html_path_segments.length - 1];
+
+   if (image_file_name == null)
+   {
+      alert("Error:\n\nImage File Name not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if (image_title == null)
+   {
+      alert("Error:\n\nImage Title not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   write_header();
+
+   document.getElementById("contact_link").className = "clicked_header_link";
+
+   document.writeln('<div class="contact_container">');
+   document.writeln('');
+   document.writeln('   <div style="text-align: center; padding: 25px">');
+   document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">'+image_title+'</span>');
+   document.writeln('      <img class="contact_image border_radius" src="'+image_file_name+'">');
+   document.writeln('   </div>');
+   document.writeln('');
+   document.writeln('   <div style="text-align: center; padding: 25px; width: 50%">');
+   document.writeln('      <input type="text" value="Subject:  Darlene Laguna Art - '+image_title+'" style="padding: 0px; padding-top: 30px; font-weight: bold; width: 100%; border: none; outline: none; font-family: inherit; font-size: inherit; color: inherit" readonly></input>');
+   document.writeln('      <textarea placeholder="Type your message here..." style="padding: 0px; border: 1px solid darkslategray; outline: none; width: 100%; height: calc(100% - 67px); resize: vertical; margin-top: 15px; font-family: inherit; font-size: inherit; color: inherit"></textarea>');
+   document.writeln('   </div>');
+   document.writeln('');
+   document.writeln('</div>');
+
+   write_footer();
+</script>
+
+
+</body>
+
+</html>

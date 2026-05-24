@@ -43,12 +43,13 @@
 <script>
    var URL_string            = window.location.search;
    var URL_parameters        = new URLSearchParams(URL_string);
+   var gallery_name          = "";
    var mode                  = URL_parameters.get("mode");
    var scroll_to_exhibitions = false;
 
    if (mode == "upcoming_exhibition") scroll_to_exhibitions = true;
 
-   load_data_from_file("about/about.txt","about_text",true,scroll_to_exhibitions); 
+   load_data_from_file(gallery_name,"about/about.txt","about_text",true,scroll_to_exhibitions); 
    write_footer();
 </script>
 

@@ -5,7 +5,7 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 4, max_image_number: 22, new_list: [4,5,6,7,8]},
+const gallery_list = [{name: "featured_work",  title: "Paintings",      min_image_number: 4, max_image_number: 22, new_list: [4,5,6,7,8]},
                       {name: "photo_art",      title: "Photo Art",      min_image_number: 6, max_image_number: 16, new_list: [6]},
                       {name: "works_on_paper", title: "Works on Paper", min_image_number: 6, max_image_number: 11, new_list: [0]},
                       {name: "sold",           title: "Sold",           min_image_number: 1, max_image_number: 19, new_list: [0]}]
@@ -259,7 +259,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 function display_menu()
 {
    document.getElementById("menu_list").style.width   = "160px";
-   document.getElementById("menu_list").style.height  = 110 + (gallery_list.length * 40) + "px";
+   document.getElementById("menu_list").style.height  = 150 + (gallery_list.length * 40) + "px";
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
@@ -392,7 +392,7 @@ function get_image_url_parameters()
    return {image_file_name,gallery_name,image_number}; 
 }
 
-function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhibitions,display_error)
+function load_data_from_file(gallery_name,file_name,element_id,title_extension,scroll_to_exhibitions,display_error)
 {
    $.ajax
    (
@@ -405,9 +405,27 @@ function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhi
       {
          if (element_id == "image_caption")
          {
-            // Add title extension to image caption data.
+            // Extract image title from image caption data.
+
+            start_after = '<span class="art_title">';
+            end_before  = '</span>';
+
+            start_index = data.indexOf(start_after) + start_after.length;
+            end_index   = data.indexOf(end_before);
+
+            image_title = data.substring(start_index, end_index);
+            image_title = image_title.trim();
+
+            // Add title extension to image title in image caption data.
 
             data = data.replace("</span>",title_extension+"</span>")
+
+            if (gallery_name != "sold")
+            {
+               var image_file_name = file_name.replace("_caption.txt",".jpg");
+
+               data += '<div style="padding-top: 15px"><a class="general_link inquire_link" href="contact.html?image_file_name='+image_file_name+'&image_title='+image_title+'">Inquire about price</a></div>';
+            }
          }
 
          document.getElementById(element_id).textContent = "";
@@ -418,7 +436,7 @@ function load_data_from_file(file_name,element_id,title_extension,scroll_to_exhi
             file_name  = file_name.replace("about.txt","exhibitions.txt");
             element_id = element_id.replace("about_text","exhibitions_text");
 
-            load_data_from_file(file_name,element_id,title_extension,scroll_to_exhibitions,display_error);
+            load_data_from_file(gallery_name,file_name,element_id,title_extension,scroll_to_exhibitions,display_error);
          }
          else if (element_id == "exhibitions_text")
          {
@@ -544,7 +562,7 @@ function load_image_caption(gallery_name,image_number)
       title_extension = '<span class="sold_text"> sold</span>';
    }
 
-   load_data_from_file(image_file_name,"image_caption",title_extension,false,true);
+   load_data_from_file(gallery_name,image_file_name,"image_caption",title_extension,false,true);
 
    return true;
 }
@@ -637,7 +655,8 @@ function write_header()
    {
       d.writeln('   <a href="art_gallery.html?gallery_index='+i+'" tabindex="-1">'+gallery_list[i]["title"]+'</a>');
    }
-   d.writeln('   <a href="about.html" tabindex="-1">About</a>');
+   d.writeln('   <a href="about.html"                                                tabindex="-1">About  </a>');
+   d.writeln('   <a href="contact.html?image_file_name=about/about.jpg&image_title=" tabindex="-1">Contact</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block" tabindex="-1"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block" tabindex="-1"><img src="instagram_icon.png" height="16px"                                   ></a>');
@@ -651,7 +670,8 @@ function write_header()
    {
       d.writeln('   <a id="'+gallery_list[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+gallery_list[i]["title"]+'</a>');
    }
-   d.writeln('   <a id="about_link"          class="header_link" href="about.html"         >About</a>');
+   d.writeln('   <a id="about_link"   class="header_link" href="about.html"                                               >About</a>');
+   d.writeln('   <a id="contact_link" class="header_link" href="contact.html?image_file_name=about/about.jpg&image_title=">Contact</a>');
    d.writeln('</div>');
    d.writeln('');
    d.writeln('');

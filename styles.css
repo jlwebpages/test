@@ -23,6 +23,12 @@
    .text_image                {margin:                10px 0px 25px 0px  !important}
    .art_gallery               {grid-template-columns: 1fr                !important}
    .art_image_link_container  {margin-top:            0px                !important}
+
+
+   .contact_container         {flex-direction:        column             !important}
+   .contact_container         {justify-content:       flex-start         !important}
+
+
    #gallery_header            {display:               block              !important}
    #one_column_1              {display:               block              !important}
    #two_column_1              {display:               none               !important}
@@ -488,6 +494,14 @@ a.header_link:hover
    display: block;
 }
 
+.inquire_link
+{
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   font-weight: bold;
+   font-style: italic;
+}
+
 .back_button
 {
    cursor: pointer;
@@ -585,6 +599,28 @@ a.header_link:hover
    height: 100vh;
    margin: 0px auto;
    overflow-y: hidden;
+}
+
+.contact_container
+{
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   color: darkslategray;
+   width: 95%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: 0px auto;
+}
+
+.contact_image
+{
+   width: 100%;
+   height: 100%;
+   max-width: 800px;
+   max-height: 425px;
+   object-fit: contain;
+   object-position: top;
 }
 
 .new_tag

@@ -19,7 +19,7 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 </span>
 
-<iframe	allowfullscreen allow="autoplay" style="border: 0px; margin: 0px; padding: 10px 0px; 15px; 0px; width: 25%; min-width: 300px; aspect-ratio: 16 / 9"
+<iframe allowfullscreen allow="autoplay" style="border: 0px; margin: 0px; padding: 10px 0px; 15px; 0px; width: 25%; min-width: 300px; aspect-ratio: 16 / 9"
     src="https://www.youtube-nocookie.com/embed/BxngEykgEIE?autoplay=1&mute=1&playlist=BxngEykgEIE&loop=1&rel=0">
 </iframe>
 
@@ -31,7 +31,7 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 <span class="sub_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
-<a class="general_link" href="http://www.galleryofhermosa.com/colors-of-the-coast"><span style="font-size: 16px; font-weight: bold">Colors of the Coast Group Exhibit</span></a><br>
+<a class="general_link" href="https://www.galleryofhermosa.com/warehouse-originals-limited-editions-standard-products/original_art_products/dockside-by-darlene-laguna?product_gallery=569920&product_id=8788299"><span style="font-size: 16px; font-weight: bold">Colors of the Coast Group Exhibit</span></a><br>
 Gallery of Hermosa<br>
 Hermosa Beach, CA<br>
 May 23 to June 14 2026<br>
