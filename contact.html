@@ -15,7 +15,7 @@
 
 <script>
 
-   var email_subject      = "";
+   var email_subject      = "Subject:  ";
    var html_file_name     = "";
    var html_path_segments = "";
    var image_file_name    = "";
@@ -58,11 +58,11 @@
 
    if (image_title == "")
    {
-      email_subject = "Darlene Laguna Art";
+      email_subject += "Darlene Laguna Art";
    }
    else
    {
-      email_subject = "Art Title:  " + image_title;
+      email_subject += image_title;
    }
 
    write_header();
