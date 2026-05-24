@@ -14,6 +14,9 @@
 
 
 <script>
+
+   var email_subject      = "Subject:  Darlene Laguna";
+   var html_file_name     = "";
    var html_path_segments = "";
    var image_file_name    = "";
    var image_title        = "";
@@ -53,6 +56,8 @@
       }
    }
 
+   if (image_title != "") email_subject += " - " + image_title;
+
    write_header();
 
    document.getElementById("contact_link").className = "clicked_header_link";
@@ -60,19 +65,22 @@
    document.writeln('<div class="contact_container">');
    document.writeln('');
    document.writeln('   <div class="contact_image_container">');
-   document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">'+image_title+'</span>');
+   document.writeln('      <span id="contact_image_title" class="contact_image_title">'+image_title+'</span>');
    document.writeln('      <img class="contact_image border_radius" src="'+image_file_name+'">');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
-   document.writeln('      <input class="contact_email_subject" type="text" value="Subject:  Darlene Laguna Art - '+image_title+'" readonly></input>');
+   document.writeln('      <input class="contact_email_subject" type="text" value="'+email_subject+'" readonly></input>');
    document.writeln('      <textarea class="contact_email_message" placeholder="Type your message here..."></textarea>');
    document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">SEND E-MAIL</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
 
+   if (image_title == "") document.getElementById("contact_image_title").style.height = "0px";
+
    write_footer();
+
 </script>
 
 

@@ -14,8 +14,11 @@
 
 
 <script>
+
    write_header();
+
    document.getElementById("about_link").className = "clicked_header_link";
+
 </script>
 
 <table class="table border_radius">
@@ -41,6 +44,7 @@
 </table>
 
 <script>
+
    var URL_string            = window.location.search;
    var URL_parameters        = new URLSearchParams(URL_string);
    var gallery_name          = "";
@@ -49,8 +53,10 @@
 
    if (mode == "upcoming_exhibition") scroll_to_exhibitions = true;
 
-   load_data_from_file(gallery_name,"about/about.txt","about_text",true,scroll_to_exhibitions); 
+   load_data_from_file(gallery_name,"about/about.txt","about_text",true,scroll_to_exhibitions);
+
    write_footer();
+
 </script>
 
 
