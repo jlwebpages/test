@@ -69,7 +69,7 @@
    .art_image_link_container  {margin-bottom:         15px                !important}
    
 
-   .inquire_link              {padding-bottom:        30px                !important}
+ /*  .inquire_link              {padding-bottom:        30px                !important}  */
 
 
    .contact_image_container   {padding:               10px                !important}
@@ -130,6 +130,11 @@
    .art_gallery              {gap:                   40px        !important}
    .art_image_link_container {margin-top:            20px        !important}
    .art_image_link_container {margin-bottom:         20px        !important}
+
+
+   .contact_image             {max-width:             600px               !important}
+
+
    #one_column_1             {display:               none        !important}
    #two_column_1             {display:               none        !important}
    #two_column_2             {display:               none        !important}
@@ -518,6 +523,7 @@ a.header_link:hover
 {
    font-family: Arial, sans-serif;
    font-size: 14px;
+   height: 50px;
    font-weight: bold;
    font-style: italic;
 }
