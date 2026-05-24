@@ -59,14 +59,15 @@
 
    document.writeln('<div class="contact_container">');
    document.writeln('');
-   document.writeln('   <div style="text-align: center; padding: 25px">');
+   document.writeln('   <div class="contact_image_container">');
    document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">'+image_title+'</span>');
    document.writeln('      <img class="contact_image border_radius" src="'+image_file_name+'">');
    document.writeln('   </div>');
    document.writeln('');
-   document.writeln('   <div style="text-align: center; padding: 25px; width: 50%">');
+   document.writeln('   <div class="contact_email_container">');
    document.writeln('      <input type="text" value="Subject:  Darlene Laguna Art - '+image_title+'" style="padding: 0px; padding-top: 30px; font-weight: bold; width: 100%; border: none; outline: none; font-family: inherit; font-size: inherit; color: inherit" readonly></input>');
-   document.writeln('      <textarea placeholder="Type your message here..." style="padding: 0px; border: 1px solid darkslategray; outline: none; width: 100%; height: calc(100% - 67px); resize: vertical; margin-top: 15px; font-family: inherit; font-size: inherit; color: inherit"></textarea>');
+   document.writeln('      <textarea class="contact_email_message" placeholder="Type your message here..."></textarea>');
+   document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">SEND E-MAIL</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');

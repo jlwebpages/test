@@ -27,7 +27,8 @@
 
    .contact_container         {flex-direction:        column             !important}
    .contact_container         {justify-content:       flex-start         !important}
-
+   .contact_email_container   {width:                 auto               !important}
+   .contact_email_message     {height:                300px              !important}
 
    #gallery_header            {display:               block              !important}
    #one_column_1              {display:               block              !important}
@@ -613,6 +614,12 @@ a.header_link:hover
    margin: 0px auto;
 }
 
+.contact_image_container
+{
+   text-align: center;
+   padding: 25px;
+}
+
 .contact_image
 {
    width: 100%;
@@ -621,6 +628,27 @@ a.header_link:hover
    max-height: 425px;
    object-fit: contain;
    object-position: top;
+}
+
+.contact_email_container
+{
+   text-align: center;
+   padding: 25px;
+   width: 50%
+}
+
+.contact_email_message
+{
+   padding: 0px;
+   border: 1px solid darkslategray;
+   outline: none;
+   width: 100%;
+   height: calc(100% - 85px);
+   resize: vertical;
+   margin-top: 15px;
+   font-family: inherit;
+   font-size: inherit;
+   color: inherit
 }
 
 .new_tag
