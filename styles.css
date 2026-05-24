@@ -681,7 +681,7 @@ a.header_link:hover
    padding: 0px;
    border: 1px solid darkslategray;
    outline: none;
-   resize: vertical;
+   resize: vertical; margin: 0px auto;
 }
 
 .new_tag

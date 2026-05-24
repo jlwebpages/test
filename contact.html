@@ -72,16 +72,30 @@
    document.writeln('<div class="contact_container">');
    document.writeln('');
    document.writeln('   <div class="contact_image_container">');
-   document.writeln('      <img class="contact_image border_radius" src="'+image_file_name+'">');
+   document.writeln('      <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
    document.writeln('      <span class="contact_email_subject">'+email_subject+'</span>');
-   document.writeln('      <textarea class="contact_email_message" placeholder="Type your message here..."></textarea>');
+   document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="Type your message here..."></textarea>');
    document.writeln('      <span class="art_title" style="padding: 0px; height: 30px">SEND E-MAIL</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
+
+   // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
+
+   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+   {
+      // We're running on an iPad.
+
+      if (window_inner_height >= window_inner_width)
+      {
+         // We're in portrait mode.
+
+         document.getElementById("contact_email_message").width = document.getElementById("contact_image").width + "px";
+      }
+   }
 
    write_footer();
 
