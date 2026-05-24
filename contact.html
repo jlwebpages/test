@@ -15,7 +15,7 @@
 
 <script>
 
-   var email_subject      = "Subject:  Darlene Laguna";
+   var email_subject      = "";
    var html_file_name     = "";
    var html_path_segments = "";
    var image_file_name    = "";
@@ -56,7 +56,14 @@
       }
    }
 
-   if (image_title != "") email_subject += " - " + image_title;
+   if (image_title == "")
+   {
+      email_subject = "Darlene Laguna Art";
+   }
+   else
+   {
+      email_subject = "Art Title:  " + image_title;
+   }
 
    write_header();
 
@@ -65,7 +72,6 @@
    document.writeln('<div class="contact_container">');
    document.writeln('');
    document.writeln('   <div class="contact_image_container">');
-   document.writeln('      <span id="contact_image_title" class="contact_image_title">'+image_title+'</span>');
    document.writeln('      <img class="contact_image border_radius" src="'+image_file_name+'">');
    document.writeln('   </div>');
    document.writeln('');
@@ -76,8 +82,6 @@
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
-
-   if (image_title == "") document.getElementById("contact_image_title").style.height = "0px";
 
    write_footer();
 

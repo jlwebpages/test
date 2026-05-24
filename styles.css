@@ -640,16 +640,6 @@ a.header_link:hover
    object-position: top;
 }
 
-.contact_image_title
-{
-   font-weight: bold;
-   font-size: 18px;
-   padding-top: 5px;
-   display: block;
-   padding: 0px;
-   height: 30px
-}
-
 .contact_email_container
 {
    text-align: center;
@@ -660,7 +650,6 @@ a.header_link:hover
 .contact_email_subject
 {
    padding: 0px;
-   padding-top: 30px;
    font-weight: bold;
    width: 100%;
    border: none;
@@ -676,7 +665,7 @@ a.header_link:hover
    border: 1px solid darkslategray;
    outline: none;
    width: 100%;
-   height: calc(100% - 85px);
+   height: calc(100% - 55px);
    resize: vertical;
    margin-top: 15px;
    font-family: inherit;
