@@ -89,15 +89,14 @@
    {
       // We're running on an iPad.
 
-      if (window_inner_height >= window_inner_width)
+      if (window.innerHeight >= window.innerWidth)
       {
          // We're in portrait mode.
 
          document.getElementById("contact_email_message").width = '"' + document.getElementById("contact_image").width + '"';
-         alert(document.getElementById("contact_email_message").width);
       }
    }
-
+         alert(document.getElementById("contact_email_message").style.width);
    write_footer();
 
 </script>
