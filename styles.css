@@ -676,22 +676,25 @@ a.header_link:hover
 
 .email_send_button
 {
-   cursor: pointer; font-weight: bold;
+   cursor: pointer;
    font-family: Arial, sans-serif;
    font-size: 12px;
+   font-weight: bold;
    color: white;
    letter-spacing: 1px;
    line-height: 12px;
-   background-color: rgba(0, 0, 0, 65%);
+   background-color: black;
+   opacity: 65%;
    border-radius: 15px;
    border: 0px;
    margin: 10px auto 10px auto;
    padding: 8px;
+   display: inline-block;
 }
 
 .email_send_button:hover
 {
-   background-color: rgba(0, 0, 0, 100%);
+   opacity: 100%;
 }
 
 .new_tag
