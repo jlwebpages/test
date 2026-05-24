@@ -93,7 +93,8 @@
       {
          // We're in portrait mode.
 
-         document.getElementById("contact_email_message").width = document.getElementById("contact_image").width;
+         document.getElementById("contact_email_message").width = '"' + document.getElementById("contact_image").width + '"';
+         alert(document.getElementById("contact_email_message").width);
       }
    }
 
