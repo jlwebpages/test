@@ -666,7 +666,7 @@ a.header_link:hover
    font-size: 16px;
    color: inherit;
    width: 100%;
-   height: calc(100% - 73px);
+   height: calc(100% - 70px);
    margin: 0px auto;
    padding: 0px;
    border: 1px solid darkslategray;
@@ -685,10 +685,10 @@ a.header_link:hover
    line-height: 12px;
    background-color: black;
    opacity: 65%;
-   border-radius: 4px;
+   border-radius: 2px;
    border: 0px;
    margin: 10px auto 10px auto;
-   padding: 8px;
+   padding: 6px;
    display: inline-block;
 }
 
