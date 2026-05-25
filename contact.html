@@ -80,7 +80,8 @@
    document.writeln('   <div class="contact_email_container">');
    document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
    document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="Type your message here..."></textarea>');
-   document.writeln('      <br><span class="email_send_button" onclick="location.href=">Send email</span>');
+   document.writeln('      <br>');
+   document.writeln('      <span class="email_send_button" onclick="location.href=">Send email</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
@@ -117,6 +118,11 @@ function adjust_contact_email_message_width()
 
       if (window.innerHeight >= window.innerWidth)
       {
+         var contact_image = null;
+         var new_width     = 0;
+         var scale         = 0;
+
+
          // We're in portrait mode.
 
          contact_image = document.querySelector("#contact_image");

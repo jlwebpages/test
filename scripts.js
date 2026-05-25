@@ -600,8 +600,6 @@ function load_images_into_gallery(gallery_index)
    min_image_number = gallery_list[gallery_index]["min_image_number"];
    max_image_number = gallery_list[gallery_index]["max_image_number"];
 
-   document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 25px; display: none'>"+gallery_list[gallery_index]["title"]+"</div>");
-
    load_image_into_gallery(gallery_list[gallery_index]["name"],image_number,max_image_number,image_count);
 
    return true;
