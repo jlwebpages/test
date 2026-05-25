@@ -143,6 +143,7 @@
 
 @supports (height: 100dvh)
 {
+   .body                       {height: 100dvh !important}
    .image_container_one_column {height: 100dvh !important}
    .image_container_two_column {height: 100dvh !important}
 }
@@ -247,7 +248,8 @@
    background-color: white;
    color: black;
    margin: 0px;
-   padding: 0px; height: 100vh;
+   padding: 0px;
+   height: 100dvh;
 }
 
 .title
