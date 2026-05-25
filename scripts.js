@@ -227,7 +227,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '   </div>';
       html_string += '';
       html_string += '   <div id="caption_div" class="art_caption fade_in" '+caption_div_style+'>';
-      html_string += '      <div id="image_caption" style="overflow-y: auto">';
+      html_string += '      <div id="image_caption">';
       html_string += '        <!-- Load data from file. -->';   
       html_string += '      </div>';
       html_string += '   </div>';
