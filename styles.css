@@ -630,7 +630,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 14px;
    color: darkslategray;
-   width: 95%;
+   width: 95vw;
    margin: 0px auto;
    display: flex;
    flex-direction: row;
