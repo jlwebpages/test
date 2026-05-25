@@ -630,11 +630,9 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 14px;
    color: darkslategray;
-   width: 95vw;
+   width: 95%;
    margin: 0px auto;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+text-align: center;
 }
 
 .contact_image_container
