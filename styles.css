@@ -29,6 +29,8 @@
    .contact_email_container   {padding:               10px               !important}
    .contact_email_container   {width:                 auto               !important}
    .contact_email_message     {height:                300px              !important}
+   #about_header              {display:               block              !important}
+   #contact_header            {display:               block              !important}
    #gallery_header            {display:               block              !important}
    #one_column_1              {display:               block              !important}
    #two_column_1              {display:               none               !important}
@@ -71,7 +73,6 @@
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               10px                !important}
    .contact_email_container   {width:                 75%                 !important}
-   #gallery_header            {display:               block               !important}
    #one_column_1              {display:               none                !important}
    #two_column_1              {display:               block               !important}
    #two_column_2              {display:               block               !important}
@@ -91,6 +92,7 @@
    .landing_enter_button     {font-size:             16px                !important}
    .title                    {font-size:             46px                !important}
    .title                    {letter-spacing:        2px                 !important}
+   .title                    {padding-bottom:        25px                !important}
    .sub_title                {padding-bottom:        15px                !important}
    .text                     {padding:               25px 20px 10px 20px !important}
    .text_image               {width:                 350px               !important}
@@ -105,6 +107,9 @@
    .contact_email_container  {width:                 auto                !important}
    .contact_email_container  {padding-top:           10px                !important}
    .contact_email_message    {height:                300px               !important}
+   #about_header             {display:               block               !important}
+   #contact_header           {display:               block               !important}
+   #gallery_header           {display:               block               !important}
    #one_column_1             {display:               none                !important}
    #two_column_1             {display:               block               !important}
    #two_column_2             {display:               block               !important}
@@ -324,7 +329,7 @@ a.header_link:hover
    vertical-align: top;
    text-align: left;
    line-height: 30px;
-   padding: 25px 50px 25px 50px;
+   padding: 10px 50px 25px 50px;
 }
 
 .text_image
@@ -684,19 +689,13 @@ a.header_link:hover
    letter-spacing: .5px;
    line-height: 12px;
    background-color: black;
-   opacity: 65%;
+   opacity: 75%;
    border-radius: 2px;
    border: 0px;
    margin: 10px auto 10px auto;
    padding: 6px;
    display: inline-block;
 }
-
-.email_send_button:hover
-{
-   opacity: 100%;
-}
-
 .new_tag
 {
    position: absolute;
