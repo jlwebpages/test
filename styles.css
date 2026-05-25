@@ -73,6 +73,9 @@
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               10px                !important}
    .contact_email_container   {width:                 75%                 !important}
+   #about_header              {display:               block              !important}
+   #contact_header            {display:               block              !important}
+   #gallery_header            {display:               block              !important}
    #one_column_1              {display:               none                !important}
    #two_column_1              {display:               block               !important}
    #two_column_2              {display:               block               !important}
