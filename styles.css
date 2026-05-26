@@ -632,13 +632,15 @@ a.header_link:hover
    color: darkslategray;
    width: 95%;
    margin: 0px auto;
-   display: block; text-align: center;
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: center;
 }
 
 .contact_image_container
 {
    text-align: center;
-   padding: 25px; display: inline-block; height: auto;
+   padding: 25px;
 }
 
 .contact_image
@@ -653,10 +655,9 @@ a.header_link:hover
 
 .contact_email_container
 {
-   text-align: center; display: inline-flex;
+   text-align: center;
    padding: 25px;
-   width: 50%;
-flex-direction: column; vertical-align: top;
+   width: 50vw;
 }
 
 .contact_email_subject
@@ -670,7 +671,7 @@ flex-direction: column; vertical-align: top;
 
 .contact_email_message
 {
-   font-family: inherit; vertical-align: top;
+   font-family: inherit;
    font-size: 16px;
    color: inherit;
    width: 100%;
