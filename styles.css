@@ -632,15 +632,13 @@ a.header_link:hover
    color: darkslategray;
    width: 95%;
    margin: 0px auto;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+   display: block; text-align: center;
 }
 
 .contact_image_container
 {
    text-align: center;
-   padding: 25px;
+   padding: 25px; display: inline-block;
 }
 
 .contact_image
@@ -655,7 +653,7 @@ a.header_link:hover
 
 .contact_email_container
 {
-   text-align: center;
+   text-align: center; display: inline-block;
    padding: 25px;
    width: 50%;
 }
@@ -671,7 +669,7 @@ a.header_link:hover
 
 .contact_email_message
 {
-   font-family: inherit;
+   font-family: inherit; vertical-align: top;
    font-size: 16px;
    color: inherit;
    width: 100%;
