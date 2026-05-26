@@ -640,7 +640,7 @@ a.header_link:hover
 .contact_image_container
 {
    text-align: center;
-   padding: 25px; margin: 0px auto;
+   padding: 25px;
 }
 
 .contact_image
@@ -656,7 +656,7 @@ a.header_link:hover
 .contact_email_container
 {
    text-align: center;
-   padding: 25px; margin: 0px auto;
+   padding: 25px;
    width: 50%;
 }
 
