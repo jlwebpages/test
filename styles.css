@@ -634,7 +634,7 @@ a.header_link:hover
    margin: 0px auto;
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
+   justify-content: start;
 }
 
 .contact_image_container
