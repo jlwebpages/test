@@ -630,7 +630,7 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 14px;
    color: darkslategray;
-   width: 100vw;
+   width: 95%;
    margin: 0px auto;
    display: flex;
    flex-direction: row;
@@ -639,7 +639,7 @@ a.header_link:hover
 
 .contact_image_container
 {
-   text-align: center;
+   text-align: center; width: auto;
    padding: 25px;
 }
 
@@ -663,7 +663,7 @@ a.header_link:hover
 .contact_email_subject
 {
    font-weight: bold;
-   text-align: right;
+   text-align: left;
    margin: 0px auto;
    padding-bottom: 10px;
    display: block; 
