@@ -630,19 +630,11 @@ a.header_link:hover
    font-family: Arial, sans-serif;
    font-size: 14px;
    color: darkslategray;
-   width: 95%;
+   width: 100vw;
    margin: 0px auto;
-
-
-
-    display: -webkit-box;    /* iOS 12 compatibility */
-    display: -ms-flexbox;
-    display: flex;
-    
-    -webkit-box-pack: center; /* iOS 12 compatibility */
-    -ms-flex-pack: center;
-    justify-content: center;
-
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
 }
 
 .contact_image_container
@@ -671,7 +663,7 @@ a.header_link:hover
 .contact_email_subject
 {
    font-weight: bold;
-   text-align: center;
+   text-align: right;
    margin: 0px auto;
    padding-bottom: 10px;
    display: block; 
