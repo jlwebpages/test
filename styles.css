@@ -634,12 +634,12 @@ a.header_link:hover
    margin: 0px auto;
    display: flex;
    flex-direction: row;
-   justify-content: center;
+   justify-content: space-evenly;
 }
 
 .contact_image_container
 {
-   text-align: center; width: auto;
+   text-align: center;
    padding: 25px;
 }
 
@@ -655,7 +655,7 @@ a.header_link:hover
 
 .contact_email_container
 {
-   text-align: left; width: auto;
+   text-align: center;
    padding: 25px;
    width: 50%;
 }
