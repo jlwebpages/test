@@ -632,12 +632,24 @@ a.header_link:hover
    color: darkslategray;
    width: 95%;
    margin: 0px auto;
-text-align: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+
+    display: -webkit-box;    /* iOS 12 compatibility */
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-pack: center; /* iOS 12 compatibility */
+    -ms-flex-pack: center;
+    justify-content: center;
+
 }
 
 .contact_image_container
 {
-   text-align: center; display: inline-block;
+   text-align: center;
    padding: 25px;
 }
 
@@ -653,7 +665,7 @@ text-align: center;
 
 .contact_email_container
 {
-   text-align: center; display: inline-block;
+   text-align: center;
    padding: 25px;
    width: 50%;
 }
@@ -661,7 +673,7 @@ text-align: center;
 .contact_email_subject
 {
    font-weight: bold;
-   text-align: left;
+   text-align: right;
    margin: 0px auto;
    padding-bottom: 10px;
    display: block; 
@@ -673,7 +685,7 @@ text-align: center;
    font-size: 16px;
    color: inherit;
    width: 100%;
-   height: calc(100% - 70px); height: 375px;
+   height: calc(100% - 70px);
    margin: 0px auto;
    padding: 0px;
    border: 1px solid darkslategray;
