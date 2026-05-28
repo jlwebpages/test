@@ -639,7 +639,7 @@ a.header_link:hover
 
 .contact_image_container
 {
-   text-align: center;
+   text-align: center; display: inline-block;
    padding: 25px;
 }
 
@@ -655,9 +655,9 @@ a.header_link:hover
 
 .contact_email_container
 {
-   text-align: center;
+   text-align: center; display: inline-block;
    padding: 25px;
-   max-width: 50%; min-width: 425px;
+   width: 50%;
 }
 
 .contact_email_subject
