@@ -76,8 +76,8 @@
    document.writeln('   <div class="contact_image_container">');
    document.writeln('      <div style="display: inline-block; position: relative">');
    document.writeln('         <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
-   document.writeln('         <button class="nav_button" style="position: absolute; height: 36px; width: 14px; left:  0px" onclick="update_contact_image(\''+image_file_name+'\',\'left\'); "><div class="nav_left_shape"  style="transform: scale(90%)"></div></button>');
-   document.writeln('         <button class="nav_button" style="position: absolute; height: 36px; width: 14px; right: 0px" onclick="update_contact_image(\''+image_file_name+'\',\'right\');"><div class="nav_right_shape" style="transform: scale(90%)"></div></button>');
+   document.writeln('         <button id="nav_left"  class="nav_button" style="position: absolute; height: 36px; width: 14px; left:  0px" onclick="update_contact_image(\''+image_file_name+'\',\'left\'); "><div class="nav_left_shape"  style="transform: scale(90%)"></div></button>');
+   document.writeln('         <button id="nav_right" class="nav_button" style="position: absolute; height: 36px; width: 14px; right: 0px" onclick="update_contact_image(\''+image_file_name+'\',\'right\');"><div class="nav_right_shape" style="transform: scale(90%)"></div></button>');
    document.writeln('      </div>');
    document.writeln('   </div>');
    document.writeln('');
@@ -95,6 +95,11 @@
    // Perform a hard reload when the device window orientation changes.
 
    window.addEventListener("orientationchange", function() {location.href = self.location.href;});
+
+   // Connect keyboard keys to navigation buttons.
+
+   document.addEventListener("keydown",(event) => {if (event.key == "ArrowLeft")  document.getElementById("nav_left" ).click();});
+   document.addEventListener("keydown",(event) => {if (event.key == "ArrowRight") document.getElementById("nav_right").click();});
 
 </script>
 
@@ -152,70 +157,77 @@ function send_email()
 
 function update_contact_image(image_file_name,direction)
 {
-   alert(image_file_name+"   "+direction);
-/*
-    if About image
-    {
-        if direction is right
-        {
-            assign image_caption_file_name from gallery index 0 and min image number from gallery index 0 
-        }
-        else // direction is left
-        {
-            assign image_caption_file_name from max gallery index and max image number from max gallery index 
-        }
-    }
-    else
-    {
-        get gallery name and image number from image_file_name
+   var about_image_file_name   = "./about/about.jpg";
+   var gallery_index           = -1;
+   var gallery_name            = image_file_name.split("/")[1];
+   var image_caption_file_name = "";
+   var image_number            = image_file_name.replace(/\D/g, "");
+   var min_gallery_index       = 0;
+   var max_gallery_index       = gallery_list.length -2;  // Use -2 instead of -1 to exclude "Sold" gallery.
 
-        if direction is right
-        {
-            if image number is less than max image number from gallery name
+
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (gallery_name == gallery_list[i]["name"])
+      {
+         gallery_index = i;
+
+         break;
+      }
+   }
+
+   if (image_file_name == about_image_file_name)
+   {
+      if (direction == "right")
+      {
+         image_caption_file_name = "./" + gallery_list[min_gallery_index]["name"] + "/" + gallery_list[min_gallery_index]["name"] + "_" + gallery_list[min_gallery_index]["min_image_number"] + "_caption.txt";
+      }
+      else  // direction == "left"
+      {
+         image_caption_file_name = "./" + gallery_list[max_gallery_index]["name"] + "/" + gallery_list[max_gallery_index]["name"] + "_" + gallery_list[max_gallery_index]["max_image_number"] + "_caption.txt";
+      }
+   }
+   else
+   {
+      if (direction == "right")
+      {
+         if (image_number < gallery_list[gallery_index]["max_image_number"])
+         {
+            image_caption_file_name = "./" + gallery_name + "/" + gallery_name + "_" + (parseInt(image_number,10)+1) + "_caption.txt";
+         }
+         else  // image number == gallery_list[gallery_index]["max_image_number"]
+         {
+            if (gallery_index == max_gallery_index)
             {
-                assign image_caption_file_name from gallery name and image number + 1
+               image_caption_file_name = about_image_file_name.replace(".jpg",".txt");
             }
-            else // image number = max image number from gallery name
+            else
             {
-                if gallery index = max gallery index
-                {
-                    assign image_caption_file_name to About
-                }
-                else
-                {
-                    assign image_caption_file_name from next gallery and next gallery min image number 
-                }
+               image_caption_file_name = "./" + gallery_list[gallery_index+1]["name"] + "/" + gallery_list[gallery_index+1]["name"] + "_" + gallery_list[gallery_index+1]["min_image_number"] + "_caption.txt";
             }
-        }
-        else // direction is left
-        {
-            if image number is greater than min image number from gallery name
+         }
+      }
+      else  // direction == "left"
+      {
+         if (image_number > gallery_list[gallery_index]["min_image_number"])
+         {
+            image_caption_file_name = "./" + gallery_name + "/" + gallery_name + "_" + (parseInt(image_number,10)-1) + "_caption.txt";
+         }
+         else  // image number == gallery_list[gallery_index]["min_image_number"]
+         {
+            if (gallery_index == min_gallery_index)
             {
-                assign image_caption_file_name from gallery name and image number - 1
+               image_caption_file_name = about_image_file_name.replace(".jpg",".txt");
             }
-            else // image number = min image number from gallery name
+            else
             {
-                if gallery index = 0
-                {
-                    assign image_caption_file_name to About
-                }
-                else
-                {
-                    assign image_caption_file_name from previous gallery and previous gallery max image number 
-                }
+               image_caption_file_name = "./" + gallery_list[gallery_index-1]["name"] + "/" + gallery_list[gallery_index-1]["name"] + "_" + gallery_list[gallery_index-1]["max_image_number"] + "_caption.txt";
             }
-        }
-    }
+         }
+      }
+   }
 
-    display_contact_page(image_caption_file_name,about_flag) // create copy of load_data_from_file and name it display_contact_page
-
-    // display_contact_page function will
-
-    // if caption file exists, get image title and call href to display contact page 
-
-    // if caption file doesn't exist, call update_contact image();
-    
-*/
+   display_contact_page(image_caption_file_name,true);
 }
 
 </script>

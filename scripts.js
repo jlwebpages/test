@@ -87,6 +87,54 @@ function close_menu()
    return true;
 }
 
+function display_contact_page(image_caption_file_name,display_error)
+{
+   $.ajax
+   (
+   {
+      url: image_caption_file_name,
+
+      dataType: "html",
+
+      success: function(data)
+      {
+         var image_file_name = "";
+         var image_title     = "";
+
+
+         if (image_caption_file_name.includes("about.txt") == true)
+         {
+            image_file_name = image_caption_file_name.replace(".txt",".jpg");
+         }
+         else
+         {
+            image_file_name = image_caption_file_name.replace("_caption.txt",".jpg");
+
+            // Extract image title from image caption data.
+
+            start_after = '<span class="art_title">';
+            end_before  = '</span>';
+
+            start_index = data.indexOf(start_after) + start_after.length;
+            end_index   = data.indexOf(end_before);
+
+            image_title = data.substring(start_index, end_index);
+            image_title = image_title.trim();
+         }
+
+         window.location.href = "contact.html?image_file_name="+image_file_name+"&image_title="+image_title;
+      },
+
+      error: function()
+      {
+         if (display_error == true) alert("Failed to load data from file:\n\n"+image_caption_file_name);
+      },
+   }
+   );
+
+   return true;
+}
+
 function display_gallery_page(gallery_name)
 {
    for (i = 0; i < gallery_list.length; i++)
@@ -654,7 +702,7 @@ function write_header()
       d.writeln('   <a href="art_gallery.html?gallery_index='+i+'" tabindex="-1">'+gallery_list[i]["title"]+'</a>');
    }
    d.writeln('   <a href="about.html"                                                tabindex="-1">About  </a>');
-   d.writeln('   <a href="contact.html?image_file_name=about/about.jpg&image_title=" tabindex="-1">Contact</a>');
+   d.writeln('   <a href="contact.html?image_file_name=./about/about.jpg&image_title=" tabindex="-1">Contact</a>');
    d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block" tabindex="-1"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block" tabindex="-1"><img src="instagram_icon.png" height="16px"                                   ></a>');
@@ -669,7 +717,7 @@ function write_header()
       d.writeln('   <a id="'+gallery_list[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+gallery_list[i]["title"]+'</a>');
    }
    d.writeln('   <a id="about_link"   class="header_link" href="about.html"                                               >About</a>');
-   d.writeln('   <a id="contact_link" class="header_link" href="contact.html?image_file_name=about/about.jpg&image_title=">Contact</a>');
+   d.writeln('   <a id="contact_link" class="header_link" href="contact.html?image_file_name=./about/about.jpg&image_title=">Contact</a>');
    d.writeln('</div>');
    d.writeln('');
    d.writeln('');
