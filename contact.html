@@ -74,7 +74,11 @@
    document.writeln('<div class="contact_container">');
    document.writeln('');
    document.writeln('   <div class="contact_image_container">');
-   document.writeln('      <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
+   document.writeln('      <div style="display: inline-block; position: relative">');
+   document.writeln('         <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
+   document.writeln('         <button class="nav_button" style="position: absolute; height: 36px; width: 14px; left:  0px" onclick="update_contact_image(\''+image_file_name+'\',\'left\'); "><div class="nav_left_shape"  style="transform: scale(90%)"></div></button>');
+   document.writeln('         <button class="nav_button" style="position: absolute; height: 36px; width: 14px; right: 0px" onclick="update_contact_image(\''+image_file_name+'\',\'right\');"><div class="nav_right_shape" style="transform: scale(90%)"></div></button>');
+   document.writeln('      </div>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
@@ -144,6 +148,74 @@ function send_email()
    email += email_address + email_subject + email_text;
 
    window.open(encodeURI(email),"_self");
+}
+
+function update_contact_image(image_file_name,direction)
+{
+   alert(image_file_name+"   "+direction);
+/*
+    if About image
+    {
+        if direction is right
+        {
+            assign image_caption_file_name from gallery index 0 and min image number from gallery index 0 
+        }
+        else // direction is left
+        {
+            assign image_caption_file_name from max gallery index and max image number from max gallery index 
+        }
+    }
+    else
+    {
+        get gallery name and image number from image_file_name
+
+        if direction is right
+        {
+            if image number is less than max image number from gallery name
+            {
+                assign image_caption_file_name from gallery name and image number + 1
+            }
+            else // image number = max image number from gallery name
+            {
+                if gallery index = max gallery index
+                {
+                    assign image_caption_file_name to About
+                }
+                else
+                {
+                    assign image_caption_file_name from next gallery and next gallery min image number 
+                }
+            }
+        }
+        else // direction is left
+        {
+            if image number is greater than min image number from gallery name
+            {
+                assign image_caption_file_name from gallery name and image number - 1
+            }
+            else // image number = min image number from gallery name
+            {
+                if gallery index = 0
+                {
+                    assign image_caption_file_name to About
+                }
+                else
+                {
+                    assign image_caption_file_name from previous gallery and previous gallery max image number 
+                }
+            }
+        }
+    }
+
+    display_contact_page(image_caption_file_name,about_flag) // create copy of load_data_from_file and name it display_contact_page
+
+    // display_contact_page function will
+
+    // if caption file exists, get image title and call href to display contact page 
+
+    // if caption file doesn't exist, call update_contact image();
+    
+*/
 }
 
 </script>

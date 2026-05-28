@@ -73,9 +73,9 @@
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               10px                !important}
    .contact_email_container   {width:                 75%                 !important}
-   #about_header              {display:               block              !important}
-   #contact_header            {display:               block              !important}
-   #gallery_header            {display:               block              !important}
+   #about_header              {display:               block               !important}
+   #contact_header            {display:               block               !important}
+   #gallery_header            {display:               block               !important}
    #one_column_1              {display:               none                !important}
    #two_column_1              {display:               block               !important}
    #two_column_2              {display:               block               !important}
@@ -88,8 +88,8 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
 {
-   .menu_button               {visibility:            visible            !important}
-   .header_links              {display:               none               !important}
+   .menu_button              {visibility:            visible             !important}
+   .header_links             {display:               none                !important}
    .landing_title            {font-size:             46px                !important}
    .landing_title            {letter-spacing:        2px                 !important}
    .landing_enter_button     {font-size:             16px                !important}
