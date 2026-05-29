@@ -32,8 +32,11 @@ function adjust_contact_email_message_width()
       {
          // We're in portrait mode.
 
-         document.getElementById("contact_email_container").style.minWidth = "425px";
-         document.getElementById("contact_email_container").style.width = new_width + "px";
+         //document.getElementById("contact_email_subject").style.minWidth = "425px";
+         //document.getElementById("contact_email_subject").style.width = new_width + "px";
+
+         document.getElementById("contact_email_message").style.minWidth = "425px";
+         document.getElementById("contact_email_message").style.width = new_width + "px";
       }
    }
 }
