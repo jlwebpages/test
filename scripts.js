@@ -13,9 +13,6 @@ const gallery_list = [{name: "featured_work",  title: "Gallery",        min_imag
 
 function adjust_contact_email_message_width()
 {
-   var scale = 0;
-
-
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
    if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
@@ -40,6 +37,8 @@ function adjust_contact_email_message_width()
 
          document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = new_width + "px";
+
+         document.getElementById("image_container").style.width = new_width + "px";
       }
    }
 }
