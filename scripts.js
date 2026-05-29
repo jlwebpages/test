@@ -22,7 +22,7 @@ function adjust_image_container_and_contact_email_message_widths()
    scale         = contact_image.height / contact_image.naturalHeight;
    new_width     = scale * contact_image.naturalWidth;
 
-   document.getElementById("contact_image_container").style.width = new_width + "px";
+   document.getElementById("image_container").style.width = new_width + "px";
 
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
