@@ -641,6 +641,7 @@ a.header_link:hover
 {
    text-align: center;
    padding: 25px;
+   display: inline-block;
 }
 
 .contact_image
@@ -658,6 +659,7 @@ a.header_link:hover
    text-align: center;
    padding: 25px;
    width: 50%;
+   display: inline-block;
 }
 
 .contact_email_subject
