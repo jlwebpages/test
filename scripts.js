@@ -11,7 +11,7 @@ const gallery_list = [{name: "featured_work",  title: "Gallery",        min_imag
                       {name: "sold",           title: "Sold",           min_image_number: 1, max_image_number: 19, new_list: [0]}]
 
 
-function adjust_contact_email_message_width()
+function adjust_image_container_and_contact_email_message_widths()
 {
    var contact_image = null;
    var new_width     = 0;
