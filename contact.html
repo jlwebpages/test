@@ -15,12 +15,13 @@
 
 <script>
 
-   var email_subject      = "Subject:&nbsp;&nbsp;";
-   var html_file_name     = "";
-   var html_path_segments = "";
-   var image_file_name    = "";
-   var image_title        = "";
-   var URL_parameters     = new URLSearchParams(window.location.search);
+   var email_message_placeholder = "Interested in this piece? To inquire about pricing or if you have any other questions, just type your message here and send the email. I will respond promptly.";
+   var email_subject             = "Subject:&nbsp;&nbsp;";
+   var html_file_name            = "";
+   var html_path_segments        = "";
+   var image_file_name           = "";
+   var image_title               = "";
+   var URL_parameters            = new URLSearchParams(window.location.search);
 
 
    image_file_name    = URL_parameters.get("image_file_name");
@@ -65,6 +66,8 @@
       email_subject += image_title;
    }
 
+   if (image_title == "") email_message_placeholder = "Type your message here...";
+
    write_header();
 
    document.getElementById("contact_link").className = "clicked_header_link";
@@ -75,16 +78,16 @@
    document.writeln('<div class="contact_container">');
    document.writeln('');
    document.writeln('   <div class="contact_image_container">');
-   document.writeln('      <div id="image_container" style="display: inline-block">');
+   //document.writeln('      <div id="image_container" style="display: inline-block">');
    document.writeln('         <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
-   document.writeln('      </div>');
+   //document.writeln('      </div>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
    document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
-   document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="Type your message here..."></textarea>');
+   document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="'+email_message_placeholder+'"></textarea>');
    document.writeln('      <br>');
-   document.writeln('      <span class="email_send_button" onClick="send_contact_email()">Email</span>');
+   document.writeln('      <span class="email_send_button" onClick="send_contact_email()">Send</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
