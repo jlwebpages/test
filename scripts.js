@@ -22,6 +22,8 @@ function adjust_contact_email_message_width()
    scale         = contact_image.height / contact_image.naturalHeight;
    new_width     = scale * contact_image.naturalWidth;
 
+   document.getElementById("image_container").style.width = new_width + "px";
+
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
    if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
@@ -32,8 +34,8 @@ function adjust_contact_email_message_width()
       {
          // We're in portrait mode.
 
-         //document.getElementById("contact_email_subject").style.minWidth = "425px";
-         //document.getElementById("contact_email_subject").style.width = new_width + "px";
+         document.getElementById("contact_email_subject").style.minWidth = "425px";
+         document.getElementById("contact_email_subject").style.width = new_width + "px";
 
          document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = new_width + "px";
