@@ -120,7 +120,7 @@ function close_menu()
    return true;
 }
 
-function display_contact_page(image_caption_file_name,display_error)
+function display_contact_page(image_caption_file_name,direction,display_error)
 {
    $.ajax
    (
@@ -160,7 +160,7 @@ function display_contact_page(image_caption_file_name,display_error)
 
       error: function()
       {
-         if (display_error == true) alert("Failed to load data from file:\n\n"+image_caption_file_name);
+         update_contact_image(image_caption_file_name.replace("_caption.txt",".jgp"),direction);
       },
    }
    );
@@ -792,7 +792,7 @@ function update_contact_image(image_file_name,direction)
       }
    }
 
-   display_contact_page(image_caption_file_name,true);
+   display_contact_page(image_caption_file_name,direction,true);
 }
 
 function write_footer()
