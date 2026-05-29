@@ -13,16 +13,8 @@ const gallery_list = [{name: "featured_work",  title: "Gallery",        min_imag
 
 function adjust_contact_email_message_width()
 {
-   var contact_image = null;
-   var new_width     = 0;
-   var scale         = 0;
+   var scale = 0;
 
-
-   contact_image = document.querySelector("#contact_image");
-   scale         = contact_image.height / contact_image.naturalHeight;
-   new_width     = scale * contact_image.naturalWidth;
-
-   document.getElementById("image_container").style.width = new_width + "px";
 
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
@@ -32,7 +24,16 @@ function adjust_contact_email_message_width()
 
       if (window.innerHeight >= window.innerWidth)
       {
+         var contact_image = null;
+         var new_width     = 0;
+         var scale         = 0;
+
+
          // We're in portrait mode.
+
+         contact_image = document.querySelector("#contact_image");
+         scale         = contact_image.height / contact_image.naturalHeight;
+         new_width     = scale * contact_image.naturalWidth;
 
          document.getElementById("contact_email_subject").style.minWidth = "425px";
          document.getElementById("contact_email_subject").style.width = new_width + "px";
