@@ -25,8 +25,8 @@
    .art_image_link_container  {margin-top:            0px                !important}
    .contact_container         {flex-direction:        column             !important}
    .contact_container         {justify-content:       flex-start         !important}
-   .contact_image_container   {padding:               10px               !important}
-   .contact_email_container   {padding:               10px               !important}
+   .contact_image_container   {padding:               15px               !important}
+   .contact_email_container   {padding:               15px               !important}
    .contact_email_container   {width:                 auto               !important}
    .contact_email_message     {height:                300px              !important}
    #about_header              {display:               block              !important}
@@ -69,9 +69,9 @@
    .art_gallery               {gap:                   35px                !important}
    .art_image_link_container  {margin-top:            15px                !important}
    .art_image_link_container  {margin-bottom:         15px                !important}
-   .contact_image_container   {padding:               10px                !important}
+   .contact_image_container   {padding:               15px                !important}
    .contact_image             {max-width:             500px               !important}
-   .contact_email_container   {padding:               10px                !important}
+   .contact_email_container   {padding:               15px                !important}
    .contact_email_container   {width:                 75%                 !important}
    #about_header              {display:               block               !important}
    #contact_header            {display:               block               !important}
