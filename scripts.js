@@ -27,7 +27,20 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 
    document.getElementById("image_container").style.width = contact_image_width + "px";
 
+   // Calculate contact_email_message text area height.
 
+   contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
+   //contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
+   contact_email_container_element_heights += document.getElementById("contact_email_send_button").offsetHeight;
+
+   if (document.getElementById("contact_text") != null)
+   {
+      contact_email_container_element_heights += document.getElementById("contact_text").offsetHeight;
+   }
+
+   contact_email_container_element_heights += 4;  // Fine tune display.
+
+   //document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
 
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
