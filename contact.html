@@ -31,7 +31,7 @@
    html_path_segments = window.location.pathname.split('/');
    html_file_name     = html_path_segments[html_path_segments.length - 1];
 
-   if (image_file_name == null)
+   if ( (image_file_name == null) || (image_file_name == "") )
    {
       alert("Error:\n\nImage File Name not passed to " + html_file_name);
 
@@ -59,16 +59,14 @@
       }
    }
 
+   email_subject += image_title;
+
    if (image_title == "") about_contact = true;
 
    if (about_contact == true)
    {
-      email_subject             += "Darlene Laguna Art";
-      email_message_placeholder  = "Type your message here...";
-   }
-   else
-   {
-      email_subject += image_title;
+      email_subject             = "Darlene Laguna Art";
+      email_message_placeholder = "Type your message here...";
    }
 
    write_header();

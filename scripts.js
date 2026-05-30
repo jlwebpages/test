@@ -27,7 +27,7 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 
    document.getElementById("image_container").style.width = contact_image_width + "px";
 
-   // Calculate contact_email_message text area height.
+   // Set contact_email_message text area height.
 
    contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
    //contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
@@ -38,9 +38,11 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       contact_email_container_element_heights += document.getElementById("contact_text").offsetHeight;
    }
 
-   contact_email_container_element_heights += 4;  // Fine tune display.
+   contact_email_container_element_heights += 4;  // Fine tune.
 
    document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
+
+   // Set contact_email_message text area width if we're running on an iPad in portrait orientation.
 
    if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
    {
@@ -48,13 +50,25 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 
       if (window.innerHeight >= window.innerWidth)
       {
-         // We're in portrait mode.
+         // We're in portrait orientation.
+
+         if (document.getElementById("contact_text") != null)
+         {
+            document.getElementById("contact_text").style.minWidth = "425px";
+            document.getElementById("contact_text").style.width = contact_image_width + "px";
+         }
 
          document.getElementById("contact_email_subject").style.minWidth = "425px";
          document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
 
          document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = contact_image_width + "px";
+
+         //document.getElementById("contact_email_checkbox_label").style.minWidth = "425px";
+         //document.getElementById("contact_email_checkbox_label").style.width = contact_image_width + "px";
+
+         document.getElementById("contact_email_send_button").style.minWidth = "425px";
+         document.getElementById("contact_email_send_button").style.width = contact_image_width + "px";
       }
    }
 }
