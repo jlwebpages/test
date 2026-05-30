@@ -660,6 +660,14 @@ a.header_link:hover
    padding: 25px;
    width: 50%;
 }
+.contact_text
+{
+   text-align: left;
+   line-height: 20px;
+   margin: 0px auto;
+   padding-bottom: 20px;
+   display: block; 
+}
 
 .contact_email_subject
 {
