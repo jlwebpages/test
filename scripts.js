@@ -15,15 +15,15 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 {
    var contact_email_container_element_heights = 0;
    var contact_image                           = null;
-   var contact_image_height                    = 0;
    var contact_image_width                     = 0;
+   var image_container_height                  = 0;
    var scale                                   = 0;
 
 
-   contact_image        = document.querySelector("#contact_image");
-   scale                = contact_image.height / contact_image.naturalHeight;
-   contact_image_height = scale * contact_image.naturalHeight;
-   contact_image_width  = scale * contact_image.naturalWidth;
+   contact_image          = document.querySelector("#contact_image");
+   scale                  = contact_image.height / contact_image.naturalHeight;
+   contact_image_width    = scale * contact_image.naturalWidth;
+   image_container_height = document.getElementById("image_container").offsetHeight;
 
     // Set image_container width equal to contact_image width.
 
@@ -41,8 +41,8 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    }
 
    contact_email_container_element_heights += 4;  // Fine tune display.
-
-   document.getElementById("contact_email_message").style.height = contact_image_height - contact_email_container_element_heights + "px";
+//alert((image_container_height-contact_email_container_element_heights));
+   document.getElementById("contact_email_message").style.height = (image_container_height-contact_email_container_element_heights) + "px";
 
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
