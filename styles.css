@@ -692,23 +692,22 @@ a.header_link:hover
    resize: vertical;
 }
 
-.email_send_button
+.contact_email_send_button
 {
    cursor: pointer;
    font-family: Arial, sans-serif;
-   font-size: 12px;
+   font-size: 13px;
    font-weight: bold;
    color: white;
-   letter-spacing: .5px;
-   line-height: 12px;
+   letter-spacing: 1px;
    background-color: black;
    opacity: 75%;
    border-radius: 2px;
    border: 0px;
-   margin: 10px auto 10px auto;
-   padding: 6px;
-   display: inline-block;
+   margin: 0px auto;
+   padding: 4px;
 }
+
 .new_tag
 {
    position: absolute;

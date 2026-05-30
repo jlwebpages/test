@@ -10,7 +10,8 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<body class="body" onload="set_size_of_contact_image_container_and_contact_email_textarea();" oncontextmenu="return false;">
+<!--<body class="body" onload="set_size_of_contact_image_container_and_contact_email_textarea();" oncontextmenu="return false;">-->
+<body class="body" onload="set_size_of_contact_image_container_and_contact_email_textarea();">
 
 
 <script>
@@ -92,8 +93,8 @@
    }
    document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
    document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="'+email_message_placeholder+'"></textarea>');
-   document.writeln('      <br>');
-   document.writeln('      <span id="contact_email_send_button" class="email_send_button" onclick="send_contact_email()">Send</span>');
+   //document.writeln('      <br>');
+   document.writeln('      <span id="contact_email_send_button" class="contact_email_send_button" onclick="send_contact_email()">Send</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
