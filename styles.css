@@ -699,6 +699,7 @@ a.header_link:hover
   border: 0px;
   margin: 0px;
   padding: 0px;
+  display: block;
 }
 
 .contact_email_checkbox_label
@@ -706,7 +707,7 @@ a.header_link:hover
    display: flex;
    align-items: center;
    padding-top: 5px;
-   padding-bottom: 5px;
+   padding-bottom: 10px;
 }
 
 .contact_email_send_button
