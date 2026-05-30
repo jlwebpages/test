@@ -741,7 +741,7 @@ function send_contact_email()
 
    email_text += document.getElementById("contact_email_message").value;
 
-   if (document.getElementById("contact_email_checkbox").checked == true) email_text += "\n\nAdd me to email list.";
+   if (document.getElementById("contact_email_checkbox").checked == true) email_text += "\n\nAdd me to your email list.";
 
    email += email_address + email_subject + email_text;
 
