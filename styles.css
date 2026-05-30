@@ -661,6 +661,15 @@ a.header_link:hover
    width: 50%;
 }
 
+.contact_text
+{
+   text-align: left;
+   line-height: 20px;
+   margin: 0px auto;
+   padding-bottom: 20px;
+   display: block; 
+}
+
 .contact_email_subject
 {
    font-weight: bold;
@@ -676,7 +685,7 @@ a.header_link:hover
    font-size: 16px;
    color: inherit;
    width: 100%;
-   height: calc(100% - 70px);
+   height: 100%;
    margin: 0px auto;
    padding: 0px;
    border: 1px solid darkslategray;
@@ -684,22 +693,37 @@ a.header_link:hover
    resize: vertical;
 }
 
-.email_send_button
+.contact_email_checkbox
+{
+  accent-color: black;
+  opacity: 75%;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.contact_email_checkbox_label
+{
+   display: flex;
+   align-items: center;
+   padding-top: 5px;
+   padding-bottom: 10px;
+}
+
+.contact_email_send_button
 {
    cursor: pointer;
    font-family: Arial, sans-serif;
-   font-size: 12px;
+   font-size: 13px;
    font-weight: bold;
    color: white;
-   letter-spacing: .5px;
-   line-height: 12px;
+   letter-spacing: 1px;
    background-color: black;
    opacity: 75%;
    border-radius: 2px;
    border: 0px;
-   margin: 10px auto 10px auto;
-   padding: 6px;
-   display: inline-block;
+   margin: 0px auto;
+   padding: 4px;
 }
 .new_tag
 {
