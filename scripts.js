@@ -23,8 +23,7 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 
    contact_image       = document.querySelector("#contact_image");
    scale               = contact_image.height / contact_image.naturalHeight;
-   //contact_image_width = scale * contact_image.naturalWidth;
-   contact_image_width = contact_image.width;
+   contact_image_width = scale * contact_image.naturalWidth;
 
    document.getElementById("image_container").style.width = contact_image_width + "px";
 
