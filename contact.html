@@ -92,6 +92,14 @@
    document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
    document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="'+email_message_placeholder+'"></textarea>');
    //document.writeln('      <br>');
+
+   document.writeln('      <label for="contact_email_checkbox" id="contact_email_checkbox_label" class="contact_email_checkbox_label">');
+   document.writeln('         <input id="contact_email_checkbox" type=checkbox class="contact_email_checkbox">&nbsp;&nbsp;Add me to email list');
+   document.writeln('      </label>');
+
+
+
+
    document.writeln('      <span id="contact_email_send_button" class="contact_email_send_button" onclick="send_contact_email()">Send</span>');
    document.writeln('   </div>');
    document.writeln('');

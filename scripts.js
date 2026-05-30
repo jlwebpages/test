@@ -30,7 +30,7 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    // Set contact_email_message text area height.
 
    contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
-   //contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
+   contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
    contact_email_container_element_heights += document.getElementById("contact_email_send_button").offsetHeight;
 
    if (document.getElementById("contact_text") != null)
@@ -64,8 +64,8 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
          document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = contact_image_width + "px";
 
-         //document.getElementById("contact_email_checkbox_label").style.minWidth = "425px";
-         //document.getElementById("contact_email_checkbox_label").style.width = contact_image_width + "px";
+         document.getElementById("contact_email_checkbox_label").style.minWidth = "425px";
+         document.getElementById("contact_email_checkbox_label").style.width = contact_image_width + "px";
       }
    }
 }
