@@ -690,6 +690,7 @@ a.header_link:hover
    border: 1px solid darkslategray;
    outline: none;
    resize: vertical;
+   display: block;
 }
 
 .contact_email_send_button
