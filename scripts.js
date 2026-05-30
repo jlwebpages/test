@@ -11,37 +11,19 @@ const gallery_list = [{name: "featured_work",  title: "Gallery",        min_imag
                       {name: "sold",           title: "Sold",           min_image_number: 1, max_image_number: 19, new_list: [0]}]
 
 
-function set_size_of_contact_image_container_and_contact_email_textarea()
+function adjust_image_container_and_contact_email_message_widths()
 {
-   var contact_email_container_element_heights = 0;
-   var contact_image                           = null;
-   var contact_image_width                     = 0;
-   var scale                                   = 0;
+   var contact_image = null;
+   var new_width     = 0;
+   var scale         = 0;
 
 
-   // Set image_container width equal to contact_image width.
+   contact_image = document.querySelector("#contact_image");
+   scale         = contact_image.height / contact_image.naturalHeight;
+   new_width     = scale * contact_image.naturalWidth;
 
-   contact_image       = document.querySelector("#contact_image");
-   scale               = contact_image.height / contact_image.naturalHeight;
-   contact_image_width = scale * contact_image.naturalWidth;
+   document.getElementById("image_container").style.width = new_width + "px";
 
-   document.getElementById("image_container").width = contact_image_width + "px";
-
-   // Calculate contact_email_message text area height.
-
-   contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
-   //contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
-   contact_email_container_element_heights += document.getElementById("contact_email_send_button").offsetHeight;
-
-   if (document.getElementById("contact_text") != null)
-   {
-      contact_email_container_element_heights += document.getElementById("contact_text").offsetHeight;
-   }
-
-   contact_email_container_element_heights += 4;  // Fine tune display.
-
-   document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
- 
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
    if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
@@ -52,20 +34,11 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       {
          // We're in portrait mode.
 
-      if (document.getElementById("contact_text") != null)
-         {
-            document.getElementById("contact_text").style.minWidth = "425px";
-            document.getElementById("contact_text").style.width = contact_image_width + "px";
-         }
-
          document.getElementById("contact_email_subject").style.minWidth = "425px";
-         document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
+         document.getElementById("contact_email_subject").style.width = new_width + "px";
 
          document.getElementById("contact_email_message").style.minWidth = "425px";
-         document.getElementById("contact_email_message").style.width = contact_image_width + "px";
-
-         document.getElementById("contact_email_checkbox_label").style.minWidth = "425px";
-         document.getElementById("contact_email_checkbox_label").style.width = contact_image_width + "px";
+         document.getElementById("contact_email_message").style.width = new_width + "px";
       }
    }
 }
