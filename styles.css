@@ -665,6 +665,7 @@ a.header_link:hover
 {
    text-align: left;
    line-height: 20px;
+   margin: 0px auto;
    padding-bottom: 20px;
    display: block; 
 }
@@ -699,12 +700,11 @@ a.header_link:hover
   border: 0px;
   margin: 0px;
   padding: 0px;
-  display: block;
 }
 
 .contact_email_checkbox_label
 {
-   display: block;
+   display: flex;
    align-items: center;
    padding-top: 5px;
    padding-bottom: 10px;
