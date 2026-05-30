@@ -19,15 +19,15 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    var scale                                   = 0;
 
 
-   // Set image_container width equal to contact_image width.
-
    contact_image       = document.querySelector("#contact_image");
    scale               = contact_image.height / contact_image.naturalHeight;
    contact_image_width = scale * contact_image.naturalWidth;
 
+   // Set image_container width equal to contact_image width.
+
    document.getElementById("image_container").style.width = contact_image_width + "px";
 
-   // Set contact_email_message text area height.
+   // Calculate and set contact_email_message text area height.
 
    contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
    contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
@@ -740,6 +740,8 @@ function send_contact_email()
    if (image_title != "") email_subject += " - " + image_title;
 
    email_text += document.getElementById("contact_email_message").value;
+
+   if (document.getElementById("contact_email_checkbox").checked == true) email_text += "\n\nAdd me to email list.";
 
    email += email_address + email_subject + email_text;
 
