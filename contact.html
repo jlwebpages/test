@@ -10,20 +10,17 @@
    <script language="JavaScript" src=scripts.js></script>
 </head>
 
-<!--<body class="body" onload="set_size_of_contact_image_container_and_contact_email_textarea();" oncontextmenu="return false;">-->
-<body class="body" onload="set_size_of_contact_image_container_and_contact_email_textarea();">
+<body class="body" onload="set_size_of_contact_image_container_and_contact_email_textarea();" oncontextmenu="return false;">
 
 
 <script>
 
-   var about_contact             = false;
-   var email_message_placeholder = "Interested in this piece? To inquire about pricing or if you have any other questions, just type your message here and send the email. I will respond promptly.";
-   var email_subject             = "Subject:&nbsp;&nbsp;";
-   var html_file_name            = "";
-   var html_path_segments        = "";
-   var image_file_name           = "";
-   var image_title               = "";
-   var URL_parameters            = new URLSearchParams(window.location.search);
+   var email_subject      = "Subject:&nbsp;&nbsp;";
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var image_file_name    = "";
+   var image_title        = "";
+   var URL_parameters     = new URLSearchParams(window.location.search);
 
 
    image_file_name    = URL_parameters.get("image_file_name");
@@ -59,12 +56,9 @@
       }
    }
 
-   if (image_title == "") about_contact = true;
-
-   if (about_contact == true)
+   if (image_title == "")
    {
-      email_subject             += "Darlene Laguna Art";
-      email_message_placeholder  = "Type your message here...";
+      email_subject += "Darlene Laguna Art";
    }
    else
    {
@@ -87,17 +81,10 @@
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('   <div class="contact_email_container">');
-   if (about_contact == true)
-   {
-      //document.writeln('      <span id="contact_text" class="contact_text">Use the form below for more information and details about purchasing, pricing, and framing options, or to view in person if you are in the Orange County area. All work comes ready to hang, and detailed shots can be provided for any piece you\'re interested in. Thank you for your interest. I look forward to hearing from you.</span>');
-   }
    document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
-   document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="'+email_message_placeholder+'"></textarea>');
-//   document.writeln('      <label for="contact_email_checkbox" id="contact_email_checkbox_label" class="contact_email_checkbox_label">');
-//   document.writeln('         <input id="contact_email_checkbox" type=checkbox class="contact_email_checkbox">&nbsp;&nbsp;Add me to email list');
-//   document.writeln('      </label>');
+   document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="Type your message here..."></textarea>');
    document.writeln('      <br>');
-   document.writeln('      <span id="contact_email_send_button" class="contact_email_send_button" onClick="send_contact_email()">Send</span>');
+   document.writeln('      <span id="contact_email_send_button" class="email_send_button" onClick="send_contact_email()">Email</span>');
    document.writeln('   </div>');
    document.writeln('');
    document.writeln('</div>');
