@@ -41,7 +41,7 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    contact_email_container_element_heights += 4;  // Fine tune display.
 
    document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
-   document.getElementById("image_container").style.width = contact_image_width + "px";
+   //document.getElementById("image_container").style.width = contact_image_width + "px";
    // If running on an iPad in portrait mnode, set contact_email_message width equal to contact_image width.
 
    if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
