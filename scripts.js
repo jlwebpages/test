@@ -38,7 +38,7 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       contact_email_container_element_heights += document.getElementById("contact_text").offsetHeight;
    }
 
-   contact_email_container_element_heights += 6;  // Fine tune.
+   contact_email_container_element_heights += 8;  // Fine tune.
 
    document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
 
