@@ -67,8 +67,8 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
          //document.getElementById("contact_email_checkbox_label").style.minWidth = "425px";
          //document.getElementById("contact_email_checkbox_label").style.width = contact_image_width + "px";
 
-         document.getElementById("contact_email_send_button").style.minWidth = "425px";
-         document.getElementById("contact_email_send_button").style.width = contact_image_width + "px";
+         //document.getElementById("contact_email_send_button").style.minWidth = "425px";
+         //document.getElementById("contact_email_send_button").style.width = contact_image_width + "px";
       }
    }
 }
