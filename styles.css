@@ -704,7 +704,7 @@ a.header_link:hover
 
 .contact_email_checkbox_label
 {
-   display: flex;
+   display: block;
    align-items: center;
    padding-top: 5px;
    padding-bottom: 10px;
