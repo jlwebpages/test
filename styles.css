@@ -684,7 +684,7 @@ a.header_link:hover
    font-size: 16px;
    color: inherit;
    width: 100%;
-   height: calc(100% - 70px);
+   height: 100%;
    margin: 0px auto;
    padding: 0px;
    border: 1px solid darkslategray;
@@ -706,6 +706,7 @@ a.header_link:hover
    border: 0px;
    margin: 0px auto;
    padding: 4px;
+   display:inline-block;
 }
 
 .new_tag
