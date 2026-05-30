@@ -52,11 +52,20 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       {
          // We're in portrait mode.
 
+      if (document.getElementById("contact_text") != null)
+         {
+            document.getElementById("contact_text").style.minWidth = "425px";
+            document.getElementById("contact_text").style.width = contact_image_width + "px";
+         }
+
          document.getElementById("contact_email_subject").style.minWidth = "425px";
          document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
 
          document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = contact_image_width + "px";
+
+         document.getElementById("contact_email_checkbox_label").style.minWidth = "425px";
+         document.getElementById("contact_email_checkbox_label").style.width = contact_image_width + "px";
       }
    }
 }

@@ -706,7 +706,7 @@ a.header_link:hover
    display: flex;
    align-items: center;
    padding-top: 5px;
-   padding-bottom: 0px;
+   padding-bottom: 5px;
 }
 
 .contact_email_send_button
