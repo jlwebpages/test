@@ -23,6 +23,14 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    scale               = contact_image.height / contact_image.naturalHeight;
    contact_image_width = scale * contact_image.naturalWidth;
 
+
+   if (contact_image_width < 425)
+   {
+      contact_image_width = 425;
+
+      document.getElementById("contact_image").style.width = contact_image_width + "px";
+   }
+
    // Set image_container width equal to contact_image width.
 
    document.getElementById("image_container").style.width = contact_image_width + "px";
@@ -54,17 +62,17 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 
          if (document.getElementById("contact_text") != null)
          {
-            document.getElementById("contact_text").style.minWidth = "425px";
+            //document.getElementById("contact_text").style.minWidth = "425px";
             document.getElementById("contact_text").style.width = contact_image_width + "px";
          }
 
-         document.getElementById("contact_email_subject").style.minWidth = "425px";
+         //document.getElementById("contact_email_subject").style.minWidth = "425px";
          document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
 
-         document.getElementById("contact_email_message").style.minWidth = "425px";
+         //document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = contact_image_width + "px";
 
-         document.getElementById("checkbox_container").style.minWidth = "425px";
+         //document.getElementById("checkbox_container").style.minWidth = "425px";
          document.getElementById("checkbox_container").style.width = contact_image_width + "px";
       }
    }
