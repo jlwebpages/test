@@ -17,6 +17,7 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    var contact_image                           = null;
    var contact_image_width                     = 0;
    var scale                                   = 0;
+   var viewport_width                          = window.innerWidth;
 
 
    contact_image       = document.querySelector("#contact_image");
@@ -52,14 +53,17 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       {
          // We're in portrait orientation.
 
-         if (contact_image_width < 425)
+         if ( (contact_image_width/viewport_width) < .75)
          {
-            contact_image_width = 425;
+            contact_image_width = .75 * viewport_width;
 
             document.getElementById("image_container").style.width   = contact_image_width + "px";
             document.getElementById("contact_image").style.width     = contact_image_width + "px";
             document.getElementById("contact_image").style.maxHeight = "none";
          }
+
+
+
 
          if (document.getElementById("contact_text") != null)
          {
