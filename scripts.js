@@ -23,15 +23,6 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    scale               = contact_image.height / contact_image.naturalHeight;
    contact_image_width = scale * contact_image.naturalWidth;
 
-
-   if (contact_image_width < 425)
-   {
-      contact_image_width = 425;
-
-      document.getElementById("contact_image").style.width     = contact_image_width + "px";
-      document.getElementById("contact_image").style.maxHeight = "none";
-   }
-
    // Set image_container width equal to contact_image width.
 
    document.getElementById("image_container").style.width = contact_image_width + "px";
@@ -60,6 +51,14 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       if (window.innerHeight >= window.innerWidth)
       {
          // We're in portrait orientation.
+
+         if (contact_image_width < 425)
+         {
+            contact_image_width = 425;
+
+            document.getElementById("contact_image").style.width     = contact_image_width + "px";
+            document.getElementById("contact_image").style.maxHeight = "none";
+         }
 
          if (document.getElementById("contact_text") != null)
          {

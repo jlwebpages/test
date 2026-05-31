@@ -26,6 +26,7 @@
    .contact_container         {flex-direction:        column             !important}
    .contact_container         {justify-content:       flex-start         !important}
    .contact_image_container   {padding:               15px               !important}
+   .contact_image             {width:                 100%               !important}
    .contact_email_container   {padding:               15px               !important}
    .contact_email_container   {width:                 auto               !important}
    .contact_email_message     {height:                300px              !important}
