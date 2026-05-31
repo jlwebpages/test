@@ -11,71 +11,6 @@ const gallery_list = [{name: "featured_work",  title: "Gallery",        min_imag
                       {name: "sold",           title: "Sold",           min_image_number: 1, max_image_number: 19, new_list: [0]}]
 
 
-function set_size_of_contact_image_container_and_contact_email_textarea()
-{
-   var contact_email_container_element_heights = 0;
-   var contact_image                           = null;
-   var contact_image_width                     = 0;
-   var scale                                   = 0;
-
-
-   contact_image       = document.querySelector("#contact_image");
-   scale               = contact_image.height / contact_image.naturalHeight;
-   contact_image_width = scale * contact_image.naturalWidth;
-
-   // Set image_container width equal to contact_image width.
-
-   document.getElementById("image_container").style.width = contact_image_width + "px";
-
-   // Calculate and set contact_email_message text area height.
-
-   contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
-   contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
-   contact_email_container_element_heights += document.getElementById("contact_email_send_button").offsetHeight;
-
-   if (document.getElementById("contact_text") != null)
-   {
-      contact_email_container_element_heights += document.getElementById("contact_text").offsetHeight;
-   }
-
-   contact_email_container_element_heights += 8;  // Fine tune.
-
-   document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
-
-   // Set contact_email_message text area width if we're running on an iPad in portrait orientation.
-
-   if (window.innerHeight >= window.innerWidth)
-   {
-      // We're in portrait orientation.
-
-      if (is_iPad() == true)
-      {
-         if ( (contact_image_width/window.innerWidth) < .70)
-         {
-            contact_image_width = .70 * window.innerWidth;
-
-            document.getElementById("image_container").style.width     = contact_image_width + "px";
-            document.getElementById("contact_image"  ).style.width     = contact_image_width + "px";
-            document.getElementById("contact_image"  ).style.maxHeight = "none";
-         }
-
-         if (document.getElementById("contact_text") != null)
-         {
-            document.getElementById("contact_text").style.width = contact_image_width + "px";
-         }
-
-         document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
-         document.getElementById("contact_email_message").style.width = contact_image_width + "px";
-         document.getElementById("checkbox_container"   ).style.width = contact_image_width + "px";
-      }
-      else if (is_mobile() == true)
-      {
-         document.getElementById("nav_left").style.top  = ( document.getElementById("contact_image").getBoundingClientRect().top + (contact_image.height/2) ) + "px";
-         document.getElementById("nav_right").style.top = ( document.getElementById("contact_image").getBoundingClientRect().top + (contact_image.height/2) ) + "px";
-      }
-   }
-}
-
 function check_if_image_exists(gallery_name,image_number,min_image_number,max_image_number,direction)
 {
    $.ajax
@@ -772,6 +707,74 @@ function send_contact_email()
    email += email_address + email_subject + email_text;
 
    window.open(encodeURI(email),"_self");
+}
+
+function set_size_and_position_of_contact_page_elements()
+{
+   var contact_email_container_element_heights = 0;
+   var contact_image                           = null;
+   var contact_image_width                     = 0;
+   var scale                                   = 0;
+
+
+   contact_image       = document.querySelector("#contact_image");
+   scale               = contact_image.height / contact_image.naturalHeight;
+   contact_image_width = scale * contact_image.naturalWidth;
+
+   // Set image_container width equal to contact_image width.
+
+   document.getElementById("image_container").style.width = contact_image_width + "px";
+
+   // Calculate and set contact_email_message text area height.
+
+   contact_email_container_element_heights  = document.getElementById("contact_email_subject").offsetHeight;
+   contact_email_container_element_heights += document.getElementById("contact_email_checkbox_label").offsetHeight;
+   contact_email_container_element_heights += document.getElementById("contact_email_send_button").offsetHeight;
+
+   if (document.getElementById("contact_text") != null)
+   {
+      contact_email_container_element_heights += document.getElementById("contact_text").offsetHeight;
+   }
+
+   contact_email_container_element_heights += 8;  // Fine tune.
+
+   document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
+
+   if (window.innerHeight >= window.innerWidth)
+   {
+      // We're in portrait orientation.
+
+      if (is_iPad() == true)
+      {
+
+         // Ensure contact_image width and email_messasge_container elements are at least 70%.
+
+         if ( (contact_image_width/window.innerWidth) < .70)
+         {
+            contact_image_width = .70 * window.innerWidth;
+
+            document.getElementById("image_container").style.width     = contact_image_width + "px";
+            document.getElementById("contact_image"  ).style.width     = contact_image_width + "px";
+            document.getElementById("contact_image"  ).style.maxHeight = "none";
+         }
+
+         if (document.getElementById("contact_text") != null)
+         {
+            document.getElementById("contact_text").style.width = contact_image_width + "px";
+         }
+
+         document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
+         document.getElementById("contact_email_message").style.width = contact_image_width + "px";
+         document.getElementById("checkbox_container"   ).style.width = contact_image_width + "px";
+      }
+      else if (is_mobile() == true)
+      {
+         // Set vertical position of left and right navigation buttons to center of comtact_image.
+
+         document.getElementById("nav_left").style.top  = ( document.getElementById("contact_image").getBoundingClientRect().top + (contact_image.height/2) ) + "px";
+         document.getElementById("nav_right").style.top = ( document.getElementById("contact_image").getBoundingClientRect().top + (contact_image.height/2) ) + "px";
+      }
+   }
 }
 
 function update_contact_image(image_file_name,direction)
