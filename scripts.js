@@ -53,32 +53,23 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       {
          // We're in portrait orientation.
 
-         if ( (contact_image_width/viewport_width) < .75)
+         if ( (contact_image_width/viewport_width) < .7)
          {
-            contact_image_width = .75 * viewport_width;
+            contact_image_width = .7 * viewport_width;
 
             document.getElementById("image_container").style.width   = contact_image_width + "px";
             document.getElementById("contact_image").style.width     = contact_image_width + "px";
             document.getElementById("contact_image").style.maxHeight = "none";
          }
 
-
-
-
          if (document.getElementById("contact_text") != null)
          {
-            //document.getElementById("contact_text").style.minWidth = "425px";
             document.getElementById("contact_text").style.width = contact_image_width + "px";
          }
 
-         //document.getElementById("contact_email_subject").style.minWidth = "425px";
          document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
-
-         //document.getElementById("contact_email_message").style.minWidth = "425px";
          document.getElementById("contact_email_message").style.width = contact_image_width + "px";
-
-         //document.getElementById("checkbox_container").style.minWidth = "425px";
-         document.getElementById("checkbox_container").style.width = contact_image_width + "px";
+         document.getElementById("checkbox_container").style.width    = contact_image_width + "px";
       }
    }
 }
