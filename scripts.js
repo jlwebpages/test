@@ -44,14 +44,12 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
 
    // Set contact_email_message text area width if we're running on an iPad in portrait orientation.
 
-   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+   if (window.innerHeight >= window.innerWidth)
    {
-      // We're running on an iPad.
+      // We're in portrait orientation.
 
-      if (window.innerHeight >= window.innerWidth)
+      if (is_iPad() == true)
       {
-         // We're in portrait orientation.
-
          if ( (contact_image_width/window.innerWidth) < .70)
          {
             contact_image_width = .70 * window.innerWidth;
@@ -69,6 +67,10 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
          document.getElementById("contact_email_subject").style.width = contact_image_width + "px";
          document.getElementById("contact_email_message").style.width = contact_image_width + "px";
          document.getElementById("checkbox_container"   ).style.width = contact_image_width + "px";
+      }
+      else if (is_mobile() == true)
+      {
+         aleret("Mobile device in portrait orientation.");
       }
    }
 }
@@ -500,6 +502,26 @@ function get_image_url_parameters()
    }
 
    return {image_file_name,gallery_name,image_number}; 
+}
+
+function is_iPad()
+{
+   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
+   {
+      return true;
+   }
+
+   return false;
+}
+
+function is_mobile()
+{
+   if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
+   {
+      return true;
+   }
+
+   return false;
 }
 
 function load_data_from_file(gallery_name,file_name,element_id,title_extension,scroll_to_exhibitions,display_error)

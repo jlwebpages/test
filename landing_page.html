@@ -29,7 +29,7 @@
 
 <script>
 
-   if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )  // This is a mobile device.
+   if (is_mobile() == true)
    {
       if (document.getElementById("landing_exhibition_button") != null)
       {
