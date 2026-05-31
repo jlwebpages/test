@@ -236,9 +236,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
             if (back_button_vertical_position < 5) back_button_vertical_position = 5;
 
-            if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
+            if (is_older_iPad() == true)
             {
-               // Make vertical button position adjustments for older iPads.
+               // Make vertical button position adjustments.
 
                if (back_button_vertical_position > 5) back_button_vertical_position += 13;
 
@@ -453,6 +453,16 @@ function is_iPad()
 function is_mobile()
 {
    if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
+   {
+      return true;
+   }
+
+   return false;
+}
+
+function is_older_iPad()
+{
+   if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
    {
       return true;
    }
