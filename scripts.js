@@ -28,6 +28,9 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
    {
       contact_image_width = 425;
 
+   // Set image_container width equal to contact_image width.
+
+   document.getElementById("image_container").style.width = contact_image_width + "px";
       document.getElementById("contact_image").style.width = contact_image_width + "px";
    }
 
