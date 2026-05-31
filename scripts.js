@@ -70,7 +70,8 @@ function set_size_of_contact_image_container_and_contact_email_textarea()
       }
       else if (is_mobile() == true)
       {
-         aleret("Mobile device in portrait orientation.");
+         document.getElementById("nav_left").style.top  = ( document.getElementById("contact_image").getBoundingClientRect().top + (contact_image.height/2) ) + "px";
+         document.getElementById("nav_right").style.top = ( document.getElementById("contact_image").getBoundingClientRect().top + (contact_image.height/2) ) + "px";
       }
    }
 }
