@@ -99,7 +99,8 @@
    .title                    {padding-bottom:        25px                !important}
    .sub_title                {padding-bottom:        15px                !important}
    .text                     {padding:               25px 20px 10px 20px !important}
-   .text_image               {width:                 350px               !important}
+   .text_image               {resize:                5%                  !important}
+   /*.text_image               {width:                 350px               !important}*/
    .text_image               {margin:                10px 0px 25px 25px  !important}
    .art_gallery              {grid-template-columns: 1fr 1fr             !important}
    .art_gallery              {gap:                   35px                !important}
