@@ -338,6 +338,7 @@ a.header_link:hover
 
 .text_image
 {
+   width: 100px;
    margin: 10px 0px 25px 50px;
    float: right;
 }
