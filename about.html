@@ -19,31 +19,25 @@
 
    document.getElementById("about_link").className = "clicked_header_link";
 
-   document.writeln('<div id="about_header" class="header_link" style="text-align: center; margin-bottom: 15px; display: none">About</div>');
+   document.writeln('<div id="about_header" class="header_link" style="text-align: center; margin-bottom: 5px; display: none">About</div>');
 
 </script>
 
-<table class="table border_radius">
+<div class="about_container">
 
-   <tr>
+   <div class="about_image_container">
+      <img class="about_image" src="./about/about.jpg">
+   </div>
 
-      <td class="text">
+   <div id="about_text" class="about_text">
+      <!-- Load data from file. -->
+   </div>
 
-         <img class="text_image border_radius" src="./about/about.jpg">
+   <div id="exhibitions_text" class="about_text" style="font-size: 14px; line-height: 1.25; padding-top: 40px">
+      <!-- Load data from file. -->
+   </div>
 
-         <div id="about_text">
-            <!-- Load data from file. -->
-         </div>
-
-         <div id="exhibitions_text" style="font-size: 14px; line-height: 1.25; padding-top: 40px">
-            <!-- Load data from file. -->
-         </div>
-
-      </td>
-
-   </tr>
-
-</table>
+</div>
 
 <script>
 
