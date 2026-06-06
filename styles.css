@@ -9,8 +9,8 @@
    .landing_sub_title                           {font-size:             22px                      !important}
    .landing_sub_title                           {letter-spacing:        2px                       !important}
    .landing_text                                {font-size:             14px                      !important}
-   .landing_text                                {width:                 90%                       !important}
    .landing_text                                {line-height:           25px                      !important}
+   .landing_text                                {width:                 90%                       !important}
    .landing_button_container                    {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
    .landing_button_container > :nth-child(odd)  {justify-self:          end                       !important}
    .landing_button_container > :nth-child(even) {justify-self:          start                     !important}
@@ -58,32 +58,23 @@
 {
    .menu_button               {visibility:            visible             !important}
    .header_links              {display:               none                !important}
-
-
-   .landing_title                               {font-size:             32px                      !important}
-   .landing_title                               {letter-spacing:        2px                       !important}
-   .landing_sub_title                           {font-size:             22px                      !important}
-   .landing_sub_title                           {letter-spacing:        2px                       !important}
-   .landing_text                                {font-size:             14px                      !important}
-   .landing_text                                {width:                 90%                       !important}
-   .landing_text                                {line-height:           25px                      !important}
-
-   .landing_button_container                    {gap:                   25px                      !important}
-   .landing_button                              {font-size:             13px                      !important}
-   .landing_button                              {padding:               5px 7px 7px 9px           !important}
-
-
-   .landing_container1         {gap:                   10px                !important}
-   .landing_container1         {padding-top:           5vh                 !important}
-   .landing_title1             {font-size:             38px                !important}
-   .landing_title1             {letter-spacing:        2px                 !important}
-   .landing_sub_title1         {font-size:             26px                !important}
-   .landing_button1            {font-size:             16px                !important}
-
-
+   .landing_title             {font-size:             32px                !important}
+   .landing_title             {letter-spacing:        2px                 !important}
+   .landing_sub_title         {font-size:             22px                !important}
+   .landing_sub_title         {letter-spacing:        2px                 !important}
+   .landing_text              {font-size:             14px                !important}
+   .landing_text              {line-height:           25px                !important}
+   .landing_text              {width:                 90%                 !important}
+   .landing_button_container  {gap:                   25px                !important}
+   .landing_button            {font-size:             13px                !important}
+   .landing_button            {padding:               5px 7px 7px 9px     !important}
    .title                     {font-size:             38px                !important}
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
+   .art_gallery               {grid-template-columns: 1fr 1fr             !important}
+   .art_gallery               {gap:                   35px                !important}
+   .art_image_link_container  {margin-top:            15px                !important}
+   .art_image_link_container  {margin-bottom:         15px                !important}
    .nav_button                {height:                24px                !important}
    .nav_button                {width:                 14px                !important}
    .nav_left_shape            {transform:             scale(80%)          !important}
@@ -91,18 +82,12 @@
    .about_image_container     {width:                 50%                 !important}
    .about_image_container     {padding:               20px 10px 25px 15px !important}
    .about_text                {padding:               10px 10px 15px 10px !important}
-   .exhibitions_title                 {font-size:             25px                !important}
-   .exhibitions_title                 {padding-bottom:        15px                !important}
-   .art_gallery               {grid-template-columns: 1fr 1fr             !important}
-   .art_gallery               {gap:                   35px                !important}
-   .art_image_link_container  {margin-top:            15px                !important}
-   .art_image_link_container  {margin-bottom:         15px                !important}
+   .exhibitions_title         {font-size:             25px                !important}
+   .exhibitions_title         {padding-bottom:        15px                !important}
    .contact_image_container   {padding:               20px 15px 15px 15px !important}
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               15px                !important}
    .contact_email_container   {width:                 75%                 !important}
-   #about_header              {display:               block               !important}
-   #contact_header            {display:               block               !important}
    #gallery_header            {display:               block               !important}
    #one_column_1              {display:               none                !important}
    #two_column_1              {display:               block               !important}
@@ -110,6 +95,8 @@
    #three_column_1            {display:               none                !important}
    #three_column_2            {display:               none                !important}
    #three_column_3            {display:               none                !important}
+   #about_header              {display:               block               !important}
+   #contact_header            {display:               block               !important}
 }
 
 /* Rules for iPads in portrait orientation */
