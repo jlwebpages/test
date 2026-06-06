@@ -91,8 +91,9 @@
 {
    .menu_button              {visibility:            visible             !important}
    .header_links             {display:               none                !important}
-   .landing_title            {padding-top: 100px !important}
-   .landing_button_container           {padding-bottom: 100px !important}
+   .landing_title            {padding-top: 50px !important}
+   .landing_button_container {gap:                   50px        !important}
+   .landing_button_container           {padding-bottom: 50px !important}
    .landing_title1            {font-size:             46px                !important}
    .landing_title1            {letter-spacing:        2px                 !important}
    .landing_text             {width:                 90%         !important}
@@ -132,7 +133,6 @@
 
 {
    .landing_text             {width:                 80%         !important}
-   .landing_button_container {gap:                   50px        !important}
    .about_image_container    {width:                 50%         !important}
    .art_gallery              {grid-template-columns: 1fr 1fr 1fr !important}
    .art_gallery              {gap:                   40px        !important}
