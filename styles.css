@@ -8,13 +8,13 @@
    .landing_title             {font-size:             32px                !important}
    .landing_title             {letter-spacing:        2px                 !important}
    .landing_sub_title         {font-size:             22px                !important}
-   .landing_sub_title             {letter-spacing:        2px                 !important}
-   .landing_text              {font-size:             14px          !important}
-   .landing_text              {width:             90%          !important}
-   .landing_text              {font-weight:  normal        !important}
-   .landing_text              {line-height: 25px !important}
-   .landing_button_container  {gap: 25px !important}
-   .landing_button1            {font-size:             16px                !important}
+   .landing_sub_title         {letter-spacing:        2px                 !important}
+   .landing_text              {font-size:             14px                !important}
+   .landing_text              {width:                 90%                 !important}
+   .landing_text              {line-height:           25px                !important}
+   .landing_button_container  {gap:                   25px                !important}
+   .landing_button            {font-size:             12px                !important}
+   .landing_button            {padding:               4px 6px 6px 8px !important}
 
    .title                     {font-size:             32px                !important}
    .title                     {letter-spacing:        2px                 !important}
@@ -212,9 +212,8 @@
 .landing_text
 {
    font-size: 16px;
-   font-weight: bold;
    font-style: italic;
-   line-height: 30px;
+   line-height: 35px;
    padding: 0px 10px 0px 10px;
    width: 60%;
 }
