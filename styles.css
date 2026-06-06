@@ -236,10 +236,10 @@
 .landing_button
 {
    background-color: transparent;
-   font-size: 16px;
-   font-weight: bold;
+   font-size: 18px;
+   font-weight: normal;
    color: black;
-   letter-spacing: 4px;
+   letter-spacing: 2px;
    justify-self: center;
    border: 0px;
    cursor: pointer;
