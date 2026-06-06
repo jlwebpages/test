@@ -13,6 +13,14 @@
    .landing_text              {width:                 90%                 !important}
    .landing_text              {line-height:           25px                !important}
    .landing_button_container  {gap:                   25px                !important}
+
+   .landing_button_container {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
+  .landing_button_container > :nth-child(odd) {    justify-self: end !important  }
+
+  .landing_button_container > :nth-child(even) { justify-self: start !important  }
+
+
+
    .landing_button            {font-size:             12px                !important}
    .landing_button            {padding:               4px 6px 6px 8px !important}
 
@@ -221,19 +229,10 @@
 .landing_button_container
 {
    display: grid;
-   grid-template-columns: repeat(2, minmax(0, 1fr));
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 75px;
 }
 
-  /* Right justify the first column */
-  .landing_button_container > :nth-child(odd) {
-    justify-self: end; 
-  }
-
-  /* Left justify the second column */
-  .landing_button_container > :nth-child(even) {
-    justify-self: start; 
-  }
-  
 .landing_button
 {
    cursor: pointer;
@@ -243,7 +242,7 @@
    background-color: rgba(0, 0, 0, 50%);
    border-radius: 10px;
    border: 0px;
-   padding: 6px 8px 8px 10px; justify-self: center;
+   padding: 6px 8px 8px 10px;
 }
 
 .landing_button:hover
