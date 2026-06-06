@@ -1,6 +1,6 @@
 <!--
 
-<span class="sub_title" style="padding-bottom: 25px !important">CURRENT EXHIBITION</span><br>
+<span class="exhibitions_title" style="padding-bottom: 25px !important">CURRENT EXHIBITION</span><br>
 
 <span style="line-height: 1.25">
 
@@ -29,7 +29,7 @@ Location: <a class="general_link" href="https://www.google.com/maps/place/The+LM
 
 -->
 
-<span class="sub_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
+<span class="exhibitions_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
 <a class="general_link" href="https://www.galleryofhermosa.com/warehouse-originals-limited-editions-standard-products/original_art_products/dockside-by-darlene-laguna?product_gallery=569920&product_id=8788299"><span style="font-size: 16px; font-weight: bold">Colors of the Coast Group Exhibit</span></a><br>
 Gallery of Hermosa<br>

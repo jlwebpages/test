@@ -2,60 +2,54 @@
 
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
-   .menu_button               {visibility:            visible             !important}
-   .header_links              {display:               none                !important}
-
-   .landing_title             {font-size:             32px                !important}
-   .landing_title             {letter-spacing:        2px                 !important}
-   .landing_sub_title         {font-size:             22px                !important}
-   .landing_sub_title         {letter-spacing:        2px                 !important}
-   .landing_text              {font-size:             14px                !important}
-   .landing_text              {width:                 90%                 !important}
-   .landing_text              {line-height:           25px                !important}
-   .landing_button_container  {gap:                   25px                !important}
-
-   .landing_button_container {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
-  .landing_button_container > :nth-child(odd) {    justify-self: end !important  }
-
-  .landing_button_container > :nth-child(even) { justify-self: start !important  }
-
-
-
-   .landing_button            {font-size:             13px                !important}
-   .landing_button            {padding:               5px 7px 7px 9px !important}
-
-   .title                     {font-size:             32px                !important}
-   .title                     {letter-spacing:        2px                 !important}
-   .title                     {padding-bottom:        15px                !important}
-   .nav_button                {height:                24px                !important}
-   .nav_button                {width:                 14px                !important}
-   .nav_left_shape            {transform:             scale(80%)          !important}
-   .nav_right_shape           {transform:             scale(80%)          !important}
-   .sub_title                 {font-size:             25px                !important}
-   .sub_title                 {padding-bottom:        15px                !important}
-   .about_container           {padding-top:           0px                 !important}
-   .about_image_container     {width:                 100%                !important}
-   .about_image_container     {padding:               20px 10px 25px 10px !important}
-   .about_text                {padding:               0px 10px 15px 10px  !important}
-   .art_gallery               {grid-template-columns: 1fr                 !important}
-   .art_gallery               {padding-top:           10px                !important}
-   .art_image_link_container  {margin-top:            0px                 !important}
-   .contact_container         {flex-direction:        column              !important}
-   .contact_container         {justify-content:       flex-start          !important}  
-   .contact_image_container   {padding:               15px                !important}
-   .contact_image             {max-height:            none                !important}
-   .contact_email_container   {padding:               15px                !important}
-   .contact_email_container   {width:                 auto                !important}
-   .contact_email_message     {height:                300px               !important}
-   #about_header              {display:               block               !important}
-   #contact_header            {display:               block               !important}
-   #gallery_header            {display:               block               !important}
-   #one_column_1              {display:               block               !important}
-   #two_column_1              {display:               none                !important}
-   #two_column_2              {display:               none                !important}
-   #three_column_1            {display:               none                !important}
-   #three_column_2            {display:               none                !important}
-   #three_column_3            {display:               none                !important}
+   .menu_button                                 {visibility:            visible                   !important}
+   .header_links                                {display:               none                      !important}
+   .landing_title                               {font-size:             32px                      !important}
+   .landing_title                               {letter-spacing:        2px                       !important}
+   .landing_sub_title                           {font-size:             22px                      !important}
+   .landing_sub_title                           {letter-spacing:        2px                       !important}
+   .landing_text                                {font-size:             14px                      !important}
+   .landing_text                                {width:                 90%                       !important}
+   .landing_text                                {line-height:           25px                      !important}
+   .landing_button_container                    {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
+   .landing_button_container > :nth-child(odd)  {justify-self:          end                       !important}
+   .landing_button_container > :nth-child(even) {justify-self:          start                     !important}
+   .landing_button_container                    {grid-auto-flow:        row                       !important} 
+   .landing_button_container                    {gap:                   25px                      !important}
+   .landing_button                              {font-size:             13px                      !important}
+   .landing_button                              {padding:               5px 7px 7px 9px           !important}
+   .title                                       {font-size:             32px                      !important}
+   .title                                       {letter-spacing:        2px                       !important}
+   .title                                       {padding-bottom:        15px                      !important}
+   .art_gallery                                 {grid-template-columns: 1fr                       !important}
+   .art_gallery                                 {padding-top:           10px                      !important}
+   .art_image_link_container                    {margin-top:            0px                       !important}
+   .nav_button                                  {height:                24px                      !important}
+   .nav_button                                  {width:                 14px                      !important}
+   .nav_left_shape                              {transform:             scale(80%)                !important}
+   .nav_right_shape                             {transform:             scale(80%)                !important}
+   .about_container                             {padding-top:           0px                       !important}
+   .about_image_container                       {width:                 100%                      !important}
+   .about_image_container                       {padding:               20px 10px 25px 10px       !important}
+   .about_text                                  {padding:               0px 10px 15px 10px        !important}
+   .exhibitions_title                           {font-size:             25px                      !important}
+   .exhibitions_title                           {padding-bottom:        15px                      !important}
+   .contact_container                           {flex-direction:        column                    !important}
+   .contact_container                           {justify-content:       flex-start                !important}  
+   .contact_image_container                     {padding:               15px                      !important}
+   .contact_image                               {max-height:            none                      !important}
+   .contact_email_container                     {padding:               15px                      !important}
+   .contact_email_container                     {width:                 auto                      !important}
+   .contact_email_message                       {height:                300px                     !important}
+   #gallery_header                              {display:               block                     !important}
+   #one_column_1                                {display:               block                     !important}
+   #two_column_1                                {display:               none                      !important}
+   #two_column_2                                {display:               none                      !important}
+   #three_column_1                              {display:               none                      !important}
+   #three_column_2                              {display:               none                      !important}
+   #three_column_3                              {display:               none                      !important}
+   #about_header                                {display:               block                     !important}
+   #contact_header                              {display:               block                     !important}
 }
 
 /* Rules for mobile devices in landscape orientation */
@@ -77,11 +71,11 @@
    .nav_button                {width:                 14px                !important}
    .nav_left_shape            {transform:             scale(80%)          !important}
    .nav_right_shape           {transform:             scale(80%)          !important}
-   .sub_title                 {font-size:             25px                !important}
-   .sub_title                 {padding-bottom:        15px                !important}
    .about_image_container     {width:                 50%                 !important}
    .about_image_container     {padding:               20px 10px 25px 15px !important}
    .about_text                {padding:               10px 10px 15px 10px !important}
+   .exhibitions_title                 {font-size:             25px                !important}
+   .exhibitions_title                 {padding-bottom:        15px                !important}
    .art_gallery               {grid-template-columns: 1fr 1fr             !important}
    .art_gallery               {gap:                   35px                !important}
    .art_image_link_container  {margin-top:            15px                !important}
@@ -108,13 +102,12 @@
    .menu_button              {visibility:            visible             !important}
    .header_links             {display:               none                !important}
    .landing_title            {padding-top:           50px                !important}
+   .landing_text             {width:                 90%                 !important}
    .landing_button_container {gap:                   50px                !important}
    .landing_button_container {padding-bottom:        50px                !important}
-   .landing_text             {width:                 90%                 !important}
    .title                    {font-size:             46px                !important}
    .title                    {letter-spacing:        2px                 !important}
    .title                    {padding-bottom:        25px                !important}
-   .sub_title                {padding-bottom:        15px                !important}
    .art_gallery              {grid-template-columns: 1fr 1fr             !important}
    .art_gallery              {gap:                   35px                !important}
    .art_gallery              {padding-top:           5px                 !important}   
@@ -123,14 +116,13 @@
    .about_image_container    {width:                 50%                 !important}
    .about_image_container    {padding:               25px 20px 25px 25px !important}
    .about_text               {padding:               15px 20px 10px 20px !important}
+   .exhibitions_title        {padding-bottom:        15px                !important}
    .contact_container        {flex-direction:        column              !important}
    .contact_container        {justify-content:       flex-start          !important}
    .contact_image_container  {padding-bottom:        10px                !important}
    .contact_email_container  {width:                 auto                !important}
    .contact_email_container  {padding-top:           10px                !important}
    .contact_email_message    {height:                300px               !important}
-   #about_header             {display:               block               !important}
-   #contact_header           {display:               block               !important}
    #gallery_header           {display:               block               !important}
    #one_column_1             {display:               none                !important}
    #two_column_1             {display:               block               !important}
@@ -138,6 +130,8 @@
    #three_column_1           {display:               none                !important}
    #three_column_2           {display:               none                !important}
    #three_column_3           {display:               none                !important}
+   #about_header             {display:               block               !important}
+   #contact_header           {display:               block               !important}
 }
 
 /* Rules for iPads and tablets in landscape orientation */
@@ -235,15 +229,15 @@
 
 .landing_button
 {
-   cursor: pointer;
+   background-color: rgba(0, 0, 0, 50%);
    font-size: 16px;
    color: linen;
    letter-spacing: 4px;
    justify-self: center;
-   background-color: rgba(0, 0, 0, 50%);
    border-radius: 10px;
    border: 0px;
    padding: 6px 8px 8px 10px;
+   cursor: pointer;
 }
 
 .landing_button:hover
@@ -273,17 +267,6 @@
 {
    color: inherit;
    text-decoration: none;
-}
-
-.sub_title
-{
-   font-family: Arial, sans-serif;
-   font-size: 34px;
-   color: darkslategray;
-   text-align: left;
-   white-space: nowrap;
-   padding-bottom: 40px;
-   display: inline-block;
 }
 
 .header_links
@@ -355,6 +338,17 @@ a.header_link:hover
    text-align: left;
    line-height: 30px;
    padding: 10px 50px 25px 50px;
+}
+
+.exhibitions_title
+{
+   font-family: Arial, sans-serif;
+   font-size: 34px;
+   color: darkslategray;
+   text-align: left;
+   white-space: nowrap;
+   padding-bottom: 40px;
+   display: inline-block;
 }
 
 .general_link
