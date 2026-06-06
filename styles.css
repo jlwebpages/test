@@ -4,10 +4,10 @@
 {
    .menu_button               {visibility:            visible             !important}
    .header_links              {display:               none                !important}
-   .landing_title             {font-size:             38px                !important}
-   .landing_title             {letter-spacing:        2px                 !important}
-   .landing_sub_title         {font-size:             26px                !important}
-   .landing_button            {font-size:             16px                !important}
+   .landing_title1             {font-size:             38px                !important}
+   .landing_title1             {letter-spacing:        2px                 !important}
+   .landing_sub_title1         {font-size:             26px                !important}
+   .landing_button1            {font-size:             16px                !important}
    .title                     {font-size:             32px                !important}
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
@@ -48,12 +48,12 @@
 {
    .menu_button               {visibility:            visible             !important}
    .header_links              {display:               none                !important}
-   .landing_container         {gap:                   10px                !important}
-   .landing_container         {padding-top:           5vh                 !important}
-   .landing_title             {font-size:             38px                !important}
-   .landing_title             {letter-spacing:        2px                 !important}
-   .landing_sub_title         {font-size:             26px                !important}
-   .landing_button            {font-size:             16px                !important}
+   .landing_container1         {gap:                   10px                !important}
+   .landing_container1         {padding-top:           5vh                 !important}
+   .landing_title1             {font-size:             38px                !important}
+   .landing_title1             {letter-spacing:        2px                 !important}
+   .landing_sub_title1         {font-size:             26px                !important}
+   .landing_button1            {font-size:             16px                !important}
    .title                     {font-size:             38px                !important}
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
@@ -91,9 +91,10 @@
 {
    .menu_button              {visibility:            visible             !important}
    .header_links             {display:               none                !important}
-   .landing_title            {font-size:             46px                !important}
-   .landing_title            {letter-spacing:        2px                 !important}
-   .landing_button           {font-size:             16px                !important}
+   .landing_title1            {font-size:             46px                !important}
+   .landing_title1            {letter-spacing:        2px                 !important}
+   .landing_text             {width:                 90%         !important}
+   .landing_button1           {font-size:             16px                !important}
    .title                    {font-size:             46px                !important}
    .title                    {letter-spacing:        2px                 !important}
    .title                    {padding-bottom:        25px                !important}
@@ -128,6 +129,7 @@
 @media screen and (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse)
 
 {
+   .landing_text             {width:                 80%         !important}
    .about_image_container    {width:                 50%         !important}
    .art_gallery              {grid-template-columns: 1fr 1fr 1fr !important}
    .art_gallery              {gap:                   40px        !important}
@@ -206,15 +208,7 @@
    font-style: italic;
    line-height: 30px;
    padding: 0px 10px 0px 10px;
-   width: 50%;
-}
-
-.landing_button_container1
-{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   gap: 75px;
+   width: 60%;
 }
 
 .landing_button_container
