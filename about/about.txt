@@ -4,7 +4,7 @@ I am a mixed media artist in Orange, CA. I am inspired by the landscape that sur
 <p>
 A life-long art enthusiast, I began my art-making career about 15 years ago after parenting three sons and having a variety of volunteer, teaching, and engineering positions. What began as casual photography and journaling while hiking led to an interest in composition and finding creative ways to use my images and ideas, directly and indirectly, in mixed media pieces. My work has been included in juried exhibitions and sold in galleries.
 <p>
-For more information and details about purchasing, pricing, and framing options, or to view in person if you are in the Orange County area, please <a class="general_link" href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art">email</a> me.
+For more information and details about purchasing, pricing, and framing options, or to view in person if you are in the Orange County area, please <a class="general_link" href="contact.html?image_file_name=./about/contact.jpg&image_title=">contact</a> me.
 <p>
 Thank you,<br>
 Darlene Laguna
