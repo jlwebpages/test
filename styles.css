@@ -17,6 +17,7 @@
    .landing_button_container                    {grid-auto-flow:        row                       !important} 
    .landing_button_container                    {gap:                   25px                      !important}
    .landing_button                              {font-size:             16px                      !important}
+   .landing_button                              {font-weight:           bold                      !important}
    .title                                       {font-size:             32px                      !important}
    .title                                       {letter-spacing:        2px                       !important}
    .title                                       {padding-bottom:        15px                      !important}
@@ -66,6 +67,7 @@
    .landing_text              {width:                 90%                 !important}
    .landing_button_container  {gap:                   25px                !important}
    .landing_button            {font-size:             16px                !important}
+   .landing_button            {font-weight:           bold                !important}
    .title                     {font-size:             38px                !important}
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
@@ -107,6 +109,7 @@
    .landing_text             {width:                 80%                 !important}
    .landing_button_container {gap:                   50px                !important}
    .landing_button_container {padding-bottom:        50px                !important}
+   .landing_button           {font-weight:           bold                !important}
    .title                    {font-size:             46px                !important}
    .title                    {letter-spacing:        2px                 !important}
    .title                    {padding-bottom:        25px                !important}
@@ -142,6 +145,7 @@
 
 {
    .landing_text             {width:                 80%         !important}
+   .landing_button           {font-weight:           bold        !important}
    .art_gallery              {grid-template-columns: 1fr 1fr 1fr !important}
    .art_gallery              {gap:                   40px        !important}
    .art_gallery              {padding-top:           5px         !important}   
@@ -235,7 +239,6 @@
 {
    background-color: transparent;
    font-size: 18px;
-   font-weight: normal;
    color: black;
    letter-spacing: 2px;
    justify-self: center;
