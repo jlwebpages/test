@@ -4,9 +4,13 @@
 {
    .menu_button               {visibility:            visible             !important}
    .header_links              {display:               none                !important}
-   .landing_title1             {font-size:             38px                !important}
-   .landing_title1             {letter-spacing:        2px                 !important}
-   .landing_sub_title1         {font-size:             26px                !important}
+   .landing_title             {font-size:             32px                !important}
+   .landing_title             {letter-spacing:        2px                 !important}
+   .landing_sub_title         {font-size:             20px                !important}
+   .landing_text              {font-size:             12px          !important}
+   .landing_text              {width:             90%          !important}
+   .landing_text              {line-height:  20px        !important}
+   .landing_button_container  {gap: 25px !important}
    .landing_button1            {font-size:             16px                !important}
    .title                     {font-size:             32px                !important}
    .title                     {letter-spacing:        2px                 !important}
