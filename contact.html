@@ -86,13 +86,18 @@
    document.writeln('   <div class="contact_email_container">');
    if (about_contact == true)
    {
-      document.writeln('      <span id="contact_text" class="contact_text">Use the form below for more information and details about purchasing, pricing, and framing options, or to view in person if you are in the Orange County area. All work comes ready to hang, and detailed shots can be provided for any piece you\'re interested in. Thank you for your interest. I look forward to hearing from you.</span>');
+      document.writeln('      <span id="contact_text" class="contact_text">');
+      document.writeln('         Use the form below for more information and details about purchasing, pricing, and framing options.');
+      document.writeln('         If you are in the Orange County area, we can arrange for you to view the art in person.');
+      document.writeln('         I can also provide detailed photos for any piece. Join my email list to receive updates about new art,');
+      document.writeln('         upcoming events, and exhibitions. Thank you.');
+      document.writeln('      </span>');
    }
    document.writeln('      <span id="contact_email_subject" class="contact_email_subject">'+email_subject+'</span>');
    document.writeln('      <textarea id="contact_email_message" class="contact_email_message" placeholder="'+email_message_placeholder+'"></textarea>');
    document.writeln('      <div id="checkbox_container" style="dislay: block; margin: 0px auto">');
    document.writeln('         <label for="contact_email_checkbox" id="contact_email_checkbox_label" class="contact_email_checkbox_label">');
-   document.writeln('            <input id="contact_email_checkbox" type=checkbox class="contact_email_checkbox">&nbsp;&nbsp;Add me to email list');
+   document.writeln('            <input id="contact_email_checkbox" type=checkbox class="contact_email_checkbox">&nbsp;&nbsp;Join email list');
    document.writeln('         </label>');
    document.writeln('      </div>');
    document.writeln('      <span id="contact_email_send_button" class="contact_email_send_button" onclick="send_contact_email()">Send</span>');
