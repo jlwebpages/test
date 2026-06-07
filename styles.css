@@ -243,8 +243,7 @@
 
 .landing_button:hover
 {
-   font-weight: bold;
-   color: darkred;
+   color: #BE0000;
 }
 
 .body
