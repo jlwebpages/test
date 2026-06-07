@@ -105,7 +105,7 @@
    .header_links             {display:               none                !important}
    .landing_title            {padding-top:           50px                !important}
    .landing_text             {width:                 80%                 !important}
-   .landing_button_container {gap:                   50px                !important}
+   .landing_button_container {gap:                   25px                !important}
    .landing_button_container {padding-bottom:        25px                !important}
    .title                    {font-size:             46px                !important}
    .title                    {letter-spacing:        2px                 !important}
@@ -218,7 +218,7 @@
    font-size: 18px;
    font-weight: bold;
    font-style: italic;
-   text-align: left;
+   text-align: center;
    line-height: 30px;
    padding: 0px 10px 0px 10px;
    width: 60%;
