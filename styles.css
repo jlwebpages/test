@@ -8,9 +8,9 @@
    .landing_title                               {letter-spacing:        2px                       !important}
    .landing_sub_title                           {font-size:             22px                      !important}
    .landing_sub_title                           {letter-spacing:        2px                       !important}
-   .landing_text                                {font-size:             14px                      !important}
+   .landing_text                                {font-size:             16px                      !important}
    .landing_text                                {line-height:           25px                      !important}
-   .landing_text                                {width:                 90%                       !important}
+   .landing_text                                {width:                 80%                       !important}
    .landing_button_container                    {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
    .landing_button_container > :nth-child(odd)  {justify-self:          end                       !important}
    .landing_button_container > :nth-child(even) {justify-self:          start                     !important}
@@ -61,7 +61,7 @@
    .landing_title             {letter-spacing:        2px                 !important}
    .landing_sub_title         {font-size:             22px                !important}
    .landing_sub_title         {letter-spacing:        2px                 !important}
-   .landing_text              {font-size:             14px                !important}
+   .landing_text              {font-size:             16px                !important}
    .landing_text              {line-height:           25px                !important}
    .landing_text              {width:                 90%                 !important}
    .landing_button_container  {gap:                   50px                !important}
