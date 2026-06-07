@@ -898,7 +898,7 @@ function write_header()
    }
    d.writeln('   <a href="about.html"                                                    tabindex="-1">About  </a>');
    d.writeln('   <a href="contact.html?image_file_name=./about/contact.jpg&image_title=" tabindex="-1">Contact</a>');
-   d.writeln('   <div style="border-top: 1px solid darkslategray; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
+   d.writeln('   <div style="border-top: 1px solid #444444; margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block" tabindex="-1"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block" tabindex="-1"><img src="instagram_icon.png" height="16px"                                   ></a>');
    d.writeln('   </div>');
