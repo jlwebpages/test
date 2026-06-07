@@ -177,7 +177,7 @@
 
 .landing_body
 {
-   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('landing_background.jpg');
+   background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('landing_background.jpg');
    background-size: cover;
    background-position: center;
    font-family: Arial, sans-serif;
