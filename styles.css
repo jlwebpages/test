@@ -105,6 +105,7 @@
    .header_links             {display:               none                !important}
    .landing_text             {width:                 80%                 !important}
    .landing_links {gap:                   50px                !important}
+   .landing_link                              {font-size:             22px                      !important}
    .title                    {font-size:             46px                !important}
    .title                    {letter-spacing:        2px                 !important}
    .title                    {padding-bottom:        25px                !important}
@@ -140,6 +141,7 @@
 
 {
    .landing_text             {width:                 80%         !important}
+   .landing_link                              {font-size:             22px                      !important}
    .art_gallery              {grid-template-columns: 1fr 1fr 1fr !important}
    .art_gallery              {gap:                   40px        !important}
    .art_gallery              {padding-top:           5px         !important}   
@@ -232,7 +234,7 @@
 {
    font-size: 20px;
    font-weight: bold;
-   color: black;
+   color: blue;
    letter-spacing: 1px;
    text-decoration: none;
 }
