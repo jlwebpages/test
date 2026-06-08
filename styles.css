@@ -380,8 +380,12 @@ a.header_link:hover
 .menu_button
 {
    cursor: pointer;
+   background: transparent;
    font-size: 30px;
-   padding-left: 5px;
+   color: black;
+   border: 0px;
+   margin: 0px;
+   padding: 0px 0px 0px 5px;
    visibility: hidden;
 }
 
