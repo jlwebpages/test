@@ -920,9 +920,13 @@ function write_header()
 
    d.close();
 
-   if (is_iPad() == true)
+   if (is_older_iPad() == true)
    {
-      d.getElementById("menu_button").style.fontSize = "60px";
+      d.getElementById("menu_button").style.fontSize = "35px";
+   }
+   else if (is_iPad() == true)
+   {
+      d.getElementById("menu_button").style.fontSize = "65px";     
    }
 
    return true;
