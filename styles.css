@@ -102,7 +102,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)
 {
    .menu_button              {visibility:            visible             !important}
-                .menu_button              {font-size:             30px                !important}
+   .menu_button              {font-size:             35px                !important}
    .header_links             {display:               none                !important}
    .landing_text             {width:                 80%                 !important}
    .landing_links            {gap:                   50px                !important}
