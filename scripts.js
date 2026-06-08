@@ -920,7 +920,7 @@ function write_header()
 
    d.close();
 
-   if (navigator.maxTouchPoints > 1)
+   if ( (is_mobile() == false) && (navigator.maxTouchPoints > 1) )
    {
       d.getElementById("menu_button").style.fontSize = "60px";
    }
