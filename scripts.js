@@ -888,7 +888,7 @@ function write_header()
 
    d.writeln('');
    d.writeln('');
-   d.writeln('<button class="menu_button" onclick="display_menu();" tabindex="-1">&#9776;</button>');
+   d.writeln('<button id="menu_button" class="menu_button" onclick="display_menu();" tabindex="-1">&#9776;</button>');
    d.writeln('');
    d.writeln('<div id="menu_list" class="menu" tabindex="-1">');
    d.writeln('   <span class="close_button" onclick="close_menu();" tabindex="-1">&times;</span>');
@@ -919,6 +919,11 @@ function write_header()
    d.writeln('');
 
    d.close();
+
+   if (navigator.maxTouchPoints > 1)
+   {
+      d.getElementById("menu_button").style.fontSize = "60px";
+   }
 
    return true;
 }
