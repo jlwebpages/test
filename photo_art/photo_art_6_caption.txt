@@ -22,17 +22,9 @@ Each is 6 x 6 inches on 1.5-inch cradled wood panel
 </span>
 
 
-<!-- Paragraph -->
 
-<span class="art_paragraph">
+<span class="art_paragraph"><b>Wintry Mix</b> (top)</span>
 
+<span class="art_paragraph"><b>Center of Gravity</b> (bottom left)</span>
 
-
-</span>
-
-
-<span class="art_paragraph" style="padding-top: 10px"><b>Wintry Mix</b> (top)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Center of Gravity</b> (bottom left)</span>
-
-<span class="art_paragraph" style="padding-top: 0px"><b>Nightwalk</b> (bottom right)</span>
+<span class="art_paragraph"><b>Nightwalk</b> (bottom right)</span>
