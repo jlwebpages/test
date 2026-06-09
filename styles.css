@@ -497,13 +497,13 @@ a.header_link:hover
 .art_caption
 {
 
-   background-color: lightblue;
+   background-color: lightseagreen;
    font-family: Arial, sans-serif;
    font-size: 16px;
    color: #444444;
    text-align: left;
 
-   height: 100%;
+   height: auto%;
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
@@ -635,7 +635,7 @@ a.header_link:hover
    grid-template-columns: auto auto;
    justify-content: center;
    gap: 0px;
-
+   height: 100vh;
    margin: 0px auto;
    overflow-y: hidden;
 }
