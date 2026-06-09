@@ -923,10 +923,12 @@ function write_header()
    if (is_older_iPad() == true)
    {
       d.getElementById("menu_button").style.fontSize = "35px";
+      d.getElementById("menu_button").style.color = "red";
    }
    else if (is_iPad() == true)
    {
-      d.getElementById("menu_button").style.fontSize = "65px";     
+      d.getElementById("menu_button").style.fontSize = "50px";
+      d.getElementById("menu_button").style.color = "red";
    }
 
    return true;
