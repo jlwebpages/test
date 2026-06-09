@@ -496,14 +496,12 @@ a.header_link:hover
 
 .art_caption
 {
-
-   background-color: lightseagreen;
+   background-color: seaShell;
    font-family: Arial, sans-serif;
    font-size: 16px;
    color: #444444;
    text-align: left;
-
-   height: auto%;
+   height: auto;
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
