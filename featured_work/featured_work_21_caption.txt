@@ -30,8 +30,8 @@ On the coast, the bright sunlight desaturates and bleaches many of the surfaces 
 
 </span>
 
-<span class="art_paragraph" style="padding-top: 10px"><b>Beach Day</b> (left)</span>
+<span class="art_paragraph"><b>Beach Day</b> (left)</span>
 
-<span class="art_paragraph" style="padding-top: 0px"><b>Dockside</b> (top right)</span>
+<span class="art_paragraph"><b>Dockside</b> (top right)</span>
 
-<span class="art_paragraph" style="padding-top: 0px"><b>Coastline</b> (bottom right)</span>
+<span class="art_paragraph"><b>Coastline</b> (bottom right)</span>
