@@ -922,13 +922,13 @@ function write_header()
 
    if (is_older_iPad() == true)
    {
-      d.getElementById("menu_button").style.fontSize = "35px";
-      d.getElementById("menu_button").style.color = "red";
+      d.getElementById("menu_button").style.fontSize = "40px";
+      d.getElementById("menu_button").style.color = "green";
    }
    else if (is_iPad() == true)
    {
-      d.getElementById("menu_button").style.fontSize = "50px";
-      d.getElementById("menu_button").style.color = "red";
+      d.getElementById("menu_button").style.fontSize = "55px";
+      d.getElementById("menu_button").style.color = "blue";
    }
 
    return true;
