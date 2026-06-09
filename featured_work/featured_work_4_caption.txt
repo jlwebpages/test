@@ -30,8 +30,8 @@ This triptych is inspired by fresh new growth on local hiking trails. An early s
 
 </span>
 
-<span class="art_paragraph" style="padding-top: 10px"><b>Momentum</b> (left)</span>
+<span class="art_paragraph"><b>Momentum</b> (left)</span>
 
-<span class="art_paragraph" style="padding-top: 0px"><b>Impulse</b> (center)</span>
+<span class="art_paragraph"><b>Impulse</b> (center)</span>
 
-<span class="art_paragraph" style="padding-top: 0px"><b>Tempo</b> (right)</span>
+<span class="art_paragraph"><b>Tempo</b> (right)</span>
