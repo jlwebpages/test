@@ -528,13 +528,19 @@ a.header_link:hover
    display: block;
 }
 
+.art_sub_title
+{
+   padding-top: 10px;
+   display: block;
+}
+
 .inquire_link
 {
    font-family: Arial, sans-serif;
    font-size: 14px;
    font-weight: bold;
    font-style: italic;
-   padding-top: 25px;
+   padding-top: 30px;
    display: inline-block;
 }
 
