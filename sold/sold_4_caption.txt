@@ -20,12 +20,3 @@ Mixed media collage
 10 x 8 inches, matted to 14 x 11 inches
 
 </span>
-
-
-<!-- Paragraph -->
-
-<span class="art_paragraph">
-
-
-
-</span>

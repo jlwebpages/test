@@ -518,17 +518,11 @@ a.header_link:hover
 .art_dimensions
 {
    font-style: italic;
-   padding-top: 15px;
+   padding-top: 10px;
    display: block;
 }
 
 .art_paragraph
-{
-   padding-top: 15px;
-   display: block;
-}
-
-.art_sub_title
 {
    padding-top: 10px;
    display: block;
@@ -540,7 +534,7 @@ a.header_link:hover
    font-size: 14px;
    font-weight: bold;
    font-style: italic;
-   padding-top: 30px;
+   padding-top: 25px;
    display: inline-block;
 }
 

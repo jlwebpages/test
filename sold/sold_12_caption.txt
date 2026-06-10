@@ -14,12 +14,3 @@ Dusk
 12 x 12 inch wood panel set in a painted floater frame
 
 </span>
-
-
-<!-- Paragraph -->
-
-<span class="art_paragraph">
-
-
-
-</span>

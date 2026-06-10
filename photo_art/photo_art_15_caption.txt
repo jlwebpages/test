@@ -20,12 +20,3 @@ Acrylic and mixed media photo collage on wood panel
 24 x 24 inches
 
 </span>
-
-
-<!-- Paragraph -->
-
-<span class="art_paragraph">
-
-
-
-</span>

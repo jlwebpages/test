@@ -16,8 +16,8 @@ Each is 6 x 12 inches on 1.5-inch cradled wood panel
 </span>
 
 
-<span class="art_paragraph" style="padding-top: 10px"><b>Pause</b> (top)</span>
+<span class="art_paragraph"><b>Pause</b> (top)</span>
 
-<span class="art_paragraph" style="padding-top: 0px"><b>Sanctuary</b> (middle)</span>
+<span class="art_paragraph"><b>Sanctuary</b> (middle)</span>
 
-<span class="art_paragraph" style="padding-top: 0px"><b>Breathing Space</b> (bottom)</span>
+<span class="art_paragraph"><b>Breathing Space</b> (bottom)</span>
