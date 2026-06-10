@@ -31,6 +31,8 @@ Summer is the perfect time of year for looking up and daydreaming.
 </span>
 
 
+<div style="height: 10px"></div>
+
 <span class="art_paragraph"><b>Many Moons</b> (left)</span>
 
 <span class="art_paragraph"><b>Fireworks</b> (right)</span>

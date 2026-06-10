@@ -31,6 +31,8 @@ Don't let anyone tell you there are no seasons in California! The California syc
 </span>
 
 
+<div style="height: 10px"></div>
+
 <span class="art_paragraph"><b>I’m Falling for You</b> (left)</span>
 
 <span class="art_paragraph"><b>Please Don't Leave!</b> (right)</span>

@@ -16,6 +16,8 @@ It's in the Details
 </span>
 
 
+<div style="height: 10px"></div>
+
 <span class="art_paragraph"><b>Lines</b> (top) </span>
 
 <span class="art_paragraph"><b>Distinguishing Characteristics</b> (bottom) </span>
