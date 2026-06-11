@@ -922,11 +922,11 @@ function write_header()
 
    if (is_older_iPad() == true)
    {
-      d.getElementById("menu_button").style.fontSize = "40px";
+      d.getElementById("menu_button").style.fontSize = "35px";
    }
    else if (is_iPad() == true)
    {
-      d.getElementById("menu_button").style.fontSize = "55px";
+      d.getElementById("menu_button").style.fontSize = "50px";
    }
 
    return true;
