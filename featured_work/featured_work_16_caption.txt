@@ -31,7 +31,7 @@ There is something about autumn lighting that brings out the gold in the hills!
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Golden Hour 1</b> (left)</span>
 

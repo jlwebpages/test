@@ -31,7 +31,7 @@ In 2017, Canyon Fire 2 devastated the parks I hike on almost a daily basis. Sinc
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>After the Wildfire 1</b> (left)</span>
 

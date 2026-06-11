@@ -31,7 +31,7 @@ I took a hike one damp morning in the spring and found myself in a misty wonderl
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Greenspiration 2</b> (left)</span>
 

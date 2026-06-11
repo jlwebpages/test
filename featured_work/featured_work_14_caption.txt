@@ -31,7 +31,7 @@ Autumn on the trail - images and thoughts melt together in the heat of the after
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Earthquake Weather</b> (left)</span>
 

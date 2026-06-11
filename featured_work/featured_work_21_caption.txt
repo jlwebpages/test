@@ -31,7 +31,7 @@ On the coast, the bright sunlight desaturates and bleaches many of the surfaces 
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Beach Day</b> (left)</span>
 

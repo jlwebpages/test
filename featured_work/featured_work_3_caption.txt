@@ -31,7 +31,7 @@ Spring is almost over and the heat of summer looms ahead. Flowerbeds are explodi
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Sweet Spot</b> (top)</span>
 

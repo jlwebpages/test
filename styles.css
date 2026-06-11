@@ -535,6 +535,7 @@ a.header_link:hover
    font-weight: bold;
    font-style: italic;
    padding-top: 25px;
+   padding-bottom: 5px;
    display: inline-block;
 }
 
@@ -788,4 +789,9 @@ a.header_link:hover
    color: red;
    font-weight: bold;
    font-style: italic;
+}
+
+.vertical_spacer
+{
+   height: 10px;
 }

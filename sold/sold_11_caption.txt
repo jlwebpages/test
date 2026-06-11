@@ -16,7 +16,7 @@ It's in the Details
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Lines</b> (top) </span>
 

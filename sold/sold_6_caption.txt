@@ -16,7 +16,7 @@ Each is 6 x 12 inches on 1.5-inch cradled wood panel
 </span>
 
 
-<div style="height: 10px"></div>
+<div class="vertical_spacer"></div>
 
 <span class="art_paragraph"><b>Pause</b> (top)</span>
 
