@@ -698,13 +698,13 @@ a.header_link:hover
    color: inherit;
    caret-color: #444444;
    width: 100%;
+   height: 100%;
    margin: 0px auto;
    padding: 0px;
    border: 1px solid #444444;
    outline: none;
    resize: vertical;
    display: block;
-   field-sizing: content;
 }
 
 .contact_email_checkbox
