@@ -931,3 +931,9 @@ function write_header()
 
    return true;
 }
+
+function test()
+{
+   window.location.href = "https://www.sfvacc.org/layers-2026#:~:text=FLOATING";
+   window.location.href = "https://www.sfvacc.org/layers-2026#:~:text=FLOATING";
+}
