@@ -934,9 +934,9 @@ function write_header()
 
 function go_to_exhibition_website()
 {
-   window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "Exhibition_1", "noopener=true,noreferrer=true,");
+   window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "Exhibition_1", "noopener=true");
 
-   const temp_window = window.open("https://www.sfvacc.org/layers-2026");
+   const temp_window = window.open("https://www.sfvacc.org/layers-2026", "temp_window", "noopener=true");
         
    setTimeout(() => {temp_window.close();}, 5000); 
 }
