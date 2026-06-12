@@ -2,7 +2,7 @@
 
 <span class="exhibitions_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
-<a class="general_link" href="https://www.sfvacc.org/layers-2026?itemId=o3zmxgklm7y4dcu95mx82qpkelbv3x" target="Exhibition 1">
+<a class="general_link" href="https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350" target="Exhibition 1" rel="noopener noreferrer">
    <span style="font-size: 16px; font-weight: bold">Layers: Exploring Depth in Contemporary Art</span>
 </a><br>
 Virtual Group Exhibition<br>
