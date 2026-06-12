@@ -931,3 +931,11 @@ function write_header()
 
    return true;
 }
+
+   function go_to_exhibition()
+   {
+      window.open("https://www.sfvacc.org/layers-2026","Exhibition 1");
+      window.open("https://www.sfvacc.org/layers-2026?itemId=o3zmxgklm7y4dcu95mx82qpkelbv3x","Exhibition 1");
+
+      return true;
+   }
