@@ -2,7 +2,7 @@
 
 <span class="exhibitions_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
-<a class="general_link" href="https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350" target="Exhibition 1" rel="noopener noreferrer">
+<a class="general_link" href="javascript:void(0)" onclick="go_to_exhibition_website(); return false;">
    <span style="font-size: 16px; font-weight: bold">Layers: Exploring Depth in Contemporary Art</span>
 </a><br>
 Virtual Group Exhibition<br>
@@ -10,7 +10,7 @@ San Fernando Valley Arts & Cultural Center<br>
 June 17 - July 10 2026<br>
 <br>
 
-<a class="general_link" href="https://www.galleryofhermosa.com/warehouse-originals-limited-editions-standard-products/original_art_products/dockside-by-darlene-laguna?product_gallery=569920&product_id=8788299" target="Exhibition 2">
+<a class="general_link" href="https://www.galleryofhermosa.com/warehouse-originals-limited-editions-standard-products/original_art_products/dockside-by-darlene-laguna?product_gallery=569920&product_id=8788299" target="Exhibition_2">
    <span style="font-size: 16px; font-weight: bold">Colors of the Coast Group Exhibit</span>
 </a><br>
 Gallery of Hermosa<br>
