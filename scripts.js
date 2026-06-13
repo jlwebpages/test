@@ -934,27 +934,15 @@ function write_header()
 
 function go_to_exhibition_website()
 {
-   window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "_self");
+   //window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "_self");
 
    //const temp_window = window.open("https://www.sfvacc.org/layers-2026", "temp_window");
 
    //setTimeout(() => {temp_window.close();}, 5000);
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (window.location.hash) {
-    const hash = window.location.hash;
-    // Extract text fragment directive if it exists
-    if (hash.includes(':~:text=')) {
-      const textToFind = decodeURIComponent(hash.split(':~:text=')[1]);
-      // Search for the element containing the text
-      const elements = document.querySelectorAll('*');
-      for (let el of elements) {
-        if (el.textContent.includes(textToFind)) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          break;
-        }
-      }
-    }
-  }
-});
+   window.location.href = "https://www.sfvacc.org/layers-2026";
+
+   window.location.href = "about:blank";
+
+   window.location.href = "https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350";
 } 
