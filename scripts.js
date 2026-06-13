@@ -934,9 +934,25 @@ function write_header()
 
 function go_to_exhibition_website()
 {
+   //window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "Exhibition_1", "noopener=true");
+
+   //const temp_window = window.open("https://www.sfvacc.org/layers-2026", "temp_window");
+   
+   //setTimeout(() => {temp_window.close();}, 5000); 
+
+
+document.getElementById('exhibition_link').addEventListener('click', function() {
+
    window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "Exhibition_1", "noopener=true");
 
    const temp_window = window.open("https://www.sfvacc.org/layers-2026", "temp_window");
    
    setTimeout(() => {temp_window.close();}, 5000); 
+
+
+});
+
+
+
+
 }
