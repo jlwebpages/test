@@ -931,18 +931,3 @@ function write_header()
 
    return true;
 }
-
-function go_to_exhibition_website()
-{
-   //window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "_self");
-
-   //const temp_window = window.open("https://www.sfvacc.org/layers-2026", "temp_window");
-
-   //setTimeout(() => {temp_window.close();}, 5000);
-
-   window.location.href = "https://www.sfvacc.org/layers-2026";
-
-   window.location.href = "about:blank";
-
-   window.location.href = "https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350";
-} 
