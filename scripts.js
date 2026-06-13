@@ -947,7 +947,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (hash.includes(':~:text=')) {
       const textToFind = decodeURIComponent(hash.split(':~:text=')[1]);
       // Search for the element containing the text
-      const elements = document.querySelectorAll('p, h1, h2, h3, h4, span, li');
+      const elements = document.querySelectorAll('*');
       for (let el of elements) {
         if (el.textContent.includes(textToFind)) {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
