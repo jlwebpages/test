@@ -934,27 +934,9 @@ function write_header()
 
 function go_to_exhibition_website()
 {
-   const jl = window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "Exhibition_1", "noopener=true");
+   window.open("https://www.sfvacc.org/layers-2026#:~:text=FLOATING,350", "Exhibition_1", "noopener=true");
 
    //const temp_window = window.open("https://www.sfvacc.org/layers-2026", "temp_window");
-   
-   //setTimeout(() => {temp_window.close();}, 5000); 
 
-
-jl.onload = () => {
-  alert("JL");
-  const hash = window.location.hash;
-  if (hash) {
-    const elementId = hash.split(':~:text')[0];
-    const targetElement = document.querySelector(elementId);
-    
-    if (targetElement) {
-      setTimeout(() => {
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 500); // Wait 500ms for content to populate
-    }
-  }
-};
-}
-
-
+   //setTimeout(() => {temp_window.close();}, 5000);
+} 

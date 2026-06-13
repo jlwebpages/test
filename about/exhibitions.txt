@@ -2,7 +2,7 @@
 
 <span class="exhibitions_title" style="padding-bottom: 25px !important">EXHIBITIONS</span><br>
 
-<a id="exhibition_link" class="general_link" href="javascript:void(0)" onclick="go_to_exhibition_website(); return false;">
+<a class="general_link" href="javascript:void(0)" onclick="go_to_exhibition_website(); return false;">
    <span style="font-size: 16px; font-weight: bold">Layers: Exploring Depth in Contemporary Art</span>
 </a><br>
 Virtual Group Exhibition<br>
