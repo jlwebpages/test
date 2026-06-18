@@ -9,7 +9,6 @@
    .landing_sub_title                {font-size:             22px                      !important}
    .landing_sub_title                {letter-spacing:        2px                       !important}
    .landing_text                     {font-size:             16px                      !important}
-   .landing_text                     {line-height:           25px                      !important}
    .landing_text                     {width:                 80%                       !important}
    .landing_links                    {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
    .landing_links > :nth-child(odd)  {justify-self:          end                       !important}
@@ -62,9 +61,7 @@
    .landing_sub_title         {font-size:             22px                !important}
    .landing_sub_title         {letter-spacing:        2px                 !important}
    .landing_text              {font-size:             16px                !important}
-   .landing_text              {line-height:           20px                !important}
-   .landing_text              {width:                 80%                 !important}
-   .landing_links             {gap:                   75px                !important}
+   .landing_links             {gap:                   50px                !important}
    .landing_link              {font-size:             18px                !important}
    .title                     {font-size:             38px                !important}
    .title                     {letter-spacing:        2px                 !important}
@@ -103,7 +100,8 @@
 {
    .menu_button              {visibility:            visible             !important}
    .header_links             {display:               none                !important}
-   .landing_text             {width:                 80%                 !important}
+   .landing_text             {line-height:           40px                !important} 
+   .landing_text             {width:                 70%                 !important}
    .landing_links            {gap:                   50px                !important}
    .landing_link             {font-size:             22px                !important}
    .title                    {font-size:             46px                !important}
@@ -215,9 +213,11 @@
 
 .landing_text
 {
-   font-size: 18px;
+   font-size: 22px;
    font-weight: bold;
-   text-align: left;
+   font-style: italic;
+   color: maroon;
+   text-align: center;
    line-height: 30px;
    padding: 0px 10px 0px 10px;
    width: 60%;
