@@ -17,7 +17,7 @@
    .landing_links                    {grid-auto-flow:        row                       !important} 
    .landing_links                    {gap:                   25px                      !important}
    .landing_links                    {padding-bottom:        40px                      !important}
-   .landing_link                     {font-size:             18px                      !important}
+   .landing_link                     {font-size:             19px                      !important}
    .title                            {font-size:             32px                      !important}
    .title                            {letter-spacing:        2px                       !important}
    .title                            {padding-bottom:        15px                      !important}
@@ -64,7 +64,7 @@
    .landing_sub_title         {letter-spacing:        2px                 !important}
    .landing_text              {font-size:             17px                !important}
    .landing_links             {gap:                   50px                !important}
-   .landing_link              {font-size:             18px                !important}
+   .landing_link              {font-size:             19px                !important}
    .title                     {font-size:             38px                !important}
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
