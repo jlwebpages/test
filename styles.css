@@ -41,6 +41,7 @@
    .contact_email_container          {padding:               15px                      !important}
    .contact_email_container          {width:                 auto                      !important}
    .contact_email_message            {height:                300px                     !important}
+   #thank_you                        {margin-top:            25px                      !important}
    #gallery_header                   {display:               block                     !important}
    #one_column_1                     {display:               block                     !important}
    #two_column_1                     {display:               none                      !important}
@@ -85,6 +86,7 @@
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               15px                !important}
    .contact_email_container   {width:                 75%                 !important}
+   #thank_you                 {margin-top:            15px                !important}
    #gallery_header            {display:               block               !important}
    #one_column_1              {display:               none                !important}
    #two_column_1              {display:               block               !important}
