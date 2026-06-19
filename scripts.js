@@ -702,6 +702,11 @@ function navigate_to_next_image(gallery_name,image_number,direction)
    return true;
 }
 
+function scroll_to_top()
+{
+   window.scrollTo({top: 0,behavior: "smooth"});
+}
+
 function send_contact_email()
 {
    var email         = "mailto:";

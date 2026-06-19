@@ -39,6 +39,8 @@
 
 </div>
 
+<button id="scroll_button" class="scroll_button" onclick="scroll_to_top();"><span class="scroll_shape"></span></button>
+
 <script>
 
    var URL_string            = window.location.search;
@@ -53,6 +55,21 @@
    load_data_from_file(gallery_name,"about/about.txt","about_text",true,scroll_to_exhibitions);
 
    write_footer();
+
+   scroll_button = document.getElementById("scroll_button");
+
+   window.addEventListener("scroll", () =>
+   {
+      if (window.scrollY > 200)
+      {
+         scroll_button.style.visibility = "visible";
+      }
+      else
+      {
+         scroll_button.style.visibility = "hidden";
+      }
+   }
+   );
 
 </script>
 

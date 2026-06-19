@@ -622,6 +622,41 @@ a.header_link:hover
    transform: scale(1);
 }
 
+.scroll_button
+{
+   cursor: pointer;
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   font-size: 30px;
+   font-weight: bold;
+   height: 40px;
+   width: 40px;
+   background-color: black;
+   opacity: 60%;
+   border: 0px;
+   margin: 0px;
+   padding: 0px;
+   visibility: hidden;
+   z-index: 2;
+}
+
+.scroll_button:hover
+{
+   opacity: 100%;
+}
+
+.scroll_shape
+{
+   border: solid white;
+   border-width: 0px 4px 4px 0px;
+   margin: 0px;
+   padding: 6px;
+   transform: rotate(-135deg);
+   vertical-align: middle;
+   display: inline-block;
+}
+
 .image_container_one_column
 {
    background-color: seaShell;
