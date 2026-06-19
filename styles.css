@@ -6,15 +6,17 @@
    .header_links                     {display:               none                      !important}
    .landing_title                    {font-size:             32px                      !important}
    .landing_title                    {letter-spacing:        2px                       !important}
-   .landing_sub_title                {font-size:             22px                      !important}
+   .landing_title                    {padding-top:           40px                      !important}
+   .landing_sub_title                {font-size:             23px                      !important}
    .landing_sub_title                {letter-spacing:        2px                       !important}
-   .landing_text                     {font-size:             16px                      !important}
+   .landing_text                     {font-size:             17px                      !important}
    .landing_text                     {width:                 80%                       !important}
    .landing_links                    {grid-template-columns: repeat(2, minmax(0, 1fr)) !important} 
    .landing_links > :nth-child(odd)  {justify-self:          end                       !important}
    .landing_links > :nth-child(even) {justify-self:          start                     !important}
    .landing_links                    {grid-auto-flow:        row                       !important} 
    .landing_links                    {gap:                   25px                      !important}
+   .landing_links                    {padding-bottom:        40px                      !important}
    .landing_link                     {font-size:             18px                      !important}
    .title                            {font-size:             32px                      !important}
    .title                            {letter-spacing:        2px                       !important}
@@ -58,9 +60,9 @@
    .header_links              {display:               none                !important}
    .landing_title             {font-size:             32px                !important}
    .landing_title             {letter-spacing:        2px                 !important}
-   .landing_sub_title         {font-size:             22px                !important}
+   .landing_sub_title         {font-size:             23px                !important}
    .landing_sub_title         {letter-spacing:        2px                 !important}
-   .landing_text              {font-size:             16px                !important}
+   .landing_text              {font-size:             17px                !important}
    .landing_links             {gap:                   50px                !important}
    .landing_link              {font-size:             18px                !important}
    .title                     {font-size:             38px                !important}
