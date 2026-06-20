@@ -947,10 +947,9 @@ window.addEventListener("scroll", () =>
 
    if (scroll_button != null)
    {
-      scroll_button.style.opacity = "0.6";
-
       if (window.scrollY > 500)
       {
+         scroll_button.style.opacity    = "0.6";
          scroll_button.style.visibility = "visible";
       }
       else
