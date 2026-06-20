@@ -704,7 +704,17 @@ function navigate_to_next_image(gallery_name,image_number,direction)
 
 function scroll_to_top()
 {
+   var scroll_button = document.getElementById("scroll_button");
+
+
    window.scrollTo({top: 0,behavior: "smooth"});
+
+   if (scroll_button != null)
+   {
+      scroll_button.style.opacity = "0.6";
+
+      scroll_button.onmouseover = function() {scroll_button.style.opacity = "1.0";}
+   }
 }
 
 function send_contact_email()
@@ -943,13 +953,13 @@ function write_header()
 
 window.addEventListener("scroll", () =>
 {
-   scroll_button = document.getElementById("scroll_button");
+   var scroll_button = document.getElementById("scroll_button");
+
 
    if (scroll_button != null)
    {
       if (window.scrollY > 500)
       {
-         scroll_button.style.opacity    = "0.6";
          scroll_button.style.visibility = "visible";
       }
       else
