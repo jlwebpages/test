@@ -177,6 +177,8 @@
    .image_container_two_column {height: 100dvh !important}
 }
 
+@media (hover: hover)
+
 @keyframes fade-in
 {
    from {opacity: 0; visibility: hidden }
