@@ -131,7 +131,7 @@
    .contact_image_container  {padding-bottom:        10px                !important}
    .contact_email_container  {width:                 auto                !important}
    .contact_email_container  {padding-top:           10px                !important}
-   .contact_email_message    {height:                300px               !important}}
+   .contact_email_message    {height:                300px               !important}
    .scroll_button            {bottom:                15px                !important}
    .scroll_button            {right:                 15px                !important}
    #gallery_header           {display:               block               !important}
@@ -586,8 +586,7 @@ a.header_link:hover
    place-items: center;
    height: 52px;
    width: 18px;
-   background-color: white;
-   opacity: 75%;
+   background-color: rgba(255, 255, 255, 75%);
    border-radius: 4px;
    border: 0px;
    margin: 0px;
@@ -597,7 +596,7 @@ a.header_link:hover
 
 .nav_button:hover
 {
-   opacity: 50%;
+   background-color: rgba(255, 255, 255, 50%);
 }
 
 .nav_left_offset
@@ -642,8 +641,7 @@ a.header_link:hover
    font-weight: bold;
    height: 40px;
    width: 40px;
-   background-color: black;
-   opacity: 60%;
+   background-color: rgba(0, 0, 0, 60%);
    border: 0px;
    margin: 0px;
    padding: 0px;
@@ -654,7 +652,7 @@ a.header_link:hover
 
 .scroll_button:hover
 {
-   opacity: 100%;
+   background-color: rgba(0, 0, 0, 100%);
 }
 
 .scroll_shape
@@ -782,8 +780,7 @@ a.header_link:hover
    font-weight: bold;
    color: white;
    letter-spacing: 1px;
-   background-color: black;
-   opacity: 75%;
+   background-color: rgba(0, 0, 0, 75%);
    border-radius: 2px;
    border: 0px;
    margin: 0px auto;
@@ -826,7 +823,7 @@ a.header_link:hover
    font-weight: bold;
    color: white;
    letter-spacing: 2px;
-   background-color: rgba(255, 0, 0, 25%);
+   background-color: rgba(255, 0, 0, 75%);
    height: 16px;
    width: 50px;
    display: grid;
