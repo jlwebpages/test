@@ -653,9 +653,12 @@ a.header_link:hover
    z-index: 2;
 }
 
-.scroll_button:hover
+@media (hover: hover)
 {
-   opacity: 100%;
+   .scroll_button:hover
+   {
+      opacity: 10%;
+   }
 }
 
 .scroll_shape
