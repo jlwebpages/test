@@ -177,8 +177,6 @@
    .image_container_two_column {height: 100dvh !important}
 }
 
-@media (hover: hover)
-
 @keyframes fade-in
 {
    from {opacity: 0; visibility: hidden }
@@ -655,9 +653,12 @@ a.header_link:hover
    z-index: 2;
 }
 
-.scroll_button:hover
+@media (hover: hover)
 {
-   opacity: 100%;
+   .scroll_button:hover
+   {
+      opacity: 100%;
+   }
 }
 
 .scroll_shape
