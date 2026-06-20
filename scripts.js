@@ -947,7 +947,7 @@ window.addEventListener("scroll", () =>
 
    if (scroll_button != null)
    {
-      if (window.scrollY > 400)
+      if (window.scrollY > 500)
       {
          scroll_button.style.visibility = "visible";
       }
