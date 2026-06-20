@@ -883,7 +883,7 @@ function write_footer()
    document.writeln('');
    document.writeln('<div class="copyright">Copyright &copy '+year+' Darlene Laguna Art<br>All Rights Reserved.</div>');
    document.writeln('');
-   document.writeln('<a href="javascript:void(0);"><button id="scroll_button" class="scroll_button" onclick="scroll_to_top();"><span class="scroll_shape"></span></button></a>');
+   document.writeln('<button id="scroll_button" class="scroll_button" onclick="scroll_to_top();"><span class="scroll_shape"></span></button>');
    document.writeln('');
 
    return true;
