@@ -42,8 +42,6 @@
 
 </div>
 
-<button id="scroll_button" class="scroll_button" onclick="scroll_to_top();"><span class="scroll_shape"></span></button>
-
 <script>
 
    document.getElementById("art_gallery").insertAdjacentHTML("beforebegin","<div id='gallery_header' class='header_link' style='text-align: center; margin-bottom: 15px; display: none'>"+gallery_list[gallery_index]["title"]+"</div>");
@@ -51,21 +49,6 @@
    load_images_into_gallery(gallery_index);
 
    write_footer();
-
-   scroll_button = document.getElementById("scroll_button");
-
-   window.addEventListener("scroll", () =>
-   {
-      if (window.scrollY > 200)
-      {
-         scroll_button.style.visibility = "visible";
-      }
-      else
-      {
-         scroll_button.style.visibility = "hidden";
-      }
-   }
-   );
 
 </script>
 

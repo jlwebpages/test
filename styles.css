@@ -41,6 +41,9 @@
    .contact_email_container          {padding:               15px                      !important}
    .contact_email_container          {width:                 auto                      !important}
    .contact_email_message            {height:                300px                     !important}
+   .scroll_button                    {transform:             scale(80%)                !important}
+   .scroll_button                    {bottom:                5px                       !important}
+   .scroll_button                    {right:                 5px                       !important}
    #thank_you                        {margin-top:            20px                      !important}
    #gallery_header                   {display:               block                     !important}
    #one_column_1                     {display:               block                     !important}
@@ -86,6 +89,9 @@
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               15px                !important}
    .contact_email_container   {width:                 75%                 !important}
+   .scroll_button             {transform:             scale(80%)          !important}
+   .scroll_button             {bottom:                5px                 !important}
+   .scroll_button             {right:                 5px                 !important}
    #thank_you                 {margin-top:            10px                !important}
    #gallery_header            {display:               block               !important}
    #one_column_1              {display:               none                !important}
@@ -126,6 +132,9 @@
    .contact_email_container  {width:                 auto                !important}
    .contact_email_container  {padding-top:           10px                !important}
    .contact_email_message    {height:                300px               !important}
+   .scroll_button            {transform:             scale(90%)          !important}
+   .scroll_button            {bottom:                10px                !important}
+   .scroll_button            {right:                 10px                !important}
    #gallery_header           {display:               block               !important}
    #one_column_1             {display:               none                !important}
    #two_column_1             {display:               block               !important}
@@ -151,6 +160,9 @@
    .art_image_link_container {margin-bottom:         20px        !important}
    .about_image_container    {width:                 50%         !important}
    .contact_image            {max-width:             600px       !important}
+   .scroll_button            {transform:             scale(90%)  !important}
+   .scroll_button            {bottom:                10px        !important}
+   .scroll_button            {right:                 10px        !important}
    #one_column_1             {display:               none        !important}
    #two_column_1             {display:               none        !important}
    #two_column_2             {display:               none        !important}
