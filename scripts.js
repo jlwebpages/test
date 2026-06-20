@@ -704,12 +704,7 @@ function navigate_to_next_image(gallery_name,image_number,direction)
 
 function scroll_to_top()
 {
-   var scroll_button = document.getElementById("scroll_button");
-
-
    window.scrollTo({top: 0,behavior: "smooth"});
-
-   if (scroll_button != null) scroll_button.style.opacity = "0.6";
 }
 
 function send_contact_email()
