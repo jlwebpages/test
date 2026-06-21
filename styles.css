@@ -200,9 +200,9 @@
    border: 0px;
    margin: 0px;
    padding: 0px;
-     min-height: 100vh;   /* Fallback for older browsers */
-  min-height: 100svh;  /* Locks to the safe visible area */
+   height: 100dvh;
 }
+
 .landing_container
 {
    display: flex;
