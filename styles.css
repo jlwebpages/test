@@ -201,6 +201,8 @@
    margin: 0px;
    padding: 0px;
    height: 100vh;
+     min-height: 100vh;   /* Fallback for older browsers */
+  min-height: 100svh;  /* Locks to the safe visible area */
 }
 .landing_container
 {
@@ -797,7 +799,7 @@ a.header_link:hover
 
 .contact_email_send_button:hover
 {
-   opacity: .5;
+   opacity: 0.5;
 }
 
 .new_tag
