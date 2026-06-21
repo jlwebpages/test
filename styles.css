@@ -653,12 +653,9 @@ a.header_link:hover
    z-index: 2;
 }
 
-@media (hover: hover)
+.scroll_button:hover
 {
-   .scroll_button:hover
-   {
-      opacity: 0.9;
-   }
+   opacity: 0.9;
 }
 
 .scroll_shape
