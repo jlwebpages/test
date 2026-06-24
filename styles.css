@@ -23,6 +23,7 @@
    .title                            {padding-bottom:        15px                      !important}
    .art_gallery                      {grid-template-columns: 1fr                       !important}
    .art_gallery                      {padding-top:           10px                      !important}
+   .art_gallery                      {width:                 90%                       !important}
    .art_image_link_container         {margin-top:            0px                       !important}
    .nav_button                       {height:                24px                      !important}
    .nav_button                       {width:                 14px                      !important}
