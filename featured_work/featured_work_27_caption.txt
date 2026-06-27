@@ -1,0 +1,38 @@
+<!-- Title -->
+
+<span class="art_title">
+
+After the Wildfire
+
+</span>
+
+
+<!-- Medium and Dimensions -->
+
+<span class="art_dimensions">
+
+Acrylic and mixed media
+
+</span>
+
+<span class="art_dimensions">
+
+8 x 8 inch cradled wood panels
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+In 2017, Canyon Fire 2 devastated the parks I hike on almost a daily basis. Since then, I’ve witnessed their recovery - but there are still remnants of charred trees and cacti visible here and there. There was beauty in the recovery, even in the early days, when bits of bright green grass poked bravely up through the blackened earth.
+
+</span>
+
+
+<div class="vertical_spacer"></div>
+
+<span class="art_paragraph"><b>After the Wildfire 1</b> (left)</span>
+
+<span class="art_paragraph"><b>After the Wildfire 2</b> (right)</span>

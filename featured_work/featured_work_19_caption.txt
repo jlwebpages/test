@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-This Land Is Your Land
+Reveries
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-Each panel is 36 x 24 inches on 1.5-inch cradled wood panel
+8 x 8 inch cradled wood panels set in maple floater frames
 
 </span>
 
@@ -26,6 +26,15 @@ Each panel is 36 x 24 inches on 1.5-inch cradled wood panel
 
 <span class="art_paragraph">
 
-After I finished this diptych, this song by Woodie Guthrie popped into my head. As I looked at the random drips, I thought about how our environment has been impacted by our presence and the difficult state our country is in. I hope we all think carefully about what we want to do with our land.
+Autumn on the trail - images and thoughts melt together in the heat of the afternoon.
 
 </span>
+
+
+<div class="vertical_spacer"></div>
+
+<span class="art_paragraph"><b>Earthquake Weather</b> (left)</span>
+
+<span class="art_paragraph"><b>Atmospheric River</b> (center)</span>
+
+<span class="art_paragraph"><b>Reverie</b> (right)</span>

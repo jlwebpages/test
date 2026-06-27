@@ -5,7 +5,7 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Gallery",        min_image_number: 2, max_image_number: 22, new_list: [2,3,4,5]},
+const gallery_list = [{name: "featured_work",  title: "Gallery",        min_image_number: 5, max_image_number: 27, new_list: [5,6,7,8,9,10]},
                       {name: "photo_art",      title: "Photo Art",      min_image_number: 6, max_image_number: 16, new_list: [0]},
                       {name: "works_on_paper", title: "Works on Paper", min_image_number: 6, max_image_number: 11, new_list: [0]},
                       {name: "sold",           title: "Sold",           min_image_number: 1, max_image_number: 19, new_list: [0]}]

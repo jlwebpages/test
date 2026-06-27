@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Summer Skies
+Note to Self
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-10 x 10 inch cradled wood panels
+48 x 36 inches on 1.5-inch stretched canvas
 
 </span>
 
@@ -26,13 +26,6 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-Summer is the perfect time of year for looking up and daydreaming.
+With 2025 off to a rocky start, I let my freedom ring with my tools and paint on a large canvas I started in 2024. I turned it on its side and voiced my thoughts on current events.
 
 </span>
-
-
-<div class="vertical_spacer"></div>
-
-<span class="art_paragraph"><b>Many Moons</b> (left)</span>
-
-<span class="art_paragraph"><b>Fireworks</b> (right)</span>

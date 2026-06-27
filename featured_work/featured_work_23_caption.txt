@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Golden Hour
+Summer Skies
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-8 x 8 inch cradled wood panels set in maple floater frames
+10 x 10 inch cradled wood panels
 
 </span>
 
@@ -26,13 +26,13 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-There is something about autumn lighting that brings out the gold in the hills!
+Summer is the perfect time of year for looking up and daydreaming.
 
 </span>
 
 
 <div class="vertical_spacer"></div>
 
-<span class="art_paragraph"><b>Golden Hour 1</b> (left)</span>
+<span class="art_paragraph"><b>Many Moons</b> (left)</span>
 
-<span class="art_paragraph"><b>Golden Hour 2</b> (right)</span>
+<span class="art_paragraph"><b>Fireworks</b> (right)</span>
