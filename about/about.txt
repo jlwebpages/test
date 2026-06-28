@@ -1,8 +1,39 @@
-I am a mixed media artist in Orange, CA. I am inspired by the landscape that surrounds me, which includes rolling hills that lead into southern California mountain ranges, and by the photographs I take while hiking. I use acrylic paints, a variety of mark making tools, and collage, and I often sand back to reveal underlying layers before building on top of them again. Sometimes I include pieces of my photographs, through collage or image transfer, when constructing a piece. Textures, relationships, seasonal changes, and climate change are some of the themes that you will find explored within my work.
+<span class="about_title">ARTIST STATEMENT</span>
+
 <p>
-A life-long art enthusiast, I began my art-making career about 15 years ago after parenting three sons and having a variety of volunteer, teaching, and engineering positions. What began as casual photography and journaling while hiking led to an interest in composition and finding creative ways to use my images and ideas, directly and indirectly, in mixed media pieces. My work has been included in juried exhibitions and sold in galleries.
+
+<span style="font-style: italic; padding; 0px">“This is what it feels like to be here.”</span>
+
 <p>
-For more information and details about purchasing, pricing, and framing options, or to view in person if you are in the Orange County area, please <a class="general_link" href="contact.html?image_file_name=./about/contact.jpg&image_title=">contact</a> me.
+
+I create mixed-media works using collage, original photography, and acrylic paint to explore
+my connection to the natural world. Inspired by the diverse southern California landscape, I
+transform unique encounters into layered compositions to evoke memory, sensation, and place.
+I carefully select mixed-media materials to mirror the variety of perceptions I experience in
+my environment.
+
 <p>
-Thank you,<br>
-Darlene Laguna
+
+Although photography often informs my process, I’m not interested in portraying the world as
+it appears. Both the photographs I capture and the images stored in my memory seep into my
+consciousness and find their way into my work, for instance in where I place collage pieces
+or how I apply and scrape back into paint. I also employ line, shape, color, and texture to
+define and highlight specific features of my experiences. My objective with each piece is to
+convey a distinct sense of presence, beauty, and the unexpected, with the hope that it resonates
+with viewers as well. 
+
+<p>
+
+<div class="about_title">BIO</div>
+
+<p>
+
+Darlene Laguna, a mixed-media artist based in Orange, California, draws inspiration from her
+engineering background, which instilled in her a sense of precision, logic, and analytical
+thinking. However, it was through hiking, exploring the natural world, and landscape photography
+that she discovered a newfound sense of freedom and expansion that led her to her art-making
+practice. Primarily self-taught, Laguna’s mixed media work encompasses a diverse range of
+techniques, including landscape photography, collage, and acrylic painting. These elements
+come together to create layered, abstract compositions that delve into the beauty, presence,
+and emotional resonance of nature. Her work has been showcased in numerous juried exhibitions
+and galleries.
