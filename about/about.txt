@@ -15,7 +15,7 @@ a distinct sense of presence and beauty and to capture the unexpected.
 
 <p>
 
-<div class="about_title">BIO</div>
+<span class="about_title">BIO</span>
 
 <p>
 
