@@ -34,7 +34,7 @@
    .about_image_container            {padding:               20px 10px 25px 10px       !important}
    .about_title                      {font-size:             22px                      !important}
    .about_text                       {padding:               0px 10px 25px 10px        !important}
-   .exhibitions_text                 {padding:               0px 10px 10px 10px        !important}
+   .exhibition_text                  {padding:               0px 10px 10px 10px        !important}
    .contact_container                {flex-direction:        column                    !important}
    .contact_container                {justify-content:       flex-start                !important}  
    .contact_image_container          {padding:               15px                      !important}
@@ -85,7 +85,7 @@
    .about_image_container     {padding:               20px 10px 25px 15px !important}
    .about_title               {font-size:             22px                !important}
    .about_text                {padding:               10px 10px 25px 10px !important}
-   .exhibitions_text          {padding:               0px 10px 10px 10px  !important}
+   .exhibition_text           {padding:               0px 10px 10px 10px  !important}
    .contact_image_container   {padding:               20px 15px 15px 15px !important}
    .contact_image             {max-width:             500px               !important}
    .contact_email_container   {padding:               15px                !important}
@@ -126,7 +126,7 @@
    .about_image_container    {width:                 50%                 !important}
    .about_image_container    {padding:               25px 20px 25px 25px !important}
    .about_text               {padding:               15px 20px 25px 20px !important}
-   .exhibitions_text         {padding:               0px 20px 10px 20px  !important}
+   .exhibition_text          {padding:               0px 20px 10px 20px  !important}
    .contact_container        {flex-direction:        column              !important}
    .contact_container        {justify-content:       flex-start          !important}
    .contact_image_container  {padding-bottom:        10px                !important}
@@ -350,6 +350,14 @@ a.header_link:hover
    height: auto;
 }
 
+.about_title
+{
+   font-size: 24px;
+   white-space: nowrap;
+   padding-top: 5x;
+   display: inline-block;
+}
+
 .about_text
 {
    font-family: Arial, sans-serif;
@@ -361,21 +369,13 @@ a.header_link:hover
    padding: 10px 50px 25px 50px;
 }
 
-.about_title
-{
-   font-size: 24px;
-   white-space: nowrap;
-   padding-top: 5x;
-   display: inline-block;
-}
-
-.exhibitions_title
+.exhibition_title
 {
    font-size: 16px;
    font-weight: bold;
 }
 
-.exhibitions_text
+.exhibition_text
 {
    font-family: Arial, sans-serif;
    font-size: 14px; 

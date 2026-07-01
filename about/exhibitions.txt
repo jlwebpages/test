@@ -3,25 +3,25 @@
 <p>
 
 <a class="general_link" href="https://www.sfvacc.org/layers-2026?itemId=o3zmxgklm7y4dcu95mx82qpkelbv3x" target="Exhibition 1">
-   <span class="exhibitions_title">Layers: Exploring Depth in Contemporary Art</span>
+   <span class="exhibition_title">Layers: Exploring Depth in Contemporary Art</span>
 </a><br>
 Virtual Group Exhibition<br>
 <a class="general_link" href="https://www.sfvacc.org" target="Exhibition 1">
-   <span class="exhibitions_title">svacc.org</span>
+   <span class="exhibition_title">svacc.org</span>
 </a><br>
 San Fernando Valley Arts & Cultural Center<br>
 June 17 - July 10 2026<br>
 <br>
 
 <a class="general_link" href="https://www.galleryofhermosa.com/warehouse-originals-limited-editions-standard-products/original_art_products/dockside-by-darlene-laguna?product_gallery=569920&product_id=8788299" target="Exhibition 2">
-   <span class="exhibitions_title">Colors of the Coast Group Exhibit</span>
+   <span class="exhibition_title">Colors of the Coast Group Exhibit</span>
 </a><br>
 Gallery of Hermosa<br>
 Hermosa Beach, CA<br>
 May 23 - June 14 2026<br>
 <br>
 
-<span class="exhibitions_title">Specimens + Perceptions</span><br>
+<span class="exhibition_title">Specimens + Perceptions</span><br>
 The Language Mobilization Factory Gallery + Darkroom<br>
 Sierra Madre, CA<br>
 January 2026<br>
@@ -30,49 +30,49 @@ January 2026<br>
 </iframe><br>
 <br>
 
-<span class="exhibitions_title">F/8 Photo Show</span><br>
+<span class="exhibition_title">F/8 Photo Show</span><br>
 The Language Mobilization Factory Gallery + Darkroom<br>
 Sierra Madre, CA<br>
 August 2025<br>
 <br>
 
-<span class="exhibitions_title">How is the Weather? Art and Climate Change Juried Exhibition</span><br>
+<span class="exhibition_title">How is the Weather? Art and Climate Change Juried Exhibition</span><br>
 Orange County Center For Contemporary Art<br>
 Santa Ana, CA<br>
 July and August 2025<br>
 <br>
 
-<span class="exhibitions_title">The 60th Annual Anaheim Art Association Juried Art Show</span><br>
+<span class="exhibition_title">The 60th Annual Anaheim Art Association Juried Art Show</span><br>
 Muzeo Museum and Cultural Center<br>
 Anaheim, CA<br>
 November 2024 - January 2025<br>
 <br>
 
-<span class="exhibitions_title">The California Art League 2024 Gold Medal Juried Exhibition: Illuminated</span><br>
+<span class="exhibition_title">The California Art League 2024 Gold Medal Juried Exhibition: Illuminated</span><br>
 Sasse Gallery<br>
 Pomona, CA<br>
 July and August 2024<br>
 <br>
 
-<span class="exhibitions_title">Featured Artist</span><br>
+<span class="exhibition_title">Featured Artist</span><br>
 Linden Twig Boutique<br>
 Tustin, CA<br>
 February 2024 - January 2025<br>
 <br>
 
-<span class="exhibitions_title">Featured Artist</span><br>
+<span class="exhibition_title">Featured Artist</span><br>
 The Bookman<br>
 Orange, CA<br>
 October 2024 and December 2022<br>
 <br>
 
-<span class="exhibitions_title">City of Orange Fall Art Walk</span><br>
+<span class="exhibition_title">City of Orange Fall Art Walk</span><br>
 The Orange Plaza<br>
 Orange, CA<br>
 October 2023<br>
 <br>
 
-<span class="exhibitions_title">Orange County Parks Canyon Fire 2 Photography Exhibit</span><br>
+<span class="exhibition_title">Orange County Parks Canyon Fire 2 Photography Exhibit</span><br>
 Old Orange County Courthouse<br>
 Santa Ana, CA<br>
 2018
