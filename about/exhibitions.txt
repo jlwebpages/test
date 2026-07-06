@@ -1,4 +1,4 @@
-<span class="about_title" style="padding-top: 100px; padding-bottom: 10px">EXHIBITIONS</span>
+<span class="about_title" style="padding-top: 10px; padding-bottom: 10px">EXHIBITIONS</span>
 
 <p>
 
