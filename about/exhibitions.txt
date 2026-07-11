@@ -2,12 +2,12 @@
 
 <p>
 
-<a class="general_link" href="https://www.sfvacc.org/layers-2026?itemId=o3zmxgklm7y4dcu95mx82qpkelbv3x" target="Exhibition 1">
-   <span class="exhibition_title">Layers: Exploring Depth in Contemporary Art</span>
+<span class="exhibition_title">Layers: Exploring Depth in Contemporary Art</span><br>
+<a class="general_link" href="https://www.sfvacc.org/layers-2026" target="Exhibition 1">
+<span style="font-weight: bold">Virtual Exhibition</span>
 </a><br>
-Virtual Group Exhibition<br>
-<a class="general_link" href="https://www.sfvacc.org" target="Exhibition 1">
-   <span class="exhibition_title">svacc.org</span>
+<a class="general_link" href="https://www.sfvacc.org/layers-2026?itemId=o3zmxgklm7y4dcu95mx82qpkelbv3x-efxee" target="Exhibition 1">
+<span style="font-weight: bold">"Floating" by Darlene Laguna</span>
 </a><br>
 San Fernando Valley Arts & Cultural Center<br>
 June 17 - July 10 2026<br>
