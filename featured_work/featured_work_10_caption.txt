@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Long Distance
+Trail Times
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-14 x 11 x 1.5 inch stretched canvas
+12.5 x 12.5 inch wood panels set in maple floater frames
 
 </span>
 
@@ -26,6 +26,15 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-Early spring sunshine and white wispy clouds highlight fresh green growth and wildflowers - it’s a great time to get out and enjoy the distant views. 
+This triptych is inspired by fresh new growth on local hiking trails. An early spring heatwave has sunbleached some of the greens, but that’s what happens under so much lovely sunshine.
 
 </span>
+
+
+<div class="vertical_spacer"></div>
+
+<span class="art_paragraph"><b>Momentum</b> (left)</span>
+
+<span class="art_paragraph"><b>Impulse</b> (center)</span>
+
+<span class="art_paragraph"><b>Tempo</b> (right)</span>

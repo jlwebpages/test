@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Trail Times
+Falling
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-12.5 x 12.5 inch wood panels set in maple floater frames
+Both are 47.5 x 10 inches on 1.5-inch cradled wood panel
 
 </span>
 
@@ -26,15 +26,13 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-This triptych is inspired by fresh new growth on local hiking trails. An early spring heatwave has sunbleached some of the greens, but that’s what happens under so much lovely sunshine.
+Don't let anyone tell you there are no seasons in California! The California sycamore outside my window had quite an autumn this year.
 
 </span>
 
 
 <div class="vertical_spacer"></div>
 
-<span class="art_paragraph"><b>Momentum</b> (left)</span>
+<span class="art_paragraph"><b>I’m Falling for You</b> (left)</span>
 
-<span class="art_paragraph"><b>Impulse</b> (center)</span>
-
-<span class="art_paragraph"><b>Tempo</b> (right)</span>
+<span class="art_paragraph"><b>Please Don't Leave!</b> (right)</span>
