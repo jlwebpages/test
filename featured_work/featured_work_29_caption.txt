@@ -1,0 +1,31 @@
+<!-- Title -->
+
+<span class="art_title">
+
+Vista Point
+
+</span>
+
+
+<!-- Medium and Dimensions -->
+
+<span class="art_dimensions">
+
+Acrylic and mixed media
+
+</span>
+
+<span class="art_dimensions">
+
+8 x 8 inch cradled wood panel set in a maple floater frame
+
+</span>
+
+
+<!-- Paragraph -->
+
+<span class="art_paragraph">
+
+The bright greens of springtime don’t last long in the CA sunshine - but you can always come back to this vista point to remember how vibrant they are.
+
+</span>
