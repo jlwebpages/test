@@ -801,7 +801,7 @@ function toggle_gallery_menu()
    {
       document.getElementById("gallery_menu").style.display = "none";
 
-      if ( (is_mobile() == true) || (is_iPad() == true) !! (is_older_iPad() == true) )
+      if ( (is_mobile() == true) || (is_iPad() == true) || (is_older_iPad() == true) )
       {
          document.getElementById("gallery_link").style.color = "black";
       }
