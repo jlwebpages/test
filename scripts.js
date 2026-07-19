@@ -803,7 +803,7 @@ function toggle_gallery_menu()
 
       if (is_mobile == true)
       {
-         document.getElementById("gallery_link").style.color = "black";
+         alert ("mobile"); document.getElementById("gallery_link").style.color = "black";
       }
       else
       {
