@@ -804,6 +804,8 @@ function toggle_gallery_menu()
    else
    {
       document.getElementById("gallery_menu").style.display = "block";
+
+      window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
    }
 
    return true;
