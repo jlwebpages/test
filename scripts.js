@@ -800,7 +800,7 @@ function toggle_gallery_menu()
    if (document.getElementById("gallery_menu").style.display == "block")
    {
       document.getElementById("gallery_menu").style.display = "none";
-      document.getElementById("gallery_link").style.color   = "black";
+      document.getElementById("gallery_link").style.color   = "";
    }
    else
    {
