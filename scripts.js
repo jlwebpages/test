@@ -795,6 +795,20 @@ function set_size_and_position_of_contact_page_elements()
    }
 }
 
+function toggle_gallery_menu()
+{
+   if (document.getElementById("gallery_menu").style.display == "block")
+   {
+      document.getElementById("gallery_menu").style.display = "none";
+   }
+   else
+   {
+      document.getElementById("gallery_menu").style.display = "block";
+   }
+
+   return true;
+}
+
 function update_contact_image(image_file_name,direction)
 {
    var contact_image_file_name = "./about/contact.jpg";
@@ -959,17 +973,3 @@ window.addEventListener("scroll", () =>
    }
 }
 );
-
-function toggle()
-{
-   if (document.getElementById("dropdown-content").style.display == "block")
-   {
-      document.getElementById("dropdown-content").style.display = "none";
-   }
-   else
-   {
-      document.getElementById("dropdown-content").style.display = "block";
-   }
-
-   return true;
-}

@@ -13,18 +13,23 @@
 <style>
 
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  text-align: left;
-  z-index: 1;
-background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('landing_background.jpg');
-  background-position: center;
-  margin-left: 10px;
-  margin-top: 5px;
-
+.gallery_menu
+{
+   display: none;
+   position: absolute;
+   text-align: left;
+   z-index: 1;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('landing_background.jpg');
+   background-position: center;
+   margin-left: 10px;
 }
 
+.gallery_menu_item
+{
+   font-size: 18px; font-weight: normal;
+   display: block;
+   margin-top: 5px;
+}
 
 
 </style>
@@ -33,7 +38,7 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 
 
 </head>
 
-<body class="landing_body" oncontextmenu="return false;">
+<body class="landing_body">
 
 
 <div id="landing_container" class="landing_container">
@@ -52,13 +57,13 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 
    </div>
 
    <div class="landing_links">
-
       <div>
-         <span class="landing_link" onclick='toggle();'>Gallery</span>
-         <div id="dropdown-content" class="landing_link dropdown-content">
-            <a class="landing_link" style="font-size: calc(90%)" href="art_gallery.html?gallery_index=0">Featured Work</a><br>
-            <a class="landing_link" style="font-size: calc(90%)" href="art_gallery.html?gallery_index=1">Photo Art</a><br>
-            <a class="landing_link" style="font-size: calc(90%)" href="art_gallery.html?gallery_index=2">Works On Paper</a>
+         <span class="landing_link" onclick='toggle_gallery_menu();'>Gallery</span>
+         <div id="gallery_menu" class="gallery_menu">
+            <a class="landing_link gallery_menu_item" href="art_gallery.html?gallery_index=0">Featured Work</a>
+            <a class="landing_link gallery_menu_item" href="art_gallery.html?gallery_index=1">Photo Art</a>
+            <a class="landing_link gallery_menu_item" href="art_gallery.html?gallery_index=2">Works On Paper</a>
+            <a class="landing_link gallery_menu_item" href="art_gallery.html?gallery_index=3">Sold</a>
          </div>
       </div>
       <a class="landing_link" href="about.html?mode=exhibitions"                                  >Exhibitions</a>
