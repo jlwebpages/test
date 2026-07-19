@@ -21,9 +21,7 @@
   position: absolute;
   text-align: left;
   z-index: 1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
+  background: white;
 }
 
 
@@ -55,8 +53,8 @@
    <div class="landing_links">
 
       <div class="dropdown">
-         <span class="landing_link">Gallery</span>
-         <div class="landing_link dropdown-content">
+         <span class="landing_link" onclick='toggle();'>Gallery</span>
+         <div id="dropdown-content" class="landing_link dropdown-content">
             <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=0">&nbsp;&nbsp;Featured Work</a><br>
             <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=1">&nbsp;&nbsp;Photo Art</a><br>
             <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=2">&nbsp;&nbsp;Works On Paper</a>
