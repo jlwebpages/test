@@ -800,10 +800,12 @@ function toggle_gallery_menu()
    if (document.getElementById("gallery_menu").style.display == "block")
    {
       document.getElementById("gallery_menu").style.display = "none";
+      document.getElementById("gallery_link").style.color   = "black";
    }
    else
    {
       document.getElementById("gallery_menu").style.display = "block";
+      document.getElementById("gallery_link").style.color   = "#BE0000";
 
       window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
    }
