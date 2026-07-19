@@ -801,9 +801,9 @@ function toggle_gallery_menu()
    {
       document.getElementById("gallery_menu").style.display = "none";
 
-      if (is_mobile == true)
+      if (is_mobile() == true)
       {
-         alert ("mobile"); document.getElementById("gallery_link").style.color = "black";
+         document.getElementById("gallery_link").style.color = "black";
       }
       else
       {
