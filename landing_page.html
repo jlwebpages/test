@@ -12,16 +12,17 @@
 
 <style>
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+
 .dropdown-content {
   display: none;
   position: absolute;
   text-align: left;
   z-index: 1;
-  background: white;
+background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('landing_background.jpg');
+  background-position: center;
+  margin-left: 10px;
+  margin-top: 5px;
+
 }
 
 
@@ -52,12 +53,12 @@
 
    <div class="landing_links">
 
-      <div class="dropdown">
+      <div>
          <span class="landing_link" onclick='toggle();'>Gallery</span>
          <div id="dropdown-content" class="landing_link dropdown-content">
-            <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=0">&nbsp;&nbsp;Featured Work</a><br>
-            <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=1">&nbsp;&nbsp;Photo Art</a><br>
-            <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=2">&nbsp;&nbsp;Works On Paper</a>
+            <a class="landing_link" style="font-size: calc(90%)" href="art_gallery.html?gallery_index=0">Featured Work</a><br>
+            <a class="landing_link" style="font-size: calc(90%)" href="art_gallery.html?gallery_index=1">Photo Art</a><br>
+            <a class="landing_link" style="font-size: calc(90%)" href="art_gallery.html?gallery_index=2">Works On Paper</a>
          </div>
       </div>
       <a class="landing_link" href="about.html?mode=exhibitions"                                  >Exhibitions</a>
