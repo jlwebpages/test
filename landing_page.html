@@ -8,6 +8,30 @@
    <link href="styles.css" rel="stylesheet" type="text/css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script language="JavaScript" src=scripts.js></script>
+
+
+<style>
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+</style>
+
+
+
 </head>
 
 <body class="landing_body" oncontextmenu="return false;">
@@ -29,7 +53,15 @@
    </div>
 
    <div class="landing_links">
-      <a class="landing_link" href="art_gallery.html?gallery_index=0"                             >Gallery</a>
+
+      <div class="dropdown">
+         <span class="landing_link">Gallery</span>
+         <div class="landing_link dropdown-content">
+            <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=0">&nbsp;&nbsp;Featured Work</a><br>
+            <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=1">&nbsp;&nbsp;Photo Art</a><br>
+            <a class="landing_link" style="font-size: calc(100% - 2px)" href="art_gallery.html?gallery_index=2">&nbsp;&nbsp;Works On Paper</a>
+         </div>
+      </div>
       <a class="landing_link" href="about.html?mode=exhibitions"                                  >Exhibitions</a>
       <a class="landing_link" href="about.html"                                                   >About</a>
       <a class="landing_link" href="contact.html?image_file_name=./about/contact.jpg&image_title=">Contact</a>
