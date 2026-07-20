@@ -32,10 +32,12 @@
       <div>
          <span id="gallery_link" class="landing_link" onclick='toggle_gallery_menu();'>Art Gallery</span>
          <div id="gallery_menu" class="gallery_menu">
-            <a class="gallery_menu_item" href="art_gallery.html?gallery_index=0">Featured Work</a>
-            <a class="gallery_menu_item" href="art_gallery.html?gallery_index=1">Photo Art</a>
-            <a class="gallery_menu_item" href="art_gallery.html?gallery_index=2">Works On Paper</a>
-            <a class="gallery_menu_item" href="art_gallery.html?gallery_index=3">Sold</a>
+            <script>   
+               for (i = 0; i < gallery_list.length; i++)
+               {
+                  document.writeln('<a class="gallery_menu_item" href="art_gallery.html?gallery_index='+i+'">'+gallery_list[i]["title"]+'</a>');
+               }
+            </script>   
          </div>
       </div>
       <a class="landing_link" href="about.html?mode=exhibitions"                                  >Exhibitions</a>
