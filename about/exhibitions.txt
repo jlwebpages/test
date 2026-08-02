@@ -3,12 +3,12 @@
 <p>
 
 <a class="general_link" href="https://www.taggallery.net/" target="Exhibition 1">
-   <span class="exhibition_title">Short and Sweet</span>
+   <span class="exhibition_title">Short and Sweet: Art That Makes an Immediate Impact</span>
 </a><br>
 TAG - The Artists Gallery<br>
 5458 Wilshire Blvd, Los Angeles, California<br>
 August 5-28 2026<br>
-Opening reception: Saturday, August 8 5-8 PM<br>
+Opening reception: Saturday, August 8 from 5-8 PM<br>
 <br>
 
 <a class="general_link" href="https://www.sfvacc.org/layers-2026?itemId=o3zmxgklm7y4dcu95mx82qpkelbv3x" target="Exhibition 2">
