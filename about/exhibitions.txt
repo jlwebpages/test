@@ -2,7 +2,7 @@
 
 <p>
 
-<a class="general_link" href="https://www.taggallery.net/" target="Exhibition 1">
+<a class="general_link" href="https://www.taggallery.net/short-and-sweet-at-that-makes-an-immediate-impact?aa_piece=ca-skies" target="Exhibition 1">
    <span class="exhibition_title">Short and Sweet: Art That Makes an Immediate Impact</span>
 </a><br>
 TAG - The Artists Gallery<br>
