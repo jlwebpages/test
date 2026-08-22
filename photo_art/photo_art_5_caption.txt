@@ -1,0 +1,22 @@
+<!-- Title -->
+
+<span class="art_title">
+
+See Through
+
+</span>
+
+
+<!-- Medium and Dimensions -->
+
+<span class="art_dimensions">
+
+Acrylic and mixed media photo collage on 1.5-inch cradled wood panel
+
+</span>
+
+<span class="art_dimensions">
+
+12 x 6 inches
+
+</span>
