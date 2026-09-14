@@ -23,7 +23,7 @@ var year           = 0;
 year = URL_parameters.get("year");
 mode = URL_parameters.get("mode");
 
-if ( (year == null || mode == null) || (isNaN(year) == true) || (year < 2002 || year > top.fp_year) || (mode != "main" && mode != "playoffs" && mode != "archive") )
+if ( (year == null || mode == null) || (isNaN(year) == true) || (year > top.fp_year) || (mode != "main" && mode != "playoffs" && mode != "archive") )
 {
    alert("Error:  Invalid parameters passed to fp_playoff_teams.html");
 
