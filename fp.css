@@ -9,8 +9,8 @@
 
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
-   #AFC_Playoff_Teams_Table {border-spacing: 10px 15px !important}
-   #NFC_Playoff_Teams_Table {border-spacing: 10px 15px !important}
+   #AFC_Playoff_Teams_Table {border-spacing: 10px 10px !important}
+   #NFC_Playoff_Teams_Table {border-spacing: 10px 10px !important}
 }
 
 @media only screen and (min-width: 600px)
