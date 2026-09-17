@@ -206,39 +206,6 @@ function get_nfl_playoff_teams(year,mode)
 }
 
 
-function is_iPad()
-{
-   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
-   {
-      return true;
-   }
-
-   return false;
-}
-
-
-function is_mobile()
-{
-   if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
-   {
-      return true;
-   }
-
-   return false;
-}
-
-
-function is_older_iPad()
-{
-   if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") != -1) )
-   {
-      return true;
-   }
-
-   return false;
-}
-
-
 function process_nfl_playoff_teams(nfl_playoff_teams,year)
 {
    var AFC_teams                    = null;
