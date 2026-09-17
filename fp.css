@@ -5,16 +5,6 @@
 /* It's the order of the rules in this file that matters.                             */
 
 
-/* Rules for mobile devices in portrait orientation */
-
-@media only screen and (max-width: 655px) and (orientation: portrait)
-{
-   #AFC_Playoff_Teams_Table {border-spacing: 10px 15px !important}
-   #NFC_Playoff_Teams_Table {border-spacing: 10px 15px !important}
-}
-
-/* Other rules */
-
 @media only screen and (min-width: 600px)
 {
    #Final_Standings             {display: inline-block !important}
