@@ -468,8 +468,8 @@ function process_nfl_playoff_teams(nfl_playoff_teams,year)
 
    // Make AFC Playoff Teams and NFC Playoff Teams visible.
 
-   document.getElementById("AFC_Playoff_Teams").style.visibility="visible";
-   document.getElementById("NFC_Playoff_Teams").style.visibility="visible";
+   document.getElementById("afc_playoff_teams").style.visibility="visible";
+   document.getElementById("nfc_playoff_teams").style.visibility="visible";
 
    return true;
 }

@@ -52,59 +52,63 @@ if (top.document.getElementById("fp_main_header") != null)
 
 <style>img {height: 65px; width: 65px}</style>
 
-<table class="table" style="border-spacing: 10px 0px; height: calc(100% - 55px)">
+<table style="border-spacing: 10px 0px; height: calc(100% - 55px); width: 100%">
 
-   <tr style="vertical-align: bottom; height: 62%">
-      <td id="AFC_Playoff_Teams" style="visibility: hidden">
-         <table class="table" style="text-align: center; border-spacing: 10px; height: auto; width: 75%; margin-left: auto; margin-right: auto">
-            <tr class="red_color" style="font-size: 16pt; font-weight: bold">
-               <td colspan="4">AFC Playoff Teams</td>
+   <tr style="vertical-align: bottom">
+
+      <td id="afc_playoff_teams" style="visibility: hidden">
+         <table class="red_color" style="text-align: center; font-size: 10pt; font-weight: bold; border-spacing: 10px 20px; width: 75%; margin: 0px auto; margin-bottom: -10px;"> 
+            <tr>
+               <td colspan="4" style="font-size: 16pt">AFC Playoff Teams</td>
             </tr>
-         </table>
-         <table class="table" style="text-align: center; border-spacing: 10px; height: auto; width: 75%; margin-left: auto; margin-right: auto">
-            <tr class="red_color" style="font-size: 10pt; font-weight: bold">
+            <tr>
                <td id="AFC_1"></td>
                <td id="AFC_2"></td>
                <td id="AFC_3"></td>
                <td id="AFC_4"></td>
             </tr>
-         </table>
-         <table class="table" style="text-align: center; border-spacing: 10px; height: auto; width: 55%; margin-left: auto; margin-right: auto">
-            <tr class="red_color" style="font-size: 10pt; font-weight: bold">
-               <td id="AFC_5"></td>
-               <td id="AFC_6"></td>
-               <td id="AFC_7"></td>
+            <tr>
+               <td colspan="4">
+                  <div style="display: flex; justify-content: space-evenly; width: 85%; margin: 0px auto">
+                     <div id="AFC_5"></div>
+                     <div id="AFC_6"></div>
+                     <div id="AFC_7"></div>
+                  </div>
+               </td>
             </tr>
          </table>
       </td>
+
       <td class="light_color_cell" style="padding-top: 0px; padding-bottom: 40px; padding-left: 50px; padding-right: 50px">
          <a href="fp_rules.html" onMouseOver="document.rules.src='referee_2.gif';" onMouseOut="document.rules.src='referee_1.gif';">
             <img src="referee_1.gif" name=rules style="height: 125px; width: 45px">
          </a>
          <p><a class="white_link" style="color: maroon; letter-spacing: 1px; display: inline" href="fp_rules.html" target="fp_main">RULES</a></p>
       </td>
-      <td id="NFC_Playoff_Teams" style="visibility: hidden">
-         <table class="table" style="text-align: center; border-spacing: 10px; height: auto; width: 75%; margin-left: auto; margin-right: auto">
-            <tr class="dark_blue_color" style="font-size: 16pt; font-weight: bold">
-               <td colspan="4">NFC Playoff Teams</td>
+
+      <td id="nfc_playoff_teams" style="visibility: hidden">
+         <table class="dark_blue_color" style="text-align: center; font-size: 10pt; font-weight: bold; border-spacing: 10px 20px; width: 75%; margin: 0px auto; margin-bottom: -10px;"> 
+            <tr>
+               <td colspan="4" style="font-size: 16pt">NFC Playoff Teams</td>
             </tr>
-         </table>
-         <table class="table" style="text-align: center; border-spacing: 10px; height: auto; width: 75%; margin-left: auto; margin-right: auto">
-            <tr class="dark_blue_color" style="font-size: 10pt; font-weight: bold">
+            <tr>
                <td id="NFC_1"></td>
                <td id="NFC_2"></td>
                <td id="NFC_3"></td>
                <td id="NFC_4"></td>
             </tr>
-         </table>
-         <table class="table" style="text-align: center; border-spacing: 10px; height: auto; width: 55%; margin-left: auto; margin-right: auto">
-            <tr class="dark_blue_color" style="font-size: 10pt; font-weight: bold">
-               <td id="NFC_5"></td>
-               <td id="NFC_6"></td>
-               <td id="NFC_7"></td>
+            <tr>
+               <td colspan="4">
+                  <div style="display: flex; justify-content: space-evenly; width: 85%; margin: 0px auto">
+                     <div id="NFC_5"></div>
+                     <div id="NFC_6"></div>
+                     <div id="NFC_7"></div>
+                  </div>
+               </td>
             </tr>
          </table>
       </td>
+
    </tr>
 
    <tr style="height: 18%">
@@ -124,24 +128,24 @@ if (top.document.getElementById("fp_main_header") != null)
 
 <table class="table" style="border-bottom: 10px solid transparent; border-spacing: 10px 0px; height: 40px">
 
-<tr>
-   <td class="ext_button_cell">
-      <a class="white_link" href="http://www.nfl.com" target="_top">NFL.COM</a>
-   </td>
-   <td class="ext_button_cell">
-      <a class="white_link" href="http://www.espn.com/nfl" target="_top">NFL ON ESPN</a>
-   </td>
-   <td class="ext_button_cell">
-      <a class="white_link" href="https://www.espn.com/nfl/lines" target="_top" title="ESPN - NFL Daily Lines" style="display: inline-block">NFL</a>
-      <a class="white_link" href="https://www.sportsline.com/nfl/odds" target="_top" title="SportsLine - NFL Odds and Lines" style="display: inline-block">ODDS</a>
-   </td>
-   <td class="ext_button_cell">
-      <script>document.write('<a class="white_link" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main">PLAYOFF TEAMS</a>');</script>
-   </td>
-   <td class="ext_button_cell">
-      <a class="white_link" href="http://www.espn.com/nfl/playoffs/machine" target="_top">PLAYOFF MACHINE</a>
-   </td>
-</tr>
+   <tr>
+      <td class="ext_button_cell">
+         <a class="white_link" href="http://www.nfl.com" target="_top">NFL.COM</a>
+      </td>
+      <td class="ext_button_cell">
+         <a class="white_link" href="http://www.espn.com/nfl" target="_top">NFL ON ESPN</a>
+      </td>
+      <td class="ext_button_cell">
+         <a class="white_link" href="https://www.espn.com/nfl/lines" target="_top" title="ESPN - NFL Daily Lines" style="display: inline-block">NFL</a>
+         <a class="white_link" href="https://www.sportsline.com/nfl/odds" target="_top" title="SportsLine - NFL Odds and Lines" style="display: inline-block">ODDS</a>
+      </td>
+      <td class="ext_button_cell">
+         <script>document.write('<a class="white_link" href="fp_playoff_teams.html?year='+top.fp_year+'&mode=playoffs" target="fp_main">PLAYOFF TEAMS</a>');</script>
+      </td>
+      <td class="ext_button_cell">
+         <a class="white_link" href="http://www.espn.com/nfl/playoffs/machine" target="_top">PLAYOFF MACHINE</a>
+      </td>
+   </tr>
 
 </table>
 
