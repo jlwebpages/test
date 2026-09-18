@@ -9,7 +9,7 @@
 
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
-   #Playoff_Teams       {padding-top:    0px       !important}
+   #Playoff_Teams       {padding-top:    5px       !important}
    .playoff_teams_table {border-spacing: 10px 15px !important}
 }
 
