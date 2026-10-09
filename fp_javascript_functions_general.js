@@ -229,7 +229,7 @@ function process_nfl_playoff_teams(nfl_playoff_teams,year)
    var total_team_record_games      = 0;
 
 
-   // Special handling of playoff years 2011 and 2012 since the ESPN website says "No Data Available".
+   // Special handling of playoff years that are inaccurate on the ESPN website.
 
    if ( (year >= 1997) && (year <= 2002) )
    {
