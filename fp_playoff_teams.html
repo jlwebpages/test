@@ -13,14 +13,17 @@
 
 <script language="JavaScript">
 
-var mode           = "";
-var URL_string     = window.location.search;;
-var URL_parameters = new URLSearchParams(URL_string);;
-var year           = 0;
+var number_of_columns = 4;
+var mode              = "";
+var URL_string        = window.location.search;;
+var URL_parameters    = new URLSearchParams(URL_string);;
+var year              = 0;
 
 
 year = URL_parameters.get("year");
 mode = URL_parameters.get("mode");
+
+if (year <= 2001) number_of_columns = 3;
 
 if ( (year == null || mode == null) || (isNaN(year) == true) || (year > top.fp_year) || (mode != "main" && mode != "playoffs" && mode != "archive") )
 {
@@ -85,7 +88,8 @@ else
          <table class="playoff_teams_table red_color">
 
             <tr>
-               <td colspan="4" style="font-size: 16pt; white-space: nowrap"><script>document.write(year+" AFC Playoff Teams");</script></td>
+               <td colspan="4" style="font-size: 16pt"><script>document.write(year+" AFC Playoff Teams");</script></td>
+               
             </tr>
 
             <tr>
@@ -128,7 +132,7 @@ else
          <table class="playoff_teams_table dark_blue_color">
 
             <tr>
-               <td colspan="4" style="font-size: 16pt; white-space: nowrap"><script>document.write(year+" NFC Playoff Teams");</script></td>
+               <td colspan="4" style="font-size: 16pt"><script>document.write(year+" NFC Playoff Teams");</script></td>
             </tr>
 
             <tr>
