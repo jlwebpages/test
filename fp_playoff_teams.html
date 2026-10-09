@@ -88,7 +88,11 @@ else
          <table class="playoff_teams_table red_color">
 
             <tr>
-               <td colspan="4" style="font-size: 16pt"><script>document.write(year+" AFC Playoff Teams");</script></td>
+               <!-- <td colspan="4" style="font-size: 16pt"><script>document.write(year+" AFC Playoff Teams");</script></td> -->
+
+
+               <script>document.write('<td colspan="'+number_of_columns+'" style="font-size: 16pt">'+year+' AFC Playoff Teams</td>');</script>
+
                
             </tr>
 
