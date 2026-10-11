@@ -14,6 +14,13 @@
    .playoff_teams_table {width:          95%       !important}
 }
 
+/* Rules for mobile devices in landscape orientation */
+
+@media only screen and (max-width: 767px) and (orientation: landscape)
+{
+   .playoff_teams_table {width:          95%       !important}
+}
+
 /* Other rules */
 
 @media only screen and (min-width: 600px)
