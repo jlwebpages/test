@@ -9,9 +9,23 @@
 
 @media only screen and (max-width: 655px) and (orientation: portrait)
 {
-   #playoff_teams       {padding-top:    5px       !important}
-   .playoff_teams_table {border-spacing: 10px 15px !important}
-   .playoff_teams_table {width:          95%       !important}
+   #afc_division_winners {visibility:     hidden    !important}
+   #afc_wildcard_teams   {visibility:     hidden    !important}
+   #nfc_division_winners {visibility:     hidden    !important}
+   #nfc_wildcard_teams   {visibility:     hidden    !important}
+   #playoff_teams        {padding-top:    5px       !important}
+   .playoff_teams_table  {border-spacing: 10px 15px !important}
+   .playoff_teams_table  {width:          95%       !important}
+}
+
+/* Rules for mobile devices in landscape orientation */
+
+@media only screen and (max-width: 767px) and (orientation: landscape)
+{
+   #afc_division_winners {visibility: hidden !important}
+   #afc_wildcard_teams   {visibility: hidden !important}
+   #nfc_division_winners {visibility: hidden !important}
+   #nfc_wildcard_teams   {visibility: hidden !important}
 }
 
 /* Rules for iPads and tablets in landscape orientation */
