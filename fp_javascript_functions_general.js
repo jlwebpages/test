@@ -252,6 +252,17 @@ function is_older_iPad()
 }
 
 
+function is_portrait()
+{
+   if (window.innerHeight >= window.innerWidth)
+   {
+      return true;
+   }
+
+   return false;
+}
+
+
 function process_nfl_playoff_teams(nfl_playoff_teams,year)
 {
    var AFC_teams                    = null;

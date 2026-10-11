@@ -1056,9 +1056,9 @@
 
    <script>
 
-      // Check to see if this is a mobile device and not an older iPad.
+      // Check to see if this is a mobile device.
 
-      if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
+      if (is_mobile() == true)
       {
          if ( (isNaN(window.innerWidth) == false) && (window.innerWidth > 0) )
          {
