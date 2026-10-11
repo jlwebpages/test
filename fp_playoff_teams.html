@@ -96,7 +96,7 @@ else
             </tr>
 
             <script>
-               if (is_mobile() == false) document.write('<tr><td id="afc_division_winners" colspan="'+number_of_columns+'" style="font-size: 17px; padding-top: 10px">Division Winners</td></tr>');
+               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px; padding-top: 10px">Division Winners</td></tr>');
             </script>
 
             <tr>
@@ -106,9 +106,9 @@ else
                <script>if (year >= 2002) document.write('<td id="AFC_4"></td>');</script>
             </tr>
 
-            <tr>
-               <script>document.write('<td id="afc_wildcard_teams" colspan="'+number_of_columns+'" style="font-size: 17px">Wildcard Teams</td>');</script>
-            </tr>
+            <script>
+               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px">Wildcard Teams</td></tr>');</script>
+            </script>
 
             <tr>
                <script>document.write('<td colspan="'+number_of_columns+'">');</script>  
@@ -146,9 +146,9 @@ else
                <script>document.write('<td colspan="'+number_of_columns+'" style="font-size: 22px">'+year+' NFC Playoff Teams</td>');</script>
             </tr>
 
-            <tr>
-               <script>document.write('<td id="nfc_division_winners" colspan="'+number_of_columns+'" style="font-size: 17px; padding-top: 10px">Division Winners</td>');</script>
-            </tr>
+            <script>
+               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px; padding-top: 10px">Division Winners</td></tr>');
+            </script>
 
             <tr>
                <td id="NFC_1"></td>
@@ -157,9 +157,9 @@ else
                <script>if (year >= 2002) document.write('<td id="NFC_4"></td>');</script>
             </tr>
 
-            <tr>
-               <script>document.write('<td id="nfc_wildcard_teams" colspan="'+number_of_columns+'" style="font-size: 17px">Wildcard Teams</td>');</script>
-            </tr>
+            <script>
+               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px">Wildcard Teams</td></tr>');</script>
+            </script>
 
             <tr>
                <script>document.write('<td colspan="'+number_of_columns+'">');</script>  
