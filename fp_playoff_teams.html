@@ -62,6 +62,10 @@ else
    }
 
    get_nfl_playoff_teams(year,mode);
+
+   // Perform a hard reload when the device window orientation changes.
+
+   window.addEventListener("orientationchange", function(){location.href = self.location.href;});
 }
 
 </script>
