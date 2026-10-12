@@ -4,7 +4,7 @@ function adjust_mobile_viewport_height(document,form)
    var iPad = false;
 
 
-   if (is_iPad() == true)
+   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
    {
       iPad = true;
    }
@@ -1439,7 +1439,7 @@ function build_postseason_form()
    d.writeln('</'+'script>');
    d.writeln('');
    d.writeln('');
-   if ( (top.gv.mobile == false) || (is_iPad() == true) )
+   if ( (top.gv.mobile == false) || (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
    {
       d.writeln('<div style="font-family: Calibri, sans-serif; font-size: 16pt; font-weight: bold; text-align: center; margin: 10px 0px 10px 0px; display: block">'+document_heading+'</div>');
       d.writeln('');
@@ -3589,7 +3589,7 @@ function build_regular_season_form()
    d.writeln('</'+'script>');
    d.writeln('');
    d.writeln('');
-   if ( (top.gv.mobile == false) || (is_iPad() == true) )
+   if ( (top.gv.mobile == false) || (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
    {
       d.writeln('<div style="font-family: Calibri, sans-serif; font-size: 16pt; font-weight: bold; text-align: center; margin: 10px 0px 10px 0px; display: block">'+document_heading+'</div>');
       d.writeln('');
@@ -4781,7 +4781,7 @@ function build_regular_season_summary()
    d.writeln('</'+'script>');
    d.writeln('');
    d.writeln('');
-   if ( (top.gv.mobile == false) || (is_iPad() == true) )
+   if ( (top.gv.mobile == false) || (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
    {
       d.writeln('<div style="font-family: Calibri, sans-serif; font-size: 16pt; font-weight: bold; text-align: center; margin: 10px 0px 10px 0px; display: block">'+document_heading+'</div>');
       d.writeln('');
@@ -5552,17 +5552,6 @@ function check_for_top_variables()
    }
 
    return true;
-}
-
-
-function is_iPad()
-{
-   if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
-   {
-      return true;
-   }
-
-   return false;
 }
 
 

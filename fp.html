@@ -5,9 +5,10 @@
 <head>
 
    <title>NFL Football Pool</title>
+
    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+
    <link href="fp.css" rel="stylesheet" type="text/css">
-   <script language="JavaScript" src=fp_javascript_functions_general.js></script>
 
    <script language="JavaScript">
 
@@ -856,14 +857,14 @@
       {
          // If we're running on an iPhone then return.
 
-         if (is_iPhone() == true)
+         if (navigator.platform.toLowerCase().indexOf("iphone") != -1)
          {
             return;
          }
 
          // If we're running on an iPad then return.
 
-         if (is_iPad() == true)
+         if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
          {
             return;
          }

@@ -62,10 +62,6 @@ else
    }
 
    get_nfl_playoff_teams(year,mode);
-
-   // Perform a hard reload when the device window orientation changes.
-
-   window.addEventListener("orientationchange", function(){location.href = self.location.href;});
 }
 
 </script>
@@ -92,12 +88,8 @@ else
          <table class="playoff_teams_table red_color">
 
             <tr>
-               <script>document.write('<td colspan="'+number_of_columns+'" style="font-size: 22px">'+year+' AFC Playoff Teams</td>');</script>
+               <script>document.write('<td colspan="'+number_of_columns+'" style="font-size: 16pt">'+year+' AFC Playoff Teams</td>');</script>
             </tr>
-
-            <script>
-               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px; padding-top: 10px">Division Winners</td></tr>');
-            </script>
 
             <tr>
                <td id="AFC_1"></td>
@@ -105,10 +97,6 @@ else
                <td id="AFC_3"></td>
                <script>if (year >= 2002) document.write('<td id="AFC_4"></td>');</script>
             </tr>
-
-            <script>
-               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px">Wildcard Teams</td></tr>');</script>
-            </script>
 
             <tr>
                <script>document.write('<td colspan="'+number_of_columns+'">');</script>  
@@ -127,7 +115,7 @@ else
 
    <script>
 
-   if (is_portrait() == true)
+   if (top.mobile == true)
    {
       document.write('');
       document.write('   </tr>');
@@ -143,12 +131,8 @@ else
          <table class="playoff_teams_table dark_blue_color">
 
             <tr>
-               <script>document.write('<td colspan="'+number_of_columns+'" style="font-size: 22px">'+year+' NFC Playoff Teams</td>');</script>
+               <script>document.write('<td colspan="'+number_of_columns+'" style="font-size: 16pt">'+year+' NFC Playoff Teams</td>');</script>
             </tr>
-
-            <script>
-               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px; padding-top: 10px">Division Winners</td></tr>');
-            </script>
 
             <tr>
                <td id="NFC_1"></td>
@@ -156,10 +140,6 @@ else
                <td id="NFC_3"></td>
                <script>if (year >= 2002) document.write('<td id="NFC_4"></td>');</script>
             </tr>
-
-            <script>
-               if (is_mobile() == false) document.write('<tr><td colspan="'+number_of_columns+'" style="font-size: 17px">Wildcard Teams</td></tr>');</script>
-            </script>
 
             <tr>
                <script>document.write('<td colspan="'+number_of_columns+'">');</script>  

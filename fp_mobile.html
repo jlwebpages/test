@@ -5,8 +5,11 @@
 <head>
 
    <title>NFL Football Pool</title>
+
    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+
    <link href="fp.css" rel="stylesheet" type="text/css">
+
    <script language="JavaScript" src=fp_javascript_functions_general.js></script>
 
    <script>
@@ -943,7 +946,7 @@
          document.getElementById("fp_loading_indicator").style.zIndex = -1;
          document.getElementById(frame_name).style.zIndex             = 1;
 
-         if (is_iPad() == true)
+         if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
          {
             iPad = true;
          }
@@ -994,14 +997,14 @@
       {
          // If we're running on an iPhone then return.
 
-         if (is_iPhone() == true)
+         if (navigator.platform.toLowerCase().indexOf("iphone") != -1)
          {
             return;
          }
 
          // If we're running on an iPad then return.
 
-         if (is_iPad() == true)
+         if ( (navigator.platform.toLowerCase().indexOf("ipad") != -1) || ((navigator.platform.toLowerCase().indexOf("macintel") != -1) && (navigator.maxTouchPoints > 1)) )
          {
             return;
          }
@@ -1056,9 +1059,9 @@
 
    <script>
 
-      // Check to see if this is a mobile device.
+      // Check to see if this is a mobile device and not an older iPad.
 
-      if (is_mobile() == true)
+      if ( (navigator.userAgent.toLowerCase().indexOf("mobile") != -1) && (navigator.platform.toLowerCase().indexOf("ipad") == -1) )
       {
          if ( (isNaN(window.innerWidth) == false) && (window.innerWidth > 0) )
          {
