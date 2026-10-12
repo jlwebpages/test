@@ -14,7 +14,15 @@
    .playoff_teams_table {width:          95%       !important}
 }
 
-/* Other rules */
+/* Rules for iPads and tablets in landscape orientation */
+
+@media screen and (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse)
+{
+   #playoff_teams       {max-width: none !important}
+   .playoff_teams_table {width:     95%  !important}
+}
+
+/* Rules for Standings page */
 
 @media only screen and (min-width: 600px)
 {
@@ -115,7 +123,7 @@
 .playoff_teams_table
 {
    font-family: Calibri, sans-serif;
-   font-size: 10pt;
+   font-size: 14px;
    font-weight: bold;
    text-align: center;
    white-space: nowrap;
