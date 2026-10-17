@@ -268,6 +268,14 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       back_button_vertical_position += "px";
       nav_button_vertical_position  += "px";
 
+      if (gallery_name == "works_on_paper")
+      {
+         image_style = image_style.slice(0, -1);
+
+image_style += "; border: 60px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
+//alert(image_style+"  "+gallery_name);
+      }
+
       html_string += '';
       html_string += '';
       html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
@@ -277,7 +285,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '   </div>';
       html_string += '';
       html_string += '   <div id="caption_div" class="art_caption fade_in" '+caption_div_style+'>';
-      html_string += '      <div id="image_caption">';
+      html_string += '      <div id="image_caption" style="padding-top: 60px">';
       html_string += '        <!-- Load data from file. -->';   
       html_string += '      </div>';
       html_string += '   </div>';
@@ -543,7 +551,10 @@ function load_image(gallery_name,image_number,image_count)
    var file_path_prefix = gallery_name + "/" + file_name_prefix;
    var image_html       = "";
    var image_path       = file_path_prefix + ".jpg";
+   var image_style      = "";
 
+
+   if (gallery_name == "works_on_paper") image_style = ' style="border: 30px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)"';
 
    if (column_count == 1)
    {
@@ -563,7 +574,7 @@ function load_image(gallery_name,image_number,image_count)
    }
 
    image_html += '<div class="art_image_link_container">\n';
-   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>\n';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
 
    for (i = 0; i < gallery_list[gallery_index]["new_list"].length; i++)
    {
