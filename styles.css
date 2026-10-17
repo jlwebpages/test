@@ -77,10 +77,10 @@
    .title                     {letter-spacing:        2px                 !important}
    .title                     {padding-bottom:        15px                !important}
    .art_gallery               {grid-template-columns: 1fr 1fr             !important}
-   .art_gallery               {gap:                   30px                !important}
-   .art_gallery               {width:                 calc(100% - 60px)   !important}
-   .art_image_link_container  {margin-top:            15px                !important}
-   .art_image_link_container  {margin-bottom:         15px                !important}
+   .art_gallery               {gap:                   35px                !important}
+   .art_gallery               {width:                 calc(100% - 70px)   !important}
+   .art_image_link_container  {margin-top:            17.5px              !important}
+   .art_image_link_container  {margin-bottom:         17.5px              !important}
    .nav_button                {height:                24px                !important}
    .nav_button                {width:                 14px                !important}
    .nav_left_shape            {transform:             scale(80%)          !important}
@@ -157,7 +157,7 @@
    .landing_text             {width:                 80%                !important}
    .art_gallery              {grid-template-columns: 1fr 1fr 1fr        !important}
    .art_gallery              {gap:                   50px               !important}
-   .art_gallery              {padding-top:           5px                !important}
+   .art_gallery              {padding-top:           0px                !important}
    .art_gallery              {width:                 calc(100% - 100px) !important}
    .art_image_link_container {margin-top:            25px               !important}
    .art_image_link_container {margin-bottom:         25px               !important}
