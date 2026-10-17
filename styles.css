@@ -24,8 +24,10 @@
    .title                            {padding-bottom:        15px                      !important}
    .art_gallery                      {grid-template-columns: 1fr                       !important}
    .art_gallery                      {padding-top:           10px                      !important}
-   .art_gallery                      {width:                 90%                       !important}
+   .art_gallery                      {width:                 calc(100% - 70px)         !important}
    .art_image_link_container         {margin-top:            0px                       !important}
+   .art_image_link_container         {margin-top:            17.5px                    !important}
+   .art_image_link_container         {margin-bottom:         17.5px                    !important}
    .nav_button                       {height:                24px                      !important}
    .nav_button                       {width:                 14px                      !important}
    .nav_left_shape                   {transform:             scale(80%)                !important}
