@@ -232,7 +232,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
             image_style         = "style=\"width: "+adjusted_image_width+"px\"";
-            caption_div_style   = "style=\"max-width: 500px; height: "+adjusted_image_height+"px; padding-top: 5px\"";
+            caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
 
             back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) - 10;  // Not exactly sure why -10.
 
@@ -268,12 +268,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       back_button_vertical_position += "px";
       nav_button_vertical_position  += "px";
 
+      image_style = image_style.slice(0, -1);
+      image_style += '; display: block"';
+
       if (gallery_name == "works_on_paper")
       {
          image_style = image_style.slice(0, -1);
-
-image_style += "; border: 60px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
-//alert(image_style+"  "+gallery_name);
+         image_style += "; border: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
       }
 
       html_string += '';
@@ -285,7 +286,7 @@ image_style += "; border: 60px solid var(--background_color); box-sizing: border
       html_string += '   </div>';
       html_string += '';
       html_string += '   <div id="caption_div" class="art_caption fade_in" '+caption_div_style+'>';
-      html_string += '      <div id="image_caption" style="padding-top: 60px">';
+      html_string += '      <div id="image_caption">';
       html_string += '        <!-- Load data from file. -->';   
       html_string += '      </div>';
       html_string += '   </div>';
