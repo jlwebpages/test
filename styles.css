@@ -24,7 +24,6 @@
    .title                            {padding-bottom:        15px                      !important}
    .art_gallery                      {grid-template-columns: 1fr                       !important}
    .art_gallery                      {width:                 calc(100% - 60px)         !important}
-   .art_image_link_container         {margin-top:            0px                       !important}
    .art_image_link_container         {margin-top:            15px                      !important}
    .art_image_link_container         {margin-bottom:         15px                      !important}
    .nav_button                       {height:                24px                      !important}
@@ -157,7 +156,6 @@
    .landing_text             {width:                 80%                !important}
    .art_gallery              {grid-template-columns: 1fr 1fr 1fr        !important}
    .art_gallery              {gap:                   50px               !important}
-   .art_gallery              {padding-top:           0px                !important}
    .art_gallery              {width:                 calc(100% - 100px) !important}
    .art_image_link_container {margin-top:            25px               !important}
    .art_image_link_container {margin-bottom:         25px               !important}
