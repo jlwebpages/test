@@ -277,6 +277,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          image_style += "; border: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
       }
 
+      caption_div_style = caption_div_style.slice(0, -1);
+      caption_div_style += "; border-top: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+
       html_string += '';
       html_string += '';
       html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
