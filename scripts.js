@@ -563,7 +563,7 @@ function load_image(gallery_name,image_number,image_count)
    }
 
    image_html += '<div class="art_image_link_container">\n';
-   image_html += '   <a class="art_image_link" " href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius" style="border: 0px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)"></a>\n';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"></a>\n';
 
    for (i = 0; i < gallery_list[gallery_index]["new_list"].length; i++)
    {
