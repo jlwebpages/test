@@ -228,7 +228,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             // Reduce the image width to make room for the image caption.
 
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
-            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 0;  // Not exactly sure why -15.  Maybe to account for caption_div top and/or bottom margins. //JL
+            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;  // Not exactly sure why -15.  Maybe to account for caption_div top and/or bottom margins. //JL
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
             image_style         = "style=\"width: "+adjusted_image_width+"px\"";
@@ -242,9 +242,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             {
                // Make vertical button position adjustments.
 
-               if (back_button_vertical_position > 5) back_button_vertical_position += 13;
+               //if (back_button_vertical_position > 5) back_button_vertical_position += 13;
 
-               nav_button_vertical_position += 13;
+               //nav_button_vertical_position += 13;
             }
          }
          else   
