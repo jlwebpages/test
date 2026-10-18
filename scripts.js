@@ -274,15 +274,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile() == true)
          {
-            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image Mobile");
+            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
          }
          else if (is_iPad() == true)
          {
-            image_style += "; border: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image iPad");
+            image_style += "; border: 30px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
          }
          else
          {
-            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image Desktop");
+            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
          }
       }
 
@@ -292,15 +292,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile() == true)
          {
-            caption_div_style += "\"";alert("caption mobile");
+            caption_div_style += "\"";
          }
          else if (is_iPad() == true)
          {
-            caption_div_style += "; border-top: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("caption iPad");
+            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
          }
          else
          {
-            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("caption Desktop");
+            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
          }
       }
 
