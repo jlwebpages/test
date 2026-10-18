@@ -274,7 +274,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile == true)
          {
-            image_style += "; border: 5px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
          else if (is_iPad == true)
          {
@@ -292,16 +292,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile == true)
          {
-            // Do nothing.
+            caption_div_style += "\"";
          }
-
          else if (is_iPad == true)
          {
-            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
          else
          {
-            caption_div_style += "; border-top: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
       }
 
