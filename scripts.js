@@ -359,7 +359,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if ( (gallery_name == "works_on_paper") && (is_mobile() != true) && (art_container_class == "image_container_one_column") )
+      if ( (gallery_name == "works_on_paper") && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
       {
          // Adjust position of back button.
 
