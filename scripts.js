@@ -268,6 +268,43 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       back_button_vertical_position += "px";
       nav_button_vertical_position  += "px";
 
+      if (gallery_name == "works_on_paper")
+      {
+         image_style = image_style.slice(0, -1);
+
+         if (is_mobile == true)
+         {
+            image_style += "; border: 5px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+         else if (is_iPad == true)
+         {
+            image_style += "; border: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+         else
+         {
+            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+      }
+
+      if (art_container_class == "image_container_two_column")
+      {
+         caption_div_style = caption_div_style.slice(0, -1);
+
+         if (is_mobile == true)
+         {
+            // Do nothing.
+         }
+
+         else if (is_iPad == true)
+         {
+            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+         else
+         {
+            caption_div_style += "; border-top: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+      }
+
       html_string += '';
       html_string += '';
       html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
@@ -292,7 +329,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       document.body.innerHTML = html_string;
 
-
+      //
+/*
       if (gallery_name == "works_on_paper")
       {
          if (is_mobile == true)
@@ -306,8 +344,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          else
          {
             document.getElementById("image_div").style.border = "40px solid var(--background_color)";
+            document.getElementById("image_div").style.boxSizing = "border-box";
          }
       }
+
+*/
+
+/*
 
       if (art_container_class == "image_container_two_column")
       {
@@ -325,7 +368,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-
+*/
 
 
       // Set height of "caption_div" to height of "image_div".
