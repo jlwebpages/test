@@ -146,6 +146,7 @@
    #three_column_2           {display:               none                !important}
    #three_column_3           {display:               none                !important}
    #about_header             {display:               block               !important}
+   #caption_div              {border-width:          0px 0px 0px 40px    !important} 
    #contact_header           {display:               block               !important}
 }
 

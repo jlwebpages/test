@@ -277,7 +277,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       if (art_container_class == "image_container_two_column")
       {
          caption_div_style = caption_div_style.slice(0, -1);
-         caption_div_style += "; border-top: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         caption_div_style += "; border-width: 40px 0px 0px 0px; border-style: solid; border-color: var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
       }
 
       html_string += '';
@@ -306,13 +306,16 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       // Set height of "caption_div" to height of "image_div".
 
-      document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height -4) + 'px';
-
-      load_image_caption(gallery_name,image_number);
+      if (art_container_class == "image_container_two_column")
+      {
+         document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + 'px';
+      }
 
       // Update the browser address field.
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name+"&min_image_number="+min_image_number+"&max_image_number="+max_image_number);
+
+      load_image_caption(gallery_name,image_number);
 
       return true;
    }
