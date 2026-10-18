@@ -277,7 +277,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       if (art_container_class == "image_container_two_column")
       {
          caption_div_style = caption_div_style.slice(0, -1);
-         caption_div_style += "; border-top: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color); height: calc(100% - 3.8px)\"";
+         caption_div_style += "; border-top: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color); height: calc(100% - 4px)\"";
       }
 
       html_string += '';
