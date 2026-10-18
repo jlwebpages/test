@@ -271,13 +271,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       if (gallery_name == "works_on_paper")
       {
          image_style = image_style.slice(0, -1);
-         image_style += "; border: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
       }
 
       if (art_container_class == "image_container_two_column")
       {
          caption_div_style = caption_div_style.slice(0, -1);
-         caption_div_style += "; border-top: 60px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color); height: calc(50% - 4px)\"";
+         caption_div_style += "; border-top: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
       }
 
       html_string += '';
@@ -306,7 +306,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       // Set height of "caption_div" to height of "image_div".
 
-      document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 3.6) + 'px';
+      document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height -4) + 'px';
 
       load_image_caption(gallery_name,image_number);
 
