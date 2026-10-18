@@ -272,11 +272,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          image_style = image_style.slice(0, -1);
 
-         if (is_mobile == true)
+         if (is_mobile() == true)
          {
             image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image Mobile");
          }
-         else if (is_iPad == true)
+         else if (is_iPad() == true)
          {
             image_style += "; border: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image iPad");
          }
@@ -290,11 +290,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          caption_div_style = caption_div_style.slice(0, -1);
 
-         if (is_mobile == true)
+         if (is_mobile() == true)
          {
             caption_div_style += "\"";alert("caption mobile");
          }
-         else if (is_iPad == true)
+         else if (is_iPad() == true)
          {
             caption_div_style += "; border-top: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("caption iPad");
          }
