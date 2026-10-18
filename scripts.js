@@ -274,15 +274,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile == true)
          {
-            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image Mobile");
          }
          else if (is_iPad == true)
          {
-            image_style += "; border: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image iPad");
          }
          else
          {
-            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("image Desktop");
          }
       }
 
@@ -292,15 +292,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile == true)
          {
-            caption_div_style += "\"";
+            caption_div_style += "\"";alert("caption mobile");
          }
          else if (is_iPad == true)
          {
-            caption_div_style += "; border-top: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("caption iPad");
          }
          else
          {
-            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";alert("caption Desktop");
          }
       }
 
@@ -327,47 +327,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
 
       document.body.innerHTML = html_string;
-
-      //
-/*
-      if (gallery_name == "works_on_paper")
-      {
-         if (is_mobile == true)
-         {
-            document.getElementById("image_div").style.border = "5px solid var(--background_color)";
-         }
-         else if (is_iPad == true)
-         {
-            document.getElementById("image_div").style.border = "20px solid var(--background_color)";
-         }
-         else
-         {
-            document.getElementById("image_div").style.border = "40px solid var(--background_color)";
-            document.getElementById("image_div").style.boxSizing = "border-box";
-         }
-      }
-*/
-
-/*
-
-      if (art_container_class == "image_container_two_column")
-      {
-         if (is_mobile == true)
-         {
-            document.getElementById("caption_div").style.borderTop = "0px solid var(--background_color)";
-         }
-         else if (is_iPad == true)
-         {
-            document.getElementById("caption_div").style.borderTop = "20px solid var(--background_color)";
-         }
-         else
-         {
-            document.getElementById("caption_div").style.borderTop = "40px solid var(--background_color)";
-         }
-      }
-
-*/
-
 
       // Set height of "caption_div" to height of "image_div".
 
