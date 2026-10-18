@@ -159,7 +159,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
    image.onload = function()
    {
-      var adjusted_image_height         = 0;
       var adjusted_image_width          = 0;
       var art_container_class           = "";
       var art_container_margin          = 35;
@@ -185,7 +184,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       height_ratio = image_height/window_inner_height;
 
       adjusted_image_width  = image_width/height_ratio;
-      adjusted_image_height = image_height/width_ratio;
 
       // If running in portrait orientation, set up a one column container instead of two.
 
@@ -228,21 +226,18 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             // Reduce the image width to make room for the image caption.
 
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
-            adjusted_image_height = image_height * (adjusted_image_width/image_width) - 15;  // Not exactly sure why -15.  Maybe to account for caption_div top and/or bottom margins.
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
             image_style         = "style=\"width: "+adjusted_image_width+"px\"";
             caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
 
-            back_button_vertical_position = ( (window_inner_height-adjusted_image_height) / 2 ) - 10;  // Not exactly sure why -10.
 
-            if (back_button_vertical_position < 5) back_button_vertical_position = 5;
 
             if (is_older_iPad() == true)
             {
                // Make vertical button position adjustments.
 
-               if (back_button_vertical_position > 5) back_button_vertical_position += 13;
+
 
                nav_button_vertical_position += 13;
             }
@@ -265,8 +260,27 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          nav_button_vertical_position = window_inner_height / 2;
       }
 
-      back_button_vertical_position += "px";
       nav_button_vertical_position  += "px";
+
+      if (art_container_class == "image_container_two_column")
+      {
+         // Add top border to image caption.
+ 
+         caption_div_style = caption_div_style.slice(0, -1);
+
+         if (is_mobile() == true)
+         {
+            caption_div_style += "\"";
+         }
+         else if (is_iPad() == true)
+         {
+            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+         else
+         {
+            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+         }
+      }
 
       if (gallery_name == "works_on_paper")
       {
@@ -308,26 +322,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if (art_container_class == "image_container_two_column")
-      {
-         // Add top border to image caption.
- 
-         caption_div_style = caption_div_style.slice(0, -1);
-
-         if (is_mobile() == true)
-         {
-            caption_div_style += "\"";
-         }
-         else if (is_iPad() == true)
-         {
-            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
-         }
-         else
-         {
-            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
-         }
-      }
-
       html_string += '';
       html_string += '';
       html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
@@ -344,7 +338,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
       html_string += '</div>';
       html_string += '';
-      html_string += '<button id="nav_back"  class="back_button"                 style="top: '+back_button_vertical_position+'" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+      html_string += '<button id="nav_back"  class="back_button"                 style="top: 5" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       html_string += '<button id="nav_left"  class="nav_button nav_left_offset"  style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\'left\');"><div class="nav_left_shape"></div></button>';
       html_string += '<button id="nav_right" class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\'right\');"><div class="nav_right_shape"></div></button>';
       html_string += '';
@@ -369,6 +363,14 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + "px";
          }    
       }
+
+      back_button_vertical_position = document.querySelector("#caption_div").getBoundingClientRect().top;
+
+      if (back_button_vertical_position < 5) back_button_vertical_position = 5;
+      back_button_vertical_position += "px";
+               //if (back_button_vertical_position > 5) back_button_vertical_position += 13;
+
+      document.getElementById("nav_back").style.top = back_button_vertical_position;
 
       // Update the browser address field.
 
@@ -626,7 +628,12 @@ function load_image(gallery_name,image_number,image_count)
    var image_style      = "";
 
 
-   if (gallery_name == "works_on_paper") image_style = ' style="border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)"';
+   if (gallery_name == "works_on_paper")
+   {
+      // Add border to image.
+
+      image_style = ' style="border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)"';
+   }
 
    if (column_count == 1)
    {
