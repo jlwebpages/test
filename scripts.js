@@ -270,6 +270,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if (gallery_name == "works_on_paper")
       {
+         // Add border to image.
+
          image_style = image_style.slice(0, -1);
 
          if (is_mobile() == true)
@@ -284,10 +286,32 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          {
             image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
+
+         // Add left border to image caption.
+
+         if (art_container_class == "image_container_one_column")
+         {
+            caption_div_style = caption_div_style.slice(0, -1);
+
+            if (is_mobile() == true)
+            {
+               caption_div_style += "\"";
+            }
+            else if (is_iPad() == true)
+            {
+               caption_div_style += "; border-left: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            }
+            else
+            {
+               caption_div_style += "; border-left: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            }
+         }
       }
 
       if (art_container_class == "image_container_two_column")
       {
+         // Add top border to image caption.
+ 
          caption_div_style = caption_div_style.slice(0, -1);
 
          if (is_mobile() == true)
@@ -328,17 +352,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       document.body.innerHTML = html_string;
 
-      // Set height of "caption_div" to height of "image_div".
-
-      //alert("clientHeight:  "+document.getElementById("image_div").clientHeight+"\noffsetHeight:  "+document.getElementById("image_div").offsetHeight+"\ngetBoundingClientRect().height:  "+document.getElementById("image_div").getBoundingClientRect().height+"\nwindow.getComputedStyle('image_div').height:  "+window.getComputedStyle(document.getElementById("image_div")).height+"\n");
-
-// mobile = 20 or 19.5 , desktop = 4, ipad = 5
-
       if (art_container_class == "image_container_two_column")
       {
+         // Set height of "caption_div" to height of "image_div".
+
          if (is_mobile() == true) 
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 19.5) + "px";
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 19.4) + "px";
          }
          else if (is_iPad() == true) 
          {
@@ -353,6 +373,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       // Update the browser address field.
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name+"&min_image_number="+min_image_number+"&max_image_number="+max_image_number);
+
+      // Load the next image into the gallery.
 
       load_image_caption(gallery_name,image_number);
 
