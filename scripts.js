@@ -332,13 +332,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       //alert("clientHeight:  "+document.getElementById("image_div").clientHeight+"\noffsetHeight:  "+document.getElementById("image_div").offsetHeight+"\ngetBoundingClientRect().height:  "+document.getElementById("image_div").getBoundingClientRect().height+"\nwindow.getComputedStyle('image_div').height:  "+window.getComputedStyle(document.getElementById("image_div")).height+"\n");
 
-// mobile = 20, desktop = 4, ipad = 5
+// mobile = 20 or 19.5 , desktop = 4, ipad = 5
 
       if (art_container_class == "image_container_two_column")
       {
          if (is_mobile() == true) 
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 20) + "px";
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 19.5) + "px";
          }
          else if (is_iPad() == true) 
          {
