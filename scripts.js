@@ -182,7 +182,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       width_ratio  = image_width/window_inner_width;
       height_ratio = image_height/window_inner_height;
 
-      adjusted_image_width  = image_width/height_ratio;
+      adjusted_image_width = image_width/height_ratio;
 
       // If running in portrait orientation, set up a one column container instead of two.
 
@@ -229,17 +229,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
             image_style         = "style=\"width: "+adjusted_image_width+"px\"";
             caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
-
-
-
-            if (is_older_iPad() == true)
-            {
-               // Make vertical button position adjustments.
-
-
-
-               nav_button_vertical_position += 13;
-            }
          }
          else   
          {
@@ -259,7 +248,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          nav_button_vertical_position = window_inner_height / 2;
       }
 
-      nav_button_vertical_position  += "px";
+      nav_button_vertical_position += "px";
 
       if (art_container_class == "image_container_two_column")
       {
@@ -374,8 +363,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          // Adjust position of back button.
 
-         document.querySelector("#caption_div").getBoundingClientRect().top   = document.querySelector("#caption_div").getBoundingClientRect().top   + 10;
-         document.querySelector("#caption_div").getBoundingClientRect().right = document.querySelector("#caption_div").getBoundingClientRect().right + 10;
+         document.querySelector("#nav_back").getBoundingClientRect().top   = document.querySelector("#nav_back").getBoundingClientRect().top   + 10;
+         document.querySelector("#nav_back").getBoundingClientRect().right = document.querySelector("#nav_back").getBoundingClientRect().right + 10;
       }
 
       // Update the browser address field.
