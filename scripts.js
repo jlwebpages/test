@@ -359,12 +359,12 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if ( (gallery_name == "works_on_paper") && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
+      if ( (gallery_name == "works_on_paper") && (is_mobile() != true) && (art_container_class == "image_container_one_column") )
       {
          // Adjust position of back button.
 
-         document.getElementById("nav_back").style.top   = document.getElementById("nav_back").style.top   + 10;
-         document.getElementById("nav_back").style.right = document.getElementById("nav_back").style.right + 10;
+         document.getElementById("nav_back").style.top   = parseInt(window.getComputedStyle(document.getElementById("nav_back")).top   + 5) + "px";
+         document.getElementById("nav_back").style.right = parseInt(window.getComputedStyle(document.getElementById("nav_back")).right + 5) + "px";
       }
 
       // Update the browser address field.
