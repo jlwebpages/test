@@ -163,7 +163,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var art_container_class           = "";
       var art_container_margin          = 35;
       var art_container_style           = "";
-      var back_button_vertical_position = 5;
       var caption_div_style             = "";
       var height_ratio                  = 1;
       var html_string                   = "";
@@ -338,7 +337,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
       html_string += '</div>';
       html_string += '';
-      html_string += '<button id="nav_back"  class="back_button"                 style="top: 5" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
+      html_string += '<button id="nav_back"  class="back_button" onclick="display_gallery_page(\''+gallery_name+'\');">&times;</button>';
       html_string += '<button id="nav_left"  class="nav_button nav_left_offset"  style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\'left\');"><div class="nav_left_shape"></div></button>';
       html_string += '<button id="nav_right" class="nav_button nav_right_offset" style="top: '+nav_button_vertical_position+'"  onclick="navigate_to_next_image(\''+gallery_name+'\',\''+image_number+'\',\'right\');"><div class="nav_right_shape"></div></button>';
       html_string += '';
@@ -350,27 +349,34 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          // Set height of "caption_div" to height of "image_div".
 
-         if (is_mobile() == true) 
+         if (is_mobile() == true)
          {
             document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 19.4) + "px";
          }
-         else if (is_iPad() == true) 
+         else if (is_iPad() == true)
          {
             document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 5) + "px";
-         }    
+         }
          else
          {
             document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + "px";
-         }    
+         }
+
+         // Adjust vertical position of back button if needed.
+
+         if (document.querySelector("#caption_div").getBoundingClientRect().top > 5)
+         {
+            document.getElementById("nav_back").style.top = document.querySelector("#caption_div").getBoundingClientRect().top + "px";
+         }
       }
 
-      back_button_vertical_position = document.querySelector("#caption_div").getBoundingClientRect().top;
+      if ( (gallery_name == "works_on_paper") && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
+      {
+         // Adjust position of back button.
 
-      if (back_button_vertical_position < 5) back_button_vertical_position = 5;
-      back_button_vertical_position += "px";
-               //if (back_button_vertical_position > 5) back_button_vertical_position += 13;
-
-      document.getElementById("nav_back").style.top = back_button_vertical_position;
+         document.querySelector("#caption_div").getBoundingClientRect().top   = document.querySelector("#caption_div").getBoundingClientRect().top   + 10;
+         document.querySelector("#caption_div").getBoundingClientRect().right = document.querySelector("#caption_div").getBoundingClientRect().right + 10;
+      }
 
       // Update the browser address field.
 
