@@ -336,11 +336,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          if (is_mobile() == true)
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 20) + "px";
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 19) + "px";
          }
          else
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 5) + "px";
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + "px";
          }    
       }
 
