@@ -346,7 +346,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             document.getElementById("image_div").style.boxSizing = "border-box";
          }
       }
-
 */
 
 /*
