@@ -274,15 +274,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile() == true)
          {
-            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
+            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
          else if (is_iPad() == true)
          {
-            image_style += "; border: 30px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
+            image_style += "; border: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
          else
          {
-            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
+            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
       }
 
@@ -296,11 +296,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
          else if (is_iPad() == true)
          {
-            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
          else
          {
-            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; object-fit: cover; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
       }
 
@@ -330,9 +330,18 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       // Set height of "caption_div" to height of "image_div".
 
+      //alert("clientHeight:  "+document.getElementById("image_div").clientHeight+"\noffsetHeight:  "+document.getElementById("image_div").offsetHeight+"\ngetBoundingClientRect().height:  "+document.getElementById("image_div").getBoundingClientRect().height+"\nwindow.getComputedStyle('image_div').height:  "+window.getComputedStyle(document.getElementById("image_div")).height+"\n");
+
       if (art_container_class == "image_container_two_column")
       {
-         document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + 'px';
+         if (is_mobile() == true)
+         {
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 19) + "px";
+         }
+         else
+         {
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 4) + "px";
+         }    
       }
 
       // Update the browser address field.
