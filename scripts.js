@@ -336,11 +336,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          if (is_mobile() == true)
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 19) + "px";
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 20) + "px";
          }
          else
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 4) + "px";
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").clientHeight - 5) + "px";
          }    
       }
 
@@ -598,7 +598,7 @@ function load_image(gallery_name,image_number,image_count)
    var image_style      = "";
 
 
-   if (gallery_name == "works_on_paper") image_style = ' style="border: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)"';
+   if (gallery_name == "works_on_paper") image_style = ' style="border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)"';
 
    if (column_count == 1)
    {
