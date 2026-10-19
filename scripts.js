@@ -289,10 +289,10 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
          }
 
-         // Add left border to image caption.
-
          if (art_container_class == "image_container_one_column")
          {
+            // Add left border to image caption.
+
             caption_div_style = caption_div_style.slice(0, -1);
 
             if (is_mobile() == true)
