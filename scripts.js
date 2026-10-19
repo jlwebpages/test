@@ -363,8 +363,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          // Adjust position of back button.
 
-         document.getElementById("nav_back").style.top   = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).top)   + 5) + "px";
-         document.getElementById("nav_back").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).right) + 5) + "px";
+         document.getElementById("nav_back").style.top   = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).top)   + 10) + "px";
+         document.getElementById("nav_back").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).right) + 10) + "px";
+
+         // Adjust position of navigation buttons.
+
+         document.getElementById("nav_left").style.left   = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).left)  + 10) + "px";
+         document.getElementById("nav_right").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).right) + 10) + "px";
       }
 
       // Update the browser address field.
