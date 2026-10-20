@@ -5,10 +5,10 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 4, max_image_number: 30, new_list: [4,5,6]},
-                      {name: "photo_art",      title: "Photo Art",      min_image_number: 4, max_image_number: 16, new_list: [4,5]},
-                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 6, max_image_number: 11, new_list: [0]},
-                      {name: "sold",           title: "Sold",           min_image_number: 5, max_image_number: 25, new_list: [0], works_on_paper_list: [10,11,19]}]
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number:  4, max_image_number: 30, new_list: [4,5,6]},
+                      {name: "photo_art",      title: "Photo Art",      min_image_number:  4, max_image_number: 16, new_list: [4,5]},
+                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 16, max_image_number: 21, new_list: [0]},
+                      {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0], works_on_paper_list: [10,11,19]}]
 
 
 function check_if_image_exists(gallery_name,image_number,min_image_number,max_image_number,direction)
@@ -228,7 +228,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
-            image_style         = "style=\"width: "+adjusted_image_width+"px\"";
+            image_style         = "style=\"width: "+adjusted_image_width+"px; height: 100%\"";
             caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
          }
          else   
@@ -370,7 +370,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
          else
          {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + "px";
+            //document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height - 4) + "px";
          }
 
          // Adjust vertical position of back button if needed.
