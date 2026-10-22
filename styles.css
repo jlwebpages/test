@@ -557,16 +557,12 @@ a.header_link:hover
 
 .art_caption
 {
-   position: absolute;
-   top: 0;
-   left: 0
-   right: 0;
-   bottom: 0;
    background-color: var(--background_color);
    font-family: Arial, sans-serif;
    font-size: 16px;
    color: var(--text_color);
    text-align: left;
+   height: auto;
    margin: 0px;
    padding: 0px 25px 10px 10px;
    overflow-y: auto;
@@ -738,10 +734,10 @@ a.header_link:hover
    display: grid;
    grid-template-columns: auto auto;
    justify-content: center;
-   align-content: center;
-   align-items: stretch;
    gap: 0px;
    height: 100vh;
+   margin: 0px auto;
+   overflow-y: hidden;
 }
 
 .contact_container
