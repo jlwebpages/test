@@ -159,23 +159,23 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
    image.onload = function()
    {
-      var adjusted_image_width          = 0;
-      var art_container_class           = "";
-      var art_container_margin          = 35;
-      var art_container_style           = "";
-      var caption_div_style             = "";
-      var height_ratio                  = 1;
-      var html_string                   = "";
-      var image_height                  = 0;
-      var image_width                   = 0;
-      var image_style                   = "";
-      var maximum_caption_width         = 500;
-      var minimum_caption_width         = 285;
-      var nav_button_vertical_position  = 5;
-      var sold_works_on_paper           = false;
-      var width_ratio                   = 1;
-      var window_inner_height           = window.innerHeight;
-      var window_inner_width            = window.innerWidth;
+      var adjusted_image_width         = 0;
+      var art_container_class          = "";
+      var art_container_margin         = 35;
+      var art_container_style          = "";
+      var caption_div_style            = "";
+      var height_ratio                 = 1;
+      var html_string                  = "";
+      var image_height                 = 0;
+      var image_width                  = 0;
+      var image_style                  = "";
+      var maximum_caption_width        = 500;
+      var minimum_caption_width        = 285;
+      var nav_button_vertical_position = 5;
+      var sold_works_on_paper          = false;
+      var width_ratio                  = 1;
+      var window_inner_height          = window.innerHeight;
+      var window_inner_width           = window.innerWidth;
 
 
       image_width  = this.naturalWidth;
@@ -386,7 +386,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name+"&min_image_number="+min_image_number+"&max_image_number="+max_image_number);
 
-      // Load the next image into the gallery.
+      // Load image caption from file.
 
       load_image_caption(gallery_name,image_number);
 
