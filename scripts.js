@@ -169,6 +169,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var image_height                  = 0;
       var image_width                   = 0;
       var image_style                   = "";
+      var maximum_caption_width         = 500;
       var minimum_caption_width         = 285;
       var nav_button_vertical_position  = 5;
       var sold_works_on_paper           = false;
@@ -194,11 +195,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (image_width < window_inner_width)
          {
-            image_style = "style=\"width: "+window_inner_width+"px; height: auto\"";
+            image_style = "style=\"display: block; width: "+window_inner_width+"px; height: auto\"";
          }
          else
          {
-            image_style = "style=\"width: 100%; height: auto\""; 
+            image_style = "style=\"display: block; width: 100%; height: auto\""; 
          }
 
          nav_button_vertical_position = image_height * window_inner_width/image_width / 2;
@@ -210,7 +211,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             if (adjusted_image_width > 655) adjusted_image_width = 655;
 
             art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
-            image_style         = "style=\"width: "+adjusted_image_width+"px; height: auto\"";
+            image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
 
             nav_button_vertical_position = window_inner_height / 2;
          }
@@ -228,22 +229,22 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
-            image_style         = "style=\"width: "+adjusted_image_width+"px\"";
-            caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
+            image_style         = "style=\"display: block; width: "+adjusted_image_width+"px\"";
+            caption_div_style   = "style=\"max-width: "+maximum_caption_width+"px; padding-top: 5px\"";
          }
          else   
          {
             if (CSS.supports('height', '100dvh'))
             {
-               image_style = "style=\"width: auto; height: 100dvh\"";
+               image_style = "style=\"display: block; width: auto; height: 100dvh\"";
             }
             else
             {
-               image_style = "style=\"width: auto; height: 100vh\"";
+               image_style = "style=\"display: block; width: auto; height: 100vh\"";
             }
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px\"";
-            caption_div_style   = "style=\"max-width: 500px; padding-top: 5px\"";
+            caption_div_style   = "style=\"max-width: "+maximum_caption_width+"px; padding-top: 5px\"";
          }
 
          nav_button_vertical_position = window_inner_height / 2;
@@ -259,15 +260,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile() == true)
          {
-            caption_div_style += "\"";
+            caption_div_style += "; border-top: 0px solid var(--background_color); box-sizing: border-box\"";
          }
          else if (is_iPad() == true)
          {
-            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            caption_div_style += "; border-top: 20px solid var(--background_color); box-sizing: border-box\"";
          }
          else
          {
-            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color); display: flex; flex-direction: column\"";
+            caption_div_style += "; border-top: 30px solid var(--background_color); box-sizing: border-box\"";
          }
       }
 
@@ -300,15 +301,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile() == true)
          {
-            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 10px solid var(--background_color); box-sizing: border-box\"";
          }
          else if (is_iPad() == true)
          {
-            image_style += "; border: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 30px solid var(--background_color); box-sizing: border-box\"";
          }
          else
          {
-            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+            image_style += "; border: 40px solid var(--background_color); box-sizing: border-box\"";
          }
 
          if (art_container_class == "image_container_one_column")
@@ -319,23 +320,18 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
             if (is_mobile() == true)
             {
-               caption_div_style += "\"";
+               caption_div_style += "; border-left: 0px solid var(--background_color); box-sizing: border-box\"";
             }
             else if (is_iPad() == true)
             {
-               caption_div_style += "; border-left: 20px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+               caption_div_style += "; border-left: 20px solid var(--background_color); box-sizing: border-box\"";
             }
             else
             {
-               caption_div_style += "; border-left: 30px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)\"";
+               caption_div_style += "; border-left: 30px solid var(--background_color); box-sizing: border-box\"";
             }
          }
       }
-
-         image_style = image_style.slice(0, -1);
-
-            image_style += "; display: block\"";
-
 
       html_string += '';
       html_string += '';
@@ -363,7 +359,20 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if (art_container_class == "image_container_two_column")
       {
+         // Set height of "caption_div" to height of "image_div".
 
+         if (is_mobile() == true)
+         {
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
+         }
+         else if (is_iPad() == true)
+         {
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
+         }
+         else
+         {
+            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
+         }
 
          // Adjust vertical position of back button if needed.
 
@@ -568,6 +577,16 @@ function is_older_iPad()
    return false;
 }
 
+function is_portrait()
+{
+   if (window.innerHeight >= window.innerWidth)
+   {
+      return true;
+   }
+
+   return false;
+}
+
 function load_data_from_file(gallery_name,file_name,element_id,title_extension,scroll_to_exhibitions,display_error)
 {
    $.ajax
@@ -646,7 +665,7 @@ function load_image(gallery_name,image_number,image_count)
    {
       // Add border to image.
 
-      image_style = ' style="border: 10px solid var(--background_color); box-sizing: border-box; background-color: var(--background_color)"';
+      image_style = ' style="border: 10px solid var(--background_color); box-sizing: border-box"';
    }
 
    if (column_count == 1)
@@ -862,13 +881,10 @@ function set_size_and_position_of_contact_page_elements()
 
    document.getElementById("contact_email_message").style.height = "calc(100% - " + contact_email_container_element_heights + "px)";
 
-   if (window.innerHeight >= window.innerWidth)
+   if (is_portrait() == true)
    {
-      // We're in portrait orientation.
-
       if (is_iPad() == true)
       {
-
          // Ensure contact_image width and email_messasge_container elements are at least 70%.
 
          if ( (contact_image_width/window.innerWidth) < min_contact_image_width_percent)
