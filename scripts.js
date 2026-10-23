@@ -360,6 +360,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          // Set height of "caption_div" to height of "image_div".
 
          document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
+
+         // Adjust vertical position of back button if needed.
+
+         if (document.querySelector("#caption_div").getBoundingClientRect().top > 5)
+         {
+            document.getElementById("nav_back").style.top = document.querySelector("#caption_div").getBoundingClientRect().top + "px";
+         }
       }
 
       if ( ((gallery_name == "works_on_paper") || (sold_works_on_paper == true)) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
