@@ -337,14 +337,12 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       html_string += '';
       html_string += '<div id="art_container" class="'+art_container_class+' fade_in" '+art_container_style+'">';
       html_string += '';
-      html_string += '   <div id="image_div" class="fade_in" style="display: inline-block; position: relative">';
+      html_string += '   <div id="image_div" class="fade_in">';
       html_string += '      <img src="'+this.src+'" '+image_style+'">';
       html_string += '   </div>';
       html_string += '';
       html_string += '   <div id="caption_div" class="art_caption fade_in" '+caption_div_style+'>';
-      html_string += '      <div id="image_caption">';
-      html_string += '        <!-- Load data from file. -->';   
-      html_string += '      </div>';
+      html_string += '        <!-- Load data from file. -->';
       html_string += '   </div>';
       html_string += '';
       html_string += '</div>';
@@ -361,25 +359,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          // Set height of "caption_div" to height of "image_div".
 
-         if (is_mobile() == true)
-         {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
-         }
-         else if (is_iPad() == true)
-         {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
-         }
-         else
-         {
-            document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
-         }
-
-         // Adjust vertical position of back button if needed.
-
-         if (document.querySelector("#caption_div").getBoundingClientRect().top > 5)
-         {
-            document.getElementById("nav_back").style.top = document.querySelector("#caption_div").getBoundingClientRect().top + "px";
-         }
+         document.getElementById("caption_div").style.height = (document.getElementById("image_div").getBoundingClientRect().height) + "px";
       }
 
       if ( ((gallery_name == "works_on_paper") || (sold_works_on_paper == true)) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
@@ -598,7 +578,7 @@ function load_data_from_file(gallery_name,file_name,element_id,title_extension,s
 
       success: function(data)
       {
-         if (element_id == "image_caption")
+         if (element_id == "caption_div")
          {
             // Extract image title from image caption data.
 
@@ -765,7 +745,7 @@ function load_image_caption(gallery_name,image_number)
       title_extension = '<span class="sold_text"> sold</span>';
    }
 
-   load_data_from_file(gallery_name,image_file_name,"image_caption",title_extension,false,true);
+   load_data_from_file(gallery_name,image_file_name,"caption_div",title_extension,false,true);
 
    return true;
 }
