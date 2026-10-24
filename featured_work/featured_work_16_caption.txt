@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Buried Treasure
+Driving at Night
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-8 x 8 inch stretched canvas set in a maple floater frame
+Each is 12 x 12 inches on cradled wood panel
 
 </span>
 
@@ -26,6 +26,19 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-It’s not always what’s immediately visible - sometimes we need to peer below the surface.
+Surprising horizons are often visible on the side of the freeways here in southern California - the foothills and mountains are never that far away.  As you’re driving you catch glimpses of them out of the corner of your eye, you detect hints of vaster spaces. And if you are driving at night, these horizons can take on a glowing, sometimes ethereal presence.
 
 </span>
+
+
+<div class="vertical_spacer"></div>
+
+<span class="art_paragraph"><b>Destination</b> (top left)</span>
+
+<span class="art_paragraph"><b>Motion Picture</b> (top center)</span>
+
+<span class="art_paragraph"><b>Velocity No. 1</b> (bottom left)</span>
+
+<span class="art_paragraph"><b>Velocity No. 2</b> (bottom center)</span>
+
+<span class="art_paragraph"><b>Window Seat</b> (right)</span>
