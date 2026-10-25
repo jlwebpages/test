@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Begonias
+Canyon View
 
 </span>
 
@@ -11,13 +11,13 @@ Begonias
 
 <span class="art_dimensions">
 
-Acrylic and mixed media
+Acrylic
 
 </span>
 
 <span class="art_dimensions">
 
-12 x 12 inch wood panels set in natural wood floater frames
+16 x 16 inches on 1-inch cradled wood panel
 
 </span>
 
@@ -26,13 +26,6 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-Spring is almost over and the heat of summer looms ahead. Flowerbeds are exploding with color, and my begonias are inviting me to come and celebrate the warm sunshine with them.
+I often take a 2-mile round trip hike up Canyon View Avenue and down to the corner at the base of the hill. It's a steep climb, a good cardio walk, and the view from the top is always the reward - whether it's clear or cloudy, early or late.
 
 </span>
-
-
-<div class="vertical_spacer"></div>
-
-<span class="art_paragraph"><b>Sweet Spot</b> (top)</span>
-
-<span class="art_paragraph"><b>Spring Fiesta</b> (bottom)</span>

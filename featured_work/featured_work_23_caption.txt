@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Long Distance
+Summer Skies
 
 </span>
 
@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-14 x 11 x 1.5 inch stretched canvas
+10 x 10 inch cradled wood panels
 
 </span>
 
@@ -26,6 +26,13 @@ Acrylic and mixed media
 
 <span class="art_paragraph">
 
-Early spring sunshine and white wispy clouds highlight fresh green growth and wildflowers - it’s a great time to get out and enjoy the distant views. 
+Summer is the perfect time of year for looking up and daydreaming.
 
 </span>
+
+
+<div class="vertical_spacer"></div>
+
+<span class="art_paragraph"><b>Many Moons</b> (left)</span>
+
+<span class="art_paragraph"><b>Fireworks</b> (right)</span>
