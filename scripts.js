@@ -5,7 +5,7 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number:  4, max_image_number: 30, new_list: [4,5,6]},
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 16, max_image_number: 42, new_list: [16,17,18]},
                       {name: "photo_art",      title: "Photo Art",      min_image_number:  4, max_image_number: 16, new_list: [4,5]},
                       {name: "works_on_paper", title: "Works on Paper", min_image_number: 16, max_image_number: 21, new_list: [0]},
                       {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0], works_on_paper_list: [10,11,19]}]
@@ -723,7 +723,7 @@ function load_image(gallery_name,image_number,image_count)
 
 function load_image_caption(gallery_name,image_number)
 {
-   var image_file_name = "./"+gallery_name+"/"+gallery_name+"_"+image_number+"_caption.txt"
+   var image_file_name = gallery_name+"/"+gallery_name+"_"+image_number+"_caption.txt"
    var title_extension = "";
 
 
@@ -930,9 +930,9 @@ function toggle_gallery_menu()
 
 function update_contact_image(image_file_name,direction)
 {
-   var contact_image_file_name = "./about/contact.jpg";
+   var contact_image_file_name = "about/contact.jpg";
    var gallery_index           = -1;
-   var gallery_name            = image_file_name.split("/")[1];
+   var gallery_name            = image_file_name.split("/")[0];
    var image_caption_file_name = "";
    var image_number            = image_file_name.replace(/\D/g, "");
    var min_gallery_index       = 0;
@@ -953,11 +953,11 @@ function update_contact_image(image_file_name,direction)
    {
       if (direction == "right")
       {
-         image_caption_file_name = "./" + gallery_list[min_gallery_index]["name"] + "/" + gallery_list[min_gallery_index]["name"] + "_" + gallery_list[min_gallery_index]["min_image_number"] + "_caption.txt";
+         image_caption_file_name = gallery_list[min_gallery_index]["name"] + "/" + gallery_list[min_gallery_index]["name"] + "_" + gallery_list[min_gallery_index]["min_image_number"] + "_caption.txt";
       }
       else  // direction == "left"
       {
-         image_caption_file_name = "./" + gallery_list[max_gallery_index]["name"] + "/" + gallery_list[max_gallery_index]["name"] + "_" + gallery_list[max_gallery_index]["max_image_number"] + "_caption.txt";
+         image_caption_file_name = gallery_list[max_gallery_index]["name"] + "/" + gallery_list[max_gallery_index]["name"] + "_" + gallery_list[max_gallery_index]["max_image_number"] + "_caption.txt";
       }
    }
    else
@@ -966,7 +966,7 @@ function update_contact_image(image_file_name,direction)
       {
          if (image_number < gallery_list[gallery_index]["max_image_number"])
          {
-            image_caption_file_name = "./" + gallery_name + "/" + gallery_name + "_" + (parseInt(image_number,10)+1) + "_caption.txt";
+            image_caption_file_name = gallery_name + "/" + gallery_name + "_" + (parseInt(image_number,10)+1) + "_caption.txt";
          }
          else  // image number == gallery_list[gallery_index]["max_image_number"]
          {
@@ -976,7 +976,7 @@ function update_contact_image(image_file_name,direction)
             }
             else
             {
-               image_caption_file_name = "./" + gallery_list[gallery_index+1]["name"] + "/" + gallery_list[gallery_index+1]["name"] + "_" + gallery_list[gallery_index+1]["min_image_number"] + "_caption.txt";
+               image_caption_file_name = gallery_list[gallery_index+1]["name"] + "/" + gallery_list[gallery_index+1]["name"] + "_" + gallery_list[gallery_index+1]["min_image_number"] + "_caption.txt";
             }
          }
       }
@@ -984,7 +984,7 @@ function update_contact_image(image_file_name,direction)
       {
          if (image_number > gallery_list[gallery_index]["min_image_number"])
          {
-            image_caption_file_name = "./" + gallery_name + "/" + gallery_name + "_" + (parseInt(image_number,10)-1) + "_caption.txt";
+            image_caption_file_name = gallery_name + "/" + gallery_name + "_" + (parseInt(image_number,10)-1) + "_caption.txt";
          }
          else  // image number == gallery_list[gallery_index]["min_image_number"]
          {
@@ -994,7 +994,7 @@ function update_contact_image(image_file_name,direction)
             }
             else
             {
-               image_caption_file_name = "./" + gallery_list[gallery_index-1]["name"] + "/" + gallery_list[gallery_index-1]["name"] + "_" + gallery_list[gallery_index-1]["max_image_number"] + "_caption.txt";
+               image_caption_file_name = gallery_list[gallery_index-1]["name"] + "/" + gallery_list[gallery_index-1]["name"] + "_" + gallery_list[gallery_index-1]["max_image_number"] + "_caption.txt";
             }
          }
       }
@@ -1040,7 +1040,7 @@ function write_header()
    }
    d.writeln('   <a href="about.html"                                                    tabindex="-1">About  </a>');
    d.writeln('   <a href="about.html?mode=exhibitions"                                   tabindex="-1">Exhibitions</a>');
-   d.writeln('   <a href="contact.html?image_file_name=./about/contact.jpg&image_title=" tabindex="-1">Contact</a>');
+   d.writeln('   <a href="contact.html?image_file_name=about/contact.jpg&image_title=" tabindex="-1">Contact</a>');
    d.writeln('   <div style="border-top: 1px solid var(--text_color); margin: 10px 0px 0px 10px; white-space: nowrap" tabindex="-1">');
    d.writeln('      <a href="mailto:dkclaguna@gmail.com?subject=Darlene Laguna Art" title="Email"     style="display: inline-block" tabindex="-1"><img src="email_icon.png"     height="15px" style="margin: 15px 0px 0px -10px"></a>');
    d.writeln('      <a href="https://www.instagram.com/dklaguna_art"                title="Instagram" style="display: inline-block" tabindex="-1"><img src="instagram_icon.png" height="16px"                                   ></a>');
@@ -1055,7 +1055,7 @@ function write_header()
       d.writeln('   <a id="'+gallery_list[i]["name"]+'_link"  class="header_link" href="art_gallery.html?gallery_index='+i+'">'+gallery_list[i]["title"]+'</a>');
    }
    d.writeln('   <a id="about_link"   class="header_link" href="about.html"                                                   >About</a>');
-   d.writeln('   <a id="contact_link" class="header_link" href="contact.html?image_file_name=./about/contact.jpg&image_title=">Contact</a>');
+   d.writeln('   <a id="contact_link" class="header_link" href="contact.html?image_file_name=about/contact.jpg&image_title=">Contact</a>');
    d.writeln('</div>');
    d.writeln('');
    d.writeln('');
