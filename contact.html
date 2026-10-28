@@ -68,6 +68,19 @@
       email_message_placeholder  = "Type your message here...";
    }
 
+   // Get min_image_number and max_imager_number from gallery_list.
+
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (image_file_name.split('/')[0] == gallery_list[i]["name"])
+      {
+         min_image_number = gallery_list[i]["min_image_number"];
+         max_image_number = gallery_list[i]["max_image_number"];
+
+         break;
+      }
+   }
+
    write_header();
 
    document.getElementById("contact_link").className = "clicked_header_link";
@@ -79,7 +92,15 @@
    document.writeln('');
    document.writeln('   <div class="contact_image_container">');
    document.writeln('      <div id="image_container" style="display: inline-block">');
-   document.writeln('         <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
+   if (about_contact == false)
+   {
+      document.writeln('         <a class="art_image_link" href="display_image.html?image_file_name='+image_file_name+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self">');
+   }
+   document.writeln('            <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
+   if (about_contact == false)
+   {
+      document.writeln('         </a>');
+   }
    document.writeln('      </div>');
    document.writeln('   </div>');
    document.writeln('');
