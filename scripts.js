@@ -646,13 +646,15 @@ function load_image(gallery_name,image_number,image_count)
    var image_html       = "";
    var image_path       = file_path_prefix + ".jpg";
    var image_style      = "";
+   var new_tag_style    = "";
 
 
    if (gallery_name == "works_on_paper")
    {
       // Add border to image.
 
-      image_style = ' style="border: 10px solid var(--background_color); box-sizing: border-box"';
+      image_style   = ' style="border: 10px solid var(--background_color); box-sizing: border-box"';
+      new_tag_style = ' style="top: 9.7px; left: 9.7px"';
    }
 
    if (column_count == 1)
@@ -679,7 +681,7 @@ function load_image(gallery_name,image_number,image_count)
    {
       if (image_number == gallery_list[gallery_index]["new_list"][i])
       {
-         image_html += '   <div id="solld_tag" class="new_tag">NEW</div>\n';
+         image_html += '   <div id="solld_tag" class="new_tag"'+new_tag_style+'>NEW</div>\n';
       }
    }
 

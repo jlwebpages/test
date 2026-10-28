@@ -850,8 +850,8 @@ a.header_link:hover
 .new_tag
 {
    position: absolute;
-   top: 9.5px;
-   left: 9.5px;
+   top: 0px;
+   left: 0px;
    font-family: Arial, sans-serif;
    font-size: 12px;
    font-weight: bold;
