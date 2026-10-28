@@ -654,7 +654,7 @@ function load_image(gallery_name,image_number,image_count)
       // Add border to image.
 
       image_style   = ' style="border: 10px solid var(--background_color); box-sizing: border-box"';
-      new_tag_style = ' style="top: 9.7px; left: 9.7px"';
+      new_tag_style = ' style="top: 9.8px; left: 9.8px"';
    }
 
    if (column_count == 1)
