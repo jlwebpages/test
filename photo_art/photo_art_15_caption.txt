@@ -1,0 +1,22 @@
+<!-- Title -->
+
+<span class="art_title">
+
+West World
+
+</span>
+
+
+<!-- Medium and Dimensions -->
+
+<span class="art_dimensions">
+
+Acrylic and mixed media photo collage
+
+</span>
+
+<span class="art_dimensions">
+
+12 x 12 inches on cradled wood panel
+
+</span>
