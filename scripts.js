@@ -682,13 +682,13 @@ function load_image(gallery_name,image_number,image_count)
    {
       if (image_number == gallery_list[gallery_index]["new_list"][i])
       {
-         image_html += '   <div id="new_tag" class="new_tag"'+new_tag_style+'>NEW</div>\n';
+         image_html += '   <div class="new_tag"'+new_tag_style+'>NEW</div>\n';
       }
    }
 
    if (gallery_name.toLowerCase().includes("sold") == true)
    {
-      image_html += '   <div id="sold_tag" class="sold_tag">SOLD</div>\n';
+      image_html += '   <div class="sold_tag">SOLD</div>\n';
    }
 
    image_html += '</div>\n';
