@@ -640,21 +640,22 @@ function load_data_from_file(gallery_name,file_name,element_id,title_extension,s
 
 function load_image(gallery_name,image_number,image_count)
 {
-   var column_count     = window.getComputedStyle(document.getElementById("art_gallery")).getPropertyValue("grid-template-columns").split(" ").length;
-   var file_name_prefix = gallery_name + "_" + image_number;
-   var file_path_prefix = gallery_name + "/" + file_name_prefix;
-   var image_html       = "";
-   var image_path       = file_path_prefix + ".jpg";
-   var image_style      = "";
-   var new_tag_style    = "";
+   var column_count      = window.getComputedStyle(document.getElementById("art_gallery")).getPropertyValue("grid-template-columns").split(" ").length;
+   var file_name_prefix  = gallery_name + "_" + image_number;
+   var file_path_prefix  = gallery_name + "/" + file_name_prefix;
+   var image_border_size = 10;
+   var image_html        = "";
+   var image_path        = file_path_prefix + ".jpg";
+   var image_style       = "";
+   var new_tag_style     = "";
 
 
    if (gallery_name == "works_on_paper")
    {
       // Add border to image.
 
-      image_style   = ' style="border: 10px solid var(--background_color); box-sizing: border-box"';
-      new_tag_style = ' style="top: 9.8px; left: 9.8px"';
+      image_style   = ' style="border: '+image_border_size+'px solid var(--background_color); box-sizing: border-box"';
+      new_tag_style = ' style="top: '+image_border_size+'px; left: '+image_border_size+'px"';
    }
 
    if (column_count == 1)
@@ -681,13 +682,13 @@ function load_image(gallery_name,image_number,image_count)
    {
       if (image_number == gallery_list[gallery_index]["new_list"][i])
       {
-         image_html += '   <div id="solld_tag" class="new_tag"'+new_tag_style+'>NEW</div>\n';
+         image_html += '   <div id="new_tag" class="new_tag"'+new_tag_style+'>NEW</div>\n';
       }
    }
 
    if (gallery_name.toLowerCase().includes("sold") == true)
    {
-      image_html += '   <div id="solld_tag" class="sold_tag">SOLD</div>\n';
+      image_html += '   <div id="sold_tag" class="sold_tag">SOLD</div>\n';
    }
 
    image_html += '</div>\n';
