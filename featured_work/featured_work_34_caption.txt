@@ -29,3 +29,12 @@ Acrylic and mixed media
 The local foothills and the skies above are always full of surprises.
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$450
+
+</span>

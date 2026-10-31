@@ -29,3 +29,12 @@ Acrylic and mixed media
 I walk up the steep hill for the view and everyday it surprises me. Today, the green of the distant hills is awash in clusters of shadowy clouds, pink sky peeking through.
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$400
+
+</span>

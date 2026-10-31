@@ -29,3 +29,12 @@ Acrylic and mixed media
 On certain magical evenings the skies above the foothills light up with spectacular color.
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$400
+
+</span>
