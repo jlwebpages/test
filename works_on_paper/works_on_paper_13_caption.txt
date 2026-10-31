@@ -21,8 +21,11 @@ Acrylic gelli print with dried sunflower pieces
 
 </span>
 
+
+<!-- Price -->
+
 <span class="art_price">
 
-$500 USD
+$175
 
 </span>

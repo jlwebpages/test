@@ -21,8 +21,11 @@ Mixed media collage
 
 </span>
 
+
+<!-- Price -->
+
 <span class="art_price">
 
-$500 USD
+$75
 
 </span>

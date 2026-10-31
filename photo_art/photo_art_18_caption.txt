@@ -30,8 +30,17 @@ Each is 8 x 8 inches on 1.5-inch cradled wood panel
 
 <span class="art_paragraph"><b>Nightwalk</b> (bottom right)</span>
 
+
+<!-- Price -->
+
 <span class="art_price">
 
-$500 USD
+$275 each
+
+</span>
+
+<span class="art_price" style="padding-top: 10px">
+
+$750 for set of three
 
 </span>

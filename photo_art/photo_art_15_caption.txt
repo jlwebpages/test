@@ -21,8 +21,11 @@ Acrylic and mixed media photo collage
 
 </span>
 
+
+<!-- Price -->
+
 <span class="art_price">
 
-$500 USD
+$425
 
 </span>

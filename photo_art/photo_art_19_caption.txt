@@ -21,8 +21,11 @@ Acrylic and mixed media photo collage on wood panel
 
 </span>
 
+
+<!-- Price -->
+
 <span class="art_price">
 
-$500 USD
+$875
 
 </span>
