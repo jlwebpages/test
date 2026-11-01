@@ -170,7 +170,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var image_width                  = 0;
       var image_style                  = "";
       var maximum_caption_width        = 500;
-      var minimum_caption_width        = 285;
+      var minimum_caption_width        = 400;
       var nav_button_vertical_position = 5;
       var sold_works_on_paper          = false;
       var width_ratio                  = 1;
