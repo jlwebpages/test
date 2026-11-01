@@ -395,6 +395,10 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          document.getElementById("nav_right").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_right")).right) + 10) + "px";
       }
 
+      // Update the browser address field.
+
+      window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name);
+
       // Load image caption from file.
 
       load_image_caption(gallery_name,image_number);
