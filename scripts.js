@@ -11,7 +11,7 @@ const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_imag
                       {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0], works_on_paper_list: [10,11,19]}]
 
 
-function check_if_image_exists(gallery_name,image_number,min_image_number,max_image_number,direction)
+function check_if_image_exists(gallery_name,image_number,direction)
 {
    $.ajax
    (
@@ -30,7 +30,7 @@ function check_if_image_exists(gallery_name,image_number,min_image_number,max_im
             }
             else
             {
-               check_if_image_exists(gallery_name,min_image_number,min_image_number,max_image_number,"right");
+               check_if_image_exists(gallery_name,min_image_number,"right");
             }
          }
          else
@@ -41,7 +41,7 @@ function check_if_image_exists(gallery_name,image_number,min_image_number,max_im
             }
             else
             {
-               check_if_image_exists(gallery_name,max_image_number,min_image_number,max_image_number,"left");
+               check_if_image_exists(gallery_name,max_image_number,"left");
             }
          }
 
@@ -54,22 +54,22 @@ function check_if_image_exists(gallery_name,image_number,min_image_number,max_im
          {
             if (image_number+1 <= max_image_number)
             {
-               check_if_image_exists(gallery_name,image_number+1,min_image_number,max_image_number,"right");
+               check_if_image_exists(gallery_name,image_number+1,"right");
             }
             else
             {
-               check_if_image_exists(gallery_name,min_image_number,min_image_number,max_image_number,"right");
+               check_if_image_exists(gallery_name,min_image_number,"right");
             }
          }
          else
          {
             if (image_number-1 >= min_image_number)
             {
-               check_if_image_exists(gallery_name,image_number-1,min_image_number,max_image_number,"left");
+               check_if_image_exists(gallery_name,image_number-1,"left");
             }
             else
             {
-               check_if_image_exists(gallery_name,max_image_number,min_image_number,max_image_number,"left");
+               check_if_image_exists(gallery_name,max_image_number,"left");
             }
          }
       },
@@ -177,6 +177,19 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var window_inner_height          = window.innerHeight;
       var window_inner_width           = window.innerWidth;
 
+
+      // Set min_image_number and max_imager_number.
+
+      for (i = 0; i < gallery_list.length; i++)
+      {
+         if (gallery_name == gallery_list[i]["name"])
+         {
+            min_image_number = gallery_list[i]["min_image_number"];
+            max_image_number = gallery_list[i]["max_image_number"];
+
+            break;
+         }
+      }
 
       image_width  = this.naturalWidth;
       image_height = this.naturalHeight;
@@ -382,10 +395,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          document.getElementById("nav_right").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_right")).right) + 10) + "px";
       }
 
-      // Update the browser address field.
-
-      window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name+"&min_image_number="+min_image_number+"&max_image_number="+max_image_number);
-
       // Load image caption from file.
 
       load_image_caption(gallery_name,image_number);
@@ -480,8 +489,6 @@ function get_image_url_parameters()
    html_file_name = html_path_segments[html_path_segments.length - 1];
 
    image_file_name = URL_parameters.get("image_file_name");
-   min_image_number = URL_parameters.get("min_image_number");  // Assign global variable.
-   max_image_number = URL_parameters.get("max_image_number");  // Assign global variable.
 
    if ( (image_file_name == null) || (image_file_name == "") )
    {
@@ -489,24 +496,6 @@ function get_image_url_parameters()
 
       history.back();
    }
-
-   if ( (min_image_number == null) || (min_image_number == "") )
-   {
-      alert("Error:\n\nInvalid Min Image Number passed to " + html_file_name);
-
-      history.back();
-   }
-
-   min_image_number = parseInt(min_image_number);
-
-   if ( (max_image_number == null) || (max_image_number == "") )
-   {
-      alert("Error:\n\nInvalid Max Image Number passed to " + html_file_name);
-
-      history.back();
-   }
-
-   max_image_number = parseInt(max_image_number);
 
    index = image_file_name.indexOf("/");
 
@@ -676,7 +665,7 @@ function load_image(gallery_name,image_number,image_count)
    }
 
    image_html += '<div class="art_image_link_container">\n';
-   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
 
    for (i = 0; i < gallery_list[gallery_index]["new_list"].length; i++)
    {
@@ -719,7 +708,7 @@ function load_image(gallery_name,image_number,image_count)
       document.getElementById("three_column_"+(image_count % 3)).insertAdjacentHTML("beforeend", image_html);
    }
 
-   if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,max_image_number,image_count);
+   if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,image_count);
 
    return true;
 }
@@ -760,7 +749,7 @@ function load_image_caption(gallery_name,image_number)
    return true;
 }
 
-function load_image_into_gallery(gallery_name,image_number,max_image_number,image_count)
+function load_image_into_gallery(gallery_name,image_number,image_count)
 {
    $.ajax
    (
@@ -776,7 +765,7 @@ function load_image_into_gallery(gallery_name,image_number,max_image_number,imag
 
       error: function()
       {
-         if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,max_image_number,image_count);
+         if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,image_count);
       },
    }
    );
@@ -793,7 +782,7 @@ function load_images_into_gallery(gallery_index)
    min_image_number = gallery_list[gallery_index]["min_image_number"];
    max_image_number = gallery_list[gallery_index]["max_image_number"];
 
-   load_image_into_gallery(gallery_list[gallery_index]["name"],image_number,max_image_number,image_count);
+   load_image_into_gallery(gallery_list[gallery_index]["name"],image_number,image_count);
 
    return true;
 }
@@ -804,12 +793,12 @@ function navigate_to_next_image(gallery_name,image_number,direction)
 
    if (direction == "right")
    {
-      check_if_image_exists(gallery_name,image_number+1,min_image_number,max_image_number,"right");
+      check_if_image_exists(gallery_name,image_number+1,"right");
 
    }
    else
    {
-      check_if_image_exists(gallery_name,image_number-1,min_image_number,max_image_number,"left");
+      check_if_image_exists(gallery_name,image_number-1,"left");
    }
 
    return true;
