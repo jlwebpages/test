@@ -433,7 +433,7 @@ function get_gallery_index_url_parameter()
    html_path_segments = window.location.pathname.split('/');
    html_file_name     = html_path_segments[html_path_segments.length - 1];
 
-   if (gallery_index == null)
+   if ( (gallery_index == null) || (gallery_index == "") )
    {
       alert("Error:\n\nGallery Index not passed to " + html_file_name);
 
@@ -445,9 +445,11 @@ function get_gallery_index_url_parameter()
       {
          window.close();
       }
+
+      return false;
    }
 
-   if ( gallery_index != gallery_index.replace(/\D/g, "") )
+   if (validate_gallery_index(gallery_index) == false)
    {
       alert("Error:\n\nInvalid Gallery Index passed to " + html_file_name);
 
@@ -459,20 +461,8 @@ function get_gallery_index_url_parameter()
       {
          window.close();
       }
-   }
 
-   if ( (gallery_index < 0) || (gallery_index > gallery_list.length-1) )
-   {
-      alert("Error:\n\nGallery Index out-of-range passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
+      return false;
    }
 
    return gallery_index;
@@ -496,10 +486,21 @@ function get_image_url_parameters()
 
    if ( (image_file_name == null) || (image_file_name == "") )
    {
-      alert("Error:\n\nInvalid Image File Name passed to " + html_file_name);
+      alert("Error:\n\nImage File Name not passed to " + html_file_name);
 
-      history.back();
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
    }
+
+   // gallery_name is the folder portion of image_file_name.
 
    index = image_file_name.indexOf("/");
 
@@ -508,20 +509,58 @@ function get_image_url_parameters()
       gallery_name = image_file_name.slice(0, index);
    }
 
-   if (gallery_name == "")
+   if (validate_gallery_name(gallery_name) == false)
    {
       alert("Error:\n\nInvalid Gallery Name passed to " + html_file_name);
 
-      history.back();
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
    }
 
-   image_number = parseInt(image_file_name.replace(/\D/g, ''));
+   // Make sure the file name portion of image_file_name starts with gallery_name + "_".
 
-   if (Number.isInteger(image_number) == false)
+   if (image_file_name.indexOf("/"+gallery_name+"_") == -1)
+   {
+      alert("Error:\n\nInvalid Image Name passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   // image_number is the portion of image_file_name that is found between the last "_" and ".".
+
+   image_number = image_file_name.match(/_([^_.]+)\.[^_]*$/)[1];
+
+   if (validate_image_number(gallery_name,image_number) == false)
    {
       alert("Error:\n\nInvalid Image Number passed to " + html_file_name);
 
-      history.back();
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
    }
 
    return {image_file_name,gallery_name,image_number}; 
@@ -997,6 +1036,64 @@ function update_contact_image(image_file_name,direction)
    }
 
    display_contact_page(image_caption_file_name,direction,true);
+}
+
+function validate_gallery_index(gallery_index)
+{
+   if (/\D/.test(gallery_index) == true) 
+   {
+      // gallery_index contains at least one non-digit character.
+
+      return false;
+   }
+
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if ( (gallery_index+"x") == (i+"x") )
+      {
+         //  gallery_index is exactly equal to i, including the number of digits.
+
+         return true;
+      }
+   }
+
+   return false;
+}
+
+function validate_gallery_name(gallery_name)
+{
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (gallery_name == gallery_list[i]["name"])
+      {
+         return true;
+      }
+   }
+
+   return false;
+}
+
+function validate_image_number(gallery_name,image_number)
+{
+   if (/^(0|[1-9]\d*)$/.test(image_number) == false)
+   {
+      // image_number is not a valid integer string, for example leading zeros in image_number make it invalid.
+
+      return false;
+   }
+
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (gallery_name == gallery_list[i]["name"])
+      {
+         if ( (image_number >= gallery_list[i]["min_image_number"]) && (image_number <= gallery_list[i]["max_image_number"]) )
+         {
+            return true;
+         }
+      }
+   }
+
+   return false;
 }
 
 function write_footer()
