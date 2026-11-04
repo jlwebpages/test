@@ -15,8 +15,62 @@
 
 <script>
 
-   var gallery_index = get_gallery_index_url_parameter();
+function get_url_parameters()
+{
+   var gallery_index      = null;
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var URL_parameters     = new URLSearchParams(window.location.search);
 
+
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name     = html_path_segments[html_path_segments.length - 1];
+
+   gallery_index = URL_parameters.get("gallery_index");
+
+   if ( (gallery_index == null) || (gallery_index == "") )
+   {
+      alert("Error:\n\nGallery Index not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   if (validate_gallery_index(gallery_index) == false)
+   {
+      alert("Error:\n\nInvalid Gallery Index passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   return gallery_index;
+}
+
+</script>
+
+<script>
+
+   var gallery_index = "";
+
+
+   gallery_index = get_url_parameters();
 
    write_header();
 

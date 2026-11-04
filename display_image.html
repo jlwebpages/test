@@ -14,8 +14,110 @@
 
 
 <script>
+   
+function get_url_parameters()
+{
+   var gallery_name       = "";
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var image_file_name    = "";
+   var image_number       = "";
+   var index              = -1;
+   var URL_parameters     = new URLSearchParams(window.location.search);
 
-   const {image_file_name,gallery_name,image_number} = get_image_url_parameters(); 
+
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name     = html_path_segments[html_path_segments.length - 1];
+
+   image_file_name = URL_parameters.get("image_file_name");
+
+   if ( (image_file_name == null) || (image_file_name == "") )
+   {
+      alert("Error:\n\nImage File Name not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   // gallery_name is the folder portion of image_file_name.
+
+   index = image_file_name.indexOf("/");
+
+   if (index != -1)
+   {
+      gallery_name = image_file_name.slice(0, index);
+   }
+
+   if (validate_gallery_name(gallery_name) == false)
+   {
+      alert("Error:\n\nInvalid Gallery Name passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   // Make sure the file name portion of image_file_name starts with gallery_name + "_".
+
+   if (image_file_name.indexOf("/"+gallery_name+"_") == -1)
+   {
+      alert("Error:\n\nInvalid Image Name passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   // image_number is the portion of image_file_name that is found between the last "_" and ".".
+
+   image_number = image_file_name.match(/_([^_.]+)\.[^_]*$/)[1];
+
+   if (validate_image_number(gallery_name,image_number) == false)
+   {
+      alert("Error:\n\nInvalid Image Number passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+
+      return false;
+   }
+
+   return {image_file_name,gallery_name,image_number}; 
+}
+
+</script>
+
+<script>
+
+   let {image_file_name,gallery_name,image_number} = get_url_parameters(); 
 
    display_image_with_caption(image_file_name,gallery_name,image_number);
 
