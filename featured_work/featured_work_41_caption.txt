@@ -30,3 +30,12 @@ Sometimes, just after it rains (which doesn’t happen often here in So Cal) and
 clouds, I get in my car and drive around the hills. When I’m lucky, I’m gifted with a rainbow or two.
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$325
+
+</span>

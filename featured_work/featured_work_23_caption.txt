@@ -29,3 +29,12 @@ Acrylic and mixed media
 Early spring sunshine and white wispy clouds highlight fresh green growth and wildflowers - it’s a great time to get out and enjoy the distant views. 
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$375
+
+</span>

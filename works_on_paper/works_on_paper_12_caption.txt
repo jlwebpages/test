@@ -17,6 +17,15 @@ Acrylic gelli print with dried sunflower pieces
 
 <span class="art_dimensions">
 
-11 x 14 inches, can be matted for 16 x 20 inch frame
+11 x 14 inches, matted to 16 x 20 inches
+
+</span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$175
 
 </span>

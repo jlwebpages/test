@@ -29,3 +29,12 @@ Acrylic and mixed media
 It’s not always what’s immediately visible - sometimes we need to peer below the surface.
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$325
+
+</span>

@@ -31,3 +31,12 @@ aware of color and space and how all the features of the landscape coalesce. Now
 eventually zoom, crop, and adjust with ease. It’s easier, but is it better? Something else to think about.
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$400
+
+</span>

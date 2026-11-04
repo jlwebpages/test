@@ -2,7 +2,7 @@
 
 <span class="art_title">
 
-Afterimage
+On the Fence
 
 </span>
 
@@ -11,12 +11,21 @@ Afterimage
 
 <span class="art_dimensions">
 
-Acrylic and mixed media photo collage on cradled wood panel
+Acrylic and mixed media photo collage
 
 </span>
 
 <span class="art_dimensions">
 
-20 x 16 inches
+8 x 8 inch cradled wood panel set in a maple floater frame
+
+</span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$325
 
 </span>

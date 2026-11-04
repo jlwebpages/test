@@ -11,12 +11,21 @@ Harvest
 
 <span class="art_dimensions">
 
-Acrylic and mixed media photo collage on wood panel
+Acrylic and mixed media photo collage
 
 </span>
 
 <span class="art_dimensions">
 
-12 x 12 inches
+12 x 12 inch wood panel set in a white floater frame
+
+</span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$450
 
 </span>

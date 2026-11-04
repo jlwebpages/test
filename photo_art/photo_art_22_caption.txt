@@ -20,3 +20,12 @@ Acrylic and mixed media photo collage on cradled wood panel
 10 x 10 inches
 
 </span>
+
+
+<!-- Price -->
+
+<span class="art_price">
+
+$275
+
+</span>

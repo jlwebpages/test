@@ -189,8 +189,9 @@
 :root
 {
    --background_color: rgb(255, 248, 243);
-   --link_color: #BE0000;
-   --text_color: #444444;
+   --font_family:      Arial, sans-serif;
+   --link_color:       #BE0000;
+   --text_color:       #444444;
 }
 
 .fade_in
@@ -204,7 +205,7 @@
    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('landing_background.jpg');
    background-size: cover;
    background-position: center;
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    color: black;
    text-align: center;
    border: 0px;
@@ -301,7 +302,7 @@
 
 .title
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 52px;
    color: black;
    text-align: center;
@@ -333,7 +334,7 @@ a.title_link:hover
 
 .header_link
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 18px;
    color: var(--text_color);
    letter-spacing: 2px;
@@ -349,7 +350,7 @@ a.header_link:hover
 
 .clicked_header_link
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 18px;
    font-weight: bold;
    color: var(--link_color);
@@ -390,7 +391,7 @@ a.header_link:hover
 
 .about_text
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 16px; 
    color: var(--text_color);
    vertical-align: top;
@@ -407,7 +408,7 @@ a.header_link:hover
 
 .exhibition_text
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 14px; 
    color: var(--text_color);
    vertical-align: top;
@@ -424,7 +425,7 @@ a.header_link:hover
 
 .copyright
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 12px;
    color: var(--text_color);
    text-align: center;
@@ -468,7 +469,7 @@ a.header_link:hover
 
 .menu a
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 16px;
    color: var(--text_color);
    letter-spacing: 2px;
@@ -558,7 +559,7 @@ a.header_link:hover
 .art_caption
 {
    background-color: var(--background_color);
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 16px;
    color: var(--text_color);
    text-align: left;
@@ -589,13 +590,22 @@ a.header_link:hover
    display: block;
 }
 
-.inquire_link
+.art_price
 {
-   font-family: Arial, sans-serif;
+   font-weight: bold;
+   font-size: 16px;
+   font-style: italic;
+   padding-top: 20px;
+   display: block;
+}
+
+.contact_artist_link
+{
+   font-family: var(--font_family);
    font-size: 14px;
    font-weight: bold;
    font-style: italic;
-   padding-top: 25px;
+   padding-top: 20px;
    padding-bottom: 5px;
    display: inline-block;
 }
@@ -606,7 +616,7 @@ a.header_link:hover
    position: fixed;
    top: 5px;
    right: 5px;
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 20px;
    font-weight: bold;
    color: black;
@@ -742,7 +752,7 @@ a.header_link:hover
 
 .contact_container
 {
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 14px;
    color: var(--text_color);
    width: 95%;
@@ -774,6 +784,7 @@ a.header_link:hover
    padding: 25px;
    width: 50%;
 }
+
 .contact_text
 {
    text-align: left;
@@ -801,11 +812,17 @@ a.header_link:hover
    width: 100%;
    height: 100%;
    margin: 0px auto;
-   padding: 0px;
+   padding: 5px;
    border: 1px solid var(--text_color);
+   box-sizing: border-box;
    outline: none;
    resize: vertical;
    display: block;
+}
+
+.contact_email_message::placeholder
+{
+   color: gray;
 }
 
 .contact_email_checkbox
@@ -828,17 +845,17 @@ a.header_link:hover
 .contact_email_send_button
 {
    cursor: pointer;
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 13px;
    font-weight: bold;
    color: white;
    letter-spacing: 1px;
    background-color: black;
    opacity: 0.75;
-   border-radius: 2px;
+   border-radius: 4px;
    border: 0px;
    margin: 0px auto;
-   padding: 2px;
+   padding: 4px;
    display:inline-block;
 }
 
@@ -852,7 +869,7 @@ a.header_link:hover
    position: absolute;
    top: 0px;
    left: 0px;
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 12px;
    font-weight: bold;
    color: white;
@@ -878,7 +895,7 @@ a.header_link:hover
    position: absolute;
    top: 0px;
    left: 0px;
-   font-family: Arial, sans-serif;
+   font-family: var(--font_family);
    font-size: 12px;
    font-weight: bold;
    color: white;
