@@ -29,18 +29,3 @@ Each panel is 36 x 24 inches on 1.5-inch cradled wood panel
 After I finished this diptych, this song by Woodie Guthrie popped into my head. As I looked at the random drips, I thought about how our environment has been impacted by our presence and the difficult state our country is in. I hope we all think carefully about what we want to do with our land.
 
 </span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$850 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$1,500 for set of two
-
-</span>

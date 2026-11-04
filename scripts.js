@@ -5,13 +5,13 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 15, max_image_number: 42, new_list: [15,16,17,18], border_list: [0]},
-                      {name: "photo_art",      title: "Photo Art",      min_image_number: 15, max_image_number: 28, new_list: [15,16,17],    border_list: [21,22]},
-                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 12, max_image_number: 21, new_list: [12,13,14,15], border_list: ["all"]},
-                      {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0],           border_list: [10,11,19]}]
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 15, max_image_number: 42, new_list: [15,16,17,18]},
+                      {name: "photo_art",      title: "Photo Art",      min_image_number: 15, max_image_number: 28, new_list: [15,16,17]},
+                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 12, max_image_number: 21, new_list: [12,13,14,15]},
+                      {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0], works_on_paper_list: [10,11,19]}]
 
 
-function check_if_image_exists(gallery_name,image_number,direction)
+function check_if_image_exists(gallery_name,image_number,min_image_number,max_image_number,direction)
 {
    $.ajax
    (
@@ -30,7 +30,7 @@ function check_if_image_exists(gallery_name,image_number,direction)
             }
             else
             {
-               check_if_image_exists(gallery_name,min_image_number,"right");
+               check_if_image_exists(gallery_name,min_image_number,min_image_number,max_image_number,"right");
             }
          }
          else
@@ -41,7 +41,7 @@ function check_if_image_exists(gallery_name,image_number,direction)
             }
             else
             {
-               check_if_image_exists(gallery_name,max_image_number,"left");
+               check_if_image_exists(gallery_name,max_image_number,min_image_number,max_image_number,"left");
             }
          }
 
@@ -54,22 +54,22 @@ function check_if_image_exists(gallery_name,image_number,direction)
          {
             if (image_number+1 <= max_image_number)
             {
-               check_if_image_exists(gallery_name,image_number+1,"right");
+               check_if_image_exists(gallery_name,image_number+1,min_image_number,max_image_number,"right");
             }
             else
             {
-               check_if_image_exists(gallery_name,min_image_number,"right");
+               check_if_image_exists(gallery_name,min_image_number,min_image_number,max_image_number,"right");
             }
          }
          else
          {
             if (image_number-1 >= min_image_number)
             {
-               check_if_image_exists(gallery_name,image_number-1,"left");
+               check_if_image_exists(gallery_name,image_number-1,min_image_number,max_image_number,"left");
             }
             else
             {
-               check_if_image_exists(gallery_name,max_image_number,"left");
+               check_if_image_exists(gallery_name,max_image_number,min_image_number,max_image_number,"left");
             }
          }
       },
@@ -166,30 +166,17 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var caption_div_style            = "";
       var height_ratio                 = 1;
       var html_string                  = "";
-      var image_border                 = false;
       var image_height                 = 0;
       var image_width                  = 0;
       var image_style                  = "";
       var maximum_caption_width        = 500;
-      var minimum_caption_width        = 400;
+      var minimum_caption_width        = 285;
       var nav_button_vertical_position = 5;
+      var sold_works_on_paper          = false;
       var width_ratio                  = 1;
       var window_inner_height          = window.innerHeight;
       var window_inner_width           = window.innerWidth;
 
-
-      // Set min_image_number and max_imager_number.
-
-      for (i = 0; i < gallery_list.length; i++)
-      {
-         if (gallery_name == gallery_list[i]["name"])
-         {
-            min_image_number = gallery_list[i]["min_image_number"];
-            max_image_number = gallery_list[i]["max_image_number"];
-
-            break;
-         }
-      }
 
       image_width  = this.naturalWidth;
       image_height = this.naturalHeight;
@@ -285,22 +272,28 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      // Determine if this image should have a border.
+      // Determine if this image is a Works on Paper item in the Sold gallery.
 
-      for (i = 0; i < gallery_list.length; i++)
+      if (gallery_name == "sold")
       {
-         if (gallery_name == gallery_list[i]["name"])
+         for (i = 0; i < gallery_list.length; i++)
          {
-            if (gallery_list[i]["border_list"].includes("all") || gallery_list[i]["border_list"].includes(+image_number))
+            if (gallery_name == gallery_list[i]["name"])
             {
-               image_border = true;
+               for (j = 0; j < gallery_list[i]["works_on_paper_list"].length; j++)
+               {
+                  if (image_number == gallery_list[i]["works_on_paper_list"][j])
+                  {
+                     sold_works_on_paper = true;
 
-               break;
+                     break;
+                  }
+               }
             }
          }
       }
 
-      if (image_border == true)
+      if ( (gallery_name == "works_on_paper") || (sold_works_on_paper == true) )
       {
          // Add border to image.
 
@@ -376,7 +369,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if ( (image_border == true) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
+      if ( ((gallery_name == "works_on_paper") || (sold_works_on_paper == true)) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
       {
          // Adjust position of back button.
 
@@ -391,7 +384,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       // Update the browser address field.
 
-      window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name);
+      window.history.replaceState({}, document.title, window.location.pathname+"?image_file_name="+image_file_name+"&min_image_number="+min_image_number+"&max_image_number="+max_image_number);
 
       // Load image caption from file.
 
@@ -412,6 +405,133 @@ function display_menu()
    document.getElementById("menu_list").style.padding = "50px 30px 15px 20px";
 
    return true;
+}
+
+function get_gallery_index_url_parameter()
+{
+   var error_flag         = false;
+   var gallery_index      = null;
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var URL_parameters     = new URLSearchParams(window.location.search);
+
+
+   gallery_index      = URL_parameters.get("gallery_index");
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name     = html_path_segments[html_path_segments.length - 1];
+
+   if (gallery_index == null)
+   {
+      alert("Error:\n\nGallery Index not passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if ( gallery_index != gallery_index.replace(/\D/g, "") )
+   {
+      alert("Error:\n\nInvalid Gallery Index passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   if ( (gallery_index < 0) || (gallery_index > gallery_list.length-1) )
+   {
+      alert("Error:\n\nGallery Index out-of-range passed to " + html_file_name);
+
+      if (history.length > 1)
+      {
+         history.back();
+      }
+      else
+      {
+         window.close();
+      }
+   }
+
+   return gallery_index;
+}
+
+function get_image_url_parameters()
+{
+   var gallery_name       = "";
+   var html_file_name     = "";
+   var html_path_segments = "";
+   var image_file_name    = "";
+   var image_number       = "";
+   var index              = -1;
+   var URL_parameters     = new URLSearchParams(window.location.search);
+
+
+   html_path_segments = window.location.pathname.split('/');
+   html_file_name = html_path_segments[html_path_segments.length - 1];
+
+   image_file_name = URL_parameters.get("image_file_name");
+   min_image_number = URL_parameters.get("min_image_number");  // Assign global variable.
+   max_image_number = URL_parameters.get("max_image_number");  // Assign global variable.
+
+   if ( (image_file_name == null) || (image_file_name == "") )
+   {
+      alert("Error:\n\nInvalid Image File Name passed to " + html_file_name);
+
+      history.back();
+   }
+
+   if ( (min_image_number == null) || (min_image_number == "") )
+   {
+      alert("Error:\n\nInvalid Min Image Number passed to " + html_file_name);
+
+      history.back();
+   }
+
+   min_image_number = parseInt(min_image_number);
+
+   if ( (max_image_number == null) || (max_image_number == "") )
+   {
+      alert("Error:\n\nInvalid Max Image Number passed to " + html_file_name);
+
+      history.back();
+   }
+
+   max_image_number = parseInt(max_image_number);
+
+   index = image_file_name.indexOf("/");
+
+   if (index != -1)
+   {
+      gallery_name = image_file_name.slice(0, index);
+   }
+
+   if (gallery_name == "")
+   {
+      alert("Error:\n\nInvalid Gallery Name passed to " + html_file_name);
+
+      history.back();
+   }
+
+   image_number = parseInt(image_file_name.replace(/\D/g, ''));
+
+   if (Number.isInteger(image_number) == false)
+   {
+      alert("Error:\n\nInvalid Image Number passed to " + html_file_name);
+
+      history.back();
+   }
+
+   return {image_file_name,gallery_name,image_number}; 
 }
 
 function is_iPad()
@@ -486,7 +606,7 @@ function load_data_from_file(gallery_name,file_name,element_id,title_extension,s
             {
                var image_file_name = file_name.replace("_caption.txt",".jpg");
 
-               data += '<a class="general_link contact_artist_link" href="contact.html?image_file_name='+image_file_name+'&image_title='+image_title+'">Contact artist to purchase</a>';
+               data += '<a class="general_link inquire_link" href="contact.html?image_file_name='+image_file_name+'&image_title='+image_title+'">Contact for price</a>';
             }
          }
 
@@ -530,20 +650,12 @@ function load_image(gallery_name,image_number,image_count)
    var new_tag_style     = "";
 
 
-   // Determine if the images in this gallery should have a border.
-
-   for (i = 0; i < gallery_list.length; i++)
+   if (gallery_name == "works_on_paper")
    {
-      if (gallery_name == gallery_list[i]["name"])
-      {
-         if (gallery_list[i]["border_list"].includes("all") == true)
-         {
-            image_style   = ' style="border: '+image_border_size+'px solid var(--background_color); box-sizing: border-box"';
-            new_tag_style = ' style="top: '+image_border_size+'px; left: '+image_border_size+'px"';
+      // Add border to image.
 
-            break;
-         }
-      }
+      image_style   = ' style="border: '+image_border_size+'px solid var(--background_color); box-sizing: border-box"';
+      new_tag_style = ' style="top: '+image_border_size+'px; left: '+image_border_size+'px"';
    }
 
    if (column_count == 1)
@@ -564,11 +676,14 @@ function load_image(gallery_name,image_number,image_count)
    }
 
    image_html += '<div class="art_image_link_container">\n';
-   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
 
-   if (gallery_list[gallery_index]["new_list"].includes(+image_number))
+   for (i = 0; i < gallery_list[gallery_index]["new_list"].length; i++)
    {
-      image_html += '   <div class="new_tag"'+new_tag_style+'>NEW</div>\n';
+      if (image_number == gallery_list[gallery_index]["new_list"][i])
+      {
+         image_html += '   <div class="new_tag"'+new_tag_style+'>NEW</div>\n';
+      }
    }
 
    if (gallery_name.toLowerCase().includes("sold") == true)
@@ -604,7 +719,7 @@ function load_image(gallery_name,image_number,image_count)
       document.getElementById("three_column_"+(image_count % 3)).insertAdjacentHTML("beforeend", image_html);
    }
 
-   if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,image_count);
+   if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,max_image_number,image_count);
 
    return true;
 }
@@ -621,11 +736,14 @@ function load_image_caption(gallery_name,image_number)
    {
       if (gallery_name == gallery_list[i]["name"])
       {
-         if (gallery_list[i]["new_list"].includes(+image_number))
+         for (j = 0; j < gallery_list[i]["new_list"].length; j++)
          {
-            title_extension = '<span class="new_text"> new</span>';
+            if (image_number == gallery_list[i]["new_list"][j])
+            {
+               title_extension = '<span class="new_text"> new</span>';
 
-            break;
+               break;
+            }
          }
       }
    }
@@ -642,7 +760,7 @@ function load_image_caption(gallery_name,image_number)
    return true;
 }
 
-function load_image_into_gallery(gallery_name,image_number,image_count)
+function load_image_into_gallery(gallery_name,image_number,max_image_number,image_count)
 {
    $.ajax
    (
@@ -658,7 +776,7 @@ function load_image_into_gallery(gallery_name,image_number,image_count)
 
       error: function()
       {
-         if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,image_count);
+         if (image_number < max_image_number) load_image_into_gallery(gallery_name,image_number+1,max_image_number,image_count);
       },
    }
    );
@@ -675,7 +793,7 @@ function load_images_into_gallery(gallery_index)
    min_image_number = gallery_list[gallery_index]["min_image_number"];
    max_image_number = gallery_list[gallery_index]["max_image_number"];
 
-   load_image_into_gallery(gallery_list[gallery_index]["name"],image_number,image_count);
+   load_image_into_gallery(gallery_list[gallery_index]["name"],image_number,max_image_number,image_count);
 
    return true;
 }
@@ -686,12 +804,12 @@ function navigate_to_next_image(gallery_name,image_number,direction)
 
    if (direction == "right")
    {
-      check_if_image_exists(gallery_name,image_number+1,"right");
+      check_if_image_exists(gallery_name,image_number+1,min_image_number,max_image_number,"right");
 
    }
    else
    {
-      check_if_image_exists(gallery_name,image_number-1,"left");
+      check_if_image_exists(gallery_name,image_number-1,min_image_number,max_image_number,"left");
    }
 
    return true;
@@ -886,64 +1004,6 @@ function update_contact_image(image_file_name,direction)
    }
 
    display_contact_page(image_caption_file_name,direction,true);
-}
-
-function validate_gallery_index(gallery_index)
-{
-   if (/\D/.test(gallery_index) == true) 
-   {
-      // gallery_index contains at least one non-digit character.
-
-      return false;
-   }
-
-   for (i = 0; i < gallery_list.length; i++)
-   {
-      if ( (gallery_index+"x") == (i+"x") )
-      {
-         //  gallery_index is exactly equal to i, including the number of digits.
-
-         return true;
-      }
-   }
-
-   return false;
-}
-
-function validate_gallery_name(gallery_name)
-{
-   for (i = 0; i < gallery_list.length; i++)
-   {
-      if (gallery_name == gallery_list[i]["name"])
-      {
-         return true;
-      }
-   }
-
-   return false;
-}
-
-function validate_image_number(gallery_name,image_number)
-{
-   if (/^(0|[1-9]\d*)$/.test(image_number) == false)
-   {
-      // image_number is not a valid integer string, for example leading zeros in image_number make it invalid.
-
-      return false;
-   }
-
-   for (i = 0; i < gallery_list.length; i++)
-   {
-      if (gallery_name == gallery_list[i]["name"])
-      {
-         if ( (image_number >= gallery_list[i]["min_image_number"]) && (image_number <= gallery_list[i]["max_image_number"]) )
-         {
-            return true;
-         }
-      }
-   }
-
-   return false;
 }
 
 function write_footer()

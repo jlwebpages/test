@@ -38,18 +38,3 @@ On the coast, the bright sunlight desaturates and bleaches many of the surfaces 
 <span class="art_paragraph"><b>Dockside</b> (top right)</span>
 
 <span class="art_paragraph"><b>Coastline</b> (bottom right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$600 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$1,500 for set of three
-
-</span>

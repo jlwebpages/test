@@ -38,18 +38,3 @@ Autumn on the trail - images and thoughts melt together in the heat of the after
 <span class="art_paragraph"><b>Atmospheric River</b> (center)</span>
 
 <span class="art_paragraph"><b>Reverie</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$325 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$800 for set of three
-
-</span>

@@ -29,12 +29,3 @@ Acrylic and mixed media
 Ideas come and go - make sure to grab hold of the good ones before they float away!
 
 </span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$275
-
-</span>

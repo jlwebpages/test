@@ -42,18 +42,3 @@ Surprising horizons are often visible on the side of the freeways here in southe
 <span class="art_paragraph"><b>Velocity No. 2</b> (bottom center)</span>
 
 <span class="art_paragraph"><b>Window Seat</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$400 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$1,500 for set of five
-
-</span>

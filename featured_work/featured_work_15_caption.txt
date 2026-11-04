@@ -31,12 +31,3 @@ Instead, what lingers are pieces of random moments—a patch of color, the textu
 side of a trail, branches and leaves tossing in the wind.
 
 </span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$425
-
-</span>

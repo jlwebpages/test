@@ -15,23 +15,20 @@
 
 <script>
 
-function get_url_parameters()
-{
-   var gallery_name       = "";
-   var html_file_name     = "";
-   var html_path_segments = "";
-   var image_file_name    = "";
-   var image_number       = "";
-   var image_title        = "";
-   var index              = -1;
-   var URL_parameters     = new URLSearchParams(window.location.search);
+   var about_contact             = false;
+   var email_message_placeholder = "Interested in this piece? To inquire about pricing or if you have any other questions, just type your message here and send the email. I will respond promptly.";
+   var email_subject             = "Subject:&nbsp;&nbsp;";
+   var html_file_name            = "";
+   var html_path_segments        = "";
+   var image_file_name           = "";
+   var image_title               = "";
+   var URL_parameters            = new URLSearchParams(window.location.search);
 
 
+   image_file_name    = URL_parameters.get("image_file_name");
+   image_title        = URL_parameters.get("image_title");
    html_path_segments = window.location.pathname.split('/');
    html_file_name     = html_path_segments[html_path_segments.length - 1];
-
-   image_file_name = URL_parameters.get("image_file_name");
-   image_title     = URL_parameters.get("image_title");
 
    if ( (image_file_name == null) || (image_file_name == "") )
    {
@@ -45,79 +42,9 @@ function get_url_parameters()
       {
          window.close();
       }
-
-      return false;
    }
 
-   // gallery_name is the folder portion of image_file_name.
-
-   index = image_file_name.indexOf("/");
-
-   if (index != -1)
-   {
-      gallery_name = image_file_name.slice(0, index);
-   }
-
-   if (gallery_name == "about")
-   {
-      return {image_file_name,image_title};
-   }
-
-   if (validate_gallery_name(gallery_name) == false)
-   {
-      alert("Error:\n\nInvalid Gallery Name passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
-
-      return false;
-   }
-
-   // Make sure the file name portion of image_file_name starts with gallery_name + "_".
-
-   if (image_file_name.indexOf("/"+gallery_name+"_") == -1)
-   {
-      alert("Error:\n\nInvalid Image Name passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
-
-      return false;
-   }
-
-   // image_number is the portion of image_file_name that is found between the last "_" and ".".
-
-   image_number = image_file_name.match(/_([^_.]+)\.[^_]*$/)[1];
-
-   if (validate_image_number(gallery_name,image_number) == false)
-   {
-      alert("Error:\n\nInvalid Image Number passed to " + html_file_name);
-
-      if (history.length > 1)
-      {
-         history.back();
-      }
-      else
-      {
-         window.close();
-      }
-
-      return false;
-   }
-
-   if ( (image_title == null) || (image_title == "") )
+   if (image_title == null)
    {
       alert("Error:\n\nImage Title not passed to " + html_file_name);
 
@@ -131,20 +58,6 @@ function get_url_parameters()
       }
    }
 
-   return {image_file_name,image_title}; 
-}
-
-</script>
-
-<script>
-
-   var about_contact             = false;
-   var email_message_placeholder = "To inquire about purchasing or if you want more information, just type your message here and send.";
-   var email_subject             = "Subject:&nbsp;&nbsp;";
-
-
-   let {image_file_name,image_title} = get_url_parameters(); 
-
    email_subject += image_title;
 
    if (image_title == "") about_contact = true;
@@ -153,6 +66,19 @@ function get_url_parameters()
    {
       email_subject             += "Darlene Laguna Art";
       email_message_placeholder  = "Type your message here...";
+   }
+
+   // Get min_image_number and max_imager_number from gallery_list.
+
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (image_file_name.split('/')[0] == gallery_list[i]["name"])
+      {
+         min_image_number = gallery_list[i]["min_image_number"];
+         max_image_number = gallery_list[i]["max_image_number"];
+
+         break;
+      }
    }
 
    write_header();
@@ -168,7 +94,7 @@ function get_url_parameters()
    document.writeln('      <div id="image_container" style="display: inline-block">');
    if (about_contact == false)
    {
-      document.writeln('         <a class="art_image_link" href="display_image.html?image_file_name='+image_file_name+'" target="_self">');
+      document.writeln('         <a class="art_image_link" href="display_image.html?image_file_name='+image_file_name+'&min_image_number='+min_image_number+'&max_image_number='+max_image_number+'" target="_self">');
    }
    document.writeln('            <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
    if (about_contact == false)
@@ -182,9 +108,9 @@ function get_url_parameters()
    if (about_contact == true)
    {
       document.writeln('      <span id="contact_text" class="contact_text">');
-      document.writeln('         Use the form below for more information and details about purchasing, shipping, and framing options. I');
-      document.writeln('         can also provide detailed photos for any piece. If you\'d like to view or purchase the work in person, we');
-      document.writeln('         can arrange a visit to my home studio in Orange, CA. Please join my email list to receive updates about');
+      document.writeln('         Use the form below for more information and details about purchasing, pricing, and framing options.');
+      document.writeln('         I can also provide detailed photos for any piece. If you’d like to view the work in person, we can');
+      document.writeln('         arrange a visit to my home studio in Orange, CA. Please join my email list to receive updates about');
       document.writeln('         new art, upcoming events, and exhibitions. Thank you for your interest!');
       document.writeln('      </span>');
    }

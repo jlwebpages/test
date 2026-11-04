@@ -38,18 +38,3 @@ This triptych is inspired by fresh new growth on local hiking trails. An early s
 <span class="art_paragraph"><b>Impulse</b> (center)</span>
 
 <span class="art_paragraph"><b>Tempo</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$475 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$1,200 for set of three
-
-</span>

@@ -36,18 +36,3 @@ In 2017, Canyon Fire 2 devastated the parks I hike on almost a daily basis. Sinc
 <span class="art_paragraph"><b>After the Wildfire 1</b> (left)</span>
 
 <span class="art_paragraph"><b>After the Wildfire 2</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$275 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$500 for set of two
-
-</span>

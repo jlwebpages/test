@@ -36,18 +36,3 @@ Don't let anyone tell you there are no seasons in California! The California syc
 <span class="art_paragraph"><b>I’m Falling for You</b> (left)</span>
 
 <span class="art_paragraph"><b>Please Don't Leave!</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$750 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$1,250 for set of two
-
-</span>

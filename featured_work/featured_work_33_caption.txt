@@ -36,18 +36,3 @@ There is something about autumn lighting that brings out the gold in the hills!
 <span class="art_paragraph"><b>Golden Hour 1</b> (left)</span>
 
 <span class="art_paragraph"><b>Golden Hour 2</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$325 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$600 for set of two
-
-</span>

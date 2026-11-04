@@ -38,18 +38,3 @@ I took a hike one damp morning in the spring and found myself in a misty wonderl
 <span class="art_paragraph"><b>Greenspiration 4</b> (center)</span>
 
 <span class="art_paragraph"><b>Greenspiration 5</b> (right)</span>
-
-
-<!-- Price -->
-
-<span class="art_price">
-
-$325 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$800 for set of three
-
-</span>
