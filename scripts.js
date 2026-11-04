@@ -5,10 +5,10 @@ var max_image_number = 0;
 
 // Constant variables.  These values should be set based on the largest image file number from the respective website subfolders.
 
-const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 15, max_image_number: 42, new_list: [15,16,17,18]},
-                      {name: "photo_art",      title: "Photo Art",      min_image_number: 15, max_image_number: 28, new_list: [15,16,17]},
-                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 12, max_image_number: 21, new_list: [12,13,14,15]},
-                      {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0], works_on_paper_list: [10,11,19]}]
+const gallery_list = [{name: "featured_work",  title: "Featured Work",  min_image_number: 15, max_image_number: 42, new_list: [15,16,17,18], border_list: [0]},
+                      {name: "photo_art",      title: "Photo Art",      min_image_number: 15, max_image_number: 28, new_list: [15,16,17],    border_list: [21,22]},
+                      {name: "works_on_paper", title: "Works on Paper", min_image_number: 12, max_image_number: 21, new_list: [12,13,14,15], border_list: ["all"]},
+                      {name: "sold",           title: "Sold",           min_image_number:  5, max_image_number: 25, new_list: [0],           border_list: [10,11,19]}]
 
 
 function check_if_image_exists(gallery_name,image_number,direction)
@@ -166,13 +166,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var caption_div_style            = "";
       var height_ratio                 = 1;
       var html_string                  = "";
+      var image_border                 = false;
       var image_height                 = 0;
       var image_width                  = 0;
       var image_style                  = "";
       var maximum_caption_width        = 500;
       var minimum_caption_width        = 400;
       var nav_button_vertical_position = 5;
-      var sold_works_on_paper          = false;
       var width_ratio                  = 1;
       var window_inner_height          = window.innerHeight;
       var window_inner_width           = window.innerWidth;
@@ -285,28 +285,22 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      // Determine if this image is a Works on Paper item in the Sold gallery.
+      // Determine if this image should have a border.
 
-      if (gallery_name == "sold")
+      for (i = 0; i < gallery_list.length; i++)
       {
-         for (i = 0; i < gallery_list.length; i++)
+         if (gallery_name == gallery_list[i]["name"])
          {
-            if (gallery_name == gallery_list[i]["name"])
+            if (gallery_list[i]["border_list"].includes("all") || gallery_list[i]["border_list"].includes(+image_number) )
             {
-               for (j = 0; j < gallery_list[i]["works_on_paper_list"].length; j++)
-               {
-                  if (image_number == gallery_list[i]["works_on_paper_list"][j])
-                  {
-                     sold_works_on_paper = true;
+               image_border = true;
 
-                     break;
-                  }
-               }
+               break;
             }
          }
       }
 
-      if ( (gallery_name == "works_on_paper") || (sold_works_on_paper == true) )
+      if (image_border == true)
       {
          // Add border to image.
 
@@ -382,7 +376,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if ( ((gallery_name == "works_on_paper") || (sold_works_on_paper == true)) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
+      if ( (image_border == true) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
       {
          // Adjust position of back button.
 
@@ -536,12 +530,20 @@ function load_image(gallery_name,image_number,image_count)
    var new_tag_style     = "";
 
 
-   if (gallery_name == "works_on_paper")
-   {
-      // Add border to image.
+   // Determine if the images in this gallery should have a border.
 
-      image_style   = ' style="border: '+image_border_size+'px solid var(--background_color); box-sizing: border-box"';
-      new_tag_style = ' style="top: '+image_border_size+'px; left: '+image_border_size+'px"';
+   for (i = 0; i < gallery_list.length; i++)
+   {
+      if (gallery_name == gallery_list[i]["name"])
+      {
+         if (gallery_list[i]["border_list"].includes("all") == true)
+         {
+            image_style   = ' style="border: '+image_border_size+'px solid var(--background_color); box-sizing: border-box"';
+            new_tag_style = ' style="top: '+image_border_size+'px; left: '+image_border_size+'px"';
+
+            break;
+         }
+      }
    }
 
    if (column_count == 1)
