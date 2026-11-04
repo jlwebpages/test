@@ -291,7 +291,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          if (gallery_name == gallery_list[i]["name"])
          {
-            if (gallery_list[i]["border_list"].includes("all") || gallery_list[i]["border_list"].includes(+image_number) )
+            if (gallery_list[i]["border_list"].includes("all") || gallery_list[i]["border_list"].includes(+image_number))
             {
                image_border = true;
 
@@ -566,12 +566,9 @@ function load_image(gallery_name,image_number,image_count)
    image_html += '<div class="art_image_link_container">\n';
    image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
 
-   for (i = 0; i < gallery_list[gallery_index]["new_list"].length; i++)
+   if (gallery_list[gallery_index]["new_list"].includes(+image_number))
    {
-      if (image_number == gallery_list[gallery_index]["new_list"][i])
-      {
-         image_html += '   <div class="new_tag"'+new_tag_style+'>NEW</div>\n';
-      }
+      image_html += '   <div class="new_tag"'+new_tag_style+'>NEW</div>\n';
    }
 
    if (gallery_name.toLowerCase().includes("sold") == true)
@@ -624,14 +621,11 @@ function load_image_caption(gallery_name,image_number)
    {
       if (gallery_name == gallery_list[i]["name"])
       {
-         for (j = 0; j < gallery_list[i]["new_list"].length; j++)
+         if (gallery_list[i]["new_list"].includes(+image_number))
          {
-            if (image_number == gallery_list[i]["new_list"][j])
-            {
-               title_extension = '<span class="new_text"> new</span>';
+            title_extension = '<span class="new_text"> new</span>';
 
-               break;
-            }
+            break;
          }
       }
    }
