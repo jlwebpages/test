@@ -285,15 +285,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (is_mobile() == true)
          {
-            caption_div_style += "; border-top: 0px solid transparent; box-sizing: border-box\"";
+            caption_div_style += "; padding-top: 0px solid transparent; box-sizing: border-box\"";
          }
          else if (is_iPad() == true)
          {
-            caption_div_style += "; border-top: 20px solid transparent; box-sizing: border-box\"";
+            caption_div_style += "; padding-top: 20px solid transparent; box-sizing: border-box\"";
          }
          else
          {
-            caption_div_style += "; border-top: 30px solid transparent; box-sizing: border-box\"";
+            caption_div_style += "; padding-top: 30px solid transparent; box-sizing: border-box\"";
          }
       }
 
