@@ -80,6 +80,7 @@
    .art_gallery               {width:                 calc(100% - 70px)   !important}
    .art_image_link_container  {margin-top:            17.5px              !important}
    .art_image_link_container  {margin-bottom:         17.5px              !important}
+   .art_caption               {min-width:             250px               !important}
    .nav_button                {height:                24px                !important}
    .nav_button                {width:                 14px                !important}
    .nav_left_shape            {transform:             scale(80%)          !important}
@@ -159,6 +160,7 @@
    .art_gallery              {width:                 calc(100% - 100px) !important}
    .art_image_link_container {margin-top:            25px               !important}
    .art_image_link_container {margin-bottom:         25px               !important}
+   .art_caption              {min-width:             250px              !important}
    .about_image_container    {width:                 50%                !important}
    .contact_image            {max-width:             600px              !important}
    .scroll_button            {bottom:                15px               !important}
