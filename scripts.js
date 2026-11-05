@@ -191,9 +191,9 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if ( (is_moble() == true || is_iPad() == true) && (is_portrait() == false) )
+      if ( (is_mobile() == true || is_iPad() == true) && (is_portrait() == false) )
       {
-         minimum_caption_width = 285;
+         minimum_caption_width = 275;
       }
 
       image_width  = this.naturalWidth;
