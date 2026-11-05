@@ -279,21 +279,21 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       if (art_container_class == "image_container_two_column")
       {
-         // Add top border to image caption.
+         // Add top padding to image caption.
  
          caption_div_style = caption_div_style.slice(0, -1);
 
          if (is_mobile() == true)
          {
-            caption_div_style += "; padding-top: 0px solid transparent; box-sizing: border-box\"";
+            caption_div_style += "; padding-top: 0px; box-sizing: border-box\"";
          }
          else if (is_iPad() == true)
          {
-            caption_div_style += "; padding-top: 20px solid transparent; box-sizing: border-box\"";
+            caption_div_style += "; padding-top: 20px; box-sizing: border-box\"";
          }
          else
          {
-            caption_div_style += "; padding-top: 30px solid transparent; box-sizing: border-box\"";
+            caption_div_style += "; padding-top: 30px; box-sizing: border-box\"";
          }
       }
 
@@ -333,21 +333,21 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          if (art_container_class == "image_container_one_column")
          {
-            // Add left border to image caption.
+            // Add left padding to image caption.
 
             caption_div_style = caption_div_style.slice(0, -1);
 
             if (is_mobile() == true)
             {
-               caption_div_style += "; border-left: 0px solid var(--background_color); box-sizing: border-box\"";
+               caption_div_style += "; padding-left: 0px; box-sizing: border-box\"";
             }
             else if (is_iPad() == true)
             {
-               caption_div_style += "; border-left: 20px solid var(--background_color); box-sizing: border-box\"";
+               caption_div_style += "; padding-left: 20px; box-sizing: border-box\"";
             }
             else
             {
-               caption_div_style += "; border-left: 30px solid var(--background_color); box-sizing: border-box\"";
+               caption_div_style += "; padding-left: 30px; box-sizing: border-box\"";
             }
          }
       }
