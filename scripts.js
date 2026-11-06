@@ -241,11 +241,11 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
             image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
 
-
-      if (adjusted_image_height > window_inner_height*.75)
-      {
-            image_style         = "style=\"display: block; width: "+(adjusted_image_width*.75)+"px; height: auto; margin: 0px auto\"";
-      }
+            if ( (image_height > image_width) && (adjusted_image_height > window_inner_height*.75) )
+            {
+               image_style = "style=\"display: block; width: "+(adjusted_image_width*.75)+"px; height: auto; margin: 0px auto\"";
+               caption_div_style   = "style=\"width: "+(adjusted_image_width*.75)+"px; height: auto; margin: 0px auto\"";
+            }
 
             nav_button_vertical_position = window_inner_height / 2;
          }
