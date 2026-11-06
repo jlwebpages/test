@@ -209,11 +209,14 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       width_ratio  = image_width/window_inner_width;
       height_ratio = image_height/window_inner_height;
 
-      adjusted_image_width = image_width/height_ratio;
+      adjusted_image_width  = image_width/height_ratio;
+      adjusted_image_height = image_height/width_ratio;
+
+
 
       // If running in portrait orientation, set up a one column container instead of two.
 
-      if (window_inner_height >= window_inner_width)
+      if (is_portrait() == true)
       {
          art_container_class = "image_container_one_column";
          caption_div_style   = "style=\"height: auto\"";
@@ -237,6 +240,12 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
             art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
             image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
+
+
+      if (adjusted_image_height > window_inner_height*.75)
+      {
+            image_style         = "style=\"display: block; width: "+(adjusted_image_width*.75)+"px; height: auto; margin: 0px auto\"";
+      }
 
             nav_button_vertical_position = window_inner_height / 2;
          }
