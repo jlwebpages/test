@@ -195,7 +195,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          if (is_mobile() == true)
          {
-            minimum_caption_width = 275;
+            minimum_caption_width = 250;
          }
          else if (is_iPad() == true)
          {
