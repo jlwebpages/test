@@ -208,6 +208,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       if (is_portrait() == true)
       {
          art_container_class = "image_container_one_column";
+
          image_style         = "style=\"display: block; width: "+window_inner_width+"px; height: auto\"";
          caption_div_style   = "style=\"height: auto\"";
 
@@ -224,7 +225,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
                adjusted_image_width = maximum_ipad_portrait_image_width;
             }
 
-            // Calculate adjusted image height from adjust image width.
+            // Calculate adjusted image height from adjusted image width.
 
             adjusted_image_height = image_height * (adjusted_image_width/image_width);
 
