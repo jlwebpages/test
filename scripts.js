@@ -217,7 +217,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          nav_button_vertical_position = image_height * (window_inner_width/image_width) / 2;
 
-         if (window_inner_width > maximum_ipad_portrait_image_width)  // if (is_iPad() == true)
+         if (is_iPad() == true)
          {
             // Enforce a maximum image width for iPads in portrait orienetation.
 
@@ -235,7 +235,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
 
             if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
-            {
+            {alert(iPad Portrait);
                adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
             }
 
