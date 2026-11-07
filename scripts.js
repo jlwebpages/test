@@ -159,23 +159,24 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
    image.onload = function()
    {
-      var adjusted_image_width         = 0;
-      var art_container_class          = "";
-      var art_container_margin         = 35;
-      var art_container_style          = "";
-      var caption_div_style            = "";
-      var height_ratio                 = 1;
-      var html_string                  = "";
-      var image_border                 = false;
-      var image_height                 = 0;
-      var image_width                  = 0;
-      var image_style                  = "";
-      var maximum_caption_width        = 500;
-      var minimum_caption_width        = 400;
-      var nav_button_vertical_position = 5;
-      var width_ratio                  = 1;
-      var window_inner_height          = window.innerHeight;
-      var window_inner_width           = window.innerWidth;
+      var adjusted_image_height             = 0;
+      var adjusted_image_width              = 0;
+      var art_container_class               = "";
+      var art_container_margin              = 35;
+      var art_container_style               = "";
+      var caption_div_style                 = "";
+      var html_string                       = "";
+      var image_border                      = false;
+      var image_height                      = 0;
+      var image_height_percent_threshold    = .75;
+      var image_width                       = 0;
+      var image_style                       = "";
+      var maximum_caption_width             = 500;
+      var minimum_caption_width             = 400;
+      var maximum_ipad_portrait_image_width = 655;
+      var nav_button_vertical_position      = 5;
+      var window_inner_height               = window.innerHeight;
+      var window_inner_width                = window.innerWidth;
 
 
       // Set min_image_number and max_imager_number.
@@ -206,34 +207,37 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       image_width  = this.naturalWidth;
       image_height = this.naturalHeight;
 
-      width_ratio  = image_width/window_inner_width;
-      height_ratio = image_height/window_inner_height;
-
-      adjusted_image_width = image_width/height_ratio;
-
-      // If running in portrait orientation, set up a one column container instead of two.
+      adjusted_image_width = image_width / (image_height/window_inner_height);
 
       if (is_portrait() == true)
       {
          art_container_class = "image_container_one_column";
+         image_style         = "style=\"display: block; width: "+window_inner_width+"px; height: auto\"";
          caption_div_style   = "style=\"height: auto\"";
 
-         if (image_width < window_inner_width)
-         {
-            image_style = "style=\"display: block; width: "+window_inner_width+"px; height: auto\"";
-         }
-         else
-         {
-            image_style = "style=\"display: block; width: 100%; height: auto\""; 
-         }
+         nav_button_vertical_position = image_height * (window_inner_width/image_width) / 2;
 
-         nav_button_vertical_position = image_height * window_inner_width/image_width / 2;
-
-         if (window_inner_width > 655)  // 655 is consistent with "@media only screen and (max-width: 655px) and (orientation: portrait)" in styles.css.
+         if (window_inner_width > maximum_ipad_portrait_image_width)  // if (is_iPad() == true)
          {
+            // Enforce a maximum image width for iPads in portrait orienetation.
+
             adjusted_image_width = window_inner_width - art_container_margin*2;
 
-            if (adjusted_image_width > 655) adjusted_image_width = 655;
+            if (adjusted_image_width > maximum_ipad_portrait_image_width)
+            {
+               adjusted_image_width = maximum_ipad_portrait_image_width;
+            }
+
+            // Calculate adjusted image height from adjust image width.
+
+            adjusted_image_height = image_height * (adjusted_image_width/image_width);
+
+            // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
+
+            if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
+            {
+               adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
+            }
 
             art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
             image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
