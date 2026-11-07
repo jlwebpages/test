@@ -235,7 +235,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
 
             if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
-            {alert(iPad Portrait);
+            {alert("iPad Portrait");
                adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
             }
 
