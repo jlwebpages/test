@@ -179,8 +179,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       var window_inner_width                = window.innerWidth;
 
 
-      // Set min_image_number and max_imager_number.
-
       for (i = 0; i < gallery_list.length; i++)
       {
          if (gallery_name == gallery_list[i]["name"])
@@ -206,8 +204,6 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
       image_width  = this.naturalWidth;
       image_height = this.naturalHeight;
-
-      adjusted_image_width = image_width / (image_height/window_inner_height);
 
       if (is_portrait() == true)
       {
@@ -235,7 +231,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
 
             if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
-            {alert("iPad Portrait");
+            {
                adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
             }
 
@@ -251,11 +247,13 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          art_container_class = "image_container_two_column";
 
+         adjusted_image_width = image_width / (image_height/window_inner_height);
+
          if ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) > (window_inner_width) )
          {
             // Reduce the image width to make room for the image caption.
 
-            adjusted_image_width  = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
+            adjusted_image_width = adjusted_image_width - ( (adjusted_image_width + minimum_caption_width + art_container_margin*2) - (window_inner_width) );
 
             art_container_style = "style=\"margin-left: "+art_container_margin+"px; margin-right: "+art_container_margin+"px; place-content: center\"";
             image_style         = "style=\"display: block; width: "+adjusted_image_width+"px\"";
