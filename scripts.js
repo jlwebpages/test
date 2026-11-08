@@ -226,6 +226,8 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             {
                adjusted_image_width = maximum_ipad_portrait_image_width;
             }
+
+            nav_button_vertical_position = window_inner_height / 2;
          }
 
          // Calculate adjusted image height from adjusted image width.
@@ -243,7 +245,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
          image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
 
-         nav_button_vertical_position = adjusted_image_height / 2;
+         if (is_mobile() == true) nav_button_vertical_position = adjusted_image_height / 2;
       }
       else
       {
