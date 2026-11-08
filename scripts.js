@@ -396,17 +396,34 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          }
       }
 
-      if ( (image_border == true) && (is_mobile() == true) && (art_container_class == "image_container_one_column") )
+      if ( (is_mobile() == true) && (art_container_class == "image_container_one_column") )
       {
-         // Adjust position of back button.
+         if (image_border == true)
+         {
+            // Adjust position of back button.
 
-         document.getElementById("nav_back").style.top   = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).top)   + 10) + "px";
-         document.getElementById("nav_back").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).right) + 10) + "px";
+            document.getElementById("nav_back").style.top   = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).top)   + 10) + "px";
+            document.getElementById("nav_back").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).right) + 10) + "px";
 
-         // Adjust position of navigation buttons.
+            // Adjust position of navigation buttons.
 
-         document.getElementById("nav_left").style.left   = (parseInt(window.getComputedStyle(document.getElementById("nav_left")).left)   + 10) + "px";
-         document.getElementById("nav_right").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_right")).right) + 10) + "px";
+            document.getElementById("nav_left").style.left   = (parseInt(window.getComputedStyle(document.getElementById("nav_left")).left)   + 10) + "px";
+            document.getElementById("nav_right").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_right")).right) + 10) + "px";
+         }
+
+         if (window_inner_width > adjusted_image_width)
+         {
+            pixel_adjustment = (window_inner_width - adjusted_image_width) / 2;
+
+            // Adjust position of back button.
+
+            document.getElementById("nav_back").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_back")).right) + pixel_adjustment) + "px";
+
+            // Adjust position of navigation buttons.
+
+            document.getElementById("nav_left").style.left   = (parseInt(window.getComputedStyle(document.getElementById("nav_left")).left)   + pixel_adjustment) + "px";
+            document.getElementById("nav_right").style.right = (parseInt(window.getComputedStyle(document.getElementById("nav_right")).right) + pixel_adjustment) + "px";
+         }
       }
 
       // Update the browser address field.
