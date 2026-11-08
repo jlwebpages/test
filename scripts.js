@@ -159,24 +159,24 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
    image.onload = function()
    {
-      var adjusted_image_height             = 0;
-      var adjusted_image_width              = 0;
-      var art_container_class               = "";
-      var art_container_margin              = 35;
-      var art_container_style               = "";
-      var caption_div_style                 = "";
-      var html_string                       = "";
-      var image_border                      = false;
-      var image_height                      = 0;
-      var image_height_percent_threshold    = .75;
-      var image_width                       = 0;
-      var image_style                       = "";
-      var maximum_caption_width             = 500;
-      var minimum_caption_width             = 400;
-      var maximum_ipad_portrait_image_width = 655;
-      var nav_button_vertical_position      = 5;
-      var window_inner_height               = window.innerHeight;
-      var window_inner_width                = window.innerWidth;
+      var adjusted_image_height          = 0;
+      var adjusted_image_width           = 0;
+      var art_container_class            = "";
+      var art_container_margin           = 35;
+      var art_container_style            = "";
+      var caption_div_style              = "";
+      var html_string                    = "";
+      var image_border                   = false;
+      var image_height                   = 0;
+      var image_height_percent_threshold = .75;
+      var image_width                    = 0;
+      var image_style                    = "";
+      var maximum_caption_width          = 500;
+      var minimum_caption_width          = 400;
+      var maximum_portrait_image_width   = 655;
+      var nav_button_vertical_position   = 5;
+      var window_inner_height            = window.innerHeight;
+      var window_inner_width             = window.innerWidth;
 
 
       for (i = 0; i < gallery_list.length; i++)
@@ -215,16 +215,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          {
             adjusted_image_width = window_inner_width;
          }
-
-         if (is_iPad() == true)
+         else
          {
             // Allow for left and right padding and enforce a maximum image width.
 
             adjusted_image_width = window_inner_width - art_container_margin*2;
 
-            if (adjusted_image_width > maximum_ipad_portrait_image_width)
+            if (adjusted_image_width > maximum_portrait_image_width)
             {
-               adjusted_image_width = maximum_ipad_portrait_image_width;
+               adjusted_image_width = maximum_portrait_image_width;
             }
 
             nav_button_vertical_position = window_inner_height / 2;
