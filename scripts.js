@@ -211,14 +211,12 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          caption_div_style = "style=\"height: auto\"";
 
-         if (window_inner_width < 655)
-         //if (is_mobile() == true)
+         if (is_mobile() == true)
          {
             adjusted_image_width = window_inner_width;
          }
 
-         if (window_inner_width > 655)
-         //if (is_iPad() == true)
+         if (is_iPad() == true)
          {
             // Allow for left and right padding and enforce a maximum image width.
 
@@ -234,20 +232,18 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
 
          adjusted_image_height = image_height * (adjusted_image_width/image_width);
 
-         nav_button_vertical_position = adjusted_image_height / 2;
-
          // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
 
          if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
          {
             adjusted_image_height = window_inner_height*image_height_percent_threshold;
-            adjusted_image_width  = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
-
-            nav_button_vertical_position = adjusted_image_height / 2;
+            adjusted_image_width  = image_width * (adjusted_image_height/image_height);
          }
 
          art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
          image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
+
+         nav_button_vertical_position = adjusted_image_height / 2;
       }
       else
       {
