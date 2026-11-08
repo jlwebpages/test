@@ -222,7 +222,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          {
             // Allow for left and right padding and enforce a maximum image width.
 
-            adjusted_image_width = window_inner_width - (art_container_margin * 2);
+            adjusted_image_width = window_inner_width - art_container_margin*2;
 
             if (adjusted_image_width > maximum_ipad_portrait_image_width)
             {
@@ -241,8 +241,7 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
          if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
          {
             adjusted_image_height = window_inner_height*image_height_percent_threshold;
-
-            adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
+            adjusted_image_width  = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
 
             nav_button_vertical_position = adjusted_image_height / 2;
          }
