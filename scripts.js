@@ -209,14 +209,15 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
       {
          art_container_class = "image_container_one_column";
 
-         image_style         = "style=\"display: block; width: "+window_inner_width+"px; height: auto\"";
-         caption_div_style   = "style=\"height: auto\"";
+         image_style       = "style=\"display: block; width: "+window_inner_width+"px; height: auto\"";
+         caption_div_style = "style=\"height: auto\"";
 
          nav_button_vertical_position = image_height * (window_inner_width/image_width) / 2;
 
-         if (is_iPad() == true)
+         if (window_inner_width > 655)
+         //if (is_iPad() == true)
          {
-            // Enforce a maximum image width for iPads in portrait orienetation.
+            // Allow for left and right padding and enforce a maximum image width.
 
             adjusted_image_width = window_inner_width - art_container_margin*2;
 
@@ -224,25 +225,29 @@ function display_image_with_caption(image_file_name,gallery_name,image_number)
             {
                adjusted_image_width = maximum_ipad_portrait_image_width;
             }
+         }
 
-            // Calculate adjusted image height from adjusted image width.
+         if (window_inner_width < 655)
+         //if (is_mobile() == true)
+         {
+            adjusted_image_width = window_inner_width;
+         }
+         // Calculate adjusted image height from adjusted image width.
 
-            adjusted_image_height = image_height * (adjusted_image_width/image_width);
+         adjusted_image_height = image_height * (adjusted_image_width/image_width);
 
-            // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
+         // If adjusted image height is greater than image height percent threshold, reduce image size to meet image height percent threshold.
 
-            if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
-            {
-               adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
-            }
+         if (adjusted_image_height > window_inner_height*image_height_percent_threshold)
+         {
+            adjusted_image_height = window_inner_height*image_height_percent_threshold;
+            adjusted_image_width = image_width * (window_inner_height*image_height_percent_threshold)/image_height;
 
             art_container_style = "style=\"width: "+adjusted_image_width+"px; margin: 0px auto\"";
             image_style         = "style=\"display: block; width: "+adjusted_image_width+"px; height: auto\"";
 
-            nav_button_vertical_position = window_inner_height / 2;
+            nav_button_vertical_position = adjusted_image_height / 2;
          }
-
-         if (nav_button_vertical_position > window_inner_height / 2) nav_button_vertical_position = window_inner_height / 2;
       }
       else
       {
