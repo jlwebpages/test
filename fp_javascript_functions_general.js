@@ -137,7 +137,7 @@ function get_nfl_playoff_teams(year,mode)
 
    nfl_connection.open("GET","https://cors-proxy.jlaguna.workers.dev/"+nfl_playoff_teams_url,true); // cors-proxy is on cloudflare.com
 
-   nfl_connection.setRequestHeader("Cache-Control","no-cache, no-store, must-revalidate");
+   //nfl_connection.setRequestHeader("Cache-Control","no-cache, no-store, must-revalidate");
 
    nfl_connection.onload = function(e)
    {
