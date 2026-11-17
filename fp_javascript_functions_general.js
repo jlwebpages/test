@@ -127,6 +127,8 @@ function get_nfl_playoff_teams(year,mode)
       nfl_playoff_teams_url = "https://www.espn.com/nfl/standings/_/season/"+year+"/view/playoff";
    }
 
+   nfl_playoff_teams_url += "?no_cache=" + Date.now();
+
    // Display loading indicator while call to XMLHttpRequest is working.
 
    top.display_frame("fp_loading_indicator",0);
@@ -136,8 +138,6 @@ function get_nfl_playoff_teams(year,mode)
    nfl_connection = new XMLHttpRequest();
 
    nfl_connection.open("GET","https://cors-proxy.jlaguna.workers.dev/"+nfl_playoff_teams_url,true); // cors-proxy is on cloudflare.com
-
-   nfl_connection.setRequestHeader("Cache-Control","no-cache, no-store, must-revalidate");
 
    nfl_connection.onload = function(e)
    {
