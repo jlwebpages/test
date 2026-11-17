@@ -1337,7 +1337,7 @@ function build_regular_season_form()
    d.writeln('');
    d.writeln('   nfl_connection = new XMLHttpRequest();');
    d.writeln('');
-   d.writeln('   nfl_connection.open("GET","https://cors-proxy.jlaguna.workers.dev/?url="+nfl_odds_url[odds_source]+"?no_cache="+Date.now(),true);'); // cors-proxy is on cloudflare.com
+   d.writeln('   nfl_connection.open("GET","https://cors-proxy.jlwebpages.workers.dev/?url="+nfl_odds_url[odds_source]+"?no_cache="+Date.now(),true);'); // cors-proxy is on cloudflare.com
    d.writeln('');
    d.writeln('   nfl_connection.onload = function(e)');
    d.writeln('   {');
@@ -3810,7 +3810,7 @@ function build_postseason_form()
    d.writeln('');
    d.writeln('   nfl_connection = new XMLHttpRequest();');
    d.writeln('');
-   d.writeln('   nfl_connection.open("GET","https://cors-proxy.jlaguna.workers.dev/?url="+nfl_odds_url[odds_source]+"?no_cache="+Date.now(),true);'); // cors-proxy is on cloudflare.com
+   d.writeln('   nfl_connection.open("GET","https://cors-proxy.jlwebpages.workers.dev/?url="+nfl_odds_url[odds_source]+"?no_cache="+Date.now(),true);'); // cors-proxy is on cloudflare.com
    d.writeln('');
    d.writeln('   nfl_connection.onload = function(e)');
    d.writeln('   {');

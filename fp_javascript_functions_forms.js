@@ -1073,7 +1073,7 @@ function build_postseason_form()
    d.writeln('   var nfl_connection = null;');
    d.writeln('   var nfl_scores     = null;');
    d.writeln('   var nfl_scores_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard";');
-   d.writeln('   var request_url    = "https://cors-proxy.jlaguna.workers.dev/?url=" + nfl_scores_url + "?no_cache=" + Date.now();'); // cors-proxy is on cloudflare.com
+   d.writeln('   var request_url    = "https://cors-proxy.jlwebpages.workers.dev/?url=" + nfl_scores_url + "?no_cache=" + Date.now();'); // cors-proxy is on cloudflare.com
    d.writeln('   var user_message   = "\\"Get NFL Scores\\" failed.";');
    d.writeln('');
    d.writeln('');
@@ -3140,7 +3140,7 @@ function build_regular_season_form()
    d.writeln('   var nfl_connection = null;');
    d.writeln('   var nfl_scores     = null;');
    d.writeln('   var nfl_scores_url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard";');
-   d.writeln('   var request_url    = "https://cors-proxy.jlaguna.workers.dev/?url=" + nfl_scores_url + "?no_cache=" + Date.now();'); // cors-proxy is on cloudflare.com
+   d.writeln('   var request_url    = "https://cors-proxy.jlwebpages.workers.dev/?url=" + nfl_scores_url + "?no_cache=" + Date.now();'); // cors-proxy is on cloudflare.com
    d.writeln('   var user_message   = "\\"Get NFL Scores\\" failed.";');
    d.writeln('');
    d.writeln('');
