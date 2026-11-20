@@ -89,9 +89,10 @@ function display_last_modified (last_modified_document, display_document)
 
 function get_nfl_playoff_teams(year,mode)
 {
+   var cors_proxy_url        = new URL("https://cors-proxy.jlwebpages.workers.dev/"); // cors-proxy is on cloudflare.com
    var nfl_connection        = null;
    var nfl_playoff_teams     = "";
-   var nfl_playoff_teams_url = "";
+   var nfl_playoff_teams_url = new URL("https://www.espn.com/nfl/standings/_/view/playoff");
 
 
    // Don't get this year's playoff teams if Week 1 games have not been completed yet because the HttpRequest call might return last year's playoff teams.
@@ -116,18 +117,20 @@ function get_nfl_playoff_teams(year,mode)
       return;
    }
 
-   // Set nfl_playoff_teams_url
+   // Set nfl_playoff_teams_url and cors_proxy_url
 
    if ( (year == top.fp_year) && (top.season_over == false) )
    {
-      nfl_playoff_teams_url = "https://www.espn.com/nfl/standings/_/view/playoff";
+      nfl_playoff_teams_url.href = "https://www.espn.com/nfl/standings/_/view/playoff";
    }
    else
    {
-      nfl_playoff_teams_url = "https://www.espn.com/nfl/standings/_/season/"+year+"/view/playoff";
+      nfl_playoff_teams_url.href = "https://www.espn.com/nfl/standings/_/season/"+year+"/view/playoff";
    }
 
-   nfl_playoff_teams_url += "?no_cache=" + Date.now();
+   nfl_playoff_teams_url.searchParams.set("no_cache",Date.now());
+
+   cors_proxy_url.searchParams.set("url",nfl_playoff_teams_url.toString());
 
    // Display loading indicator while call to XMLHttpRequest is working.
 
@@ -137,7 +140,7 @@ function get_nfl_playoff_teams(year,mode)
 
    nfl_connection = new XMLHttpRequest();
 
-   nfl_connection.open("GET","https://cors-proxy.jlwebpages.workers.dev/?url="+nfl_playoff_teams_url,true); // cors-proxy is on cloudflare.com
+   nfl_connection.open("GET",cors_proxy_url,true);
 
    nfl_connection.onload = function(e)
    {
