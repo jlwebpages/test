@@ -17,7 +17,7 @@ Acrylic and mixed media
 
 <span class="art_dimensions">
 
-8 x 8 inch cradled wood panels
+8 x 8 inch cradled wood panel set in a maple floater frame
 
 </span>
 
@@ -31,23 +31,10 @@ In 2017, Canyon Fire 2 devastated the parks I hike on almost a daily basis. Sinc
 </span>
 
 
-<div class="vertical_spacer"></div>
-
-<span class="art_paragraph"><b>After the Wildfire 1</b> (left)</span>
-
-<span class="art_paragraph"><b>After the Wildfire 2</b> (right)</span>
-
-
 <!-- Price -->
 
 <span class="art_price">
 
-$275 each
-
-</span>
-
-<span class="art_price" style="padding-top: 10px">
-
-$500 for set of two
+$325
 
 </span>
