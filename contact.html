@@ -168,7 +168,7 @@ function get_url_parameters()
    document.writeln('      <div id="image_container" style="display: inline-block">');
    if (about_contact == false)
    {
-      document.writeln('         <a class="art_image_link" href="display_image.html?image_file_name='+image_file_name+'" target="_self">');
+      document.writeln('         <a class="art_image_link" href="display_image.html?image_file_name='+encodeURIComponent(image_file_name)+'" target="_self">');
    }
    document.writeln('            <img id="contact_image" class="contact_image border_radius" src="'+image_file_name+'">');
    if (about_contact == false)

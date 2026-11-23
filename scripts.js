@@ -115,7 +115,7 @@ function display_contact_page(image_caption_file_name,direction,display_error)
          image_title = data.substring(start_index, end_index);
          image_title = image_title.trim();
 
-         window.location.href = "contact.html?image_file_name="+image_file_name+"&image_title="+image_title;
+         window.location.href = "contact.html?image_file_name="+encodeURIComponent(image_file_name)+"&image_title="+encodeURIComponent(image_title);
       },
 
       error: function()
@@ -124,7 +124,7 @@ function display_contact_page(image_caption_file_name,direction,display_error)
          {
             image_file_name = image_caption_file_name.replace(".txt",".jpg");
 
-            window.location.href = "contact.html?image_file_name="+image_file_name+"&image_title=";
+            window.location.href = "contact.html?image_file_name="+encodeURIComponent(image_file_name)+"&image_title=";
          }
          else
          {
@@ -520,7 +520,7 @@ function load_data_from_file(gallery_name,file_name,element_id,title_extension,s
             {
                var image_file_name = file_name.replace("_caption.txt",".jpg");
 
-               data += '<a class="general_link contact_artist_link" href="contact.html?image_file_name='+image_file_name+'&image_title='+image_title+'">Contact artist to purchase</a>';
+               data += '<a class="general_link contact_artist_link" href="contact.html?image_file_name='+encodeURIComponent(image_file_name)+'&image_title='+encodeURIComponent(image_title)+'">Contact artist to purchase</a>';
             }
          }
 
@@ -598,7 +598,7 @@ function load_image(gallery_name,image_number,image_count)
    }
 
    image_html += '<div class="art_image_link_container">\n';
-   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+image_path+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
+   image_html += '   <a class="art_image_link" href="display_image.html?image_file_name='+encodeURIComponent(image_path)+'" target="_self"><img src="'+image_path+'" class="art_image border_radius"'+image_style+'></a>\n';
 
    if (gallery_list[gallery_index]["new_list"].includes(+image_number))
    {
